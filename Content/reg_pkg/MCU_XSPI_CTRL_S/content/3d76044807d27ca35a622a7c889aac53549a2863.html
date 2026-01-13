@@ -1,48 +1,48 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">PHYTEST</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x50</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>This 32bit register can be used to configure a PHY test.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="PHY_test"><td>[31:0]</td>
-<td><a href="#PHY_test.desc">PHY_test</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#PHY_test" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="PHY_test.desc">PHY_test<a class="headerlink" href="#PHY_test.desc" title="Permalink to this headline"></a></h3>
-<p>The top 8bits of this register control the current PHY test setting,
-whereas the bottom 24 bits control any test arguments. Four test modes
-are currently defined:</p>
-<p>8'h0: Normal operation
-bits[23:0] are ignored
-8'h1: DLL Lab test. In this mode, various delayed values can be
-placed on the data IO lines for lab testing.
-bits[23:0] are ignored
-8'h2: Synchronous IO self test
-[23] Run the test continuously
-[22:21] Reserved for clock polarity and phase testing
-[20:16] Control the clock setting for the test. 5'h0 runs a
-sweep across (but not including) all integer clock
-divisions.
-[7:0] A bitmask used to disable tests for the given pin(s).
-Set this value to zero to test all IO pins.
-8'h3: Asynchronous IO self test
-[23] Run the test continuously
-[22:21] Reserved for clock polarity and phase testing
-[20:16] Control the clock setting for the test. 5'h0 runs a
-sweep across (but not including) all integer clock
-divisions.
-[7:0] A bitmask used to disable tests for the given pin(s).
-Set this value to zero to test all IO pins.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<body>
+
+<h1 id="_Content.name">PHYTEST</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x50</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>This 32bit register can be used to configure a PHY test.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="PHY_test"><td>[31:0]</td>
+<td><a href="#PHY_test.desc">PHY_test</a></td>
+<td>rw</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#PHY_test" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<h2>Field Descriptions</h2>
+<h3 id="PHY_test.desc">PHY_test<a class="headerlink" href="#PHY_test.desc" title="Permalink to this headline"></a></h3>
+<p>The top 8bits of this register control the current PHY test setting,
+whereas the bottom 24 bits control any test arguments. Four test modes
+are currently defined:</p>
+<p>8'h0: Normal operation
+bits[23:0] are ignored
+8'h1: DLL Lab test. In this mode, various delayed values can be
+placed on the data IO lines for lab testing.
+bits[23:0] are ignored
+8'h2: Synchronous IO self test
+[23] Run the test continuously
+[22:21] Reserved for clock polarity and phase testing
+[20:16] Control the clock setting for the test. 5'h0 runs a
+sweep across (but not including) all integer clock
+divisions.
+[7:0] A bitmask used to disable tests for the given pin(s).
+Set this value to zero to test all IO pins.
+8'h3: Asynchronous IO self test
+[23] Run the test continuously
+[22:21] Reserved for clock polarity and phase testing
+[20:16] Control the clock setting for the test. 5'h0 runs a
+sweep across (but not including) all integer clock
+divisions.
+[7:0] A bitmask used to disable tests for the given pin(s).
+Set this value to zero to test all IO pins.</p>
+</body>
 </html>

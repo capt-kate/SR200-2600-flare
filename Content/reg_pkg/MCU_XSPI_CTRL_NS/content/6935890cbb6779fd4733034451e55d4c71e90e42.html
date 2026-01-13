@@ -1,65 +1,65 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">SUBCLOCK</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x14</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Defines how and when returned data is to be sampled from the interface.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="RESERVEDBITS"><td>[31:11]</td>
-<td><a href="#RESERVEDBITS.desc">RESERVEDBITS</a></td>
-<td>r</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RESERVEDBITS" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RTD"><td>[10:8]</td>
-<td><a href="#RTD.desc">RTD</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RTD" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RESERVEDFIELDS"><td>[7:6]</td>
-<td><a href="#RESERVEDFIELDS.desc">RESERVEDFIELDS</a></td>
-<td>r</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RESERVEDFIELDS" title="Permalink to this row"></a></td>
-</tr>
-<tr id="High_speed_sub_clock_offset"><td>[5:3]</td>
-<td><a href="#High_speed_sub_clock_offset.desc">High_speed_sub_clock_offset</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#High_speed_sub_clock_offset" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Sub_clock_Offset"><td>[2:0]</td>
-<td><a href="#Sub_clock_Offset.desc">Sub_clock_Offset</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Sub_clock_Offset" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="RESERVEDBITS.desc">RESERVEDBITS<a class="headerlink" href="#RESERVEDBITS.desc" title="Permalink to this headline"></a></h3>
-<p>Reserved</p>
-<h3 id="RTD.desc">RTD<a class="headerlink" href="#RTD.desc" title="Permalink to this headline"></a></h3>
-<p>RTD, or the round trip delay time. This is the number of clocks taken round trip for data to go through the PHY, interact with the external flash, and then be returned to the host controller. The default value is parameterized by DEF IO DELAY, and defaults to 1.</p>
-<h3 id="RESERVEDFIELDS.desc">RESERVEDFIELDS<a class="headerlink" href="#RESERVEDFIELDS.desc" title="Permalink to this headline"></a></h3>
-<p>Reserved</p>
-<h3 id="High_speed_sub_clock_offset.desc">High_speed_sub_clock_offset<a class="headerlink" href="#High_speed_sub_clock_offset.desc" title="Permalink to this headline"></a></h3>
-<p>High speed sub–clock offset. This determines which of the eight sub DEV CLK cycles is used to sample the incoming bit when the o_xspi_ck is running at the same rate as DEV CLK. An offset of zero returns the newest of the sub-clock bits. Defaults to 3.</p>
-<h3 id="Sub_clock_Offset.desc">Sub_clock_Offset<a class="headerlink" href="#Sub_clock_Offset.desc" title="Permalink to this headline"></a></h3>
-<p>Sub_clock Offset. This is the offset used when the o xspi ck is running slower than DEV CLK. As with the high speed offset,seven selects the first value read, whereas zero selects the most recent. Defaults to 6.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<body>
+
+<h1 id="_Content.name">SUBCLOCK</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x14</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Defines how and when returned data is to be sampled from the interface.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RESERVEDBITS"><td>[31:11]</td>
+<td><a href="#RESERVEDBITS.desc">RESERVEDBITS</a></td>
+<td>r</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RESERVEDBITS" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RTD"><td>[10:8]</td>
+<td><a href="#RTD.desc">RTD</a></td>
+<td>rw</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RTD" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RESERVEDFIELDS"><td>[7:6]</td>
+<td><a href="#RESERVEDFIELDS.desc">RESERVEDFIELDS</a></td>
+<td>r</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RESERVEDFIELDS" title="Permalink to this row"></a></td>
+</tr>
+<tr id="High_speed_sub_clock_offset"><td>[5:3]</td>
+<td><a href="#High_speed_sub_clock_offset.desc">High_speed_sub_clock_offset</a></td>
+<td>rw</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#High_speed_sub_clock_offset" title="Permalink to this row"></a></td>
+</tr>
+<tr id="Sub_clock_Offset"><td>[2:0]</td>
+<td><a href="#Sub_clock_Offset.desc">Sub_clock_Offset</a></td>
+<td>rw</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#Sub_clock_Offset" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<h2>Field Descriptions</h2>
+<h3 id="RESERVEDBITS.desc">RESERVEDBITS<a class="headerlink" href="#RESERVEDBITS.desc" title="Permalink to this headline"></a></h3>
+<p>Reserved</p>
+<h3 id="RTD.desc">RTD<a class="headerlink" href="#RTD.desc" title="Permalink to this headline"></a></h3>
+<p>RTD, or the round trip delay time. This is the number of clocks taken round trip for data to go through the PHY, interact with the external flash, and then be returned to the host controller. The default value is parameterized by DEF IO DELAY, and defaults to 1.</p>
+<h3 id="RESERVEDFIELDS.desc">RESERVEDFIELDS<a class="headerlink" href="#RESERVEDFIELDS.desc" title="Permalink to this headline"></a></h3>
+<p>Reserved</p>
+<h3 id="High_speed_sub_clock_offset.desc">High_speed_sub_clock_offset<a class="headerlink" href="#High_speed_sub_clock_offset.desc" title="Permalink to this headline"></a></h3>
+<p>High speed sub–clock offset. This determines which of the eight sub DEV CLK cycles is used to sample the incoming bit when the o_xspi_ck is running at the same rate as DEV CLK. An offset of zero returns the newest of the sub-clock bits. Defaults to 3.</p>
+<h3 id="Sub_clock_Offset.desc">Sub_clock_Offset<a class="headerlink" href="#Sub_clock_Offset.desc" title="Permalink to this headline"></a></h3>
+<p>Sub_clock Offset. This is the offset used when the o xspi ck is running slower than DEV CLK. As with the high speed offset,seven selects the first value read, whereas zero selects the most recent. Defaults to 6.</p>
+</body>
 </html>

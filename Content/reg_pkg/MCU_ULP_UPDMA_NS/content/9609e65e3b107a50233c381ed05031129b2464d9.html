@@ -1,86 +1,86 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">CH_SRCTRIGINCFG</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x164c</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Channel Source Trigger In Configuration Register</p>
-<p>This register provides configuration settings when using source side trigger input for the current DMA command.</p>
-<p>The content of this register can be updated during command linking by setting bit[19] in the command link header.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="RAZWI_2"><td>[31:24]</td>
-<td><a href="#RAZWI_2.desc">RAZWI_2</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_2" title="Permalink to this row"></a></td>
-</tr>
-<tr id="SRCTRIGINBLKSIZE"><td>[23:16]</td>
-<td><a href="#SRCTRIGINBLKSIZE.desc">SRCTRIGINBLKSIZE</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#SRCTRIGINBLKSIZE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RAZWI_1"><td>[15:12]</td>
-<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
-</tr>
-<tr id="SRCTRIGINMODE"><td>[11:10]</td>
-<td><a href="#SRCTRIGINMODE.desc">SRCTRIGINMODE</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#SRCTRIGINMODE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="SRCTRIGINTYPE"><td>[9:8]</td>
-<td><a href="#SRCTRIGINTYPE.desc">SRCTRIGINTYPE</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#SRCTRIGINTYPE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RAZWI_0"><td>[7:0]</td>
-<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="RAZWI_2.desc">RAZWI_2<a class="headerlink" href="#RAZWI_2.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="SRCTRIGINBLKSIZE.desc">SRCTRIGINBLKSIZE<a class="headerlink" href="#SRCTRIGINBLKSIZE.desc" title="Permalink to this headline"></a></h3>
-<p>Source Trigger Input Default Transfer Size. Defined transfer size per trigger + 1.</p>
-<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="SRCTRIGINMODE.desc">SRCTRIGINMODE<a class="headerlink" href="#SRCTRIGINMODE.desc" title="Permalink to this headline"></a></h3>
-<p>Source Trigger Input Mode:
-- 00: Command
-- 01: Reserved
-- 10: DMA driven Flow control. Only allowed when HAS_TRIGIN is enabled.
-- 11: Peripheral driven Flow control. Only allowed when HAS_TRIGIN is enabled.
-Note: This field is ignored for Internal triggers as they only support Command triggers</p>
-<h3 id="SRCTRIGINTYPE.desc">SRCTRIGINTYPE<a class="headerlink" href="#SRCTRIGINTYPE.desc" title="Permalink to this headline"></a></h3>
-<p>Source Trigger Input Type:
-- 00: Software only Trigger Request. SRCTRIGINSEL is ignored.
-- 01: Reserved
-- 10: Hardware Trigger Request. Only allowed when HAS_TRIGIN is enabled. SRCTRIGINSEL selects between external trigger inputs if HAS_TRIGSEL is enabled.
-- 11: Internal Trigger Request. Only allowed when HAS_TRIGSEL is enabled and the DMAC has multiple channels, otherwise treated as HW Trigger Request. SRCTRIGINSEL selects between DMA channels.</p>
-<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<body>
+
+<h1 id="_Content.name">CH_SRCTRIGINCFG</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x164c</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Channel Source Trigger In Configuration Register</p>
+<p>This register provides configuration settings when using source side trigger input for the current DMA command.</p>
+<p>The content of this register can be updated during command linking by setting bit[19] in the command link header.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_2"><td>[31:24]</td>
+<td><a href="#RAZWI_2.desc">RAZWI_2</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_2" title="Permalink to this row"></a></td>
+</tr>
+<tr id="SRCTRIGINBLKSIZE"><td>[23:16]</td>
+<td><a href="#SRCTRIGINBLKSIZE.desc">SRCTRIGINBLKSIZE</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#SRCTRIGINBLKSIZE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_1"><td>[15:12]</td>
+<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
+</tr>
+<tr id="SRCTRIGINMODE"><td>[11:10]</td>
+<td><a href="#SRCTRIGINMODE.desc">SRCTRIGINMODE</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#SRCTRIGINMODE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="SRCTRIGINTYPE"><td>[9:8]</td>
+<td><a href="#SRCTRIGINTYPE.desc">SRCTRIGINTYPE</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#SRCTRIGINTYPE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_0"><td>[7:0]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<h2>Field Descriptions</h2>
+<h3 id="RAZWI_2.desc">RAZWI_2<a class="headerlink" href="#RAZWI_2.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="SRCTRIGINBLKSIZE.desc">SRCTRIGINBLKSIZE<a class="headerlink" href="#SRCTRIGINBLKSIZE.desc" title="Permalink to this headline"></a></h3>
+<p>Source Trigger Input Default Transfer Size. Defined transfer size per trigger + 1.</p>
+<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="SRCTRIGINMODE.desc">SRCTRIGINMODE<a class="headerlink" href="#SRCTRIGINMODE.desc" title="Permalink to this headline"></a></h3>
+<p>Source Trigger Input Mode:
+- 00: Command
+- 01: Reserved
+- 10: DMA driven Flow control. Only allowed when HAS_TRIGIN is enabled.
+- 11: Peripheral driven Flow control. Only allowed when HAS_TRIGIN is enabled.
+Note: This field is ignored for Internal triggers as they only support Command triggers</p>
+<h3 id="SRCTRIGINTYPE.desc">SRCTRIGINTYPE<a class="headerlink" href="#SRCTRIGINTYPE.desc" title="Permalink to this headline"></a></h3>
+<p>Source Trigger Input Type:
+- 00: Software only Trigger Request. SRCTRIGINSEL is ignored.
+- 01: Reserved
+- 10: Hardware Trigger Request. Only allowed when HAS_TRIGIN is enabled. SRCTRIGINSEL selects between external trigger inputs if HAS_TRIGSEL is enabled.
+- 11: Internal Trigger Request. Only allowed when HAS_TRIGSEL is enabled and the DMAC has multiple channels, otherwise treated as HW Trigger Request. SRCTRIGINSEL selects between DMA channels.</p>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+</body>
 </html>

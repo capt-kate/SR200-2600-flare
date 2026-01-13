@@ -1,120 +1,120 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-    <body>
-        <h1 id="_Content.name">ENG_CFG</h1>
-        <dl class="node-info">
-            <dt>Absolute Address:</dt>
-            <dd id="_AbsAddr" class="address">
-            </dd>
-            <dt>Base Offset:</dt>
-            <dd class="address">0x180</dd>
-            <dt>Size:</dt>
-            <dd class="address">0x4</dd>
-        </dl>
-        <h2>Description</h2>
-        <h2>Contents</h2>
-        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
-            <tr class="TableStyle-table-no-head-Body-Body1">
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
-                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
-                </th>
-            </tr>
-            <tr id="extctrlen" class="TableStyle-table-no-head-Body-Body2">
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31]</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#extctrlen.desc">extctrlen</a>
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">External Control Enable</td>
-                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#extctrlen" title="Permalink to this row"></a></td>
-            </tr>
-            <tr class="TableStyle-table-no-head-Body-Body2">
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[30:25]</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
-                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
-                </td>
-            </tr>
-            <tr id="dataswap" class="TableStyle-table-no-head-Body-Body2">
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[24]</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#dataswap.desc">dataswap</a>
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Data Swap</td>
-                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#dataswap" title="Permalink to this row"></a></td>
-            </tr>
-            <tr class="TableStyle-table-no-head-Body-Body2">
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[23:2]</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
-                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
-                </td>
-            </tr>
-            <tr id="select" class="TableStyle-table-no-head-Body-Body2">
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[1:0]</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#select.desc">select</a>
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">AES, DES/TDES and RC4 share some of the registers and internal logic. The field allocates the resource to the selected engine.</td>
-                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#select" title="Permalink to this row"></a></td>
-            </tr>
-        </table>
-        <p>
-            <label>Encoded Register Value:</label>
-        </p>
-        <h2>Field Descriptions</h2>
-        <h3 id="extctrlen.desc">extctrlen - External Control Enable<a class="headerlink" href="#extctrlen.desc" title="Permalink to this headline"></a></h3>
-        <p>Set this bit to enable external control. When external control is enabled, engine takes the following information form external source and ignores the configurations from the APB register.<p></p>
-• Start Signal<p></p>
-• Encryption/Decryption signal<p></p>
-• Key length<p></p>
-• Resume signal<p></p>
-• Payload/stream size<p></p>
-• Additional authenticated data size (GCM)<p></p>
-• IV size (GCM)<p></p>
-• Tag size (GCM)<p></p>
-• Key1<p></p>
-• Key2 (XTS)<p></p>
-• IV<p></p></p>
-        <h3 id="dataswap.desc">dataswap - Data Swap<a class="headerlink" href="#dataswap.desc" title="Permalink to this headline"></a></h3>
-        <p>This field decides the Key1, Key2, IV, and input/output data byte ordering (endian) within a DWord.<p></p>
-• 0h= No swap (data feeded in as is)<p></p>
-• 1h= Byte swap<p></p>
-EX: Assuem a DWord data is 0x01234567<p></p>
-• 0h = 0x01234567.<p></p>
-• 1h = 0x67452301<p></p>
-Notes:<p></p>
-1. When External Control Enable bit is set, this field no longer has effect on the Key1, Key2, and IV.<p></p>
-2. This field must be programmed before programming the Key1, Key2, and IV registers in order to take effect.<p></p></p>
-        <h3 id="select.desc">select - AES, DES/TDES and RC4 share some of the registers and internal logic. The field allocates the resource to the selected engine.<a class="headerlink" href="#select.desc" title="Permalink to this headline"></a></h3>
-        <p>• 0h= Reserved<p></p>
-• 1h="AES" engine<p></p>
-• 2h="DES/TDES" engine<p></p>
-• 3h="RC4" engine<p></p>
-Notes:<p></p>
-1. Both AES's IV and DES/TDES's IV are mapped to IV_DW0, IV_DW1, IV_DW2, and IV_DW3 registers. When writing to IV_DW registers, both AES's and DES/TDES's IV value are over-written. When read from IV_DW registers, the read value (AES's or DES/ TDES's IV) is selected by this field.<p></p></p>
-    </body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">ENG_CFG</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x180</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr id="extctrlen" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#extctrlen.desc">extctrlen</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">External Control Enable</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#extctrlen" title="Permalink to this row"></a></td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[30:25]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="dataswap" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[24]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#dataswap.desc">dataswap</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Data Swap</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#dataswap" title="Permalink to this row"></a></td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[23:2]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="select" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[1:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#select.desc">select</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">AES, DES/TDES and RC4 share some of the registers and internal logic. The field allocates the resource to the selected engine.</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#select" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="extctrlen.desc">extctrlen - External Control Enable<a class="headerlink" href="#extctrlen.desc" title="Permalink to this headline"></a></h3>
+        <p>Set this bit to enable external control. When external control is enabled, engine takes the following information form external source and ignores the configurations from the APB register.<p></p>
+• Start Signal<p></p>
+• Encryption/Decryption signal<p></p>
+• Key length<p></p>
+• Resume signal<p></p>
+• Payload/stream size<p></p>
+• Additional authenticated data size (GCM)<p></p>
+• IV size (GCM)<p></p>
+• Tag size (GCM)<p></p>
+• Key1<p></p>
+• Key2 (XTS)<p></p>
+• IV<p></p></p>
+        <h3 id="dataswap.desc">dataswap - Data Swap<a class="headerlink" href="#dataswap.desc" title="Permalink to this headline"></a></h3>
+        <p>This field decides the Key1, Key2, IV, and input/output data byte ordering (endian) within a DWord.<p></p>
+• 0h= No swap (data feeded in as is)<p></p>
+• 1h= Byte swap<p></p>
+EX: Assuem a DWord data is 0x01234567<p></p>
+• 0h = 0x01234567.<p></p>
+• 1h = 0x67452301<p></p>
+Notes:<p></p>
+1. When External Control Enable bit is set, this field no longer has effect on the Key1, Key2, and IV.<p></p>
+2. This field must be programmed before programming the Key1, Key2, and IV registers in order to take effect.<p></p></p>
+        <h3 id="select.desc">select - AES, DES/TDES and RC4 share some of the registers and internal logic. The field allocates the resource to the selected engine.<a class="headerlink" href="#select.desc" title="Permalink to this headline"></a></h3>
+        <p>• 0h= Reserved<p></p>
+• 1h="AES" engine<p></p>
+• 2h="DES/TDES" engine<p></p>
+• 3h="RC4" engine<p></p>
+Notes:<p></p>
+1. Both AES's IV and DES/TDES's IV are mapped to IV_DW0, IV_DW1, IV_DW2, and IV_DW3 registers. When writing to IV_DW registers, both AES's and DES/TDES's IV value are over-written. When read from IV_DW registers, the read value (AES's or DES/ TDES's IV) is selected by this field.<p></p></p>
+    </body>
 </html>

@@ -1,142 +1,142 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">NSEC_CTRL</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x20c</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Non-Secure Control Register</p>
-<p>This registers can be used to adjust the interrupt generation and general behavior of the Non-secure channels.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="DISMINPWR"><td>[31:30]</td>
-<td><a href="#DISMINPWR.desc">DISMINPWR</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DISMINPWR" title="Permalink to this row"></a></td>
-</tr>
-<tr id="IDLERETEN"><td>[29]</td>
-<td><a href="#IDLERETEN.desc">IDLERETEN</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#IDLERETEN" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DBGHALTEN"><td>[28]</td>
-<td><a href="#DBGHALTEN.desc">DBGHALTEN</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DBGHALTEN" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DBGHALTNSRO"><td>[27]</td>
-<td><a href="#DBGHALTNSRO.desc">DBGHALTNSRO</a></td>
-<td>r</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DBGHALTNSRO" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RAZWI_1"><td>[26:10]</td>
-<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
-</tr>
-<tr id="ALLCHPAUSE"><td>[9]</td>
-<td><a href="#ALLCHPAUSE.desc">ALLCHPAUSE</a></td>
-<td>rw,woset</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#ALLCHPAUSE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="ALLCHSTOP"><td>[8]</td>
-<td><a href="#ALLCHSTOP.desc">ALLCHSTOP</a></td>
-<td>rw,woset</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#ALLCHSTOP" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RAZWI_0"><td>[7:4]</td>
-<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
-</tr>
-<tr id="INTREN_ALLCHPAUSED"><td>[3]</td>
-<td><a href="#INTREN_ALLCHPAUSED.desc">INTREN_ALLCHPAUSED</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#INTREN_ALLCHPAUSED" title="Permalink to this row"></a></td>
-</tr>
-<tr id="INTREN_ALLCHSTOPPED"><td>[2]</td>
-<td><a href="#INTREN_ALLCHSTOPPED.desc">INTREN_ALLCHSTOPPED</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#INTREN_ALLCHSTOPPED" title="Permalink to this row"></a></td>
-</tr>
-<tr id="INTREN_ALLCHIDLE"><td>[1]</td>
-<td><a href="#INTREN_ALLCHIDLE.desc">INTREN_ALLCHIDLE</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#INTREN_ALLCHIDLE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="INTREN_ANYCHINTR"><td>[0]</td>
-<td><a href="#INTREN_ANYCHINTR.desc">INTREN_ANYCHINTR</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#INTREN_ANYCHINTR" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="DISMINPWR.desc">DISMINPWR<a class="headerlink" href="#DISMINPWR.desc" title="Permalink to this headline"></a></h3>
-<p>Minimum Power state of the DMAC when at least one non-secure channel is present.
-- 00: OFF
-- 01: Retention
-- 10: ON
-- Others: Reserved</p>
-<h3 id="IDLERETEN.desc">IDLERETEN<a class="headerlink" href="#IDLERETEN.desc" title="Permalink to this headline"></a></h3>
-<p>Idle Channel Retention Enable. Allows retention for non-secure channels that are enabled and waiting for an event in IDLE state.
-- 0: disabled
-- 1: enabled</p>
-<h3 id="DBGHALTEN.desc">DBGHALTEN<a class="headerlink" href="#DBGHALTEN.desc" title="Permalink to this headline"></a></h3>
-<p>Debug Halt Enabled. When set to '0', the DMA ignores the halt request from an external debugger. Clearing this bit while halt is ongoing results in continuing the operation. When set to '1', the debugger request to halt the DMA is allowed. This field is common for non-secure and secure side of the DMA, but access to this register is limited by the DBGHALTNSRO register field.</p>
-<h3 id="DBGHALTNSRO.desc">DBGHALTNSRO<a class="headerlink" href="#DBGHALTNSRO.desc" title="Permalink to this headline"></a></h3>
-<p>Debug Halt Enable Non-Secure Read Only. When set to '1', the NSEC_CTRL.DBGHALTEN register becomes read-only. When set to '0', NSEC_CTRL.DBGHALTEN has read-write access. This register is read-only for the non-secure SW.</p>
-<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="ALLCHPAUSE.desc">ALLCHPAUSE<a class="headerlink" href="#ALLCHPAUSE.desc" title="Permalink to this headline"></a></h3>
-<p>Non-Secure All Channel Pause Request. When set to '1', all Non-secure channels get a pause request. Stays asserted until the channels are paused and the STAT_ALLCHPAUSED status flag is set. Cleared automatically when the STAT_ALLCHPAUSED status flag is cleared.</p>
-<h3 id="ALLCHSTOP.desc">ALLCHSTOP<a class="headerlink" href="#ALLCHSTOP.desc" title="Permalink to this headline"></a></h3>
-<p>Non-Secure All Channel Stop Request. When set to '1', all Non-secure channels get a stop request. Stays asserted until the STAT_ALLCHSTOPPED status flag is set. Cleared automatically when the STAT_ALLCHSTOPPED status flag is cleared.</p>
-<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="INTREN_ALLCHPAUSED.desc">INTREN_ALLCHPAUSED<a class="headerlink" href="#INTREN_ALLCHPAUSED.desc" title="Permalink to this headline"></a></h3>
-<p>All Non-Secure Channel Paused Interrupt Enable</p>
-<h3 id="INTREN_ALLCHSTOPPED.desc">INTREN_ALLCHSTOPPED<a class="headerlink" href="#INTREN_ALLCHSTOPPED.desc" title="Permalink to this headline"></a></h3>
-<p>All Non-Secure Channels Stopped Interrupt Enable</p>
-<h3 id="INTREN_ALLCHIDLE.desc">INTREN_ALLCHIDLE<a class="headerlink" href="#INTREN_ALLCHIDLE.desc" title="Permalink to this headline"></a></h3>
-<p>All Non-Secure Channel Idle Interrupt Enable</p>
-<h3 id="INTREN_ANYCHINTR.desc">INTREN_ANYCHINTR<a class="headerlink" href="#INTREN_ANYCHINTR.desc" title="Permalink to this headline"></a></h3>
-<p>Combined Non-Secure Channel Interrupt Enable</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<body>
+
+<h1 id="_Content.name">NSEC_CTRL</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x20c</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Non-Secure Control Register</p>
+<p>This registers can be used to adjust the interrupt generation and general behavior of the Non-secure channels.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="DISMINPWR"><td>[31:30]</td>
+<td><a href="#DISMINPWR.desc">DISMINPWR</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DISMINPWR" title="Permalink to this row"></a></td>
+</tr>
+<tr id="IDLERETEN"><td>[29]</td>
+<td><a href="#IDLERETEN.desc">IDLERETEN</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#IDLERETEN" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DBGHALTEN"><td>[28]</td>
+<td><a href="#DBGHALTEN.desc">DBGHALTEN</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DBGHALTEN" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DBGHALTNSRO"><td>[27]</td>
+<td><a href="#DBGHALTNSRO.desc">DBGHALTNSRO</a></td>
+<td>r</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DBGHALTNSRO" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_1"><td>[26:10]</td>
+<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
+</tr>
+<tr id="ALLCHPAUSE"><td>[9]</td>
+<td><a href="#ALLCHPAUSE.desc">ALLCHPAUSE</a></td>
+<td>rw,woset</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#ALLCHPAUSE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="ALLCHSTOP"><td>[8]</td>
+<td><a href="#ALLCHSTOP.desc">ALLCHSTOP</a></td>
+<td>rw,woset</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#ALLCHSTOP" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_0"><td>[7:4]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTREN_ALLCHPAUSED"><td>[3]</td>
+<td><a href="#INTREN_ALLCHPAUSED.desc">INTREN_ALLCHPAUSED</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTREN_ALLCHPAUSED" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTREN_ALLCHSTOPPED"><td>[2]</td>
+<td><a href="#INTREN_ALLCHSTOPPED.desc">INTREN_ALLCHSTOPPED</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTREN_ALLCHSTOPPED" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTREN_ALLCHIDLE"><td>[1]</td>
+<td><a href="#INTREN_ALLCHIDLE.desc">INTREN_ALLCHIDLE</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTREN_ALLCHIDLE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTREN_ANYCHINTR"><td>[0]</td>
+<td><a href="#INTREN_ANYCHINTR.desc">INTREN_ANYCHINTR</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTREN_ANYCHINTR" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<h2>Field Descriptions</h2>
+<h3 id="DISMINPWR.desc">DISMINPWR<a class="headerlink" href="#DISMINPWR.desc" title="Permalink to this headline"></a></h3>
+<p>Minimum Power state of the DMAC when at least one non-secure channel is present.
+- 00: OFF
+- 01: Retention
+- 10: ON
+- Others: Reserved</p>
+<h3 id="IDLERETEN.desc">IDLERETEN<a class="headerlink" href="#IDLERETEN.desc" title="Permalink to this headline"></a></h3>
+<p>Idle Channel Retention Enable. Allows retention for non-secure channels that are enabled and waiting for an event in IDLE state.
+- 0: disabled
+- 1: enabled</p>
+<h3 id="DBGHALTEN.desc">DBGHALTEN<a class="headerlink" href="#DBGHALTEN.desc" title="Permalink to this headline"></a></h3>
+<p>Debug Halt Enabled. When set to '0', the DMA ignores the halt request from an external debugger. Clearing this bit while halt is ongoing results in continuing the operation. When set to '1', the debugger request to halt the DMA is allowed. This field is common for non-secure and secure side of the DMA, but access to this register is limited by the DBGHALTNSRO register field.</p>
+<h3 id="DBGHALTNSRO.desc">DBGHALTNSRO<a class="headerlink" href="#DBGHALTNSRO.desc" title="Permalink to this headline"></a></h3>
+<p>Debug Halt Enable Non-Secure Read Only. When set to '1', the NSEC_CTRL.DBGHALTEN register becomes read-only. When set to '0', NSEC_CTRL.DBGHALTEN has read-write access. This register is read-only for the non-secure SW.</p>
+<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="ALLCHPAUSE.desc">ALLCHPAUSE<a class="headerlink" href="#ALLCHPAUSE.desc" title="Permalink to this headline"></a></h3>
+<p>Non-Secure All Channel Pause Request. When set to '1', all Non-secure channels get a pause request. Stays asserted until the channels are paused and the STAT_ALLCHPAUSED status flag is set. Cleared automatically when the STAT_ALLCHPAUSED status flag is cleared.</p>
+<h3 id="ALLCHSTOP.desc">ALLCHSTOP<a class="headerlink" href="#ALLCHSTOP.desc" title="Permalink to this headline"></a></h3>
+<p>Non-Secure All Channel Stop Request. When set to '1', all Non-secure channels get a stop request. Stays asserted until the STAT_ALLCHSTOPPED status flag is set. Cleared automatically when the STAT_ALLCHSTOPPED status flag is cleared.</p>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="INTREN_ALLCHPAUSED.desc">INTREN_ALLCHPAUSED<a class="headerlink" href="#INTREN_ALLCHPAUSED.desc" title="Permalink to this headline"></a></h3>
+<p>All Non-Secure Channel Paused Interrupt Enable</p>
+<h3 id="INTREN_ALLCHSTOPPED.desc">INTREN_ALLCHSTOPPED<a class="headerlink" href="#INTREN_ALLCHSTOPPED.desc" title="Permalink to this headline"></a></h3>
+<p>All Non-Secure Channels Stopped Interrupt Enable</p>
+<h3 id="INTREN_ALLCHIDLE.desc">INTREN_ALLCHIDLE<a class="headerlink" href="#INTREN_ALLCHIDLE.desc" title="Permalink to this headline"></a></h3>
+<p>All Non-Secure Channel Idle Interrupt Enable</p>
+<h3 id="INTREN_ANYCHINTR.desc">INTREN_ANYCHINTR<a class="headerlink" href="#INTREN_ANYCHINTR.desc" title="Permalink to this headline"></a></h3>
+<p>Combined Non-Secure Channel Interrupt Enable</p>
+</body>
 </html>

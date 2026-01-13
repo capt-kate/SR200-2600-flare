@@ -1,107 +1,107 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">CH_INTREN</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1208</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Channel Interrupt Enable Register</p>
-<p>This register can enable the interrupt generation for internal events.</p>
-<p>The content of this register can be updated during command linking by setting bit[2] in the command link header.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="RAZWI_1"><td>[31:11]</td>
-<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
-</tr>
-<tr id="INTREN_TRIGOUTACKWAIT"><td>[10]</td>
-<td><a href="#INTREN_TRIGOUTACKWAIT.desc">INTREN_TRIGOUTACKWAIT</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#INTREN_TRIGOUTACKWAIT" title="Permalink to this row"></a></td>
-</tr>
-<tr id="INTREN_DESTRIGINWAIT"><td>[9]</td>
-<td><a href="#INTREN_DESTRIGINWAIT.desc">INTREN_DESTRIGINWAIT</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#INTREN_DESTRIGINWAIT" title="Permalink to this row"></a></td>
-</tr>
-<tr id="INTREN_SRCTRIGINWAIT"><td>[8]</td>
-<td><a href="#INTREN_SRCTRIGINWAIT.desc">INTREN_SRCTRIGINWAIT</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#INTREN_SRCTRIGINWAIT" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RAZWI_0"><td>[7:4]</td>
-<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
-</tr>
-<tr id="INTREN_STOPPED"><td>[3]</td>
-<td><a href="#INTREN_STOPPED.desc">INTREN_STOPPED</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#INTREN_STOPPED" title="Permalink to this row"></a></td>
-</tr>
-<tr id="INTREN_DISABLED"><td>[2]</td>
-<td><a href="#INTREN_DISABLED.desc">INTREN_DISABLED</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#INTREN_DISABLED" title="Permalink to this row"></a></td>
-</tr>
-<tr id="INTREN_ERR"><td>[1]</td>
-<td><a href="#INTREN_ERR.desc">INTREN_ERR</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#INTREN_ERR" title="Permalink to this row"></a></td>
-</tr>
-<tr id="INTREN_DONE"><td>[0]</td>
-<td><a href="#INTREN_DONE.desc">INTREN_DONE</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#INTREN_DONE" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="INTREN_TRIGOUTACKWAIT.desc">INTREN_TRIGOUTACKWAIT<a class="headerlink" href="#INTREN_TRIGOUTACKWAIT.desc" title="Permalink to this headline"></a></h3>
-<p>Channel is waiting for output Trigger Acknowledgement Interrupt Enable. When set to '1', enables INTR_TRIGOUTACKWAIT to be set and raise an interrupt when STAT_TRIGOUTACKWAIT status flag is asserted. When set to '0', it prevents INTR_TRIGOUTACKWAIT to be asserted. Currently pending interrupts are not affected by clearing this bit.</p>
-<h3 id="INTREN_DESTRIGINWAIT.desc">INTREN_DESTRIGINWAIT<a class="headerlink" href="#INTREN_DESTRIGINWAIT.desc" title="Permalink to this headline"></a></h3>
-<p>Channel is waiting for destination Trigger Interrupt Enable. When set to '1', enables INTR_DESTRIGINWAIT to be set and raise an interrupt when STAT_DESTRIGINWAIT status flag is asserted. When set to '0', it prevents INTR_DESTRIGINWAIT to be asserted. Currently pending interrupts are not affected by clearing this bit.</p>
-<h3 id="INTREN_SRCTRIGINWAIT.desc">INTREN_SRCTRIGINWAIT<a class="headerlink" href="#INTREN_SRCTRIGINWAIT.desc" title="Permalink to this headline"></a></h3>
-<p>Channel is waiting for source Trigger Interrupt Enable. When set to '1', enables INTR_SRCTRIGINWAIT to be set and raise an interrupt when STAT_SRCTRIGINWAIT status flag is asserted. When set to '0', it prevents INTR_SRCTRIGINWAIT to be asserted. Currently pending interrupts are not affected by clearing this bit.</p>
-<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="INTREN_STOPPED.desc">INTREN_STOPPED<a class="headerlink" href="#INTREN_STOPPED.desc" title="Permalink to this headline"></a></h3>
-<p>Stopped Interrupt Enable. When set to '1', enables INTR_STOPPED to be set and raise an interrupt when STAT_STOPPED status flag is asserted. When set to '0', it prevents INTR_STOPPED to be asserted. Currently pending interrupts are not affected by clearing this bit.</p>
-<h3 id="INTREN_DISABLED.desc">INTREN_DISABLED<a class="headerlink" href="#INTREN_DISABLED.desc" title="Permalink to this headline"></a></h3>
-<p>Disabled Interrupt Enable. When set to '1', enables INTR_DISABLED to be set and raise an interrupt when STAT_DISABLED status flag is asserted. When set to '0', it prevents INTR_DISABLED to be asserted. Currently pending interrupts are not affected by clearing this bit.</p>
-<h3 id="INTREN_ERR.desc">INTREN_ERR<a class="headerlink" href="#INTREN_ERR.desc" title="Permalink to this headline"></a></h3>
-<p>Error Interrupt Enable. When set to '1', enables INTR_ERR to be set and raise an interrupt when the STAT_ERR status flag is asserted. When set to '0', it prevents INTR_ERR to be asserted. Currently pending interrupts are not affected by clearing this bit.</p>
-<h3 id="INTREN_DONE.desc">INTREN_DONE<a class="headerlink" href="#INTREN_DONE.desc" title="Permalink to this headline"></a></h3>
-<p>Done Interrupt Enable. When set to '1', enables the INTR_DONE to be set and raise an interrupt when the STAT_DONE status flag is asserted. When set to '0', it prevents INTR_DONE to be asserted. Currently pending interrupts are not affected by clearing this bit.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<body>
+
+<h1 id="_Content.name">CH_INTREN</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1208</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Channel Interrupt Enable Register</p>
+<p>This register can enable the interrupt generation for internal events.</p>
+<p>The content of this register can be updated during command linking by setting bit[2] in the command link header.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_1"><td>[31:11]</td>
+<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTREN_TRIGOUTACKWAIT"><td>[10]</td>
+<td><a href="#INTREN_TRIGOUTACKWAIT.desc">INTREN_TRIGOUTACKWAIT</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTREN_TRIGOUTACKWAIT" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTREN_DESTRIGINWAIT"><td>[9]</td>
+<td><a href="#INTREN_DESTRIGINWAIT.desc">INTREN_DESTRIGINWAIT</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTREN_DESTRIGINWAIT" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTREN_SRCTRIGINWAIT"><td>[8]</td>
+<td><a href="#INTREN_SRCTRIGINWAIT.desc">INTREN_SRCTRIGINWAIT</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTREN_SRCTRIGINWAIT" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_0"><td>[7:4]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTREN_STOPPED"><td>[3]</td>
+<td><a href="#INTREN_STOPPED.desc">INTREN_STOPPED</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTREN_STOPPED" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTREN_DISABLED"><td>[2]</td>
+<td><a href="#INTREN_DISABLED.desc">INTREN_DISABLED</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTREN_DISABLED" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTREN_ERR"><td>[1]</td>
+<td><a href="#INTREN_ERR.desc">INTREN_ERR</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTREN_ERR" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTREN_DONE"><td>[0]</td>
+<td><a href="#INTREN_DONE.desc">INTREN_DONE</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTREN_DONE" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<h2>Field Descriptions</h2>
+<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="INTREN_TRIGOUTACKWAIT.desc">INTREN_TRIGOUTACKWAIT<a class="headerlink" href="#INTREN_TRIGOUTACKWAIT.desc" title="Permalink to this headline"></a></h3>
+<p>Channel is waiting for output Trigger Acknowledgement Interrupt Enable. When set to '1', enables INTR_TRIGOUTACKWAIT to be set and raise an interrupt when STAT_TRIGOUTACKWAIT status flag is asserted. When set to '0', it prevents INTR_TRIGOUTACKWAIT to be asserted. Currently pending interrupts are not affected by clearing this bit.</p>
+<h3 id="INTREN_DESTRIGINWAIT.desc">INTREN_DESTRIGINWAIT<a class="headerlink" href="#INTREN_DESTRIGINWAIT.desc" title="Permalink to this headline"></a></h3>
+<p>Channel is waiting for destination Trigger Interrupt Enable. When set to '1', enables INTR_DESTRIGINWAIT to be set and raise an interrupt when STAT_DESTRIGINWAIT status flag is asserted. When set to '0', it prevents INTR_DESTRIGINWAIT to be asserted. Currently pending interrupts are not affected by clearing this bit.</p>
+<h3 id="INTREN_SRCTRIGINWAIT.desc">INTREN_SRCTRIGINWAIT<a class="headerlink" href="#INTREN_SRCTRIGINWAIT.desc" title="Permalink to this headline"></a></h3>
+<p>Channel is waiting for source Trigger Interrupt Enable. When set to '1', enables INTR_SRCTRIGINWAIT to be set and raise an interrupt when STAT_SRCTRIGINWAIT status flag is asserted. When set to '0', it prevents INTR_SRCTRIGINWAIT to be asserted. Currently pending interrupts are not affected by clearing this bit.</p>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="INTREN_STOPPED.desc">INTREN_STOPPED<a class="headerlink" href="#INTREN_STOPPED.desc" title="Permalink to this headline"></a></h3>
+<p>Stopped Interrupt Enable. When set to '1', enables INTR_STOPPED to be set and raise an interrupt when STAT_STOPPED status flag is asserted. When set to '0', it prevents INTR_STOPPED to be asserted. Currently pending interrupts are not affected by clearing this bit.</p>
+<h3 id="INTREN_DISABLED.desc">INTREN_DISABLED<a class="headerlink" href="#INTREN_DISABLED.desc" title="Permalink to this headline"></a></h3>
+<p>Disabled Interrupt Enable. When set to '1', enables INTR_DISABLED to be set and raise an interrupt when STAT_DISABLED status flag is asserted. When set to '0', it prevents INTR_DISABLED to be asserted. Currently pending interrupts are not affected by clearing this bit.</p>
+<h3 id="INTREN_ERR.desc">INTREN_ERR<a class="headerlink" href="#INTREN_ERR.desc" title="Permalink to this headline"></a></h3>
+<p>Error Interrupt Enable. When set to '1', enables INTR_ERR to be set and raise an interrupt when the STAT_ERR status flag is asserted. When set to '0', it prevents INTR_ERR to be asserted. Currently pending interrupts are not affected by clearing this bit.</p>
+<h3 id="INTREN_DONE.desc">INTREN_DONE<a class="headerlink" href="#INTREN_DONE.desc" title="Permalink to this headline"></a></h3>
+<p>Done Interrupt Enable. When set to '1', enables the INTR_DONE to be set and raise an interrupt when the STAT_DONE status flag is asserted. When set to '0', it prevents INTR_DONE to be asserted. Currently pending interrupts are not affected by clearing this bit.</p>
+</body>
 </html>

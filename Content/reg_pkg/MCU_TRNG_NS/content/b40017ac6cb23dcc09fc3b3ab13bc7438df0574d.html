@@ -1,124 +1,124 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">SMODE</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x8</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>The SMODE register is used to enable or disable certain MISSION mode run-time features.
-This register should only be written when the core is not busy (see STAT.BUSY).
-The NOISE_COLLECT field is set to 1 to enable the raw noise collection mode. When the core is in TEST mode and NOISE_COLLECT is set to 1, the core generates one 512-bit block of noise, issues a NOISE_RDY interrupt and waits for the user to clear the interrupt before moving on to generating another block. User can collect the raw noise data from NPA_DATAx registers before clearing the interrupt. This field cannot be set to 1 in MISSION mode.The value of NOISE_COLLECT field changes back to 0 after each zeroize operation.
-The INDIV_HT_DISABLE field allows the user to disable statistical health tests individually, when the core is operating in TEST mode. This field cannot change in MISSION mode and its value is always 0 in MISSION mode.The value of INDIV_HT_DISABLE field changes back to 0 after each zeroize operation.
-Each test can only be disabled, if included. Setting the corresponding bit of a health test to 1 disables the test.
-- INDIV_HT_DISABLE[0]: Repetition Count test on raw entropy
-- INDIV_HT_DISABLE[1]: Adaptive Proportion test on raw entropy
-- INDIV_HT_DISABLE[2]: Monobit test on raw entropy
-- INDIV_HT_DISABLE[3]: Poker test on raw entropy
-- INDIV_HT_DISABLE[4]: Run test on raw entropy
-- INDIV_HT_DISABLE[5]: Long Run test on raw entropy
-- INDIV_HT_DISABLE[6]: Auto-correlation test on raw entropy
-- INDIV_HT_DISABLE[7]: Repetition Count test on entropy source output
-The MAX_REJECTS field dictates the maximum number of consecutive bit rejections that have to occur within a single bit generator before the ring feedback control system dynamically adjusted the frequency of the affected bit generator. There is usually no need to adjust this register. It is primarily for test purposes.
-The NONCE field must be set to 1 and remain high as long as the state generated from the host-provided seed is being used in the DRBG.
-In order to prevent certain attacks such as backtracking and spoofing, whenever the state of either of MISSION_MODE or NONCE fields is changed, the DWC TRNG NIST automatically zeroizes all internal state information.
-NOTE: Initiation of a self-seeding operation (a write of 1 to the CTRL.CMD register) when in the nonce mode, automatically clears the NONCE mode bit, performs a zeroize, and the command does not take effect. In order to execute a GEN_NOISE command when in the nonce mode, the host should change the mode back to self-seeding (clear the NONCE mode bit) and then assert the GEN_NOISE command.
-NOTE: It is not possible to both toggle the MISSION_MODE bit and set other fields of the SMODE register in a single write operation since the toggling of MISSION_MODE returns the state of the SMODE register to its reset state immediately after the write completes. These changes must be done in separate writes; for example, in order to set the NONCE while MISSION_MODE is also to be changed, toggle the MISSION_MODE bit first, then set NONCE mode in a subsequent write operation.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="NOISE_COLLECT"><td>[31]</td>
-<td><a href="#NOISE_COLLECT.desc">NOISE_COLLECT</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#NOISE_COLLECT" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-field"><td>[30:24]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="INDIV_HT_DISABLE"><td>[23:16]</td>
-<td><a href="#INDIV_HT_DISABLE.desc">INDIV_HT_DISABLE</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#INDIV_HT_DISABLE" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-field"><td>[15:10]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="MAX_REJECTS"><td>[9:2]</td>
-<td><a href="#MAX_REJECTS.desc">MAX_REJECTS</a></td>
-<td>rw</td>
-<td>0xa</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#MAX_REJECTS" title="Permalink to this row"></a></td>
-</tr>
-<tr id="MISSION_MODE"><td>[1]</td>
-<td><a href="#MISSION_MODE.desc">MISSION_MODE</a></td>
-<td>rw</td>
-<td>0x1</td>
-<td><select id="_FieldValueEnumTesterMISSION_MODE" class="field-value-enum-tester"
-data-name="MISSION_MODE" onchange="onDecodedFieldEnumChange(this)"><option value="0x1">RST_MISSION_MODE</option><option value="0x0">RST_TEST_MODE</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#MISSION_MODE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="NONCE"><td>[0]</td>
-<td><a href="#NONCE.desc">NONCE</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterNONCE" class="field-value-enum-tester"
-data-name="NONCE" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">NONCE_DISABLED</option><option value="0x1">NONCE_ENABLED</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#NONCE" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="NOISE_COLLECT.desc">NOISE_COLLECT<a class="headerlink" href="#NOISE_COLLECT.desc" title="Permalink to this headline"></a></h3>
-<p>Enable raw noise collection mode.</p>
-<h3 id="INDIV_HT_DISABLE.desc">INDIV_HT_DISABLE<a class="headerlink" href="#INDIV_HT_DISABLE.desc" title="Permalink to this headline"></a></h3>
-<p>Disable/Enable statistical health tests individually, in TEST mode.</p>
-<h3 id="MAX_REJECTS.desc">MAX_REJECTS<a class="headerlink" href="#MAX_REJECTS.desc" title="Permalink to this headline"></a></h3>
-<p>Maximum number of consecutive bit rejections before issuing ring tweak. Defaults to 10.</p>
-<h3 id="MISSION_MODE.desc">MISSION_MODE<a class="headerlink" href="#MISSION_MODE.desc" title="Permalink to this headline"></a></h3>
-<p>Sets the operating mode to TEST or MISSION.
-NOTE: Any change to the state of this field (1 to 0 or 0 to 1) causes the DWC TRNG NIST to zeroize itself!</p>
-<table><tr><th colspan="3">enum MISSION_MODE_enum_t</th></tr>
-<tr><td>RST_MISSION_MODE</td>
-<td>0x1</td>
-<td><p>mission mode</p>
-</td>
-</tr>
-<tr><td>RST_TEST_MODE</td>
-<td>0x0</td>
-<td><p>test mode</p>
-</td>
-</tr>
-</table><h3 id="NONCE.desc">NONCE<a class="headerlink" href="#NONCE.desc" title="Permalink to this headline"></a></h3>
-<p>Set the core in nonce seeding mode</p>
-<table><tr><th colspan="3">enum NONCE_enum_t</th></tr>
-<tr><td>NONCE_DISABLED</td>
-<td>0x0</td>
-<td><p>Disable nonce mode</p>
-</td>
-</tr>
-<tr><td>NONCE_ENABLED</td>
-<td>0x1</td>
-<td><p>Enable nonce mode</p>
-</td>
-</tr>
-</table>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<body>
+
+<h1 id="_Content.name">SMODE</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x8</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>The SMODE register is used to enable or disable certain MISSION mode run-time features.
+This register should only be written when the core is not busy (see STAT.BUSY).
+The NOISE_COLLECT field is set to 1 to enable the raw noise collection mode. When the core is in TEST mode and NOISE_COLLECT is set to 1, the core generates one 512-bit block of noise, issues a NOISE_RDY interrupt and waits for the user to clear the interrupt before moving on to generating another block. User can collect the raw noise data from NPA_DATAx registers before clearing the interrupt. This field cannot be set to 1 in MISSION mode.The value of NOISE_COLLECT field changes back to 0 after each zeroize operation.
+The INDIV_HT_DISABLE field allows the user to disable statistical health tests individually, when the core is operating in TEST mode. This field cannot change in MISSION mode and its value is always 0 in MISSION mode.The value of INDIV_HT_DISABLE field changes back to 0 after each zeroize operation.
+Each test can only be disabled, if included. Setting the corresponding bit of a health test to 1 disables the test.
+- INDIV_HT_DISABLE[0]: Repetition Count test on raw entropy
+- INDIV_HT_DISABLE[1]: Adaptive Proportion test on raw entropy
+- INDIV_HT_DISABLE[2]: Monobit test on raw entropy
+- INDIV_HT_DISABLE[3]: Poker test on raw entropy
+- INDIV_HT_DISABLE[4]: Run test on raw entropy
+- INDIV_HT_DISABLE[5]: Long Run test on raw entropy
+- INDIV_HT_DISABLE[6]: Auto-correlation test on raw entropy
+- INDIV_HT_DISABLE[7]: Repetition Count test on entropy source output
+The MAX_REJECTS field dictates the maximum number of consecutive bit rejections that have to occur within a single bit generator before the ring feedback control system dynamically adjusted the frequency of the affected bit generator. There is usually no need to adjust this register. It is primarily for test purposes.
+The NONCE field must be set to 1 and remain high as long as the state generated from the host-provided seed is being used in the DRBG.
+In order to prevent certain attacks such as backtracking and spoofing, whenever the state of either of MISSION_MODE or NONCE fields is changed, the DWC TRNG NIST automatically zeroizes all internal state information.
+NOTE: Initiation of a self-seeding operation (a write of 1 to the CTRL.CMD register) when in the nonce mode, automatically clears the NONCE mode bit, performs a zeroize, and the command does not take effect. In order to execute a GEN_NOISE command when in the nonce mode, the host should change the mode back to self-seeding (clear the NONCE mode bit) and then assert the GEN_NOISE command.
+NOTE: It is not possible to both toggle the MISSION_MODE bit and set other fields of the SMODE register in a single write operation since the toggling of MISSION_MODE returns the state of the SMODE register to its reset state immediately after the write completes. These changes must be done in separate writes; for example, in order to set the NONCE while MISSION_MODE is also to be changed, toggle the MISSION_MODE bit first, then set NONCE mode in a subsequent write operation.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="NOISE_COLLECT"><td>[31]</td>
+<td><a href="#NOISE_COLLECT.desc">NOISE_COLLECT</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#NOISE_COLLECT" title="Permalink to this row"></a></td>
+</tr>
+<tr class="reserved-field"><td>[30:24]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="INDIV_HT_DISABLE"><td>[23:16]</td>
+<td><a href="#INDIV_HT_DISABLE.desc">INDIV_HT_DISABLE</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INDIV_HT_DISABLE" title="Permalink to this row"></a></td>
+</tr>
+<tr class="reserved-field"><td>[15:10]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="MAX_REJECTS"><td>[9:2]</td>
+<td><a href="#MAX_REJECTS.desc">MAX_REJECTS</a></td>
+<td>rw</td>
+<td>0xa</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#MAX_REJECTS" title="Permalink to this row"></a></td>
+</tr>
+<tr id="MISSION_MODE"><td>[1]</td>
+<td><a href="#MISSION_MODE.desc">MISSION_MODE</a></td>
+<td>rw</td>
+<td>0x1</td>
+<td><select id="_FieldValueEnumTesterMISSION_MODE" class="field-value-enum-tester"
+data-name="MISSION_MODE" onchange="onDecodedFieldEnumChange(this)"><option value="0x1">RST_MISSION_MODE</option><option value="0x0">RST_TEST_MODE</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#MISSION_MODE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="NONCE"><td>[0]</td>
+<td><a href="#NONCE.desc">NONCE</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td><select id="_FieldValueEnumTesterNONCE" class="field-value-enum-tester"
+data-name="NONCE" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">NONCE_DISABLED</option><option value="0x1">NONCE_ENABLED</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#NONCE" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<h2>Field Descriptions</h2>
+<h3 id="NOISE_COLLECT.desc">NOISE_COLLECT<a class="headerlink" href="#NOISE_COLLECT.desc" title="Permalink to this headline"></a></h3>
+<p>Enable raw noise collection mode.</p>
+<h3 id="INDIV_HT_DISABLE.desc">INDIV_HT_DISABLE<a class="headerlink" href="#INDIV_HT_DISABLE.desc" title="Permalink to this headline"></a></h3>
+<p>Disable/Enable statistical health tests individually, in TEST mode.</p>
+<h3 id="MAX_REJECTS.desc">MAX_REJECTS<a class="headerlink" href="#MAX_REJECTS.desc" title="Permalink to this headline"></a></h3>
+<p>Maximum number of consecutive bit rejections before issuing ring tweak. Defaults to 10.</p>
+<h3 id="MISSION_MODE.desc">MISSION_MODE<a class="headerlink" href="#MISSION_MODE.desc" title="Permalink to this headline"></a></h3>
+<p>Sets the operating mode to TEST or MISSION.
+NOTE: Any change to the state of this field (1 to 0 or 0 to 1) causes the DWC TRNG NIST to zeroize itself!</p>
+<table><tr><th colspan="3">enum MISSION_MODE_enum_t</th></tr>
+<tr><td>RST_MISSION_MODE</td>
+<td>0x1</td>
+<td><p>mission mode</p>
+</td>
+</tr>
+<tr><td>RST_TEST_MODE</td>
+<td>0x0</td>
+<td><p>test mode</p>
+</td>
+</tr>
+</table><h3 id="NONCE.desc">NONCE<a class="headerlink" href="#NONCE.desc" title="Permalink to this headline"></a></h3>
+<p>Set the core in nonce seeding mode</p>
+<table><tr><th colspan="3">enum NONCE_enum_t</th></tr>
+<tr><td>NONCE_DISABLED</td>
+<td>0x0</td>
+<td><p>Disable nonce mode</p>
+</td>
+</tr>
+<tr><td>NONCE_ENABLED</td>
+<td>0x1</td>
+<td><p>Enable nonce mode</p>
+</td>
+</tr>
+</table>
+</body>
 </html>

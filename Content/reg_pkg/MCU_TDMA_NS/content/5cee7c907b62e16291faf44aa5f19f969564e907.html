@@ -1,37 +1,37 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">CH_YADDRSTRIDE</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1034</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Channel Y Dimension Address Stride Register</p>
-<p>This register sets the increment values used to update the source and destination line base addresses after each line is transferred.</p>
-<p>The content of this register can be updated during command linking by setting bit[13] in the command link header.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="DESYADDRSTRIDE"><td>[31:16]</td>
-<td><a href="#DESYADDRSTRIDE.desc">DESYADDRSTRIDE</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DESYADDRSTRIDE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="SRCYADDRSTRIDE"><td>[15:0]</td>
-<td><a href="#SRCYADDRSTRIDE.desc">SRCYADDRSTRIDE</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#SRCYADDRSTRIDE" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="DESYADDRSTRIDE.desc">DESYADDRSTRIDE<a class="headerlink" href="#DESYADDRSTRIDE.desc" title="Permalink to this headline"></a></h3>
-<p>Destination Address Stride between lines. Calculated in TRANSIZE aligned steps. This value is used to increment the DESADDR after completing the transfer of a destination line. DESADDR_next_line_base = DESADDR_line_base + 2^TRANSIZE * DESYADDRSTRIDE. Two's complement used with a range between -32768 to 32767. When set to 0 the DESADDR is not incremented after completing one line. Not present when HAS_2D is 0.</p>
-<h3 id="SRCYADDRSTRIDE.desc">SRCYADDRSTRIDE<a class="headerlink" href="#SRCYADDRSTRIDE.desc" title="Permalink to this headline"></a></h3>
-<p>Source Address Stride between lines. Calculated in TRANSIZE aligned steps. This value is used to increment the SRCADDR after completing the transfer of a source line. SRCADDR_next_line_base = SRCADDR_line_base + 2^TRANSIZE * SRCYADDRSTRIDE. Two's complement used with a range between -32768 to 32767. When set to 0 the SRCADDR is not incremented after completing one line. Not present when HAS_2D is 0.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<body>
+
+<h1 id="_Content.name">CH_YADDRSTRIDE</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1034</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Channel Y Dimension Address Stride Register</p>
+<p>This register sets the increment values used to update the source and destination line base addresses after each line is transferred.</p>
+<p>The content of this register can be updated during command linking by setting bit[13] in the command link header.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="DESYADDRSTRIDE"><td>[31:16]</td>
+<td><a href="#DESYADDRSTRIDE.desc">DESYADDRSTRIDE</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DESYADDRSTRIDE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="SRCYADDRSTRIDE"><td>[15:0]</td>
+<td><a href="#SRCYADDRSTRIDE.desc">SRCYADDRSTRIDE</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#SRCYADDRSTRIDE" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<h2>Field Descriptions</h2>
+<h3 id="DESYADDRSTRIDE.desc">DESYADDRSTRIDE<a class="headerlink" href="#DESYADDRSTRIDE.desc" title="Permalink to this headline"></a></h3>
+<p>Destination Address Stride between lines. Calculated in TRANSIZE aligned steps. This value is used to increment the DESADDR after completing the transfer of a destination line. DESADDR_next_line_base = DESADDR_line_base + 2^TRANSIZE * DESYADDRSTRIDE. Two's complement used with a range between -32768 to 32767. When set to 0 the DESADDR is not incremented after completing one line. Not present when HAS_2D is 0.</p>
+<h3 id="SRCYADDRSTRIDE.desc">SRCYADDRSTRIDE<a class="headerlink" href="#SRCYADDRSTRIDE.desc" title="Permalink to this headline"></a></h3>
+<p>Source Address Stride between lines. Calculated in TRANSIZE aligned steps. This value is used to increment the SRCADDR after completing the transfer of a source line. SRCADDR_next_line_base = SRCADDR_line_base + 2^TRANSIZE * SRCYADDRSTRIDE. Two's complement used with a range between -32768 to 32767. When set to 0 the SRCADDR is not incremented after completing one line. Not present when HAS_2D is 0.</p>
+</body>
 </html>

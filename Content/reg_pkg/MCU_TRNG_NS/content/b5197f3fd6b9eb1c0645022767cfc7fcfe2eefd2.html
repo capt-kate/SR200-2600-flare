@@ -1,279 +1,279 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">BUILD_CFG0</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0xf0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Contains build-time DWC TRNG NIST parameter settings.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr class="reserved-field"><td>[31:20]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="NS_DIAGNOSTIC_LEVEL"><td>[19]</td>
-<td><a href="#NS_DIAGNOSTIC_LEVEL.desc">NS_DIAGNOSTIC_LEVEL</a></td>
-<td>r</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#NS_DIAGNOSTIC_LEVEL" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DIAGNOSTIC_LEVEL"><td>[18:16]</td>
-<td><a href="#DIAGNOSTIC_LEVEL.desc">DIAGNOSTIC_LEVEL</a></td>
-<td>r</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DIAGNOSTIC_LEVEL" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-field"><td>[15]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="PERSONALIZATION_STR"><td>[14]</td>
-<td><a href="#PERSONALIZATION_STR.desc">PERSONALIZATION_STR</a></td>
-<td>r</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterPERSONALIZATION_STR" class="field-value-enum-tester"
-data-name="PERSONALIZATION_STR" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">PS_NOT_PRESENT</option><option value="0x1">PS_PRESENT</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#PERSONALIZATION_STR" title="Permalink to this row"></a></td>
-</tr>
-<tr id="AES_MAX_KEY_SIZE"><td>[13]</td>
-<td><a href="#AES_MAX_KEY_SIZE.desc">AES_MAX_KEY_SIZE</a></td>
-<td>r</td>
-<td>0x1</td>
-<td><select id="_FieldValueEnumTesterAES_MAX_KEY_SIZE" class="field-value-enum-tester"
-data-name="AES_MAX_KEY_SIZE" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">AES_MAX_KEY_SIZE_128</option><option value="0x1">AES_MAX_KEY_SIZE_256</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#AES_MAX_KEY_SIZE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="AES_DATAPATH"><td>[12]</td>
-<td><a href="#AES_DATAPATH.desc">AES_DATAPATH</a></td>
-<td>r</td>
-<td>0x1</td>
-<td><select id="_FieldValueEnumTesterAES_DATAPATH" class="field-value-enum-tester"
-data-name="AES_DATAPATH" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">AES_DATAPATH_128</option><option value="0x1">AES_DATAPATH_256</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#AES_DATAPATH" title="Permalink to this row"></a></td>
-</tr>
-<tr id="EDU_PRESENT"><td>[11]</td>
-<td><a href="#EDU_PRESENT.desc">EDU_PRESENT</a></td>
-<td>r</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterEDU_PRESENT" class="field-value-enum-tester"
-data-name="EDU_PRESENT" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">EDU_PRESENT_NOT_PRESENT</option><option value="0x1">EDU_PRESENT_PRESENT</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#EDU_PRESENT" title="Permalink to this row"></a></td>
-</tr>
-<tr id="BACKGROUND_NOISE"><td>[10]</td>
-<td><a href="#BACKGROUND_NOISE.desc">BACKGROUND_NOISE</a></td>
-<td>r</td>
-<td>0x1</td>
-<td><select id="_FieldValueEnumTesterBACKGROUND_NOISE" class="field-value-enum-tester"
-data-name="BACKGROUND_NOISE" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">BACKGROUND_NOISE_NOT_PRESENT</option><option value="0x1">BACKGROUND_NOISE_PRESENT</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#BACKGROUND_NOISE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="CDC_SYNC_DEPTH"><td>[9:8]</td>
-<td><a href="#CDC_SYNC_DEPTH.desc">CDC_SYNC_DEPTH</a></td>
-<td>r</td>
-<td>0x2</td>
-<td><select id="_FieldValueEnumTesterCDC_SYNC_DEPTH" class="field-value-enum-tester"
-data-name="CDC_SYNC_DEPTH" onchange="onDecodedFieldEnumChange(this)"><option value="0x2">CDC_RESYNC_2</option><option value="0x3">CDC_RESYNC_3</option><option value="0x0">CDC_RESYNC_4</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#CDC_SYNC_DEPTH" title="Permalink to this row"></a></td>
-</tr>
-<tr id="BG8"><td>[7]</td>
-<td><a href="#BG8.desc">BG8</a></td>
-<td>r</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterBG8" class="field-value-enum-tester"
-data-name="BG8" onchange="onDecodedFieldEnumChange(this)"><option value="0x1">EIGHT_BGS</option><option value="0x0">SIX_BGS</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#BG8" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DIGITIZER_CNTR_WIDTH"><td>[6:4]</td>
-<td><a href="#DIGITIZER_CNTR_WIDTH.desc">DIGITIZER_CNTR_WIDTH</a></td>
-<td>r</td>
-<td>0x4</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DIGITIZER_CNTR_WIDTH" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DIGITIZER_TYPE"><td>[3:2]</td>
-<td><a href="#DIGITIZER_TYPE.desc">DIGITIZER_TYPE</a></td>
-<td>r</td>
-<td>0x1</td>
-<td><select id="_FieldValueEnumTesterDIGITIZER_TYPE" class="field-value-enum-tester"
-data-name="DIGITIZER_TYPE" onchange="onDecodedFieldEnumChange(this)"><option value="0x2">DIGITIZER_TYPE_IPE</option><option value="0x1">DIGITIZER_TYPE_WDR</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DIGITIZER_TYPE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="CORE_TYPE"><td>[1:0]</td>
-<td><a href="#CORE_TYPE.desc">CORE_TYPE</a></td>
-<td>r</td>
-<td>0x2</td>
-<td><select id="_FieldValueEnumTesterCORE_TYPE" class="field-value-enum-tester"
-data-name="CORE_TYPE" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">CORE_TYPE_BASE_TRNG</option><option value="0x1">CORE_TYPE_BASE_TRNG_WITH_ESM_NONCE</option><option value="0x2">CORE_TYPE_NIST_TRNG</option><option value="0x3">CORE_TYPE_NIST_TRNG_WITH_EDU</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#CORE_TYPE" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="NS_DIAGNOSTIC_LEVEL.desc">NS_DIAGNOSTIC_LEVEL<a class="headerlink" href="#NS_DIAGNOSTIC_LEVEL.desc" title="Permalink to this headline"></a></h3>
-<p>Level of Noise Source diagnostic support provided.
-This configuration parameter is not customer-modifiable.</p>
-<h3 id="DIAGNOSTIC_LEVEL.desc">DIAGNOSTIC_LEVEL<a class="headerlink" href="#DIAGNOSTIC_LEVEL.desc" title="Permalink to this headline"></a></h3>
-<p>Level of diagnostic support provided.
-This configuration parameter is not customer-modifiable.</p>
-<h3 id="PERSONALIZATION_STR.desc">PERSONALIZATION_STR<a class="headerlink" href="#PERSONALIZATION_STR.desc" title="Permalink to this headline"></a></h3>
-<p>Personalization string used</p>
-<table><tr><th colspan="3">enum PERSONALIZATION_STR_enum_t</th></tr>
-<tr><td>PS_NOT_PRESENT</td>
-<td>0x0</td>
-<td><p>not present</p>
-</td>
-</tr>
-<tr><td>PS_PRESENT</td>
-<td>0x1</td>
-<td><p>present</p>
-</td>
-</tr>
-</table><h3 id="AES_MAX_KEY_SIZE.desc">AES_MAX_KEY_SIZE<a class="headerlink" href="#AES_MAX_KEY_SIZE.desc" title="Permalink to this headline"></a></h3>
-<p>AES max key size</p>
-<table><tr><th colspan="3">enum AES_MAX_KEY_SIZE_enum_t</th></tr>
-<tr><td>AES_MAX_KEY_SIZE_128</td>
-<td>0x0</td>
-<td><p>128-bit key</p>
-</td>
-</tr>
-<tr><td>AES_MAX_KEY_SIZE_256</td>
-<td>0x1</td>
-<td><p>256-bit key</p>
-</td>
-</tr>
-</table><h3 id="AES_DATAPATH.desc">AES_DATAPATH<a class="headerlink" href="#AES_DATAPATH.desc" title="Permalink to this headline"></a></h3>
-<p>AES datapath width</p>
-<table><tr><th colspan="3">enum AES_DATAPATH_enum_t</th></tr>
-<tr><td>AES_DATAPATH_128</td>
-<td>0x0</td>
-<td><p>32-bit datapath</p>
-</td>
-</tr>
-<tr><td>AES_DATAPATH_256</td>
-<td>0x1</td>
-<td><p>128-bit datapath</p>
-</td>
-</tr>
-</table><h3 id="EDU_PRESENT.desc">EDU_PRESENT<a class="headerlink" href="#EDU_PRESENT.desc" title="Permalink to this headline"></a></h3>
-<p>Indicates EDU is present</p>
-<table><tr><th colspan="3">enum EDU_PRESENT_enum_t</th></tr>
-<tr><td>EDU_PRESENT_NOT_PRESENT</td>
-<td>0x0</td>
-<td><p>not present</p>
-</td>
-</tr>
-<tr><td>EDU_PRESENT_PRESENT</td>
-<td>0x1</td>
-<td><p>present</p>
-</td>
-</tr>
-</table><h3 id="BACKGROUND_NOISE.desc">BACKGROUND_NOISE<a class="headerlink" href="#BACKGROUND_NOISE.desc" title="Permalink to this headline"></a></h3>
-<p>Indicates background noise collection is present</p>
-<table><tr><th colspan="3">enum BACKGROUND_NOISE_enum_t</th></tr>
-<tr><td>BACKGROUND_NOISE_NOT_PRESENT</td>
-<td>0x0</td>
-<td><p>not present</p>
-</td>
-</tr>
-<tr><td>BACKGROUND_NOISE_PRESENT</td>
-<td>0x1</td>
-<td><p>present</p>
-</td>
-</tr>
-</table><h3 id="CDC_SYNC_DEPTH.desc">CDC_SYNC_DEPTH<a class="headerlink" href="#CDC_SYNC_DEPTH.desc" title="Permalink to this headline"></a></h3>
-<p>Depth of the CDC resynchronizer chains</p>
-<table><tr><th colspan="3">enum CDC_SYNC_DEPTH_enum_t</th></tr>
-<tr><td>CDC_RESYNC_2</td>
-<td>0x2</td>
-<td><p>CDC resynchronization depth 2</p>
-</td>
-</tr>
-<tr><td>CDC_RESYNC_3</td>
-<td>0x3</td>
-<td><p>CDC resynchronization depth 3</p>
-</td>
-</tr>
-<tr><td>CDC_RESYNC_4</td>
-<td>0x0</td>
-<td><p>CDC resynchronization depth 4</p>
-</td>
-</tr>
-</table><h3 id="BG8.desc">BG8<a class="headerlink" href="#BG8.desc" title="Permalink to this headline"></a></h3>
-<p>Indicates number of bit generators present</p>
-<table><tr><th colspan="3">enum BG8_enum_t</th></tr>
-<tr><td>EIGHT_BGS</td>
-<td>0x1</td>
-<td><p>8 Bit Generators present</p>
-</td>
-</tr>
-<tr><td>SIX_BGS</td>
-<td>0x0</td>
-<td><p>6 Bit Generators present</p>
-</td>
-</tr>
-</table><h3 id="DIGITIZER_CNTR_WIDTH.desc">DIGITIZER_CNTR_WIDTH<a class="headerlink" href="#DIGITIZER_CNTR_WIDTH.desc" title="Permalink to this headline"></a></h3>
-<p>Indicates width of the random bit generator digitizer counter.
-This configuration parameter is not customer-modifiable.</p>
-<h3 id="DIGITIZER_TYPE.desc">DIGITIZER_TYPE<a class="headerlink" href="#DIGITIZER_TYPE.desc" title="Permalink to this headline"></a></h3>
-<p>Type of digitizer used.
-This configuration parameter is not customer-modifiable.</p>
-<table><tr><th colspan="3">enum DIGITIZER_TYPE_enum_t</th></tr>
-<tr><td>DIGITIZER_TYPE_IPE</td>
-<td>0x2</td>
-<td><p>IPE</p>
-</td>
-</tr>
-<tr><td>DIGITIZER_TYPE_WDR</td>
-<td>0x1</td>
-<td><p>WDR</p>
-</td>
-</tr>
-</table><h3 id="CORE_TYPE.desc">CORE_TYPE<a class="headerlink" href="#CORE_TYPE.desc" title="Permalink to this headline"></a></h3>
-<p>Core type</p>
-<table><tr><th colspan="3">enum CORE_TYPE_enum_t</th></tr>
-<tr><td>CORE_TYPE_BASE_TRNG</td>
-<td>0x0</td>
-<td><p>DWC TRNG</p>
-</td>
-</tr>
-<tr><td>CORE_TYPE_BASE_TRNG_WITH_ESM_NONCE</td>
-<td>0x1</td>
-<td><p>DWC TRNG with ESM nonce I/O</p>
-</td>
-</tr>
-<tr><td>CORE_TYPE_NIST_TRNG</td>
-<td>0x2</td>
-<td><p>DWC TRNG NIST</p>
-</td>
-</tr>
-<tr><td>CORE_TYPE_NIST_TRNG_WITH_EDU</td>
-<td>0x3</td>
-<td><p>DWC TRNG NIST with EDU</p>
-</td>
-</tr>
-</table>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<body>
+
+<h1 id="_Content.name">BUILD_CFG0</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0xf0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Contains build-time DWC TRNG NIST parameter settings.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31:20]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="NS_DIAGNOSTIC_LEVEL"><td>[19]</td>
+<td><a href="#NS_DIAGNOSTIC_LEVEL.desc">NS_DIAGNOSTIC_LEVEL</a></td>
+<td>r</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#NS_DIAGNOSTIC_LEVEL" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DIAGNOSTIC_LEVEL"><td>[18:16]</td>
+<td><a href="#DIAGNOSTIC_LEVEL.desc">DIAGNOSTIC_LEVEL</a></td>
+<td>r</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DIAGNOSTIC_LEVEL" title="Permalink to this row"></a></td>
+</tr>
+<tr class="reserved-field"><td>[15]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="PERSONALIZATION_STR"><td>[14]</td>
+<td><a href="#PERSONALIZATION_STR.desc">PERSONALIZATION_STR</a></td>
+<td>r</td>
+<td>0x0</td>
+<td><select id="_FieldValueEnumTesterPERSONALIZATION_STR" class="field-value-enum-tester"
+data-name="PERSONALIZATION_STR" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">PS_NOT_PRESENT</option><option value="0x1">PS_PRESENT</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#PERSONALIZATION_STR" title="Permalink to this row"></a></td>
+</tr>
+<tr id="AES_MAX_KEY_SIZE"><td>[13]</td>
+<td><a href="#AES_MAX_KEY_SIZE.desc">AES_MAX_KEY_SIZE</a></td>
+<td>r</td>
+<td>0x1</td>
+<td><select id="_FieldValueEnumTesterAES_MAX_KEY_SIZE" class="field-value-enum-tester"
+data-name="AES_MAX_KEY_SIZE" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">AES_MAX_KEY_SIZE_128</option><option value="0x1">AES_MAX_KEY_SIZE_256</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#AES_MAX_KEY_SIZE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="AES_DATAPATH"><td>[12]</td>
+<td><a href="#AES_DATAPATH.desc">AES_DATAPATH</a></td>
+<td>r</td>
+<td>0x1</td>
+<td><select id="_FieldValueEnumTesterAES_DATAPATH" class="field-value-enum-tester"
+data-name="AES_DATAPATH" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">AES_DATAPATH_128</option><option value="0x1">AES_DATAPATH_256</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#AES_DATAPATH" title="Permalink to this row"></a></td>
+</tr>
+<tr id="EDU_PRESENT"><td>[11]</td>
+<td><a href="#EDU_PRESENT.desc">EDU_PRESENT</a></td>
+<td>r</td>
+<td>0x0</td>
+<td><select id="_FieldValueEnumTesterEDU_PRESENT" class="field-value-enum-tester"
+data-name="EDU_PRESENT" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">EDU_PRESENT_NOT_PRESENT</option><option value="0x1">EDU_PRESENT_PRESENT</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#EDU_PRESENT" title="Permalink to this row"></a></td>
+</tr>
+<tr id="BACKGROUND_NOISE"><td>[10]</td>
+<td><a href="#BACKGROUND_NOISE.desc">BACKGROUND_NOISE</a></td>
+<td>r</td>
+<td>0x1</td>
+<td><select id="_FieldValueEnumTesterBACKGROUND_NOISE" class="field-value-enum-tester"
+data-name="BACKGROUND_NOISE" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">BACKGROUND_NOISE_NOT_PRESENT</option><option value="0x1">BACKGROUND_NOISE_PRESENT</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#BACKGROUND_NOISE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="CDC_SYNC_DEPTH"><td>[9:8]</td>
+<td><a href="#CDC_SYNC_DEPTH.desc">CDC_SYNC_DEPTH</a></td>
+<td>r</td>
+<td>0x2</td>
+<td><select id="_FieldValueEnumTesterCDC_SYNC_DEPTH" class="field-value-enum-tester"
+data-name="CDC_SYNC_DEPTH" onchange="onDecodedFieldEnumChange(this)"><option value="0x2">CDC_RESYNC_2</option><option value="0x3">CDC_RESYNC_3</option><option value="0x0">CDC_RESYNC_4</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#CDC_SYNC_DEPTH" title="Permalink to this row"></a></td>
+</tr>
+<tr id="BG8"><td>[7]</td>
+<td><a href="#BG8.desc">BG8</a></td>
+<td>r</td>
+<td>0x0</td>
+<td><select id="_FieldValueEnumTesterBG8" class="field-value-enum-tester"
+data-name="BG8" onchange="onDecodedFieldEnumChange(this)"><option value="0x1">EIGHT_BGS</option><option value="0x0">SIX_BGS</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#BG8" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DIGITIZER_CNTR_WIDTH"><td>[6:4]</td>
+<td><a href="#DIGITIZER_CNTR_WIDTH.desc">DIGITIZER_CNTR_WIDTH</a></td>
+<td>r</td>
+<td>0x4</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DIGITIZER_CNTR_WIDTH" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DIGITIZER_TYPE"><td>[3:2]</td>
+<td><a href="#DIGITIZER_TYPE.desc">DIGITIZER_TYPE</a></td>
+<td>r</td>
+<td>0x1</td>
+<td><select id="_FieldValueEnumTesterDIGITIZER_TYPE" class="field-value-enum-tester"
+data-name="DIGITIZER_TYPE" onchange="onDecodedFieldEnumChange(this)"><option value="0x2">DIGITIZER_TYPE_IPE</option><option value="0x1">DIGITIZER_TYPE_WDR</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DIGITIZER_TYPE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="CORE_TYPE"><td>[1:0]</td>
+<td><a href="#CORE_TYPE.desc">CORE_TYPE</a></td>
+<td>r</td>
+<td>0x2</td>
+<td><select id="_FieldValueEnumTesterCORE_TYPE" class="field-value-enum-tester"
+data-name="CORE_TYPE" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">CORE_TYPE_BASE_TRNG</option><option value="0x1">CORE_TYPE_BASE_TRNG_WITH_ESM_NONCE</option><option value="0x2">CORE_TYPE_NIST_TRNG</option><option value="0x3">CORE_TYPE_NIST_TRNG_WITH_EDU</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#CORE_TYPE" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<h2>Field Descriptions</h2>
+<h3 id="NS_DIAGNOSTIC_LEVEL.desc">NS_DIAGNOSTIC_LEVEL<a class="headerlink" href="#NS_DIAGNOSTIC_LEVEL.desc" title="Permalink to this headline"></a></h3>
+<p>Level of Noise Source diagnostic support provided.
+This configuration parameter is not customer-modifiable.</p>
+<h3 id="DIAGNOSTIC_LEVEL.desc">DIAGNOSTIC_LEVEL<a class="headerlink" href="#DIAGNOSTIC_LEVEL.desc" title="Permalink to this headline"></a></h3>
+<p>Level of diagnostic support provided.
+This configuration parameter is not customer-modifiable.</p>
+<h3 id="PERSONALIZATION_STR.desc">PERSONALIZATION_STR<a class="headerlink" href="#PERSONALIZATION_STR.desc" title="Permalink to this headline"></a></h3>
+<p>Personalization string used</p>
+<table><tr><th colspan="3">enum PERSONALIZATION_STR_enum_t</th></tr>
+<tr><td>PS_NOT_PRESENT</td>
+<td>0x0</td>
+<td><p>not present</p>
+</td>
+</tr>
+<tr><td>PS_PRESENT</td>
+<td>0x1</td>
+<td><p>present</p>
+</td>
+</tr>
+</table><h3 id="AES_MAX_KEY_SIZE.desc">AES_MAX_KEY_SIZE<a class="headerlink" href="#AES_MAX_KEY_SIZE.desc" title="Permalink to this headline"></a></h3>
+<p>AES max key size</p>
+<table><tr><th colspan="3">enum AES_MAX_KEY_SIZE_enum_t</th></tr>
+<tr><td>AES_MAX_KEY_SIZE_128</td>
+<td>0x0</td>
+<td><p>128-bit key</p>
+</td>
+</tr>
+<tr><td>AES_MAX_KEY_SIZE_256</td>
+<td>0x1</td>
+<td><p>256-bit key</p>
+</td>
+</tr>
+</table><h3 id="AES_DATAPATH.desc">AES_DATAPATH<a class="headerlink" href="#AES_DATAPATH.desc" title="Permalink to this headline"></a></h3>
+<p>AES datapath width</p>
+<table><tr><th colspan="3">enum AES_DATAPATH_enum_t</th></tr>
+<tr><td>AES_DATAPATH_128</td>
+<td>0x0</td>
+<td><p>32-bit datapath</p>
+</td>
+</tr>
+<tr><td>AES_DATAPATH_256</td>
+<td>0x1</td>
+<td><p>128-bit datapath</p>
+</td>
+</tr>
+</table><h3 id="EDU_PRESENT.desc">EDU_PRESENT<a class="headerlink" href="#EDU_PRESENT.desc" title="Permalink to this headline"></a></h3>
+<p>Indicates EDU is present</p>
+<table><tr><th colspan="3">enum EDU_PRESENT_enum_t</th></tr>
+<tr><td>EDU_PRESENT_NOT_PRESENT</td>
+<td>0x0</td>
+<td><p>not present</p>
+</td>
+</tr>
+<tr><td>EDU_PRESENT_PRESENT</td>
+<td>0x1</td>
+<td><p>present</p>
+</td>
+</tr>
+</table><h3 id="BACKGROUND_NOISE.desc">BACKGROUND_NOISE<a class="headerlink" href="#BACKGROUND_NOISE.desc" title="Permalink to this headline"></a></h3>
+<p>Indicates background noise collection is present</p>
+<table><tr><th colspan="3">enum BACKGROUND_NOISE_enum_t</th></tr>
+<tr><td>BACKGROUND_NOISE_NOT_PRESENT</td>
+<td>0x0</td>
+<td><p>not present</p>
+</td>
+</tr>
+<tr><td>BACKGROUND_NOISE_PRESENT</td>
+<td>0x1</td>
+<td><p>present</p>
+</td>
+</tr>
+</table><h3 id="CDC_SYNC_DEPTH.desc">CDC_SYNC_DEPTH<a class="headerlink" href="#CDC_SYNC_DEPTH.desc" title="Permalink to this headline"></a></h3>
+<p>Depth of the CDC resynchronizer chains</p>
+<table><tr><th colspan="3">enum CDC_SYNC_DEPTH_enum_t</th></tr>
+<tr><td>CDC_RESYNC_2</td>
+<td>0x2</td>
+<td><p>CDC resynchronization depth 2</p>
+</td>
+</tr>
+<tr><td>CDC_RESYNC_3</td>
+<td>0x3</td>
+<td><p>CDC resynchronization depth 3</p>
+</td>
+</tr>
+<tr><td>CDC_RESYNC_4</td>
+<td>0x0</td>
+<td><p>CDC resynchronization depth 4</p>
+</td>
+</tr>
+</table><h3 id="BG8.desc">BG8<a class="headerlink" href="#BG8.desc" title="Permalink to this headline"></a></h3>
+<p>Indicates number of bit generators present</p>
+<table><tr><th colspan="3">enum BG8_enum_t</th></tr>
+<tr><td>EIGHT_BGS</td>
+<td>0x1</td>
+<td><p>8 Bit Generators present</p>
+</td>
+</tr>
+<tr><td>SIX_BGS</td>
+<td>0x0</td>
+<td><p>6 Bit Generators present</p>
+</td>
+</tr>
+</table><h3 id="DIGITIZER_CNTR_WIDTH.desc">DIGITIZER_CNTR_WIDTH<a class="headerlink" href="#DIGITIZER_CNTR_WIDTH.desc" title="Permalink to this headline"></a></h3>
+<p>Indicates width of the random bit generator digitizer counter.
+This configuration parameter is not customer-modifiable.</p>
+<h3 id="DIGITIZER_TYPE.desc">DIGITIZER_TYPE<a class="headerlink" href="#DIGITIZER_TYPE.desc" title="Permalink to this headline"></a></h3>
+<p>Type of digitizer used.
+This configuration parameter is not customer-modifiable.</p>
+<table><tr><th colspan="3">enum DIGITIZER_TYPE_enum_t</th></tr>
+<tr><td>DIGITIZER_TYPE_IPE</td>
+<td>0x2</td>
+<td><p>IPE</p>
+</td>
+</tr>
+<tr><td>DIGITIZER_TYPE_WDR</td>
+<td>0x1</td>
+<td><p>WDR</p>
+</td>
+</tr>
+</table><h3 id="CORE_TYPE.desc">CORE_TYPE<a class="headerlink" href="#CORE_TYPE.desc" title="Permalink to this headline"></a></h3>
+<p>Core type</p>
+<table><tr><th colspan="3">enum CORE_TYPE_enum_t</th></tr>
+<tr><td>CORE_TYPE_BASE_TRNG</td>
+<td>0x0</td>
+<td><p>DWC TRNG</p>
+</td>
+</tr>
+<tr><td>CORE_TYPE_BASE_TRNG_WITH_ESM_NONCE</td>
+<td>0x1</td>
+<td><p>DWC TRNG with ESM nonce I/O</p>
+</td>
+</tr>
+<tr><td>CORE_TYPE_NIST_TRNG</td>
+<td>0x2</td>
+<td><p>DWC TRNG NIST</p>
+</td>
+</tr>
+<tr><td>CORE_TYPE_NIST_TRNG_WITH_EDU</td>
+<td>0x3</td>
+<td><p>DWC TRNG NIST with EDU</p>
+</td>
+</tr>
+</table>
+</body>
 </html>

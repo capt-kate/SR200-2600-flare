@@ -1,41 +1,41 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">TIME_TO_SEED</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0xd0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>The Time-to-Seed (TTS) register records the number of clock cycles taken to collect the set of raw noise bits used by the previous GEN_NOISE command. The raw noise bits are collected from the internal entropy generator. The time taken to collect this raw noise data set is non-deterministic. This register does not include the deterministic cycles taken to process the raw noise data into a seed within the GEN_NOISE command.
-The number of raw noise bits collected depends on the current security strength setting and can be either 1024 or 1536 bits.
-This register is only used to provide diagnostic performance data. For security reasons, this register is cleared by a zeroized operation.</p>
-<p>If the background raw noise collection build-time option is enabled, and there has been sufficient time between GEN_NOISE commands to collect a complete set of background raw noise data, the time taken to execute the GEN_NOISE command becomes deterministic and relatively low.
-If there has been insufficient time between GEN_NOISE commands to collect a complete set of raw noise data, or if the build-time optional background noise collection logic has not been included, the time taken to execute a GEN_NOISE command becomes non-deterministic (possibly measured in terms of milliseconds) because this process includes the non-deterministic collection of raw noise bits.
-In both cases, the value in the TTS reflects only the time the core takes to generate the raw noise. When there is no background-collected noise, the time taken to run the GEN_NOISE command includes the cycle measure in the TTS. When there is background noise available, GEN_NOISE runs much more quickly and takes much less time than the cycles measured in TTS - because they were collected in the background.</p>
-<p>Deterministic cycles in a GEN_NOISE command that should be added on top of the non-deterministic time specified by TTS.
---- Derivation Function (varies depending on the build-time configured datapath size of the AES core and the run-time chosen security strength):
------- 128-bit datapath AES, 128-bit security strength: 350 Cycles
------- 128-bit datapath AES, 256-bit security strength: 520 Cycles
------- 32-bit datapath AES, 128-bit security strength: 1230 Cycles
------- 32-bit datapath AES, 256-bit security strength: 1850 Cycles
---- Health Test:
------- Background Noise Collection Build-Time option is OFF: ~300-1000 cycles
------- Background Noise Collection Build-Time option is ON: 0 cycles
---- Others:
------- Less than ~50 cycles.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="TTS"><td>[31:0]</td>
-<td><a href="#TTS.desc">TTS</a></td>
-<td>r</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#TTS" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="TTS.desc">TTS<a class="headerlink" href="#TTS.desc" title="Permalink to this headline"></a></h3>
-<p>Shows the number of system clock cycles taken to generate raw noise for the last GEN_NOISE command.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<body>
+
+<h1 id="_Content.name">TIME_TO_SEED</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0xd0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>The Time-to-Seed (TTS) register records the number of clock cycles taken to collect the set of raw noise bits used by the previous GEN_NOISE command. The raw noise bits are collected from the internal entropy generator. The time taken to collect this raw noise data set is non-deterministic. This register does not include the deterministic cycles taken to process the raw noise data into a seed within the GEN_NOISE command.
+The number of raw noise bits collected depends on the current security strength setting and can be either 1024 or 1536 bits.
+This register is only used to provide diagnostic performance data. For security reasons, this register is cleared by a zeroized operation.</p>
+<p>If the background raw noise collection build-time option is enabled, and there has been sufficient time between GEN_NOISE commands to collect a complete set of background raw noise data, the time taken to execute the GEN_NOISE command becomes deterministic and relatively low.
+If there has been insufficient time between GEN_NOISE commands to collect a complete set of raw noise data, or if the build-time optional background noise collection logic has not been included, the time taken to execute a GEN_NOISE command becomes non-deterministic (possibly measured in terms of milliseconds) because this process includes the non-deterministic collection of raw noise bits.
+In both cases, the value in the TTS reflects only the time the core takes to generate the raw noise. When there is no background-collected noise, the time taken to run the GEN_NOISE command includes the cycle measure in the TTS. When there is background noise available, GEN_NOISE runs much more quickly and takes much less time than the cycles measured in TTS - because they were collected in the background.</p>
+<p>Deterministic cycles in a GEN_NOISE command that should be added on top of the non-deterministic time specified by TTS.
+--- Derivation Function (varies depending on the build-time configured datapath size of the AES core and the run-time chosen security strength):
+------ 128-bit datapath AES, 128-bit security strength: 350 Cycles
+------ 128-bit datapath AES, 256-bit security strength: 520 Cycles
+------ 32-bit datapath AES, 128-bit security strength: 1230 Cycles
+------ 32-bit datapath AES, 256-bit security strength: 1850 Cycles
+--- Health Test:
+------ Background Noise Collection Build-Time option is OFF: ~300-1000 cycles
+------ Background Noise Collection Build-Time option is ON: 0 cycles
+--- Others:
+------ Less than ~50 cycles.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="TTS"><td>[31:0]</td>
+<td><a href="#TTS.desc">TTS</a></td>
+<td>r</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#TTS" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<h2>Field Descriptions</h2>
+<h3 id="TTS.desc">TTS<a class="headerlink" href="#TTS.desc" title="Permalink to this headline"></a></h3>
+<p>Shows the number of system clock cycles taken to generate raw noise for the last GEN_NOISE command.</p>
+</body>
 </html>

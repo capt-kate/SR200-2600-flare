@@ -1,146 +1,146 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">CH_DESTRANSCFG</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x222c</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Channel Destination Transfer Configuration Register</p>
-<p>This register provides transfer attribute settings in the write direction of the DMA command.</p>
-<p>The content of this register can be updated during command linking by setting bit[11] in the command link header.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="RAZWI_1"><td>[31:20]</td>
-<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DESMAXBURSTLEN"><td>[19:16]</td>
-<td><a href="#DESMAXBURSTLEN.desc">DESMAXBURSTLEN</a></td>
-<td>rw</td>
-<td>0xf</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DESMAXBURSTLEN" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RAZWI_0"><td>[15:12]</td>
-<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DESPRIVATTR"><td>[11]</td>
-<td><a href="#DESPRIVATTR.desc">DESPRIVATTR</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DESPRIVATTR" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DESNONSECATTR"><td>[10]</td>
-<td><a href="#DESNONSECATTR.desc">DESNONSECATTR</a></td>
-<td>rw</td>
-<td>0x1</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DESNONSECATTR" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DESSHAREATTR"><td>[9:8]</td>
-<td><a href="#DESSHAREATTR.desc">DESSHAREATTR</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DESSHAREATTR" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DESMEMATTRHI"><td>[7:4]</td>
-<td><a href="#DESMEMATTRHI.desc">DESMEMATTRHI</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DESMEMATTRHI" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DESMEMATTRLO"><td>[3:0]</td>
-<td><a href="#DESMEMATTRLO.desc">DESMEMATTRLO</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DESMEMATTRLO" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="DESMAXBURSTLEN.desc">DESMAXBURSTLEN<a class="headerlink" href="#DESMAXBURSTLEN.desc" title="Permalink to this headline"></a></h3>
-<p>Destination Max Burst Length. Hint for the DMAC on what is the maximum allowed burst size it can use for write transfers. The maximum number of beats sent by the DMA for a write burst is equal to DESMAXBURSTLEN + 1. Default value is 16 beats, which allows the DMA to set all burst sizes. Note: Limited by the DATA_BUFF_SIZE size so larger settings may not always result in larger bursts.</p>
-<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="DESPRIVATTR.desc">DESPRIVATTR<a class="headerlink" href="#DESPRIVATTR.desc" title="Permalink to this headline"></a></h3>
-<p>Destination Transfer Privilege Attribute.
-- 0: Unprivileged
-- 1: Privileged
-When a channel is unprivileged this bit is tied to 0.</p>
-<h3 id="DESNONSECATTR.desc">DESNONSECATTR<a class="headerlink" href="#DESNONSECATTR.desc" title="Permalink to this headline"></a></h3>
-<p>Destination Transfer Non-secure Attribute.
-- 0: Secure
-- 1: Non-secure
-When a channel is Non-secure this bit is tied to 1.</p>
-<h3 id="DESSHAREATTR.desc">DESSHAREATTR<a class="headerlink" href="#DESSHAREATTR.desc" title="Permalink to this headline"></a></h3>
-<p>Destination Transfer Shareability Attribute.
-- 00: Non-shareable
-- 01: Reserved
-- 10: Outer shareable
-- 11: Inner shareable</p>
-<h3 id="DESMEMATTRHI.desc">DESMEMATTRHI<a class="headerlink" href="#DESMEMATTRHI.desc" title="Permalink to this headline"></a></h3>
-<p>Destination Transfer Memory Attribute field [7:4].
-- 0000: Device memory
-- 0001: Normal memory, Outer Write allocate, Outer Write-through transient
-- 0010: Normal memory, Outer Read allocate, Outer Write-through transient
-- 0011: Normal memory, Outer Read/Write allocate, Outer Write-through transient
-- 0100: Normal memory, Outer non-cacheable
-- 0101: Normal memory, Outer Write allocate, Outer Write-back transient
-- 0110: Normal memory, Outer Read allocate, Outer Write-back transient
-- 0111: Normal memory, Outer Read/Write allocate, Outer Write-back transient
-- 1000: Normal memory, Outer Write-through non-transient
-- 1001: Normal memory, Outer Write allocate, Outer Write-through non-transient
-- 1010: Normal memory, Outer Read allocate, Outer Write-through non-transient
-- 1011: Normal memory, Outer Read/Write allocate, Outer Write-through non-transient
-- 1100: Normal memory, Outer Write-back non-transient
-- 1101: Normal memory, Outer Write allocate, Outer Write-back non-transient
-- 1110: Normal memory, Outer Read allocate, Outer Write-back non-transient
-- 1111: Normal memory, Outer Read/Write allocate, Outer Write-back non-transient</p>
-<h3 id="DESMEMATTRLO.desc">DESMEMATTRLO<a class="headerlink" href="#DESMEMATTRLO.desc" title="Permalink to this headline"></a></h3>
-<p>Destination Transfer Memory Attribute field [3:0].
-When DESMEMATTRHI is Device type (0000) then this field means:
-- 0000: Device-nGnRnE
-- 0100: Device-nGnRE
-- 1000: Device-nGRE
-- 1100: Device-GRE
-- Others: Invalid resulting in UNPREDICTABLE behavior
-When DESMEMATTRHI is Normal Memory type (other than 0000) then this field means:
-- 0000: Reserved
-- 0001: Normal memory, Inner Write allocate, Inner Write-through transient
-- 0010: Normal memory, Inner Read allocate, Inner Write-through transient
-- 0011: Normal memory, Inner Read/Write allocate, Inner Write-through transient
-- 0100: Normal memory, Inner non-cacheable
-- 0101: Normal memory, Inner Write allocate, Inner Write-back transient
-- 0110: Normal memory, Inner Read allocate, Inner Write-back transient
-- 0111: Normal memory, Inner Read/Write allocate, Inner Write-back transient
-- 1000: Normal memory, Inner Write-through non-transient
-- 1001: Normal memory, Inner Write allocate, Inner Write-through non-transient
-- 1010: Normal memory, Inner Read allocate, Inner Write-through non-transient
-- 1011: Normal memory, Inner Read/Write allocate, Inner Write-through non-transient
-- 1100: Normal memory, Inner Write-back non-transient
-- 1101: Normal memory, Inner Write allocate, Inner Write-back non-transient
-- 1110: Normal memory, Inner Read allocate, Inner Write-back non-transient
-- 1111: Normal memory, Inner Read/Write allocate, Inner Write-back non-transient</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<body>
+
+<h1 id="_Content.name">CH_DESTRANSCFG</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x222c</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Channel Destination Transfer Configuration Register</p>
+<p>This register provides transfer attribute settings in the write direction of the DMA command.</p>
+<p>The content of this register can be updated during command linking by setting bit[11] in the command link header.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_1"><td>[31:20]</td>
+<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DESMAXBURSTLEN"><td>[19:16]</td>
+<td><a href="#DESMAXBURSTLEN.desc">DESMAXBURSTLEN</a></td>
+<td>rw</td>
+<td>0xf</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DESMAXBURSTLEN" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_0"><td>[15:12]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DESPRIVATTR"><td>[11]</td>
+<td><a href="#DESPRIVATTR.desc">DESPRIVATTR</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DESPRIVATTR" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DESNONSECATTR"><td>[10]</td>
+<td><a href="#DESNONSECATTR.desc">DESNONSECATTR</a></td>
+<td>rw</td>
+<td>0x1</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DESNONSECATTR" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DESSHAREATTR"><td>[9:8]</td>
+<td><a href="#DESSHAREATTR.desc">DESSHAREATTR</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DESSHAREATTR" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DESMEMATTRHI"><td>[7:4]</td>
+<td><a href="#DESMEMATTRHI.desc">DESMEMATTRHI</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DESMEMATTRHI" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DESMEMATTRLO"><td>[3:0]</td>
+<td><a href="#DESMEMATTRLO.desc">DESMEMATTRLO</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DESMEMATTRLO" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<h2>Field Descriptions</h2>
+<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="DESMAXBURSTLEN.desc">DESMAXBURSTLEN<a class="headerlink" href="#DESMAXBURSTLEN.desc" title="Permalink to this headline"></a></h3>
+<p>Destination Max Burst Length. Hint for the DMAC on what is the maximum allowed burst size it can use for write transfers. The maximum number of beats sent by the DMA for a write burst is equal to DESMAXBURSTLEN + 1. Default value is 16 beats, which allows the DMA to set all burst sizes. Note: Limited by the DATA_BUFF_SIZE size so larger settings may not always result in larger bursts.</p>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="DESPRIVATTR.desc">DESPRIVATTR<a class="headerlink" href="#DESPRIVATTR.desc" title="Permalink to this headline"></a></h3>
+<p>Destination Transfer Privilege Attribute.
+- 0: Unprivileged
+- 1: Privileged
+When a channel is unprivileged this bit is tied to 0.</p>
+<h3 id="DESNONSECATTR.desc">DESNONSECATTR<a class="headerlink" href="#DESNONSECATTR.desc" title="Permalink to this headline"></a></h3>
+<p>Destination Transfer Non-secure Attribute.
+- 0: Secure
+- 1: Non-secure
+When a channel is Non-secure this bit is tied to 1.</p>
+<h3 id="DESSHAREATTR.desc">DESSHAREATTR<a class="headerlink" href="#DESSHAREATTR.desc" title="Permalink to this headline"></a></h3>
+<p>Destination Transfer Shareability Attribute.
+- 00: Non-shareable
+- 01: Reserved
+- 10: Outer shareable
+- 11: Inner shareable</p>
+<h3 id="DESMEMATTRHI.desc">DESMEMATTRHI<a class="headerlink" href="#DESMEMATTRHI.desc" title="Permalink to this headline"></a></h3>
+<p>Destination Transfer Memory Attribute field [7:4].
+- 0000: Device memory
+- 0001: Normal memory, Outer Write allocate, Outer Write-through transient
+- 0010: Normal memory, Outer Read allocate, Outer Write-through transient
+- 0011: Normal memory, Outer Read/Write allocate, Outer Write-through transient
+- 0100: Normal memory, Outer non-cacheable
+- 0101: Normal memory, Outer Write allocate, Outer Write-back transient
+- 0110: Normal memory, Outer Read allocate, Outer Write-back transient
+- 0111: Normal memory, Outer Read/Write allocate, Outer Write-back transient
+- 1000: Normal memory, Outer Write-through non-transient
+- 1001: Normal memory, Outer Write allocate, Outer Write-through non-transient
+- 1010: Normal memory, Outer Read allocate, Outer Write-through non-transient
+- 1011: Normal memory, Outer Read/Write allocate, Outer Write-through non-transient
+- 1100: Normal memory, Outer Write-back non-transient
+- 1101: Normal memory, Outer Write allocate, Outer Write-back non-transient
+- 1110: Normal memory, Outer Read allocate, Outer Write-back non-transient
+- 1111: Normal memory, Outer Read/Write allocate, Outer Write-back non-transient</p>
+<h3 id="DESMEMATTRLO.desc">DESMEMATTRLO<a class="headerlink" href="#DESMEMATTRLO.desc" title="Permalink to this headline"></a></h3>
+<p>Destination Transfer Memory Attribute field [3:0].
+When DESMEMATTRHI is Device type (0000) then this field means:
+- 0000: Device-nGnRnE
+- 0100: Device-nGnRE
+- 1000: Device-nGRE
+- 1100: Device-GRE
+- Others: Invalid resulting in UNPREDICTABLE behavior
+When DESMEMATTRHI is Normal Memory type (other than 0000) then this field means:
+- 0000: Reserved
+- 0001: Normal memory, Inner Write allocate, Inner Write-through transient
+- 0010: Normal memory, Inner Read allocate, Inner Write-through transient
+- 0011: Normal memory, Inner Read/Write allocate, Inner Write-through transient
+- 0100: Normal memory, Inner non-cacheable
+- 0101: Normal memory, Inner Write allocate, Inner Write-back transient
+- 0110: Normal memory, Inner Read allocate, Inner Write-back transient
+- 0111: Normal memory, Inner Read/Write allocate, Inner Write-back transient
+- 1000: Normal memory, Inner Write-through non-transient
+- 1001: Normal memory, Inner Write allocate, Inner Write-through non-transient
+- 1010: Normal memory, Inner Read allocate, Inner Write-through non-transient
+- 1011: Normal memory, Inner Read/Write allocate, Inner Write-through non-transient
+- 1100: Normal memory, Inner Write-back non-transient
+- 1101: Normal memory, Inner Write allocate, Inner Write-back non-transient
+- 1110: Normal memory, Inner Read allocate, Inner Write-back non-transient
+- 1111: Normal memory, Inner Read/Write allocate, Inner Write-back non-transient</p>
+</body>
 </html>

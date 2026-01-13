@@ -1,85 +1,85 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">DMACONTROL</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x20</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Control and status register for DMA operations.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="DMA_STATUS_16_31"><td>[31:16]</td>
-<td><a href="#DMA_STATUS_16_31.desc">DMA_STATUS_16_31</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DMA_STATUS_16_31" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Reserved"><td>[15:5]</td>
-<td><a href="#Reserved.desc">Reserved</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Reserved" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DMA_ABORT_pending_bit"><td>[4]</td>
-<td><a href="#DMA_ABORT_pending_bit.desc">DMA_ABORT_pending_bit</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DMA_ABORT_pending_bit" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DMA_ERROR_bit"><td>[3]</td>
-<td><a href="#DMA_ERROR_bit.desc">DMA_ERROR_bit</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DMA_ERROR_bit" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DMA_Interrupt_enable"><td>[2]</td>
-<td><a href="#DMA_Interrupt_enable.desc">DMA_Interrupt_enable</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DMA_Interrupt_enable" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DMA_Interrupt_bit"><td>[1]</td>
-<td><a href="#DMA_Interrupt_bit.desc">DMA_Interrupt_bit</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DMA_Interrupt_bit" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DMA_Busy_bit"><td>[0]</td>
-<td><a href="#DMA_Busy_bit.desc">DMA_Busy_bit</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DMA_Busy_bit" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="DMA_STATUS_16_31.desc">DMA_STATUS_16_31<a class="headerlink" href="#DMA_STATUS_16_31.desc" title="Permalink to this headline"></a></h3>
-<p>set to 16'hdead if the DMA is not present,16'h0 otherwise.If no DMA is present, this register will either read 32'hdead0008 or 32'hdead0000.</p>
-<h3 id="Reserved.desc">Reserved<a class="headerlink" href="#Reserved.desc" title="Permalink to this headline"></a></h3>
-<p>Reserved</p>
-<h3 id="DMA_ABORT_pending_bit.desc">DMA_ABORT_pending_bit<a class="headerlink" href="#DMA_ABORT_pending_bit.desc" title="Permalink to this headline"></a></h3>
-<p>Abort bit. This bit will be set by any DMA abort request, and remain set as long as the abort is pending. Once the DMA returns to idle, this bit will be cleared automatically.</p>
-<h3 id="DMA_ERROR_bit.desc">DMA_ERROR_bit<a class="headerlink" href="#DMA_ERROR_bit.desc" title="Permalink to this headline"></a></h3>
-<p>Error status bit. This bit will be set if the DMA encounters an error and needs to halt before completing its operation. Errors are caused by either AXI bus error response, a watchdog error internal to the controller, or a request to start the DMA with a zero length. Once the DMA halts, then writing a 1 to this bit will acknowledge and clear the error. Until the error is acknowledged, the DMA will not start a second cycle. The error may be acknowledged as part of the request for a new transfer.</p>
-<h3 id="DMA_Interrupt_enable.desc">DMA_Interrupt_enable<a class="headerlink" href="#DMA_Interrupt_enable.desc" title="Permalink to this headline"></a></h3>
-<p>Interrupt enable bit. When set, the xSPI/PSRAM master controller will raise an interrupt signal upon completion of any DMA operation. The interrupt status may still be polled by reading the interrupt bit, regardless of whether or not the enable is true.</p>
-<h3 id="DMA_Interrupt_bit.desc">DMA_Interrupt_bit<a class="headerlink" href="#DMA_Interrupt_bit.desc" title="Permalink to this headline"></a></h3>
-<p>Interrupt bit. This bit will be set when any requested DMA operation completes. Writing a 1 to this bit, when the DMA is idle, will clear it. It will also be automatically cleared upon any new DMA request of non–zero length.</p>
-<h3 id="DMA_Busy_bit.desc">DMA_Busy_bit<a class="headerlink" href="#DMA_Busy_bit.desc" title="Permalink to this headline"></a></h3>
-<p>On a read, this bit will be true if the DMA IP is busy with a transfer operation. Writing a 1 to this bit will initiate a new DMA operation–provided that the DMA is idle, the transfer length is non–zero, and any prior error has been cleared. Prior errors may be cleared in the same write if desired.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<body>
+
+<h1 id="_Content.name">DMACONTROL</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x20</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Control and status register for DMA operations.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="DMA_STATUS_16_31"><td>[31:16]</td>
+<td><a href="#DMA_STATUS_16_31.desc">DMA_STATUS_16_31</a></td>
+<td>rw</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DMA_STATUS_16_31" title="Permalink to this row"></a></td>
+</tr>
+<tr id="Reserved"><td>[15:5]</td>
+<td><a href="#Reserved.desc">Reserved</a></td>
+<td>rw</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#Reserved" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DMA_ABORT_pending_bit"><td>[4]</td>
+<td><a href="#DMA_ABORT_pending_bit.desc">DMA_ABORT_pending_bit</a></td>
+<td>rw</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DMA_ABORT_pending_bit" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DMA_ERROR_bit"><td>[3]</td>
+<td><a href="#DMA_ERROR_bit.desc">DMA_ERROR_bit</a></td>
+<td>rw</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DMA_ERROR_bit" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DMA_Interrupt_enable"><td>[2]</td>
+<td><a href="#DMA_Interrupt_enable.desc">DMA_Interrupt_enable</a></td>
+<td>rw</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DMA_Interrupt_enable" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DMA_Interrupt_bit"><td>[1]</td>
+<td><a href="#DMA_Interrupt_bit.desc">DMA_Interrupt_bit</a></td>
+<td>rw</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DMA_Interrupt_bit" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DMA_Busy_bit"><td>[0]</td>
+<td><a href="#DMA_Busy_bit.desc">DMA_Busy_bit</a></td>
+<td>rw</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DMA_Busy_bit" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<h2>Field Descriptions</h2>
+<h3 id="DMA_STATUS_16_31.desc">DMA_STATUS_16_31<a class="headerlink" href="#DMA_STATUS_16_31.desc" title="Permalink to this headline"></a></h3>
+<p>set to 16'hdead if the DMA is not present,16'h0 otherwise.If no DMA is present, this register will either read 32'hdead0008 or 32'hdead0000.</p>
+<h3 id="Reserved.desc">Reserved<a class="headerlink" href="#Reserved.desc" title="Permalink to this headline"></a></h3>
+<p>Reserved</p>
+<h3 id="DMA_ABORT_pending_bit.desc">DMA_ABORT_pending_bit<a class="headerlink" href="#DMA_ABORT_pending_bit.desc" title="Permalink to this headline"></a></h3>
+<p>Abort bit. This bit will be set by any DMA abort request, and remain set as long as the abort is pending. Once the DMA returns to idle, this bit will be cleared automatically.</p>
+<h3 id="DMA_ERROR_bit.desc">DMA_ERROR_bit<a class="headerlink" href="#DMA_ERROR_bit.desc" title="Permalink to this headline"></a></h3>
+<p>Error status bit. This bit will be set if the DMA encounters an error and needs to halt before completing its operation. Errors are caused by either AXI bus error response, a watchdog error internal to the controller, or a request to start the DMA with a zero length. Once the DMA halts, then writing a 1 to this bit will acknowledge and clear the error. Until the error is acknowledged, the DMA will not start a second cycle. The error may be acknowledged as part of the request for a new transfer.</p>
+<h3 id="DMA_Interrupt_enable.desc">DMA_Interrupt_enable<a class="headerlink" href="#DMA_Interrupt_enable.desc" title="Permalink to this headline"></a></h3>
+<p>Interrupt enable bit. When set, the xSPI/PSRAM master controller will raise an interrupt signal upon completion of any DMA operation. The interrupt status may still be polled by reading the interrupt bit, regardless of whether or not the enable is true.</p>
+<h3 id="DMA_Interrupt_bit.desc">DMA_Interrupt_bit<a class="headerlink" href="#DMA_Interrupt_bit.desc" title="Permalink to this headline"></a></h3>
+<p>Interrupt bit. This bit will be set when any requested DMA operation completes. Writing a 1 to this bit, when the DMA is idle, will clear it. It will also be automatically cleared upon any new DMA request of non–zero length.</p>
+<h3 id="DMA_Busy_bit.desc">DMA_Busy_bit<a class="headerlink" href="#DMA_Busy_bit.desc" title="Permalink to this headline"></a></h3>
+<p>On a read, this bit will be true if the DMA IP is busy with a transfer operation. Writing a 1 to this bit will initiate a new DMA operation–provided that the DMA is idle, the transfer length is non–zero, and any prior error has been cleared. Prior errors may be cleared in the same write if desired.</p>
+</body>
 </html>

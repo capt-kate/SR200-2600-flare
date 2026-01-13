@@ -1,140 +1,140 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">ctl</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Control register for this region.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr class="reserved-field"><td>[31:17]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="auth_key_sel"><td>[16:13]</td>
-<td><a href="#auth_key_sel.desc">auth_key_sel</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#auth_key_sel" title="Permalink to this row"></a></td>
-</tr>
-<tr id="auth_key_len"><td>[12:11]</td>
-<td><a href="#auth_key_len.desc">auth_key_len</a></td>
-<td>rw</td>
-<td>0x2</td>
-<td><select id="_FieldValueEnumTesterauth_key_len" class="field-value-enum-tester"
-data-name="auth_key_len" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">AES128</option><option value="0x1">AES192</option><option value="0x2">AES256</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#auth_key_len" title="Permalink to this row"></a></td>
-</tr>
-<tr id="auth_en"><td>[10]</td>
-<td><a href="#auth_en.desc">auth_en</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#auth_en" title="Permalink to this row"></a></td>
-</tr>
-<tr id="tag_en"><td>[9]</td>
-<td><a href="#tag_en.desc">tag_en</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#tag_en" title="Permalink to this row"></a></td>
-</tr>
-<tr id="decrypt_nonce_sel"><td>[8:7]</td>
-<td><a href="#decrypt_nonce_sel.desc">decrypt_nonce_sel</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#decrypt_nonce_sel" title="Permalink to this row"></a></td>
-</tr>
-<tr id="decrypt_key_sel"><td>[6:3]</td>
-<td><a href="#decrypt_key_sel.desc">decrypt_key_sel</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#decrypt_key_sel" title="Permalink to this row"></a></td>
-</tr>
-<tr id="decrypt_key_len"><td>[2:1]</td>
-<td><a href="#decrypt_key_len.desc">decrypt_key_len</a></td>
-<td>rw</td>
-<td>0x2</td>
-<td><select id="_FieldValueEnumTesterdecrypt_key_len" class="field-value-enum-tester"
-data-name="decrypt_key_len" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">AES128</option><option value="0x1">AES192</option><option value="0x2">AES256</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#decrypt_key_len" title="Permalink to this row"></a></td>
-</tr>
-<tr id="decrypt_en"><td>[0]</td>
-<td><a href="#decrypt_en.desc">decrypt_en</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#decrypt_en" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="auth_key_sel.desc">auth_key_sel<a class="headerlink" href="#auth_key_sel.desc" title="Permalink to this headline"></a></h3>
-<p>Select an authentication key for this region by specifying the start byte address in the key table divided by 8.</p>
-<h3 id="auth_key_len.desc">auth_key_len<a class="headerlink" href="#auth_key_len.desc" title="Permalink to this headline"></a></h3>
-<p>Select one of the 3 supported key lengths for authentication.</p>
-<table><tr><th colspan="3">enum key_len_t</th></tr>
-<tr><td>AES128</td>
-<td>0x0</td>
-<td><p>AES cipher with 128-bit key</p>
-</td>
-</tr>
-<tr><td>AES192</td>
-<td>0x1</td>
-<td><p>AES cipher with 192-bit key</p>
-</td>
-</tr>
-<tr><td>AES256</td>
-<td>0x2</td>
-<td><p>AES cipher with 256-bit key</p>
-</td>
-</tr>
-</table><h3 id="auth_en.desc">auth_en<a class="headerlink" href="#auth_en.desc" title="Permalink to this headline"></a></h3>
-<p>Whether authentication is enabled for this region. 0: disabled, 1: enabled.</p>
-<h3 id="tag_en.desc">tag_en<a class="headerlink" href="#tag_en.desc" title="Permalink to this headline"></a></h3>
-<p>Set to 1 if an 8-byte authentication tag is stored next to every 16-byte data.
-This implies the address space for this region on the upstream slave interface is remapped to a 1.5x larger address space on the downstream master interace.
-The start address of this region remains the same on both interfaces.
-This only specifies the storage format regardless of whether authentication is enabled or not.</p>
-<h3 id="decrypt_nonce_sel.desc">decrypt_nonce_sel<a class="headerlink" href="#decrypt_nonce_sel.desc" title="Permalink to this headline"></a></h3>
-<p>Select a decryption nonce for this region by specifying the start byte address in the nonce table divided by 12.</p>
-<h3 id="decrypt_key_sel.desc">decrypt_key_sel<a class="headerlink" href="#decrypt_key_sel.desc" title="Permalink to this headline"></a></h3>
-<p>Select a decryption key for this region by specifying the start byte address in the key table divided by 8.</p>
-<h3 id="decrypt_key_len.desc">decrypt_key_len<a class="headerlink" href="#decrypt_key_len.desc" title="Permalink to this headline"></a></h3>
-<p>Select one of the 3 supported key lengths for decryption.</p>
-<table><tr><th colspan="3">enum key_len_t</th></tr>
-<tr><td>AES128</td>
-<td>0x0</td>
-<td><p>AES cipher with 128-bit key</p>
-</td>
-</tr>
-<tr><td>AES192</td>
-<td>0x1</td>
-<td><p>AES cipher with 192-bit key</p>
-</td>
-</tr>
-<tr><td>AES256</td>
-<td>0x2</td>
-<td><p>AES cipher with 256-bit key</p>
-</td>
-</tr>
-</table><h3 id="decrypt_en.desc">decrypt_en<a class="headerlink" href="#decrypt_en.desc" title="Permalink to this headline"></a></h3>
-<p>Whether decryption is enabled for this region. 0: disabled, 1: enabled.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<body>
+
+<h1 id="_Content.name">ctl</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Control register for this region.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31:17]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="auth_key_sel"><td>[16:13]</td>
+<td><a href="#auth_key_sel.desc">auth_key_sel</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#auth_key_sel" title="Permalink to this row"></a></td>
+</tr>
+<tr id="auth_key_len"><td>[12:11]</td>
+<td><a href="#auth_key_len.desc">auth_key_len</a></td>
+<td>rw</td>
+<td>0x2</td>
+<td><select id="_FieldValueEnumTesterauth_key_len" class="field-value-enum-tester"
+data-name="auth_key_len" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">AES128</option><option value="0x1">AES192</option><option value="0x2">AES256</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#auth_key_len" title="Permalink to this row"></a></td>
+</tr>
+<tr id="auth_en"><td>[10]</td>
+<td><a href="#auth_en.desc">auth_en</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#auth_en" title="Permalink to this row"></a></td>
+</tr>
+<tr id="tag_en"><td>[9]</td>
+<td><a href="#tag_en.desc">tag_en</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#tag_en" title="Permalink to this row"></a></td>
+</tr>
+<tr id="decrypt_nonce_sel"><td>[8:7]</td>
+<td><a href="#decrypt_nonce_sel.desc">decrypt_nonce_sel</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#decrypt_nonce_sel" title="Permalink to this row"></a></td>
+</tr>
+<tr id="decrypt_key_sel"><td>[6:3]</td>
+<td><a href="#decrypt_key_sel.desc">decrypt_key_sel</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#decrypt_key_sel" title="Permalink to this row"></a></td>
+</tr>
+<tr id="decrypt_key_len"><td>[2:1]</td>
+<td><a href="#decrypt_key_len.desc">decrypt_key_len</a></td>
+<td>rw</td>
+<td>0x2</td>
+<td><select id="_FieldValueEnumTesterdecrypt_key_len" class="field-value-enum-tester"
+data-name="decrypt_key_len" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">AES128</option><option value="0x1">AES192</option><option value="0x2">AES256</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#decrypt_key_len" title="Permalink to this row"></a></td>
+</tr>
+<tr id="decrypt_en"><td>[0]</td>
+<td><a href="#decrypt_en.desc">decrypt_en</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#decrypt_en" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<h2>Field Descriptions</h2>
+<h3 id="auth_key_sel.desc">auth_key_sel<a class="headerlink" href="#auth_key_sel.desc" title="Permalink to this headline"></a></h3>
+<p>Select an authentication key for this region by specifying the start byte address in the key table divided by 8.</p>
+<h3 id="auth_key_len.desc">auth_key_len<a class="headerlink" href="#auth_key_len.desc" title="Permalink to this headline"></a></h3>
+<p>Select one of the 3 supported key lengths for authentication.</p>
+<table><tr><th colspan="3">enum key_len_t</th></tr>
+<tr><td>AES128</td>
+<td>0x0</td>
+<td><p>AES cipher with 128-bit key</p>
+</td>
+</tr>
+<tr><td>AES192</td>
+<td>0x1</td>
+<td><p>AES cipher with 192-bit key</p>
+</td>
+</tr>
+<tr><td>AES256</td>
+<td>0x2</td>
+<td><p>AES cipher with 256-bit key</p>
+</td>
+</tr>
+</table><h3 id="auth_en.desc">auth_en<a class="headerlink" href="#auth_en.desc" title="Permalink to this headline"></a></h3>
+<p>Whether authentication is enabled for this region. 0: disabled, 1: enabled.</p>
+<h3 id="tag_en.desc">tag_en<a class="headerlink" href="#tag_en.desc" title="Permalink to this headline"></a></h3>
+<p>Set to 1 if an 8-byte authentication tag is stored next to every 16-byte data.
+This implies the address space for this region on the upstream slave interface is remapped to a 1.5x larger address space on the downstream master interace.
+The start address of this region remains the same on both interfaces.
+This only specifies the storage format regardless of whether authentication is enabled or not.</p>
+<h3 id="decrypt_nonce_sel.desc">decrypt_nonce_sel<a class="headerlink" href="#decrypt_nonce_sel.desc" title="Permalink to this headline"></a></h3>
+<p>Select a decryption nonce for this region by specifying the start byte address in the nonce table divided by 12.</p>
+<h3 id="decrypt_key_sel.desc">decrypt_key_sel<a class="headerlink" href="#decrypt_key_sel.desc" title="Permalink to this headline"></a></h3>
+<p>Select a decryption key for this region by specifying the start byte address in the key table divided by 8.</p>
+<h3 id="decrypt_key_len.desc">decrypt_key_len<a class="headerlink" href="#decrypt_key_len.desc" title="Permalink to this headline"></a></h3>
+<p>Select one of the 3 supported key lengths for decryption.</p>
+<table><tr><th colspan="3">enum key_len_t</th></tr>
+<tr><td>AES128</td>
+<td>0x0</td>
+<td><p>AES cipher with 128-bit key</p>
+</td>
+</tr>
+<tr><td>AES192</td>
+<td>0x1</td>
+<td><p>AES cipher with 192-bit key</p>
+</td>
+</tr>
+<tr><td>AES256</td>
+<td>0x2</td>
+<td><p>AES cipher with 256-bit key</p>
+</td>
+</tr>
+</table><h3 id="decrypt_en.desc">decrypt_en<a class="headerlink" href="#decrypt_en.desc" title="Permalink to this headline"></a></h3>
+<p>Whether decryption is enabled for this region. 0: disabled, 1: enabled.</p>
+</body>
 </html>

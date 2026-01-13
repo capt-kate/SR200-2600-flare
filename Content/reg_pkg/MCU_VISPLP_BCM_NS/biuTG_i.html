@@ -1,805 +1,805 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>TG</title></head>
-<body>
-<h1><a name="TG">"TG"</a>
-        </h1>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_INIT">TG_INIT</a></p>
-</td>
-<td><p>32'h00000000</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[15:0]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_INIT_Y">Y</a></p>
-</td>
-<td><p>0x1</p>
-</td>
-<td><p>Initial Y value which will be used to load Y counter when tg is enabled.</p>
-</td>
-</tr>
-<tr><td><p>[31:16]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_INIT_X">X</a></p>
-</td>
-<td><p>0x1</p>
-</td>
-<td><p>Initial X value which will be used to load X counter when tg is enabled.<p></p>
-A whole frame scan size.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_SIZE">TG_SIZE</a></p>
-</td>
-<td><p>32'h00000004</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[15:0]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_SIZE_Y">Y</a></p>
-</td>
-<td><p>0x465</p>
-</td>
-<td><p>Total scan lines per frame.</p>
-</td>
-</tr>
-<tr><td><p>[31:16]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_SIZE_X">X</a></p>
-</td>
-<td><p>0x898</p>
-</td>
-<td><p>Total scan clock cycles per line.<p></p>
-Hsync</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_HS">TG_HS</a></p>
-</td>
-<td><p>32'h00000008</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[15:0]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_HS_FE">FE</a></p>
-</td>
-<td><p>0x1</p>
-</td>
-<td><p>Hsync front edge. The first pixel position of hsync pulse.</p>
-</td>
-</tr>
-<tr><td><p>[31:16]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_HS_BE">BE</a></p>
-</td>
-<td><p>0x2C</p>
-</td>
-<td><p>Hsync back edge. The last pixel position of hsync pulse.<p></p>
-HS = hCntr >=FE & hCntr< =BE<p></p>
-HBlanking</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_HB">TG_HB</a></p>
-</td>
-<td><p>32'h0000000C</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[15:0]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_HB_FE">FE</a></p>
-</td>
-<td><p>0x841</p>
-</td>
-<td><p>Hblank front edge. The first pixel position of the hBlank pulse. SIZEX-HFP = 2200-88+1</p>
-</td>
-</tr>
-<tr><td><p>[31:16]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_HB_BE">BE</a></p>
-</td>
-<td><p>0xC0</p>
-</td>
-<td><p>Hblank back edge. The last pixel position of the hBlank pulse. HPW + HBP = 44+148<p></p>
-HB = hCntr >=FE || hCntr< =BE.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_HB_CR">TG_HB_CR</a></p>
-</td>
-<td><p>32'h00000010</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[15:0]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_HB_CR_FE">FE</a></p>
-</td>
-<td><p>0x841</p>
-</td>
-<td><p>Hblank front edge. The first pixel position of the hBlank pulse. SIZEX-HFP = 2200-88+1</p>
-</td>
-</tr>
-<tr><td><p>[31:16]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_HB_CR_BE">BE</a></p>
-</td>
-<td><p>0xC0</p>
-</td>
-<td><p>Hblank back edge. The last pixel position of the hBlank pulse. HPW + HBP = 44+148<p></p>
-HB_CR = hCntr >=FE || hCntr< =BE.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_HB_CR2">TG_HB_CR2</a></p>
-</td>
-<td><p>32'h00000014</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[15:0]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_HB_CR2_FE">FE</a></p>
-</td>
-<td><p>0x841</p>
-</td>
-<td><p>Hblank front edge. The first pixel position of the hBlank pulse. SIZEX-HFP = 2200-88+1<p></p>
-Note : to be programmed with different value (only when cropping is required). Else to be programmed same as HB FE (above register)</p>
-</td>
-</tr>
-<tr><td><p>[31:16]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_HB_CR2_BE">BE</a></p>
-</td>
-<td><p>0xC0</p>
-</td>
-<td><p>Hblank back edge. The last pixel position of the hBlank pulse. HPW + HBP = 44+148<p></p>
-Note : to be programmed with different value (only when cropping is required). Else to be programmed same as HB BE (above register)<p></p>
-HB = hCntr >=FE || hCntr< =BE.<p></p>
-VS0 defines the first first pixel position of the first VSYNC (progressive or interlace mode) pulse.<p></p>
-For example<p></p>
-1080i60, the VTP is the last pixel of the last line. So set both VLCNT0 and VPCNT0 to 0.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VS0">TG_VS0</a></p>
-</td>
-<td><p>32'h00000018</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[15:0]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VS0_FE">FE</a></p>
-</td>
-<td><p>0x1</p>
-</td>
-<td><p>Vsync pulse front edge.<p></p>
-Vsync will be asserted at the beginning of this line.</p>
-</td>
-</tr>
-<tr><td><p>[31:16]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VS0_BE">BE</a></p>
-</td>
-<td><p>0x5</p>
-</td>
-<td><p>Vsync pulse back edge.<p></p>
-Vsycn pulse will be de-asserted after the end of this line.<p></p>
-Vsync = (vCntr >=FE & vCntr< =BE)<p></p>
-Vsync pulse 1<p></p>
-defines the first pixel position of the second vSync pulse. For example<p></p>
-1080i60, the VTP is pixel 1100 of line 563. So set both VLCNT2="563." and VPCNT2 to 1100.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VS1">TG_VS1</a></p>
-</td>
-<td><p>32'h0000001C</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[15:0]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VS1_FE">FE</a></p>
-</td>
-<td><p>0x233</p>
-</td>
-<td><p>Vsync pulse 1 front edge line position.<p></p>
-Vsync pulse 1 will be asserted at the middle of this line.</p>
-</td>
-</tr>
-<tr><td><p>[31:16]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VS1_BE">BE</a></p>
-</td>
-<td><p>0x238</p>
-</td>
-<td><p>Vsync pulse 1 back edge line position.<p></p>
-Vsync pulse 1 will be de-asserted at the middle of this line.<p></p>
-Vsync1 = (vCntr >=FE & hCntr >SIZEX/2) & (vCntr< =BE & hCntr< =SIZEX/2)<p></p>
-Vertical blanking.<p></p>
-VB0 parameter definietion</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VB0">TG_VB0</a></p>
-</td>
-<td><p>32'h00000020</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[15:0]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VB0_FE">FE</a></p>
-</td>
-<td><p>0x462</p>
-</td>
-<td><p>Vblank front edge line position<p></p>
-The first line of the vertical blanking.</p>
-</td>
-</tr>
-<tr><td><p>[31:16]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VB0_BE">BE</a></p>
-</td>
-<td><p>0x29</p>
-</td>
-<td><p>Vblank back edge line position<p></p>
-the last line number of the vertical blanking<p></p>
-The default value is used for 1080p case.<p></p>
-Vblank0 = vCntr >=FE || vCntr< =BE</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VB0_CR">TG_VB0_CR</a></p>
-</td>
-<td><p>32'h00000024</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[15:0]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VB0_CR_FE">FE</a></p>
-</td>
-<td><p>0x462</p>
-</td>
-<td><p>Vblank front edge line position<p></p>
-The first line of the vertical blanking.</p>
-</td>
-</tr>
-<tr><td><p>[31:16]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VB0_CR_BE">BE</a></p>
-</td>
-<td><p>0x29</p>
-</td>
-<td><p>Vblank back edge line position<p></p>
-the last line number of the vertical blanking<p></p>
-The default value is used for 1080p case.<p></p>
-Vblank0_CR = vCntr >=FE || vCntr< =BE</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VB0_CR2">TG_VB0_CR2</a></p>
-</td>
-<td><p>32'h00000028</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[15:0]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VB0_CR2_FE">FE</a></p>
-</td>
-<td><p>0x462</p>
-</td>
-<td><p>Vblank front edge line position<p></p>
-The first line of the vertical blanking.<p></p>
-Note : to be programmed with different value only when cropping is required. Else to be programmed same as VB0 FE (above register)</p>
-</td>
-</tr>
-<tr><td><p>[31:16]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VB0_CR2_BE">BE</a></p>
-</td>
-<td><p>0x29</p>
-</td>
-<td><p>Vblank back edge line position<p></p>
-the last line number of the vertical blanking<p></p>
-The default value is used for 1080p case.<p></p>
-Note : to be programmed with different value only when cropping is required. Else to be programmed same as VB0 BE (above register)<p></p>
-Vblank0 = vCntr >=FE || vCntr< =BE</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VB1">TG_VB1</a></p>
-</td>
-<td><p>32'h0000002C</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[15:0]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VB1_FE">FE</a></p>
-</td>
-<td><p>0x231</p>
-</td>
-<td><p>Vblank front edge line postion<p></p>
-The first line number of VB1.</p>
-</td>
-</tr>
-<tr><td><p>[31:16]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_VB1_BE">BE</a></p>
-</td>
-<td><p>0x247</p>
-</td>
-<td><p>Vblank back edge line postion<p></p>
-the last line numer of VB1.<p></p>
-VB1 = (vCntr >=FE & vCntr< =BE)<p></p>
-SCAN mode</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_SCAN">TG_SCAN</a></p>
-</td>
-<td><p>32'h00000030</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_SCAN_MODE">MODE</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Frame done interrupt position</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_INTPOS">TG_INTPOS</a></p>
-</td>
-<td><p>32'h00000034</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[15:0]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_INTPOS_FRAME">FRAME</a></p>
-</td>
-<td><p>0x465</p>
-</td>
-<td><p>Frame interrupt status will be set at the end of this line.<p></p>
-Program 0 to this register will disable frame interrupt.</p>
-</td>
-</tr>
-<tr><td><p>[31:16]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_INTPOS_FIELD">FIELD</a></p>
-</td>
-<td><p>0x233</p>
-</td>
-<td><p>Field interrupt status will be set at the end of this line.<p></p>
-Program 0 to this register will disable field interrupt.<p></p>
-MODE</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_MODE">TG_MODE</a></p>
-</td>
-<td><p>32'h00000038</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_MODE_EN">EN</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>In master mode, TG drive the control signal.<p></p>
-In slave mode, TG take the external hsync and vsync, it generate the internal sync and blank signal based on the programmed register and external hsync and vsync.<p></p>
-HREF input for slave mode.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_HVREF">TG_HVREF</a></p>
-</td>
-<td><p>32'h0000003C</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_HVREF_SEL">SEL</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>In slave mode, tg will sync to the external tg generated HREF/VREF which could be HSYBC/VSYNC or HBLANK/VBLANK. Currently only HSYNC/VSYNC is supported.<p></p>
-HSYNC and VSYNC have to be come in pair.</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="vpp_common.htm#TG_HVREF_POL">POL</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>0 : indicate the input HREF/VREF are negative pulses<p></p>
-1: indicate the input HREF/VREFare positive pulses.<p></p>
-HREF and VREF have to be the same polarity.<p></p>
-End of TG register group</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
+﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>TG</title></head>
+<body>
+<h1><a name="TG">"TG"</a>
+        </h1>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_INIT">TG_INIT</a></p>
+</td>
+<td><p>32'h00000000</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[15:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_INIT_Y">Y</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p>Initial Y value which will be used to load Y counter when tg is enabled.</p>
+</td>
+</tr>
+<tr><td><p>[31:16]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_INIT_X">X</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p>Initial X value which will be used to load X counter when tg is enabled.<p></p>
+A whole frame scan size.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_SIZE">TG_SIZE</a></p>
+</td>
+<td><p>32'h00000004</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[15:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_SIZE_Y">Y</a></p>
+</td>
+<td><p>0x465</p>
+</td>
+<td><p>Total scan lines per frame.</p>
+</td>
+</tr>
+<tr><td><p>[31:16]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_SIZE_X">X</a></p>
+</td>
+<td><p>0x898</p>
+</td>
+<td><p>Total scan clock cycles per line.<p></p>
+Hsync</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_HS">TG_HS</a></p>
+</td>
+<td><p>32'h00000008</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[15:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_HS_FE">FE</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p>Hsync front edge. The first pixel position of hsync pulse.</p>
+</td>
+</tr>
+<tr><td><p>[31:16]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_HS_BE">BE</a></p>
+</td>
+<td><p>0x2C</p>
+</td>
+<td><p>Hsync back edge. The last pixel position of hsync pulse.<p></p>
+HS = hCntr >=FE & hCntr< =BE<p></p>
+HBlanking</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_HB">TG_HB</a></p>
+</td>
+<td><p>32'h0000000C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[15:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_HB_FE">FE</a></p>
+</td>
+<td><p>0x841</p>
+</td>
+<td><p>Hblank front edge. The first pixel position of the hBlank pulse. SIZEX-HFP = 2200-88+1</p>
+</td>
+</tr>
+<tr><td><p>[31:16]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_HB_BE">BE</a></p>
+</td>
+<td><p>0xC0</p>
+</td>
+<td><p>Hblank back edge. The last pixel position of the hBlank pulse. HPW + HBP = 44+148<p></p>
+HB = hCntr >=FE || hCntr< =BE.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_HB_CR">TG_HB_CR</a></p>
+</td>
+<td><p>32'h00000010</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[15:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_HB_CR_FE">FE</a></p>
+</td>
+<td><p>0x841</p>
+</td>
+<td><p>Hblank front edge. The first pixel position of the hBlank pulse. SIZEX-HFP = 2200-88+1</p>
+</td>
+</tr>
+<tr><td><p>[31:16]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_HB_CR_BE">BE</a></p>
+</td>
+<td><p>0xC0</p>
+</td>
+<td><p>Hblank back edge. The last pixel position of the hBlank pulse. HPW + HBP = 44+148<p></p>
+HB_CR = hCntr >=FE || hCntr< =BE.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_HB_CR2">TG_HB_CR2</a></p>
+</td>
+<td><p>32'h00000014</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[15:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_HB_CR2_FE">FE</a></p>
+</td>
+<td><p>0x841</p>
+</td>
+<td><p>Hblank front edge. The first pixel position of the hBlank pulse. SIZEX-HFP = 2200-88+1<p></p>
+Note : to be programmed with different value (only when cropping is required). Else to be programmed same as HB FE (above register)</p>
+</td>
+</tr>
+<tr><td><p>[31:16]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_HB_CR2_BE">BE</a></p>
+</td>
+<td><p>0xC0</p>
+</td>
+<td><p>Hblank back edge. The last pixel position of the hBlank pulse. HPW + HBP = 44+148<p></p>
+Note : to be programmed with different value (only when cropping is required). Else to be programmed same as HB BE (above register)<p></p>
+HB = hCntr >=FE || hCntr< =BE.<p></p>
+VS0 defines the first first pixel position of the first VSYNC (progressive or interlace mode) pulse.<p></p>
+For example<p></p>
+1080i60, the VTP is the last pixel of the last line. So set both VLCNT0 and VPCNT0 to 0.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VS0">TG_VS0</a></p>
+</td>
+<td><p>32'h00000018</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[15:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VS0_FE">FE</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p>Vsync pulse front edge.<p></p>
+Vsync will be asserted at the beginning of this line.</p>
+</td>
+</tr>
+<tr><td><p>[31:16]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VS0_BE">BE</a></p>
+</td>
+<td><p>0x5</p>
+</td>
+<td><p>Vsync pulse back edge.<p></p>
+Vsycn pulse will be de-asserted after the end of this line.<p></p>
+Vsync = (vCntr >=FE & vCntr< =BE)<p></p>
+Vsync pulse 1<p></p>
+defines the first pixel position of the second vSync pulse. For example<p></p>
+1080i60, the VTP is pixel 1100 of line 563. So set both VLCNT2="563." and VPCNT2 to 1100.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VS1">TG_VS1</a></p>
+</td>
+<td><p>32'h0000001C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[15:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VS1_FE">FE</a></p>
+</td>
+<td><p>0x233</p>
+</td>
+<td><p>Vsync pulse 1 front edge line position.<p></p>
+Vsync pulse 1 will be asserted at the middle of this line.</p>
+</td>
+</tr>
+<tr><td><p>[31:16]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VS1_BE">BE</a></p>
+</td>
+<td><p>0x238</p>
+</td>
+<td><p>Vsync pulse 1 back edge line position.<p></p>
+Vsync pulse 1 will be de-asserted at the middle of this line.<p></p>
+Vsync1 = (vCntr >=FE & hCntr >SIZEX/2) & (vCntr< =BE & hCntr< =SIZEX/2)<p></p>
+Vertical blanking.<p></p>
+VB0 parameter definietion</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VB0">TG_VB0</a></p>
+</td>
+<td><p>32'h00000020</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[15:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VB0_FE">FE</a></p>
+</td>
+<td><p>0x462</p>
+</td>
+<td><p>Vblank front edge line position<p></p>
+The first line of the vertical blanking.</p>
+</td>
+</tr>
+<tr><td><p>[31:16]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VB0_BE">BE</a></p>
+</td>
+<td><p>0x29</p>
+</td>
+<td><p>Vblank back edge line position<p></p>
+the last line number of the vertical blanking<p></p>
+The default value is used for 1080p case.<p></p>
+Vblank0 = vCntr >=FE || vCntr< =BE</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VB0_CR">TG_VB0_CR</a></p>
+</td>
+<td><p>32'h00000024</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[15:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VB0_CR_FE">FE</a></p>
+</td>
+<td><p>0x462</p>
+</td>
+<td><p>Vblank front edge line position<p></p>
+The first line of the vertical blanking.</p>
+</td>
+</tr>
+<tr><td><p>[31:16]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VB0_CR_BE">BE</a></p>
+</td>
+<td><p>0x29</p>
+</td>
+<td><p>Vblank back edge line position<p></p>
+the last line number of the vertical blanking<p></p>
+The default value is used for 1080p case.<p></p>
+Vblank0_CR = vCntr >=FE || vCntr< =BE</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VB0_CR2">TG_VB0_CR2</a></p>
+</td>
+<td><p>32'h00000028</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[15:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VB0_CR2_FE">FE</a></p>
+</td>
+<td><p>0x462</p>
+</td>
+<td><p>Vblank front edge line position<p></p>
+The first line of the vertical blanking.<p></p>
+Note : to be programmed with different value only when cropping is required. Else to be programmed same as VB0 FE (above register)</p>
+</td>
+</tr>
+<tr><td><p>[31:16]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VB0_CR2_BE">BE</a></p>
+</td>
+<td><p>0x29</p>
+</td>
+<td><p>Vblank back edge line position<p></p>
+the last line number of the vertical blanking<p></p>
+The default value is used for 1080p case.<p></p>
+Note : to be programmed with different value only when cropping is required. Else to be programmed same as VB0 BE (above register)<p></p>
+Vblank0 = vCntr >=FE || vCntr< =BE</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VB1">TG_VB1</a></p>
+</td>
+<td><p>32'h0000002C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[15:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VB1_FE">FE</a></p>
+</td>
+<td><p>0x231</p>
+</td>
+<td><p>Vblank front edge line postion<p></p>
+The first line number of VB1.</p>
+</td>
+</tr>
+<tr><td><p>[31:16]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_VB1_BE">BE</a></p>
+</td>
+<td><p>0x247</p>
+</td>
+<td><p>Vblank back edge line postion<p></p>
+the last line numer of VB1.<p></p>
+VB1 = (vCntr >=FE & vCntr< =BE)<p></p>
+SCAN mode</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_SCAN">TG_SCAN</a></p>
+</td>
+<td><p>32'h00000030</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_SCAN_MODE">MODE</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Frame done interrupt position</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_INTPOS">TG_INTPOS</a></p>
+</td>
+<td><p>32'h00000034</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[15:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_INTPOS_FRAME">FRAME</a></p>
+</td>
+<td><p>0x465</p>
+</td>
+<td><p>Frame interrupt status will be set at the end of this line.<p></p>
+Program 0 to this register will disable frame interrupt.</p>
+</td>
+</tr>
+<tr><td><p>[31:16]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_INTPOS_FIELD">FIELD</a></p>
+</td>
+<td><p>0x233</p>
+</td>
+<td><p>Field interrupt status will be set at the end of this line.<p></p>
+Program 0 to this register will disable field interrupt.<p></p>
+MODE</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_MODE">TG_MODE</a></p>
+</td>
+<td><p>32'h00000038</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_MODE_EN">EN</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>In master mode, TG drive the control signal.<p></p>
+In slave mode, TG take the external hsync and vsync, it generate the internal sync and blank signal based on the programmed register and external hsync and vsync.<p></p>
+HREF input for slave mode.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_HVREF">TG_HVREF</a></p>
+</td>
+<td><p>32'h0000003C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_HVREF_SEL">SEL</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>In slave mode, tg will sync to the external tg generated HREF/VREF which could be HSYBC/VSYNC or HBLANK/VBLANK. Currently only HSYNC/VSYNC is supported.<p></p>
+HSYNC and VSYNC have to be come in pair.</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#TG_HVREF_POL">POL</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>0 : indicate the input HREF/VREF are negative pulses<p></p>
+1: indicate the input HREF/VREFare positive pulses.<p></p>
+HREF and VREF have to be the same polarity.<p></p>
+End of TG register group</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
 </body></html>

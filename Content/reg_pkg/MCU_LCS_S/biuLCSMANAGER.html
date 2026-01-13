@@ -1,437 +1,437 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>LCSMANAGER</title></head>
-<body>
-<h1><a name="LCSMANAGER">"LCSMANAGER"</a>
-        </h1>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(RW)</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_">LCSMANAGER_mem</a></p>
-</td>
-<td><p>32'h00000000</p>
-</td>
-<td><p>LCS Manager OTP shadow register array, which will be<p></p>
-auto-loaded after POR by only once and is allowed by one-time<p></p>
-SW override of the values only toward advancing the LCS stages,<p></p>
-except for RMA stage.<p></p>
-Internal memory</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p>Memory</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-<td><p>Memory</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_LOCKSTS">LCSMANAGER_LOCKSTS</a></p>
-</td>
-<td><p>32'h00000020</p>
-</td>
-<td><p>The $LCSMARRAY is allowed to be auto-loaded from OTP shadow<p></p>
-copy after POR only once, after that $LCSMARRAY will be locked<p></p>
-for any subsequent auto-load operation from OTP until next POR,<p></p>
-the auto-load lock status can be read from this register bit<p></p>
-LOCKSTS.allocked<p></p>
-the dword (32-bit) in $LCSMARRAY can only be overwritten once by<p></p>
-SW through APB interface, afterwards that dword will be locked<p></p>
-for APB write, the lock status can only be cleared by<p></p>
-POR/System reset. If LCS state falls into “corrupted” after<p></p>
-auto-load, it will be locked immediately (no any override is<p></p>
-allowed); for LCS shadow register, SW override can only be<p></p>
-successful to advance LCS Manager state: LCSMDSTS.state, for<p></p>
-OTP lock register, the bit value can only be modified from 0 to<p></p>
-1, from 1 to 0 is not allowed, unsuccessful SW override or any<p></p>
-SW override after dword get locked will be ignored by LCS<p></p>
-Manager. The dword will be locked (write prohibited) no matter<p></p>
-SW override is successful or unsuccessful.</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[4:0]</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_LOCKSTS_dwlocked">dwlocked</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>the bit Indicates the $LCSMARRAY OTP LCS/LOCK shadow register<p></p>
-array dword write prohibition status<p></p>
-1’b0: write is allowed;<p></p>
-1’b1: write is NOT allowed;</p>
-</td>
-</tr>
-<tr><td><p>[5:5]</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_LOCKSTS_allocked">allocked</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>This bit indicates LCS OTP auto-load operation lock status<p></p>
-1’b0: LCS OTP auto load is allowed;<p></p>
-1’b1: LCS OTP auto load is NOT allowed;</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS">LCSMANAGER_LCSMDSTS</a></p>
-</td>
-<td><p>32'h00000024</p>
-</td>
-<td><p>LCS Manager Decoded State</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_ate">ate</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>When no higher bits are set, device is in ATE state (ATE can<p></p>
-define additional “scratch pad OTP” to guide the multi-insert<p></p>
-process). Synaptics Assets provisioning shall be completed in<p></p>
-this stage before releasing part to ODM</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_odm">odm</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Device in owned by ODM. ODM Asset provisioning shall be<p></p>
-completed in this stage before releasing part to OEM. Can be<p></p>
-used to lock Synaptics Assets.</p>
-</td>
-</tr>
-<tr><td><p>[2:2]</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_oem">oem</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Device in owned by OEM. OEM Asset provisioning shall be<p></p>
-completed in this stage before releasing part to development or<p></p>
-into production. Can be used to lock ODM Assets</p>
-</td>
-</tr>
-<tr><td><p>[3:3]</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_dev">dev</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Device in the Code Development state. Can be used to apply<p></p>
-relaxed debug access policies</p>
-</td>
-</tr>
-<tr><td><p>[4:4]</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_prd">prd</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Production/Field deployment state for devices that do not<p></p>
-require strict Security definition</p>
-</td>
-</tr>
-<tr><td><p>[5:5]</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_sec">sec</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Production/Field deployment state with Secure behavior</p>
-</td>
-</tr>
-<tr><td><p>[6:6]</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_reserved_b6">reserved_b6</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Reserved for future use</p>
-</td>
-</tr>
-<tr><td><p>[7:7]</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_rma">rma</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>RMA state, secure assets shall be destroyed before transition to<p></p>
-this stage</p>
-</td>
-</tr>
-<tr><td><p>[11:8]</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_state">state</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>LCS[7:0] + MagicWord: 0x0+0x0<p></p>
-Fab-out state, only OTP programming to ATE state is allowed, no<p></p>
-other debug/test accesses<p></p>
-LCS[7:0] + MagicWord: A + M<p></p>
-Device is under the ATE Test<p></p>
-LCS[7:0] + MagicWord: OA + M<p></p>
-Device is in ODM ownership<p></p>
-LCS[7:0] + MagicWord: EOA + M<p></p>
-Device is in OEM ownership<p></p>
-LCS[7:0] + MagicWord: DEOA + M<p></p>
-Device in the Development state. Can be used to apply relaxed<p></p>
-debug access policies<p></p>
-LCS[7:0] + MagicWord: PDEOA + M<p></p>
-Device in the Development state. Can be used to apply relaxed<p></p>
-debug access policies<p></p>
-LCS[7:0] + MagicWord: SPDEOA + M<p></p>
-Production/Field deployment state with Secure behavior<p></p>
-LCS[7:0] + MagicWord: RSPDEOA + M<p></p>
-RMA state, secure assets shall be destroyed before transition to<p></p>
-this stage<p></p>
-LCS[7:0] + MagicWord: any other value<p></p>
-Corruption is detected by LCS Decode or magic word doesn’t<p></p>
-match, no access shall be allowed, no LCS manager SW override<p></p>
-is allowed</p>
-</td>
-</tr>
-<tr><td><p>[30:12]</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_reserved_b12to30">reserved_b12to30</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Reserved for future use</p>
-</td>
-</tr>
-<tr><td><p>[31:31]</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_corrupted">corrupted</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Indicated LCS Manager decoded state is Corrupted.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_OTP_LOCK0">LCSMANAGER_OTP_LOCK0</a></p>
-</td>
-<td><p>32'h00000028</p>
-</td>
-<td><p>OTP lock status dword0</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_OTP_LOCK0_otpdw0locksts">otpdw0locksts</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Show OTP lock bit status:<p></p>
-1’b1: locked<p></p>
-1’b0: not lockedd</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_OTP_LOCK1">LCSMANAGER_OTP_LOCK1</a></p>
-</td>
-<td><p>32'h0000002C</p>
-</td>
-<td><p>OTP lock status dword1</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_OTP_LOCK1_otpdw1locksts">otpdw1locksts</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Show OTP lock bit status:<p></p>
-1’b1: locked<p></p>
-1’b0: not lockedd</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_OTP_LOCK2">LCSMANAGER_OTP_LOCK2</a></p>
-</td>
-<td><p>32'h00000030</p>
-</td>
-<td><p>OTP lock status dword2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_OTP_LOCK2_otpdw2locksts">otpdw2locksts</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Show OTP lock bit status:<p></p>
-1’b1: locked<p></p>
-1’b0: not lockedd</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_OTP_LOCK3">LCSMANAGER_OTP_LOCK3</a></p>
-</td>
-<td><p>32'h00000034</p>
-</td>
-<td><p>OTP lock status dword3</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="lcsManager.htm#LCSMANAGER_OTP_LOCK3_otpdw3locksts">otpdw3locksts</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Show OTP lock bit status:<p></p>
-1’b1: locked<p></p>
-1’b0: not lockedd</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
+﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>LCSMANAGER</title></head>
+<body>
+<h1><a name="LCSMANAGER">"LCSMANAGER"</a>
+        </h1>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_">LCSMANAGER_mem</a></p>
+</td>
+<td><p>32'h00000000</p>
+</td>
+<td><p>LCS Manager OTP shadow register array, which will be<p></p>
+auto-loaded after POR by only once and is allowed by one-time<p></p>
+SW override of the values only toward advancing the LCS stages,<p></p>
+except for RMA stage.<p></p>
+Internal memory</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p>Memory</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p>Memory</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_LOCKSTS">LCSMANAGER_LOCKSTS</a></p>
+</td>
+<td><p>32'h00000020</p>
+</td>
+<td><p>The $LCSMARRAY is allowed to be auto-loaded from OTP shadow<p></p>
+copy after POR only once, after that $LCSMARRAY will be locked<p></p>
+for any subsequent auto-load operation from OTP until next POR,<p></p>
+the auto-load lock status can be read from this register bit<p></p>
+LOCKSTS.allocked<p></p>
+the dword (32-bit) in $LCSMARRAY can only be overwritten once by<p></p>
+SW through APB interface, afterwards that dword will be locked<p></p>
+for APB write, the lock status can only be cleared by<p></p>
+POR/System reset. If LCS state falls into “corrupted” after<p></p>
+auto-load, it will be locked immediately (no any override is<p></p>
+allowed); for LCS shadow register, SW override can only be<p></p>
+successful to advance LCS Manager state: LCSMDSTS.state, for<p></p>
+OTP lock register, the bit value can only be modified from 0 to<p></p>
+1, from 1 to 0 is not allowed, unsuccessful SW override or any<p></p>
+SW override after dword get locked will be ignored by LCS<p></p>
+Manager. The dword will be locked (write prohibited) no matter<p></p>
+SW override is successful or unsuccessful.</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[4:0]</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_LOCKSTS_dwlocked">dwlocked</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>the bit Indicates the $LCSMARRAY OTP LCS/LOCK shadow register<p></p>
+array dword write prohibition status<p></p>
+1’b0: write is allowed;<p></p>
+1’b1: write is NOT allowed;</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_LOCKSTS_allocked">allocked</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>This bit indicates LCS OTP auto-load operation lock status<p></p>
+1’b0: LCS OTP auto load is allowed;<p></p>
+1’b1: LCS OTP auto load is NOT allowed;</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS">LCSMANAGER_LCSMDSTS</a></p>
+</td>
+<td><p>32'h00000024</p>
+</td>
+<td><p>LCS Manager Decoded State</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_ate">ate</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When no higher bits are set, device is in ATE state (ATE can<p></p>
+define additional “scratch pad OTP” to guide the multi-insert<p></p>
+process). Synaptics Assets provisioning shall be completed in<p></p>
+this stage before releasing part to ODM</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_odm">odm</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Device in owned by ODM. ODM Asset provisioning shall be<p></p>
+completed in this stage before releasing part to OEM. Can be<p></p>
+used to lock Synaptics Assets.</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_oem">oem</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Device in owned by OEM. OEM Asset provisioning shall be<p></p>
+completed in this stage before releasing part to development or<p></p>
+into production. Can be used to lock ODM Assets</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_dev">dev</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Device in the Code Development state. Can be used to apply<p></p>
+relaxed debug access policies</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_prd">prd</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Production/Field deployment state for devices that do not<p></p>
+require strict Security definition</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_sec">sec</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Production/Field deployment state with Secure behavior</p>
+</td>
+</tr>
+<tr><td><p>[6:6]</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_reserved_b6">reserved_b6</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Reserved for future use</p>
+</td>
+</tr>
+<tr><td><p>[7:7]</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_rma">rma</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>RMA state, secure assets shall be destroyed before transition to<p></p>
+this stage</p>
+</td>
+</tr>
+<tr><td><p>[11:8]</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_state">state</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>LCS[7:0] + MagicWord: 0x0+0x0<p></p>
+Fab-out state, only OTP programming to ATE state is allowed, no<p></p>
+other debug/test accesses<p></p>
+LCS[7:0] + MagicWord: A + M<p></p>
+Device is under the ATE Test<p></p>
+LCS[7:0] + MagicWord: OA + M<p></p>
+Device is in ODM ownership<p></p>
+LCS[7:0] + MagicWord: EOA + M<p></p>
+Device is in OEM ownership<p></p>
+LCS[7:0] + MagicWord: DEOA + M<p></p>
+Device in the Development state. Can be used to apply relaxed<p></p>
+debug access policies<p></p>
+LCS[7:0] + MagicWord: PDEOA + M<p></p>
+Device in the Development state. Can be used to apply relaxed<p></p>
+debug access policies<p></p>
+LCS[7:0] + MagicWord: SPDEOA + M<p></p>
+Production/Field deployment state with Secure behavior<p></p>
+LCS[7:0] + MagicWord: RSPDEOA + M<p></p>
+RMA state, secure assets shall be destroyed before transition to<p></p>
+this stage<p></p>
+LCS[7:0] + MagicWord: any other value<p></p>
+Corruption is detected by LCS Decode or magic word doesn’t<p></p>
+match, no access shall be allowed, no LCS manager SW override<p></p>
+is allowed</p>
+</td>
+</tr>
+<tr><td><p>[30:12]</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_reserved_b12to30">reserved_b12to30</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Reserved for future use</p>
+</td>
+</tr>
+<tr><td><p>[31:31]</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_LCSMDSTS_corrupted">corrupted</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Indicated LCS Manager decoded state is Corrupted.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_OTP_LOCK0">LCSMANAGER_OTP_LOCK0</a></p>
+</td>
+<td><p>32'h00000028</p>
+</td>
+<td><p>OTP lock status dword0</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_OTP_LOCK0_otpdw0locksts">otpdw0locksts</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Show OTP lock bit status:<p></p>
+1’b1: locked<p></p>
+1’b0: not lockedd</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_OTP_LOCK1">LCSMANAGER_OTP_LOCK1</a></p>
+</td>
+<td><p>32'h0000002C</p>
+</td>
+<td><p>OTP lock status dword1</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_OTP_LOCK1_otpdw1locksts">otpdw1locksts</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Show OTP lock bit status:<p></p>
+1’b1: locked<p></p>
+1’b0: not lockedd</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_OTP_LOCK2">LCSMANAGER_OTP_LOCK2</a></p>
+</td>
+<td><p>32'h00000030</p>
+</td>
+<td><p>OTP lock status dword2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_OTP_LOCK2_otpdw2locksts">otpdw2locksts</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Show OTP lock bit status:<p></p>
+1’b1: locked<p></p>
+1’b0: not lockedd</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_OTP_LOCK3">LCSMANAGER_OTP_LOCK3</a></p>
+</td>
+<td><p>32'h00000034</p>
+</td>
+<td><p>OTP lock status dword3</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="lcsManager.htm#LCSMANAGER_OTP_LOCK3_otpdw3locksts">otpdw3locksts</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Show OTP lock bit status:<p></p>
+1’b1: locked<p></p>
+1’b0: not lockedd</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
 </body></html>

@@ -1,97 +1,97 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-    <body>
-        <h1 id="_Content.name">Hash Status</h1>
-        <dl class="node-info">
-            <dt>Absolute Address:</dt>
-            <dd id="_AbsAddr" class="address">
-            </dd>
-            <dt>Base Offset:</dt>
-            <dd class="address">0xc</dd>
-            <dt>Size:</dt>
-            <dd class="address">0x4</dd>
-        </dl>
-        <h2>Description</h2>
-        <p>This register holds status from the last hash operation.<p></p></p>
-        <h2>Contents</h2>
-        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
-            <tr class="TableStyle-table-no-head-Body-Body1">
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
-                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
-                </th>
-            </tr>
-            <tr class="TableStyle-table-no-head-Body-Body2">
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31:4]</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
-                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
-                </td>
-            </tr>
-            <tr id="hmac_sm_busy" class="TableStyle-table-no-head-Body-Body2">
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[3]</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#hmac_sm_busy.desc">hmac_sm_busy</a>
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Hash HMAC SM Busy For debug.</td>
-                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#hmac_sm_busy" title="Permalink to this row"></a></td>
-            </tr>
-            <tr id="xfer_sm_busy" class="TableStyle-table-no-head-Body-Body2">
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[2]</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#xfer_sm_busy.desc">xfer_sm_busy</a>
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Hash Xfer SM Busy For debug.</td>
-                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#xfer_sm_busy" title="Permalink to this row"></a></td>
-            </tr>
-            <tr id="hash_busy" class="TableStyle-table-no-head-Body-Body2">
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[1]</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#hash_busy.desc">hash_busy</a>
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Hash Busy</td>
-                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#hash_busy" title="Permalink to this row"></a></td>
-            </tr>
-            <tr id="hash_done" class="TableStyle-table-no-head-Body-Body2">
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[0]</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#hash_done.desc">hash_done</a>
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Hash Done</td>
-                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#hash_done" title="Permalink to this row"></a></td>
-            </tr>
-        </table>
-        <p>
-            <label>Encoded Register Value:</label>
-        </p>
-        <h2>Field Descriptions</h2>
-        <h3 id="hmac_sm_busy.desc">hmac_sm_busy - Hash HMAC SM Busy For debug.<a class="headerlink" href="#hmac_sm_busy.desc" title="Permalink to this headline"></a></h3>
-        <h3 id="xfer_sm_busy.desc">xfer_sm_busy - Hash Xfer SM Busy For debug.<a class="headerlink" href="#xfer_sm_busy.desc" title="Permalink to this headline"></a></h3>
-        <h3 id="hash_busy.desc">hash_busy - Hash Busy<a class="headerlink" href="#hash_busy.desc" title="Permalink to this headline"></a></h3>
-        <p>If this bit is 1, it means Hash engine is processing data in the operation.<p></p></p>
-        <h3 id="hash_done.desc">hash_done - Hash Done<a class="headerlink" href="#hash_done.desc" title="Permalink to this headline"></a></h3>
-        <p>If this bit is 1, it means last hash operation finished successfully. FW needs clean this bit before issue next hash command.<p></p></p>
-    </body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">Hash Status</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0xc</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>This register holds status from the last hash operation.<p></p></p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31:4]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="hmac_sm_busy" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[3]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#hmac_sm_busy.desc">hmac_sm_busy</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Hash HMAC SM Busy For debug.</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#hmac_sm_busy" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="xfer_sm_busy" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[2]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#xfer_sm_busy.desc">xfer_sm_busy</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Hash Xfer SM Busy For debug.</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#xfer_sm_busy" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="hash_busy" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[1]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#hash_busy.desc">hash_busy</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Hash Busy</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#hash_busy" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="hash_done" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#hash_done.desc">hash_done</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Hash Done</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#hash_done" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="hmac_sm_busy.desc">hmac_sm_busy - Hash HMAC SM Busy For debug.<a class="headerlink" href="#hmac_sm_busy.desc" title="Permalink to this headline"></a></h3>
+        <h3 id="xfer_sm_busy.desc">xfer_sm_busy - Hash Xfer SM Busy For debug.<a class="headerlink" href="#xfer_sm_busy.desc" title="Permalink to this headline"></a></h3>
+        <h3 id="hash_busy.desc">hash_busy - Hash Busy<a class="headerlink" href="#hash_busy.desc" title="Permalink to this headline"></a></h3>
+        <p>If this bit is 1, it means Hash engine is processing data in the operation.<p></p></p>
+        <h3 id="hash_done.desc">hash_done - Hash Done<a class="headerlink" href="#hash_done.desc" title="Permalink to this headline"></a></h3>
+        <p>If this bit is 1, it means last hash operation finished successfully. FW needs clean this bit before issue next hash command.<p></p></p>
+    </body>
 </html>

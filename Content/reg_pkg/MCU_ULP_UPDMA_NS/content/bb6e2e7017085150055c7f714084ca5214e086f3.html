@@ -1,36 +1,36 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">NSEC_CHPTR</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x214</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Non-Secure Channel Pointer</p>
-<p>This register is used to select one channel that needs to be configured through the following registers that have NSEC_CH prefix.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="RAZWI_0"><td>[31:6]</td>
-<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
-</tr>
-<tr id="CHPTR"><td>[5:0]</td>
-<td><a href="#CHPTR.desc">CHPTR</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#CHPTR" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="CHPTR.desc">CHPTR<a class="headerlink" href="#CHPTR.desc" title="Permalink to this headline"></a></h3>
-<p>Non-secure Channel Pointer. Selects which channel settings can be adjusted by the following registers. In case an unsupported channel number is written to this register (greater than NUM_CHANNELS), then the following registers using this pointer will be treated as RAZ/WI.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<body>
+
+<h1 id="_Content.name">NSEC_CHPTR</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x214</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Non-Secure Channel Pointer</p>
+<p>This register is used to select one channel that needs to be configured through the following registers that have NSEC_CH prefix.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_0"><td>[31:6]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+<tr id="CHPTR"><td>[5:0]</td>
+<td><a href="#CHPTR.desc">CHPTR</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#CHPTR" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<h2>Field Descriptions</h2>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="CHPTR.desc">CHPTR<a class="headerlink" href="#CHPTR.desc" title="Permalink to this headline"></a></h3>
+<p>Non-secure Channel Pointer. Selects which channel settings can be adjusted by the following registers. In case an unsupported channel number is written to this register (greater than NUM_CHANNELS), then the following registers using this pointer will be treated as RAZ/WI.</p>
+</body>
 </html>

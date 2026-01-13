@@ -1,120 +1,120 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">ALARMS</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x18</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>The ALARMS register allows the user to monitor the source of critical alarms.
-An alarm event appears at both the O_alarm I/O port (non-maskable) and in the ISTAT.ALARMS bit. The DWC TRNG NIST refuses to accept any command as long as any alarm is active.
-Any alarm event causes an automatic zeroize of all internal state information. The fields of the ALARMS register can be cleared by writing a 1 to the ILLEGAL_CMD_SEQ field and 4'b1111 to the FAILED_TEST_ID field. Writing any other value to these fields has no effect.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr class="reserved-field"><td>[31:6]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="FAILED_SEED_ST_HT"><td>[5]</td>
-<td><a href="#FAILED_SEED_ST_HT.desc">FAILED_SEED_ST_HT</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterFAILED_SEED_ST_HT" class="field-value-enum-tester"
-data-name="FAILED_SEED_ST_HT" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">FAILED_SEED_ST_HT_0</option><option value="0x1">FAILED_SEED_ST_HT_1</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#FAILED_SEED_ST_HT" title="Permalink to this row"></a></td>
-</tr>
-<tr id="ILLEGAL_CMD_SEQ"><td>[4]</td>
-<td><a href="#ILLEGAL_CMD_SEQ.desc">ILLEGAL_CMD_SEQ</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#ILLEGAL_CMD_SEQ" title="Permalink to this row"></a></td>
-</tr>
-<tr id="FAILED_TEST_ID"><td>[3:0]</td>
-<td><a href="#FAILED_TEST_ID.desc">FAILED_TEST_ID</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterFAILED_TEST_ID" class="field-value-enum-tester"
-data-name="FAILED_TEST_ID" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">FAILED_TEST_ID_0</option><option value="0x1">FAILED_TEST_ID_1</option><option value="0x2">FAILED_TEST_ID_2</option><option value="0x3">FAILED_TEST_ID_3</option><option value="0x4">FAILED_TEST_ID_4</option><option value="0x5">FAILED_TEST_ID_5</option><option value="0x6">FAILED_TEST_ID_6</option><option value="0x7">FAILED_TEST_ID_7</option><option value="0x8">FAILED_TEST_ID_8</option><option value="0x9">FAILED_TEST_ID_9</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#FAILED_TEST_ID" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="FAILED_SEED_ST_HT.desc">FAILED_SEED_ST_HT<a class="headerlink" href="#FAILED_SEED_ST_HT.desc" title="Permalink to this headline"></a></h3>
-<p>The FAILED_SEED_ST_HT field indicates that the statistical tests applied on the entropy source output is failed (Only valid when entropy source output statistical health test feature is included).</p>
-<table><tr><th colspan="3">enum FAILED_SEED_ST_HT_enum_t</th></tr>
-<tr><td>FAILED_SEED_ST_HT_0</td>
-<td>0x0</td>
-<td><p>no failure</p>
-</td>
-</tr>
-<tr><td>FAILED_SEED_ST_HT_1</td>
-<td>0x1</td>
-<td><p>Entropy source health test is failed.</p>
-</td>
-</tr>
-</table><h3 id="ILLEGAL_CMD_SEQ.desc">ILLEGAL_CMD_SEQ<a class="headerlink" href="#ILLEGAL_CMD_SEQ.desc" title="Permalink to this headline"></a></h3>
-<p>The ILLEGAL_CMD_SEQ field indicates that the S/W Driver has executed an illegal command sequence.</p>
-<h3 id="FAILED_TEST_ID.desc">FAILED_TEST_ID<a class="headerlink" href="#FAILED_TEST_ID.desc" title="Permalink to this headline"></a></h3>
-<p>When an alarm is issued, the FAILED_TEST_ID field shows which test has failed. This fields only shows the first detected failed test and it should not be assumed that the remaining statistical tests are passed.</p>
-<table><tr><th colspan="3">enum FAILED_TEST_ID_enum_t</th></tr>
-<tr><td>FAILED_TEST_ID_0</td>
-<td>0x0</td>
-<td><p>no failure</p>
-</td>
-</tr>
-<tr><td>FAILED_TEST_ID_1</td>
-<td>0x1</td>
-<td><p>failure in both KAT and statistical tests</p>
-</td>
-</tr>
-<tr><td>FAILED_TEST_ID_2</td>
-<td>0x2</td>
-<td><p>KAT test failure</p>
-</td>
-</tr>
-<tr><td>FAILED_TEST_ID_3</td>
-<td>0x3</td>
-<td><p>Monobit test failure</p>
-</td>
-</tr>
-<tr><td>FAILED_TEST_ID_4</td>
-<td>0x4</td>
-<td><p>Run test failure</p>
-</td>
-</tr>
-<tr><td>FAILED_TEST_ID_5</td>
-<td>0x5</td>
-<td><p>Long Run test failure</p>
-</td>
-</tr>
-<tr><td>FAILED_TEST_ID_6</td>
-<td>0x6</td>
-<td><p>Auto-correlation test failure</p>
-</td>
-</tr>
-<tr><td>FAILED_TEST_ID_7</td>
-<td>0x7</td>
-<td><p>Poker test failure</p>
-</td>
-</tr>
-<tr><td>FAILED_TEST_ID_8</td>
-<td>0x8</td>
-<td><p>Repetition Count test failure</p>
-</td>
-</tr>
-<tr><td>FAILED_TEST_ID_9</td>
-<td>0x9</td>
-<td><p>Adaptive Proportion test failure</p>
-</td>
-</tr>
-</table>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<body>
+
+<h1 id="_Content.name">ALARMS</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x18</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>The ALARMS register allows the user to monitor the source of critical alarms.
+An alarm event appears at both the O_alarm I/O port (non-maskable) and in the ISTAT.ALARMS bit. The DWC TRNG NIST refuses to accept any command as long as any alarm is active.
+Any alarm event causes an automatic zeroize of all internal state information. The fields of the ALARMS register can be cleared by writing a 1 to the ILLEGAL_CMD_SEQ field and 4'b1111 to the FAILED_TEST_ID field. Writing any other value to these fields has no effect.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31:6]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="FAILED_SEED_ST_HT"><td>[5]</td>
+<td><a href="#FAILED_SEED_ST_HT.desc">FAILED_SEED_ST_HT</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td><select id="_FieldValueEnumTesterFAILED_SEED_ST_HT" class="field-value-enum-tester"
+data-name="FAILED_SEED_ST_HT" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">FAILED_SEED_ST_HT_0</option><option value="0x1">FAILED_SEED_ST_HT_1</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#FAILED_SEED_ST_HT" title="Permalink to this row"></a></td>
+</tr>
+<tr id="ILLEGAL_CMD_SEQ"><td>[4]</td>
+<td><a href="#ILLEGAL_CMD_SEQ.desc">ILLEGAL_CMD_SEQ</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#ILLEGAL_CMD_SEQ" title="Permalink to this row"></a></td>
+</tr>
+<tr id="FAILED_TEST_ID"><td>[3:0]</td>
+<td><a href="#FAILED_TEST_ID.desc">FAILED_TEST_ID</a></td>
+<td>rw</td>
+<td>0x0</td>
+<td><select id="_FieldValueEnumTesterFAILED_TEST_ID" class="field-value-enum-tester"
+data-name="FAILED_TEST_ID" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">FAILED_TEST_ID_0</option><option value="0x1">FAILED_TEST_ID_1</option><option value="0x2">FAILED_TEST_ID_2</option><option value="0x3">FAILED_TEST_ID_3</option><option value="0x4">FAILED_TEST_ID_4</option><option value="0x5">FAILED_TEST_ID_5</option><option value="0x6">FAILED_TEST_ID_6</option><option value="0x7">FAILED_TEST_ID_7</option><option value="0x8">FAILED_TEST_ID_8</option><option value="0x9">FAILED_TEST_ID_9</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#FAILED_TEST_ID" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<h2>Field Descriptions</h2>
+<h3 id="FAILED_SEED_ST_HT.desc">FAILED_SEED_ST_HT<a class="headerlink" href="#FAILED_SEED_ST_HT.desc" title="Permalink to this headline"></a></h3>
+<p>The FAILED_SEED_ST_HT field indicates that the statistical tests applied on the entropy source output is failed (Only valid when entropy source output statistical health test feature is included).</p>
+<table><tr><th colspan="3">enum FAILED_SEED_ST_HT_enum_t</th></tr>
+<tr><td>FAILED_SEED_ST_HT_0</td>
+<td>0x0</td>
+<td><p>no failure</p>
+</td>
+</tr>
+<tr><td>FAILED_SEED_ST_HT_1</td>
+<td>0x1</td>
+<td><p>Entropy source health test is failed.</p>
+</td>
+</tr>
+</table><h3 id="ILLEGAL_CMD_SEQ.desc">ILLEGAL_CMD_SEQ<a class="headerlink" href="#ILLEGAL_CMD_SEQ.desc" title="Permalink to this headline"></a></h3>
+<p>The ILLEGAL_CMD_SEQ field indicates that the S/W Driver has executed an illegal command sequence.</p>
+<h3 id="FAILED_TEST_ID.desc">FAILED_TEST_ID<a class="headerlink" href="#FAILED_TEST_ID.desc" title="Permalink to this headline"></a></h3>
+<p>When an alarm is issued, the FAILED_TEST_ID field shows which test has failed. This fields only shows the first detected failed test and it should not be assumed that the remaining statistical tests are passed.</p>
+<table><tr><th colspan="3">enum FAILED_TEST_ID_enum_t</th></tr>
+<tr><td>FAILED_TEST_ID_0</td>
+<td>0x0</td>
+<td><p>no failure</p>
+</td>
+</tr>
+<tr><td>FAILED_TEST_ID_1</td>
+<td>0x1</td>
+<td><p>failure in both KAT and statistical tests</p>
+</td>
+</tr>
+<tr><td>FAILED_TEST_ID_2</td>
+<td>0x2</td>
+<td><p>KAT test failure</p>
+</td>
+</tr>
+<tr><td>FAILED_TEST_ID_3</td>
+<td>0x3</td>
+<td><p>Monobit test failure</p>
+</td>
+</tr>
+<tr><td>FAILED_TEST_ID_4</td>
+<td>0x4</td>
+<td><p>Run test failure</p>
+</td>
+</tr>
+<tr><td>FAILED_TEST_ID_5</td>
+<td>0x5</td>
+<td><p>Long Run test failure</p>
+</td>
+</tr>
+<tr><td>FAILED_TEST_ID_6</td>
+<td>0x6</td>
+<td><p>Auto-correlation test failure</p>
+</td>
+</tr>
+<tr><td>FAILED_TEST_ID_7</td>
+<td>0x7</td>
+<td><p>Poker test failure</p>
+</td>
+</tr>
+<tr><td>FAILED_TEST_ID_8</td>
+<td>0x8</td>
+<td><p>Repetition Count test failure</p>
+</td>
+</tr>
+<tr><td>FAILED_TEST_ID_9</td>
+<td>0x9</td>
+<td><p>Adaptive Proportion test failure</p>
+</td>
+</tr>
+</table>
+</body>
 </html>

@@ -1,62 +1,62 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-    <body>
-        <h1 id="_Content.name">AMC_ACC_ADDR</h1>
-        <dl class="node-info">
-            <dt>Absolute Address:</dt>
-            <dd id="_AbsAddr" class="address">
-            </dd>
-            <dt>Base Offset:</dt>
-            <dd class="address">0xfc</dd>
-            <dt>Size:</dt>
-            <dd class="address">0x4</dd>
-        </dl>
-        <h2>Description</h2>
-        <h2>Contents</h2>
-        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
-            <tr class="TableStyle-table-no-head-Body-Body1">
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
-                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
-                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
-                </th>
-            </tr>
-            <tr class="TableStyle-table-no-head-Body-Body2">
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31:8]</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
-                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
-                </td>
-            </tr>
-            <tr id="offset" class="TableStyle-table-no-head-Body-Body2">
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[7:0]</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#offset.desc">offset</a>
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
-                </td>
-                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">DWord Offset</td>
-                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#offset" title="Permalink to this row"></a></td>
-            </tr>
-        </table>
-        <p>
-            <label>Encoded Register Value:</label>
-        </p>
-        <h2>Field Descriptions</h2>
-        <h3 id="offset.desc">offset - DWord Offset<a class="headerlink" href="#offset.desc" title="Permalink to this headline"></a></h3>
-        <p>This field shows the current DWord offset (0's base) of the operand. This field is shared by all operands. It is automatically increased by one after each read/write to any of the operand in the AMC_ACC_ZMP_DATA or AMC_ACC_ECP_DATA registers. The values loops around when it reaches the operand size defined by AMC_SIZE register. For example, if the operand size is 67 bits (3 DWords), the maximum value of this field is 2. The offset value returns to zero after 3 read/write to the AMC_ACC_ZMP_DATA or AMC_ACC_ECP_DATA registers.<p></p>
-Notes:<p></p>
-1. The AMC_CFG and AMC_SIZE registers must be configured correctly before loading/unloading the operand.<p></p>
-2. Programming an operand with invalid offset (i.e. exceed the operand size) will corrupt other operands.<p></p></p>
-    </body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">AMC_ACC_ADDR</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0xfc</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31:8]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="offset" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[7:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#offset.desc">offset</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">DWord Offset</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#offset" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="offset.desc">offset - DWord Offset<a class="headerlink" href="#offset.desc" title="Permalink to this headline"></a></h3>
+        <p>This field shows the current DWord offset (0's base) of the operand. This field is shared by all operands. It is automatically increased by one after each read/write to any of the operand in the AMC_ACC_ZMP_DATA or AMC_ACC_ECP_DATA registers. The values loops around when it reaches the operand size defined by AMC_SIZE register. For example, if the operand size is 67 bits (3 DWords), the maximum value of this field is 2. The offset value returns to zero after 3 read/write to the AMC_ACC_ZMP_DATA or AMC_ACC_ECP_DATA registers.<p></p>
+Notes:<p></p>
+1. The AMC_CFG and AMC_SIZE registers must be configured correctly before loading/unloading the operand.<p></p>
+2. Programming an operand with invalid offset (i.e. exceed the operand size) will corrupt other operands.<p></p></p>
+    </body>
 </html>

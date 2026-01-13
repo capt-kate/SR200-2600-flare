@@ -1,3089 +1,3089 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>DSIHOST</title></head>
-<body>
-<h1><a name="DSIHOST">"DSIHOST"</a>
-        </h1>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DSIHOST_">DSIHOST_mem</a></p>
-</td>
-<td><p>32'h00000000</p>
-</td>
-<td><p>Dummy (16KB) register space for MIPI DSI Host Controller<p></p>
-Internal memory</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p>Memory</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-<td><p>Memory</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DSIHOST_">DSIHOST_mem1</a></p>
-</td>
-<td><p>32'h00004000</p>
-</td>
-<td><p>Dummy (16KB) register space for MIPI DSI Host Controller<p></p>
-Internal memory</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p>Memory</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-<td><p>Memory</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL0">DSIHOST_PLL_DPHY_PLL0</a></p>
-</td>
-<td><p>32'h00008000</p>
-</td>
-<td><p>Control and status registers for DPHYPLL</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL0_updatepll">updatepll</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Control for PLL operation frequency updated. When<p></p>
-exercised, PLL SoC control signals are latched to PLL<p></p>
-shadow_registers to set PLL operating frequency.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL1">DSIHOST_PLL_DPHY_PLL1</a></p>
-</td>
-<td><p>32'h00008004</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[3:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL1_n">n</a></p>
-</td>
-<td><p>0x3</p>
-</td>
-<td><p>Control of the input frequency division ratio N (1 to 16) for<p></p>
-SoC direct PLL control. This signal can control the PLL if<p></p>
-pll_shadow_control = 1'b0</p>
-</td>
-</tr>
-<tr><td><p>[13:4]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL1_m">m</a></p>
-</td>
-<td><p>0xC6</p>
-</td>
-<td><p>Control of the feedback multiplication ratio M (40 to 625)<p></p>
-for SoC direct PLL control. This signal can control the PLL if<p></p>
-pll_shadow_control = 1'b0</p>
-</td>
-</tr>
-<tr><td><p>[19:14]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL1_vco_cntrl">vco_cntrl</a></p>
-</td>
-<td><p>0x1</p>
-</td>
-<td><p>VCO operating range for SoC direct PLL control, needs<p></p>
-to be set appropriately to frequency of operation:<p></p>
-For detailed information regarding the VCO ranges see table “VCO<p></p>
-Ranges” on page 85<p></p>
-This signal can control the PLL if pll_shadow_control = 1'b0</p>
-</td>
-</tr>
-<tr><td><p>[25:20]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL1_prop_cntrl">prop_cntrl</a></p>
-</td>
-<td><p>0xC</p>
-</td>
-<td><p>Proportional Charge Pump control for SoC direct PLL<p></p>
-control. This signal can control the PLL if pll_shadow_control =<p></p>
-1'b0 Power down value="”000000</p>
-</td>
-</tr>
-<tr><td><p>[31:26]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL1_int_cntrl">int_cntrl</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Integral Charge Pump control for SoC direct PLL control.<p></p>
-This signal can control the PLL if pll_shadow_control = 1'b0<p></p>
-Power down value="”000000”</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL2">DSIHOST_PLL_DPHY_PLL2</a></p>
-</td>
-<td><p>32'h00008008</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[1:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL2_gmp_cntrl">gmp_cntrl</a></p>
-</td>
-<td><p>0x1</p>
-</td>
-<td><p>Controls the effective loop-filter resistance (=1/gmp) to<p></p>
-increase/decrease MPLL bandwidth and compensate for change in<p></p>
-divider modulus (n_cntrl). For SoC direct PLL control. This<p></p>
-signal can control the PLL if pll_shadow_control = 1'b0</p>
-</td>
-</tr>
-<tr><td><p>[8:2]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL2_cpbias_cntrl">cpbias_cntrl</a></p>
-</td>
-<td><p>0x10</p>
-</td>
-<td><p>Charge Pump bias control, for SoC direct PLL control.<p></p>
-This signal can control the PLL if pll_shadow_control = 1'b0</p>
-</td>
-</tr>
-<tr><td><p>[10:9]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL2_clksel">clksel</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Control of PLL clock output selection.<p></p>
-■ 00 - Clocks stopped<p></p>
-■ 01 - Clock generation<p></p>
-■ 10 - Buffered clkext<p></p>
-■ 11 - Forbidden<p></p>
-For more information see table “PLL Bypass Settings” on page 62</p>
-</td>
-</tr>
-<tr><td><p>[11:11]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL2_force_lock">force_lock</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Force lock to SOC<p></p>
-■ 0 – according to lock detector-default<p></p>
-■ 1 – lock indication forced,</p>
-</td>
-</tr>
-<tr><td><p>[12:12]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL2_pll_shadow_control">pll_shadow_control</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Selection of PLL configuration mechanism. PLL can be<p></p>
-configured through D-PHY or through SoC control and shadow<p></p>
-control registers<p></p>
-■ 0: SoC control and shadow registers<p></p>
-■ 1: D-PHY control</p>
-</td>
-</tr>
-<tr><td><p>[13:13]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL2_shadow_clear">shadow_clear</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Shadow registers clear. Rise edge sensitive</p>
-</td>
-</tr>
-<tr><td><p>[14:14]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL2_gp_clk_en">gp_clk_en</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Enable signal for clkout_gp clock</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB0">DSIHOST_PLL_DPHY_PLLRB0</a></p>
-</td>
-<td><p>32'h0000800C</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[3:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB0_n_obs">n_obs</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Output of multiplexer controlled by pll_shadow_control<p></p>
-signal. This output signal represents the control signal<p></p>
-provided by PHY test control registers or SoC control depending<p></p>
-on pll_shadow_control selection. Used for SOC observability.</p>
-</td>
-</tr>
-<tr><td><p>[13:4]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB0_m_obs">m_obs</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Output of multiplexer controlled by pll_shadow_control<p></p>
-signal. This output signal represents the control signal<p></p>
-provided by PHY test control registers or SoC control depending<p></p>
-on pll_shadow_control selection. Used for SOC observability.</p>
-</td>
-</tr>
-<tr><td><p>[19:14]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB0_vco_cntrl_obs">vco_cntrl_obs</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Output of multiplexer controlled by pll_shadow_control<p></p>
-signal. This output signal represents the control signal<p></p>
-provided by PHY test control registers or SoC control depending<p></p>
-on pll_shadow_control selection. Used for SOC observability</p>
-</td>
-</tr>
-<tr><td><p>[25:20]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB0_prop_cntrl_obs">prop_cntrl_obs</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Output of multiplexer controlled by pll_shadow_control<p></p>
-signal. This output signal represents the control signal<p></p>
-provided by PHY test control registers or SoC control depending<p></p>
-on pll_shadow_control selection. Used for SOC observability.</p>
-</td>
-</tr>
-<tr><td><p>[31:26]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB0_int_cntrl_obs">int_cntrl_obs</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Output of multiplexer controlled by pll_shadow_control<p></p>
-signal. This output signal represents the control signal<p></p>
-provided by PHY test control registers or SoC control depending<p></p>
-on pll_shadow_control selection. Used for SOC observability</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB1">DSIHOST_PLL_DPHY_PLLRB1</a></p>
-</td>
-<td><p>32'h00008010</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[1:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB1_gmp_cntrl_obs">gmp_cntrl_obs</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Output of multiplexer controlled by pll_shadow_control<p></p>
-signal. This output signal represents the control signal<p></p>
-provided by PHY test control registers or SoC control depending<p></p>
-on pll_shadow_control selection. Used for SOC observability.</p>
-</td>
-</tr>
-<tr><td><p>[8:2]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB1_cpbias_cntrl_obs">cpbias_cntrl_obs</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Output of multiplexer controlled by pll_shadow_control<p></p>
-signal. This output signal represents the control signal<p></p>
-provided by PHY test control registers or SoC control depending<p></p>
-on pll_shadow_control selection. Used for SOC observability</p>
-</td>
-</tr>
-<tr><td><p>[9:9]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB1_pll_shadow_control_obs">pll_shadow_control_obs</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Output of multiplexer controlled by pll_shadow_control<p></p>
-signal. This output signal represents the control signal<p></p>
-provided by PHY test control registers or SoC control depending<p></p>
-on pll_shadow_control selection. Used for SOC observability</p>
-</td>
-</tr>
-<tr><td><p>[10:10]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB1_lock_pll">lock_pll</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Lock state signaling (0: PLL is not locked, 1: PLL is<p></p>
-locked)</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL0">DSIHOST_DPHYTX0_DPHY_CTL0</a></p>
-</td>
-<td><p>32'h00008014</p>
-</td>
-<td><p>Control and status registers for DPHYTX0</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL0_BiuCtrlPhyEn">BiuCtrlPhyEn</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Enable Biu Control DPHY register.</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL0_tx_iso18_en">tx_iso18_en</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>1b'0 - non isolation operating mode<p></p>
-1b'1 (1.8V) the PHY will power down the 1.8V domain.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1">DSIHOST_DPHYTX0_DPHY_CTL1</a></p>
-</td>
-<td><p>32'h00008018</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_shutdownz">shutdownz</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Shutdown Input<p></p>
-This line is used to place the PHY in shutdown. All analog<p></p>
-blocks are in shutdown mode and the digital logic is reset.<p></p>
-Active state: Low</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_rstz">rstz</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Reset Input<p></p>
-This line is used to place the digital section of the PHY in<p></p>
-reset state.<p></p>
-Active state: Low</p>
-</td>
-</tr>
-<tr><td><p>[2:2]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_forcepll">forcepll</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>By default, the PLL clock multiplier is switched off during<p></p>
-shutdown and ULP operation if all lanes are in ULPS. If the PLL<p></p>
-functionality is required from system perspective in any of<p></p>
-these conditions, forcepll can be kept asserted maintaining the<p></p>
-PLL active at all times, regardless of other configurations or<p></p>
-states.<p></p>
-forcepll signal cannot be used to power-up the PLL independent<p></p>
-of the PHY state.</p>
-</td>
-</tr>
-<tr><td><p>[3:3]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_txrequesthsclk">txrequesthsclk</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Clock Request Signal<p></p>
-This signal causes the clock lane to start transmitting DDR<p></p>
-clock on the lane interconnect. A TX HS request is not allowed<p></p>
-if the add-on PLL is not enabled and locked.</p>
-</td>
-</tr>
-<tr><td><p>[4:4]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_enableclkBIU">enableclkBIU</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Enable Clock Lane Module<p></p>
-All lane drivers and terminations are turned off when enableclk<p></p>
-is low. In addition, all other lane PPI inputs are ignored and<p></p>
-all lane PPI outputs are driven to the default values.<p></p>
-enableclk is level sensitive and asynchronous.<p></p>
-It is not allowed for this signal to be changed during<p></p>
-operation. It should be set with PHY in power-down.</p>
-</td>
-</tr>
-<tr><td><p>[5:5]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_turndisable_0">turndisable_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Disable Turn Around<p></p>
-This signal is used to prevent the bi-directional lane from<p></p>
-processing a turn-around request in the lane interconnection.<p></p>
-Note: This is useful to prevent a potential “lock-up” situation<p></p>
-when a unidirectional lane module is connected to a<p></p>
-bi-directional lane module.</p>
-</td>
-</tr>
-<tr><td><p>[6:6]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_forcerxmode_0">forcerxmode_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Force Lane Module into Receive Mode/Wait for Stop State This<p></p>
-signal allows the protocol layer to initialize a lane module or<p></p>
-force a bi-directional lane module into receive mode. This<p></p>
-signal is used to solve a contention situation. When this<p></p>
-signal is high, the lane module immediately transitions into<p></p>
-receive control mode and waits for a Stop state to appear on<p></p>
-the Lane interconnect.</p>
-</td>
-</tr>
-<tr><td><p>[7:7]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_basedir_0">basedir_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Function: Configures the Base Direction for Lane<p></p>
-■ basedir_0 = 1: Configures lane as RX upon startup of the PHY<p></p>
-■ basedir_0 = 0: Configures lane as TX</p>
-</td>
-</tr>
-<tr><td><p>[8:8]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_forcetxstopmode_0">forcetxstopmode_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Force Lane Module into Transmit Mode and Generate Stop State<p></p>
-This signal allows the protocol layer to force a bi-directional<p></p>
-lane module into transmit mode and Stop state following an<p></p>
-error indication (for example, Expired Timeout). When this<p></p>
-signal is high, the lane module immediately transitions into<p></p>
-transmit mode and the module state machine is forced into the<p></p>
-Stop state.</p>
-</td>
-</tr>
-<tr><td><p>[9:9]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_forcetxstopmode_1">forcetxstopmode_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Force Lane Module into Transmit Mode and Generate Stop State<p></p>
-This signal allows the protocol layer to force a bi-directional<p></p>
-lane module into transmit mode and Stop state following an<p></p>
-error indication (for example, Expired Timeout). When this<p></p>
-signal is high, the lane module immediately transitions into<p></p>
-transmit mode and the module state machine is forced into the<p></p>
-Stop state.</p>
-</td>
-</tr>
-<tr><td><p>[10:10]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_enable_0">enable_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Enable Lane 0<p></p>
-All lane drivers, receivers, terminations, and contention<p></p>
-detectors are turned off when enable_0 is low. In addition, all<p></p>
-other lane PPI inputs are ignored and all lane PPI outputs are<p></p>
-driven to the default values.<p></p>
-enable_0 is level sensitive and asynchronous. It is not allowed<p></p>
-for this signal to be changed during operation. It should be<p></p>
-set with PHY in power-down.</p>
-</td>
-</tr>
-<tr><td><p>[11:11]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_enable_1">enable_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Enable Lane 1<p></p>
-All lane drivers, receivers, terminations, and contention<p></p>
-detectors are turned off when enable_1 is low. In addition, all<p></p>
-other lane PPI inputs are ignored and all lane PPI outputs are<p></p>
-driven to the default values.<p></p>
-enable_1 is level sensitive and asynchronous. It is not allowed<p></p>
-for this signal to be changed during operation. It should be<p></p>
-set with PHY in power-down.</p>
-</td>
-</tr>
-<tr><td><p>[18:12]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_hsfreqrange">hsfreqrange</a></p>
-</td>
-<td><p>0x49</p>
-</td>
-<td><p>High-speed Frequency Range Selection. Refer to Table 5-6 on page<p></p>
-123 for Operating Frequency Range selection and default values.<p></p>
-This signal should be set with the D-PHY in power-down and must<p></p>
-not change during operation.<p></p>
-This signal can be overridden through D-PHY test control<p></p>
-registers.</p>
-</td>
-</tr>
-<tr><td><p>[19:19]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_cont_en">cont_en</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>This signal places the macro in IO continuity test mode. All<p></p>
-other interface signals should be placed in their default<p></p>
-values.<p></p>
-Active state: high</p>
-</td>
-</tr>
-<tr><td><p>[25:20]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_cfgclkfreqrange">cfgclkfreqrange</a></p>
-</td>
-<td><p>0x20</p>
-</td>
-<td><p>System clock frequency configuration preset. Should be<p></p>
-set according to the following equation:<p></p>
-cfgclkfreqrange[5:0] = round[ (Fcfg_clk(MHz)-17)*4]</p>
-</td>
-</tr>
-<tr><td><p>[26:26]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_biston">biston</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Starts the pattern generator.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL2">DSIHOST_DPHYTX0_DPHY_CTL2</a></p>
-</td>
-<td><p>32'h0000801C</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL2_txulpsclkBIU">txulpsclkBIU</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Transmit Ultra Low Power on Clock Lane<p></p>
-This signal is asserted to cause the clock lane module to enter<p></p>
-the Ultra Low Power state. The lane module remains in this mode<p></p>
-until the txulpsexitclk signal is asserted. This signal is<p></p>
-clocked by txclkesc.</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL2_txulpsexitclk">txulpsexitclk</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>This signal is asserted to cause the clock lane module to<p></p>
-transmit the Ultra Low Power (ULP) exit sequence and return to<p></p>
-the Stop state. This signal is clocked by txclkesc. While<p></p>
-txclkesc can be gated during ULP state, it must be reactivated<p></p>
-so that the txulpsexitclk command can be processed.Between the<p></p>
-assertion of txulpsexitclk and<p></p>
-ulpsactivenotclk there is a latency not higher than 55us for the<p></p>
-default configurations.</p>
-</td>
-</tr>
-<tr><td><p>[2:2]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL2_turnrequest_0">turnrequest_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Turn around Request<p></p>
-This signal is used to indicate that the protocol layer needs to<p></p>
-turn the lane around, allowing for the other side to start<p></p>
-transmitting the data.<p></p>
-turnrequest_0 is valid on the rising edges of txclkesc.<p></p>
-Note: turnrequest_0 is only meaningful for a lane that is<p></p>
-currently transmitting data (direction_0 = 0). If the data lane<p></p>
-module is in receive mode (direction_0 =1), this signal is<p></p>
-ignored.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3">DSIHOST_DPHYTX0_DPHY_CTL3</a></p>
-</td>
-<td><p>32'h00008020</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[7:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txdataesc_0">txdataesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Data Bus<p></p>
-This is the 8-bit bus data input to be transmitted in low-power<p></p>
-data transmission mode. The LSB is transmitted first.<p></p>
-txdataesc_0 is synchronous with the rising edge of txclkesc.</p>
-</td>
-</tr>
-<tr><td><p>[11:8]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txtriggeresc_0">txtriggeresc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Trigger 0-3<p></p>
-One of these signals is asserted with txrequestesc_0 to cause<p></p>
-the lane module to send the associated trigger across the lane<p></p>
-interconnection.<p></p>
-txtriggeresc_0 is synchronous with the rising edge of<p></p>
-txclkesc_0.<p></p>
-Note: Only one of the txtriggeresc_0 is asserted at any given<p></p>
-time, and only when txlpdtesc_0 and txulpsesc_0 are both at low<p></p>
-level.<p></p>
-■ txtriggeresc_0[0] corresponds to Reset-Trigger.<p></p>
-■ txtriggeresc_0[1] corresponds to Unknown-3 Trigger.<p></p>
-■ txtriggeresc_0[2] corresponds to Unknown-4 Trigger.<p></p>
-■ txtriggeresc_0[3] corresponds to Unknown-5 Trigger.</p>
-</td>
-</tr>
-<tr><td><p>[12:12]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txrequestesc_0">txrequestesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Request<p></p>
-This signal together with txlpdtesc_0, txulpsesc_0, and<p></p>
-txtriggeresc_0[3:0] is used to request the entry into any Escape<p></p>
-mode.<p></p>
-Once in Escape mode, the lane stays in Escape mode until<p></p>
-txrequestesc_0 is un-asserted.<p></p>
-Note: It can only be asserted by the protocol layer while<p></p>
-txrequestdatahs_0 is at low level.</p>
-</td>
-</tr>
-<tr><td><p>[13:13]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txlpdtesc_0">txlpdtesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Low-Power Data<p></p>
-This signal is asserted with txrequestesc_0 to cause the lane<p></p>
-module to enter low-power data transmission mode. The lane<p></p>
-module remains in this mode until txrequestesc_0 is<p></p>
-de-asserted.<p></p>
-Note: txulpsesc_0 and all the bits of txtriggeresc_0 must be at<p></p>
-low level when txlpdtesc_0 is at high level.</p>
-</td>
-</tr>
-<tr><td><p>[14:14]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txulpsesc_0">txulpsesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit ULP<p></p>
-This signal is asserted with txrequestesc_0 to cause the lane<p></p>
-module to enter the ULP State. The lane module remains in this<p></p>
-state until txulpsexit_0 is asserted and txrequestesc_0 is<p></p>
-de-asserted.<p></p>
-Note: txlpdtesc_0 and all bits of txtriggeresc_0 must be at low<p></p>
-level when txulpsesc_0 is at high level.</p>
-</td>
-</tr>
-<tr><td><p>[15:15]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txulpsexit_0">txulpsexit_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Initiate the transmission of the ULP exit sequence.<p></p>
-If this signal is asserted while the lane is in ULP state, the<p></p>
-PHY leaves the ULP state and begins driving a Mark-1 symbol on<p></p>
-the line interconnect.<p></p>
-Afterwards, upon de-assertion of txrequestesc_0, the PHY drives<p></p>
-the LP-11 Stop state. Between the assertion of txulpsexit_0 and<p></p>
-ulpsactivenotclk there is a latency not higher than 55us for the<p></p>
-default configurations<p></p>
-Note: This signal is ignored when the PHY is not in the ULP<p></p>
-state.</p>
-</td>
-</tr>
-<tr><td><p>[16:16]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txvalidesc_0">txvalidesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Data Valid<p></p>
-This signal indicates that the protocol layer is driving valid<p></p>
-data on txdataesc_0 bus, to be transmitted.<p></p>
-Note: The lane module accepts the data when txrequestesc_0,<p></p>
-txvalidesc_0, and txreadyesc_0 are all active on the same<p></p>
-rising edge of txclkesc.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4">DSIHOST_DPHYTX0_DPHY_CTL4</a></p>
-</td>
-<td><p>32'h00008024</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[7:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txdataesc_1">txdataesc_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Data Bus<p></p>
-This is the 8-bit bus data input to be transmitted in low-power<p></p>
-data transmission mode. The LSB is transmitted first.<p></p>
-txdataesc_1 is synchronous with the rising edge of txclkesc.</p>
-</td>
-</tr>
-<tr><td><p>[11:8]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txtriggeresc_1">txtriggeresc_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Trigger 0-3<p></p>
-One of these signals is asserted with txrequestesc_1 to cause<p></p>
-the lane module to send the associated trigger across the lane<p></p>
-interconnection.<p></p>
-txtriggeresc_1 is synchronous with the rising edge of<p></p>
-txclkesc_1.<p></p>
-Note: Only one of the txtriggeresc_1 is asserted at any given<p></p>
-time, and only when txlpdtesc_1 and txulpsesc_1 are both at low<p></p>
-level.<p></p>
-■ txtriggeresc_1[0] corresponds to Reset-Trigger.<p></p>
-■ txtriggeresc_1[1] corresponds to Unknown-3 Trigger.<p></p>
-■ txtriggeresc_1[2] corresponds to Unknown-4 Trigger.<p></p>
-■ txtriggeresc_1[3] corresponds to Unknown-5 Trigger.</p>
-</td>
-</tr>
-<tr><td><p>[12:12]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txrequestesc_1">txrequestesc_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Request<p></p>
-This signal together with txlpdtesc_1, txulpsesc_1, and<p></p>
-txtriggeresc_1[3:0] is used to request the entry into any Escape<p></p>
-mode.<p></p>
-Once in Escape mode, the lane stays in Escape mode until<p></p>
-txrequestesc_1 is un-asserted.<p></p>
-Note: It can only be asserted by the protocol layer while<p></p>
-txrequestdatahs_1 is at low level.</p>
-</td>
-</tr>
-<tr><td><p>[13:13]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txlpdtesc_1">txlpdtesc_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Low-Power Data<p></p>
-This signal is asserted with txrequestesc_1 to cause the lane<p></p>
-module to enter low-power data transmission mode. The lane<p></p>
-module remains in this mode until txrequestesc_1 is<p></p>
-de-asserted.<p></p>
-Note: txulpsesc_1 and all the bits of txtriggeresc_1 must be at<p></p>
-low level when txlpdtesc_1 is at high level.</p>
-</td>
-</tr>
-<tr><td><p>[14:14]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txulpsesc_1">txulpsesc_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit ULP<p></p>
-This signal is asserted with txrequestesc_1 to cause the lane<p></p>
-module to enter the ULP State. The lane module remains in this<p></p>
-state until txulpsexit_1 is asserted and txrequestesc_1 is<p></p>
-de-asserted.<p></p>
-Note: txlpdtesc_1 and all bits of txtriggeresc_1 must be at low<p></p>
-level when txulpsesc_1 is at high level.</p>
-</td>
-</tr>
-<tr><td><p>[15:15]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txulpsexit_1">txulpsexit_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Initiate the transmission of the ULP exit sequence.<p></p>
-If this signal is asserted while the lane is in ULP state, the<p></p>
-PHY leaves the ULP state and begins driving a Mark-1 symbol on<p></p>
-the line interconnect.<p></p>
-Afterwards, upon de-assertion of txrequestesc_1, the PHY drives<p></p>
-the LP-11 Stop state. Between the assertion of txulpsexit_1 and<p></p>
-ulpsactivenotclk there is a latency not higher than 55us for the<p></p>
-default configurations<p></p>
-Note: This signal is ignored when the PHY is not in the ULP<p></p>
-state.</p>
-</td>
-</tr>
-<tr><td><p>[16:16]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txvalidesc_1">txvalidesc_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Data Valid<p></p>
-This signal indicates that the protocol layer is driving valid<p></p>
-data on txdataesc_1 bus, to be transmitted.<p></p>
-Note: The lane module accepts the data when txrequestesc_1,<p></p>
-txvalidesc_1, and txreadyesc_1 are all active on the same<p></p>
-rising edge of txclkesc.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5">DSIHOST_DPHYTX0_DPHY_CTL5</a></p>
-</td>
-<td><p>32'h00008028</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txblaneclkSel">txblaneclkSel</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txskewcalhsBIU">txskewcalhsBIU</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Deskew Calibration.<p></p>
-When txskewcalhs is sampled high by txbyteclkhs, the lane module<p></p>
-initiates a deskew sequence. When txskewcalhs is de-asserted<p></p>
-data lanes stops sending deskew pattern, and the lane modules<p></p>
-initiates an End-of-Transmission (EOT) sequence.</p>
-</td>
-</tr>
-<tr><td><p>[2:2]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txrequestdatahs_0">txrequestdatahs_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Request And Data Valid Signal<p></p>
-When txrequesths_0 is sampled high by txbyteclkhs, the lane<p></p>
-module initiates a Start-of-Transmission (SOT) sequence. When<p></p>
-txrequesths_0 is sampled low while txreadyhs_0 is asserted, the<p></p>
-lane module initiates an End-of-Transmission (EOT) sequence. A<p></p>
-TX HS request is not allowed if the add-on PLL is not enabled<p></p>
-and locked.</p>
-</td>
-</tr>
-<tr><td><p>[3:3]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txrequestdatahs_1">txrequestdatahs_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Request And Data Valid Signal<p></p>
-When txrequesths_1 is sampled high by txbyteclkhs, the lane<p></p>
-module initiates a Start-of-Transmission (SOT) sequence. When<p></p>
-txrequesths_1 is sampled low while txreadyhs_1 is asserted, the<p></p>
-lane module initiates an End-of-Transmission (EOT) sequence. A<p></p>
-TX HS request is not allowed if the add-on PLL is not enabled<p></p>
-and locked.</p>
-</td>
-</tr>
-<tr><td><p>[4:4]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txrequestdatahs_2">txrequestdatahs_2</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Request And Data Valid Signal<p></p>
-When txrequesths_2 is sampled high by txbyteclkhs, the lane<p></p>
-module initiates a Start-of-Transmission (SOT) sequence. When<p></p>
-txrequesths_2 is sampled low while txreadyhs_2 is asserted, the<p></p>
-lane module initiates an End-of-Transmission (EOT) sequence. A<p></p>
-TX HS request is not allowed if the add-on PLL is not enabled<p></p>
-and locked.</p>
-</td>
-</tr>
-<tr><td><p>[5:5]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txrequestdatahs_3">txrequestdatahs_3</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Request And Data Valid Signal<p></p>
-When txrequesths_3 is sampled high by txbyteclkhs, the lane<p></p>
-module initiates a Start-of-Transmission (SOT) sequence. When<p></p>
-txrequesths_3 is sampled low while txreadyhs_3 is asserted, the<p></p>
-lane module initiates an End-of-Transmission (EOT) sequence. A<p></p>
-TX HS request is not allowed if the add-on PLL is not enabled<p></p>
-and locked.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL6">DSIHOST_DPHYTX0_DPHY_CTL6</a></p>
-</td>
-<td><p>32'h0000802C</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[7:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL6_txdatahs_0">txdatahs_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Data<p></p>
-This is an 8-bit data bus input that receives data to be<p></p>
-transmitted.<p></p>
-txdatahs_0[0] is transmitted first. The txdatahs_0 signal is<p></p>
-synchronous to the rising edge of txbyteclkhs.</p>
-</td>
-</tr>
-<tr><td><p>[15:8]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL6_txdatahs_1">txdatahs_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Data<p></p>
-This is an 8-bit data bus input that receives data to be<p></p>
-transmitted.<p></p>
-txdatahs_1[0] is transmitted first. The txdatahs_1 signal is<p></p>
-synchronous to the rising edge of txbyteclkhs.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0">DSIHOST_DPHYTX0_DPHY_RB0</a></p>
-</td>
-<td><p>32'h00008030</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[6:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_cont_data">cont_data</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Each pin of this output bus is used to verify the continuity<p></p>
-from the chips pin all the way to the PHY’s analog ports<p></p>
-(package, bonding, die, etc). Please refer to the test modes<p></p>
-section for more information.<p></p>
-■ cont_data[0]: rext<p></p>
-■ cont_data[1]: clkn<p></p>
-■ cont_data[2]: clkp<p></p>
-■ cont_data[3]: datan0<p></p>
-■ cont_data[4]: datap0<p></p>
-■ cont_data[5]: datan1<p></p>
-■ cont_data[6]: datap1</p>
-</td>
-</tr>
-<tr><td><p>[7:7]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_lock">lock</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>PLL Lock Signal<p></p>
-When set, it signals that the PLL acquired lock with input<p></p>
-refclk.<p></p>
-This signal can be overridden through D-PHY test control<p></p>
-registers.</p>
-</td>
-</tr>
-<tr><td><p>[8:8]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_stopstateclk">stopstateclk</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Clock Lane in Stop State<p></p>
-This signal indicates that the clock lane module is in Stop<p></p>
-state.</p>
-</td>
-</tr>
-<tr><td><p>[9:9]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_ulpsactivenotclk">ulpsactivenotclk</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>This signal is asserted to cause the clock lane module to<p></p>
-transmit the Ultra Low Power (ULP) exit sequence and return to<p></p>
-the Stop state. This signal is clocked by txclkesc. While<p></p>
-txclkesc can be gated during ULP state, it must be reactivated<p></p>
-so that the txulpsexitclk command can be processed.Between the<p></p>
-assertion of txulpsexitclk and<p></p>
-ulpsactivenotclk there is a latency not higher than 55us for the<p></p>
-default configurations.</p>
-</td>
-</tr>
-<tr><td><p>[10:10]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_stopstatedata_0">stopstatedata_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Data Lane in Stop State<p></p>
-This signal indicates that the lane module is in Stop state.<p></p>
-This is valid for both TX and RX applications. This signal is<p></p>
-asynchronous to any clock in the PPI.<p></p>
-Note: If the application requires multi-lane synchronization,<p></p>
-the lanes must be kept in the Stop state during 67-byte clock<p></p>
-cycles; this occurs after the stopstate_0 signals are observed<p></p>
-in the PPI. Only then is a new burst request issued in the<p></p>
-lanes. If dead time between packets is a bottleneck, see table<p></p>
-“High-Speed Transition Times”, column High-Speed<p></p>
-Exit“HS- >LP” on page 397</p>
-</td>
-</tr>
-<tr><td><p>[11:11]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_stopstatedata_1">stopstatedata_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Data Lane in Stop State<p></p>
-This signal indicates that the lane module is in Stop state.<p></p>
-This is valid for both TX and RX applications. This signal is<p></p>
-asynchronous to any clock in the PPI.<p></p>
-Note: If the application requires multi-lane synchronization,<p></p>
-the lanes must be kept in the Stop state during 67-byte clock<p></p>
-cycles; this occurs after the stopstate_1 signals are observed<p></p>
-in the PPI. Only then is a new burst request issued in the<p></p>
-lanes. If dead time between packets is a bottleneck, see table<p></p>
-“High-Speed Transition Times”, column High-Speed<p></p>
-Exit“HS- >LP” on page 397</p>
-</td>
-</tr>
-<tr><td><p>[12:12]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_ulpsactivenot_0">ulpsactivenot_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>This signal indicates that the lane is in the Ultra Low Power<p></p>
-(ULP) state. For a TX lane, this signal is asserted (driven<p></p>
-low) some time after txulpsesc_0 and txrequestesc_0 are<p></p>
-asserted. txclkesc must be supplied to the PHY until<p></p>
-ulpsactivenot_0 is asserted. In order to leave the ULP state,<p></p>
-the transmitter first drives txulpsexit_0 high, then waits for<p></p>
-ulpsactivenot_0 to become high (inactive). At that point, the<p></p>
-PHY is active and transmits a Mark-1 on the Lines. The protocol<p></p>
-waits for a time Twakeup and then drives txrequestesc_0 inactive<p></p>
-to return the lane to Stop state.<p></p>
-For a RX lane, this signal indicates that the lane is in the ULP<p></p>
-state. At the beginning of ULP state, ulpsactivenot_0 is<p></p>
-asserted (driven low); at the end of the ULP state, this signal<p></p>
-becomes inactive to indicate that the Mark-1 state has been<p></p>
-observed. Later, after a period of time Twakeup, the<p></p>
-rxulpsesc_0 signal is de-asserted (driven high).</p>
-</td>
-</tr>
-<tr><td><p>[13:13]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_ulpsactivenot_1">ulpsactivenot_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>This signal indicates that the lane is in the Ultra Low Power<p></p>
-(ULP) state. For a TX lane, this signal is asserted (driven<p></p>
-low) some time after txulpsesc_1 and txrequestesc_1 are<p></p>
-asserted. txclkesc must be supplied to the PHY until<p></p>
-ulpsactivenot_1 is asserted. In order to leave the ULP state,<p></p>
-the transmitter first drives txulpsexit_1 high, then waits for<p></p>
-ulpsactivenot_1 to become high (inactive). At that point, the<p></p>
-PHY is active and transmits a Mark-1 on the Lines. The protocol<p></p>
-waits for a time Twakeup and then drives txrequestesc_1 inactive<p></p>
-to return the lane to Stop state.<p></p>
-For a RX lane, this signal indicates that the lane is in the ULP<p></p>
-state. At the beginning of ULP state, ulpsactivenot_1 is<p></p>
-asserted (driven low); at the end of the ULP state, this signal<p></p>
-becomes inactive to indicate that the Mark-1 state has been<p></p>
-observed. Later, after a period of time Twakeup, the<p></p>
-rxulpsesc_1 signal is de-asserted (driven high).</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB1">DSIHOST_DPHYTX0_DPHY_RB1</a></p>
-</td>
-<td><p>32'h00008034</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB1_txreadyhs_0">txreadyhs_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Ready<p></p>
-This signal indicates that txdatahs_0 is accepted by the lane<p></p>
-module to be serially transmitted. txreadyhs_0 and the other<p></p>
-PPI high-speed data TX signals are synchronous with the rising<p></p>
-edge of txbyteclkhs.</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB1_txreadyhs_1">txreadyhs_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Ready<p></p>
-This signal indicates that txdatahs_1 is accepted by the lane<p></p>
-module to be serially transmitted. txreadyhs_1 and the other<p></p>
-PPI high-speed data TX signals are synchronous with the rising<p></p>
-edge of txbyteclkhs.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2">DSIHOST_DPHYTX0_DPHY_RB2</a></p>
-</td>
-<td><p>32'h00008038</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_txreadyesc_0">txreadyesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Ready This signal indicates that the data<p></p>
-is accepted by the lane module to be serially transmitted.<p></p>
-txreadyesc_0 is synchronous with the rising edge of txclkesc.</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_txreadyesc_1">txreadyesc_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Ready This signal indicates that the data<p></p>
-is accepted by the lane module to be serially transmitted.<p></p>
-txreadyesc_1 is synchronous with the rising edge of txclkesc.</p>
-</td>
-</tr>
-<tr><td><p>[2:2]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_errcontrol_0">errcontrol_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Control Error<p></p>
-This signal is asserted when an incorrect line state sequence is<p></p>
-detected (for example, if a turnaround request or Escape mode<p></p>
-request is immediately followed by a Stop state instead of the<p></p>
-required Bridge state, this signal is asserted and remains high<p></p>
-until the line returns to Stop state).</p>
-</td>
-</tr>
-<tr><td><p>[3:3]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_errcontentionlp0_0">errcontentionlp0_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>LP0 Contention Error<p></p>
-This signal is asserted when a lane module functioning as TX,<p></p>
-while its base direction is RX detects a contention situation<p></p>
-on a line while trying to drive the line low.</p>
-</td>
-</tr>
-<tr><td><p>[4:4]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_errcontentionlp1_0">errcontentionlp1_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>LP1 Contention Error<p></p>
-This signal is asserted when a lane module functioning as TX,<p></p>
-while its base direction is RX detects a contention situation<p></p>
-on a line while trying to drive the line high.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3">DSIHOST_DPHYTX0_DPHY_RB3</a></p>
-</td>
-<td><p>32'h0000803C</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[7:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxdataesc_0">rxdataesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Receive Data Bus<p></p>
-This is the 8-bit bus data output received by the lane<p></p>
-interconnect. The signal rxdataesc_0[0] is received first. Data<p></p>
-is transferred on the rising edges of rxclkesc_0.</p>
-</td>
-</tr>
-<tr><td><p>[11:8]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxtriggeresc_0">rxtriggeresc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Receive Trigger 0-3<p></p>
-This signal indicates that a trigger event has been received in<p></p>
-the lane interconnect. The asserted rxtriggeresc_0 signal<p></p>
-remains active until a Stop state is detected on the lane<p></p>
-interconnect.<p></p>
-■ rxtriggeresc_0[0] corresponds to Reset-Trigger.<p></p>
-■ rxtriggeresc_0[1] corresponds to Unknown-3 Trigger.<p></p>
-■ rxtriggeresc_0[2] corresponds to Unknown-4 Trigger.<p></p>
-■ rxtriggeresc_0[3] corresponds to Unknown-5 Trigger</p>
-</td>
-</tr>
-<tr><td><p>[12:12]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxlpdtesc_0">rxlpdtesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Low-Power Data Receive Mode<p></p>
-This signal is asserted to indicate that the lane module is in<p></p>
-low-power data receive mode. While in this mode, received data<p></p>
-is driven onto rxdataesc_0 output bus when rxvalidesc 0 is<p></p>
-active. rxlpdtesc_0 remains asserted until a Stop state is<p></p>
-detected on the lane interconnect.</p>
-</td>
-</tr>
-<tr><td><p>[13:13]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxulpsesc_0">rxulpsesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape ULP Receive Mode<p></p>
-This signal is asserted to indicate that the lane module has<p></p>
-entered the ULP State. The lane module remains in this mode<p></p>
-with rxulpsesc_0 asserted until a Stop state is detected on the<p></p>
-lane interconnect.</p>
-</td>
-</tr>
-<tr><td><p>[14:14]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxvalidesc_0">rxvalidesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Receive Data Valid<p></p>
-This signal indicates that the lane module is driving valid data<p></p>
-to the protocol layer on the rxdataesc_0 bus.<p></p>
-Note: There is no separate signal to indicate that the data is<p></p>
-ready for process. The protocol layer is expected to process<p></p>
-the received data on every rising edge of the rxclkesc_0 where<p></p>
-rxvalidesc_0 is asserted.<p></p>
-There is no provision in the PHY to slow down or throttle the<p></p>
-received data.</p>
-</td>
-</tr>
-<tr><td><p>[15:15]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_direction_0">direction_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Transmit/Receive Direction<p></p>
-This signal is used to indicate the current direction of the<p></p>
-lane interconnect. When direction_0 is low, the lane<p></p>
-interconnect is in transmit mode. When direction_0 is high, the<p></p>
-lane interconnect is in receive mode.</p>
-</td>
-</tr>
-<tr><td><p>[16:16]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_erresc_0">erresc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Entry Error<p></p>
-If an unrecognized escape entry command is received, this signal<p></p>
-is asserted and remains high until the line returns to Stop<p></p>
-state.</p>
-</td>
-</tr>
-<tr><td><p>[17:17]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_errsyncesc_0">errsyncesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Low-Power Data Transmission Synchronization Error<p></p>
-If the number of bits received during low-power data<p></p>
-transmission mode is not a multiple of eight when the<p></p>
-transmission ends, this signal is asserted and remains high<p></p>
-until the line returns to Stop state.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL0">DSIHOST_DPHYTX1_DPHY_CTL0</a></p>
-</td>
-<td><p>32'h00008040</p>
-</td>
-<td><p>Control and status registers for DPHYTX1</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL0_BiuCtrlPhyEn">BiuCtrlPhyEn</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Enable Biu Control DPHY register.</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL0_tx_iso18_en">tx_iso18_en</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>1b'0 - non isolation operating mode<p></p>
-1b'1 (1.8V) the PHY will power down the 1.8V domain.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1">DSIHOST_DPHYTX1_DPHY_CTL1</a></p>
-</td>
-<td><p>32'h00008044</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_shutdownz">shutdownz</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Shutdown Input<p></p>
-This line is used to place the PHY in shutdown. All analog<p></p>
-blocks are in shutdown mode and the digital logic is reset.<p></p>
-Active state: Low</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_rstz">rstz</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Reset Input<p></p>
-This line is used to place the digital section of the PHY in<p></p>
-reset state.<p></p>
-Active state: Low</p>
-</td>
-</tr>
-<tr><td><p>[2:2]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_forcepll">forcepll</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>By default, the PLL clock multiplier is switched off during<p></p>
-shutdown and ULP operation if all lanes are in ULPS. If the PLL<p></p>
-functionality is required from system perspective in any of<p></p>
-these conditions, forcepll can be kept asserted maintaining the<p></p>
-PLL active at all times, regardless of other configurations or<p></p>
-states.<p></p>
-forcepll signal cannot be used to power-up the PLL independent<p></p>
-of the PHY state.</p>
-</td>
-</tr>
-<tr><td><p>[3:3]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_txrequesthsclk">txrequesthsclk</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Clock Request Signal<p></p>
-This signal causes the clock lane to start transmitting DDR<p></p>
-clock on the lane interconnect. A TX HS request is not allowed<p></p>
-if the add-on PLL is not enabled and locked.</p>
-</td>
-</tr>
-<tr><td><p>[4:4]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_enableclkBIU">enableclkBIU</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Enable Clock Lane Module<p></p>
-All lane drivers and terminations are turned off when enableclk<p></p>
-is low. In addition, all other lane PPI inputs are ignored and<p></p>
-all lane PPI outputs are driven to the default values.<p></p>
-enableclk is level sensitive and asynchronous.<p></p>
-It is not allowed for this signal to be changed during<p></p>
-operation. It should be set with PHY in power-down.</p>
-</td>
-</tr>
-<tr><td><p>[5:5]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_turndisable_0">turndisable_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Disable Turn Around<p></p>
-This signal is used to prevent the bi-directional lane from<p></p>
-processing a turn-around request in the lane interconnection.<p></p>
-Note: This is useful to prevent a potential “lock-up” situation<p></p>
-when a unidirectional lane module is connected to a<p></p>
-bi-directional lane module.</p>
-</td>
-</tr>
-<tr><td><p>[6:6]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_forcerxmode_0">forcerxmode_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Force Lane Module into Receive Mode/Wait for Stop State This<p></p>
-signal allows the protocol layer to initialize a lane module or<p></p>
-force a bi-directional lane module into receive mode. This<p></p>
-signal is used to solve a contention situation. When this<p></p>
-signal is high, the lane module immediately transitions into<p></p>
-receive control mode and waits for a Stop state to appear on<p></p>
-the Lane interconnect.</p>
-</td>
-</tr>
-<tr><td><p>[7:7]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_basedir_0">basedir_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Function: Configures the Base Direction for Lane<p></p>
-■ basedir_0 = 1: Configures lane as RX upon startup of the PHY<p></p>
-■ basedir_0 = 0: Configures lane as TX</p>
-</td>
-</tr>
-<tr><td><p>[8:8]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_forcetxstopmode_0">forcetxstopmode_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Force Lane Module into Transmit Mode and Generate Stop State<p></p>
-This signal allows the protocol layer to force a bi-directional<p></p>
-lane module into transmit mode and Stop state following an<p></p>
-error indication (for example, Expired Timeout). When this<p></p>
-signal is high, the lane module immediately transitions into<p></p>
-transmit mode and the module state machine is forced into the<p></p>
-Stop state.</p>
-</td>
-</tr>
-<tr><td><p>[9:9]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_forcetxstopmode_1">forcetxstopmode_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Force Lane Module into Transmit Mode and Generate Stop State<p></p>
-This signal allows the protocol layer to force a bi-directional<p></p>
-lane module into transmit mode and Stop state following an<p></p>
-error indication (for example, Expired Timeout). When this<p></p>
-signal is high, the lane module immediately transitions into<p></p>
-transmit mode and the module state machine is forced into the<p></p>
-Stop state.</p>
-</td>
-</tr>
-<tr><td><p>[10:10]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_enable_0">enable_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Enable Lane 0<p></p>
-All lane drivers, receivers, terminations, and contention<p></p>
-detectors are turned off when enable_0 is low. In addition, all<p></p>
-other lane PPI inputs are ignored and all lane PPI outputs are<p></p>
-driven to the default values.<p></p>
-enable_0 is level sensitive and asynchronous. It is not allowed<p></p>
-for this signal to be changed during operation. It should be<p></p>
-set with PHY in power-down.</p>
-</td>
-</tr>
-<tr><td><p>[11:11]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_enable_1">enable_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Enable Lane 1<p></p>
-All lane drivers, receivers, terminations, and contention<p></p>
-detectors are turned off when enable_1 is low. In addition, all<p></p>
-other lane PPI inputs are ignored and all lane PPI outputs are<p></p>
-driven to the default values.<p></p>
-enable_1 is level sensitive and asynchronous. It is not allowed<p></p>
-for this signal to be changed during operation. It should be<p></p>
-set with PHY in power-down.</p>
-</td>
-</tr>
-<tr><td><p>[18:12]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_hsfreqrange">hsfreqrange</a></p>
-</td>
-<td><p>0x49</p>
-</td>
-<td><p>High-speed Frequency Range Selection. Refer to Table 5-6 on page<p></p>
-123 for Operating Frequency Range selection and default values.<p></p>
-This signal should be set with the D-PHY in power-down and must<p></p>
-not change during operation.<p></p>
-This signal can be overridden through D-PHY test control<p></p>
-registers.</p>
-</td>
-</tr>
-<tr><td><p>[19:19]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_cont_en">cont_en</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>This signal places the macro in IO continuity test mode. All<p></p>
-other interface signals should be placed in their default<p></p>
-values.<p></p>
-Active state: high</p>
-</td>
-</tr>
-<tr><td><p>[25:20]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_cfgclkfreqrange">cfgclkfreqrange</a></p>
-</td>
-<td><p>0x20</p>
-</td>
-<td><p>System clock frequency configuration preset. Should be<p></p>
-set according to the following equation:<p></p>
-cfgclkfreqrange[5:0] = round[ (Fcfg_clk(MHz)-17)*4]</p>
-</td>
-</tr>
-<tr><td><p>[26:26]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_biston">biston</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Starts the pattern generator.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL2">DSIHOST_DPHYTX1_DPHY_CTL2</a></p>
-</td>
-<td><p>32'h00008048</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL2_txulpsclkBIU">txulpsclkBIU</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Transmit Ultra Low Power on Clock Lane<p></p>
-This signal is asserted to cause the clock lane module to enter<p></p>
-the Ultra Low Power state. The lane module remains in this mode<p></p>
-until the txulpsexitclk signal is asserted. This signal is<p></p>
-clocked by txclkesc.</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL2_txulpsexitclk">txulpsexitclk</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>This signal is asserted to cause the clock lane module to<p></p>
-transmit the Ultra Low Power (ULP) exit sequence and return to<p></p>
-the Stop state. This signal is clocked by txclkesc. While<p></p>
-txclkesc can be gated during ULP state, it must be reactivated<p></p>
-so that the txulpsexitclk command can be processed.Between the<p></p>
-assertion of txulpsexitclk and<p></p>
-ulpsactivenotclk there is a latency not higher than 55us for the<p></p>
-default configurations.</p>
-</td>
-</tr>
-<tr><td><p>[2:2]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL2_turnrequest_0">turnrequest_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Turn around Request<p></p>
-This signal is used to indicate that the protocol layer needs to<p></p>
-turn the lane around, allowing for the other side to start<p></p>
-transmitting the data.<p></p>
-turnrequest_0 is valid on the rising edges of txclkesc.<p></p>
-Note: turnrequest_0 is only meaningful for a lane that is<p></p>
-currently transmitting data (direction_0 = 0). If the data lane<p></p>
-module is in receive mode (direction_0 =1), this signal is<p></p>
-ignored.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3">DSIHOST_DPHYTX1_DPHY_CTL3</a></p>
-</td>
-<td><p>32'h0000804C</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[7:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txdataesc_0">txdataesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Data Bus<p></p>
-This is the 8-bit bus data input to be transmitted in low-power<p></p>
-data transmission mode. The LSB is transmitted first.<p></p>
-txdataesc_0 is synchronous with the rising edge of txclkesc.</p>
-</td>
-</tr>
-<tr><td><p>[11:8]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txtriggeresc_0">txtriggeresc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Trigger 0-3<p></p>
-One of these signals is asserted with txrequestesc_0 to cause<p></p>
-the lane module to send the associated trigger across the lane<p></p>
-interconnection.<p></p>
-txtriggeresc_0 is synchronous with the rising edge of<p></p>
-txclkesc_0.<p></p>
-Note: Only one of the txtriggeresc_0 is asserted at any given<p></p>
-time, and only when txlpdtesc_0 and txulpsesc_0 are both at low<p></p>
-level.<p></p>
-■ txtriggeresc_0[0] corresponds to Reset-Trigger.<p></p>
-■ txtriggeresc_0[1] corresponds to Unknown-3 Trigger.<p></p>
-■ txtriggeresc_0[2] corresponds to Unknown-4 Trigger.<p></p>
-■ txtriggeresc_0[3] corresponds to Unknown-5 Trigger.</p>
-</td>
-</tr>
-<tr><td><p>[12:12]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txrequestesc_0">txrequestesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Request<p></p>
-This signal together with txlpdtesc_0, txulpsesc_0, and<p></p>
-txtriggeresc_0[3:0] is used to request the entry into any Escape<p></p>
-mode.<p></p>
-Once in Escape mode, the lane stays in Escape mode until<p></p>
-txrequestesc_0 is un-asserted.<p></p>
-Note: It can only be asserted by the protocol layer while<p></p>
-txrequestdatahs_0 is at low level.</p>
-</td>
-</tr>
-<tr><td><p>[13:13]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txlpdtesc_0">txlpdtesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Low-Power Data<p></p>
-This signal is asserted with txrequestesc_0 to cause the lane<p></p>
-module to enter low-power data transmission mode. The lane<p></p>
-module remains in this mode until txrequestesc_0 is<p></p>
-de-asserted.<p></p>
-Note: txulpsesc_0 and all the bits of txtriggeresc_0 must be at<p></p>
-low level when txlpdtesc_0 is at high level.</p>
-</td>
-</tr>
-<tr><td><p>[14:14]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txulpsesc_0">txulpsesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit ULP<p></p>
-This signal is asserted with txrequestesc_0 to cause the lane<p></p>
-module to enter the ULP State. The lane module remains in this<p></p>
-state until txulpsexit_0 is asserted and txrequestesc_0 is<p></p>
-de-asserted.<p></p>
-Note: txlpdtesc_0 and all bits of txtriggeresc_0 must be at low<p></p>
-level when txulpsesc_0 is at high level.</p>
-</td>
-</tr>
-<tr><td><p>[15:15]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txulpsexit_0">txulpsexit_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Initiate the transmission of the ULP exit sequence.<p></p>
-If this signal is asserted while the lane is in ULP state, the<p></p>
-PHY leaves the ULP state and begins driving a Mark-1 symbol on<p></p>
-the line interconnect.<p></p>
-Afterwards, upon de-assertion of txrequestesc_0, the PHY drives<p></p>
-the LP-11 Stop state. Between the assertion of txulpsexit_0 and<p></p>
-ulpsactivenotclk there is a latency not higher than 55us for the<p></p>
-default configurations<p></p>
-Note: This signal is ignored when the PHY is not in the ULP<p></p>
-state.</p>
-</td>
-</tr>
-<tr><td><p>[16:16]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txvalidesc_0">txvalidesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Data Valid<p></p>
-This signal indicates that the protocol layer is driving valid<p></p>
-data on txdataesc_0 bus, to be transmitted.<p></p>
-Note: The lane module accepts the data when txrequestesc_0,<p></p>
-txvalidesc_0, and txreadyesc_0 are all active on the same<p></p>
-rising edge of txclkesc.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4">DSIHOST_DPHYTX1_DPHY_CTL4</a></p>
-</td>
-<td><p>32'h00008050</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[7:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txdataesc_1">txdataesc_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Data Bus<p></p>
-This is the 8-bit bus data input to be transmitted in low-power<p></p>
-data transmission mode. The LSB is transmitted first.<p></p>
-txdataesc_1 is synchronous with the rising edge of txclkesc.</p>
-</td>
-</tr>
-<tr><td><p>[11:8]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txtriggeresc_1">txtriggeresc_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Trigger 0-3<p></p>
-One of these signals is asserted with txrequestesc_1 to cause<p></p>
-the lane module to send the associated trigger across the lane<p></p>
-interconnection.<p></p>
-txtriggeresc_1 is synchronous with the rising edge of<p></p>
-txclkesc_1.<p></p>
-Note: Only one of the txtriggeresc_1 is asserted at any given<p></p>
-time, and only when txlpdtesc_1 and txulpsesc_1 are both at low<p></p>
-level.<p></p>
-■ txtriggeresc_1[0] corresponds to Reset-Trigger.<p></p>
-■ txtriggeresc_1[1] corresponds to Unknown-3 Trigger.<p></p>
-■ txtriggeresc_1[2] corresponds to Unknown-4 Trigger.<p></p>
-■ txtriggeresc_1[3] corresponds to Unknown-5 Trigger.</p>
-</td>
-</tr>
-<tr><td><p>[12:12]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txrequestesc_1">txrequestesc_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Request<p></p>
-This signal together with txlpdtesc_1, txulpsesc_1, and<p></p>
-txtriggeresc_1[3:0] is used to request the entry into any Escape<p></p>
-mode.<p></p>
-Once in Escape mode, the lane stays in Escape mode until<p></p>
-txrequestesc_1 is un-asserted.<p></p>
-Note: It can only be asserted by the protocol layer while<p></p>
-txrequestdatahs_1 is at low level.</p>
-</td>
-</tr>
-<tr><td><p>[13:13]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txlpdtesc_1">txlpdtesc_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Low-Power Data<p></p>
-This signal is asserted with txrequestesc_1 to cause the lane<p></p>
-module to enter low-power data transmission mode. The lane<p></p>
-module remains in this mode until txrequestesc_1 is<p></p>
-de-asserted.<p></p>
-Note: txulpsesc_1 and all the bits of txtriggeresc_1 must be at<p></p>
-low level when txlpdtesc_1 is at high level.</p>
-</td>
-</tr>
-<tr><td><p>[14:14]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txulpsesc_1">txulpsesc_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit ULP<p></p>
-This signal is asserted with txrequestesc_1 to cause the lane<p></p>
-module to enter the ULP State. The lane module remains in this<p></p>
-state until txulpsexit_1 is asserted and txrequestesc_1 is<p></p>
-de-asserted.<p></p>
-Note: txlpdtesc_1 and all bits of txtriggeresc_1 must be at low<p></p>
-level when txulpsesc_1 is at high level.</p>
-</td>
-</tr>
-<tr><td><p>[15:15]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txulpsexit_1">txulpsexit_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Initiate the transmission of the ULP exit sequence.<p></p>
-If this signal is asserted while the lane is in ULP state, the<p></p>
-PHY leaves the ULP state and begins driving a Mark-1 symbol on<p></p>
-the line interconnect.<p></p>
-Afterwards, upon de-assertion of txrequestesc_1, the PHY drives<p></p>
-the LP-11 Stop state. Between the assertion of txulpsexit_1 and<p></p>
-ulpsactivenotclk there is a latency not higher than 55us for the<p></p>
-default configurations<p></p>
-Note: This signal is ignored when the PHY is not in the ULP<p></p>
-state.</p>
-</td>
-</tr>
-<tr><td><p>[16:16]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txvalidesc_1">txvalidesc_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Data Valid<p></p>
-This signal indicates that the protocol layer is driving valid<p></p>
-data on txdataesc_1 bus, to be transmitted.<p></p>
-Note: The lane module accepts the data when txrequestesc_1,<p></p>
-txvalidesc_1, and txreadyesc_1 are all active on the same<p></p>
-rising edge of txclkesc.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5">DSIHOST_DPHYTX1_DPHY_CTL5</a></p>
-</td>
-<td><p>32'h00008054</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txblaneclkSel">txblaneclkSel</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txskewcalhsBIU">txskewcalhsBIU</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Deskew Calibration.<p></p>
-When txskewcalhs is sampled high by txbyteclkhs, the lane module<p></p>
-initiates a deskew sequence. When txskewcalhs is de-asserted<p></p>
-data lanes stops sending deskew pattern, and the lane modules<p></p>
-initiates an End-of-Transmission (EOT) sequence.</p>
-</td>
-</tr>
-<tr><td><p>[2:2]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txrequestdatahs_0">txrequestdatahs_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Request And Data Valid Signal<p></p>
-When txrequesths_0 is sampled high by txbyteclkhs, the lane<p></p>
-module initiates a Start-of-Transmission (SOT) sequence. When<p></p>
-txrequesths_0 is sampled low while txreadyhs_0 is asserted, the<p></p>
-lane module initiates an End-of-Transmission (EOT) sequence. A<p></p>
-TX HS request is not allowed if the add-on PLL is not enabled<p></p>
-and locked.</p>
-</td>
-</tr>
-<tr><td><p>[3:3]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txrequestdatahs_1">txrequestdatahs_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Request And Data Valid Signal<p></p>
-When txrequesths_1 is sampled high by txbyteclkhs, the lane<p></p>
-module initiates a Start-of-Transmission (SOT) sequence. When<p></p>
-txrequesths_1 is sampled low while txreadyhs_1 is asserted, the<p></p>
-lane module initiates an End-of-Transmission (EOT) sequence. A<p></p>
-TX HS request is not allowed if the add-on PLL is not enabled<p></p>
-and locked.</p>
-</td>
-</tr>
-<tr><td><p>[4:4]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txrequestdatahs_2">txrequestdatahs_2</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Request And Data Valid Signal<p></p>
-When txrequesths_2 is sampled high by txbyteclkhs, the lane<p></p>
-module initiates a Start-of-Transmission (SOT) sequence. When<p></p>
-txrequesths_2 is sampled low while txreadyhs_2 is asserted, the<p></p>
-lane module initiates an End-of-Transmission (EOT) sequence. A<p></p>
-TX HS request is not allowed if the add-on PLL is not enabled<p></p>
-and locked.</p>
-</td>
-</tr>
-<tr><td><p>[5:5]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txrequestdatahs_3">txrequestdatahs_3</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Request And Data Valid Signal<p></p>
-When txrequesths_3 is sampled high by txbyteclkhs, the lane<p></p>
-module initiates a Start-of-Transmission (SOT) sequence. When<p></p>
-txrequesths_3 is sampled low while txreadyhs_3 is asserted, the<p></p>
-lane module initiates an End-of-Transmission (EOT) sequence. A<p></p>
-TX HS request is not allowed if the add-on PLL is not enabled<p></p>
-and locked.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL6">DSIHOST_DPHYTX1_DPHY_CTL6</a></p>
-</td>
-<td><p>32'h00008058</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[7:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL6_txdatahs_0">txdatahs_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Data<p></p>
-This is an 8-bit data bus input that receives data to be<p></p>
-transmitted.<p></p>
-txdatahs_0[0] is transmitted first. The txdatahs_0 signal is<p></p>
-synchronous to the rising edge of txbyteclkhs.</p>
-</td>
-</tr>
-<tr><td><p>[15:8]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL6_txdatahs_1">txdatahs_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Data<p></p>
-This is an 8-bit data bus input that receives data to be<p></p>
-transmitted.<p></p>
-txdatahs_1[0] is transmitted first. The txdatahs_1 signal is<p></p>
-synchronous to the rising edge of txbyteclkhs.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0">DSIHOST_DPHYTX1_DPHY_RB0</a></p>
-</td>
-<td><p>32'h0000805C</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[6:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_cont_data">cont_data</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Each pin of this output bus is used to verify the continuity<p></p>
-from the chips pin all the way to the PHY’s analog ports<p></p>
-(package, bonding, die, etc). Please refer to the test modes<p></p>
-section for more information.<p></p>
-■ cont_data[0]: rext<p></p>
-■ cont_data[1]: clkn<p></p>
-■ cont_data[2]: clkp<p></p>
-■ cont_data[3]: datan0<p></p>
-■ cont_data[4]: datap0<p></p>
-■ cont_data[5]: datan1<p></p>
-■ cont_data[6]: datap1</p>
-</td>
-</tr>
-<tr><td><p>[7:7]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_lock">lock</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>PLL Lock Signal<p></p>
-When set, it signals that the PLL acquired lock with input<p></p>
-refclk.<p></p>
-This signal can be overridden through D-PHY test control<p></p>
-registers.</p>
-</td>
-</tr>
-<tr><td><p>[8:8]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_stopstateclk">stopstateclk</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Clock Lane in Stop State<p></p>
-This signal indicates that the clock lane module is in Stop<p></p>
-state.</p>
-</td>
-</tr>
-<tr><td><p>[9:9]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_ulpsactivenotclk">ulpsactivenotclk</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>This signal is asserted to cause the clock lane module to<p></p>
-transmit the Ultra Low Power (ULP) exit sequence and return to<p></p>
-the Stop state. This signal is clocked by txclkesc. While<p></p>
-txclkesc can be gated during ULP state, it must be reactivated<p></p>
-so that the txulpsexitclk command can be processed.Between the<p></p>
-assertion of txulpsexitclk and<p></p>
-ulpsactivenotclk there is a latency not higher than 55us for the<p></p>
-default configurations.</p>
-</td>
-</tr>
-<tr><td><p>[10:10]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_stopstatedata_0">stopstatedata_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Data Lane in Stop State<p></p>
-This signal indicates that the lane module is in Stop state.<p></p>
-This is valid for both TX and RX applications. This signal is<p></p>
-asynchronous to any clock in the PPI.<p></p>
-Note: If the application requires multi-lane synchronization,<p></p>
-the lanes must be kept in the Stop state during 67-byte clock<p></p>
-cycles; this occurs after the stopstate_0 signals are observed<p></p>
-in the PPI. Only then is a new burst request issued in the<p></p>
-lanes. If dead time between packets is a bottleneck, see table<p></p>
-“High-Speed Transition Times”, column High-Speed<p></p>
-Exit“HS- >LP” on page 397</p>
-</td>
-</tr>
-<tr><td><p>[11:11]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_stopstatedata_1">stopstatedata_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Data Lane in Stop State<p></p>
-This signal indicates that the lane module is in Stop state.<p></p>
-This is valid for both TX and RX applications. This signal is<p></p>
-asynchronous to any clock in the PPI.<p></p>
-Note: If the application requires multi-lane synchronization,<p></p>
-the lanes must be kept in the Stop state during 67-byte clock<p></p>
-cycles; this occurs after the stopstate_1 signals are observed<p></p>
-in the PPI. Only then is a new burst request issued in the<p></p>
-lanes. If dead time between packets is a bottleneck, see table<p></p>
-“High-Speed Transition Times”, column High-Speed<p></p>
-Exit“HS- >LP” on page 397</p>
-</td>
-</tr>
-<tr><td><p>[12:12]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_ulpsactivenot_0">ulpsactivenot_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>This signal indicates that the lane is in the Ultra Low Power<p></p>
-(ULP) state. For a TX lane, this signal is asserted (driven<p></p>
-low) some time after txulpsesc_0 and txrequestesc_0 are<p></p>
-asserted. txclkesc must be supplied to the PHY until<p></p>
-ulpsactivenot_0 is asserted. In order to leave the ULP state,<p></p>
-the transmitter first drives txulpsexit_0 high, then waits for<p></p>
-ulpsactivenot_0 to become high (inactive). At that point, the<p></p>
-PHY is active and transmits a Mark-1 on the Lines. The protocol<p></p>
-waits for a time Twakeup and then drives txrequestesc_0 inactive<p></p>
-to return the lane to Stop state.<p></p>
-For a RX lane, this signal indicates that the lane is in the ULP<p></p>
-state. At the beginning of ULP state, ulpsactivenot_0 is<p></p>
-asserted (driven low); at the end of the ULP state, this signal<p></p>
-becomes inactive to indicate that the Mark-1 state has been<p></p>
-observed. Later, after a period of time Twakeup, the<p></p>
-rxulpsesc_0 signal is de-asserted (driven high).</p>
-</td>
-</tr>
-<tr><td><p>[13:13]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_ulpsactivenot_1">ulpsactivenot_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>This signal indicates that the lane is in the Ultra Low Power<p></p>
-(ULP) state. For a TX lane, this signal is asserted (driven<p></p>
-low) some time after txulpsesc_1 and txrequestesc_1 are<p></p>
-asserted. txclkesc must be supplied to the PHY until<p></p>
-ulpsactivenot_1 is asserted. In order to leave the ULP state,<p></p>
-the transmitter first drives txulpsexit_1 high, then waits for<p></p>
-ulpsactivenot_1 to become high (inactive). At that point, the<p></p>
-PHY is active and transmits a Mark-1 on the Lines. The protocol<p></p>
-waits for a time Twakeup and then drives txrequestesc_1 inactive<p></p>
-to return the lane to Stop state.<p></p>
-For a RX lane, this signal indicates that the lane is in the ULP<p></p>
-state. At the beginning of ULP state, ulpsactivenot_1 is<p></p>
-asserted (driven low); at the end of the ULP state, this signal<p></p>
-becomes inactive to indicate that the Mark-1 state has been<p></p>
-observed. Later, after a period of time Twakeup, the<p></p>
-rxulpsesc_1 signal is de-asserted (driven high).</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB1">DSIHOST_DPHYTX1_DPHY_RB1</a></p>
-</td>
-<td><p>32'h00008060</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB1_txreadyhs_0">txreadyhs_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Ready<p></p>
-This signal indicates that txdatahs_0 is accepted by the lane<p></p>
-module to be serially transmitted. txreadyhs_0 and the other<p></p>
-PPI high-speed data TX signals are synchronous with the rising<p></p>
-edge of txbyteclkhs.</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB1_txreadyhs_1">txreadyhs_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-Speed Transmit Ready<p></p>
-This signal indicates that txdatahs_1 is accepted by the lane<p></p>
-module to be serially transmitted. txreadyhs_1 and the other<p></p>
-PPI high-speed data TX signals are synchronous with the rising<p></p>
-edge of txbyteclkhs.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2">DSIHOST_DPHYTX1_DPHY_RB2</a></p>
-</td>
-<td><p>32'h00008064</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_txreadyesc_0">txreadyesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Ready This signal indicates that the data<p></p>
-is accepted by the lane module to be serially transmitted.<p></p>
-txreadyesc_0 is synchronous with the rising edge of txclkesc.</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_txreadyesc_1">txreadyesc_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Ready This signal indicates that the data<p></p>
-is accepted by the lane module to be serially transmitted.<p></p>
-txreadyesc_1 is synchronous with the rising edge of txclkesc.</p>
-</td>
-</tr>
-<tr><td><p>[2:2]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_errcontrol_0">errcontrol_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Control Error<p></p>
-This signal is asserted when an incorrect line state sequence is<p></p>
-detected (for example, if a turnaround request or Escape mode<p></p>
-request is immediately followed by a Stop state instead of the<p></p>
-required Bridge state, this signal is asserted and remains high<p></p>
-until the line returns to Stop state).</p>
-</td>
-</tr>
-<tr><td><p>[3:3]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_errcontentionlp0_0">errcontentionlp0_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>LP0 Contention Error<p></p>
-This signal is asserted when a lane module functioning as TX,<p></p>
-while its base direction is RX detects a contention situation<p></p>
-on a line while trying to drive the line low.</p>
-</td>
-</tr>
-<tr><td><p>[4:4]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_errcontentionlp1_0">errcontentionlp1_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>LP1 Contention Error<p></p>
-This signal is asserted when a lane module functioning as TX,<p></p>
-while its base direction is RX detects a contention situation<p></p>
-on a line while trying to drive the line high.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3">DSIHOST_DPHYTX1_DPHY_RB3</a></p>
-</td>
-<td><p>32'h00008068</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[7:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxdataesc_0">rxdataesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Receive Data Bus<p></p>
-This is the 8-bit bus data output received by the lane<p></p>
-interconnect. The signal rxdataesc_0[0] is received first. Data<p></p>
-is transferred on the rising edges of rxclkesc_0.</p>
-</td>
-</tr>
-<tr><td><p>[11:8]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxtriggeresc_0">rxtriggeresc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Receive Trigger 0-3<p></p>
-This signal indicates that a trigger event has been received in<p></p>
-the lane interconnect. The asserted rxtriggeresc_0 signal<p></p>
-remains active until a Stop state is detected on the lane<p></p>
-interconnect.<p></p>
-■ rxtriggeresc_0[0] corresponds to Reset-Trigger.<p></p>
-■ rxtriggeresc_0[1] corresponds to Unknown-3 Trigger.<p></p>
-■ rxtriggeresc_0[2] corresponds to Unknown-4 Trigger.<p></p>
-■ rxtriggeresc_0[3] corresponds to Unknown-5 Trigger</p>
-</td>
-</tr>
-<tr><td><p>[12:12]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxlpdtesc_0">rxlpdtesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Low-Power Data Receive Mode<p></p>
-This signal is asserted to indicate that the lane module is in<p></p>
-low-power data receive mode. While in this mode, received data<p></p>
-is driven onto rxdataesc_0 output bus when rxvalidesc 0 is<p></p>
-active. rxlpdtesc_0 remains asserted until a Stop state is<p></p>
-detected on the lane interconnect.</p>
-</td>
-</tr>
-<tr><td><p>[13:13]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxulpsesc_0">rxulpsesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape ULP Receive Mode<p></p>
-This signal is asserted to indicate that the lane module has<p></p>
-entered the ULP State. The lane module remains in this mode<p></p>
-with rxulpsesc_0 asserted until a Stop state is detected on the<p></p>
-lane interconnect.</p>
-</td>
-</tr>
-<tr><td><p>[14:14]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxvalidesc_0">rxvalidesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Receive Data Valid<p></p>
-This signal indicates that the lane module is driving valid data<p></p>
-to the protocol layer on the rxdataesc_0 bus.<p></p>
-Note: There is no separate signal to indicate that the data is<p></p>
-ready for process. The protocol layer is expected to process<p></p>
-the received data on every rising edge of the rxclkesc_0 where<p></p>
-rxvalidesc_0 is asserted.<p></p>
-There is no provision in the PHY to slow down or throttle the<p></p>
-received data.</p>
-</td>
-</tr>
-<tr><td><p>[15:15]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_direction_0">direction_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Transmit/Receive Direction<p></p>
-This signal is used to indicate the current direction of the<p></p>
-lane interconnect. When direction_0 is low, the lane<p></p>
-interconnect is in transmit mode. When direction_0 is high, the<p></p>
-lane interconnect is in receive mode.</p>
-</td>
-</tr>
-<tr><td><p>[16:16]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_erresc_0">erresc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Entry Error<p></p>
-If an unrecognized escape entry command is received, this signal<p></p>
-is asserted and remains high until the line returns to Stop<p></p>
-state.</p>
-</td>
-</tr>
-<tr><td><p>[17:17]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_errsyncesc_0">errsyncesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Low-Power Data Transmission Synchronization Error<p></p>
-If the number of bits received during low-power data<p></p>
-transmission mode is not a multiple of eight when the<p></p>
-transmission ends, this signal is asserted and remains high<p></p>
-until the line returns to Stop state.</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="dsihost.htm#DSIHOST_DEBUG_CTRL">DSIHOST_DEBUG_CTRL</a></p>
-</td>
-<td><p>32'h0000806C</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[5:0]</p>
-</td>
-<td><p><a HREF="dsihost.htm#DSIHOST_DEBUG_CTRL_SEL">SEL</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Debug bus mux selection</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
+﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>DSIHOST</title></head>
+<body>
+<h1><a name="DSIHOST">"DSIHOST"</a>
+        </h1>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DSIHOST_">DSIHOST_mem</a></p>
+</td>
+<td><p>32'h00000000</p>
+</td>
+<td><p>Dummy (16KB) register space for MIPI DSI Host Controller<p></p>
+Internal memory</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p>Memory</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p>Memory</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DSIHOST_">DSIHOST_mem1</a></p>
+</td>
+<td><p>32'h00004000</p>
+</td>
+<td><p>Dummy (16KB) register space for MIPI DSI Host Controller<p></p>
+Internal memory</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p>Memory</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p>Memory</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL0">DSIHOST_PLL_DPHY_PLL0</a></p>
+</td>
+<td><p>32'h00008000</p>
+</td>
+<td><p>Control and status registers for DPHYPLL</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL0_updatepll">updatepll</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Control for PLL operation frequency updated. When<p></p>
+exercised, PLL SoC control signals are latched to PLL<p></p>
+shadow_registers to set PLL operating frequency.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL1">DSIHOST_PLL_DPHY_PLL1</a></p>
+</td>
+<td><p>32'h00008004</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[3:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL1_n">n</a></p>
+</td>
+<td><p>0x3</p>
+</td>
+<td><p>Control of the input frequency division ratio N (1 to 16) for<p></p>
+SoC direct PLL control. This signal can control the PLL if<p></p>
+pll_shadow_control = 1'b0</p>
+</td>
+</tr>
+<tr><td><p>[13:4]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL1_m">m</a></p>
+</td>
+<td><p>0xC6</p>
+</td>
+<td><p>Control of the feedback multiplication ratio M (40 to 625)<p></p>
+for SoC direct PLL control. This signal can control the PLL if<p></p>
+pll_shadow_control = 1'b0</p>
+</td>
+</tr>
+<tr><td><p>[19:14]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL1_vco_cntrl">vco_cntrl</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p>VCO operating range for SoC direct PLL control, needs<p></p>
+to be set appropriately to frequency of operation:<p></p>
+For detailed information regarding the VCO ranges see table “VCO<p></p>
+Ranges” on page 85<p></p>
+This signal can control the PLL if pll_shadow_control = 1'b0</p>
+</td>
+</tr>
+<tr><td><p>[25:20]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL1_prop_cntrl">prop_cntrl</a></p>
+</td>
+<td><p>0xC</p>
+</td>
+<td><p>Proportional Charge Pump control for SoC direct PLL<p></p>
+control. This signal can control the PLL if pll_shadow_control =<p></p>
+1'b0 Power down value="”000000</p>
+</td>
+</tr>
+<tr><td><p>[31:26]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL1_int_cntrl">int_cntrl</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Integral Charge Pump control for SoC direct PLL control.<p></p>
+This signal can control the PLL if pll_shadow_control = 1'b0<p></p>
+Power down value="”000000”</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL2">DSIHOST_PLL_DPHY_PLL2</a></p>
+</td>
+<td><p>32'h00008008</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[1:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL2_gmp_cntrl">gmp_cntrl</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p>Controls the effective loop-filter resistance (=1/gmp) to<p></p>
+increase/decrease MPLL bandwidth and compensate for change in<p></p>
+divider modulus (n_cntrl). For SoC direct PLL control. This<p></p>
+signal can control the PLL if pll_shadow_control = 1'b0</p>
+</td>
+</tr>
+<tr><td><p>[8:2]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL2_cpbias_cntrl">cpbias_cntrl</a></p>
+</td>
+<td><p>0x10</p>
+</td>
+<td><p>Charge Pump bias control, for SoC direct PLL control.<p></p>
+This signal can control the PLL if pll_shadow_control = 1'b0</p>
+</td>
+</tr>
+<tr><td><p>[10:9]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL2_clksel">clksel</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Control of PLL clock output selection.<p></p>
+■ 00 - Clocks stopped<p></p>
+■ 01 - Clock generation<p></p>
+■ 10 - Buffered clkext<p></p>
+■ 11 - Forbidden<p></p>
+For more information see table “PLL Bypass Settings” on page 62</p>
+</td>
+</tr>
+<tr><td><p>[11:11]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL2_force_lock">force_lock</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Force lock to SOC<p></p>
+■ 0 – according to lock detector-default<p></p>
+■ 1 – lock indication forced,</p>
+</td>
+</tr>
+<tr><td><p>[12:12]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL2_pll_shadow_control">pll_shadow_control</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Selection of PLL configuration mechanism. PLL can be<p></p>
+configured through D-PHY or through SoC control and shadow<p></p>
+control registers<p></p>
+■ 0: SoC control and shadow registers<p></p>
+■ 1: D-PHY control</p>
+</td>
+</tr>
+<tr><td><p>[13:13]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL2_shadow_clear">shadow_clear</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Shadow registers clear. Rise edge sensitive</p>
+</td>
+</tr>
+<tr><td><p>[14:14]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLL2_gp_clk_en">gp_clk_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enable signal for clkout_gp clock</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB0">DSIHOST_PLL_DPHY_PLLRB0</a></p>
+</td>
+<td><p>32'h0000800C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[3:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB0_n_obs">n_obs</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Output of multiplexer controlled by pll_shadow_control<p></p>
+signal. This output signal represents the control signal<p></p>
+provided by PHY test control registers or SoC control depending<p></p>
+on pll_shadow_control selection. Used for SOC observability.</p>
+</td>
+</tr>
+<tr><td><p>[13:4]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB0_m_obs">m_obs</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Output of multiplexer controlled by pll_shadow_control<p></p>
+signal. This output signal represents the control signal<p></p>
+provided by PHY test control registers or SoC control depending<p></p>
+on pll_shadow_control selection. Used for SOC observability.</p>
+</td>
+</tr>
+<tr><td><p>[19:14]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB0_vco_cntrl_obs">vco_cntrl_obs</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Output of multiplexer controlled by pll_shadow_control<p></p>
+signal. This output signal represents the control signal<p></p>
+provided by PHY test control registers or SoC control depending<p></p>
+on pll_shadow_control selection. Used for SOC observability</p>
+</td>
+</tr>
+<tr><td><p>[25:20]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB0_prop_cntrl_obs">prop_cntrl_obs</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Output of multiplexer controlled by pll_shadow_control<p></p>
+signal. This output signal represents the control signal<p></p>
+provided by PHY test control registers or SoC control depending<p></p>
+on pll_shadow_control selection. Used for SOC observability.</p>
+</td>
+</tr>
+<tr><td><p>[31:26]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB0_int_cntrl_obs">int_cntrl_obs</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Output of multiplexer controlled by pll_shadow_control<p></p>
+signal. This output signal represents the control signal<p></p>
+provided by PHY test control registers or SoC control depending<p></p>
+on pll_shadow_control selection. Used for SOC observability</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB1">DSIHOST_PLL_DPHY_PLLRB1</a></p>
+</td>
+<td><p>32'h00008010</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[1:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB1_gmp_cntrl_obs">gmp_cntrl_obs</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Output of multiplexer controlled by pll_shadow_control<p></p>
+signal. This output signal represents the control signal<p></p>
+provided by PHY test control registers or SoC control depending<p></p>
+on pll_shadow_control selection. Used for SOC observability.</p>
+</td>
+</tr>
+<tr><td><p>[8:2]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB1_cpbias_cntrl_obs">cpbias_cntrl_obs</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Output of multiplexer controlled by pll_shadow_control<p></p>
+signal. This output signal represents the control signal<p></p>
+provided by PHY test control registers or SoC control depending<p></p>
+on pll_shadow_control selection. Used for SOC observability</p>
+</td>
+</tr>
+<tr><td><p>[9:9]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB1_pll_shadow_control_obs">pll_shadow_control_obs</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Output of multiplexer controlled by pll_shadow_control<p></p>
+signal. This output signal represents the control signal<p></p>
+provided by PHY test control registers or SoC control depending<p></p>
+on pll_shadow_control selection. Used for SOC observability</p>
+</td>
+</tr>
+<tr><td><p>[10:10]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYPLL_DPHY_PLLRB1_lock_pll">lock_pll</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Lock state signaling (0: PLL is not locked, 1: PLL is<p></p>
+locked)</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL0">DSIHOST_DPHYTX0_DPHY_CTL0</a></p>
+</td>
+<td><p>32'h00008014</p>
+</td>
+<td><p>Control and status registers for DPHYTX0</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL0_BiuCtrlPhyEn">BiuCtrlPhyEn</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enable Biu Control DPHY register.</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL0_tx_iso18_en">tx_iso18_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>1b'0 - non isolation operating mode<p></p>
+1b'1 (1.8V) the PHY will power down the 1.8V domain.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1">DSIHOST_DPHYTX0_DPHY_CTL1</a></p>
+</td>
+<td><p>32'h00008018</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_shutdownz">shutdownz</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Shutdown Input<p></p>
+This line is used to place the PHY in shutdown. All analog<p></p>
+blocks are in shutdown mode and the digital logic is reset.<p></p>
+Active state: Low</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_rstz">rstz</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Reset Input<p></p>
+This line is used to place the digital section of the PHY in<p></p>
+reset state.<p></p>
+Active state: Low</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_forcepll">forcepll</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>By default, the PLL clock multiplier is switched off during<p></p>
+shutdown and ULP operation if all lanes are in ULPS. If the PLL<p></p>
+functionality is required from system perspective in any of<p></p>
+these conditions, forcepll can be kept asserted maintaining the<p></p>
+PLL active at all times, regardless of other configurations or<p></p>
+states.<p></p>
+forcepll signal cannot be used to power-up the PLL independent<p></p>
+of the PHY state.</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_txrequesthsclk">txrequesthsclk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Clock Request Signal<p></p>
+This signal causes the clock lane to start transmitting DDR<p></p>
+clock on the lane interconnect. A TX HS request is not allowed<p></p>
+if the add-on PLL is not enabled and locked.</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_enableclkBIU">enableclkBIU</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enable Clock Lane Module<p></p>
+All lane drivers and terminations are turned off when enableclk<p></p>
+is low. In addition, all other lane PPI inputs are ignored and<p></p>
+all lane PPI outputs are driven to the default values.<p></p>
+enableclk is level sensitive and asynchronous.<p></p>
+It is not allowed for this signal to be changed during<p></p>
+operation. It should be set with PHY in power-down.</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_turndisable_0">turndisable_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Disable Turn Around<p></p>
+This signal is used to prevent the bi-directional lane from<p></p>
+processing a turn-around request in the lane interconnection.<p></p>
+Note: This is useful to prevent a potential “lock-up” situation<p></p>
+when a unidirectional lane module is connected to a<p></p>
+bi-directional lane module.</p>
+</td>
+</tr>
+<tr><td><p>[6:6]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_forcerxmode_0">forcerxmode_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Force Lane Module into Receive Mode/Wait for Stop State This<p></p>
+signal allows the protocol layer to initialize a lane module or<p></p>
+force a bi-directional lane module into receive mode. This<p></p>
+signal is used to solve a contention situation. When this<p></p>
+signal is high, the lane module immediately transitions into<p></p>
+receive control mode and waits for a Stop state to appear on<p></p>
+the Lane interconnect.</p>
+</td>
+</tr>
+<tr><td><p>[7:7]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_basedir_0">basedir_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Function: Configures the Base Direction for Lane<p></p>
+■ basedir_0 = 1: Configures lane as RX upon startup of the PHY<p></p>
+■ basedir_0 = 0: Configures lane as TX</p>
+</td>
+</tr>
+<tr><td><p>[8:8]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_forcetxstopmode_0">forcetxstopmode_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Force Lane Module into Transmit Mode and Generate Stop State<p></p>
+This signal allows the protocol layer to force a bi-directional<p></p>
+lane module into transmit mode and Stop state following an<p></p>
+error indication (for example, Expired Timeout). When this<p></p>
+signal is high, the lane module immediately transitions into<p></p>
+transmit mode and the module state machine is forced into the<p></p>
+Stop state.</p>
+</td>
+</tr>
+<tr><td><p>[9:9]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_forcetxstopmode_1">forcetxstopmode_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Force Lane Module into Transmit Mode and Generate Stop State<p></p>
+This signal allows the protocol layer to force a bi-directional<p></p>
+lane module into transmit mode and Stop state following an<p></p>
+error indication (for example, Expired Timeout). When this<p></p>
+signal is high, the lane module immediately transitions into<p></p>
+transmit mode and the module state machine is forced into the<p></p>
+Stop state.</p>
+</td>
+</tr>
+<tr><td><p>[10:10]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_enable_0">enable_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enable Lane 0<p></p>
+All lane drivers, receivers, terminations, and contention<p></p>
+detectors are turned off when enable_0 is low. In addition, all<p></p>
+other lane PPI inputs are ignored and all lane PPI outputs are<p></p>
+driven to the default values.<p></p>
+enable_0 is level sensitive and asynchronous. It is not allowed<p></p>
+for this signal to be changed during operation. It should be<p></p>
+set with PHY in power-down.</p>
+</td>
+</tr>
+<tr><td><p>[11:11]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_enable_1">enable_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enable Lane 1<p></p>
+All lane drivers, receivers, terminations, and contention<p></p>
+detectors are turned off when enable_1 is low. In addition, all<p></p>
+other lane PPI inputs are ignored and all lane PPI outputs are<p></p>
+driven to the default values.<p></p>
+enable_1 is level sensitive and asynchronous. It is not allowed<p></p>
+for this signal to be changed during operation. It should be<p></p>
+set with PHY in power-down.</p>
+</td>
+</tr>
+<tr><td><p>[18:12]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_hsfreqrange">hsfreqrange</a></p>
+</td>
+<td><p>0x49</p>
+</td>
+<td><p>High-speed Frequency Range Selection. Refer to Table 5-6 on page<p></p>
+123 for Operating Frequency Range selection and default values.<p></p>
+This signal should be set with the D-PHY in power-down and must<p></p>
+not change during operation.<p></p>
+This signal can be overridden through D-PHY test control<p></p>
+registers.</p>
+</td>
+</tr>
+<tr><td><p>[19:19]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_cont_en">cont_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>This signal places the macro in IO continuity test mode. All<p></p>
+other interface signals should be placed in their default<p></p>
+values.<p></p>
+Active state: high</p>
+</td>
+</tr>
+<tr><td><p>[25:20]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_cfgclkfreqrange">cfgclkfreqrange</a></p>
+</td>
+<td><p>0x20</p>
+</td>
+<td><p>System clock frequency configuration preset. Should be<p></p>
+set according to the following equation:<p></p>
+cfgclkfreqrange[5:0] = round[ (Fcfg_clk(MHz)-17)*4]</p>
+</td>
+</tr>
+<tr><td><p>[26:26]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_biston">biston</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Starts the pattern generator.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL2">DSIHOST_DPHYTX0_DPHY_CTL2</a></p>
+</td>
+<td><p>32'h0000801C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL2_txulpsclkBIU">txulpsclkBIU</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Transmit Ultra Low Power on Clock Lane<p></p>
+This signal is asserted to cause the clock lane module to enter<p></p>
+the Ultra Low Power state. The lane module remains in this mode<p></p>
+until the txulpsexitclk signal is asserted. This signal is<p></p>
+clocked by txclkesc.</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL2_txulpsexitclk">txulpsexitclk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>This signal is asserted to cause the clock lane module to<p></p>
+transmit the Ultra Low Power (ULP) exit sequence and return to<p></p>
+the Stop state. This signal is clocked by txclkesc. While<p></p>
+txclkesc can be gated during ULP state, it must be reactivated<p></p>
+so that the txulpsexitclk command can be processed.Between the<p></p>
+assertion of txulpsexitclk and<p></p>
+ulpsactivenotclk there is a latency not higher than 55us for the<p></p>
+default configurations.</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL2_turnrequest_0">turnrequest_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Turn around Request<p></p>
+This signal is used to indicate that the protocol layer needs to<p></p>
+turn the lane around, allowing for the other side to start<p></p>
+transmitting the data.<p></p>
+turnrequest_0 is valid on the rising edges of txclkesc.<p></p>
+Note: turnrequest_0 is only meaningful for a lane that is<p></p>
+currently transmitting data (direction_0 = 0). If the data lane<p></p>
+module is in receive mode (direction_0 =1), this signal is<p></p>
+ignored.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3">DSIHOST_DPHYTX0_DPHY_CTL3</a></p>
+</td>
+<td><p>32'h00008020</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[7:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txdataesc_0">txdataesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Data Bus<p></p>
+This is the 8-bit bus data input to be transmitted in low-power<p></p>
+data transmission mode. The LSB is transmitted first.<p></p>
+txdataesc_0 is synchronous with the rising edge of txclkesc.</p>
+</td>
+</tr>
+<tr><td><p>[11:8]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txtriggeresc_0">txtriggeresc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Trigger 0-3<p></p>
+One of these signals is asserted with txrequestesc_0 to cause<p></p>
+the lane module to send the associated trigger across the lane<p></p>
+interconnection.<p></p>
+txtriggeresc_0 is synchronous with the rising edge of<p></p>
+txclkesc_0.<p></p>
+Note: Only one of the txtriggeresc_0 is asserted at any given<p></p>
+time, and only when txlpdtesc_0 and txulpsesc_0 are both at low<p></p>
+level.<p></p>
+■ txtriggeresc_0[0] corresponds to Reset-Trigger.<p></p>
+■ txtriggeresc_0[1] corresponds to Unknown-3 Trigger.<p></p>
+■ txtriggeresc_0[2] corresponds to Unknown-4 Trigger.<p></p>
+■ txtriggeresc_0[3] corresponds to Unknown-5 Trigger.</p>
+</td>
+</tr>
+<tr><td><p>[12:12]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txrequestesc_0">txrequestesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Request<p></p>
+This signal together with txlpdtesc_0, txulpsesc_0, and<p></p>
+txtriggeresc_0[3:0] is used to request the entry into any Escape<p></p>
+mode.<p></p>
+Once in Escape mode, the lane stays in Escape mode until<p></p>
+txrequestesc_0 is un-asserted.<p></p>
+Note: It can only be asserted by the protocol layer while<p></p>
+txrequestdatahs_0 is at low level.</p>
+</td>
+</tr>
+<tr><td><p>[13:13]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txlpdtesc_0">txlpdtesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Low-Power Data<p></p>
+This signal is asserted with txrequestesc_0 to cause the lane<p></p>
+module to enter low-power data transmission mode. The lane<p></p>
+module remains in this mode until txrequestesc_0 is<p></p>
+de-asserted.<p></p>
+Note: txulpsesc_0 and all the bits of txtriggeresc_0 must be at<p></p>
+low level when txlpdtesc_0 is at high level.</p>
+</td>
+</tr>
+<tr><td><p>[14:14]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txulpsesc_0">txulpsesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit ULP<p></p>
+This signal is asserted with txrequestesc_0 to cause the lane<p></p>
+module to enter the ULP State. The lane module remains in this<p></p>
+state until txulpsexit_0 is asserted and txrequestesc_0 is<p></p>
+de-asserted.<p></p>
+Note: txlpdtesc_0 and all bits of txtriggeresc_0 must be at low<p></p>
+level when txulpsesc_0 is at high level.</p>
+</td>
+</tr>
+<tr><td><p>[15:15]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txulpsexit_0">txulpsexit_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Initiate the transmission of the ULP exit sequence.<p></p>
+If this signal is asserted while the lane is in ULP state, the<p></p>
+PHY leaves the ULP state and begins driving a Mark-1 symbol on<p></p>
+the line interconnect.<p></p>
+Afterwards, upon de-assertion of txrequestesc_0, the PHY drives<p></p>
+the LP-11 Stop state. Between the assertion of txulpsexit_0 and<p></p>
+ulpsactivenotclk there is a latency not higher than 55us for the<p></p>
+default configurations<p></p>
+Note: This signal is ignored when the PHY is not in the ULP<p></p>
+state.</p>
+</td>
+</tr>
+<tr><td><p>[16:16]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txvalidesc_0">txvalidesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Data Valid<p></p>
+This signal indicates that the protocol layer is driving valid<p></p>
+data on txdataesc_0 bus, to be transmitted.<p></p>
+Note: The lane module accepts the data when txrequestesc_0,<p></p>
+txvalidesc_0, and txreadyesc_0 are all active on the same<p></p>
+rising edge of txclkesc.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4">DSIHOST_DPHYTX0_DPHY_CTL4</a></p>
+</td>
+<td><p>32'h00008024</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[7:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txdataesc_1">txdataesc_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Data Bus<p></p>
+This is the 8-bit bus data input to be transmitted in low-power<p></p>
+data transmission mode. The LSB is transmitted first.<p></p>
+txdataesc_1 is synchronous with the rising edge of txclkesc.</p>
+</td>
+</tr>
+<tr><td><p>[11:8]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txtriggeresc_1">txtriggeresc_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Trigger 0-3<p></p>
+One of these signals is asserted with txrequestesc_1 to cause<p></p>
+the lane module to send the associated trigger across the lane<p></p>
+interconnection.<p></p>
+txtriggeresc_1 is synchronous with the rising edge of<p></p>
+txclkesc_1.<p></p>
+Note: Only one of the txtriggeresc_1 is asserted at any given<p></p>
+time, and only when txlpdtesc_1 and txulpsesc_1 are both at low<p></p>
+level.<p></p>
+■ txtriggeresc_1[0] corresponds to Reset-Trigger.<p></p>
+■ txtriggeresc_1[1] corresponds to Unknown-3 Trigger.<p></p>
+■ txtriggeresc_1[2] corresponds to Unknown-4 Trigger.<p></p>
+■ txtriggeresc_1[3] corresponds to Unknown-5 Trigger.</p>
+</td>
+</tr>
+<tr><td><p>[12:12]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txrequestesc_1">txrequestesc_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Request<p></p>
+This signal together with txlpdtesc_1, txulpsesc_1, and<p></p>
+txtriggeresc_1[3:0] is used to request the entry into any Escape<p></p>
+mode.<p></p>
+Once in Escape mode, the lane stays in Escape mode until<p></p>
+txrequestesc_1 is un-asserted.<p></p>
+Note: It can only be asserted by the protocol layer while<p></p>
+txrequestdatahs_1 is at low level.</p>
+</td>
+</tr>
+<tr><td><p>[13:13]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txlpdtesc_1">txlpdtesc_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Low-Power Data<p></p>
+This signal is asserted with txrequestesc_1 to cause the lane<p></p>
+module to enter low-power data transmission mode. The lane<p></p>
+module remains in this mode until txrequestesc_1 is<p></p>
+de-asserted.<p></p>
+Note: txulpsesc_1 and all the bits of txtriggeresc_1 must be at<p></p>
+low level when txlpdtesc_1 is at high level.</p>
+</td>
+</tr>
+<tr><td><p>[14:14]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txulpsesc_1">txulpsesc_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit ULP<p></p>
+This signal is asserted with txrequestesc_1 to cause the lane<p></p>
+module to enter the ULP State. The lane module remains in this<p></p>
+state until txulpsexit_1 is asserted and txrequestesc_1 is<p></p>
+de-asserted.<p></p>
+Note: txlpdtesc_1 and all bits of txtriggeresc_1 must be at low<p></p>
+level when txulpsesc_1 is at high level.</p>
+</td>
+</tr>
+<tr><td><p>[15:15]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txulpsexit_1">txulpsexit_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Initiate the transmission of the ULP exit sequence.<p></p>
+If this signal is asserted while the lane is in ULP state, the<p></p>
+PHY leaves the ULP state and begins driving a Mark-1 symbol on<p></p>
+the line interconnect.<p></p>
+Afterwards, upon de-assertion of txrequestesc_1, the PHY drives<p></p>
+the LP-11 Stop state. Between the assertion of txulpsexit_1 and<p></p>
+ulpsactivenotclk there is a latency not higher than 55us for the<p></p>
+default configurations<p></p>
+Note: This signal is ignored when the PHY is not in the ULP<p></p>
+state.</p>
+</td>
+</tr>
+<tr><td><p>[16:16]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txvalidesc_1">txvalidesc_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Data Valid<p></p>
+This signal indicates that the protocol layer is driving valid<p></p>
+data on txdataesc_1 bus, to be transmitted.<p></p>
+Note: The lane module accepts the data when txrequestesc_1,<p></p>
+txvalidesc_1, and txreadyesc_1 are all active on the same<p></p>
+rising edge of txclkesc.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5">DSIHOST_DPHYTX0_DPHY_CTL5</a></p>
+</td>
+<td><p>32'h00008028</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txblaneclkSel">txblaneclkSel</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txskewcalhsBIU">txskewcalhsBIU</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Deskew Calibration.<p></p>
+When txskewcalhs is sampled high by txbyteclkhs, the lane module<p></p>
+initiates a deskew sequence. When txskewcalhs is de-asserted<p></p>
+data lanes stops sending deskew pattern, and the lane modules<p></p>
+initiates an End-of-Transmission (EOT) sequence.</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txrequestdatahs_0">txrequestdatahs_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Request And Data Valid Signal<p></p>
+When txrequesths_0 is sampled high by txbyteclkhs, the lane<p></p>
+module initiates a Start-of-Transmission (SOT) sequence. When<p></p>
+txrequesths_0 is sampled low while txreadyhs_0 is asserted, the<p></p>
+lane module initiates an End-of-Transmission (EOT) sequence. A<p></p>
+TX HS request is not allowed if the add-on PLL is not enabled<p></p>
+and locked.</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txrequestdatahs_1">txrequestdatahs_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Request And Data Valid Signal<p></p>
+When txrequesths_1 is sampled high by txbyteclkhs, the lane<p></p>
+module initiates a Start-of-Transmission (SOT) sequence. When<p></p>
+txrequesths_1 is sampled low while txreadyhs_1 is asserted, the<p></p>
+lane module initiates an End-of-Transmission (EOT) sequence. A<p></p>
+TX HS request is not allowed if the add-on PLL is not enabled<p></p>
+and locked.</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txrequestdatahs_2">txrequestdatahs_2</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Request And Data Valid Signal<p></p>
+When txrequesths_2 is sampled high by txbyteclkhs, the lane<p></p>
+module initiates a Start-of-Transmission (SOT) sequence. When<p></p>
+txrequesths_2 is sampled low while txreadyhs_2 is asserted, the<p></p>
+lane module initiates an End-of-Transmission (EOT) sequence. A<p></p>
+TX HS request is not allowed if the add-on PLL is not enabled<p></p>
+and locked.</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txrequestdatahs_3">txrequestdatahs_3</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Request And Data Valid Signal<p></p>
+When txrequesths_3 is sampled high by txbyteclkhs, the lane<p></p>
+module initiates a Start-of-Transmission (SOT) sequence. When<p></p>
+txrequesths_3 is sampled low while txreadyhs_3 is asserted, the<p></p>
+lane module initiates an End-of-Transmission (EOT) sequence. A<p></p>
+TX HS request is not allowed if the add-on PLL is not enabled<p></p>
+and locked.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL6">DSIHOST_DPHYTX0_DPHY_CTL6</a></p>
+</td>
+<td><p>32'h0000802C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[7:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL6_txdatahs_0">txdatahs_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Data<p></p>
+This is an 8-bit data bus input that receives data to be<p></p>
+transmitted.<p></p>
+txdatahs_0[0] is transmitted first. The txdatahs_0 signal is<p></p>
+synchronous to the rising edge of txbyteclkhs.</p>
+</td>
+</tr>
+<tr><td><p>[15:8]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL6_txdatahs_1">txdatahs_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Data<p></p>
+This is an 8-bit data bus input that receives data to be<p></p>
+transmitted.<p></p>
+txdatahs_1[0] is transmitted first. The txdatahs_1 signal is<p></p>
+synchronous to the rising edge of txbyteclkhs.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0">DSIHOST_DPHYTX0_DPHY_RB0</a></p>
+</td>
+<td><p>32'h00008030</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[6:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_cont_data">cont_data</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Each pin of this output bus is used to verify the continuity<p></p>
+from the chips pin all the way to the PHY’s analog ports<p></p>
+(package, bonding, die, etc). Please refer to the test modes<p></p>
+section for more information.<p></p>
+■ cont_data[0]: rext<p></p>
+■ cont_data[1]: clkn<p></p>
+■ cont_data[2]: clkp<p></p>
+■ cont_data[3]: datan0<p></p>
+■ cont_data[4]: datap0<p></p>
+■ cont_data[5]: datan1<p></p>
+■ cont_data[6]: datap1</p>
+</td>
+</tr>
+<tr><td><p>[7:7]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_lock">lock</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>PLL Lock Signal<p></p>
+When set, it signals that the PLL acquired lock with input<p></p>
+refclk.<p></p>
+This signal can be overridden through D-PHY test control<p></p>
+registers.</p>
+</td>
+</tr>
+<tr><td><p>[8:8]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_stopstateclk">stopstateclk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Clock Lane in Stop State<p></p>
+This signal indicates that the clock lane module is in Stop<p></p>
+state.</p>
+</td>
+</tr>
+<tr><td><p>[9:9]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_ulpsactivenotclk">ulpsactivenotclk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>This signal is asserted to cause the clock lane module to<p></p>
+transmit the Ultra Low Power (ULP) exit sequence and return to<p></p>
+the Stop state. This signal is clocked by txclkesc. While<p></p>
+txclkesc can be gated during ULP state, it must be reactivated<p></p>
+so that the txulpsexitclk command can be processed.Between the<p></p>
+assertion of txulpsexitclk and<p></p>
+ulpsactivenotclk there is a latency not higher than 55us for the<p></p>
+default configurations.</p>
+</td>
+</tr>
+<tr><td><p>[10:10]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_stopstatedata_0">stopstatedata_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Data Lane in Stop State<p></p>
+This signal indicates that the lane module is in Stop state.<p></p>
+This is valid for both TX and RX applications. This signal is<p></p>
+asynchronous to any clock in the PPI.<p></p>
+Note: If the application requires multi-lane synchronization,<p></p>
+the lanes must be kept in the Stop state during 67-byte clock<p></p>
+cycles; this occurs after the stopstate_0 signals are observed<p></p>
+in the PPI. Only then is a new burst request issued in the<p></p>
+lanes. If dead time between packets is a bottleneck, see table<p></p>
+“High-Speed Transition Times”, column High-Speed<p></p>
+Exit“HS- >LP” on page 397</p>
+</td>
+</tr>
+<tr><td><p>[11:11]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_stopstatedata_1">stopstatedata_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Data Lane in Stop State<p></p>
+This signal indicates that the lane module is in Stop state.<p></p>
+This is valid for both TX and RX applications. This signal is<p></p>
+asynchronous to any clock in the PPI.<p></p>
+Note: If the application requires multi-lane synchronization,<p></p>
+the lanes must be kept in the Stop state during 67-byte clock<p></p>
+cycles; this occurs after the stopstate_1 signals are observed<p></p>
+in the PPI. Only then is a new burst request issued in the<p></p>
+lanes. If dead time between packets is a bottleneck, see table<p></p>
+“High-Speed Transition Times”, column High-Speed<p></p>
+Exit“HS- >LP” on page 397</p>
+</td>
+</tr>
+<tr><td><p>[12:12]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_ulpsactivenot_0">ulpsactivenot_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>This signal indicates that the lane is in the Ultra Low Power<p></p>
+(ULP) state. For a TX lane, this signal is asserted (driven<p></p>
+low) some time after txulpsesc_0 and txrequestesc_0 are<p></p>
+asserted. txclkesc must be supplied to the PHY until<p></p>
+ulpsactivenot_0 is asserted. In order to leave the ULP state,<p></p>
+the transmitter first drives txulpsexit_0 high, then waits for<p></p>
+ulpsactivenot_0 to become high (inactive). At that point, the<p></p>
+PHY is active and transmits a Mark-1 on the Lines. The protocol<p></p>
+waits for a time Twakeup and then drives txrequestesc_0 inactive<p></p>
+to return the lane to Stop state.<p></p>
+For a RX lane, this signal indicates that the lane is in the ULP<p></p>
+state. At the beginning of ULP state, ulpsactivenot_0 is<p></p>
+asserted (driven low); at the end of the ULP state, this signal<p></p>
+becomes inactive to indicate that the Mark-1 state has been<p></p>
+observed. Later, after a period of time Twakeup, the<p></p>
+rxulpsesc_0 signal is de-asserted (driven high).</p>
+</td>
+</tr>
+<tr><td><p>[13:13]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_ulpsactivenot_1">ulpsactivenot_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>This signal indicates that the lane is in the Ultra Low Power<p></p>
+(ULP) state. For a TX lane, this signal is asserted (driven<p></p>
+low) some time after txulpsesc_1 and txrequestesc_1 are<p></p>
+asserted. txclkesc must be supplied to the PHY until<p></p>
+ulpsactivenot_1 is asserted. In order to leave the ULP state,<p></p>
+the transmitter first drives txulpsexit_1 high, then waits for<p></p>
+ulpsactivenot_1 to become high (inactive). At that point, the<p></p>
+PHY is active and transmits a Mark-1 on the Lines. The protocol<p></p>
+waits for a time Twakeup and then drives txrequestesc_1 inactive<p></p>
+to return the lane to Stop state.<p></p>
+For a RX lane, this signal indicates that the lane is in the ULP<p></p>
+state. At the beginning of ULP state, ulpsactivenot_1 is<p></p>
+asserted (driven low); at the end of the ULP state, this signal<p></p>
+becomes inactive to indicate that the Mark-1 state has been<p></p>
+observed. Later, after a period of time Twakeup, the<p></p>
+rxulpsesc_1 signal is de-asserted (driven high).</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB1">DSIHOST_DPHYTX0_DPHY_RB1</a></p>
+</td>
+<td><p>32'h00008034</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB1_txreadyhs_0">txreadyhs_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Ready<p></p>
+This signal indicates that txdatahs_0 is accepted by the lane<p></p>
+module to be serially transmitted. txreadyhs_0 and the other<p></p>
+PPI high-speed data TX signals are synchronous with the rising<p></p>
+edge of txbyteclkhs.</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB1_txreadyhs_1">txreadyhs_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Ready<p></p>
+This signal indicates that txdatahs_1 is accepted by the lane<p></p>
+module to be serially transmitted. txreadyhs_1 and the other<p></p>
+PPI high-speed data TX signals are synchronous with the rising<p></p>
+edge of txbyteclkhs.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2">DSIHOST_DPHYTX0_DPHY_RB2</a></p>
+</td>
+<td><p>32'h00008038</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_txreadyesc_0">txreadyesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Ready This signal indicates that the data<p></p>
+is accepted by the lane module to be serially transmitted.<p></p>
+txreadyesc_0 is synchronous with the rising edge of txclkesc.</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_txreadyesc_1">txreadyesc_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Ready This signal indicates that the data<p></p>
+is accepted by the lane module to be serially transmitted.<p></p>
+txreadyesc_1 is synchronous with the rising edge of txclkesc.</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_errcontrol_0">errcontrol_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Control Error<p></p>
+This signal is asserted when an incorrect line state sequence is<p></p>
+detected (for example, if a turnaround request or Escape mode<p></p>
+request is immediately followed by a Stop state instead of the<p></p>
+required Bridge state, this signal is asserted and remains high<p></p>
+until the line returns to Stop state).</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_errcontentionlp0_0">errcontentionlp0_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>LP0 Contention Error<p></p>
+This signal is asserted when a lane module functioning as TX,<p></p>
+while its base direction is RX detects a contention situation<p></p>
+on a line while trying to drive the line low.</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_errcontentionlp1_0">errcontentionlp1_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>LP1 Contention Error<p></p>
+This signal is asserted when a lane module functioning as TX,<p></p>
+while its base direction is RX detects a contention situation<p></p>
+on a line while trying to drive the line high.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3">DSIHOST_DPHYTX0_DPHY_RB3</a></p>
+</td>
+<td><p>32'h0000803C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[7:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxdataesc_0">rxdataesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Receive Data Bus<p></p>
+This is the 8-bit bus data output received by the lane<p></p>
+interconnect. The signal rxdataesc_0[0] is received first. Data<p></p>
+is transferred on the rising edges of rxclkesc_0.</p>
+</td>
+</tr>
+<tr><td><p>[11:8]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxtriggeresc_0">rxtriggeresc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Receive Trigger 0-3<p></p>
+This signal indicates that a trigger event has been received in<p></p>
+the lane interconnect. The asserted rxtriggeresc_0 signal<p></p>
+remains active until a Stop state is detected on the lane<p></p>
+interconnect.<p></p>
+■ rxtriggeresc_0[0] corresponds to Reset-Trigger.<p></p>
+■ rxtriggeresc_0[1] corresponds to Unknown-3 Trigger.<p></p>
+■ rxtriggeresc_0[2] corresponds to Unknown-4 Trigger.<p></p>
+■ rxtriggeresc_0[3] corresponds to Unknown-5 Trigger</p>
+</td>
+</tr>
+<tr><td><p>[12:12]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxlpdtesc_0">rxlpdtesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Low-Power Data Receive Mode<p></p>
+This signal is asserted to indicate that the lane module is in<p></p>
+low-power data receive mode. While in this mode, received data<p></p>
+is driven onto rxdataesc_0 output bus when rxvalidesc 0 is<p></p>
+active. rxlpdtesc_0 remains asserted until a Stop state is<p></p>
+detected on the lane interconnect.</p>
+</td>
+</tr>
+<tr><td><p>[13:13]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxulpsesc_0">rxulpsesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape ULP Receive Mode<p></p>
+This signal is asserted to indicate that the lane module has<p></p>
+entered the ULP State. The lane module remains in this mode<p></p>
+with rxulpsesc_0 asserted until a Stop state is detected on the<p></p>
+lane interconnect.</p>
+</td>
+</tr>
+<tr><td><p>[14:14]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxvalidesc_0">rxvalidesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Receive Data Valid<p></p>
+This signal indicates that the lane module is driving valid data<p></p>
+to the protocol layer on the rxdataesc_0 bus.<p></p>
+Note: There is no separate signal to indicate that the data is<p></p>
+ready for process. The protocol layer is expected to process<p></p>
+the received data on every rising edge of the rxclkesc_0 where<p></p>
+rxvalidesc_0 is asserted.<p></p>
+There is no provision in the PHY to slow down or throttle the<p></p>
+received data.</p>
+</td>
+</tr>
+<tr><td><p>[15:15]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_direction_0">direction_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Transmit/Receive Direction<p></p>
+This signal is used to indicate the current direction of the<p></p>
+lane interconnect. When direction_0 is low, the lane<p></p>
+interconnect is in transmit mode. When direction_0 is high, the<p></p>
+lane interconnect is in receive mode.</p>
+</td>
+</tr>
+<tr><td><p>[16:16]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_erresc_0">erresc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Entry Error<p></p>
+If an unrecognized escape entry command is received, this signal<p></p>
+is asserted and remains high until the line returns to Stop<p></p>
+state.</p>
+</td>
+</tr>
+<tr><td><p>[17:17]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_errsyncesc_0">errsyncesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Low-Power Data Transmission Synchronization Error<p></p>
+If the number of bits received during low-power data<p></p>
+transmission mode is not a multiple of eight when the<p></p>
+transmission ends, this signal is asserted and remains high<p></p>
+until the line returns to Stop state.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL0">DSIHOST_DPHYTX1_DPHY_CTL0</a></p>
+</td>
+<td><p>32'h00008040</p>
+</td>
+<td><p>Control and status registers for DPHYTX1</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL0_BiuCtrlPhyEn">BiuCtrlPhyEn</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enable Biu Control DPHY register.</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL0_tx_iso18_en">tx_iso18_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>1b'0 - non isolation operating mode<p></p>
+1b'1 (1.8V) the PHY will power down the 1.8V domain.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1">DSIHOST_DPHYTX1_DPHY_CTL1</a></p>
+</td>
+<td><p>32'h00008044</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_shutdownz">shutdownz</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Shutdown Input<p></p>
+This line is used to place the PHY in shutdown. All analog<p></p>
+blocks are in shutdown mode and the digital logic is reset.<p></p>
+Active state: Low</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_rstz">rstz</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Reset Input<p></p>
+This line is used to place the digital section of the PHY in<p></p>
+reset state.<p></p>
+Active state: Low</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_forcepll">forcepll</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>By default, the PLL clock multiplier is switched off during<p></p>
+shutdown and ULP operation if all lanes are in ULPS. If the PLL<p></p>
+functionality is required from system perspective in any of<p></p>
+these conditions, forcepll can be kept asserted maintaining the<p></p>
+PLL active at all times, regardless of other configurations or<p></p>
+states.<p></p>
+forcepll signal cannot be used to power-up the PLL independent<p></p>
+of the PHY state.</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_txrequesthsclk">txrequesthsclk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Clock Request Signal<p></p>
+This signal causes the clock lane to start transmitting DDR<p></p>
+clock on the lane interconnect. A TX HS request is not allowed<p></p>
+if the add-on PLL is not enabled and locked.</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_enableclkBIU">enableclkBIU</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enable Clock Lane Module<p></p>
+All lane drivers and terminations are turned off when enableclk<p></p>
+is low. In addition, all other lane PPI inputs are ignored and<p></p>
+all lane PPI outputs are driven to the default values.<p></p>
+enableclk is level sensitive and asynchronous.<p></p>
+It is not allowed for this signal to be changed during<p></p>
+operation. It should be set with PHY in power-down.</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_turndisable_0">turndisable_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Disable Turn Around<p></p>
+This signal is used to prevent the bi-directional lane from<p></p>
+processing a turn-around request in the lane interconnection.<p></p>
+Note: This is useful to prevent a potential “lock-up” situation<p></p>
+when a unidirectional lane module is connected to a<p></p>
+bi-directional lane module.</p>
+</td>
+</tr>
+<tr><td><p>[6:6]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_forcerxmode_0">forcerxmode_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Force Lane Module into Receive Mode/Wait for Stop State This<p></p>
+signal allows the protocol layer to initialize a lane module or<p></p>
+force a bi-directional lane module into receive mode. This<p></p>
+signal is used to solve a contention situation. When this<p></p>
+signal is high, the lane module immediately transitions into<p></p>
+receive control mode and waits for a Stop state to appear on<p></p>
+the Lane interconnect.</p>
+</td>
+</tr>
+<tr><td><p>[7:7]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_basedir_0">basedir_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Function: Configures the Base Direction for Lane<p></p>
+■ basedir_0 = 1: Configures lane as RX upon startup of the PHY<p></p>
+■ basedir_0 = 0: Configures lane as TX</p>
+</td>
+</tr>
+<tr><td><p>[8:8]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_forcetxstopmode_0">forcetxstopmode_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Force Lane Module into Transmit Mode and Generate Stop State<p></p>
+This signal allows the protocol layer to force a bi-directional<p></p>
+lane module into transmit mode and Stop state following an<p></p>
+error indication (for example, Expired Timeout). When this<p></p>
+signal is high, the lane module immediately transitions into<p></p>
+transmit mode and the module state machine is forced into the<p></p>
+Stop state.</p>
+</td>
+</tr>
+<tr><td><p>[9:9]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_forcetxstopmode_1">forcetxstopmode_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Force Lane Module into Transmit Mode and Generate Stop State<p></p>
+This signal allows the protocol layer to force a bi-directional<p></p>
+lane module into transmit mode and Stop state following an<p></p>
+error indication (for example, Expired Timeout). When this<p></p>
+signal is high, the lane module immediately transitions into<p></p>
+transmit mode and the module state machine is forced into the<p></p>
+Stop state.</p>
+</td>
+</tr>
+<tr><td><p>[10:10]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_enable_0">enable_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enable Lane 0<p></p>
+All lane drivers, receivers, terminations, and contention<p></p>
+detectors are turned off when enable_0 is low. In addition, all<p></p>
+other lane PPI inputs are ignored and all lane PPI outputs are<p></p>
+driven to the default values.<p></p>
+enable_0 is level sensitive and asynchronous. It is not allowed<p></p>
+for this signal to be changed during operation. It should be<p></p>
+set with PHY in power-down.</p>
+</td>
+</tr>
+<tr><td><p>[11:11]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_enable_1">enable_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enable Lane 1<p></p>
+All lane drivers, receivers, terminations, and contention<p></p>
+detectors are turned off when enable_1 is low. In addition, all<p></p>
+other lane PPI inputs are ignored and all lane PPI outputs are<p></p>
+driven to the default values.<p></p>
+enable_1 is level sensitive and asynchronous. It is not allowed<p></p>
+for this signal to be changed during operation. It should be<p></p>
+set with PHY in power-down.</p>
+</td>
+</tr>
+<tr><td><p>[18:12]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_hsfreqrange">hsfreqrange</a></p>
+</td>
+<td><p>0x49</p>
+</td>
+<td><p>High-speed Frequency Range Selection. Refer to Table 5-6 on page<p></p>
+123 for Operating Frequency Range selection and default values.<p></p>
+This signal should be set with the D-PHY in power-down and must<p></p>
+not change during operation.<p></p>
+This signal can be overridden through D-PHY test control<p></p>
+registers.</p>
+</td>
+</tr>
+<tr><td><p>[19:19]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_cont_en">cont_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>This signal places the macro in IO continuity test mode. All<p></p>
+other interface signals should be placed in their default<p></p>
+values.<p></p>
+Active state: high</p>
+</td>
+</tr>
+<tr><td><p>[25:20]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_cfgclkfreqrange">cfgclkfreqrange</a></p>
+</td>
+<td><p>0x20</p>
+</td>
+<td><p>System clock frequency configuration preset. Should be<p></p>
+set according to the following equation:<p></p>
+cfgclkfreqrange[5:0] = round[ (Fcfg_clk(MHz)-17)*4]</p>
+</td>
+</tr>
+<tr><td><p>[26:26]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL1_biston">biston</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Starts the pattern generator.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL2">DSIHOST_DPHYTX1_DPHY_CTL2</a></p>
+</td>
+<td><p>32'h00008048</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL2_txulpsclkBIU">txulpsclkBIU</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Transmit Ultra Low Power on Clock Lane<p></p>
+This signal is asserted to cause the clock lane module to enter<p></p>
+the Ultra Low Power state. The lane module remains in this mode<p></p>
+until the txulpsexitclk signal is asserted. This signal is<p></p>
+clocked by txclkesc.</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL2_txulpsexitclk">txulpsexitclk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>This signal is asserted to cause the clock lane module to<p></p>
+transmit the Ultra Low Power (ULP) exit sequence and return to<p></p>
+the Stop state. This signal is clocked by txclkesc. While<p></p>
+txclkesc can be gated during ULP state, it must be reactivated<p></p>
+so that the txulpsexitclk command can be processed.Between the<p></p>
+assertion of txulpsexitclk and<p></p>
+ulpsactivenotclk there is a latency not higher than 55us for the<p></p>
+default configurations.</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL2_turnrequest_0">turnrequest_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Turn around Request<p></p>
+This signal is used to indicate that the protocol layer needs to<p></p>
+turn the lane around, allowing for the other side to start<p></p>
+transmitting the data.<p></p>
+turnrequest_0 is valid on the rising edges of txclkesc.<p></p>
+Note: turnrequest_0 is only meaningful for a lane that is<p></p>
+currently transmitting data (direction_0 = 0). If the data lane<p></p>
+module is in receive mode (direction_0 =1), this signal is<p></p>
+ignored.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3">DSIHOST_DPHYTX1_DPHY_CTL3</a></p>
+</td>
+<td><p>32'h0000804C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[7:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txdataesc_0">txdataesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Data Bus<p></p>
+This is the 8-bit bus data input to be transmitted in low-power<p></p>
+data transmission mode. The LSB is transmitted first.<p></p>
+txdataesc_0 is synchronous with the rising edge of txclkesc.</p>
+</td>
+</tr>
+<tr><td><p>[11:8]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txtriggeresc_0">txtriggeresc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Trigger 0-3<p></p>
+One of these signals is asserted with txrequestesc_0 to cause<p></p>
+the lane module to send the associated trigger across the lane<p></p>
+interconnection.<p></p>
+txtriggeresc_0 is synchronous with the rising edge of<p></p>
+txclkesc_0.<p></p>
+Note: Only one of the txtriggeresc_0 is asserted at any given<p></p>
+time, and only when txlpdtesc_0 and txulpsesc_0 are both at low<p></p>
+level.<p></p>
+■ txtriggeresc_0[0] corresponds to Reset-Trigger.<p></p>
+■ txtriggeresc_0[1] corresponds to Unknown-3 Trigger.<p></p>
+■ txtriggeresc_0[2] corresponds to Unknown-4 Trigger.<p></p>
+■ txtriggeresc_0[3] corresponds to Unknown-5 Trigger.</p>
+</td>
+</tr>
+<tr><td><p>[12:12]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txrequestesc_0">txrequestesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Request<p></p>
+This signal together with txlpdtesc_0, txulpsesc_0, and<p></p>
+txtriggeresc_0[3:0] is used to request the entry into any Escape<p></p>
+mode.<p></p>
+Once in Escape mode, the lane stays in Escape mode until<p></p>
+txrequestesc_0 is un-asserted.<p></p>
+Note: It can only be asserted by the protocol layer while<p></p>
+txrequestdatahs_0 is at low level.</p>
+</td>
+</tr>
+<tr><td><p>[13:13]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txlpdtesc_0">txlpdtesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Low-Power Data<p></p>
+This signal is asserted with txrequestesc_0 to cause the lane<p></p>
+module to enter low-power data transmission mode. The lane<p></p>
+module remains in this mode until txrequestesc_0 is<p></p>
+de-asserted.<p></p>
+Note: txulpsesc_0 and all the bits of txtriggeresc_0 must be at<p></p>
+low level when txlpdtesc_0 is at high level.</p>
+</td>
+</tr>
+<tr><td><p>[14:14]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txulpsesc_0">txulpsesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit ULP<p></p>
+This signal is asserted with txrequestesc_0 to cause the lane<p></p>
+module to enter the ULP State. The lane module remains in this<p></p>
+state until txulpsexit_0 is asserted and txrequestesc_0 is<p></p>
+de-asserted.<p></p>
+Note: txlpdtesc_0 and all bits of txtriggeresc_0 must be at low<p></p>
+level when txulpsesc_0 is at high level.</p>
+</td>
+</tr>
+<tr><td><p>[15:15]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txulpsexit_0">txulpsexit_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Initiate the transmission of the ULP exit sequence.<p></p>
+If this signal is asserted while the lane is in ULP state, the<p></p>
+PHY leaves the ULP state and begins driving a Mark-1 symbol on<p></p>
+the line interconnect.<p></p>
+Afterwards, upon de-assertion of txrequestesc_0, the PHY drives<p></p>
+the LP-11 Stop state. Between the assertion of txulpsexit_0 and<p></p>
+ulpsactivenotclk there is a latency not higher than 55us for the<p></p>
+default configurations<p></p>
+Note: This signal is ignored when the PHY is not in the ULP<p></p>
+state.</p>
+</td>
+</tr>
+<tr><td><p>[16:16]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL3_txvalidesc_0">txvalidesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Data Valid<p></p>
+This signal indicates that the protocol layer is driving valid<p></p>
+data on txdataesc_0 bus, to be transmitted.<p></p>
+Note: The lane module accepts the data when txrequestesc_0,<p></p>
+txvalidesc_0, and txreadyesc_0 are all active on the same<p></p>
+rising edge of txclkesc.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4">DSIHOST_DPHYTX1_DPHY_CTL4</a></p>
+</td>
+<td><p>32'h00008050</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[7:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txdataesc_1">txdataesc_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Data Bus<p></p>
+This is the 8-bit bus data input to be transmitted in low-power<p></p>
+data transmission mode. The LSB is transmitted first.<p></p>
+txdataesc_1 is synchronous with the rising edge of txclkesc.</p>
+</td>
+</tr>
+<tr><td><p>[11:8]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txtriggeresc_1">txtriggeresc_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Trigger 0-3<p></p>
+One of these signals is asserted with txrequestesc_1 to cause<p></p>
+the lane module to send the associated trigger across the lane<p></p>
+interconnection.<p></p>
+txtriggeresc_1 is synchronous with the rising edge of<p></p>
+txclkesc_1.<p></p>
+Note: Only one of the txtriggeresc_1 is asserted at any given<p></p>
+time, and only when txlpdtesc_1 and txulpsesc_1 are both at low<p></p>
+level.<p></p>
+■ txtriggeresc_1[0] corresponds to Reset-Trigger.<p></p>
+■ txtriggeresc_1[1] corresponds to Unknown-3 Trigger.<p></p>
+■ txtriggeresc_1[2] corresponds to Unknown-4 Trigger.<p></p>
+■ txtriggeresc_1[3] corresponds to Unknown-5 Trigger.</p>
+</td>
+</tr>
+<tr><td><p>[12:12]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txrequestesc_1">txrequestesc_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Request<p></p>
+This signal together with txlpdtesc_1, txulpsesc_1, and<p></p>
+txtriggeresc_1[3:0] is used to request the entry into any Escape<p></p>
+mode.<p></p>
+Once in Escape mode, the lane stays in Escape mode until<p></p>
+txrequestesc_1 is un-asserted.<p></p>
+Note: It can only be asserted by the protocol layer while<p></p>
+txrequestdatahs_1 is at low level.</p>
+</td>
+</tr>
+<tr><td><p>[13:13]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txlpdtesc_1">txlpdtesc_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Low-Power Data<p></p>
+This signal is asserted with txrequestesc_1 to cause the lane<p></p>
+module to enter low-power data transmission mode. The lane<p></p>
+module remains in this mode until txrequestesc_1 is<p></p>
+de-asserted.<p></p>
+Note: txulpsesc_1 and all the bits of txtriggeresc_1 must be at<p></p>
+low level when txlpdtesc_1 is at high level.</p>
+</td>
+</tr>
+<tr><td><p>[14:14]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txulpsesc_1">txulpsesc_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit ULP<p></p>
+This signal is asserted with txrequestesc_1 to cause the lane<p></p>
+module to enter the ULP State. The lane module remains in this<p></p>
+state until txulpsexit_1 is asserted and txrequestesc_1 is<p></p>
+de-asserted.<p></p>
+Note: txlpdtesc_1 and all bits of txtriggeresc_1 must be at low<p></p>
+level when txulpsesc_1 is at high level.</p>
+</td>
+</tr>
+<tr><td><p>[15:15]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txulpsexit_1">txulpsexit_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Initiate the transmission of the ULP exit sequence.<p></p>
+If this signal is asserted while the lane is in ULP state, the<p></p>
+PHY leaves the ULP state and begins driving a Mark-1 symbol on<p></p>
+the line interconnect.<p></p>
+Afterwards, upon de-assertion of txrequestesc_1, the PHY drives<p></p>
+the LP-11 Stop state. Between the assertion of txulpsexit_1 and<p></p>
+ulpsactivenotclk there is a latency not higher than 55us for the<p></p>
+default configurations<p></p>
+Note: This signal is ignored when the PHY is not in the ULP<p></p>
+state.</p>
+</td>
+</tr>
+<tr><td><p>[16:16]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL4_txvalidesc_1">txvalidesc_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Data Valid<p></p>
+This signal indicates that the protocol layer is driving valid<p></p>
+data on txdataesc_1 bus, to be transmitted.<p></p>
+Note: The lane module accepts the data when txrequestesc_1,<p></p>
+txvalidesc_1, and txreadyesc_1 are all active on the same<p></p>
+rising edge of txclkesc.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5">DSIHOST_DPHYTX1_DPHY_CTL5</a></p>
+</td>
+<td><p>32'h00008054</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txblaneclkSel">txblaneclkSel</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txskewcalhsBIU">txskewcalhsBIU</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Deskew Calibration.<p></p>
+When txskewcalhs is sampled high by txbyteclkhs, the lane module<p></p>
+initiates a deskew sequence. When txskewcalhs is de-asserted<p></p>
+data lanes stops sending deskew pattern, and the lane modules<p></p>
+initiates an End-of-Transmission (EOT) sequence.</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txrequestdatahs_0">txrequestdatahs_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Request And Data Valid Signal<p></p>
+When txrequesths_0 is sampled high by txbyteclkhs, the lane<p></p>
+module initiates a Start-of-Transmission (SOT) sequence. When<p></p>
+txrequesths_0 is sampled low while txreadyhs_0 is asserted, the<p></p>
+lane module initiates an End-of-Transmission (EOT) sequence. A<p></p>
+TX HS request is not allowed if the add-on PLL is not enabled<p></p>
+and locked.</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txrequestdatahs_1">txrequestdatahs_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Request And Data Valid Signal<p></p>
+When txrequesths_1 is sampled high by txbyteclkhs, the lane<p></p>
+module initiates a Start-of-Transmission (SOT) sequence. When<p></p>
+txrequesths_1 is sampled low while txreadyhs_1 is asserted, the<p></p>
+lane module initiates an End-of-Transmission (EOT) sequence. A<p></p>
+TX HS request is not allowed if the add-on PLL is not enabled<p></p>
+and locked.</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txrequestdatahs_2">txrequestdatahs_2</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Request And Data Valid Signal<p></p>
+When txrequesths_2 is sampled high by txbyteclkhs, the lane<p></p>
+module initiates a Start-of-Transmission (SOT) sequence. When<p></p>
+txrequesths_2 is sampled low while txreadyhs_2 is asserted, the<p></p>
+lane module initiates an End-of-Transmission (EOT) sequence. A<p></p>
+TX HS request is not allowed if the add-on PLL is not enabled<p></p>
+and locked.</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL5_txrequestdatahs_3">txrequestdatahs_3</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Request And Data Valid Signal<p></p>
+When txrequesths_3 is sampled high by txbyteclkhs, the lane<p></p>
+module initiates a Start-of-Transmission (SOT) sequence. When<p></p>
+txrequesths_3 is sampled low while txreadyhs_3 is asserted, the<p></p>
+lane module initiates an End-of-Transmission (EOT) sequence. A<p></p>
+TX HS request is not allowed if the add-on PLL is not enabled<p></p>
+and locked.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL6">DSIHOST_DPHYTX1_DPHY_CTL6</a></p>
+</td>
+<td><p>32'h00008058</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[7:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL6_txdatahs_0">txdatahs_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Data<p></p>
+This is an 8-bit data bus input that receives data to be<p></p>
+transmitted.<p></p>
+txdatahs_0[0] is transmitted first. The txdatahs_0 signal is<p></p>
+synchronous to the rising edge of txbyteclkhs.</p>
+</td>
+</tr>
+<tr><td><p>[15:8]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_CTL6_txdatahs_1">txdatahs_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Data<p></p>
+This is an 8-bit data bus input that receives data to be<p></p>
+transmitted.<p></p>
+txdatahs_1[0] is transmitted first. The txdatahs_1 signal is<p></p>
+synchronous to the rising edge of txbyteclkhs.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0">DSIHOST_DPHYTX1_DPHY_RB0</a></p>
+</td>
+<td><p>32'h0000805C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[6:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_cont_data">cont_data</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Each pin of this output bus is used to verify the continuity<p></p>
+from the chips pin all the way to the PHY’s analog ports<p></p>
+(package, bonding, die, etc). Please refer to the test modes<p></p>
+section for more information.<p></p>
+■ cont_data[0]: rext<p></p>
+■ cont_data[1]: clkn<p></p>
+■ cont_data[2]: clkp<p></p>
+■ cont_data[3]: datan0<p></p>
+■ cont_data[4]: datap0<p></p>
+■ cont_data[5]: datan1<p></p>
+■ cont_data[6]: datap1</p>
+</td>
+</tr>
+<tr><td><p>[7:7]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_lock">lock</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>PLL Lock Signal<p></p>
+When set, it signals that the PLL acquired lock with input<p></p>
+refclk.<p></p>
+This signal can be overridden through D-PHY test control<p></p>
+registers.</p>
+</td>
+</tr>
+<tr><td><p>[8:8]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_stopstateclk">stopstateclk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Clock Lane in Stop State<p></p>
+This signal indicates that the clock lane module is in Stop<p></p>
+state.</p>
+</td>
+</tr>
+<tr><td><p>[9:9]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_ulpsactivenotclk">ulpsactivenotclk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>This signal is asserted to cause the clock lane module to<p></p>
+transmit the Ultra Low Power (ULP) exit sequence and return to<p></p>
+the Stop state. This signal is clocked by txclkesc. While<p></p>
+txclkesc can be gated during ULP state, it must be reactivated<p></p>
+so that the txulpsexitclk command can be processed.Between the<p></p>
+assertion of txulpsexitclk and<p></p>
+ulpsactivenotclk there is a latency not higher than 55us for the<p></p>
+default configurations.</p>
+</td>
+</tr>
+<tr><td><p>[10:10]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_stopstatedata_0">stopstatedata_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Data Lane in Stop State<p></p>
+This signal indicates that the lane module is in Stop state.<p></p>
+This is valid for both TX and RX applications. This signal is<p></p>
+asynchronous to any clock in the PPI.<p></p>
+Note: If the application requires multi-lane synchronization,<p></p>
+the lanes must be kept in the Stop state during 67-byte clock<p></p>
+cycles; this occurs after the stopstate_0 signals are observed<p></p>
+in the PPI. Only then is a new burst request issued in the<p></p>
+lanes. If dead time between packets is a bottleneck, see table<p></p>
+“High-Speed Transition Times”, column High-Speed<p></p>
+Exit“HS- >LP” on page 397</p>
+</td>
+</tr>
+<tr><td><p>[11:11]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_stopstatedata_1">stopstatedata_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Data Lane in Stop State<p></p>
+This signal indicates that the lane module is in Stop state.<p></p>
+This is valid for both TX and RX applications. This signal is<p></p>
+asynchronous to any clock in the PPI.<p></p>
+Note: If the application requires multi-lane synchronization,<p></p>
+the lanes must be kept in the Stop state during 67-byte clock<p></p>
+cycles; this occurs after the stopstate_1 signals are observed<p></p>
+in the PPI. Only then is a new burst request issued in the<p></p>
+lanes. If dead time between packets is a bottleneck, see table<p></p>
+“High-Speed Transition Times”, column High-Speed<p></p>
+Exit“HS- >LP” on page 397</p>
+</td>
+</tr>
+<tr><td><p>[12:12]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_ulpsactivenot_0">ulpsactivenot_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>This signal indicates that the lane is in the Ultra Low Power<p></p>
+(ULP) state. For a TX lane, this signal is asserted (driven<p></p>
+low) some time after txulpsesc_0 and txrequestesc_0 are<p></p>
+asserted. txclkesc must be supplied to the PHY until<p></p>
+ulpsactivenot_0 is asserted. In order to leave the ULP state,<p></p>
+the transmitter first drives txulpsexit_0 high, then waits for<p></p>
+ulpsactivenot_0 to become high (inactive). At that point, the<p></p>
+PHY is active and transmits a Mark-1 on the Lines. The protocol<p></p>
+waits for a time Twakeup and then drives txrequestesc_0 inactive<p></p>
+to return the lane to Stop state.<p></p>
+For a RX lane, this signal indicates that the lane is in the ULP<p></p>
+state. At the beginning of ULP state, ulpsactivenot_0 is<p></p>
+asserted (driven low); at the end of the ULP state, this signal<p></p>
+becomes inactive to indicate that the Mark-1 state has been<p></p>
+observed. Later, after a period of time Twakeup, the<p></p>
+rxulpsesc_0 signal is de-asserted (driven high).</p>
+</td>
+</tr>
+<tr><td><p>[13:13]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB0_ulpsactivenot_1">ulpsactivenot_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>This signal indicates that the lane is in the Ultra Low Power<p></p>
+(ULP) state. For a TX lane, this signal is asserted (driven<p></p>
+low) some time after txulpsesc_1 and txrequestesc_1 are<p></p>
+asserted. txclkesc must be supplied to the PHY until<p></p>
+ulpsactivenot_1 is asserted. In order to leave the ULP state,<p></p>
+the transmitter first drives txulpsexit_1 high, then waits for<p></p>
+ulpsactivenot_1 to become high (inactive). At that point, the<p></p>
+PHY is active and transmits a Mark-1 on the Lines. The protocol<p></p>
+waits for a time Twakeup and then drives txrequestesc_1 inactive<p></p>
+to return the lane to Stop state.<p></p>
+For a RX lane, this signal indicates that the lane is in the ULP<p></p>
+state. At the beginning of ULP state, ulpsactivenot_1 is<p></p>
+asserted (driven low); at the end of the ULP state, this signal<p></p>
+becomes inactive to indicate that the Mark-1 state has been<p></p>
+observed. Later, after a period of time Twakeup, the<p></p>
+rxulpsesc_1 signal is de-asserted (driven high).</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB1">DSIHOST_DPHYTX1_DPHY_RB1</a></p>
+</td>
+<td><p>32'h00008060</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB1_txreadyhs_0">txreadyhs_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Ready<p></p>
+This signal indicates that txdatahs_0 is accepted by the lane<p></p>
+module to be serially transmitted. txreadyhs_0 and the other<p></p>
+PPI high-speed data TX signals are synchronous with the rising<p></p>
+edge of txbyteclkhs.</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB1_txreadyhs_1">txreadyhs_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>High-Speed Transmit Ready<p></p>
+This signal indicates that txdatahs_1 is accepted by the lane<p></p>
+module to be serially transmitted. txreadyhs_1 and the other<p></p>
+PPI high-speed data TX signals are synchronous with the rising<p></p>
+edge of txbyteclkhs.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2">DSIHOST_DPHYTX1_DPHY_RB2</a></p>
+</td>
+<td><p>32'h00008064</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_txreadyesc_0">txreadyesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Ready This signal indicates that the data<p></p>
+is accepted by the lane module to be serially transmitted.<p></p>
+txreadyesc_0 is synchronous with the rising edge of txclkesc.</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_txreadyesc_1">txreadyesc_1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Transmit Ready This signal indicates that the data<p></p>
+is accepted by the lane module to be serially transmitted.<p></p>
+txreadyesc_1 is synchronous with the rising edge of txclkesc.</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_errcontrol_0">errcontrol_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Control Error<p></p>
+This signal is asserted when an incorrect line state sequence is<p></p>
+detected (for example, if a turnaround request or Escape mode<p></p>
+request is immediately followed by a Stop state instead of the<p></p>
+required Bridge state, this signal is asserted and remains high<p></p>
+until the line returns to Stop state).</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_errcontentionlp0_0">errcontentionlp0_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>LP0 Contention Error<p></p>
+This signal is asserted when a lane module functioning as TX,<p></p>
+while its base direction is RX detects a contention situation<p></p>
+on a line while trying to drive the line low.</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB2_errcontentionlp1_0">errcontentionlp1_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>LP1 Contention Error<p></p>
+This signal is asserted when a lane module functioning as TX,<p></p>
+while its base direction is RX detects a contention situation<p></p>
+on a line while trying to drive the line high.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3">DSIHOST_DPHYTX1_DPHY_RB3</a></p>
+</td>
+<td><p>32'h00008068</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[7:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxdataesc_0">rxdataesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Receive Data Bus<p></p>
+This is the 8-bit bus data output received by the lane<p></p>
+interconnect. The signal rxdataesc_0[0] is received first. Data<p></p>
+is transferred on the rising edges of rxclkesc_0.</p>
+</td>
+</tr>
+<tr><td><p>[11:8]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxtriggeresc_0">rxtriggeresc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Receive Trigger 0-3<p></p>
+This signal indicates that a trigger event has been received in<p></p>
+the lane interconnect. The asserted rxtriggeresc_0 signal<p></p>
+remains active until a Stop state is detected on the lane<p></p>
+interconnect.<p></p>
+■ rxtriggeresc_0[0] corresponds to Reset-Trigger.<p></p>
+■ rxtriggeresc_0[1] corresponds to Unknown-3 Trigger.<p></p>
+■ rxtriggeresc_0[2] corresponds to Unknown-4 Trigger.<p></p>
+■ rxtriggeresc_0[3] corresponds to Unknown-5 Trigger</p>
+</td>
+</tr>
+<tr><td><p>[12:12]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxlpdtesc_0">rxlpdtesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Low-Power Data Receive Mode<p></p>
+This signal is asserted to indicate that the lane module is in<p></p>
+low-power data receive mode. While in this mode, received data<p></p>
+is driven onto rxdataesc_0 output bus when rxvalidesc 0 is<p></p>
+active. rxlpdtesc_0 remains asserted until a Stop state is<p></p>
+detected on the lane interconnect.</p>
+</td>
+</tr>
+<tr><td><p>[13:13]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxulpsesc_0">rxulpsesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape ULP Receive Mode<p></p>
+This signal is asserted to indicate that the lane module has<p></p>
+entered the ULP State. The lane module remains in this mode<p></p>
+with rxulpsesc_0 asserted until a Stop state is detected on the<p></p>
+lane interconnect.</p>
+</td>
+</tr>
+<tr><td><p>[14:14]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_rxvalidesc_0">rxvalidesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Mode Receive Data Valid<p></p>
+This signal indicates that the lane module is driving valid data<p></p>
+to the protocol layer on the rxdataesc_0 bus.<p></p>
+Note: There is no separate signal to indicate that the data is<p></p>
+ready for process. The protocol layer is expected to process<p></p>
+the received data on every rising edge of the rxclkesc_0 where<p></p>
+rxvalidesc_0 is asserted.<p></p>
+There is no provision in the PHY to slow down or throttle the<p></p>
+received data.</p>
+</td>
+</tr>
+<tr><td><p>[15:15]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_direction_0">direction_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Transmit/Receive Direction<p></p>
+This signal is used to indicate the current direction of the<p></p>
+lane interconnect. When direction_0 is low, the lane<p></p>
+interconnect is in transmit mode. When direction_0 is high, the<p></p>
+lane interconnect is in receive mode.</p>
+</td>
+</tr>
+<tr><td><p>[16:16]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_erresc_0">erresc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Escape Entry Error<p></p>
+If an unrecognized escape entry command is received, this signal<p></p>
+is asserted and remains high until the line returns to Stop<p></p>
+state.</p>
+</td>
+</tr>
+<tr><td><p>[17:17]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DPHYTX_DPHY_RB3_errsyncesc_0">errsyncesc_0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Low-Power Data Transmission Synchronization Error<p></p>
+If the number of bits received during low-power data<p></p>
+transmission mode is not a multiple of eight when the<p></p>
+transmission ends, this signal is asserted and remains high<p></p>
+until the line returns to Stop state.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="dsihost.htm#DSIHOST_DEBUG_CTRL">DSIHOST_DEBUG_CTRL</a></p>
+</td>
+<td><p>32'h0000806C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[5:0]</p>
+</td>
+<td><p><a HREF="dsihost.htm#DSIHOST_DEBUG_CTRL_SEL">SEL</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Debug bus mux selection</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
 </body></html>

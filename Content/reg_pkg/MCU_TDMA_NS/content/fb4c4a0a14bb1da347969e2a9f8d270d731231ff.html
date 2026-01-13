@@ -1,27 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">SEC_STATUSVAL</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1f4</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Secure Unit Status Value Register</p>
-<p>This register shows the current value of a status register on Secure channels selected by the pointer in SEC_STATUSPTR.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="SECSTATUSVAL"><td>[31:0]</td>
-<td><a href="#SECSTATUSVAL.desc">SECSTATUSVAL</a></td>
-<td>r</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#SECSTATUSVAL" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="SECSTATUSVAL.desc">SECSTATUSVAL<a class="headerlink" href="#SECSTATUSVAL.desc" title="Permalink to this headline"></a></h3>
-<p>Secure DMA Unit status value. Can be used for reading internal status values of the DMA Unit for debug purposes. Values shown here are dependent on STATUSPTR. Note that inputs are masked by security mapping before being presented here. This means that only status values mapped to Secure world are visible as non-Zero values.
-All unimplemented bits are RAZWI.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<body>
+
+<h1 id="_Content.name">SEC_STATUSVAL</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1f4</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Secure Unit Status Value Register</p>
+<p>This register shows the current value of a status register on Secure channels selected by the pointer in SEC_STATUSPTR.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="SECSTATUSVAL"><td>[31:0]</td>
+<td><a href="#SECSTATUSVAL.desc">SECSTATUSVAL</a></td>
+<td>r</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#SECSTATUSVAL" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<h2>Field Descriptions</h2>
+<h3 id="SECSTATUSVAL.desc">SECSTATUSVAL<a class="headerlink" href="#SECSTATUSVAL.desc" title="Permalink to this headline"></a></h3>
+<p>Secure DMA Unit status value. Can be used for reading internal status values of the DMA Unit for debug purposes. Values shown here are dependent on STATUSPTR. Note that inputs are masked by security mapping before being presented here. This means that only status values mapped to Secure world are visible as non-Zero values.
+All unimplemented bits are RAZWI.</p>
+</body>
 </html>

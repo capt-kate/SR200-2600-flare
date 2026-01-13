@@ -1,3237 +1,3237 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>FLIGHTCTRL</title></head>
-<body>
-<h1><a name="FLIGHTCTRL">"FLIGHTCTRL"</a>
-        </h1>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#FAULT_INPUT">FLIGHTCTRL_fault_grp0_INPUT</a></p>
-</td>
-<td><p>32'h00000000</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2<p></p>
-used to describe HW fault input signal, which is either level<p></p>
-or pulse, if it is pulse, it has to be in powClk domain (inside<p></p>
-flightControl, there is no syncPulse instantiation); if it is<p></p>
-level, flightControl will do clock domain crossing internally.<p></p>
-Each bit is corresponding to one of fault sources.</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#FAULT_INPUT_is_pulse">is_pulse</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>0: fault is level signal; 1: fault is pulse signal (powClk<p></p>
-domain)</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#FAULT_FLMASK">FLIGHTCTRL_fault_grp0_FLMASK</a></p>
-</td>
-<td><p>32'h00000004</p>
-</td>
-<td><p>fault log masking control, each bit is corresponding to one of<p></p>
-fault sources, once set (1’b1) it is used to mask out (disable)<p></p>
-the responding fault source get logged into $FLOGARRAY.</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#FAULT_FLMASK_maskbit">maskbit</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Each bit used to mask out (disable) the corresponding fault<p></p>
-source get logged in $FLOGARRAY</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#FAULT_INPUT">FLIGHTCTRL_fault_grp1_INPUT</a></p>
-</td>
-<td><p>32'h00000008</p>
-</td>
-<td><p>used to describe HW fault input signal, which is either level<p></p>
-or pulse, if it is pulse, it has to be in powClk domain (inside<p></p>
-flightControl, there is no syncPulse instantiation); if it is<p></p>
-level, flightControl will do clock domain crossing internally.<p></p>
-Each bit is corresponding to one of fault sources.</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#FAULT_INPUT_is_pulse">is_pulse</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>0: fault is level signal; 1: fault is pulse signal (powClk<p></p>
-domain)</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#FAULT_FLMASK">FLIGHTCTRL_fault_grp1_FLMASK</a></p>
-</td>
-<td><p>32'h0000000C</p>
-</td>
-<td><p>fault log masking control, each bit is corresponding to one of<p></p>
-fault sources, once set (1’b1) it is used to mask out (disable)<p></p>
-the responding fault source get logged into $FLOGARRAY.</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#FAULT_FLMASK_maskbit">maskbit</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Each bit used to mask out (disable) the corresponding fault<p></p>
-source get logged in $FLOGARRAY</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#INTR_CLEAR">FLIGHTCTRL_intr_grp_CLEAR</a></p>
-</td>
-<td><p>32'h00000010</p>
-</td>
-<td><p>Array size should equal to ceil(INTR_NUM/32), for example, if<p></p>
-INTR_NUM is 40, array size is 2<p></p>
-interrupt status clear, each bit controls one interrupt<p></p>
-status, write 1 clear.</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#INTR_CLEAR_clear">clear</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Write 1 to each bit will clear corresponding interrupt status<p></p>
-bit STATUS.flag</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#INTR_TOCTRL">FLIGHTCTRL_intr_grp_TOCTRL</a></p>
-</td>
-<td><p>32'h00000014</p>
-</td>
-<td><p>interrupt status time out clear, each bit controls if<p></p>
-corresponding interrupt status will be cleared when TOC (time<p></p>
-out counter) counting down to 0</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#INTR_TOCTRL_toc_en">toc_en</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Set corresponding bit to enable interrupt status time out clear</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#INTR_MASK">FLIGHTCTRL_intr_grp_MASK</a></p>
-</td>
-<td><p>32'h00000018</p>
-</td>
-<td><p>used to mask out (disable) the interrupt request bit output<p></p>
-from flight control block</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#INTR_MASK_maskbit">maskbit</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Each bit used to mask out (disable) corresponding interrupt<p></p>
-request bit output from flight control block</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#INTR_EDGE">FLIGHTCTRL_intr_grp_EDGE</a></p>
-</td>
-<td><p>32'h0000001C</p>
-</td>
-<td><p>used to select the interrupt request output: level (0 )or edge<p></p>
-(1)</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#INTR_EDGE_is_edge">is_edge</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>0: interrupt output is level signal;<p></p>
-1: interrupt output is edge signal;</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="flightControl.htm#INTR_STATUS">FLIGHTCTRL_intr_grp_STATUS</a></p>
-</td>
-<td><p>32'h00000020</p>
-</td>
-<td><p>indicate the status of each interrupt bit.</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#INTR_STATUS_flag">flag</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#FLIGHTCTRL_FLCTRL">FLIGHTCTRL_FLCTRL</a></p>
-</td>
-<td><p>32'h00000024</p>
-</td>
-<td><p>flight control</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#FLIGHTCTRL_FLCTRL_erase">erase</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Once set (1’b1), $FLOGARRAY contents and write pointer will be<p></p>
-erased (0).</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#FLIGHTCTRL_INTRCTRL">FLIGHTCTRL_INTRCTRL</a></p>
-</td>
-<td><p>32'h00000028</p>
-</td>
-<td><p>interrupt status timeout value, each interrupt has option<p></p>
-(enabled by INTRTOEN0 and INTRTOEN1) to use HW timeout to clear<p></p>
-its status, when all associated faults are de-asserted, the HW<p></p>
-timeout counter initiates a count-down until it reaches 0<p></p>
-unless any associated faults are asserted during this process,<p></p>
-in such cases, the HW time out counter will be reloaded with<p></p>
-the specified timeout value.</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[11:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#FLIGHTCTRL_INTRCTRL_timeout">timeout</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Time out value will be used to clear interrupt status</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#FLIGHTCTRL_TRIGCTRL">FLIGHTCTRL_TRIGCTRL</a></p>
-</td>
-<td><p>32'h0000002C</p>
-</td>
-<td><p>trigger pulse width, any associated fault (0 to 1 rising edge)<p></p>
-will cause relevant trigger assertion, in the meantime,<p></p>
-trigger’s count-down counter will be loaded with the value<p></p>
-of this register, and it will count down if no further fault<p></p>
-rising edge is detected until it reaches 0, trigger will be<p></p>
-de-asserted once the counter reaches 0.</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[11:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#FLIGHTCTRL_TRIGCTRL_tpls_width">tpls_width</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#FLIGHTCTRL_RSTNCTRL">FLIGHTCTRL_RSTNCTRL</a></p>
-</td>
-<td><p>32'h00000030</p>
-</td>
-<td><p>reset_n negative pulse width, any associated fault (0 to 1<p></p>
-rising edge) will cause relevant reset_n assertion, in the<p></p>
-meantime, reset_n’s count-down counter will be loaded with the<p></p>
-value of this register, and it will count down if no further<p></p>
-fault rising edge is detected until it reaches 0, reset_n will<p></p>
-be de-asserted once the counter reaches 0.</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[11:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#FLIGHTCTRL_RSTNCTRL_rpls_width">rpls_width</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt0_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h00000034</p>
-</td>
-<td><p>used to associate multiple faults to specified interrupt, the<p></p>
-Array size need to matched with interrupt number parameter<p></p>
-INTR_NUM<p></p>
-Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt0_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000038</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt1_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h0000003C</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt1_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000040</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt2_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h00000044</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt2_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000048</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt3_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h0000004C</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt3_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000050</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt4_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h00000054</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt4_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000058</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt5_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h0000005C</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt5_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000060</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt6_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h00000064</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt6_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000068</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt7_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h0000006C</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt7_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000070</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt8_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h00000074</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt8_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000078</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt9_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h0000007C</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt9_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000080</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt10_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h00000084</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt10_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000088</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt11_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h0000008C</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt11_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000090</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt12_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h00000094</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt12_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000098</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt13_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h0000009C</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt13_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h000000A0</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt14_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h000000A4</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt14_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h000000A8</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt15_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h000000AC</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt15_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h000000B0</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger0_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h000000B4</p>
-</td>
-<td><p>used to associate multiple faults to specified trigger, the<p></p>
-Array size need to matched with the configured trigger number<p></p>
-TRIG_NUM<p></p>
-Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger0_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h000000B8</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger1_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h000000BC</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger1_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h000000C0</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger2_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h000000C4</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger2_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h000000C8</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger3_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h000000CC</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger3_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h000000D0</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger4_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h000000D4</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger4_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h000000D8</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger5_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h000000DC</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger5_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h000000E0</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger6_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h000000E4</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger6_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h000000E8</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger7_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h000000EC</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger7_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h000000F0</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset0_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h000000F4</p>
-</td>
-<td><p>used to associate multiple faults to specified reset, the<p></p>
-Array size need to matched with the configured reset number<p></p>
-RST_NUM<p></p>
-Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset0_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h000000F8</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset1_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h000000FC</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset1_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000100</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset2_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h00000104</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset2_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000108</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset3_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h0000010C</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset3_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000110</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset4_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h00000114</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset4_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000118</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset5_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h0000011C</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset5_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000120</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset6_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h00000124</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset6_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000128</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset7_faultasso0_FAULT</a></p>
-</td>
-<td><p>32'h0000012C</p>
-</td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset7_faultasso1_FAULT</a></p>
-</td>
-<td><p>32'h00000130</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
-input</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(RW)</p>
-</td>
-<td><p><a HREF="flightControl.htm#FLIGHTCTRL_">FLIGHTCTRL_mem</a></p>
-</td>
-<td><p>32'h00000400</p>
-</td>
-<td><p>Fault log array used to record the ID of fault triggered in SoC<p></p>
-Internal memory</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p>Memory</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-<td><p>Memory</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="flightControl.htm#FLIGHTCTRL_SWLOG">FLIGHTCTRL_SWLOG</a></p>
-</td>
-<td><p>32'h00000800</p>
-</td>
-<td><p>SW can write any log value into this register, but only the<p></p>
-value range FAULT_NUM+1 ~ 2^FLID_WIDTH-1 is allowed to be<p></p>
-stored into $FLOGARRAY, they’re interleaving along with HW<p></p>
-fault ID.</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#FLIGHTCTRL_SWLOG_val">val</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="flightControl.htm#FLIGHTCTRL_FLWCNT">FLIGHTCTRL_FLWCNT</a></p>
-</td>
-<td><p>32'h00000804</p>
-</td>
-<td><p>Indicate how many fault IDs have been logged into $FLOGARRAY</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[15:0]</p>
-</td>
-<td><p><a HREF="flightControl.htm#FLIGHTCTRL_FLWCNT_counter">counter</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p><p></p>
-</p>
-</td>
-</tr>
-</table><p><p></p>
-</p>
+﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>FLIGHTCTRL</title></head>
+<body>
+<h1><a name="FLIGHTCTRL">"FLIGHTCTRL"</a>
+        </h1>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#FAULT_INPUT">FLIGHTCTRL_fault_grp0_INPUT</a></p>
+</td>
+<td><p>32'h00000000</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2<p></p>
+used to describe HW fault input signal, which is either level<p></p>
+or pulse, if it is pulse, it has to be in powClk domain (inside<p></p>
+flightControl, there is no syncPulse instantiation); if it is<p></p>
+level, flightControl will do clock domain crossing internally.<p></p>
+Each bit is corresponding to one of fault sources.</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#FAULT_INPUT_is_pulse">is_pulse</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>0: fault is level signal; 1: fault is pulse signal (powClk<p></p>
+domain)</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#FAULT_FLMASK">FLIGHTCTRL_fault_grp0_FLMASK</a></p>
+</td>
+<td><p>32'h00000004</p>
+</td>
+<td><p>fault log masking control, each bit is corresponding to one of<p></p>
+fault sources, once set (1’b1) it is used to mask out (disable)<p></p>
+the responding fault source get logged into $FLOGARRAY.</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#FAULT_FLMASK_maskbit">maskbit</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Each bit used to mask out (disable) the corresponding fault<p></p>
+source get logged in $FLOGARRAY</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#FAULT_INPUT">FLIGHTCTRL_fault_grp1_INPUT</a></p>
+</td>
+<td><p>32'h00000008</p>
+</td>
+<td><p>used to describe HW fault input signal, which is either level<p></p>
+or pulse, if it is pulse, it has to be in powClk domain (inside<p></p>
+flightControl, there is no syncPulse instantiation); if it is<p></p>
+level, flightControl will do clock domain crossing internally.<p></p>
+Each bit is corresponding to one of fault sources.</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#FAULT_INPUT_is_pulse">is_pulse</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>0: fault is level signal; 1: fault is pulse signal (powClk<p></p>
+domain)</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#FAULT_FLMASK">FLIGHTCTRL_fault_grp1_FLMASK</a></p>
+</td>
+<td><p>32'h0000000C</p>
+</td>
+<td><p>fault log masking control, each bit is corresponding to one of<p></p>
+fault sources, once set (1’b1) it is used to mask out (disable)<p></p>
+the responding fault source get logged into $FLOGARRAY.</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#FAULT_FLMASK_maskbit">maskbit</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Each bit used to mask out (disable) the corresponding fault<p></p>
+source get logged in $FLOGARRAY</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#INTR_CLEAR">FLIGHTCTRL_intr_grp_CLEAR</a></p>
+</td>
+<td><p>32'h00000010</p>
+</td>
+<td><p>Array size should equal to ceil(INTR_NUM/32), for example, if<p></p>
+INTR_NUM is 40, array size is 2<p></p>
+interrupt status clear, each bit controls one interrupt<p></p>
+status, write 1 clear.</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#INTR_CLEAR_clear">clear</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Write 1 to each bit will clear corresponding interrupt status<p></p>
+bit STATUS.flag</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#INTR_TOCTRL">FLIGHTCTRL_intr_grp_TOCTRL</a></p>
+</td>
+<td><p>32'h00000014</p>
+</td>
+<td><p>interrupt status time out clear, each bit controls if<p></p>
+corresponding interrupt status will be cleared when TOC (time<p></p>
+out counter) counting down to 0</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#INTR_TOCTRL_toc_en">toc_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Set corresponding bit to enable interrupt status time out clear</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#INTR_MASK">FLIGHTCTRL_intr_grp_MASK</a></p>
+</td>
+<td><p>32'h00000018</p>
+</td>
+<td><p>used to mask out (disable) the interrupt request bit output<p></p>
+from flight control block</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#INTR_MASK_maskbit">maskbit</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Each bit used to mask out (disable) corresponding interrupt<p></p>
+request bit output from flight control block</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#INTR_EDGE">FLIGHTCTRL_intr_grp_EDGE</a></p>
+</td>
+<td><p>32'h0000001C</p>
+</td>
+<td><p>used to select the interrupt request output: level (0 )or edge<p></p>
+(1)</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#INTR_EDGE_is_edge">is_edge</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>0: interrupt output is level signal;<p></p>
+1: interrupt output is edge signal;</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="flightControl.htm#INTR_STATUS">FLIGHTCTRL_intr_grp_STATUS</a></p>
+</td>
+<td><p>32'h00000020</p>
+</td>
+<td><p>indicate the status of each interrupt bit.</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#INTR_STATUS_flag">flag</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#FLIGHTCTRL_FLCTRL">FLIGHTCTRL_FLCTRL</a></p>
+</td>
+<td><p>32'h00000024</p>
+</td>
+<td><p>flight control</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#FLIGHTCTRL_FLCTRL_erase">erase</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Once set (1’b1), $FLOGARRAY contents and write pointer will be<p></p>
+erased (0).</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#FLIGHTCTRL_INTRCTRL">FLIGHTCTRL_INTRCTRL</a></p>
+</td>
+<td><p>32'h00000028</p>
+</td>
+<td><p>interrupt status timeout value, each interrupt has option<p></p>
+(enabled by INTRTOEN0 and INTRTOEN1) to use HW timeout to clear<p></p>
+its status, when all associated faults are de-asserted, the HW<p></p>
+timeout counter initiates a count-down until it reaches 0<p></p>
+unless any associated faults are asserted during this process,<p></p>
+in such cases, the HW time out counter will be reloaded with<p></p>
+the specified timeout value.</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[11:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#FLIGHTCTRL_INTRCTRL_timeout">timeout</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Time out value will be used to clear interrupt status</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#FLIGHTCTRL_TRIGCTRL">FLIGHTCTRL_TRIGCTRL</a></p>
+</td>
+<td><p>32'h0000002C</p>
+</td>
+<td><p>trigger pulse width, any associated fault (0 to 1 rising edge)<p></p>
+will cause relevant trigger assertion, in the meantime,<p></p>
+trigger’s count-down counter will be loaded with the value<p></p>
+of this register, and it will count down if no further fault<p></p>
+rising edge is detected until it reaches 0, trigger will be<p></p>
+de-asserted once the counter reaches 0.</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[11:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#FLIGHTCTRL_TRIGCTRL_tpls_width">tpls_width</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#FLIGHTCTRL_RSTNCTRL">FLIGHTCTRL_RSTNCTRL</a></p>
+</td>
+<td><p>32'h00000030</p>
+</td>
+<td><p>reset_n negative pulse width, any associated fault (0 to 1<p></p>
+rising edge) will cause relevant reset_n assertion, in the<p></p>
+meantime, reset_n’s count-down counter will be loaded with the<p></p>
+value of this register, and it will count down if no further<p></p>
+fault rising edge is detected until it reaches 0, reset_n will<p></p>
+be de-asserted once the counter reaches 0.</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[11:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#FLIGHTCTRL_RSTNCTRL_rpls_width">rpls_width</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt0_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h00000034</p>
+</td>
+<td><p>used to associate multiple faults to specified interrupt, the<p></p>
+Array size need to matched with interrupt number parameter<p></p>
+INTR_NUM<p></p>
+Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt0_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000038</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt1_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h0000003C</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt1_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000040</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt2_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h00000044</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt2_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000048</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt3_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h0000004C</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt3_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000050</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt4_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h00000054</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt4_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000058</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt5_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h0000005C</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt5_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000060</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt6_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h00000064</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt6_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000068</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt7_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h0000006C</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt7_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000070</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt8_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h00000074</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt8_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000078</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt9_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h0000007C</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt9_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000080</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt10_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h00000084</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt10_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000088</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt11_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h0000008C</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt11_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000090</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt12_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h00000094</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt12_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000098</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt13_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h0000009C</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt13_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h000000A0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt14_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h000000A4</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt14_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h000000A8</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt15_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h000000AC</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_interrupt15_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h000000B0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger0_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h000000B4</p>
+</td>
+<td><p>used to associate multiple faults to specified trigger, the<p></p>
+Array size need to matched with the configured trigger number<p></p>
+TRIG_NUM<p></p>
+Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger0_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h000000B8</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger1_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h000000BC</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger1_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h000000C0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger2_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h000000C4</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger2_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h000000C8</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger3_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h000000CC</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger3_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h000000D0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger4_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h000000D4</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger4_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h000000D8</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger5_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h000000DC</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger5_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h000000E0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger6_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h000000E4</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger6_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h000000E8</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger7_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h000000EC</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_trigger7_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h000000F0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset0_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h000000F4</p>
+</td>
+<td><p>used to associate multiple faults to specified reset, the<p></p>
+Array size need to matched with the configured reset number<p></p>
+RST_NUM<p></p>
+Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset0_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h000000F8</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset1_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h000000FC</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset1_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000100</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset2_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h00000104</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset2_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000108</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset3_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h0000010C</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset3_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000110</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset4_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h00000114</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset4_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000118</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset5_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h0000011C</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset5_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000120</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset6_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h00000124</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset6_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000128</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset7_faultasso0_FAULT</a></p>
+</td>
+<td><p>32'h0000012C</p>
+</td>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+FAULT_NUM is 40, array size is 2</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT">FLIGHTCTRL_reset7_faultasso1_FAULT</a></p>
+</td>
+<td><p>32'h00000130</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#ASSOENTRY_FAULT_entry">entry</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+input</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="flightControl.htm#FLIGHTCTRL_">FLIGHTCTRL_mem</a></p>
+</td>
+<td><p>32'h00000400</p>
+</td>
+<td><p>Fault log array used to record the ID of fault triggered in SoC<p></p>
+Internal memory</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p>Memory</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p>Memory</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="flightControl.htm#FLIGHTCTRL_SWLOG">FLIGHTCTRL_SWLOG</a></p>
+</td>
+<td><p>32'h00000800</p>
+</td>
+<td><p>SW can write any log value into this register, but only the<p></p>
+value range FAULT_NUM+1 ~ 2^FLID_WIDTH-1 is allowed to be<p></p>
+stored into $FLOGARRAY, they’re interleaving along with HW<p></p>
+fault ID.</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#FLIGHTCTRL_SWLOG_val">val</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="flightControl.htm#FLIGHTCTRL_FLWCNT">FLIGHTCTRL_FLWCNT</a></p>
+</td>
+<td><p>32'h00000804</p>
+</td>
+<td><p>Indicate how many fault IDs have been logged into $FLOGARRAY</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[15:0]</p>
+</td>
+<td><p><a HREF="flightControl.htm#FLIGHTCTRL_FLWCNT_counter">counter</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
 </body></html>

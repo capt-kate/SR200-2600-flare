@@ -1,101 +1,101 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">CH_BUILDCFG0</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x12f8</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Channel Build Configuration and Capability Register 0</p>
-<p>This register contains the configuration parameters can capabilities of the DMA channel.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="RAZWI_1"><td>[31:30]</td>
-<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
-<td>r</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
-</tr>
-<tr id="INC_WIDTH"><td>[29:26]</td>
-<td><a href="#INC_WIDTH.desc">INC_WIDTH</a></td>
-<td>r</td>
-<td>0x7</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#INC_WIDTH" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RAZWI_0"><td>[25]</td>
-<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
-<td>r</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DATA_WIDTH"><td>[24:22]</td>
-<td><a href="#DATA_WIDTH.desc">DATA_WIDTH</a></td>
-<td>r</td>
-<td>0x2</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DATA_WIDTH" title="Permalink to this row"></a></td>
-</tr>
-<tr id="ADDR_WIDTH"><td>[21:16]</td>
-<td><a href="#ADDR_WIDTH.desc">ADDR_WIDTH</a></td>
-<td>r</td>
-<td>0x1f</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#ADDR_WIDTH" title="Permalink to this row"></a></td>
-</tr>
-<tr id="CMD_BUFF_SIZE"><td>[15:8]</td>
-<td><a href="#CMD_BUFF_SIZE.desc">CMD_BUFF_SIZE</a></td>
-<td>r</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#CMD_BUFF_SIZE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DATA_BUFF_SIZE"><td>[7:0]</td>
-<td><a href="#DATA_BUFF_SIZE.desc">DATA_BUFF_SIZE</a></td>
-<td>r</td>
-<td>0x1</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DATA_BUFF_SIZE" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="INC_WIDTH.desc">INC_WIDTH<a class="headerlink" href="#INC_WIDTH.desc" title="Permalink to this headline"></a></h3>
-<p>Width of the increment register = INC_WIDTH + 1.
-When set to 0, then only 0 and 1 can be set as an increment. When larger values are used, then negative increments can be set using 2's complement:
-- INC_WIDTH = 0: 0..1
-- INC_WIDTH = 1: -2..1
-- INC_WIDTH = 2: -4..3
-- INC_WIDTH = 3: -8..7
-- ...
-- INC_WIDTH = 15: -32768..32767</p>
-<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="DATA_WIDTH.desc">DATA_WIDTH<a class="headerlink" href="#DATA_WIDTH.desc" title="Permalink to this headline"></a></h3>
-<p>Data Width:
-- 000: 8-bit
-- 001: 16-bit
-- 010: 32-bit
-- 011: 64-bit
-- 100: 128-bit
-- 101: 256-bit
-- 110: 512-bit
-- 111: 1024-bit</p>
-<h3 id="ADDR_WIDTH.desc">ADDR_WIDTH<a class="headerlink" href="#ADDR_WIDTH.desc" title="Permalink to this headline"></a></h3>
-<p>Address Width in bits = ADDR_WIDTH + 1</p>
-<h3 id="CMD_BUFF_SIZE.desc">CMD_BUFF_SIZE<a class="headerlink" href="#CMD_BUFF_SIZE.desc" title="Permalink to this headline"></a></h3>
-<p>Command Buffer Size in command words - 1. Total Size = (CMD_BUFF_SIZE + 1) * 4 bytes.</p>
-<h3 id="DATA_BUFF_SIZE.desc">DATA_BUFF_SIZE<a class="headerlink" href="#DATA_BUFF_SIZE.desc" title="Permalink to this headline"></a></h3>
-<p>Data Buffer Size in entries - 1. Total Size = ((DATA_BUFF_SIZE + 1) * DATA_WIDTH /8) bytes.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<body>
+
+<h1 id="_Content.name">CH_BUILDCFG0</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x12f8</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Channel Build Configuration and Capability Register 0</p>
+<p>This register contains the configuration parameters can capabilities of the DMA channel.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_1"><td>[31:30]</td>
+<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
+<td>r</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INC_WIDTH"><td>[29:26]</td>
+<td><a href="#INC_WIDTH.desc">INC_WIDTH</a></td>
+<td>r</td>
+<td>0x7</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INC_WIDTH" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_0"><td>[25]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td>r</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DATA_WIDTH"><td>[24:22]</td>
+<td><a href="#DATA_WIDTH.desc">DATA_WIDTH</a></td>
+<td>r</td>
+<td>0x2</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DATA_WIDTH" title="Permalink to this row"></a></td>
+</tr>
+<tr id="ADDR_WIDTH"><td>[21:16]</td>
+<td><a href="#ADDR_WIDTH.desc">ADDR_WIDTH</a></td>
+<td>r</td>
+<td>0x1f</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#ADDR_WIDTH" title="Permalink to this row"></a></td>
+</tr>
+<tr id="CMD_BUFF_SIZE"><td>[15:8]</td>
+<td><a href="#CMD_BUFF_SIZE.desc">CMD_BUFF_SIZE</a></td>
+<td>r</td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#CMD_BUFF_SIZE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DATA_BUFF_SIZE"><td>[7:0]</td>
+<td><a href="#DATA_BUFF_SIZE.desc">DATA_BUFF_SIZE</a></td>
+<td>r</td>
+<td>0x1</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DATA_BUFF_SIZE" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<h2>Field Descriptions</h2>
+<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="INC_WIDTH.desc">INC_WIDTH<a class="headerlink" href="#INC_WIDTH.desc" title="Permalink to this headline"></a></h3>
+<p>Width of the increment register = INC_WIDTH + 1.
+When set to 0, then only 0 and 1 can be set as an increment. When larger values are used, then negative increments can be set using 2's complement:
+- INC_WIDTH = 0: 0..1
+- INC_WIDTH = 1: -2..1
+- INC_WIDTH = 2: -4..3
+- INC_WIDTH = 3: -8..7
+- ...
+- INC_WIDTH = 15: -32768..32767</p>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="DATA_WIDTH.desc">DATA_WIDTH<a class="headerlink" href="#DATA_WIDTH.desc" title="Permalink to this headline"></a></h3>
+<p>Data Width:
+- 000: 8-bit
+- 001: 16-bit
+- 010: 32-bit
+- 011: 64-bit
+- 100: 128-bit
+- 101: 256-bit
+- 110: 512-bit
+- 111: 1024-bit</p>
+<h3 id="ADDR_WIDTH.desc">ADDR_WIDTH<a class="headerlink" href="#ADDR_WIDTH.desc" title="Permalink to this headline"></a></h3>
+<p>Address Width in bits = ADDR_WIDTH + 1</p>
+<h3 id="CMD_BUFF_SIZE.desc">CMD_BUFF_SIZE<a class="headerlink" href="#CMD_BUFF_SIZE.desc" title="Permalink to this headline"></a></h3>
+<p>Command Buffer Size in command words - 1. Total Size = (CMD_BUFF_SIZE + 1) * 4 bytes.</p>
+<h3 id="DATA_BUFF_SIZE.desc">DATA_BUFF_SIZE<a class="headerlink" href="#DATA_BUFF_SIZE.desc" title="Permalink to this headline"></a></h3>
+<p>Data Buffer Size in entries - 1. Total Size = ((DATA_BUFF_SIZE + 1) * DATA_WIDTH /8) bytes.</p>
+</body>
 </html>
