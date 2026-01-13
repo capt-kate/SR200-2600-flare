@@ -2,6 +2,8 @@
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
+<body>
+
 <h1 id="_Content.name">WRITECMD</h1>
 <dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x8</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
 <p>Write command register. Configures the write command and data transfer mode to be used during automatic writes.</p>
@@ -99,4 +101,5 @@
 <p>The protocol mode used for write data. See Tbl. 5.6 for the allowable value in this field. As with the READCMD register, the write data protocol mode must be greater than or equal to the command protocol mode.</p>
 <h3 id="WRITE_COMMAND.desc">WRITE_COMMAND<a class="headerlink" href="#WRITE_COMMAND.desc" title="Permalink to this headline"></a></h3>
 <p>These bits contain the command byte(s) that will be sent to the device to begin a write command. They are what the xSPI specification calls RI, and so bits 15–8 must either equal bits 7–0 or be an inverted version of bits 7–0. Bits 15–8 will be sent on the rising edge of any xSPI command clock cycle, whereas bits 7–0 will be sent on the subsequent falling edge. In non–xSPI (non–8D) modes, bits 15–8 will be ignored.</p>
-
+</body>
+</html>

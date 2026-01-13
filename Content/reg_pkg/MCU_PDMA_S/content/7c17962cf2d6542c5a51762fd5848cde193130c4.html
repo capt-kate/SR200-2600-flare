@@ -2,6 +2,8 @@
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
+<body>
+
 <h1 id="_Content.name">CH_LINKADDR</h1>
 <dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x2478</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
 <p>Channel Link Address Register</p>
@@ -43,4 +45,5 @@ NOTE: Commands are fetched with the security and privilege attribute of the chan
 <h3 id="LINKADDREN.desc">LINKADDREN<a class="headerlink" href="#LINKADDREN.desc" title="Permalink to this headline"></a></h3>
 <p>Enable Link Address. When set to '1', the DMAC fetches the next command defined by LINKADDR. When set to '0' the DMAC will return to idle at the end of the current command.</p>
 <p>NOTE: the linked command fetched by the DMAC needs to clear this field to mark the end of the command chain. Otherwise it may result in an infinite loop of the same command.</p>
-
+</body>
+</html>

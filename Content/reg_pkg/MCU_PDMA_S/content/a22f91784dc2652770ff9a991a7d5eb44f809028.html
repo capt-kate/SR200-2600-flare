@@ -2,6 +2,8 @@
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
+<body>
+
 <h1 id="_Content.name">CH_CMD</h1>
 <dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1c00</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
 <p>Channel DMA Command Register</p>
@@ -170,4 +172,5 @@ This field cannot be changed while the SRCSWTRIGINREQ bit is set.</p>
 <p>DMA Clear command. When set to '1', it remains high until all DMA Channel registers and any internal queues and buffers are cleared, before returning to '0'. When set at the same time as ENABLECMD or while the DMA channel is already enabled, the clear only occurs after any ongoing DMA operation is either completed, stopped or disabled and the ENABLECMD bit is deasserted by the DMA.</p>
 <h3 id="ENABLECMD.desc">ENABLECMD<a class="headerlink" href="#ENABLECMD.desc" title="Permalink to this headline"></a></h3>
 <p>Channel Enable. When set to '1', enable to channel to run its programmed task. When set to '1', it cannot be set back to '0', and this field automatically clears to '0' when a DMA process is completed. To force the DMA to stop prematurely, you must use CH_CMD.STOPCMD instead.</p>
-
+</body>
+</html>

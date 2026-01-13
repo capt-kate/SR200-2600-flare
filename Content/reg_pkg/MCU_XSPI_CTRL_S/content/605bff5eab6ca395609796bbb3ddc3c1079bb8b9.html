@@ -2,6 +2,8 @@
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
+<body>
+
 <h1 id="_Content.name">READCMD</h1>
 <dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x4</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
 <p>Read command register. Configures the read command and data transfer mode to be used during automatic reads.</p>
@@ -89,4 +91,5 @@
 <p>DM: The protocol mode to be used for the data portion of the interaction. It uses the same bit field as the command protocol mode, outlined in Tbl. 5.6, but this time applies to the data bits. One rule is that the data mode must be of an equal or higher speed mode than the command protocol mode.</p>
 <h3 id="CB.desc">CB<a class="headerlink" href="#CB.desc" title="Permalink to this headline"></a></h3>
 <p>These bits contain the command byte(s) that will be sent to the device to begin a read command. They are what the xSPI specification calls RI, and so bits 15–8 must either equal bits 7–0 or be an inverted version of bits 7–0. Bits 15–8 will be sent on the rising edge of any xSPI command clock cycle, whereas bits 7–0 will be sent on the falling edge. In non–xSPI modes, bits 15–8 will be ignored. If Cb is set, then both bytes will be ignored.</p>
-
+</body>
+</html>
