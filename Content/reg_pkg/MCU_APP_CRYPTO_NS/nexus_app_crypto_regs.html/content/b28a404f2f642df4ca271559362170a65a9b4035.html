@@ -2,58 +2,89 @@
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
-<body>
-
-<h1 id="_Content.name">AES_CTRL</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x4</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr class="reserved-field"><td>[31:3]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="outputdis"><td>[2]</td>
-<td><a href="#outputdis.desc">outputdis</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Output Disable</td>
-<td>H<a class="headerlink" href="#outputdis" title="Permalink to this row"></a></td>
-</tr>
-<tr id="resume"><td>[1]</td>
-<td><a href="#resume.desc">resume</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Resume Operation</td>
-<td>H<a class="headerlink" href="#resume" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-field"><td>[0]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="outputdis.desc">outputdis - Output Disable<a class="headerlink" href="#outputdis.desc" title="Permalink to this headline"></a></h3>
-<p>Set this bit to stop AES from outputting data on data bus. Some applications, such as DRBG BCC function, are only interested in the last ciphertext (CTX) of encryption result. Since the current design always saves the last CTX in the AES IV register, it is unnecessary to output the entire encryption result on data bus (save power and memory space).<p></p>
+    <body>
+        <h1 id="_Content.name">AES_CTRL</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x4</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31:3]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="outputdis" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[2]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#outputdis.desc">outputdis</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Output Disable</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#outputdis" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="resume" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[1]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#resume.desc">resume</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Resume Operation</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#resume" title="Permalink to this row"></a></td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="outputdis.desc">outputdis - Output Disable<a class="headerlink" href="#outputdis.desc" title="Permalink to this headline"></a></h3>
+        <p>Set this bit to stop AES from outputting data on data bus. Some applications, such as DRBG BCC function, are only interested in the last ciphertext (CTX) of encryption result. Since the current design always saves the last CTX in the AES IV register, it is unnecessary to output the entire encryption result on data bus (save power and memory space).<p></p>
 Notes:<p></p>
 1. The input date stream must be multiple of 128-bits (no partial codeword allowed)<p></p>
-2. Resume operation is supported.<p></p>
-</p>
-<h3 id="resume.desc">resume - Resume Operation<a class="headerlink" href="#resume.desc" title="Permalink to this headline"></a></h3>
-<p>Set this bit to resume previous operation.<p></p>
+2. Resume operation is supported.<p></p></p>
+        <h3 id="resume.desc">resume - Resume Operation<a class="headerlink" href="#resume.desc" title="Permalink to this headline"></a></h3>
+        <p>Set this bit to resume previous operation.<p></p>
 Notes:<p></p>
 1. User needs to load the saved configurations, KEY1 and IV back to corresponding registers.<p></p>
 2. Resume operation is not supported in Key Wrap and GCM mode.<p></p>
-3. Refer to AES_STR_SIZE register for data size limitation<p></p>
-</p>
-</body>
+3. Refer to AES_STR_SIZE register for data size limitation<p></p></p>
+    </body>
 </html>

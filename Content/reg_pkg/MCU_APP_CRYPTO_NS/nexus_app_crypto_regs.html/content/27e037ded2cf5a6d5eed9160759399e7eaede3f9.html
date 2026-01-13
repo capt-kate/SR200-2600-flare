@@ -2,27 +2,50 @@
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
-<body>
-
-<h1 id="_Content.name">SPAD_ACC_DATA</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x54</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>The field is the read/write data in CPU access mode. It is only valid in CPU access mode. The standard procedure for reading/writing the Scratch Pad is the following.<p></p>
+    <body>
+        <h1 id="_Content.name">SPAD_ACC_DATA</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x54</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>The field is the read/write data in CPU access mode. It is only valid in CPU access mode. The standard procedure for reading/writing the Scratch Pad is the following.<p></p>
 1. Program SPAD_ACC_ADDR.<p></p>
 2. Read/Program SPAD_ACC_DATA.<p></p>
-The step 2 triggers the hardware to perform requested operation. The hardware is implemented with an auto-increment feature which automatically increases the SPAD_ACC_ADDR register by one after step 2. If the firmware wants to read/write a contiguous memory space, it just needs to provide the initial address to SPAD_ACC_ADDR register and then keeps reading/writing SPAD_ACC_DATA register.<p></p>
-</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="spad_acc_data"><td>[31:0]</td>
-<td><a href="#spad_acc_data.desc">spad_acc_data</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#spad_acc_data" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="spad_acc_data.desc">spad_acc_data<a class="headerlink" href="#spad_acc_data.desc" title="Permalink to this headline"></a></h3>
-</body>
+The step 2 triggers the hardware to perform requested operation. The hardware is implemented with an auto-increment feature which automatically increases the SPAD_ACC_ADDR register by one after step 2. If the firmware wants to read/write a contiguous memory space, it just needs to provide the initial address to SPAD_ACC_ADDR register and then keeps reading/writing SPAD_ACC_DATA register.<p></p></p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr id="spad_acc_data" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#spad_acc_data.desc">spad_acc_data</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#spad_acc_data" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="spad_acc_data.desc">spad_acc_data<a class="headerlink" href="#spad_acc_data.desc" title="Permalink to this headline"></a></h3>
+    </body>
 </html>

@@ -2,167 +2,225 @@
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
-<body>
-
-<h1 id="_Content.name">Output DMA Control Register</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1c</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr class="reserved-field"><td>[31]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="out_dis_xmit_err_code"><td>[30]</td>
-<td><a href="#out_dis_xmit_err_code.desc">out_dis_xmit_err_code</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Output DMA DATA WRITE ERROR CHECK DISABLE</td>
-<td>H<a class="headerlink" href="#out_dis_xmit_err_code" title="Permalink to this row"></a></td>
-</tr>
-<tr id="out_dis_ll_err_code"><td>[29]</td>
-<td><a href="#out_dis_ll_err_code.desc">out_dis_ll_err_code</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Output DMA LINK LIST ERROR CHECK DISABLE</td>
-<td>H<a class="headerlink" href="#out_dis_ll_err_code" title="Permalink to this row"></a></td>
-</tr>
-<tr id="out_dis_err_code"><td>[28]</td>
-<td><a href="#out_dis_err_code.desc">out_dis_err_code</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Output DMA DISABLE FIFO PARITY CHECK SELECT</td>
-<td>H<a class="headerlink" href="#out_dis_err_code" title="Permalink to this row"></a></td>
-</tr>
-<tr id="out_cache_mode"><td>[27:24]</td>
-<td><a href="#out_cache_mode.desc">out_cache_mode</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Output DMA Cache Mode Select</td>
-<td>H<a class="headerlink" href="#out_cache_mode" title="Permalink to this row"></a></td>
-</tr>
-<tr id="out_wid_ext"><td>[23:20]</td>
-<td><a href="#out_wid_ext.desc">out_wid_ext</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Output AXI Write ID</td>
-<td>H<a class="headerlink" href="#out_wid_ext" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-field"><td>[19:18]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="out_req_algn64"><td>[17]</td>
-<td><a href="#out_req_algn64.desc">out_req_algn64</a></td>
-<td>rw</td>
-<td>0x1</td>
-<td></td>
-<td>Output DMA Request Data Aligned 64 Byte</td>
-<td>H<a class="headerlink" href="#out_req_algn64" title="Permalink to this row"></a></td>
-</tr>
-<tr id="out_req_pause"><td>[16]</td>
-<td><a href="#out_req_pause.desc">out_req_pause</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Output DMA Request Pause</td>
-<td>H<a class="headerlink" href="#out_req_pause" title="Permalink to this row"></a></td>
-</tr>
-<tr id="out_bus_sz"><td>[15]</td>
-<td><a href="#out_bus_sz.desc">out_bus_sz</a></td>
-<td>rw</td>
-<td>0x1</td>
-<td></td>
-<td>Output DMA FIFO Bus Size</td>
-<td>H<a class="headerlink" href="#out_bus_sz" title="Permalink to this row"></a></td>
-</tr>
-<tr id="out_burst_type"><td>[14:13]</td>
-<td><a href="#out_burst_type.desc">out_burst_type</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Output DMA Burst Type</td>
-<td>H<a class="headerlink" href="#out_burst_type" title="Permalink to this row"></a></td>
-</tr>
-<tr id="out_burst_len"><td>[12:8]</td>
-<td><a href="#out_burst_len.desc">out_burst_len</a></td>
-<td>rw</td>
-<td>0x8</td>
-<td></td>
-<td>Output DMA Burst Length</td>
-<td>H<a class="headerlink" href="#out_burst_len" title="Permalink to this row"></a></td>
-</tr>
-<tr id="out_wid"><td>[7:4]</td>
-<td><a href="#out_wid.desc">out_wid</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Output AXI Write ID Extension</td>
-<td>H<a class="headerlink" href="#out_wid" title="Permalink to this row"></a></td>
-</tr>
-<tr id="out_prot_mode"><td>[3:1]</td>
-<td><a href="#out_prot_mode.desc">out_prot_mode</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Output DMA Protect Mode Select</td>
-<td>H<a class="headerlink" href="#out_prot_mode" title="Permalink to this row"></a></td>
-</tr>
-<tr id="out_dma_ena"><td>[0]</td>
-<td><a href="#out_dma_ena.desc">out_dma_ena</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Output DMA Enable</td>
-<td>H<a class="headerlink" href="#out_dma_ena" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="out_dis_xmit_err_code.desc">out_dis_xmit_err_code - Output DMA DATA WRITE ERROR CHECK DISABLE<a class="headerlink" href="#out_dis_xmit_err_code.desc" title="Permalink to this headline"></a></h3>
-<p>When this bit is asserted, the Output Link List Error check is disabled. The error interrupt is still set, but it does not affect the DMA operation.<p></p>
-</p>
-<h3 id="out_dis_ll_err_code.desc">out_dis_ll_err_code - Output DMA LINK LIST ERROR CHECK DISABLE<a class="headerlink" href="#out_dis_ll_err_code.desc" title="Permalink to this headline"></a></h3>
-<p>When this bit is asserted, the Output Link List Error check is disabled. The error interrupt is still set, but it does not affect the DMA operation.<p></p>
-</p>
-<h3 id="out_dis_err_code.desc">out_dis_err_code - Output DMA DISABLE FIFO PARITY CHECK SELECT<a class="headerlink" href="#out_dis_err_code.desc" title="Permalink to this headline"></a></h3>
-<p>When this bit is asserted, the Output FIFO Parity Error check is disabled. The error interrupt is still set, but it does not affect the DMA operation.<p></p>
-</p>
-<h3 id="out_cache_mode.desc">out_cache_mode - Output DMA Cache Mode Select<a class="headerlink" href="#out_cache_mode.desc" title="Permalink to this headline"></a></h3>
-<p>This field provides the CACHE mode for the DMA write transactions.<p></p>
-</p>
-<h3 id="out_wid_ext.desc">out_wid_ext - Output AXI Write ID<a class="headerlink" href="#out_wid_ext.desc" title="Permalink to this headline"></a></h3>
-<h3 id="out_req_algn64.desc">out_req_algn64 - Output DMA Request Data Aligned 64 Byte<a class="headerlink" href="#out_req_algn64.desc" title="Permalink to this headline"></a></h3>
-<h3 id="out_req_pause.desc">out_req_pause - Output DMA Request Pause<a class="headerlink" href="#out_req_pause.desc" title="Permalink to this headline"></a></h3>
-<h3 id="out_bus_sz.desc">out_bus_sz - Output DMA FIFO Bus Size<a class="headerlink" href="#out_bus_sz.desc" title="Permalink to this headline"></a></h3>
-<p>The default of this bit is product dependent.<p></p>
+    <body>
+        <h1 id="_Content.name">Output DMA Control Register</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x1c</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="out_dis_xmit_err_code" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[30]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#out_dis_xmit_err_code.desc">out_dis_xmit_err_code</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Output DMA DATA WRITE ERROR CHECK DISABLE</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#out_dis_xmit_err_code" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="out_dis_ll_err_code" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[29]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#out_dis_ll_err_code.desc">out_dis_ll_err_code</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Output DMA LINK LIST ERROR CHECK DISABLE</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#out_dis_ll_err_code" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="out_dis_err_code" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[28]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#out_dis_err_code.desc">out_dis_err_code</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Output DMA DISABLE FIFO PARITY CHECK SELECT</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#out_dis_err_code" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="out_cache_mode" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[27:24]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#out_cache_mode.desc">out_cache_mode</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Output DMA Cache Mode Select</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#out_cache_mode" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="out_wid_ext" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[23:20]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#out_wid_ext.desc">out_wid_ext</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Output AXI Write ID</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#out_wid_ext" title="Permalink to this row"></a></td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[19:18]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="out_req_algn64" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[17]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#out_req_algn64.desc">out_req_algn64</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Output DMA Request Data Aligned 64 Byte</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#out_req_algn64" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="out_req_pause" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[16]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#out_req_pause.desc">out_req_pause</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Output DMA Request Pause</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#out_req_pause" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="out_bus_sz" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[15]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#out_bus_sz.desc">out_bus_sz</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Output DMA FIFO Bus Size</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#out_bus_sz" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="out_burst_type" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[14:13]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#out_burst_type.desc">out_burst_type</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Output DMA Burst Type</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#out_burst_type" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="out_burst_len" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[12:8]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#out_burst_len.desc">out_burst_len</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x8</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Output DMA Burst Length</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#out_burst_len" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="out_wid" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[7:4]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#out_wid.desc">out_wid</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Output AXI Write ID Extension</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#out_wid" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="out_prot_mode" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[3:1]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#out_prot_mode.desc">out_prot_mode</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Output DMA Protect Mode Select</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#out_prot_mode" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="out_dma_ena" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#out_dma_ena.desc">out_dma_ena</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Output DMA Enable</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#out_dma_ena" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="out_dis_xmit_err_code.desc">out_dis_xmit_err_code - Output DMA DATA WRITE ERROR CHECK DISABLE<a class="headerlink" href="#out_dis_xmit_err_code.desc" title="Permalink to this headline"></a></h3>
+        <p>When this bit is asserted, the Output Link List Error check is disabled. The error interrupt is still set, but it does not affect the DMA operation.<p></p></p>
+        <h3 id="out_dis_ll_err_code.desc">out_dis_ll_err_code - Output DMA LINK LIST ERROR CHECK DISABLE<a class="headerlink" href="#out_dis_ll_err_code.desc" title="Permalink to this headline"></a></h3>
+        <p>When this bit is asserted, the Output Link List Error check is disabled. The error interrupt is still set, but it does not affect the DMA operation.<p></p></p>
+        <h3 id="out_dis_err_code.desc">out_dis_err_code - Output DMA DISABLE FIFO PARITY CHECK SELECT<a class="headerlink" href="#out_dis_err_code.desc" title="Permalink to this headline"></a></h3>
+        <p>When this bit is asserted, the Output FIFO Parity Error check is disabled. The error interrupt is still set, but it does not affect the DMA operation.<p></p></p>
+        <h3 id="out_cache_mode.desc">out_cache_mode - Output DMA Cache Mode Select<a class="headerlink" href="#out_cache_mode.desc" title="Permalink to this headline"></a></h3>
+        <p>This field provides the CACHE mode for the DMA write transactions.<p></p></p>
+        <h3 id="out_wid_ext.desc">out_wid_ext - Output AXI Write ID<a class="headerlink" href="#out_wid_ext.desc" title="Permalink to this headline"></a></h3>
+        <h3 id="out_req_algn64.desc">out_req_algn64 - Output DMA Request Data Aligned 64 Byte<a class="headerlink" href="#out_req_algn64.desc" title="Permalink to this headline"></a></h3>
+        <h3 id="out_req_pause.desc">out_req_pause - Output DMA Request Pause<a class="headerlink" href="#out_req_pause.desc" title="Permalink to this headline"></a></h3>
+        <h3 id="out_bus_sz.desc">out_bus_sz - Output DMA FIFO Bus Size<a class="headerlink" href="#out_bus_sz.desc" title="Permalink to this headline"></a></h3>
+        <p>The default of this bit is product dependent.<p></p>
 This register provides the maximum bus size of the AXI output data bus. The value is indicated as follows:<p></p>
 0 - 32 bit bus<p></p>
-1 - 64 bit bus<p></p>
-</p>
-<h3 id="out_burst_type.desc">out_burst_type - Output DMA Burst Type<a class="headerlink" href="#out_burst_type.desc" title="Permalink to this headline"></a></h3>
-<h3 id="out_burst_len.desc">out_burst_len - Output DMA Burst Length<a class="headerlink" href="#out_burst_len.desc" title="Permalink to this headline"></a></h3>
-<p>Burst Length provides the number of beats of data transfer on the bus. The value can be from 1 to 16.<p></p>
+1 - 64 bit bus<p></p></p>
+        <h3 id="out_burst_type.desc">out_burst_type - Output DMA Burst Type<a class="headerlink" href="#out_burst_type.desc" title="Permalink to this headline"></a></h3>
+        <h3 id="out_burst_len.desc">out_burst_len - Output DMA Burst Length<a class="headerlink" href="#out_burst_len.desc" title="Permalink to this headline"></a></h3>
+        <p>Burst Length provides the number of beats of data transfer on the bus. The value can be from 1 to 16.<p></p>
 The total data transfer for each burst is calculated as follows:<p></p>
-Number of bytes = Burst Length x Bus Size (in terms of bytes)<p></p>
-</p>
-<h3 id="out_wid.desc">out_wid - Output AXI Write ID Extension<a class="headerlink" href="#out_wid.desc" title="Permalink to this headline"></a></h3>
-<h3 id="out_prot_mode.desc">out_prot_mode - Output DMA Protect Mode Select<a class="headerlink" href="#out_prot_mode.desc" title="Permalink to this headline"></a></h3>
-<p>This provides the PROT mode field for the DMA write transactions.<p></p>
-</p>
-<h3 id="out_dma_ena.desc">out_dma_ena - Output DMA Enable<a class="headerlink" href="#out_dma_ena.desc" title="Permalink to this headline"></a></h3>
-<p>When this bit is set, the Output DMA is enabled.<p></p>
-</p>
-</body>
+Number of bytes = Burst Length x Bus Size (in terms of bytes)<p></p></p>
+        <h3 id="out_wid.desc">out_wid - Output AXI Write ID Extension<a class="headerlink" href="#out_wid.desc" title="Permalink to this headline"></a></h3>
+        <h3 id="out_prot_mode.desc">out_prot_mode - Output DMA Protect Mode Select<a class="headerlink" href="#out_prot_mode.desc" title="Permalink to this headline"></a></h3>
+        <p>This provides the PROT mode field for the DMA write transactions.<p></p></p>
+        <h3 id="out_dma_ena.desc">out_dma_ena - Output DMA Enable<a class="headerlink" href="#out_dma_ena.desc" title="Permalink to this headline"></a></h3>
+        <p>When this bit is set, the Output DMA is enabled.<p></p></p>
+    </body>
 </html>

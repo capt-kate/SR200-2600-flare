@@ -2,72 +2,106 @@
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
-<body>
-
-<h1 id="_Content.name">AMC_CFG</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr class="reserved-field"><td>[31:30]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="rkek"><td>[29]</td>
-<td><a href="#rkek.desc">rkek</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>RKEK Enable</td>
-<td>H<a class="headerlink" href="#rkek" title="Permalink to this row"></a></td>
-</tr>
-<tr id="securemode"><td>[28]</td>
-<td><a href="#securemode.desc">securemode</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Secure Mode</td>
-<td>H<a class="headerlink" href="#securemode" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-field"><td>[27:5]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="opmode"><td>[4:0]</td>
-<td><a href="#opmode.desc">opmode</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Operation Mode</td>
-<td>H<a class="headerlink" href="#opmode" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="rkek.desc">rkek - RKEK Enable<a class="headerlink" href="#rkek.desc" title="Permalink to this headline"></a></h3>
-<p>This field determines whether RKEK (root key) should be used in the following operations. When this bit is set, hardware directly uses the RKEK to replace a particular operand (see below) during the operation.<p></p>
+    <body>
+        <h1 id="_Content.name">AMC_CFG</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x0</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31:30]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="rkek" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[29]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#rkek.desc">rkek</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RKEK Enable</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#rkek" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="securemode" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[28]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#securemode.desc">securemode</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Secure Mode</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#securemode" title="Permalink to this row"></a></td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[27:5]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="opmode" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[4:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#opmode.desc">opmode</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Operation Mode</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#opmode" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="rkek.desc">rkek - RKEK Enable<a class="headerlink" href="#rkek.desc" title="Permalink to this headline"></a></h3>
+        <p>This field determines whether RKEK (root key) should be used in the following operations. When this bit is set, hardware directly uses the RKEK to replace a particular operand (see below) during the operation.<p></p>
 • ZMP - Montgomery Multiplication (X operand)<p></p>
 • ZMP - Modular Multiplication (X operand)<p></p>
 • ECP - Point (Scalar) Multiplication (Y1 operand)<p></p>
 Notes:<p></p>
 1. Do not set this bit if the programmed operation mode is not one of the operations listed above.<p></p>
-2. Currently the max size of RKEK is 521-bit. If RKEK is used, the operand bitwidth shall be less than or equal to 521 in the AMC_SIZE register.<p></p>
-</p>
-<h3 id="securemode.desc">securemode - Secure Mode<a class="headerlink" href="#securemode.desc" title="Permalink to this headline"></a></h3>
-<p>This field determines the operational sequence when performing ZMP-Modular Exponentiation computation.<p></p>
+2. Currently the max size of RKEK is 521-bit. If RKEK is used, the operand bitwidth shall be less than or equal to 521 in the AMC_SIZE register.<p></p></p>
+        <h3 id="securemode.desc">securemode - Secure Mode<a class="headerlink" href="#securemode.desc" title="Permalink to this headline"></a></h3>
+        <p>This field determines the operational sequence when performing ZMP-Modular Exponentiation computation.<p></p>
 • 0h= Use unsecured sequence (faster computation)<p></p>
 • 1h= Use secured sequence against Power Analysis attack (slower computation)<p></p>
 Notes:<p></p>
-1. If this field is programmed to one, the internal hardware ensures all calculations (such as multiplication) that appear in the operational sequence take exactly the same number of cycle to complete regardless the value of operands. Otherwise, the internal hardware tires to take the cycle as less as possible to complete the calculation (Applied to all ZMP and ECP operations).<p></p>
-</p>
-<h3 id="opmode.desc">opmode - Operation Mode<a class="headerlink" href="#opmode.desc" title="Permalink to this headline"></a></h3>
-<p>The engine supports two algorithms. The various modular operations<p></p>
+1. If this field is programmed to one, the internal hardware ensures all calculations (such as multiplication) that appear in the operational sequence take exactly the same number of cycle to complete regardless the value of operands. Otherwise, the internal hardware tires to take the cycle as less as possible to complete the calculation (Applied to all ZMP and ECP operations).<p></p></p>
+        <h3 id="opmode.desc">opmode - Operation Mode<a class="headerlink" href="#opmode.desc" title="Permalink to this headline"></a></h3>
+        <p>The engine supports two algorithms. The various modular operations<p></p>
 (ZMP) are used to support RSA. The various point calculations (ECP) are used to support Elliptic Curve. The field determines this operation mode:<p></p>
 • 00h= ZMP - Montgomery Multiplication<p></p>
 • 01h= ZMP - Modular Multiplication<p></p>
@@ -83,7 +117,6 @@ Notes:<p></p>
 • 14h= ECP - Point Additive Inverse<p></p>
 • Else= Reserved<p></p>
 Notes:<p></p>
-1. ZMP's Modular Inverse requires the operands to be in a finite field.<p></p>
-</p>
-</body>
+1. ZMP's Modular Inverse requires the operands to be in a finite field.<p></p></p>
+    </body>
 </html>

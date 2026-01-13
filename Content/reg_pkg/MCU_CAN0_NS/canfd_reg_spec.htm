@@ -1,323 +1,524 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head></head>
-<body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
         <h1>canfd_reg_spec</h1>
-
-<table><tr><td><p>Block/Register Name</p>
-</td>
-<td><p>Default value</p>
-</td>
-<td><p>Address(ahb)</p>
-</td>
-</tr>
-<tr><td><p><a
-href="#CANFD_mark">block:CANFD</a></p>
-</td>
-<td><p></p>
-</td>
-<td><p>0x0</p>
-</td>
-</tr>
-<tr><td><p><a
-href="#R_BASE_ADDR_mark">R_BASE_ADDR</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>0xf00</p>
-</td>
-</tr>
-<tr><td><p><a
-href="#R_ECC_OFFSET_mark">R_ECC_OFFSET</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>0xf04</p>
-</td>
-</tr>
-<tr><td><p><a
-href="#W_BASE_ADDR_mark">W_BASE_ADDR</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>0xf08</p>
-</td>
-</tr>
-<tr><td><p><a
-href="#W_ECC_OFFSET_mark">W_ECC_OFFSET</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>0xf0c</p>
-</td>
-</tr>
-</table><h1>Revision</h1>
-<table width="576"><tr><td><p class="Default">Revision</p>
-</td>
-<td><p class="Default"></p>
-</td>
-<td><p class="Default"></p>
-</td>
-<td><p class="Default"></p>
-</td>
-</tr>
-<tr><td><p class="Default">v1.00</p>
-</td>
-<td><p class="Default">2024/9/12</p>
-</td>
-<td><p class="Default">linzhang</p>
-</td>
-<td><p class="Default">Initial version</p>
-</td>
-</tr>
-</table><p class="Textbody"></p>
-<p class="Textbody"><a name="OLE_LINK30"></a></p>
-<table width="510"><tr><td><p class="Default">Register map</p>
-</td>
-<td><p class="Default">Bus width in bytes</p>
-</td>
-<td><p class="Default">Bus addressing</p>
-</td>
-<td><p class="Default">Endianness</p>
-</td>
-<td><p class="Default">Description</p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td><p class="Default">ahb</p>
-</td>
-<td><p class="Default">4</p>
-</td>
-<td><p class="Default">1</p>
-</td>
-<td><p class="Default">LITTLE</p>
-</td>
-<td><p class="Default">The
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Block/Register Name</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Default value</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Address(ahb)</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a href="#CANFD_mark">block:CANFD</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a href="#R_BASE_ADDR_mark">R_BASE_ADDR</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>0xf00</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a href="#R_ECC_OFFSET_mark">R_ECC_OFFSET</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>0xf04</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a href="#W_BASE_ADDR_mark">W_BASE_ADDR</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>0xf08</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a href="#W_ECC_OFFSET_mark">W_ECC_OFFSET</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>0xf0c</p>
+                </td>
+            </tr>
+        </table>
+        <h1>Revision</h1>
+        <table width="576" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p class="Default">Revision</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p class="Default">
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p class="Default">
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p class="Default">
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Default">v1.00</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Default">2024/9/12</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Default">linzhang</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Default">Initial version</p>
+                </td>
+            </tr>
+        </table>
+        <p class="Textbody">
+        </p>
+        <p class="Textbody"><a name="OLE_LINK30"></a>
+        </p>
+        <table width="510" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p class="Default">Register map</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p class="Default">Bus width in bytes</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p class="Default">Bus addressing</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p class="Default">Endianness</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p class="Default">Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Default">ahb</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Default">4</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Default">1</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Default">LITTLE</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Default">The
 register map for AHB bus</p>
-</td>
-</tr>
-</table><p class="Standard"></p>
-<h1><a name="OLE_LINK19"></a><a name="OLE_LINK1">1.CANFD</a></h1>
-<p class="Standard">(The following table is just used by reggen
+                </td>
+            </tr>
+        </table>
+        <p class="Standard">
+        </p>
+        <h1><a name="OLE_LINK19"></a><a name="OLE_LINK1">1.CANFD</a>
+        </h1>
+        <p class="Standard">(The following table is just used by reggen
 script,it will be removed in official register spec)</p>
-<table width="357"><tr><td><p class="Default"><a
-name="CANFD_mark">Block name</a></p>
-</td>
-<td><p class="Default"><a
-name="ADC_mark2"></a>CANFD</p>
-</td>
-</tr>
-<tr><td><p class="Default">size</p>
-</td>
-<td><p class="Default">0xFFF</p>
-</td>
-</tr>
-<tr style='height:6.25pt'><td colspan="2"><p class="Default"></p>
-</td>
-</tr>
-<tr><td><p class="Default">Register
+        <table width="357" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p class="Default"><a name="CANFD_mark">Block name</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p class="Default"><a name="ADC_mark2"></a>CANFD</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Default">size</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Default">0xFFF</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td colspan="2" class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Default">
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Default">Register
 map name</p>
-</td>
-<td><p class="Default">Base
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Default">Base
 address</p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td><p class="Default">ahb</p>
-</td>
-<td><p class="Default"><a
-name="OLE_LINK16">0x</a>00000000</p>
-</td>
-</tr>
-</table><p class="MsoNormal"><a name="__DdeLink__65620_1236852755"></a></p>
-<h2><a name="OLE_LINK15"></a><a
-name="OLE_LINK10">1.1R_BASE_ADDR</a></h2>
-<table width="523"><tr style='height:1.0pt'><td colspan="6"><p class="Standard"><a name="R_BASE_ADDR_mark">R_BASE_ADDR</a></p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td><p class="Standard">offset</p>
-</td>
-<td><p class="Standard">0Xf00</p>
-</td>
-<td><p class="Standard">size</p>
-</td>
-<td><p class="Standard">32</p>
-</td>
-<td><p class="Standard">default</p>
-</td>
-<td><p class="Standard">0x0</p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td colspan="6"><p class="Standard"></p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td><p class="Standard">bits</p>
-</td>
-<td><p class="Standard">name</p>
-</td>
-<td><p class="Standard">s/w</p>
-</td>
-<td><p class="Standard">h/w</p>
-</td>
-<td><p class="Standard">default</p>
-</td>
-<td><p class="Standard">description</p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td><p class="Standard"><a name="_Hlk171979910">31:0</a></p>
-</td>
-<td><p class="Default">r_base_addr</p>
-</td>
-<td><p class="Standard">RW</p>
-</td>
-<td><p class="Standard">RO</p>
-</td>
-<td><p class="Standard">0</p>
-</td>
-<td><p class="Default">Base
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Default">ahb</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Default"><a name="OLE_LINK16">0x</a>00000000</p>
+                </td>
+            </tr>
+        </table>
+        <p class="MsoNormal"><a name="__DdeLink__65620_1236852755"></a>
+        </p>
+        <h2><a name="OLE_LINK15"></a><a name="OLE_LINK10">1.1R_BASE_ADDR</a>
+        </h2>
+        <table width="523" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td colspan="6" class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p class="Standard"><a name="R_BASE_ADDR_mark">R_BASE_ADDR</a>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">offset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">0Xf00</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">size</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">32</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">default</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Standard">0x0</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td colspan="6" class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Standard">
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">bits</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">name</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">s/w</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">h/w</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">default</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Standard">description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard"><a name="_Hlk171979910">31:0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Default">r_base_addr</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">RW</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">RO</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Default">Base
 address for<a name="OLE_LINK17">sending</a>data</p>
-</td>
-</tr>
-</table><p class="Standard"></p>
-<h2>1.2R_ECC_OFFSET</h2>
-<table width="523"><tr style='height:1.0pt'><td colspan="6"><p class="Standard"><a name="R_ECC_OFFSET_mark">R_ECC_OFFSET</a></p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td><p class="Standard">offset</p>
-</td>
-<td><p class="Standard">0Xf04</p>
-</td>
-<td><p class="Standard">size</p>
-</td>
-<td><p class="Standard">32</p>
-</td>
-<td><p class="Standard">default</p>
-</td>
-<td><p class="Standard">0x0</p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td colspan="6"><p class="Standard"></p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td><p class="Standard">bits</p>
-</td>
-<td><p class="Standard">name</p>
-</td>
-<td><p class="Standard">s/w</p>
-</td>
-<td><p class="Standard">h/w</p>
-</td>
-<td><p class="Standard">default</p>
-</td>
-<td><p class="Standard">description</p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td><p class="Standard">1:0</p>
-</td>
-<td><p class="Default">r_ecc_offset</p>
-</td>
-<td><p class="Standard">RW</p>
-</td>
-<td><p class="Standard">RO</p>
-</td>
-<td><p class="Standard">0</p>
-</td>
-<td><p class="Default">offset address for sending
+                </td>
+            </tr>
+        </table>
+        <p class="Standard">
+        </p>
+        <h2>1.2R_ECC_OFFSET</h2>
+        <table width="523" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td colspan="6" class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p class="Standard"><a name="R_ECC_OFFSET_mark">R_ECC_OFFSET</a>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">offset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">0Xf04</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">size</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">32</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">default</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Standard">0x0</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td colspan="6" class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Standard">
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">bits</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">name</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">s/w</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">h/w</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">default</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Standard">description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">1:0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Default">r_ecc_offset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">RW</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">RO</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Default">offset address for sending
 ecc</p>
-</td>
-</tr>
-</table><p class="Standard"></p>
-<h2>1.3W_BASE_ADDR</h2>
-<table width="523"><tr style='height:1.0pt'><td colspan="6"><p class="Standard"><a name="W_BASE_ADDR_mark">W_BASE_ADDR</a></p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td><p class="Standard">offset</p>
-</td>
-<td><p class="Standard">0Xf08</p>
-</td>
-<td><p class="Standard">size</p>
-</td>
-<td><p class="Standard">32</p>
-</td>
-<td><p class="Standard">default</p>
-</td>
-<td><p class="Standard">0x0</p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td colspan="6"><p class="Standard"></p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td><p class="Standard">bits</p>
-</td>
-<td><p class="Standard">name</p>
-</td>
-<td><p class="Standard">s/w</p>
-</td>
-<td><p class="Standard">h/w</p>
-</td>
-<td><p class="Standard">default</p>
-</td>
-<td><p class="Standard">description</p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td><p class="Standard">31:0</p>
-</td>
-<td><p class="Default">w_base_addr</p>
-</td>
-<td><p class="Standard">RW</p>
-</td>
-<td><p class="Standard">RO</p>
-</td>
-<td><p class="Standard">0</p>
-</td>
-<td><p class="Default">Base
+                </td>
+            </tr>
+        </table>
+        <p class="Standard">
+        </p>
+        <h2>1.3W_BASE_ADDR</h2>
+        <table width="523" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td colspan="6" class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p class="Standard"><a name="W_BASE_ADDR_mark">W_BASE_ADDR</a>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">offset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">0Xf08</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">size</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">32</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">default</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Standard">0x0</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td colspan="6" class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Standard">
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">bits</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">name</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">s/w</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">h/w</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">default</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Standard">description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">31:0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Default">w_base_addr</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">RW</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">RO</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Default">Base
 address of<a name="OLE_LINK18">received</a>data</p>
-</td>
-</tr>
-</table><p class="Standard"></p>
-<h2>1.4W_ECC_OFFSET</h2>
-<table width="523"><tr style='height:1.0pt'><td colspan="6"><p class="Standard"><a name="W_ECC_OFFSET_mark">W_ECC_OFFSET</a></p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td><p class="Standard">offset</p>
-</td>
-<td><p class="Standard">0Xf0c</p>
-</td>
-<td><p class="Standard">size</p>
-</td>
-<td><p class="Standard">32</p>
-</td>
-<td><p class="Standard">default</p>
-</td>
-<td><p class="Standard">0x0</p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td colspan="6"><p class="Standard"></p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td><p class="Standard">bits</p>
-</td>
-<td><p class="Standard">name</p>
-</td>
-<td><p class="Standard">s/w</p>
-</td>
-<td><p class="Standard">h/w</p>
-</td>
-<td><p class="Standard">default</p>
-</td>
-<td><p class="Standard">description</p>
-</td>
-</tr>
-<tr style='height:1.0pt'><td><p class="Standard">1:0</p>
-</td>
-<td><p class="Default">w_ecc_offset</p>
-</td>
-<td><p class="Standard">RW</p>
-</td>
-<td><p class="Standard">RO</p>
-</td>
-<td><p class="Standard">0</p>
-</td>
-<td><p class="Default">offset address for received
+                </td>
+            </tr>
+        </table>
+        <p class="Standard">
+        </p>
+        <h2>1.4W_ECC_OFFSET</h2>
+        <table width="523" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td colspan="6" class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p class="Standard"><a name="W_ECC_OFFSET_mark">W_ECC_OFFSET</a>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">offset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">0Xf0c</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">size</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">32</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">default</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Standard">0x0</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td colspan="6" class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Standard">
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">bits</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">name</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">s/w</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">h/w</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">default</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Standard">description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">1:0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Default">w_ecc_offset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">RW</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">RO</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p class="Standard">0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p class="Default">offset address for received
 ecc</p>
-</td>
-</tr>
-</table><p class="Standard"></p>
-<p class="Standard"></p>
-</body></html>
+                </td>
+            </tr>
+        </table>
+        <p class="Standard">
+        </p>
+        <p class="Standard">
+        </p>
+    </body>
+</html>

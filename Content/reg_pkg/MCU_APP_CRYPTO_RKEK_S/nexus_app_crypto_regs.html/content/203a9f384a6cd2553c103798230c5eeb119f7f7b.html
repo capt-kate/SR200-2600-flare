@@ -2,96 +2,147 @@
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
-<body>
-
-<h1 id="_Content.name">AES_CFG</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="gcmivsrc"><td>[31]</td>
-<td><a href="#gcmivsrc.desc">gcmivsrc</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>GCM Mode IV Source</td>
-<td>H<a class="headerlink" href="#gcmivsrc" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-field"><td>[30:17]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="rkek"><td>[16]</td>
-<td><a href="#rkek.desc">rkek</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>RKEK Enable</td>
-<td>H<a class="headerlink" href="#rkek" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-field"><td>[15]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="ctrmod"><td>[14:8]</td>
-<td><a href="#ctrmod.desc">ctrmod</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>CTR Mode Modular</td>
-<td>H<a class="headerlink" href="#ctrmod" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-field"><td>[7]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="opmode"><td>[6:4]</td>
-<td><a href="#opmode.desc">opmode</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Operation Mode</td>
-<td>H<a class="headerlink" href="#opmode" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-field"><td>[3]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="keylen"><td>[2:1]</td>
-<td><a href="#keylen.desc">keylen</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Key Length</td>
-<td>H<a class="headerlink" href="#keylen" title="Permalink to this row"></a></td>
-</tr>
-<tr id="decrypt"><td>[0]</td>
-<td><a href="#decrypt.desc">decrypt</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Decryption Indicator</td>
-<td>H<a class="headerlink" href="#decrypt" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="gcmivsrc.desc">gcmivsrc - GCM Mode IV Source<a class="headerlink" href="#gcmivsrc.desc" title="Permalink to this headline"></a></h3>
-<p>AES expects that the IV will be delivered on data bus (as part of the data stream) instead of feeding from the AES IV registers in GCM mode. It is because GCM requires special handling on the IV and the IV size can be very large. However, when the IV is 12 bytes (a special case in GCM mode), the IV can be provided from the AES IV register. This field determines the source of the IV. It is only valid when IV is 12 bytes in GCM mode.<p></p>
+    <body>
+        <h1 id="_Content.name">AES_CFG</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x0</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr id="gcmivsrc" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#gcmivsrc.desc">gcmivsrc</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">GCM Mode IV Source</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#gcmivsrc" title="Permalink to this row"></a></td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[30:17]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="rkek" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[16]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#rkek.desc">rkek</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RKEK Enable</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#rkek" title="Permalink to this row"></a></td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[15]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="ctrmod" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[14:8]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#ctrmod.desc">ctrmod</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">CTR Mode Modular</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#ctrmod" title="Permalink to this row"></a></td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[7]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="opmode" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[6:4]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#opmode.desc">opmode</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Operation Mode</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#opmode" title="Permalink to this row"></a></td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[3]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="keylen" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[2:1]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#keylen.desc">keylen</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Key Length</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#keylen" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="decrypt" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#decrypt.desc">decrypt</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Decryption Indicator</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#decrypt" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="gcmivsrc.desc">gcmivsrc - GCM Mode IV Source<a class="headerlink" href="#gcmivsrc.desc" title="Permalink to this headline"></a></h3>
+        <p>AES expects that the IV will be delivered on data bus (as part of the data stream) instead of feeding from the AES IV registers in GCM mode. It is because GCM requires special handling on the IV and the IV size can be very large. However, when the IV is 12 bytes (a special case in GCM mode), the IV can be provided from the AES IV register. This field determines the source of the IV. It is only valid when IV is 12 bytes in GCM mode.<p></p>
 • 0h= IV is provided from AES IV registers.<p></p>
 • 1h= IV is provided through data bus.<p></p>
 Notes:<p></p>
@@ -103,22 +154,21 @@ Notes:<p></p>
 • Decryption input data order: AAD -&gt; Payload (Stream) -&gt; Tag<p></p>
 3. Decryption output data order == encryption input data order. Encryption output data order == decryption input data order.<p></p>
 4. There is no gap/padding between each data type in the data stream.</p>
-<h3 id="rkek.desc">rkek - RKEK Enable<a class="headerlink" href="#rkek.desc" title="Permalink to this headline"></a></h3>
-<p>This bit determines whether RKEK should be used as AES key. When this bit is set, RKEK is loaded into AES KEY1 register. Read/ Write to KEY1 register would be blocked until this bit is cleared.<p></p>
+        <h3 id="rkek.desc">rkek - RKEK Enable<a class="headerlink" href="#rkek.desc" title="Permalink to this headline"></a></h3>
+        <p>This bit determines whether RKEK should be used as AES key. When this bit is set, RKEK is loaded into AES KEY1 register. Read/ Write to KEY1 register would be blocked until this bit is cleared.<p></p>
 Notes:<p></p>
 1. Resume feature is not allowed if RKEK is used.<p></p>
 2. Read operation on KEY1 while this bit is set will return all 1's.<p></p>
 3. AES clears KEY1 register (RKEK) automatically when this bit is cleared<p></p>
 4. After every AES task that uses RKEK is done, this bit must be cleared. It can be set again if the next AES task still uses RKEK.</p>
-<h3 id="ctrmod.desc">ctrmod - CTR Mode Modular<a class="headerlink" href="#ctrmod.desc" title="Permalink to this headline"></a></h3>
-<p>This field controls the counter modular in AES CTR mode. The counter increment (+1) only involves counter's LSB m-bit (modular "2^m"). In other words, the active counter bitwidth is limited by this field.<p></p>
+        <h3 id="ctrmod.desc">ctrmod - CTR Mode Modular<a class="headerlink" href="#ctrmod.desc" title="Permalink to this headline"></a></h3>
+        <p>This field controls the counter modular in AES CTR mode. The counter increment (+1) only involves counter's LSB m-bit (modular "2^m"). In other words, the active counter bitwidth is limited by this field.<p></p>
 • 0h~Fh= 128-bit (max counter bitwidth)<p></p>
 • Else= Programmed value is the counter bitwidth.<p></p>
 Notes:<p></p>
-1. AES switches to 32-bit counter (m=32) automatically in GCM mode. This field is ignored.<p></p>
-</p>
-<h3 id="opmode.desc">opmode - Operation Mode<a class="headerlink" href="#opmode.desc" title="Permalink to this headline"></a></h3>
-<p>The field determines the AES operation mode<p></p>
+1. AES switches to 32-bit counter (m=32) automatically in GCM mode. This field is ignored.<p></p></p>
+        <h3 id="opmode.desc">opmode - Operation Mode<a class="headerlink" href="#opmode.desc" title="Permalink to this headline"></a></h3>
+        <p>The field determines the AES operation mode<p></p>
 • 0h= ECB mode<p></p>
 • 1h= CBC mode<p></p>
 • 2h= CTR mode<p></p>
@@ -127,19 +177,16 @@ Notes:<p></p>
 • 7h= GCM mode<p></p>
 • Else reserved<p></p>
 Notes:<p></p>
-1. CBC mode uses NIST-SP800-38A CS2 algorithm for partial handling<p></p>
-</p>
-<h3 id="keylen.desc">keylen - Key Length<a class="headerlink" href="#keylen.desc" title="Permalink to this headline"></a></h3>
-<p>The field determines the AES key length<p></p>
+1. CBC mode uses NIST-SP800-38A CS2 algorithm for partial handling<p></p></p>
+        <h3 id="keylen.desc">keylen - Key Length<a class="headerlink" href="#keylen.desc" title="Permalink to this headline"></a></h3>
+        <p>The field determines the AES key length<p></p>
 • 0h= 128-Bit Key Size<p></p>
 • 1h= 256-Bit Key Size<p></p>
 • 2h= 192-Bit Key Size<p></p>
-• Else reserved<p></p>
-</p>
-<h3 id="decrypt.desc">decrypt - Decryption Indicator<a class="headerlink" href="#decrypt.desc" title="Permalink to this headline"></a></h3>
-<p>The field determines the AES operation<p></p>
+• Else reserved<p></p></p>
+        <h3 id="decrypt.desc">decrypt - Decryption Indicator<a class="headerlink" href="#decrypt.desc" title="Permalink to this headline"></a></h3>
+        <p>The field determines the AES operation<p></p>
 • 0h= Encryption<p></p>
-• 1h= Decryption<p></p>
-</p>
-</body>
+• 1h= Decryption<p></p></p>
+    </body>
 </html>

@@ -2,183 +2,243 @@
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
-<body>
-
-<h1 id="_Content.name">Input DMA Control Register</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr class="reserved-field"><td>[31]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="in_dis_rec_err_code"><td>[30]</td>
-<td><a href="#in_dis_rec_err_code.desc">in_dis_rec_err_code</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Input DMA DATA READ ERROR CHECK DISABLE</td>
-<td>H<a class="headerlink" href="#in_dis_rec_err_code" title="Permalink to this row"></a></td>
-</tr>
-<tr id="in_dis_ll_err_code"><td>[29]</td>
-<td><a href="#in_dis_ll_err_code.desc">in_dis_ll_err_code</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Input DMA LINK LIST ERROR CHECK DISABLE</td>
-<td>H<a class="headerlink" href="#in_dis_ll_err_code" title="Permalink to this row"></a></td>
-</tr>
-<tr id="in_dis_err_code"><td>[28]</td>
-<td><a href="#in_dis_err_code.desc">in_dis_err_code</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Input DMA DISABLE FIFO PARITY CHECK SELECT</td>
-<td>H<a class="headerlink" href="#in_dis_err_code" title="Permalink to this row"></a></td>
-</tr>
-<tr id="in_cache_mode"><td>[27:24]</td>
-<td><a href="#in_cache_mode.desc">in_cache_mode</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Input DMA Cache Mode Select</td>
-<td>H<a class="headerlink" href="#in_cache_mode" title="Permalink to this row"></a></td>
-</tr>
-<tr id="in_rid_ext"><td>[23:20]</td>
-<td><a href="#in_rid_ext.desc">in_rid_ext</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Input AXI Read ID Extension</td>
-<td>H<a class="headerlink" href="#in_rid_ext" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-field"><td>[19]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="in_order_dis"><td>[18]</td>
-<td><a href="#in_order_dis.desc">in_order_dis</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Read Transaction Out of Order Disable</td>
-<td>H<a class="headerlink" href="#in_order_dis" title="Permalink to this row"></a></td>
-</tr>
-<tr id="in_req_algn64"><td>[17]</td>
-<td><a href="#in_req_algn64.desc">in_req_algn64</a></td>
-<td>rw</td>
-<td>0x1</td>
-<td></td>
-<td>Input DMA Request Data Aligned 64 Byte</td>
-<td>H<a class="headerlink" href="#in_req_algn64" title="Permalink to this row"></a></td>
-</tr>
-<tr id="in_req_pause"><td>[16]</td>
-<td><a href="#in_req_pause.desc">in_req_pause</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Input DMA Request Pause</td>
-<td>H<a class="headerlink" href="#in_req_pause" title="Permalink to this row"></a></td>
-</tr>
-<tr id="in_bus_sz"><td>[15]</td>
-<td><a href="#in_bus_sz.desc">in_bus_sz</a></td>
-<td>rw</td>
-<td>0x1</td>
-<td></td>
-<td>Input DMA FIFO Bus Size</td>
-<td>H<a class="headerlink" href="#in_bus_sz" title="Permalink to this row"></a></td>
-</tr>
-<tr id="in_burst_type"><td>[14:13]</td>
-<td><a href="#in_burst_type.desc">in_burst_type</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Input DMA Burst Type</td>
-<td>H<a class="headerlink" href="#in_burst_type" title="Permalink to this row"></a></td>
-</tr>
-<tr id="in_burst_len"><td>[12:8]</td>
-<td><a href="#in_burst_len.desc">in_burst_len</a></td>
-<td>rw</td>
-<td>0x8</td>
-<td></td>
-<td>Input DMA Burst Length</td>
-<td>H<a class="headerlink" href="#in_burst_len" title="Permalink to this row"></a></td>
-</tr>
-<tr id="in_rid"><td>[7:4]</td>
-<td><a href="#in_rid.desc">in_rid</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Input AXI Read ID</td>
-<td>H<a class="headerlink" href="#in_rid" title="Permalink to this row"></a></td>
-</tr>
-<tr id="in_prot_mode"><td>[3:1]</td>
-<td><a href="#in_prot_mode.desc">in_prot_mode</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Input DMA Protect Mode Select</td>
-<td>H<a class="headerlink" href="#in_prot_mode" title="Permalink to this row"></a></td>
-</tr>
-<tr id="in_dma_ena"><td>[0]</td>
-<td><a href="#in_dma_ena.desc">in_dma_ena</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>Input DMA Enable</td>
-<td>H<a class="headerlink" href="#in_dma_ena" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="in_dis_rec_err_code.desc">in_dis_rec_err_code - Input DMA DATA READ ERROR CHECK DISABLE<a class="headerlink" href="#in_dis_rec_err_code.desc" title="Permalink to this headline"></a></h3>
-<p>When this bit is asserted, the Input data Transfer Error check is disabled. The error interrupt is still set, but it does not affect the DMA operation.<p></p>
-</p>
-<h3 id="in_dis_ll_err_code.desc">in_dis_ll_err_code - Input DMA LINK LIST ERROR CHECK DISABLE<a class="headerlink" href="#in_dis_ll_err_code.desc" title="Permalink to this headline"></a></h3>
-<p>When this bit is asserted, the Input Link List Error check is disabled. The error interrupt is still set, but it does not affect the DMA operation.<p></p>
-</p>
-<h3 id="in_dis_err_code.desc">in_dis_err_code - Input DMA DISABLE FIFO PARITY CHECK SELECT<a class="headerlink" href="#in_dis_err_code.desc" title="Permalink to this headline"></a></h3>
-<p>When this bit is asserted, the Input FIFO parity check is disabled. The Parity interrupt is still set, but it does not affect the DMA operation.<p></p>
-</p>
-<h3 id="in_cache_mode.desc">in_cache_mode - Input DMA Cache Mode Select<a class="headerlink" href="#in_cache_mode.desc" title="Permalink to this headline"></a></h3>
-<p>This field provides the CACHE mode for the DMA read transactions.<p></p>
-</p>
-<h3 id="in_rid_ext.desc">in_rid_ext - Input AXI Read ID Extension<a class="headerlink" href="#in_rid_ext.desc" title="Permalink to this headline"></a></h3>
-<p>This field provides the upper four bit extension of the RID for the read Link List RID. The subsequent RID+1 thru RID+4 will be used for the four reserved RID's for read data transfers.<p></p>
-The IN_RID should be different from OUT_WID and OUT_WID+1.<p></p>
-</p>
-<h3 id="in_order_dis.desc">in_order_dis - Read Transaction Out of Order Disable<a class="headerlink" href="#in_order_dis.desc" title="Permalink to this headline"></a></h3>
-<p>When this bit is set, the read transaction out of order feature is disabled, and the RID will always be the same for each read transaction.<p></p>
-</p>
-<h3 id="in_req_algn64.desc">in_req_algn64 - Input DMA Request Data Aligned 64 Byte<a class="headerlink" href="#in_req_algn64.desc" title="Permalink to this headline"></a></h3>
-<h3 id="in_req_pause.desc">in_req_pause - Input DMA Request Pause<a class="headerlink" href="#in_req_pause.desc" title="Permalink to this headline"></a></h3>
-<h3 id="in_bus_sz.desc">in_bus_sz - Input DMA FIFO Bus Size<a class="headerlink" href="#in_bus_sz.desc" title="Permalink to this headline"></a></h3>
-<p>The default of this bit is product dependent.<p></p>
+    <body>
+        <h1 id="_Content.name">Input DMA Control Register</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x0</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="in_dis_rec_err_code" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[30]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#in_dis_rec_err_code.desc">in_dis_rec_err_code</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Input DMA DATA READ ERROR CHECK DISABLE</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#in_dis_rec_err_code" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="in_dis_ll_err_code" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[29]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#in_dis_ll_err_code.desc">in_dis_ll_err_code</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Input DMA LINK LIST ERROR CHECK DISABLE</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#in_dis_ll_err_code" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="in_dis_err_code" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[28]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#in_dis_err_code.desc">in_dis_err_code</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Input DMA DISABLE FIFO PARITY CHECK SELECT</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#in_dis_err_code" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="in_cache_mode" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[27:24]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#in_cache_mode.desc">in_cache_mode</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Input DMA Cache Mode Select</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#in_cache_mode" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="in_rid_ext" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[23:20]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#in_rid_ext.desc">in_rid_ext</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Input AXI Read ID Extension</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#in_rid_ext" title="Permalink to this row"></a></td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[19]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="in_order_dis" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[18]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#in_order_dis.desc">in_order_dis</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Read Transaction Out of Order Disable</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#in_order_dis" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="in_req_algn64" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[17]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#in_req_algn64.desc">in_req_algn64</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Input DMA Request Data Aligned 64 Byte</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#in_req_algn64" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="in_req_pause" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[16]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#in_req_pause.desc">in_req_pause</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Input DMA Request Pause</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#in_req_pause" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="in_bus_sz" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[15]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#in_bus_sz.desc">in_bus_sz</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Input DMA FIFO Bus Size</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#in_bus_sz" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="in_burst_type" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[14:13]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#in_burst_type.desc">in_burst_type</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Input DMA Burst Type</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#in_burst_type" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="in_burst_len" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[12:8]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#in_burst_len.desc">in_burst_len</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x8</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Input DMA Burst Length</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#in_burst_len" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="in_rid" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[7:4]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#in_rid.desc">in_rid</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Input AXI Read ID</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#in_rid" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="in_prot_mode" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[3:1]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#in_prot_mode.desc">in_prot_mode</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Input DMA Protect Mode Select</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#in_prot_mode" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="in_dma_ena" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#in_dma_ena.desc">in_dma_ena</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">Input DMA Enable</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#in_dma_ena" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="in_dis_rec_err_code.desc">in_dis_rec_err_code - Input DMA DATA READ ERROR CHECK DISABLE<a class="headerlink" href="#in_dis_rec_err_code.desc" title="Permalink to this headline"></a></h3>
+        <p>When this bit is asserted, the Input data Transfer Error check is disabled. The error interrupt is still set, but it does not affect the DMA operation.<p></p></p>
+        <h3 id="in_dis_ll_err_code.desc">in_dis_ll_err_code - Input DMA LINK LIST ERROR CHECK DISABLE<a class="headerlink" href="#in_dis_ll_err_code.desc" title="Permalink to this headline"></a></h3>
+        <p>When this bit is asserted, the Input Link List Error check is disabled. The error interrupt is still set, but it does not affect the DMA operation.<p></p></p>
+        <h3 id="in_dis_err_code.desc">in_dis_err_code - Input DMA DISABLE FIFO PARITY CHECK SELECT<a class="headerlink" href="#in_dis_err_code.desc" title="Permalink to this headline"></a></h3>
+        <p>When this bit is asserted, the Input FIFO parity check is disabled. The Parity interrupt is still set, but it does not affect the DMA operation.<p></p></p>
+        <h3 id="in_cache_mode.desc">in_cache_mode - Input DMA Cache Mode Select<a class="headerlink" href="#in_cache_mode.desc" title="Permalink to this headline"></a></h3>
+        <p>This field provides the CACHE mode for the DMA read transactions.<p></p></p>
+        <h3 id="in_rid_ext.desc">in_rid_ext - Input AXI Read ID Extension<a class="headerlink" href="#in_rid_ext.desc" title="Permalink to this headline"></a></h3>
+        <p>This field provides the upper four bit extension of the RID for the read Link List RID. The subsequent RID+1 thru RID+4 will be used for the four reserved RID's for read data transfers.<p></p>
+The IN_RID should be different from OUT_WID and OUT_WID+1.<p></p></p>
+        <h3 id="in_order_dis.desc">in_order_dis - Read Transaction Out of Order Disable<a class="headerlink" href="#in_order_dis.desc" title="Permalink to this headline"></a></h3>
+        <p>When this bit is set, the read transaction out of order feature is disabled, and the RID will always be the same for each read transaction.<p></p></p>
+        <h3 id="in_req_algn64.desc">in_req_algn64 - Input DMA Request Data Aligned 64 Byte<a class="headerlink" href="#in_req_algn64.desc" title="Permalink to this headline"></a></h3>
+        <h3 id="in_req_pause.desc">in_req_pause - Input DMA Request Pause<a class="headerlink" href="#in_req_pause.desc" title="Permalink to this headline"></a></h3>
+        <h3 id="in_bus_sz.desc">in_bus_sz - Input DMA FIFO Bus Size<a class="headerlink" href="#in_bus_sz.desc" title="Permalink to this headline"></a></h3>
+        <p>The default of this bit is product dependent.<p></p>
 This register provides the maximum bus size of the AXI input data bus. The value is indicated as the following:<p></p>
 0 - 32 bit bus<p></p>
-1 - 64 bit bus<p></p>
-</p>
-<h3 id="in_burst_type.desc">in_burst_type - Input DMA Burst Type<a class="headerlink" href="#in_burst_type.desc" title="Permalink to this headline"></a></h3>
-<p>This field provides the Burst Type of the Read Data Transfer.<p></p>
+1 - 64 bit bus<p></p></p>
+        <h3 id="in_burst_type.desc">in_burst_type - Input DMA Burst Type<a class="headerlink" href="#in_burst_type.desc" title="Permalink to this headline"></a></h3>
+        <p>This field provides the Burst Type of the Read Data Transfer.<p></p>
 00 - Fixed<p></p>
 01 - Inc<p></p>
 10 - Wrap<p></p>
-11 - Reserved<p></p>
-</p>
-<h3 id="in_burst_len.desc">in_burst_len - Input DMA Burst Length<a class="headerlink" href="#in_burst_len.desc" title="Permalink to this headline"></a></h3>
-<p>Burst Len provides the #no beat of data transfer on the bus. The value can be from 1 thru 16.<p></p>
+11 - Reserved<p></p></p>
+        <h3 id="in_burst_len.desc">in_burst_len - Input DMA Burst Length<a class="headerlink" href="#in_burst_len.desc" title="Permalink to this headline"></a></h3>
+        <p>Burst Len provides the #no beat of data transfer on the bus. The value can be from 1 thru 16.<p></p>
 The total data transfer for each burst is calculated as the following:<p></p>
-Number of bytes = #Burst Size X #Bus_Size (in term of bytes)<p></p>
-</p>
-<h3 id="in_rid.desc">in_rid - Input AXI Read ID<a class="headerlink" href="#in_rid.desc" title="Permalink to this headline"></a></h3>
-<p>This field provides the RID for the read Link List RID. The constraints for assignment of RID are the following:<p></p>
+Number of bytes = #Burst Size X #Bus_Size (in term of bytes)<p></p></p>
+        <h3 id="in_rid.desc">in_rid - Input AXI Read ID<a class="headerlink" href="#in_rid.desc" title="Permalink to this headline"></a></h3>
+        <p>This field provides the RID for the read Link List RID. The constraints for assignment of RID are the following:<p></p>
 Case1: Out-of-Order Read transfer is selected, and maximum burst size is less than 64 bytes, then<p></p>
 • RID+1 thru RID+4 will be used for the four reserved RID for read data transfers.<p></p>
 • RID+4 can not be larger than 15.<p></p>
@@ -188,15 +248,12 @@ Case2: Out-of-Order Read transfer is selected, and maximum burst size is larger 
 Case3: Out-of-Order Read transfer is not selected,<p></p>
 • RID+1 will be used for the reserved RID for read data transfers.<p></p>
 • RID+1 can not be larger than 15.<p></p>
-The assignment of RID range should be different from WID and WID+1.<p></p>
-</p>
-<h3 id="in_prot_mode.desc">in_prot_mode - Input DMA Protect Mode Select<a class="headerlink" href="#in_prot_mode.desc" title="Permalink to this headline"></a></h3>
-<p>This provides the PROT mode field for the DMA read transactions.<p></p>
-</p>
-<h3 id="in_dma_ena.desc">in_dma_ena - Input DMA Enable<a class="headerlink" href="#in_dma_ena.desc" title="Permalink to this headline"></a></h3>
-<p>When this bit is set, the Input DMA is enabled. This bit must be set only after all other registers are setup including RID. The sequence is:<p></p>
+The assignment of RID range should be different from WID and WID+1.<p></p></p>
+        <h3 id="in_prot_mode.desc">in_prot_mode - Input DMA Protect Mode Select<a class="headerlink" href="#in_prot_mode.desc" title="Permalink to this headline"></a></h3>
+        <p>This provides the PROT mode field for the DMA read transactions.<p></p></p>
+        <h3 id="in_dma_ena.desc">in_dma_ena - Input DMA Enable<a class="headerlink" href="#in_dma_ena.desc" title="Permalink to this headline"></a></h3>
+        <p>When this bit is set, the Input DMA is enabled. This bit must be set only after all other registers are setup including RID. The sequence is:<p></p>
 1. Setup all registers, block count, etc., including IN_RID.<p></p>
-2. Set IN_DMA_ENA to high to start the transfer.<p></p>
-</p>
-</body>
+2. Set IN_DMA_ENA to high to start the transfer.<p></p></p>
+    </body>
 </html>

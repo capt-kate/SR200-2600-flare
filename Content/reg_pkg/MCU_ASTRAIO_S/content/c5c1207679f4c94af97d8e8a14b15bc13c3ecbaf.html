@@ -2,55 +2,98 @@
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
-<body>
-
-<h1 id="_Content.name">gpio_int_config</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x100</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Configures interrupt pins</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr class="reserved-field"><td>[31:16]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="gpio_pin_int_config"><td>[15:0]</td>
-<td><a href="#gpio_pin_int_config.desc">gpio_pin_int_config</a></td>
-<td>rw</td>
-<td>-</td>
-<td><select id="_FieldValueEnumTestergpio_pin_int_config" class="field-value-enum-tester"
-data-name="gpio_pin_int_config" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">disable</option><option value="0x1">pos_edge</option><option value="0x2">neg_edge</option><option value="0x3">neg_level</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#gpio_pin_int_config" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="gpio_pin_int_config.desc">gpio_pin_int_config<a class="headerlink" href="#gpio_pin_int_config.desc" title="Permalink to this headline"></a></h3>
-<p>Selects interrupt mode on the pin</p>
-<table><tr><th colspan="3">enum gpio_int_enum</th></tr>
-<tr><td>disable</td>
-<td>0x0</td>
-<td><p>No interrupt</p>
-</td>
-</tr>
-<tr><td>pos_edge</td>
-<td>0x1</td>
-<td><p>Positive edge interrupt</p>
-</td>
-</tr>
-<tr><td>neg_edge</td>
-<td>0x2</td>
-<td><p>Negative edge interrupt</p>
-</td>
-</tr>
-<tr><td>neg_level</td>
-<td>0x3</td>
-<td><p>Link is in a partial low power state</p>
-</td>
-</tr>
-</table>
-</body>
+    <body>
+        <h1 id="_Content.name">gpio_int_config</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x100</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>Configures interrupt pins</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31:16]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="gpio_pin_int_config" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[15:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#gpio_pin_int_config.desc">gpio_pin_int_config</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTestergpio_pin_int_config" class="field-value-enum-tester" data-name="gpio_pin_int_config" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">disable</option>
+                        <option value="0x1">pos_edge</option>
+                        <option value="0x2">neg_edge</option>
+                        <option value="0x3">neg_level</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#gpio_pin_int_config" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="gpio_pin_int_config.desc">gpio_pin_int_config<a class="headerlink" href="#gpio_pin_int_config.desc" title="Permalink to this headline"></a></h3>
+        <p>Selects interrupt mode on the pin</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum gpio_int_enum</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">disable</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>No interrupt</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">pos_edge</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Positive edge interrupt</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">neg_edge</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x2</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Negative edge interrupt</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">neg_level</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x3</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Link is in a partial low power state</p>
+                </td>
+            </tr>
+        </table>
+    </body>
 </html>

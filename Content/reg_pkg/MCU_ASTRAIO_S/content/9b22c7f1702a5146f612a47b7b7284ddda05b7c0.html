@@ -2,106 +2,157 @@
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
-<body>
-
-<h1 id="_Content.name">gpio_read_fifo_config</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x130</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Main configuration for GPIO read fifos</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr class="reserved-field"><td>[31:26]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="fifo1_reset"><td>[25]</td>
-<td><a href="#fifo1_reset.desc">fifo1_reset</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#fifo1_reset" title="Permalink to this row"></a></td>
-</tr>
-<tr id="fifo1_byte_rev"><td>[24]</td>
-<td><a href="#fifo1_byte_rev.desc">fifo1_byte_rev</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#fifo1_byte_rev" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-field"><td>[23:22]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="fifo1_read_size"><td>[21:16]</td>
-<td><a href="#fifo1_read_size.desc">fifo1_read_size</a></td>
-<td>rw</td>
-<td>0x1</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#fifo1_read_size" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-field"><td>[15:10]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="fifo0_reset"><td>[9]</td>
-<td><a href="#fifo0_reset.desc">fifo0_reset</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#fifo0_reset" title="Permalink to this row"></a></td>
-</tr>
-<tr id="fifo0_byte_rev"><td>[8]</td>
-<td><a href="#fifo0_byte_rev.desc">fifo0_byte_rev</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#fifo0_byte_rev" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-field"><td>[7:6]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="fifo0_read_size"><td>[5:0]</td>
-<td><a href="#fifo0_read_size.desc">fifo0_read_size</a></td>
-<td>rw</td>
-<td>0x1</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#fifo0_read_size" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="fifo1_reset.desc">fifo1_reset<a class="headerlink" href="#fifo1_reset.desc" title="Permalink to this headline"></a></h3>
-<p>Resets the fifo state including overflow with an active high signal</p>
-<h3 id="fifo1_byte_rev.desc">fifo1_byte_rev<a class="headerlink" href="#fifo1_byte_rev.desc" title="Permalink to this headline"></a></h3>
-<p>Enables per-byte bit-reversal on read fifo results</p>
-<h3 id="fifo1_read_size.desc">fifo1_read_size<a class="headerlink" href="#fifo1_read_size.desc" title="Permalink to this headline"></a></h3>
-<p>Sets read size for the fifo. Only this bit-count is reported from the FIFO per read</p>
-<h3 id="fifo0_reset.desc">fifo0_reset<a class="headerlink" href="#fifo0_reset.desc" title="Permalink to this headline"></a></h3>
-<p>Resets the fifo state including overflow with an active high signal</p>
-<h3 id="fifo0_byte_rev.desc">fifo0_byte_rev<a class="headerlink" href="#fifo0_byte_rev.desc" title="Permalink to this headline"></a></h3>
-<p>Enables per-byte bit-reversal on read fifo results</p>
-<h3 id="fifo0_read_size.desc">fifo0_read_size<a class="headerlink" href="#fifo0_read_size.desc" title="Permalink to this headline"></a></h3>
-<p>Enables the GPIO control FIFO0. You can load instructions and release with the enable</p>
-</body>
+    <body>
+        <h1 id="_Content.name">gpio_read_fifo_config</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x130</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>Main configuration for GPIO read fifos</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31:26]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="fifo1_reset" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[25]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#fifo1_reset.desc">fifo1_reset</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#fifo1_reset" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="fifo1_byte_rev" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[24]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#fifo1_byte_rev.desc">fifo1_byte_rev</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#fifo1_byte_rev" title="Permalink to this row"></a></td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[23:22]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="fifo1_read_size" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[21:16]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#fifo1_read_size.desc">fifo1_read_size</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#fifo1_read_size" title="Permalink to this row"></a></td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[15:10]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="fifo0_reset" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[9]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#fifo0_reset.desc">fifo0_reset</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#fifo0_reset" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="fifo0_byte_rev" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[8]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#fifo0_byte_rev.desc">fifo0_byte_rev</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#fifo0_byte_rev" title="Permalink to this row"></a></td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[7:6]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="fifo0_read_size" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[5:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#fifo0_read_size.desc">fifo0_read_size</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#fifo0_read_size" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="fifo1_reset.desc">fifo1_reset<a class="headerlink" href="#fifo1_reset.desc" title="Permalink to this headline"></a></h3>
+        <p>Resets the fifo state including overflow with an active high signal</p>
+        <h3 id="fifo1_byte_rev.desc">fifo1_byte_rev<a class="headerlink" href="#fifo1_byte_rev.desc" title="Permalink to this headline"></a></h3>
+        <p>Enables per-byte bit-reversal on read fifo results</p>
+        <h3 id="fifo1_read_size.desc">fifo1_read_size<a class="headerlink" href="#fifo1_read_size.desc" title="Permalink to this headline"></a></h3>
+        <p>Sets read size for the fifo. Only this bit-count is reported from the FIFO per read</p>
+        <h3 id="fifo0_reset.desc">fifo0_reset<a class="headerlink" href="#fifo0_reset.desc" title="Permalink to this headline"></a></h3>
+        <p>Resets the fifo state including overflow with an active high signal</p>
+        <h3 id="fifo0_byte_rev.desc">fifo0_byte_rev<a class="headerlink" href="#fifo0_byte_rev.desc" title="Permalink to this headline"></a></h3>
+        <p>Enables per-byte bit-reversal on read fifo results</p>
+        <h3 id="fifo0_read_size.desc">fifo0_read_size<a class="headerlink" href="#fifo0_read_size.desc" title="Permalink to this headline"></a></h3>
+        <p>Enables the GPIO control FIFO0. You can load instructions and release with the enable</p>
+    </body>
 </html>

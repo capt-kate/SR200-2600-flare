@@ -2,363 +2,582 @@
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
-<body>
-
-<h1 id="_Content.name">AstraIO Register Map</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x0</dd><dt>Size:</dt><dd class="address">0x164</dd></dl><h2>Description</h2>
-<p>This contains all the registers in the AstraIO block</p>
-<h2>Contents</h2>
-<table><tr><th>Offset</th><th>Identifier</th><th>Name</th><th></th></tr>
-<tr id="mcu_cntrl"><td class="address">0x000</td>
-<td><a href="?p=astraio_block.astraio_regs.mcu_cntrl" data-id="2" onclick="onClickNodeLink(event); return(false)">mcu_cntrl</a></td>
-<td>mcu_cntrl</td>
-<td><a class="headerlink" href="#mcu_cntrl" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_in"><td class="address">0x004</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_in" data-id="3" onclick="onClickNodeLink(event); return(false)">gpio_in</a></td>
-<td>gpio_in</td>
-<td><a class="headerlink" href="#gpio_in" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_out"><td class="address">0x008</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_out" data-id="4" onclick="onClickNodeLink(event); return(false)">gpio_out</a></td>
-<td>gpio_out</td>
-<td><a class="headerlink" href="#gpio_out" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_out_set"><td class="address">0x00C</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_out_set" data-id="5" onclick="onClickNodeLink(event); return(false)">gpio_out_set</a></td>
-<td>gpio_out_set</td>
-<td><a class="headerlink" href="#gpio_out_set" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_out_clear"><td class="address">0x010</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_out_clear" data-id="6" onclick="onClickNodeLink(event); return(false)">gpio_out_clear</a></td>
-<td>gpio_out_clear</td>
-<td><a class="headerlink" href="#gpio_out_clear" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_ie"><td class="address">0x014</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_ie" data-id="7" onclick="onClickNodeLink(event); return(false)">gpio_ie</a></td>
-<td>gpio_ie</td>
-<td><a class="headerlink" href="#gpio_ie" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_ie_set"><td class="address">0x018</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_ie_set" data-id="8" onclick="onClickNodeLink(event); return(false)">gpio_ie_set</a></td>
-<td>gpio_ie_set</td>
-<td><a class="headerlink" href="#gpio_ie_set" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_ie_clear"><td class="address">0x01C</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_ie_clear" data-id="9" onclick="onClickNodeLink(event); return(false)">gpio_ie_clear</a></td>
-<td>gpio_ie_clear</td>
-<td><a class="headerlink" href="#gpio_ie_clear" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_oe"><td class="address">0x020</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_oe" data-id="10" onclick="onClickNodeLink(event); return(false)">gpio_oe</a></td>
-<td>gpio_oe</td>
-<td><a class="headerlink" href="#gpio_oe" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_oe_set"><td class="address">0x024</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_oe_set" data-id="11" onclick="onClickNodeLink(event); return(false)">gpio_oe_set</a></td>
-<td>gpio_oe_set</td>
-<td><a class="headerlink" href="#gpio_oe_set" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_oe_clear"><td class="address">0x028</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_oe_clear" data-id="12" onclick="onClickNodeLink(event); return(false)">gpio_oe_clear</a></td>
-<td>gpio_oe_clear</td>
-<td><a class="headerlink" href="#gpio_oe_clear" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_pu"><td class="address">0x02C</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_pu" data-id="13" onclick="onClickNodeLink(event); return(false)">gpio_pu</a></td>
-<td>gpio_pu</td>
-<td><a class="headerlink" href="#gpio_pu" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_pu_set"><td class="address">0x030</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_pu_set" data-id="14" onclick="onClickNodeLink(event); return(false)">gpio_pu_set</a></td>
-<td>gpio_pu_set</td>
-<td><a class="headerlink" href="#gpio_pu_set" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_pu_clear"><td class="address">0x034</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_pu_clear" data-id="15" onclick="onClickNodeLink(event); return(false)">gpio_pu_clear</a></td>
-<td>gpio_pu_clear</td>
-<td><a class="headerlink" href="#gpio_pu_clear" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_pd"><td class="address">0x038</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_pd" data-id="16" onclick="onClickNodeLink(event); return(false)">gpio_pd</a></td>
-<td>gpio_pd</td>
-<td><a class="headerlink" href="#gpio_pd" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_pd_set"><td class="address">0x03C</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_pd_set" data-id="17" onclick="onClickNodeLink(event); return(false)">gpio_pd_set</a></td>
-<td>gpio_pd_set</td>
-<td><a class="headerlink" href="#gpio_pd_set" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_pd_clear"><td class="address">0x040</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_pd_clear" data-id="18" onclick="onClickNodeLink(event); return(false)">gpio_pd_clear</a></td>
-<td>gpio_pd_clear</td>
-<td><a class="headerlink" href="#gpio_pd_clear" title="Permalink to this row"></a></td>
-</tr>
-<tr id="group_config0"><td class="address">0x044</td>
-<td><a href="?p=astraio_block.astraio_regs.group_config0" data-id="19" onclick="onClickNodeLink(event); return(false)">group_config0</a></td>
-<td>group_config</td>
-<td><a class="headerlink" href="#group_config0" title="Permalink to this row"></a></td>
-</tr>
-<tr id="group_config1"><td class="address">0x048</td>
-<td><a href="?p=astraio_block.astraio_regs.group_config1" data-id="20" onclick="onClickNodeLink(event); return(false)">group_config1</a></td>
-<td>group_config</td>
-<td><a class="headerlink" href="#group_config1" title="Permalink to this row"></a></td>
-</tr>
-<tr id="group_config2"><td class="address">0x04C</td>
-<td><a href="?p=astraio_block.astraio_regs.group_config2" data-id="21" onclick="onClickNodeLink(event); return(false)">group_config2</a></td>
-<td>group_config</td>
-<td><a class="headerlink" href="#group_config2" title="Permalink to this row"></a></td>
-</tr>
-<tr id="group_config3"><td class="address">0x050</td>
-<td><a href="?p=astraio_block.astraio_regs.group_config3" data-id="22" onclick="onClickNodeLink(event); return(false)">group_config3</a></td>
-<td>group_config</td>
-<td><a class="headerlink" href="#group_config3" title="Permalink to this row"></a></td>
-</tr>
-<tr id="irq_out"><td class="address">0x054</td>
-<td><a href="?p=astraio_block.astraio_regs.irq_out" data-id="23" onclick="onClickNodeLink(event); return(false)">irq_out</a></td>
-<td>irq_out</td>
-<td><a class="headerlink" href="#irq_out" title="Permalink to this row"></a></td>
-</tr>
-<tr id="irq_out_set"><td class="address">0x058</td>
-<td><a href="?p=astraio_block.astraio_regs.irq_out_set" data-id="24" onclick="onClickNodeLink(event); return(false)">irq_out_set</a></td>
-<td>irq_out_set</td>
-<td><a class="headerlink" href="#irq_out_set" title="Permalink to this row"></a></td>
-</tr>
-<tr id="irq_out_clear"><td class="address">0x05C</td>
-<td><a href="?p=astraio_block.astraio_regs.irq_out_clear" data-id="25" onclick="onClickNodeLink(event); return(false)">irq_out_clear</a></td>
-<td>irq_out_clear</td>
-<td><a class="headerlink" href="#irq_out_clear" title="Permalink to this row"></a></td>
-</tr>
-<tr id="group0_cntrl"><td class="address">0x060</td>
-<td><a href="?p=astraio_block.astraio_regs.group0_cntrl" data-id="26" onclick="onClickNodeLink(event); return(false)">group0_cntrl</a></td>
-<td>group_cntrl</td>
-<td><a class="headerlink" href="#group0_cntrl" title="Permalink to this row"></a></td>
-</tr>
-<tr id="group1_cntrl"><td class="address">0x064</td>
-<td><a href="?p=astraio_block.astraio_regs.group1_cntrl" data-id="27" onclick="onClickNodeLink(event); return(false)">group1_cntrl</a></td>
-<td>group_cntrl</td>
-<td><a class="headerlink" href="#group1_cntrl" title="Permalink to this row"></a></td>
-</tr>
-<tr id="group2_cntrl"><td class="address">0x068</td>
-<td><a href="?p=astraio_block.astraio_regs.group2_cntrl" data-id="28" onclick="onClickNodeLink(event); return(false)">group2_cntrl</a></td>
-<td>group_cntrl</td>
-<td><a class="headerlink" href="#group2_cntrl" title="Permalink to this row"></a></td>
-</tr>
-<tr id="group3_cntrl"><td class="address">0x06C</td>
-<td><a href="?p=astraio_block.astraio_regs.group3_cntrl" data-id="29" onclick="onClickNodeLink(event); return(false)">group3_cntrl</a></td>
-<td>group_cntrl</td>
-<td><a class="headerlink" href="#group3_cntrl" title="Permalink to this row"></a></td>
-</tr>
-<tr id="group0_in"><td class="address">0x070</td>
-<td><a href="?p=astraio_block.astraio_regs.group0_in" data-id="30" onclick="onClickNodeLink(event); return(false)">group0_in</a></td>
-<td>group_read</td>
-<td><a class="headerlink" href="#group0_in" title="Permalink to this row"></a></td>
-</tr>
-<tr id="group1_in"><td class="address">0x074</td>
-<td><a href="?p=astraio_block.astraio_regs.group1_in" data-id="31" onclick="onClickNodeLink(event); return(false)">group1_in</a></td>
-<td>group_read</td>
-<td><a class="headerlink" href="#group1_in" title="Permalink to this row"></a></td>
-</tr>
-<tr id="group2_in"><td class="address">0x078</td>
-<td><a href="?p=astraio_block.astraio_regs.group2_in" data-id="32" onclick="onClickNodeLink(event); return(false)">group2_in</a></td>
-<td>group_read</td>
-<td><a class="headerlink" href="#group2_in" title="Permalink to this row"></a></td>
-</tr>
-<tr id="group3_in"><td class="address">0x07C</td>
-<td><a href="?p=astraio_block.astraio_regs.group3_in" data-id="33" onclick="onClickNodeLink(event); return(false)">group3_in</a></td>
-<td>group_read</td>
-<td><a class="headerlink" href="#group3_in" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-addr"><td class="address">0x080</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="timer0_cntrl"><td class="address">0x0A0</td>
-<td><a href="?p=astraio_block.astraio_regs.timer0_cntrl" data-id="34" onclick="onClickNodeLink(event); return(false)">timer0_cntrl</a></td>
-<td>timer_cntrl</td>
-<td><a class="headerlink" href="#timer0_cntrl" title="Permalink to this row"></a></td>
-</tr>
-<tr id="timer0_counter"><td class="address">0x0A4</td>
-<td><a href="?p=astraio_block.astraio_regs.timer0_counter" data-id="35" onclick="onClickNodeLink(event); return(false)">timer0_counter</a></td>
-<td>timer_counter</td>
-<td><a class="headerlink" href="#timer0_counter" title="Permalink to this row"></a></td>
-</tr>
-<tr id="timer0_done"><td class="address">0x0A8</td>
-<td><a href="?p=astraio_block.astraio_regs.timer0_done" data-id="36" onclick="onClickNodeLink(event); return(false)">timer0_done</a></td>
-<td>timer_done</td>
-<td><a class="headerlink" href="#timer0_done" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-addr"><td class="address">0x0AC</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="timer1_cntrl"><td class="address">0x0B0</td>
-<td><a href="?p=astraio_block.astraio_regs.timer1_cntrl" data-id="37" onclick="onClickNodeLink(event); return(false)">timer1_cntrl</a></td>
-<td>timer_cntrl</td>
-<td><a class="headerlink" href="#timer1_cntrl" title="Permalink to this row"></a></td>
-</tr>
-<tr id="timer1_counter"><td class="address">0x0B4</td>
-<td><a href="?p=astraio_block.astraio_regs.timer1_counter" data-id="38" onclick="onClickNodeLink(event); return(false)">timer1_counter</a></td>
-<td>timer_counter</td>
-<td><a class="headerlink" href="#timer1_counter" title="Permalink to this row"></a></td>
-</tr>
-<tr id="timer1_done"><td class="address">0x0B8</td>
-<td><a href="?p=astraio_block.astraio_regs.timer1_done" data-id="39" onclick="onClickNodeLink(event); return(false)">timer1_done</a></td>
-<td>timer_done</td>
-<td><a class="headerlink" href="#timer1_done" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-addr"><td class="address">0x0BC</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="gpio_mux_enable"><td class="address">0x0D0</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_mux_enable" data-id="40" onclick="onClickNodeLink(event); return(false)">gpio_mux_enable</a></td>
-<td>gpio_mux_enable</td>
-<td><a class="headerlink" href="#gpio_mux_enable" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_mux_config0"><td class="address">0x0D4</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_mux_config0" data-id="41" onclick="onClickNodeLink(event); return(false)">gpio_mux_config0</a></td>
-<td>gpio_mux_config</td>
-<td><a class="headerlink" href="#gpio_mux_config0" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_mux_config1"><td class="address">0x0D8</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_mux_config1" data-id="42" onclick="onClickNodeLink(event); return(false)">gpio_mux_config1</a></td>
-<td>gpio_mux_config</td>
-<td><a class="headerlink" href="#gpio_mux_config1" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_mux_config2"><td class="address">0x0DC</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_mux_config2" data-id="43" onclick="onClickNodeLink(event); return(false)">gpio_mux_config2</a></td>
-<td>gpio_mux_config</td>
-<td><a class="headerlink" href="#gpio_mux_config2" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_mux_config3"><td class="address">0x0E0</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_mux_config3" data-id="44" onclick="onClickNodeLink(event); return(false)">gpio_mux_config3</a></td>
-<td>gpio_mux_config</td>
-<td><a class="headerlink" href="#gpio_mux_config3" title="Permalink to this row"></a></td>
-</tr>
-<tr id="lut_config0"><td class="address">0x0E4</td>
-<td><a href="?p=astraio_block.astraio_regs.lut_config0" data-id="45" onclick="onClickNodeLink(event); return(false)">lut_config0</a></td>
-<td>lut_config</td>
-<td><a class="headerlink" href="#lut_config0" title="Permalink to this row"></a></td>
-</tr>
-<tr id="lut_config1"><td class="address">0x0E8</td>
-<td><a href="?p=astraio_block.astraio_regs.lut_config1" data-id="46" onclick="onClickNodeLink(event); return(false)">lut_config1</a></td>
-<td>lut_config</td>
-<td><a class="headerlink" href="#lut_config1" title="Permalink to this row"></a></td>
-</tr>
-<tr id="lut_config2"><td class="address">0x0EC</td>
-<td><a href="?p=astraio_block.astraio_regs.lut_config2" data-id="47" onclick="onClickNodeLink(event); return(false)">lut_config2</a></td>
-<td>lut_config</td>
-<td><a class="headerlink" href="#lut_config2" title="Permalink to this row"></a></td>
-</tr>
-<tr id="lut_config3"><td class="address">0x0F0</td>
-<td><a href="?p=astraio_block.astraio_regs.lut_config3" data-id="48" onclick="onClickNodeLink(event); return(false)">lut_config3</a></td>
-<td>lut_config</td>
-<td><a class="headerlink" href="#lut_config3" title="Permalink to this row"></a></td>
-</tr>
-<tr id="lut_config4"><td class="address">0x0F4</td>
-<td><a href="?p=astraio_block.astraio_regs.lut_config4" data-id="49" onclick="onClickNodeLink(event); return(false)">lut_config4</a></td>
-<td>lut_config</td>
-<td><a class="headerlink" href="#lut_config4" title="Permalink to this row"></a></td>
-</tr>
-<tr id="lut_config5"><td class="address">0x0F8</td>
-<td><a href="?p=astraio_block.astraio_regs.lut_config5" data-id="50" onclick="onClickNodeLink(event); return(false)">lut_config5</a></td>
-<td>lut_config</td>
-<td><a class="headerlink" href="#lut_config5" title="Permalink to this row"></a></td>
-</tr>
-<tr id="lut_config6"><td class="address">0x0FC</td>
-<td><a href="?p=astraio_block.astraio_regs.lut_config6" data-id="51" onclick="onClickNodeLink(event); return(false)">lut_config6</a></td>
-<td>lut_config</td>
-<td><a class="headerlink" href="#lut_config6" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_int_config"><td class="address">0x100</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_int_config" data-id="52" onclick="onClickNodeLink(event); return(false)">gpio_int_config</a></td>
-<td>gpio_int_config</td>
-<td><a class="headerlink" href="#gpio_int_config" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_int"><td class="address">0x104</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_int" data-id="53" onclick="onClickNodeLink(event); return(false)">gpio_int</a></td>
-<td>gpio_int</td>
-<td><a class="headerlink" href="#gpio_int" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-addr"><td class="address">0x108</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="byte_rev_in"><td class="address">0x110</td>
-<td><a href="?p=astraio_block.astraio_regs.byte_rev_in" data-id="54" onclick="onClickNodeLink(event); return(false)">byte_rev_in</a></td>
-<td>byte_rev_in</td>
-<td><a class="headerlink" href="#byte_rev_in" title="Permalink to this row"></a></td>
-</tr>
-<tr id="byte_rev_out"><td class="address">0x114</td>
-<td><a href="?p=astraio_block.astraio_regs.byte_rev_out" data-id="55" onclick="onClickNodeLink(event); return(false)">byte_rev_out</a></td>
-<td>byte_rev_out</td>
-<td><a class="headerlink" href="#byte_rev_out" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-addr"><td class="address">0x118</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="crc"><td class="address">0x120</td>
-<td><a href="?p=astraio_block.astraio_regs.crc" data-id="56" onclick="onClickNodeLink(event); return(false)">crc</a></td>
-<td>crc</td>
-<td><a class="headerlink" href="#crc" title="Permalink to this row"></a></td>
-</tr>
-<tr id="crc_state"><td class="address">0x124</td>
-<td><a href="?p=astraio_block.astraio_regs.crc_state" data-id="57" onclick="onClickNodeLink(event); return(false)">crc_state</a></td>
-<td>crc_state</td>
-<td><a class="headerlink" href="#crc_state" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_cntrl_fifo_config"><td class="address">0x128</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_cntrl_fifo_config" data-id="58" onclick="onClickNodeLink(event); return(false)">gpio_cntrl_fifo_config</a></td>
-<td>gpio_cntrl_fifo_config</td>
-<td><a class="headerlink" href="#gpio_cntrl_fifo_config" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_cntrl_fifo_status"><td class="address">0x12C</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_cntrl_fifo_status" data-id="59" onclick="onClickNodeLink(event); return(false)">gpio_cntrl_fifo_status</a></td>
-<td>gpio_cntrl_fifo_status</td>
-<td><a class="headerlink" href="#gpio_cntrl_fifo_status" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_read_fifo_config"><td class="address">0x130</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_read_fifo_config" data-id="60" onclick="onClickNodeLink(event); return(false)">gpio_read_fifo_config</a></td>
-<td>gpio_read_fifo_config</td>
-<td><a class="headerlink" href="#gpio_read_fifo_config" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_read_fifo_status"><td class="address">0x134</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_read_fifo_status" data-id="61" onclick="onClickNodeLink(event); return(false)">gpio_read_fifo_status</a></td>
-<td>gpio_read_fifo_status</td>
-<td><a class="headerlink" href="#gpio_read_fifo_status" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_read_fifo0"><td class="address">0x138</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_read_fifo0" data-id="62" onclick="onClickNodeLink(event); return(false)">gpio_read_fifo0</a></td>
-<td>gpio_read_fifo</td>
-<td><a class="headerlink" href="#gpio_read_fifo0" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_read_fifo1"><td class="address">0x13C</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_read_fifo1" data-id="63" onclick="onClickNodeLink(event); return(false)">gpio_read_fifo1</a></td>
-<td>gpio_read_fifo</td>
-<td><a class="headerlink" href="#gpio_read_fifo1" title="Permalink to this row"></a></td>
-</tr>
-<tr id="gpio_cntrl_fifo0"><td class="address">0x140</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_cntrl_fifo0" data-id="64" onclick="onClickNodeLink(event); return(false)">gpio_cntrl_fifo0</a></td>
-<td>group_cntrl_fifo</td>
-<td><a class="headerlink" href="#gpio_cntrl_fifo0" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-addr"><td class="address">0x144</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="gpio_cntrl_fifo1"><td class="address">0x160</td>
-<td><a href="?p=astraio_block.astraio_regs.gpio_cntrl_fifo1" data-id="65" onclick="onClickNodeLink(event); return(false)">gpio_cntrl_fifo1</a></td>
-<td>group_cntrl_fifo</td>
-<td><a class="headerlink" href="#gpio_cntrl_fifo1" title="Permalink to this row"></a></td>
-</tr>
-</table>
-</body>
+    <body>
+        <h1 id="_Content.name">AstraIO Register Map</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x0</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x164</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>This contains all the registers in the AstraIO block</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Offset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr id="mcu_cntrl" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x000</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.mcu_cntrl" data-id="2" onclick="onClickNodeLink(event); return(false)">mcu_cntrl</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">mcu_cntrl</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#mcu_cntrl" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_in" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x004</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_in" data-id="3" onclick="onClickNodeLink(event); return(false)">gpio_in</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_in</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_in" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_out" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x008</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_out" data-id="4" onclick="onClickNodeLink(event); return(false)">gpio_out</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_out</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_out" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_out_set" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x00C</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_out_set" data-id="5" onclick="onClickNodeLink(event); return(false)">gpio_out_set</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_out_set</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_out_set" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_out_clear" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x010</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_out_clear" data-id="6" onclick="onClickNodeLink(event); return(false)">gpio_out_clear</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_out_clear</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_out_clear" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_ie" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x014</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_ie" data-id="7" onclick="onClickNodeLink(event); return(false)">gpio_ie</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_ie</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_ie" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_ie_set" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x018</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_ie_set" data-id="8" onclick="onClickNodeLink(event); return(false)">gpio_ie_set</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_ie_set</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_ie_set" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_ie_clear" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x01C</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_ie_clear" data-id="9" onclick="onClickNodeLink(event); return(false)">gpio_ie_clear</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_ie_clear</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_ie_clear" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_oe" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x020</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_oe" data-id="10" onclick="onClickNodeLink(event); return(false)">gpio_oe</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_oe</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_oe" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_oe_set" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x024</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_oe_set" data-id="11" onclick="onClickNodeLink(event); return(false)">gpio_oe_set</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_oe_set</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_oe_set" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_oe_clear" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x028</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_oe_clear" data-id="12" onclick="onClickNodeLink(event); return(false)">gpio_oe_clear</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_oe_clear</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_oe_clear" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_pu" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x02C</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_pu" data-id="13" onclick="onClickNodeLink(event); return(false)">gpio_pu</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_pu</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_pu" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_pu_set" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x030</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_pu_set" data-id="14" onclick="onClickNodeLink(event); return(false)">gpio_pu_set</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_pu_set</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_pu_set" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_pu_clear" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x034</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_pu_clear" data-id="15" onclick="onClickNodeLink(event); return(false)">gpio_pu_clear</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_pu_clear</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_pu_clear" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_pd" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x038</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_pd" data-id="16" onclick="onClickNodeLink(event); return(false)">gpio_pd</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_pd</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_pd" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_pd_set" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x03C</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_pd_set" data-id="17" onclick="onClickNodeLink(event); return(false)">gpio_pd_set</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_pd_set</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_pd_set" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_pd_clear" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x040</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_pd_clear" data-id="18" onclick="onClickNodeLink(event); return(false)">gpio_pd_clear</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_pd_clear</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_pd_clear" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="group_config0" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x044</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.group_config0" data-id="19" onclick="onClickNodeLink(event); return(false)">group_config0</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">group_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#group_config0" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="group_config1" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x048</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.group_config1" data-id="20" onclick="onClickNodeLink(event); return(false)">group_config1</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">group_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#group_config1" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="group_config2" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x04C</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.group_config2" data-id="21" onclick="onClickNodeLink(event); return(false)">group_config2</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">group_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#group_config2" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="group_config3" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x050</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.group_config3" data-id="22" onclick="onClickNodeLink(event); return(false)">group_config3</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">group_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#group_config3" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="irq_out" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x054</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.irq_out" data-id="23" onclick="onClickNodeLink(event); return(false)">irq_out</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">irq_out</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#irq_out" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="irq_out_set" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x058</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.irq_out_set" data-id="24" onclick="onClickNodeLink(event); return(false)">irq_out_set</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">irq_out_set</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#irq_out_set" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="irq_out_clear" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x05C</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.irq_out_clear" data-id="25" onclick="onClickNodeLink(event); return(false)">irq_out_clear</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">irq_out_clear</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#irq_out_clear" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="group0_cntrl" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x060</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.group0_cntrl" data-id="26" onclick="onClickNodeLink(event); return(false)">group0_cntrl</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">group_cntrl</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#group0_cntrl" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="group1_cntrl" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x064</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.group1_cntrl" data-id="27" onclick="onClickNodeLink(event); return(false)">group1_cntrl</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">group_cntrl</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#group1_cntrl" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="group2_cntrl" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x068</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.group2_cntrl" data-id="28" onclick="onClickNodeLink(event); return(false)">group2_cntrl</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">group_cntrl</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#group2_cntrl" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="group3_cntrl" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x06C</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.group3_cntrl" data-id="29" onclick="onClickNodeLink(event); return(false)">group3_cntrl</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">group_cntrl</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#group3_cntrl" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="group0_in" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x070</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.group0_in" data-id="30" onclick="onClickNodeLink(event); return(false)">group0_in</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">group_read</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#group0_in" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="group1_in" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x074</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.group1_in" data-id="31" onclick="onClickNodeLink(event); return(false)">group1_in</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">group_read</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#group1_in" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="group2_in" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x078</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.group2_in" data-id="32" onclick="onClickNodeLink(event); return(false)">group2_in</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">group_read</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#group2_in" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="group3_in" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x07C</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.group3_in" data-id="33" onclick="onClickNodeLink(event); return(false)">group3_in</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">group_read</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#group3_in" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x080</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="timer0_cntrl" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0A0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.timer0_cntrl" data-id="34" onclick="onClickNodeLink(event); return(false)">timer0_cntrl</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">timer_cntrl</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#timer0_cntrl" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="timer0_counter" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0A4</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.timer0_counter" data-id="35" onclick="onClickNodeLink(event); return(false)">timer0_counter</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">timer_counter</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#timer0_counter" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="timer0_done" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0A8</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.timer0_done" data-id="36" onclick="onClickNodeLink(event); return(false)">timer0_done</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">timer_done</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#timer0_done" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0AC</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="timer1_cntrl" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0B0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.timer1_cntrl" data-id="37" onclick="onClickNodeLink(event); return(false)">timer1_cntrl</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">timer_cntrl</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#timer1_cntrl" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="timer1_counter" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0B4</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.timer1_counter" data-id="38" onclick="onClickNodeLink(event); return(false)">timer1_counter</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">timer_counter</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#timer1_counter" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="timer1_done" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0B8</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.timer1_done" data-id="39" onclick="onClickNodeLink(event); return(false)">timer1_done</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">timer_done</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#timer1_done" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0BC</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="gpio_mux_enable" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0D0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_mux_enable" data-id="40" onclick="onClickNodeLink(event); return(false)">gpio_mux_enable</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_mux_enable</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_mux_enable" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_mux_config0" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0D4</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_mux_config0" data-id="41" onclick="onClickNodeLink(event); return(false)">gpio_mux_config0</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_mux_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_mux_config0" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_mux_config1" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0D8</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_mux_config1" data-id="42" onclick="onClickNodeLink(event); return(false)">gpio_mux_config1</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_mux_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_mux_config1" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_mux_config2" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0DC</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_mux_config2" data-id="43" onclick="onClickNodeLink(event); return(false)">gpio_mux_config2</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_mux_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_mux_config2" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_mux_config3" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0E0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_mux_config3" data-id="44" onclick="onClickNodeLink(event); return(false)">gpio_mux_config3</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_mux_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_mux_config3" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="lut_config0" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0E4</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.lut_config0" data-id="45" onclick="onClickNodeLink(event); return(false)">lut_config0</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">lut_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#lut_config0" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="lut_config1" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0E8</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.lut_config1" data-id="46" onclick="onClickNodeLink(event); return(false)">lut_config1</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">lut_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#lut_config1" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="lut_config2" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0EC</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.lut_config2" data-id="47" onclick="onClickNodeLink(event); return(false)">lut_config2</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">lut_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#lut_config2" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="lut_config3" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0F0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.lut_config3" data-id="48" onclick="onClickNodeLink(event); return(false)">lut_config3</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">lut_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#lut_config3" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="lut_config4" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0F4</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.lut_config4" data-id="49" onclick="onClickNodeLink(event); return(false)">lut_config4</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">lut_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#lut_config4" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="lut_config5" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0F8</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.lut_config5" data-id="50" onclick="onClickNodeLink(event); return(false)">lut_config5</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">lut_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#lut_config5" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="lut_config6" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0FC</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.lut_config6" data-id="51" onclick="onClickNodeLink(event); return(false)">lut_config6</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">lut_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#lut_config6" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_int_config" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x100</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_int_config" data-id="52" onclick="onClickNodeLink(event); return(false)">gpio_int_config</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_int_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_int_config" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_int" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x104</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_int" data-id="53" onclick="onClickNodeLink(event); return(false)">gpio_int</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_int</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_int" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x108</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="byte_rev_in" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x110</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.byte_rev_in" data-id="54" onclick="onClickNodeLink(event); return(false)">byte_rev_in</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">byte_rev_in</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#byte_rev_in" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="byte_rev_out" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x114</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.byte_rev_out" data-id="55" onclick="onClickNodeLink(event); return(false)">byte_rev_out</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">byte_rev_out</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#byte_rev_out" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x118</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="crc" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x120</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.crc" data-id="56" onclick="onClickNodeLink(event); return(false)">crc</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">crc</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#crc" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="crc_state" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x124</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.crc_state" data-id="57" onclick="onClickNodeLink(event); return(false)">crc_state</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">crc_state</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#crc_state" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_cntrl_fifo_config" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x128</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_cntrl_fifo_config" data-id="58" onclick="onClickNodeLink(event); return(false)">gpio_cntrl_fifo_config</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_cntrl_fifo_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_cntrl_fifo_config" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_cntrl_fifo_status" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x12C</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_cntrl_fifo_status" data-id="59" onclick="onClickNodeLink(event); return(false)">gpio_cntrl_fifo_status</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_cntrl_fifo_status</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_cntrl_fifo_status" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_read_fifo_config" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x130</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_read_fifo_config" data-id="60" onclick="onClickNodeLink(event); return(false)">gpio_read_fifo_config</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_read_fifo_config</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_read_fifo_config" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_read_fifo_status" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x134</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_read_fifo_status" data-id="61" onclick="onClickNodeLink(event); return(false)">gpio_read_fifo_status</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_read_fifo_status</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_read_fifo_status" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_read_fifo0" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x138</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_read_fifo0" data-id="62" onclick="onClickNodeLink(event); return(false)">gpio_read_fifo0</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_read_fifo</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_read_fifo0" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_read_fifo1" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x13C</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_read_fifo1" data-id="63" onclick="onClickNodeLink(event); return(false)">gpio_read_fifo1</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">gpio_read_fifo</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_read_fifo1" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr id="gpio_cntrl_fifo0" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x140</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_cntrl_fifo0" data-id="64" onclick="onClickNodeLink(event); return(false)">gpio_cntrl_fifo0</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">group_cntrl_fifo</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_cntrl_fifo0" title="Permalink to this row"></a>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x144</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="gpio_cntrl_fifo1" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x160</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="?p=astraio_block.astraio_regs.gpio_cntrl_fifo1" data-id="65" onclick="onClickNodeLink(event); return(false)">gpio_cntrl_fifo1</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">group_cntrl_fifo</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2"><a class="headerlink" href="#gpio_cntrl_fifo1" title="Permalink to this row"></a>
+                </td>
+            </tr>
+        </table>
+    </body>
 </html>
