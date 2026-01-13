@@ -9,7 +9,7 @@
 <table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
 <tr id="Watchdog_error_indicator"><td>[31]</td>
 <td><a href="#Watchdog_error_indicator.desc">Watchdog_error_indicator</a></td>
-<td><span>r</span>,<span>rclr</span></td>
+<td>r,rclr</td>
 <td>-</td>
 <td></td>
 <td>-</td>
@@ -17,7 +17,7 @@
 </tr>
 <tr id="watchdog_timeout_value"><td>[30:20]</td>
 <td><a href="#watchdog_timeout_value.desc">watchdog_timeout_value</a></td>
-<td><span>r</span></td>
+<td>r</td>
 <td>-</td>
 <td></td>
 <td>-</td>
@@ -25,7 +25,7 @@
 </tr>
 <tr id="Recycle__clock_cycles"><td>[19:16]</td>
 <td><a href="#Recycle__clock_cycles.desc">Recycle__clock_cycles</a></td>
-<td><span>r</span></td>
+<td>r</td>
 <td>-</td>
 <td></td>
 <td>-</td>
@@ -33,7 +33,7 @@
 </tr>
 <tr id="RESERVED_BITS"><td>[15:8]</td>
 <td><a href="#RESERVED_BITS.desc">RESERVED_BITS</a></td>
-<td><span>r</span></td>
+<td>r</td>
 <td>-</td>
 <td></td>
 <td>-</td>
@@ -41,14 +41,14 @@
 </tr>
 <tr id="XIP_mode"><td>[7:0]</td>
 <td><a href="#XIP_mode.desc">XIP_mode</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>-</td>
 <td></td>
 <td>-</td>
 <td>H<a class="headerlink" href="#XIP_mode" title="Permalink to this row"></a></td>
 </tr>
 </table><p><label>Encoded Register Value:</label></p>
-<hr/><h2>Field Descriptions</h2>
+<h2>Field Descriptions</h2>
 <h3 id="Watchdog_error_indicator.desc">Watchdog_error_indicator<a class="headerlink" href="#Watchdog_error_indicator.desc" title="Permalink to this headline"></a></h3>
 <p>Watchdog error indicator. This bit will be set if the device ever fails to respond to an xSPI command by toggling the DS pins before the watchdog timer times out. This bit is sticky. It will get set if ever an error is detected, and only ever reset by writing a one to this bit. The bit is also mirrored in the configuration override register. In both registers, this error indicator may be cleared by writing a 1 to it.</p>
 <h3 id="watchdog_timeout_value.desc">watchdog_timeout_value<a class="headerlink" href="#watchdog_timeout_value.desc" title="Permalink to this headline"></a></h3>

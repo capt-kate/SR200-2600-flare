@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><meta http-equiv="Content-Type" content="text/html; charset="ISO-8859-1""><title>Register Descriptions</title><link rel="home" href="#idp42530312" title="Register Descriptions"></head>
+<body>
+<h2 class="title"><a name="idp42530312"></a>Register Descriptions</h2>
+<hr><hr><h2 class="title"><a name="sectionStart"></a>DWC_mipi_i3c_map/DWC_mipi_i3c_block Registers</h2>
+<p>DWC_mipi_i3c
+Follow the link for the register to see a detailed description of the register.</p>
+<a name="regtable"></a><p class="title">Table�1.�Registers for Address Block: DWC_mipi_i3c_map/DWC_mipi_i3c_block</p>
+<table summary="Registers for Address Block: DWC_mipi_i3c_map/DWC_mipi_i3c_block" width="100%"><colgroup></colgroup><thead><tr><tr><th>Register</th><th>Offset</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_DEVICE_CTRL" class="olink">DEVICE_CTRL</a></td>
+<td>0x0</td>
+<td><p>Device Control Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_DEVICE_ADDR" class="olink">DEVICE_ADDR</a></td>
+<td>0x4</td>
+<td><p>Device Address Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_HW_CAPABILITY" class="olink">HW_CAPABILITY</a></td>
+<td>0x8</td>
+<td><p>Hardware Capability register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_COMMAND_QUEUE_PORT" class="olink">COMMAND_QUEUE_PORT</a></td>
+<td>0xc</td>
+<td><p>Command Queue Port Register
+IC_MASTER_MODE-&gt;0x1-&gt;Master mode of operation
+IC_SLAVE_MODE-&gt;0X1-&gt;Slave...</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_RESPONSE_QUEUE_PORT" class="olink">RESPONSE_QUEUE_PORT</a></td>
+<td>0x10</td>
+<td><p>Response Queue Port Register
+IC_MASTER_MODE-0x1-Master mode of operation
+IC_SLAVE_MODE-0x1- Slave...</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_XFER_DATA_PORT" class="olink">XFER_DATA_PORT</a></td>
+<td>0x14</td>
+<td><p>Transfer Data Port Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_IBI_QUEUE_PORT" class="olink">IBI_QUEUE_PORT</a></td>
+<td>0x18</td>
+<td><p>Controller Mode In-band interrupt Queue Port Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_QUEUE_THLD_CTRL" class="olink">QUEUE_THLD_CTRL</a></td>
+<td>0x1c</td>
+<td><p>Queue Threshold Control Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_DATA_BUFFER_THLD_CTRL" class="olink">DATA_BUFFER_THLD_CTRL</a></td>
+<td>0x20</td>
+<td><p>Data Buffer Threshold Control Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_IBI_QUEUE_CTRL" class="olink">IBI_QUEUE_CTRL</a></td>
+<td>0x24</td>
+<td><p>Controller Mode IBI Queue Control Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_RESET_CTRL" class="olink">RESET_CTRL</a></td>
+<td>0x34</td>
+<td><p>Reset Control Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_SLV_EVENT_STATUS" class="olink">SLV_EVENT_STATUS</a></td>
+<td>0x38</td>
+<td><p>Target Mode Event Status Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_INTR_STATUS" class="olink">INTR_STATUS</a></td>
+<td>0x3c</td>
+<td><p>Interrupt Status Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_INTR_STATUS_EN" class="olink">INTR_STATUS_EN</a></td>
+<td>0x40</td>
+<td><p>Interrupt Status Enable Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_INTR_SIGNAL_EN" class="olink">INTR_SIGNAL_EN</a></td>
+<td>0x44</td>
+<td><p>Interrupt Signal Enable Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_INTR_FORCE" class="olink">INTR_FORCE</a></td>
+<td>0x48</td>
+<td><p>Interrupt Force Enable Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_QUEUE_STATUS_LEVEL" class="olink">QUEUE_STATUS_LEVEL</a></td>
+<td>0x4c</td>
+<td><p>Queue Status Level Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_DATA_BUFFER_STATUS_LEVEL" class="olink">DATA_BUFFER_STATUS_LEVEL</a></td>
+<td>0x50</td>
+<td><p>Data Buffer Status Level Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_PRESENT_STATE" class="olink">PRESENT_STATE</a></td>
+<td>0x54</td>
+<td><p>Present State Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_CCC_DEVICE_STATUS" class="olink">CCC_DEVICE_STATUS</a></td>
+<td>0x58</td>
+<td><p>Target Mode Device Operating Status Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_DEVICE_ADDR_TABLE_POINTER" class="olink">DEVICE_ADDR_TABLE_POINTER</a></td>
+<td>0x5c</td>
+<td><p>Controller Mode Device Address Table Pointer</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_DEV_CHAR_TABLE_POINTER" class="olink">DEV_CHAR_TABLE_POINTER</a></td>
+<td>0x60</td>
+<td><p>Controller Mode Device Characteristics Table Pointer</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_VENDOR_SPECIFIC_REG_POINTER" class="olink">VENDOR_SPECIFIC_REG_POINTER</a></td>
+<td>0x6c</td>
+<td><p>Controller Mode Vendor Specific Pointer Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_SLV_MIPI_ID_VALUE" class="olink">SLV_MIPI_ID_VALUE</a></td>
+<td>0x70</td>
+<td><p>Target Mode Manufacturer ID Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_SLV_PID_VALUE" class="olink">SLV_PID_VALUE</a></td>
+<td>0x74</td>
+<td><p>Target Mode Provisional ID Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_SLV_CHAR_CTRL" class="olink">SLV_CHAR_CTRL</a></td>
+<td>0x78</td>
+<td><p>Target Mode Characteristic Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_SLV_MAX_LEN" class="olink">SLV_MAX_LEN</a></td>
+<td>0x7c</td>
+<td><p>Target Mode Max Write/Read Length Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_MAX_READ_TURNAROUND" class="olink">MAX_READ_TURNAROUND</a></td>
+<td>0x80</td>
+<td><p>Maximum supported IBI Payload Size</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_MAX_DATA_SPEED" class="olink">MAX_DATA_SPEED</a></td>
+<td>0x84</td>
+<td><p>Target Mode Maximum Data Speed Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_SLV_INTR_REQ" class="olink">SLV_INTR_REQ</a></td>
+<td>0x8c</td>
+<td><p>Target Mode Interrupt Request Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_SLV_SIR_DATA" class="olink">SLV_SIR_DATA</a></td>
+<td>0x94</td>
+<td><p>Target Interrupt Request Data Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_SLV_IBI_RESP" class="olink">SLV_IBI_RESP</a></td>
+<td>0x98</td>
+<td><p>Target IBI Response Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_DEVICE_CTRL_EXTENDED" class="olink">DEVICE_CTRL_EXTENDED</a></td>
+<td>0xb0</td>
+<td><p>Device Control Extended Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_SCL_I3C_OD_TIMING" class="olink">SCL_I3C_OD_TIMING</a></td>
+<td>0xb4</td>
+<td><p>Controller Mode SCL I3C Open Drain Timing Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_SCL_I3C_PP_TIMING" class="olink">SCL_I3C_PP_TIMING</a></td>
+<td>0xb8</td>
+<td><p>Controller Mode SCL I3C Push Pull Timing Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_SCL_I2C_FM_TIMING" class="olink">SCL_I2C_FM_TIMING</a></td>
+<td>0xbc</td>
+<td><p>Controller Mode SCL I2C Fast Mode Timing Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_SCL_I2C_FMP_TIMING" class="olink">SCL_I2C_FMP_TIMING</a></td>
+<td>0xc0</td>
+<td><p>Controller Mode SCL I2C Fast Mode Plus Timing Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_SCL_EXT_LCNT_TIMING" class="olink">SCL_EXT_LCNT_TIMING</a></td>
+<td>0xc8</td>
+<td><p>Controller Mode SCL Extended Low Count Timing Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_SCL_EXT_TERMN_LCNT_TIMING" class="olink">SCL_EXT_TERMN_LCNT_TIMING</a></td>
+<td>0xcc</td>
+<td><p>Controller Mode SCL Termination Bit Low count Timing Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_SDA_HOLD_SWITCH_DLY_TIMING" class="olink">SDA_HOLD_SWITCH_DLY_TIMING</a></td>
+<td>0xd0</td>
+<td><p>Controller Mode SDA Hold and Mode Switch Delay Timing Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_BUS_FREE_AVAIL_TIMING" class="olink">BUS_FREE_AVAIL_TIMING</a></td>
+<td>0xd4</td>
+<td><p>Target Mode Bus Free Avail Timing Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_BUS_IDLE_TIMING" class="olink">BUS_IDLE_TIMING</a></td>
+<td>0xd8</td>
+<td><p>Target Mode Bus Idle Timing Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_I3C_VER_ID" class="olink">I3C_VER_ID</a></td>
+<td>0xe0</td>
+<td><p>DWC_mipi_i3c Version ID Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_I3C_VER_TYPE" class="olink">I3C_VER_TYPE</a></td>
+<td>0xe4</td>
+<td><p>DWC_mipi_i3c Version Type Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_QUEUE_SIZE_CAPABILITY" class="olink">QUEUE_SIZE_CAPABILITY</a></td>
+<td>0xe8</td>
+<td><p>Queue Size Capability Register</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_DEV_CHAR_TABLE1_LOC1" class="olink">DEV_CHAR_TABLE1_LOC1</a></td>
+<td>0x200</td>
+<td><p>DEV_CHAR_TABLE1_LOC1</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_SEC_DEV_CHAR_TABLE1" class="olink">SEC_DEV_CHAR_TABLE1</a></td>
+<td>0x200</td>
+<td><p>SEC_DEV_CHAR_TABLE1/DEV_CHAR_TABLE1_LOC1</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_DEV_CHAR_TABLE1_LOC2" class="olink">DEV_CHAR_TABLE1_LOC2</a></td>
+<td>0x204</td>
+<td><p>DEV_CHAR_TABLE1_LOC2</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_DEV_CHAR_TABLE1_LOC3" class="olink">DEV_CHAR_TABLE1_LOC3</a></td>
+<td>0x208</td>
+<td><p>DEV_CHAR_TABLE1_LOC3</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_DEV_CHAR_TABLE1_LOC4" class="olink">DEV_CHAR_TABLE1_LOC4</a></td>
+<td>0x20c</td>
+<td><p>DEV_CHAR_TABLE1_LOC4</p>
+</td>
+</tr>
+<tr><td><a href="details.html#H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_DEV_ADDR_TABLE1_LOC1" class="olink">DEV_ADDR_TABLE1_LOC1</a></td>
+<td>0x240</td>
+<td><p>Device Address Table Location of Device1</p>
+</td>
+</tr>
+</tbody></table></body></html>
+

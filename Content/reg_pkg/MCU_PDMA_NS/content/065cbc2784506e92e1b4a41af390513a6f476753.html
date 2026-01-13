@@ -11,7 +11,7 @@
 <table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
 <tr id="DESXADDRINC"><td>[31:16]</td>
 <td><a href="#DESXADDRINC.desc">DESXADDRINC</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>0x0</td>
 <td></td>
 <td>-</td>
@@ -19,14 +19,14 @@
 </tr>
 <tr id="SRCXADDRINC"><td>[15:0]</td>
 <td><a href="#SRCXADDRINC.desc">SRCXADDRINC</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>0x0</td>
 <td></td>
 <td>-</td>
 <td>H<a class="headerlink" href="#SRCXADDRINC" title="Permalink to this row"></a></td>
 </tr>
 </table><p><label>Encoded Register Value:</label></p>
-<hr/><h2>Field Descriptions</h2>
+<h2>Field Descriptions</h2>
 <h3 id="DESXADDRINC.desc">DESXADDRINC<a class="headerlink" href="#DESXADDRINC.desc" title="Permalink to this headline"></a></h3>
 <p>Destination X dimension Address Increment. This value is used as the increment between each TRANSIZE transfer. When a single bit is used then only 0 and 1 can be set. For wider increment registers, two's complement used with a range between -32768 to 32767 when the counter is 16 bits wide. The width of the register is indicated by the INC_WIDTH parameter. DESADDR_next = DESADDR + 2^TRANSIZE * DESXADDRINC</p>
 <h3 id="SRCXADDRINC.desc">SRCXADDRINC<a class="headerlink" href="#SRCXADDRINC.desc" title="Permalink to this headline"></a></h3>

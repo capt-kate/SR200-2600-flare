@@ -8,7 +8,7 @@
 <table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
 <tr id="gcmivsrc"><td>[31]</td>
 <td><a href="#gcmivsrc.desc">gcmivsrc</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>0x0</td>
 <td></td>
 <td>GCM Mode IV Source</td>
@@ -24,7 +24,7 @@
 </tr>
 <tr id="rkek"><td>[16]</td>
 <td><a href="#rkek.desc">rkek</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>0x0</td>
 <td></td>
 <td>RKEK Enable</td>
@@ -40,7 +40,7 @@
 </tr>
 <tr id="ctrmod"><td>[14:8]</td>
 <td><a href="#ctrmod.desc">ctrmod</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>0x0</td>
 <td></td>
 <td>CTR Mode Modular</td>
@@ -56,7 +56,7 @@
 </tr>
 <tr id="opmode"><td>[6:4]</td>
 <td><a href="#opmode.desc">opmode</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>0x0</td>
 <td></td>
 <td>Operation Mode</td>
@@ -72,7 +72,7 @@
 </tr>
 <tr id="keylen"><td>[2:1]</td>
 <td><a href="#keylen.desc">keylen</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>0x0</td>
 <td></td>
 <td>Key Length</td>
@@ -80,14 +80,14 @@
 </tr>
 <tr id="decrypt"><td>[0]</td>
 <td><a href="#decrypt.desc">decrypt</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>0x0</td>
 <td></td>
 <td>Decryption Indicator</td>
 <td>H<a class="headerlink" href="#decrypt" title="Permalink to this row"></a></td>
 </tr>
 </table><p><label>Encoded Register Value:</label></p>
-<hr/><h2>Field Descriptions</h2>
+<h2>Field Descriptions</h2>
 <h3 id="gcmivsrc.desc">gcmivsrc - GCM Mode IV Source<a class="headerlink" href="#gcmivsrc.desc" title="Permalink to this headline"></a></h3>
 <p>AES expects that the IV will be delivered on data bus (as part of the data stream) instead of feeding from the AES IV registers in GCM mode. It is because GCM requires special handling on the IV and the IV size can be very large. However, when the IV is 12 bytes (a special case in GCM mode), the IV can be provided from the AES IV register. This field determines the source of the IV. It is only valid when IV is 12 bytes in GCM mode.<p></p>
 • 0h= IV is provided from AES IV registers.<p></p>

@@ -9,19 +9,19 @@
 <table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
 <tr id="PHY_test"><td>[31:0]</td>
 <td><a href="#PHY_test.desc">PHY_test</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>-</td>
 <td></td>
 <td>-</td>
 <td>H<a class="headerlink" href="#PHY_test" title="Permalink to this row"></a></td>
 </tr>
 </table><p><label>Encoded Register Value:</label></p>
-<hr/><h2>Field Descriptions</h2>
+<h2>Field Descriptions</h2>
 <h3 id="PHY_test.desc">PHY_test<a class="headerlink" href="#PHY_test.desc" title="Permalink to this headline"></a></h3>
 <p>The top 8bits of this register control the current PHY test setting,
 whereas the bottom 24 bits control any test arguments. Four test modes
 are currently defined:</p>
-<hr /><p>8'h0: Normal operation
+<p>8'h0: Normal operation
 bits[23:0] are ignored
 8'h1: DLL Lab test. In this mode, various delayed values can be
 placed on the data IO lines for lab testing.

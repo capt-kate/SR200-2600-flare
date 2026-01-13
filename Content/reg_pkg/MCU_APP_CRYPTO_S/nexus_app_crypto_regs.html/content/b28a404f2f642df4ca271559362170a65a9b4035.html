@@ -16,7 +16,7 @@
 </tr>
 <tr id="outputdis"><td>[2]</td>
 <td><a href="#outputdis.desc">outputdis</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>0x0</td>
 <td></td>
 <td>Output Disable</td>
@@ -24,7 +24,7 @@
 </tr>
 <tr id="resume"><td>[1]</td>
 <td><a href="#resume.desc">resume</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>0x0</td>
 <td></td>
 <td>Resume Operation</td>
@@ -39,7 +39,7 @@
 <td></td>
 </tr>
 </table><p><label>Encoded Register Value:</label></p>
-<hr/><h2>Field Descriptions</h2>
+<h2>Field Descriptions</h2>
 <h3 id="outputdis.desc">outputdis - Output Disable<a class="headerlink" href="#outputdis.desc" title="Permalink to this headline"></a></h3>
 <p>Set this bit to stop AES from outputting data on data bus. Some applications, such as DRBG BCC function, are only interested in the last ciphertext (CTX) of encryption result. Since the current design always saves the last CTX in the AES IV register, it is unnecessary to output the entire encryption result on data bus (save power and memory space).<p></p>
 Notes:<p></p>

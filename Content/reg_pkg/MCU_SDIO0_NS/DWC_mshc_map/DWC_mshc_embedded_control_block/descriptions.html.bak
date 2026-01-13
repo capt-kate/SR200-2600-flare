@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><meta http-equiv="Content-Type" content="text/html; charset="ISO-8859-1""><title>Register Descriptions</title><link rel="home" href="#idp27804840" title="Register Descriptions"></head>
+<body>
+<h2 class="title"><a name="idp27804840"></a>Register Descriptions</h2>
+<hr><hr><h2 class="title"><a name="sectionStart"></a>DWC_mshc_map/DWC_mshc_embedded_control_block Registers</h2>
+<p>This register block defines embedded control registers
+Follow the link for the register to see a detailed description of the register.</p>
+<a name="regtable"></a><p class="title">Table�1.�Registers for Address Block: DWC_mshc_map/DWC_mshc_embedded_control_block</p>
+<table summary="Registers for Address Block: DWC_mshc_map/DWC_mshc_embedded_control_block" width="100%"><colgroup></colgroup><thead><tr><tr><th>Register</th><th>Offset</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><a href="details.html#H4-reg-DWC_mshc_map_DWC_mshc_embedded_control_block_EMBEDDED_CTRL_R" class="olink">EMBEDDED_CTRL_R</a></td>
+<td>0xf6c</td>
+<td><p>Embedded Control register</p>
+</td>
+</tr>
+</tbody></table></body></html>
+

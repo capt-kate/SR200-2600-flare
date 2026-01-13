@@ -9,7 +9,7 @@
 <table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
 <tr id="Disable_clock"><td>[31]</td>
 <td><a href="#Disable_clock.desc">Disable_clock</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>-</td>
 <td></td>
 <td>-</td>
@@ -17,7 +17,7 @@
 </tr>
 <tr id="RESERVED_FIELDS"><td>[30:24]</td>
 <td><a href="#RESERVED_FIELDS.desc">RESERVED_FIELDS</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>-</td>
 <td></td>
 <td>-</td>
@@ -25,7 +25,7 @@
 </tr>
 <tr id="Rate_request"><td>[23:16]</td>
 <td><a href="#Rate_request.desc">Rate_request</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>-</td>
 <td></td>
 <td>-</td>
@@ -33,7 +33,7 @@
 </tr>
 <tr id="Reserved"><td>[15:11]</td>
 <td><a href="#Reserved.desc">Reserved</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>-</td>
 <td></td>
 <td>-</td>
@@ -41,7 +41,7 @@
 </tr>
 <tr id="Data_strobe"><td>[10]</td>
 <td><a href="#Data_strobe.desc">Data_strobe</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>-</td>
 <td></td>
 <td>-</td>
@@ -49,7 +49,7 @@
 </tr>
 <tr id="PH"><td>[9]</td>
 <td><a href="#PH.desc">PH</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>-</td>
 <td></td>
 <td>-</td>
@@ -57,7 +57,7 @@
 </tr>
 <tr id="Pl"><td>[8]</td>
 <td><a href="#Pl.desc">Pl</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>-</td>
 <td></td>
 <td>-</td>
@@ -65,14 +65,14 @@
 </tr>
 <tr id="Clock_divider_setting"><td>[7:0]</td>
 <td><a href="#Clock_divider_setting.desc">Clock_divider_setting</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>-</td>
 <td></td>
 <td>-</td>
 <td>H<a class="headerlink" href="#Clock_divider_setting" title="Permalink to this row"></a></td>
 </tr>
 </table><p><label>Encoded Register Value:</label></p>
-<hr/><h2>Field Descriptions</h2>
+<h2>Field Descriptions</h2>
 <h3 id="Disable_clock.desc">Disable_clock<a class="headerlink" href="#Disable_clock.desc" title="Permalink to this headline"></a></h3>
 <p>Clock disable bit. If set, the clock will remain idle (zero) between device interactions. This is both the default value and the recommended setting. If clear, the IP will attempt to keep the clock running between commands, but may need to shut the clock down when starting or closing commands to avoid violating xSPI timing requirements.</p>
 <h3 id="RESERVED_FIELDS.desc">RESERVED_FIELDS<a class="headerlink" href="#RESERVED_FIELDS.desc" title="Permalink to this headline"></a></h3>

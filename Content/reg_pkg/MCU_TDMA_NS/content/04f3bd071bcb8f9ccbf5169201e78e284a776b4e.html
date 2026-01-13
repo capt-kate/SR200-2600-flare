@@ -10,14 +10,14 @@
 <table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
 <tr id="SECSIGNALVAL"><td>[31:0]</td>
 <td><a href="#SECSIGNALVAL.desc">SECSIGNALVAL</a></td>
-<td><span>rw</span>,<span>woclr</span></td>
+<td>rw,woclr</td>
 <td>0x0</td>
 <td></td>
 <td>-</td>
 <td>H<a class="headerlink" href="#SECSIGNALVAL" title="Permalink to this row"></a></td>
 </tr>
 </table><p><label>Encoded Register Value:</label></p>
-<hr/><h2>Field Descriptions</h2>
+<h2>Field Descriptions</h2>
 <h3 id="SECSIGNALVAL.desc">SECSIGNALVAL<a class="headerlink" href="#SECSIGNALVAL.desc" title="Permalink to this headline"></a></h3>
 <p>Secure DMA Unit signal status. Can be used for reading signal values of triggers and GPOs for debug. Values shown here are dependent on SIGNALPTR. Note that inputs are masked by security mapping before being presented here. This means that only signal values mapped to Secure world are visible as non-zero values. Writing to this register has the following effect:
 - Writing '1' to a Trigger Input Request that are not selected by any DMA channel will cause a deny response for it. This can attempt to clear an unwanted trigger input.

@@ -8,7 +8,7 @@
 <table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
 <tr id="extctrlen"><td>[31]</td>
 <td><a href="#extctrlen.desc">extctrlen</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>0x0</td>
 <td></td>
 <td>External Control Enable</td>
@@ -24,7 +24,7 @@
 </tr>
 <tr id="dataswap"><td>[24]</td>
 <td><a href="#dataswap.desc">dataswap</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>0x1</td>
 <td></td>
 <td>Data Swap</td>
@@ -40,14 +40,14 @@
 </tr>
 <tr id="select"><td>[1:0]</td>
 <td><a href="#select.desc">select</a></td>
-<td><span>rw</span></td>
+<td>rw</td>
 <td>0x1</td>
 <td></td>
 <td>AES, DES/TDES and RC4 share some of the registers and internal logic. The field allocates the resource to the selected engine.</td>
 <td>H<a class="headerlink" href="#select" title="Permalink to this row"></a></td>
 </tr>
 </table><p><label>Encoded Register Value:</label></p>
-<hr/><h2>Field Descriptions</h2>
+<h2>Field Descriptions</h2>
 <h3 id="extctrlen.desc">extctrlen - External Control Enable<a class="headerlink" href="#extctrlen.desc" title="Permalink to this headline"></a></h3>
 <p>Set this bit to enable external control. When external control is enabled, engine takes the following information form external source and ignores the configurations from the APB register.<p></p>
 • Start Signal<p></p>

@@ -1,12 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><meta http-equiv="Content-Type" content="text/html; charset="ISO-8859-1""><title>Register Details</title></head>
+﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>Register Details</title></head>
 <body>
-<h2 class="title"><a name="idp27500072"></a>Register Details</h2>
-<hr><hr><h2 class="title"><a name="H3-sect1-reg-ssi_memory_map_ssi_address_block"></a>ssi_address_block Register Details</h2>
-<p><a name="H4-reg-ssi_memory_map_ssi_address_block_CTRLR0"></a><span>CTRLR0</span></p>
-<ul><li><span>Name:</span>Control Register 0</li><li><span>Description:</span>This register controls the serial data transfer. It is impossible to
+<h1 class="title"><a name="idp27500072"></a>Register Details</h1>
+<h2 class="title"><a name="H3-sect1-reg-ssi_memory_map_ssi_address_block"></a>ssi_address_block Register Details</h2>
+<p><a name="H4-reg-ssi_memory_map_ssi_address_block_CTRLR0"></a>CTRLR0</p>
+<ul><li>Name:Control Register 0</li><li>Description:This register controls the serial data transfer. It is impossible to
 write to this register when the DW_apb_ssi is enabled. The DW_apb_ssi
 is enabled and disabled by writing to the SSIENR register.<p class="BLANK"></p>
-<span>Reset Value:</span>SSI_CTRLR0_RST</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x0</li></ul><a name="fld-ssi_memory_map_ssi_address_block_CTRLR0"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_31_26">31:26</a></td>
+Reset Value:SSI_CTRLR0_RST</li><li>Size:32 bits</li><li>Offset:0x0</li></ul><a name="fld-ssi_memory_map_ssi_address_block_CTRLR0"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_31_26">31:26</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_25">25</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_24">24</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_23">23</a></td>
@@ -43,7 +43,7 @@ is enabled and disabled by writing to the SSIENR register.<p class="BLANK"></p>
 <td>RSVD_CTRLR0</td>
 <td>R</td>
 <td><p>SSTE Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_25"></a>25</p>
@@ -51,19 +51,19 @@ is enabled and disabled by writing to the SSIENR register.<p class="BLANK"></p>
 <td>RSVD_SECONV</td>
 <td>R</td>
 <td><p>SECONV Reserved field - read-only</p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_24"></a>24</p>
 </td>
 <td>SSTE</td>
 <td>R/W</td>
-<td><p><span>Chip Select Toggle Enable.</span></p>
+<td><p>Chip Select Toggle Enable.</p>
 <p class="BLANK"></p>
 <p>When operating in SPI mode with clock phase (SCPH) set to 0, this register controls the behavior of the chip select line (ss_*_n) between data frames. If this register field is set to 1 the ss_*_n line will toggle between consecutive data frames, with the serial clock (sclk) being held to its default value while ss_*_n is high; if this register field is set to 0 the ss_*_n will stay low and sclk will run continuously for the duration of the transfer.</p>
 <p class="BLANK"></p>
-<p><span>Note:</span>This register is only valid when SSI_SCPH0_SSTOGGLE is set to 1.</p>
-<p><span>Value After Reset:</span>0x1</p>
+<p>Note:This register is only valid when SSI_SCPH0_SSTOGGLE is set to 1.</p>
+<p>Value After Reset:0x1</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_23"></a>23</p>
@@ -71,14 +71,14 @@ is enabled and disabled by writing to the SSIENR register.<p class="BLANK"></p>
 <td>RSVD_CTRLR0_23</td>
 <td>R</td>
 <td><p>CTRLR0_23 Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_22_21"></a>22:21</p>
 </td>
 <td>SPI_FRF</td>
 <td>R</td>
-<td><p><span>SPI Frame Format:</span></p>
+<td><p>SPI Frame Format:</p>
 <p class="BLANK"></p>
 <p>Selects data frame format for Transmitting/Receiving the data</p>
 <p class="BLANK"></p>
@@ -88,16 +88,16 @@ is enabled and disabled by writing to the SSIENR register.<p class="BLANK"></p>
 <p class="BLANK"></p>
 <p>When SSI_SPI_MODE is configured for "Quad Mode", 11 combination is reserved.</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (STD_SPI_FRF): Standard SPI Frame Format</li><li>0x1 (DUAL_SPI_FRF): Dual SPI Frame Format</li><li>0x2 (QUAD_SPI_FRF): Quad SPI Frame Format</li><li>0x3 (OCTAL_SPI_FRF): Octal SPI Frame Format</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_20_16"></a>20:16</p>
 </td>
 <td>DFS_32</td>
 <td>R/W</td>
-<td><p><span>Data Frame Size</span>in 32-bit transfer size mode.
+<td><p>Data Frame Sizein 32-bit transfer size mode.
 Used to select the data frame size in 32-bit transfer mode. These bits are only valid when
 SSI_MAX_XFER_SIZE is configured to 32. When the data frame size is programmed
 to be less than 32 bits, the receive data are automatically
@@ -106,11 +106,11 @@ FIFO zero-padded. You are responsible for making sure that transmit data is righ
 before writing into the transmit FIFO. The transmit logic ignores the upper unused
 bits when transmitting the data.</p>
 <p class="BLANK"></p>
-<p><span>Note:</span>When SSI_SPI_MODE is either set to "Dual" or "Quad" or "Octal" mode and SPI_FRF is not set to 2'b00.</p>
+<p>Note:When SSI_SPI_MODE is either set to "Dual" or "Quad" or "Octal" mode and SPI_FRF is not set to 2'b00.</p>
 <ul><li>DFS value should be multiple of 2 if SPI_FRF = 0x01,</li><li>DFS value should be multiple of 4 if SPI_FRF = 0x10,</li><li>DFS value should be multiple of 8 if SPI_FRF = 0x11.</li></ul><p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x3 (FRAME_04BITS): 4-bit serial data transfer</li><li>0x4 (FRAME_05BITS): 5-bit serial data transfer</li><li>0x5 (FRAME_06BITS): 6-bit serial data transfer</li><li>0x6 (FRAME_07BITS): 7-bit serial data transfer</li><li>0x7 (FRAME_08BITS): 8-bit serial data transfer</li><li>0x8 (FRAME_09BITS): 9-bit serial data transfer</li><li>0x9 (FRAME_10BITS): 10-bit serial data transfer</li><li>0xa (FRAME_11BITS): 11-bit serial data transfer</li><li>0xb (FRAME_12BITS): 12-bit serial data transfer</li><li>0xc (FRAME_13BITS): 13-bit serial data transfer</li><li>0xd (FRAME_14BITS): 14-bit serial data transfer</li><li>0xe (FRAME_15BITS): 15-bit serial data transfer</li><li>0xf (FRAME_16BITS): 16-bit serial data transfer</li><li>0x10 (FRAME_17BITS): 17-bit serial data transfer</li><li>0x11 (FRAME_18BITS): 18-bit serial data transfer</li><li>0x12 (FRAME_19BITS): 19-bit serial data transfer</li><li>0x13 (FRAME_20BITS): 20-bit serial data transfer</li><li>0x14 (FRAME_21BITS): 21-bit serial data transfer</li><li>0x15 (FRAME_22BITS): 22-bit serial data transfer</li><li>0x16 (FRAME_23BITS): 23-bit serial data transfer</li><li>0x17 (FRAME_24BITS): 24-bit serial data transfer</li><li>0x18 (FRAME_25BITS): 25-bit serial data transfer</li><li>0x19 (FRAME_26BITS): 26-bit serial data transfer</li><li>0x1a (FRAME_27BITS): 27-bit serial data transfer</li><li>0x1b (FRAME_28BITS): 28-bit serial data transfer</li><li>0x1c (FRAME_29BITS): 29-bit serial data transfer</li><li>0x1d (FRAME_30BITS): 30-bit serial data transfer</li><li>0x1e (FRAME_31BITS): 31-bit serial data transfer</li><li>0x1f (FRAME_32BITS): 32-bit serial data transfer</li></ul><p></p>
-<p><span>Value After Reset:</span>0x7</p>
+<p>Value After Reset:0x7</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_15_12"></a>15:12</p>
@@ -120,16 +120,16 @@ bits when transmitting the data.</p>
 <td><p>Control Frame Size. Selects the length of the control word for the
 Microwire frame format.</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (SIZE_01_BIT): 1-bit Control Word</li><li>0x1 (SIZE_02_BIT): 2-bit Control Word</li><li>0x2 (SIZE_03_BIT): 3-bit Control Word</li><li>0x3 (SIZE_04_BIT): 4-bit Control Word</li><li>0x4 (SIZE_05_BIT): 5-bit Control Word</li><li>0x5 (SIZE_06_BIT): 6-bit Control Word</li><li>0x6 (SIZE_07_BIT): 7-bit Control Word</li><li>0x7 (SIZE_08_BIT): 8-bit Control Word</li><li>0x8 (SIZE_09_BIT): 9-bit Control Word</li><li>0x9 (SIZE_10_BIT): 10-bit Control Word</li><li>0xa (SIZE_11_BIT): 11-bit Control Word</li><li>0xb (SIZE_12_BIT): 12-bit Control Word</li><li>0xc (SIZE_13_BIT): 13-bit Control Word</li><li>0xd (SIZE_14_BIT): 14-bit Control Word</li><li>0xe (SIZE_15_BIT): 15-bit Control Word</li><li>0xf (SIZE_16_BIT): 16-bit Control Word</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_11"></a>11</p>
 </td>
 <td>SRL</td>
 <td>R/W</td>
-<td><p><span>Shift Register Loop.</span></p>
+<td><p>Shift Register Loop.</p>
 <p class="BLANK"></p>
 <p>Used for testing purposes only. When internally
 active, connects the transmit shift register output to the receive shift register input.</p>
@@ -140,9 +140,9 @@ active, connects the transmit shift register output to the receive shift registe
 must be provided by an external source. In this mode, the target cannot generate these signals
 because there is nothing to which to loop back</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x1 (TESTING_MODE): Test mode: Tx &amp; Rx shift reg connected</li><li>0x0 (NORMAL_MODE): Normal mode operation</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_10"></a>10</p>
@@ -165,16 +165,16 @@ may respond with data on the controller rxd line. This bit is
 enabled after reset and must be disabled by software (when broadcast
 mode is used), if you do not want this device to respond with data.</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x1 (DISABLED): Target Output is disabled</li><li>0x0 (ENABLED): Target Output is enabled</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_9_8"></a>9:8</p>
 </td>
 <td>TMOD</td>
 <td>R/W</td>
-<td><p><span>Transfer Mode.</span></p>
+<td><p>Transfer Mode.</p>
 <p class="BLANK"></p>
 <p>Selects the mode of transfer for serial communication. This field does
 not affect the transfer duplicity. Only indicates whether the receive or
@@ -215,31 +215,31 @@ There are only two valid combinations:</p>
 <p class="BLANK"></p>
 <p>01 - Write</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (TX_AND_RX): Transmit &amp; receive</li><li>0x1 (TX_ONLY): Transmit only mode or Write (SPI_FRF != 2'b00)</li><li>0x2 (RX_ONLY): Receive only mode or Read (SPI_FRF != 2'b00)</li><li>0x3 (EEPROM_READ): EEPROM Read mode</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_7"></a>7</p>
 </td>
 <td>SCPOL</td>
 <td>R/W</td>
-<td><p><span>Serial Clock Polarity.</span></p>
+<td><p>Serial Clock Polarity.</p>
 <p class="BLANK"></p>
 <p>Valid when the frame format (FRF) is set to Motorola SPI. Used to select
 the polarity of the inactive serial clock, which is held inactive when
 the DW_apb_ssi controller is not actively transferring data on the serial bus.</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (SCLK_LOW): Inactive state of serial clock is low</li><li>0x1 (SCLK_HIGH): Inactive state of serial clock is high</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_6"></a>6</p>
 </td>
 <td>SCPH</td>
 <td>R/W</td>
-<td><p><span>Serial Clock Phase.</span></p>
+<td><p>Serial Clock Phase.</p>
 <p class="BLANK"></p>
 <p>Valid when the frame format (FRF) is set to Motorola SPI. The serial
 clock phase selects the relationship of the serial clock with the chip
@@ -250,27 +250,27 @@ the serial clock. When SCPH = 1, the serial clock starts toggling one
 cycle after the chip select line is activated, and data are captured
 on the second edge of the serial clock.</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (SCPH_MIDDLE): Serial clock toggles in middle of first data bit</li><li>0x1 (SCPH_START): Serial clock toggles at start of first data bit</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_5_4"></a>5:4</p>
 </td>
 <td>FRF</td>
 <td>R/W</td>
-<td><p><span>Frame Format.</span>Selects which serial protocol transfers the data.</p>
+<td><p>Frame Format.Selects which serial protocol transfers the data.</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (MOTOROLA_SPI): Motorola SPI Frame Format</li><li>0x1 (TEXAS_SSP): Texas Instruments SSP Frame Format</li><li>0x2 (NS_MICROWIRE): National Microwire Frame Format</li><li>0x3 (RESERVED): Reserved value</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_CTRLR0_F_3_0"></a>3:0</p>
 </td>
 <td>DFS</td>
 <td>R</td>
-<td><p><span>Data Frame Size.</span></p>
+<td><p>Data Frame Size.</p>
 <p class="BLANK"></p>
 <p>This register field is only valid when SSI_MAX_XFER_SIZE is
 configured to 16. If SSI_MAX_XFER_SIZE is configured to 32, then writing to this field
@@ -283,19 +283,19 @@ upper bits of the receive FIFO zero-padded.</p>
 <p>You must right-justify transmit data before writing into the transmit FIFO. The transmit
 logic ignores the upper unused bits when transmitting the data.</p>
 <p class="BLANK"></p>
-<p><span>Note:</span>When SSI_SPI_MODE is either set to "Dual" or "Quad" or "Octal" mode and SPI_FRF is not set to 2'b00.
+<p>Note:When SSI_SPI_MODE is either set to "Dual" or "Quad" or "Octal" mode and SPI_FRF is not set to 2'b00.
 - DFS value should be multiple of 2 if SPI_FRF = 01,
 - DFS value should be multiple of 4 if SPI_FRF = 10,
 - DFS value should be multiple of 8 if SPI_FRF = 11.</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x3 (FRAME_04BITS): 4-bit serial data transfer</li><li>0x4 (FRAME_05BITS): 5-bit serial data transfer</li><li>0x5 (FRAME_06BITS): 6-bit serial data transfer</li><li>0x6 (FRAME_07BITS): 7-bit serial data transfer</li><li>0x7 (FRAME_08BITS): 8-bit serial data transfer</li><li>0x8 (FRAME_09BITS): 9-bit serial data transfer</li><li>0x9 (FRAME_10BITS): 10-bit serial data transfer</li><li>0xa (FRAME_11BITS): 11-bit serial data transfer</li><li>0xb (FRAME_12BITS): 12-bit serial data transfer</li><li>0xc (FRAME_13BITS): 13-bit serial data transfer</li><li>0xd (FRAME_14BITS): 14-bit serial data transfer</li><li>0xe (FRAME_15BITS): 15-bit serial data transfer</li><li>0xf (FRAME_16BITS): 16-bit serial data transfer</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_SSIENR"></a><span>SSIENR</span></p>
-<ul><li><span>Name:</span>SSI Enable Register</li><li><span>Description:</span>This register enables and disables the DW_apb_ssi.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x8</li></ul><a name="fld-ssi_memory_map_ssi_address_block_SSIENR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_SSIENR_F_31_1">31:1</a></td>
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_SSIENR"></a>SSIENR</p>
+<ul><li>Name:SSI Enable Register</li><li>Description:This register enables and disables the DW_apb_ssi.<p class="BLANK"></p>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x8</li></ul><a name="fld-ssi_memory_map_ssi_address_block_SSIENR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_SSIENR_F_31_1">31:1</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_SSIENR_F_0">0</a></td>
 </tr>
 <tr><td>RSVD_SSIENR</td>
@@ -308,14 +308,14 @@ logic ignores the upper unused bits when transmitting the data.</p>
 <td>RSVD_SSIENR</td>
 <td>R</td>
 <td><p>SSIENR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_SSIENR_F_0"></a>0</p>
 </td>
 <td>SSI_EN</td>
 <td>R/W</td>
-<td><p><span>SSI Enable.</span></p>
+<td><p>SSI Enable.</p>
 <p class="BLANK"></p>
 <p>Enables and disables all DW_apb_ssi operations. When
 disabled, all serial transfers are halted immediately. Transmit and
@@ -325,17 +325,17 @@ enabled. When disabled, the ssi_sleep output is set (after delay) to
 inform the system that it is safe to remove the ssi_clk, thus saving
 power consumption in the system.</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (DISABLE): Disables Serial Transfer</li><li>0x1 (ENABLED): Enables Serial Transfer</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_MWCR"></a><span>MWCR</span></p>
-<ul><li><span>Name:</span>Microwire Control Register</li><li><span>Description:</span>This register controls the direction of the data word for the half-duplex
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_MWCR"></a>MWCR</p>
+<ul><li>Name:Microwire Control Register</li><li>Description:This register controls the direction of the data word for the half-duplex
 Microwire serial protocol. It is impossible to write to this register
 when the DW_apb_ssi is enabled. The DW_apb_ssi is enabled and disabled by
 writing to the SSIENR register.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xc</li></ul><a name="fld-ssi_memory_map_ssi_address_block_MWCR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_MWCR_F_31_3">31:3</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xc</li></ul><a name="fld-ssi_memory_map_ssi_address_block_MWCR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_MWCR_F_31_3">31:3</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_MWCR_F_2">2</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_MWCR_F_1">1</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_MWCR_F_0">0</a></td>
@@ -352,7 +352,7 @@ writing to the SSIENR register.<p class="BLANK"></p>
 <td>RSVD_MWCR</td>
 <td>R</td>
 <td><p>MWCR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_MWCR_F_2"></a>2</p>
@@ -360,14 +360,14 @@ writing to the SSIENR register.<p class="BLANK"></p>
 <td>RSVD_MHS</td>
 <td>R</td>
 <td><p>MHS Reserved field - read-only</p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_MWCR_F_1"></a>1</p>
 </td>
 <td>MDD</td>
 <td>R/W</td>
-<td><p><span>Microwire Control.</span></p>
+<td><p>Microwire Control.</p>
 <p class="BLANK"></p>
 <p>Defines the direction of the data word when the Microwire serial protocol
 is used. When this bit is set to 0, the data word is received by the
@@ -375,16 +375,16 @@ DW_apb_ssi MacroCell from the external serial device. When this bit is
 set to 1, the data word is transmitted from the DW_apb_ssi MacroCell to
 the external serial device.</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (RECEIVE): SSI receives data</li><li>0x1 (TRANSMIT): SSI transmits data</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_MWCR_F_0"></a>0</p>
 </td>
 <td>MWMOD</td>
 <td>R/W</td>
-<td><p><span>Microwire Transfer Mode.</span></p>
+<td><p>Microwire Transfer Mode.</p>
 <p class="BLANK"></p>
 <p>Defines whether the Microwire transfer is sequential or non-sequential.
 When sequential mode is used, only one control word is needed to
@@ -392,15 +392,15 @@ transmit or receive a block of data words. When non-sequential mode is
 used, there must be a control word for each data word that is
 transmitted or received.</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (NON_SEQUENTIAL): Non-Sequential Microwire Transfer</li><li>0x1 (SEQUENTIAL): Sequential Microwire Transfer</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_TXFTLR"></a><span>TXFTLR</span></p>
-<ul><li><span>Name:</span>Transmit FIFO Threshold Level</li><li><span>Description:</span>This register controls the threshold value for the transmit FIFO memory.
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_TXFTLR"></a>TXFTLR</p>
+<ul><li>Name:Transmit FIFO Threshold Level</li><li>Description:This register controls the threshold value for the transmit FIFO memory.
 The DW_apb_ssi is enabled and disabled by writing to the SSIENR register.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x18</li></ul><a name="fld-ssi_memory_map_ssi_address_block_TXFTLR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_TXFTLR_F_31_5">31:5</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x18</li></ul><a name="fld-ssi_memory_map_ssi_address_block_TXFTLR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_TXFTLR_F_31_5">31:5</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_TXFTLR_F_4_0">4:0</a></td>
 </tr>
 <tr><td>RSVD_TXFTLR</td>
@@ -413,14 +413,14 @@ The DW_apb_ssi is enabled and disabled by writing to the SSIENR register.<p clas
 <td>RSVD_TXFTLR</td>
 <td>R</td>
 <td><p>TXFTLR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_TXFTLR_F_4_0"></a>4:0</p>
 </td>
 <td>TFT</td>
 <td>R/W</td>
-<td><p><span>Transmit FIFO Threshold.</span></p>
+<td><p>Transmit FIFO Threshold.</p>
 <p class="BLANK"></p>
 <p>Controls the level of entries (or below) at which the transmit FIFO controller
 triggers an interrupt. The FIFO depth is configurable in the range 2-256;
@@ -431,13 +431,13 @@ the number of transmit FIFO entries is less than or equal to this value,
 the transmit FIFO empty interrupt is triggered. For information on the Transmit FIFO Threshold values, see the "Controller SPI and SSP Serial Transfers" in the DW_apb_ssi Databook.</p>
 <p class="BLANK"></p>
 <p>ssi_txe_intr is asserted when TFT or less data entries are present in transmit FIFO</p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RXFTLR"></a><span>RXFTLR</span></p>
-<ul><li><span>Name:</span>Receive FIFO Threshold Level</li><li><span>Description:</span>This register controls the threshold value for the receive FIFO memory.
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RXFTLR"></a>RXFTLR</p>
+<ul><li>Name:Receive FIFO Threshold Level</li><li>Description:This register controls the threshold value for the receive FIFO memory.
 The DW_apb_ssi is enabled and disabled by writing to the SSIENR register.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x1c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_RXFTLR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RXFTLR_F_31_5">31:5</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x1c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_RXFTLR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RXFTLR_F_31_5">31:5</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RXFTLR_F_4_0">4:0</a></td>
 </tr>
 <tr><td>RSVD_RXFTLR</td>
@@ -450,14 +450,14 @@ The DW_apb_ssi is enabled and disabled by writing to the SSIENR register.<p clas
 <td>RSVD_RXFTLR</td>
 <td>R</td>
 <td><p>RXFTLR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RXFTLR_F_4_0"></a>4:0</p>
 </td>
 <td>RFT</td>
 <td>R/W</td>
-<td><p><span>Receive FIFO Threshold.</span></p>
+<td><p>Receive FIFO Threshold.</p>
 <p class="BLANK"></p>
 <p>Controls the level of entries (or above) at which the receive FIFO controller triggers an interrupt. The FIFO depth is configurable in the range 2-256. This register is sized to the number of address
 bits needed to access the FIFO. If you attempt to set this value greater than the depth of the FIFO, this field is not written and retains its current value. When the number of receive FIFO entries is
@@ -465,12 +465,12 @@ greater than or equal to this value + 1, the receive FIFO full interrupt is trig
 DW_apb_ssi Databook.</p>
 <p class="BLANK"></p>
 <p>ssi_rxf_intr is asserted when RFT or more data entries are present in receive FIFO.</p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_TXFLR"></a><span>TXFLR</span></p>
-<ul><li><span>Name:</span>Transmit FIFO Level Register</li><li><span>Description:</span>This register contains the number of valid data entries in the transmit FIFO memory.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x20</li></ul><a name="fld-ssi_memory_map_ssi_address_block_TXFLR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_TXFLR_F_31_6">31:6</a></td>
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_TXFLR"></a>TXFLR</p>
+<ul><li>Name:Transmit FIFO Level Register</li><li>Description:This register contains the number of valid data entries in the transmit FIFO memory.<p class="BLANK"></p>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x20</li></ul><a name="fld-ssi_memory_map_ssi_address_block_TXFLR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_TXFLR_F_31_6">31:6</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_TXFLR_F_5_0">5:0</a></td>
 </tr>
 <tr><td>RSVD_TXFLR</td>
@@ -483,24 +483,24 @@ DW_apb_ssi Databook.</p>
 <td>RSVD_TXFLR</td>
 <td>R</td>
 <td><p>TXFLR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_TXFLR_F_5_0"></a>5:0</p>
 </td>
 <td>TXTFL</td>
 <td>R</td>
-<td><p><span>Transmit FIFO Level.</span></p>
+<td><p>Transmit FIFO Level.</p>
 <p class="BLANK"></p>
 <p>Contains the number of valid data entries in the transmit FIFO.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RXFLR"></a><span>RXFLR</span></p>
-<ul><li><span>Name:</span>Receive FIFO Level Register</li><li><span>Description:</span>This register contains the number of valid data entries in the receive FIFO memory. This register can be ready at any time.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x24</li></ul><a name="fld-ssi_memory_map_ssi_address_block_RXFLR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RXFLR_F_31_6">31:6</a></td>
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RXFLR"></a>RXFLR</p>
+<ul><li>Name:Receive FIFO Level Register</li><li>Description:This register contains the number of valid data entries in the receive FIFO memory. This register can be ready at any time.<p class="BLANK"></p>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x24</li></ul><a name="fld-ssi_memory_map_ssi_address_block_RXFLR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RXFLR_F_31_6">31:6</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RXFLR_F_5_0">5:0</a></td>
 </tr>
 <tr><td>RSVD_RXFLR</td>
@@ -513,27 +513,27 @@ DW_apb_ssi Databook.</p>
 <td>RSVD_RXFLR</td>
 <td>R</td>
 <td><p>RXFLR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RXFLR_F_5_0"></a>5:0</p>
 </td>
 <td>RXTFL</td>
 <td>R</td>
-<td><p><span>Receive FIFO Level.</span></p>
+<td><p>Receive FIFO Level.</p>
 <p class="BLANK"></p>
 <p>Contains the number of valid data entries in the receive FIFO.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_SR"></a><span>SR</span></p>
-<ul><li><span>Name:</span>Status Register</li><li><span>Description:</span>This is a read-only register used to indicate the current transfer status,
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_SR"></a>SR</p>
+<ul><li>Name:Status Register</li><li>Description:This is a read-only register used to indicate the current transfer status,
 FIFO status, and any transmission/reception errors that may have occurred.
 The status register may be read at any time. None of the bits in this
 register request an interrupt.<p class="BLANK"></p>
-<span>Reset Value:</span>0x6</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x28</li></ul><a name="fld-ssi_memory_map_ssi_address_block_SR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_SR_F_31_7">31:7</a></td>
+Reset Value:0x6</li><li>Size:32 bits</li><li>Offset:0x28</li></ul><a name="fld-ssi_memory_map_ssi_address_block_SR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_SR_F_31_7">31:7</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_SR_F_6">6</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_SR_F_5">5</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_SR_F_4">4</a></td>
@@ -558,8 +558,8 @@ register request an interrupt.<p class="BLANK"></p>
 <td>RSVD_SR</td>
 <td>R</td>
 <td><p>SR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_SR_F_6"></a>6</p>
@@ -567,111 +567,111 @@ register request an interrupt.<p class="BLANK"></p>
 <td>RSVD_DCOL</td>
 <td>R</td>
 <td><p>DCOL Reserved field - read-only</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_SR_F_5"></a>5</p>
 </td>
 <td>TXE</td>
 <td>R</td>
-<td><p><span>Transmission Error.</span></p>
+<td><p>Transmission Error.</p>
 <p class="BLANK"></p>
 <p>Set if the transmit FIFO is empty when a transfer is started. This bit can
 be set only when the DW_apb_ssi is configured as a target device. Data from
 the previous transmission is resent on the txd line. This bit is cleared
 when read.</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (NO_ERROR): No Error</li><li>0x1 (TX_ERROR): Transmission Error</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_SR_F_4"></a>4</p>
 </td>
 <td>RFF</td>
 <td>R</td>
-<td><p><span>Receive FIFO Full.</span></p>
+<td><p>Receive FIFO Full.</p>
 <p class="BLANK"></p>
 <p>When the receive FIFO is completely full, this bit
 is set. When the receive FIFO contains one or more empty location, this
 bit is cleared.</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (NOT_FULL): Receive FIFO is not full</li><li>0x1 (FULL): Receive FIFO is full</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_SR_F_3"></a>3</p>
 </td>
 <td>RFNE</td>
 <td>R</td>
-<td><p><span>Receive FIFO Not Empty.</span></p>
+<td><p>Receive FIFO Not Empty.</p>
 <p class="BLANK"></p>
 <p>Set when the receive FIFO contains one or more entries and is cleared
 when the receive FIFO is empty. This bit can be polled by software to
 completely empty the receive FIFO.</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (EMPTY): Receive FIFO is empty</li><li>0x1 (NOT_EMPTY): Receive FIFO is not empty</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_SR_F_2"></a>2</p>
 </td>
 <td>TFE</td>
 <td>R</td>
-<td><p><span>Transmit FIFO Empty.</span></p>
+<td><p>Transmit FIFO Empty.</p>
 <p class="BLANK"></p>
 <p>When the transmit FIFO is completely empty, this bit is set. When the
 transmit FIFO contains one or more valid entries, this bit is cleared.
 This bit field does not request an interrupt.</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (NOT_EMPTY): Transmit FIFO is not empty</li><li>0x1 (EMPTY): Transmit FIFO is empty</li></ul><p></p>
-<p><span>Value After Reset:</span>0x1</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x1</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_SR_F_1"></a>1</p>
 </td>
 <td>TFNF</td>
 <td>R</td>
-<td><p><span>Transmit FIFO Not Full.</span></p>
+<td><p>Transmit FIFO Not Full.</p>
 <p class="BLANK"></p>
 <p>Set when the transmit FIFO contains one or more
 empty locations, and is cleared when the FIFO is full.</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (FULL): Transmit FIFO is full</li><li>0x1 (NOT_FULL): Transmit FIFO is not Full</li></ul><p></p>
-<p><span>Value After Reset:</span>0x1</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x1</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_SR_F_0"></a>0</p>
 </td>
 <td>BUSY</td>
 <td>R</td>
-<td><p><span>SSI Busy Flag.</span></p>
+<td><p>SSI Busy Flag.</p>
 <p class="BLANK"></p>
 <p>When set, indicates that a serial transfer is in progress; when cleared
 indicates that the DW_apb_ssi is idle or disabled.</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (INACTIVE): DW_apb_ssi is idle or disabled</li><li>0x1 (ACTIVE): DW_apb_ssi is actively transferring data</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_IMR"></a><span>IMR</span></p>
-<ul><li><span>Name:</span>Interrupt Mask Register</li><li><span>Description:</span>This read/write register masks or enables all interrupts generated by the DW_apb_ssi.
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_IMR"></a>IMR</p>
+<ul><li>Name:Interrupt Mask Register</li><li>Description:This read/write register masks or enables all interrupts generated by the DW_apb_ssi.
 When the DW_apb_ssi is configured as a target device, the MSTIM bit field is not present.
 This changes the reset value from 0x3F for serial-controller configurations to 0x1F for serial-target
 configurations.<p class="BLANK"></p>
-<span>Reset Value:</span>(SSI_IS_MASTER == 1) ? 0x3F : 0x1F</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x2c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_IMR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_IMR_F_31_6">31:6</a></td>
+Reset Value:(SSI_IS_MASTER == 1) ? 0x3F : 0x1F</li><li>Size:32 bits</li><li>Offset:0x2c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_IMR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_IMR_F_31_6">31:6</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_IMR_F_5">5</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_IMR_F_4">4</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_IMR_F_3">3</a></td>
@@ -694,7 +694,7 @@ configurations.<p class="BLANK"></p>
 <td>RSVD_IMR</td>
 <td>R</td>
 <td><p>IMR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_IMR_F_5"></a>5</p>
@@ -702,7 +702,7 @@ configurations.<p class="BLANK"></p>
 <td>RSVD_MSTIM</td>
 <td>R</td>
 <td><p>RSVD_MSTIM Reserved field - read-only</p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_IMR_F_4"></a>4</p>
@@ -711,9 +711,9 @@ configurations.<p class="BLANK"></p>
 <td>R/W</td>
 <td><p>Receive FIFO Full Interrupt Mask</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (MASKED): ssi_rxf_intr interrupt is masked</li><li>0x1 (UNMASKED): ssi_rxf_intr interrupt is not masked</li></ul><p></p>
-<p><span>Value After Reset:</span>0x1</p>
+<p>Value After Reset:0x1</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_IMR_F_3"></a>3</p>
@@ -722,9 +722,9 @@ configurations.<p class="BLANK"></p>
 <td>R/W</td>
 <td><p>Receive FIFO Overflow Interrupt Mask</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (MASKED): ssi_rxo_intr interrupt is masked</li><li>0x1 (UNMASKED): ssi_rxo_intr interrupt is not masked</li></ul><p></p>
-<p><span>Value After Reset:</span>0x1</p>
+<p>Value After Reset:0x1</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_IMR_F_2"></a>2</p>
@@ -733,9 +733,9 @@ configurations.<p class="BLANK"></p>
 <td>R/W</td>
 <td><p>Receive FIFO Underflow Interrupt Mask</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (MASKED): ssi_rxu_intr interrupt is masked</li><li>0x1 (UNMASKED): ssi_rxu_intr interrupt is not masked</li></ul><p></p>
-<p><span>Value After Reset:</span>0x1</p>
+<p>Value After Reset:0x1</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_IMR_F_1"></a>1</p>
@@ -744,9 +744,9 @@ configurations.<p class="BLANK"></p>
 <td>R/W</td>
 <td><p>Transmit FIFO Overflow Interrupt Mask</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (MASKED): ssi_txo_intr interrupt is masked</li><li>0x1 (UNMASKED): ssi_txo_intr interrupt is not masked</li></ul><p></p>
-<p><span>Value After Reset:</span>0x1</p>
+<p>Value After Reset:0x1</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_IMR_F_0"></a>0</p>
@@ -755,14 +755,14 @@ configurations.<p class="BLANK"></p>
 <td>R/W</td>
 <td><p>Transmit FIFO Empty Interrupt Mask</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (MASKED): ssi_txe_intr interrupt is masked</li><li>0x1 (UNMASKED): ssi_txe_intr interrupt is not masked</li></ul><p></p>
-<p><span>Value After Reset:</span>0x1</p>
+<p>Value After Reset:0x1</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_ISR"></a><span>ISR</span></p>
-<ul><li><span>Name:</span>Interrupt Status Register</li><li><span>Description:</span>This register reports the status of the DW_apb_ssi interrupts after they have been masked.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x30</li></ul><a name="fld-ssi_memory_map_ssi_address_block_ISR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_ISR_F_31_6">31:6</a></td>
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_ISR"></a>ISR</p>
+<ul><li>Name:Interrupt Status Register</li><li>Description:This register reports the status of the DW_apb_ssi interrupts after they have been masked.<p class="BLANK"></p>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x30</li></ul><a name="fld-ssi_memory_map_ssi_address_block_ISR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_ISR_F_31_6">31:6</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_ISR_F_5">5</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_ISR_F_4">4</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_ISR_F_3">3</a></td>
@@ -785,8 +785,8 @@ configurations.<p class="BLANK"></p>
 <td>RSVD_ISR</td>
 <td>R</td>
 <td><p>ISR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_ISR_F_5"></a>5</p>
@@ -794,8 +794,8 @@ configurations.<p class="BLANK"></p>
 <td>RSVD_MSTIS</td>
 <td>R</td>
 <td><p>MSTIS Reserved field - read-only</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_ISR_F_4"></a>4</p>
@@ -804,10 +804,10 @@ configurations.<p class="BLANK"></p>
 <td>R</td>
 <td><p>Receive FIFO Full Interrupt Status</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (INACTIVE): ssi_rxf_intr interrupt is not active after masking</li><li>0x1 (ACTIVE): ssi_rxf_intr interrupt is full after masking</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_ISR_F_3"></a>3</p>
@@ -816,10 +816,10 @@ configurations.<p class="BLANK"></p>
 <td>R</td>
 <td><p>Receive FIFO Overflow Interrupt Status</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (INACTIVE): ssi_rxo_intr interrupt is not active after masking</li><li>0x1 (ACTIVE): ssi_rxo_intr interrupt is active after masking</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_ISR_F_2"></a>2</p>
@@ -828,10 +828,10 @@ configurations.<p class="BLANK"></p>
 <td>R</td>
 <td><p>Receive FIFO Underflow Interrupt Status</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (INACTIVE): ssi_rxu_intr interrupt is not active after masking</li><li>0x1 (ACTIVE): ssi_rxu_intr interrupt is active after masking</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_ISR_F_1"></a>1</p>
@@ -840,10 +840,10 @@ configurations.<p class="BLANK"></p>
 <td>R</td>
 <td><p>Transmit FIFO Overflow Interrupt Status</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (INACTIVE): ssi_txo_intr interrupt is not active after masking</li><li>0x1 (ACTIVE): ssi_txo_intr interrupt is active after masking</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_ISR_F_0"></a>0</p>
@@ -852,15 +852,15 @@ configurations.<p class="BLANK"></p>
 <td>R</td>
 <td><p>Transmit FIFO Empty Interrupt Status</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (INACTIVE): ssi_txe_intr interrupt is not active after masking</li><li>0x1 (ACTIVE): ssi_txe_intr interrupt is active after masking</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RISR"></a><span>RISR</span></p>
-<ul><li><span>Name:</span>Raw Interrupt Status Register</li><li><span>Description:</span>This read-only register reports the status of the DW_apb_ssi interrupts prior to masking.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x34</li></ul><a name="fld-ssi_memory_map_ssi_address_block_RISR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RISR_F_31_6">31:6</a></td>
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RISR"></a>RISR</p>
+<ul><li>Name:Raw Interrupt Status Register</li><li>Description:This read-only register reports the status of the DW_apb_ssi interrupts prior to masking.<p class="BLANK"></p>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x34</li></ul><a name="fld-ssi_memory_map_ssi_address_block_RISR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RISR_F_31_6">31:6</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RISR_F_5">5</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RISR_F_4">4</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RISR_F_3">3</a></td>
@@ -883,8 +883,8 @@ configurations.<p class="BLANK"></p>
 <td>RSVD_RISR</td>
 <td>R</td>
 <td><p>RISR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RISR_F_5"></a>5</p>
@@ -892,8 +892,8 @@ configurations.<p class="BLANK"></p>
 <td>RSVD_MSTIR</td>
 <td>R</td>
 <td><p>MSTIR Reserved field - read-only</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RISR_F_4"></a>4</p>
@@ -902,10 +902,10 @@ configurations.<p class="BLANK"></p>
 <td>R</td>
 <td><p>Receive FIFO Full Raw Interrupt Status</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (INACTIVE): ssi_rxf_intr interrupt is not active prior to masking</li><li>0x1 (ACTIVE): ssi_rxf_intr interrupt is active prior to masking</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RISR_F_3"></a>3</p>
@@ -914,10 +914,10 @@ configurations.<p class="BLANK"></p>
 <td>R</td>
 <td><p>Receive FIFO Overflow Raw Interrupt Status</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x1 (ACTIVE): ssi_rxo_intr interrupt is not active prior to masking</li><li>0x0 (INACTIVE): ssi_rxo_intr interrupt is active prior masking</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RISR_F_2"></a>2</p>
@@ -926,10 +926,10 @@ configurations.<p class="BLANK"></p>
 <td>R</td>
 <td><p>Receive FIFO Underflow Raw Interrupt Status</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (INACTIVE): ssi_rxu_intr interrupt is not active prior to masking</li><li>0x1 (ACTIVE): ssi_rxu_intr interrupt is active prior to masking</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RISR_F_1"></a>1</p>
@@ -938,10 +938,10 @@ configurations.<p class="BLANK"></p>
 <td>R</td>
 <td><p>Transmit FIFO Overflow Raw Interrupt Status</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (INACTIVE): ssi_txo_intr interrupt is not active prior to masking</li><li>0x1 (ACTIVE): ssi_txo_intr interrupt is active prior masking</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RISR_F_0"></a>0</p>
@@ -950,15 +950,15 @@ configurations.<p class="BLANK"></p>
 <td>R</td>
 <td><p>Transmit FIFO Empty Raw Interrupt Status</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (INACTIVE): ssi_txe_intr interrupt is not active prior to masking</li><li>0x1 (ACTIVE): ssi_txe_intr interrupt is active prior masking</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_TXOICR"></a><span>TXOICR</span></p>
-<ul><li><span>Name:</span>Transmit FIFO Overflow Interrupt Clear Register</li><li><span>Description:</span>Transmit FIFO Overflow Interrupt Clear Register.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x38</li></ul><a name="fld-ssi_memory_map_ssi_address_block_TXOICR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_TXOICR_F_31_1">31:1</a></td>
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_TXOICR"></a>TXOICR</p>
+<ul><li>Name:Transmit FIFO Overflow Interrupt Clear Register</li><li>Description:Transmit FIFO Overflow Interrupt Clear Register.<p class="BLANK"></p>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x38</li></ul><a name="fld-ssi_memory_map_ssi_address_block_TXOICR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_TXOICR_F_31_1">31:1</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_TXOICR_F_0">0</a></td>
 </tr>
 <tr><td>RSVD_TXOICR</td>
@@ -971,25 +971,25 @@ configurations.<p class="BLANK"></p>
 <td>RSVD_TXOICR</td>
 <td>R</td>
 <td><p>TXOICR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_TXOICR_F_0"></a>0</p>
 </td>
 <td>TXOICR</td>
 <td>R</td>
-<td><p><span>Clear Transmit FIFO Overflow Interrupt.</span></p>
+<td><p>Clear Transmit FIFO Overflow Interrupt.</p>
 <p class="BLANK"></p>
 <p>This register reflects the status of the interrupt. A read from this
 register clears the ssi_txo_intr interrupt; writing has no effect.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RXOICR"></a><span>RXOICR</span></p>
-<ul><li><span>Name:</span>Receive FIFO Overflow Interrupt Clear Register</li><li><span>Description:</span>Receive FIFO Overflow Interrupt Clear Register.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x3c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_RXOICR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RXOICR_F_31_1">31:1</a></td>
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RXOICR"></a>RXOICR</p>
+<ul><li>Name:Receive FIFO Overflow Interrupt Clear Register</li><li>Description:Receive FIFO Overflow Interrupt Clear Register.<p class="BLANK"></p>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x3c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_RXOICR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RXOICR_F_31_1">31:1</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RXOICR_F_0">0</a></td>
 </tr>
 <tr><td>RSVD_RXOICR</td>
@@ -1002,25 +1002,25 @@ register clears the ssi_txo_intr interrupt; writing has no effect.</p>
 <td>RSVD_RXOICR</td>
 <td>R</td>
 <td><p>RXOICR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RXOICR_F_0"></a>0</p>
 </td>
 <td>RXOICR</td>
 <td>R</td>
-<td><p><span>Clear Receive FIFO Overflow Interrupt.</span></p>
+<td><p>Clear Receive FIFO Overflow Interrupt.</p>
 <p class="BLANK"></p>
 <p>This register reflects the status of the interrupt. A read from this
 register clears the ssi_rxo_intr interrupt; writing has no effect.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RXUICR"></a><span>RXUICR</span></p>
-<ul><li><span>Name:</span>Receive FIFO Underflow Interrupt Clear Register</li><li><span>Description:</span>Receive FIFO Underflow Interrupt Clear Register.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x40</li></ul><a name="fld-ssi_memory_map_ssi_address_block_RXUICR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RXUICR_F_31_1">31:1</a></td>
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RXUICR"></a>RXUICR</p>
+<ul><li>Name:Receive FIFO Underflow Interrupt Clear Register</li><li>Description:Receive FIFO Underflow Interrupt Clear Register.<p class="BLANK"></p>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x40</li></ul><a name="fld-ssi_memory_map_ssi_address_block_RXUICR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RXUICR_F_31_1">31:1</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RXUICR_F_0">0</a></td>
 </tr>
 <tr><td>RSVD_RXUICR</td>
@@ -1033,25 +1033,25 @@ register clears the ssi_rxo_intr interrupt; writing has no effect.</p>
 <td>RSVD_RXUICR</td>
 <td>R</td>
 <td><p>RXUICR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RXUICR_F_0"></a>0</p>
 </td>
 <td>RXUICR</td>
 <td>R</td>
-<td><p><span>Clear Receive FIFO Underflow Interrupt.</span></p>
+<td><p>Clear Receive FIFO Underflow Interrupt.</p>
 <p class="BLANK"></p>
 <p>This register reflects the status of the interrupt. A read from this
 register clears the ssi_rxu_intr interrupt; writing has no effect.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_MSTICR"></a><span>MSTICR</span></p>
-<ul><li><span>Name:</span>Multi-Controller Interrupt Clear Register</li><li><span>Description:</span>Multi-Controller Interrupt Clear Register.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x44</li></ul><a name="fld-ssi_memory_map_ssi_address_block_MSTICR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_MSTICR_F_31_1">31:1</a></td>
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_MSTICR"></a>MSTICR</p>
+<ul><li>Name:Multi-Controller Interrupt Clear Register</li><li>Description:Multi-Controller Interrupt Clear Register.<p class="BLANK"></p>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x44</li></ul><a name="fld-ssi_memory_map_ssi_address_block_MSTICR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_MSTICR_F_31_1">31:1</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_MSTICR_F_0">0</a></td>
 </tr>
 <tr><td>RSVD_MSTICR</td>
@@ -1064,25 +1064,25 @@ register clears the ssi_rxu_intr interrupt; writing has no effect.</p>
 <td>RSVD_MSTICR</td>
 <td>R</td>
 <td><p>MSTICR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_MSTICR_F_0"></a>0</p>
 </td>
 <td>MSTICR</td>
 <td>R</td>
-<td><p><span>Clear Multi-Controller Contention Interrupt.</span></p>
+<td><p>Clear Multi-Controller Contention Interrupt.</p>
 <p class="BLANK"></p>
 <p>This register reflects the status of the interrupt. A read from this
 register clears the ssi_mst_intr interrupt; writing has no effect.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_ICR"></a><span>ICR</span></p>
-<ul><li><span>Name:</span>Interrupt Clear Register</li><li><span>Description:</span>Interrupt Clear Register.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x48</li></ul><a name="fld-ssi_memory_map_ssi_address_block_ICR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_ICR_F_31_1">31:1</a></td>
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_ICR"></a>ICR</p>
+<ul><li>Name:Interrupt Clear Register</li><li>Description:Interrupt Clear Register.<p class="BLANK"></p>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x48</li></ul><a name="fld-ssi_memory_map_ssi_address_block_ICR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_ICR_F_31_1">31:1</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_ICR_F_0">0</a></td>
 </tr>
 <tr><td>RSVD_ICR</td>
@@ -1095,31 +1095,31 @@ register clears the ssi_mst_intr interrupt; writing has no effect.</p>
 <td>RSVD_ICR</td>
 <td>R</td>
 <td><p>ICR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_ICR_F_0"></a>0</p>
 </td>
 <td>ICR</td>
 <td>R</td>
-<td><p><span>Clear Interrupts.</span></p>
+<td><p>Clear Interrupts.</p>
 <p class="BLANK"></p>
 <p>This register is set if any of the interrupts below are active. A read
 clears the ssi_txo_intr, ssi_rxu_intr, ssi_rxo_intr, and the ssi_mst_intr
 interrupts. Writing to this register has no effect.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DMACR"></a><span>DMACR</span></p>
-<ul><li><span>Name:</span>DMA Control Register</li><li><span>Description:</span>This register is only valid when DW_apb_ssi is configured with a set of
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DMACR"></a>DMACR</p>
+<ul><li>Name:DMA Control Register</li><li>Description:This register is only valid when DW_apb_ssi is configured with a set of
 DMA Controller interface signals (SSI_HAS_DMA = 1). When DW_apb_ssi is
 not configured for DMA operation, this register will not exist and writing
 to the register's address will have no effect; reading from this register
 address will return zero. The register is used to enable the DMA
 Controller interface operation.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x4c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DMACR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DMACR_F_31_2">31:2</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x4c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DMACR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DMACR_F_31_2">31:2</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DMACR_F_1">1</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DMACR_F_0">0</a></td>
 </tr>
@@ -1134,42 +1134,42 @@ Controller interface operation.<p class="BLANK"></p>
 <td>RSVD_DMACR</td>
 <td>R</td>
 <td><p>DMACR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DMACR_F_1"></a>1</p>
 </td>
 <td>TDMAE</td>
 <td>R/W</td>
-<td><p><span>Transmit DMA Enable.</span></p>
+<td><p>Transmit DMA Enable.</p>
 <p class="BLANK"></p>
 <p>This bit enables/disables the transmit FIFO DMA channel.</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (DISABLE): Transmit DMA disabled</li><li>0x1 (ENABLED): Transmit DMA enabled</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DMACR_F_0"></a>0</p>
 </td>
 <td>RDMAE</td>
 <td>R/W</td>
-<td><p><span>Receive DMA Enable.</span></p>
+<td><p>Receive DMA Enable.</p>
 <p class="BLANK"></p>
 <p>This bit enables/disables the receive FIFO DMA channel</p>
 <p class="BLANK"></p>
-<p><span>Values:</span></p>
+<p>Values:</p>
 <ul><li>0x0 (DISABLE): Receive DMA disabled</li><li>0x1 (ENABLED): Receive DMA enabled</li></ul><p></p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DMATDLR"></a><span>DMATDLR</span></p>
-<ul><li><span>Name:</span>DMA Transmit Data Level</li><li><span>Description:</span>This register is only valid when the DW_apb_ssi is configured with a set
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DMATDLR"></a>DMATDLR</p>
+<ul><li>Name:DMA Transmit Data Level</li><li>Description:This register is only valid when the DW_apb_ssi is configured with a set
 of DMA interface signals (SSI_HAS_DMA = 1). When DW_apb_ssi is not
 configured for DMA operation, this register will not exist and writing
 to its address will have no effect; reading from its address will
 return zero.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x50</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DMATDLR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DMATDLR_F_31_5">31:5</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x50</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DMATDLR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DMATDLR_F_31_5">31:5</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DMATDLR_F_4_0">4:0</a></td>
 </tr>
 <tr><td>RSVD_DMATDLR</td>
@@ -1182,14 +1182,14 @@ return zero.<p class="BLANK"></p>
 <td>RSVD_DMATDLR</td>
 <td>R</td>
 <td><p>DMATDLR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DMATDLR_F_4_0"></a>4:0</p>
 </td>
 <td>DMATDL</td>
 <td>R/W</td>
-<td><p><span>Transmit Data Level.</span></p>
+<td><p>Transmit Data Level.</p>
 <p class="BLANK"></p>
 <p>This bit field controls the level at which a DMA request is made by the
 transmit logic. It is equal to the watermark level; that is, the
@@ -1197,15 +1197,15 @@ dma_tx_req signal is generated when the number of valid data entries
 in the transmit FIFO is equal to or below this field value, and TDMAE = 1. For information on the DMATDL decode values, see the "Target SPI and SSP Serial Transfers" section in the DW_apb_ssi Databook.</p>
 <p class="BLANK"></p>
 <p>dma_tx_req is asserted when DMATDL or less data entries are present in the transmit FIFO</p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DMARDLR"></a><span>DMARDLR</span></p>
-<ul><li><span>Name:</span>DMA Receive Data Level</li><li><span>Description:</span>This register is only valid when DW_apb_ssi is configured with a set of
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DMARDLR"></a>DMARDLR</p>
+<ul><li>Name:DMA Receive Data Level</li><li>Description:This register is only valid when DW_apb_ssi is configured with a set of
 DMA interface signals (SSI_HAS_DMA = 1). When DW_apb_ssi is not configured
 for DMA operation, this register will not exist and writing to its address
 will have no effect; reading from its address will return zero.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x54</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DMARDLR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DMARDLR_F_31_5">31:5</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x54</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DMARDLR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DMARDLR_F_31_5">31:5</a></td>
 <td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DMARDLR_F_4_0">4:0</a></td>
 </tr>
 <tr><td>RSVD_DMARDLR</td>
@@ -1218,14 +1218,14 @@ will have no effect; reading from its address will return zero.<p class="BLANK">
 <td>RSVD_DMARDLR</td>
 <td>R</td>
 <td><p>DMARDLR Reserved bits - Read Only</p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
 <tr><td><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DMARDLR_F_4_0"></a>4:0</p>
 </td>
 <td>DMARDL</td>
 <td>R/W</td>
-<td><p><span>Receive Data Level.</span></p>
+<td><p>Receive Data Level.</p>
 <p class="BLANK"></p>
 <p>This bit field controls the level at which a DMA request is made by the
 receive logic. The watermark level = DMARDL+1; that is, dma_rx_req is
@@ -1233,13 +1233,13 @@ generated when the number of valid data entries in the receive FIFO is
 equal to or above this field value + 1, and RDMAE="1." For information on the DMARDL decode values, see the "Target SPI and SSP Serial Transfers" section in the DW_apb_ssi Databook.</p>
 <p class="BLANK"></p>
 <p>dma_rx_req is asserted when DMARDL or more valid data entries are present in the receive FIFO.</p>
-<p><span>Value After Reset:</span>0x0</p>
+<p>Value After Reset:0x0</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_IDR"></a><span>IDR</span></p>
-<ul><li><span>Name:</span>Identification Register</li><li><span>Description:</span>This register contains the peripherals identification code, which is
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_IDR"></a>IDR</p>
+<ul><li>Name:Identification Register</li><li>Description:This register contains the peripherals identification code, which is
 written into the register at configuration time using coreConsultant.<p class="BLANK"></p>
-<span>Reset Value:</span>SSI_ID</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x58</li></ul><a name="fld-ssi_memory_map_ssi_address_block_IDR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_IDR_F_31_0">31:0</a></td>
+Reset Value:SSI_ID</li><li>Size:32 bits</li><li>Offset:0x58</li></ul><a name="fld-ssi_memory_map_ssi_address_block_IDR"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_IDR_F_31_0">31:0</a></td>
 </tr>
 <tr><td>IDCODE</td>
 </tr>
@@ -1249,15 +1249,15 @@ written into the register at configuration time using coreConsultant.<p class="B
 </td>
 <td>IDCODE</td>
 <td>R</td>
-<td><p><span>Identification code.</span></p>
+<td><p>Identification code.</p>
 <p class="BLANK"></p>
 <p>The register contains the peripherals identification code, which is written into the register at configuration time using CoreConsultant.</p>
-<p><span>Value After Reset:</span>0xffffffff</p>
+<p>Value After Reset:0xffffffff</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_SSI_VERSION_ID"></a><span>SSI_VERSION_ID</span></p>
-<ul><li><span>Name:</span>coreKit version ID Register</li><li><span>Description:</span>This read-only register stores the specific DW_apb_ssi component version.<p class="BLANK"></p>
-<span>Reset Value:</span>SSI_VERSION_ID</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x5c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_SSI_VERSION_ID"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_SSI_VERSION_ID_F_31_0">31:0</a></td>
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_SSI_VERSION_ID"></a>SSI_VERSION_ID</p>
+<ul><li>Name:coreKit version ID Register</li><li>Description:This read-only register stores the specific DW_apb_ssi component version.<p class="BLANK"></p>
+Reset Value:SSI_VERSION_ID</li><li>Size:32 bits</li><li>Offset:0x5c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_SSI_VERSION_ID"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_SSI_VERSION_ID_F_31_0">31:0</a></td>
 </tr>
 <tr><td>SSI_COMP_VERSION</td>
 </tr>
@@ -1268,20 +1268,20 @@ written into the register at configuration time using coreConsultant.<p class="B
 <td>SSI_COMP_VERSION</td>
 <td>R</td>
 <td><p>Contains the hex representation of the Synopsys component version. Consists of ASCII value for each number in the version, followed by *. For example 32_30_31_2A represents the version 2.01*.</p>
-<p><span>Value After Reset:</span>0x3430352a</p>
+<p>Value After Reset:0x3430352a</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR0"></a><span>DR0</span></p>
-<ul><li><span>Name:</span>Data Register x</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR0"></a>DR0</p>
+<ul><li>Name:Data Register x</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x60</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR0"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR0_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x60</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR0"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR0_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1297,21 +1297,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR1"></a><span>DR1</span></p>
-<ul><li><span>Name:</span>Data Register 1</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR1"></a>DR1</p>
+<ul><li>Name:Data Register 1</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x64</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR1"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR1_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x64</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR1"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR1_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1327,21 +1327,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR2"></a><span>DR2</span></p>
-<ul><li><span>Name:</span>Data Register 2</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR2"></a>DR2</p>
+<ul><li>Name:Data Register 2</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x68</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR2"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR2_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x68</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR2"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR2_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1357,21 +1357,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR3"></a><span>DR3</span></p>
-<ul><li><span>Name:</span>Data Register 3</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR3"></a>DR3</p>
+<ul><li>Name:Data Register 3</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x6c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR3"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR3_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x6c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR3"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR3_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1387,21 +1387,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR4"></a><span>DR4</span></p>
-<ul><li><span>Name:</span>Data Register 4</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR4"></a>DR4</p>
+<ul><li>Name:Data Register 4</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x70</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR4"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR4_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x70</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR4"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR4_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1417,21 +1417,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR5"></a><span>DR5</span></p>
-<ul><li><span>Name:</span>Data Register 5</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR5"></a>DR5</p>
+<ul><li>Name:Data Register 5</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x74</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR5"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR5_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x74</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR5"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR5_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1447,21 +1447,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR6"></a><span>DR6</span></p>
-<ul><li><span>Name:</span>Data Register 6</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR6"></a>DR6</p>
+<ul><li>Name:Data Register 6</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x78</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR6"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR6_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x78</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR6"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR6_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1477,21 +1477,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR7"></a><span>DR7</span></p>
-<ul><li><span>Name:</span>Data Register 7</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR7"></a>DR7</p>
+<ul><li>Name:Data Register 7</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x7c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR7"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR7_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x7c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR7"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR7_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1507,21 +1507,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR8"></a><span>DR8</span></p>
-<ul><li><span>Name:</span>Data Register 8</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR8"></a>DR8</p>
+<ul><li>Name:Data Register 8</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x80</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR8"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR8_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x80</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR8"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR8_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1537,21 +1537,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR9"></a><span>DR9</span></p>
-<ul><li><span>Name:</span>Data Register 9</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR9"></a>DR9</p>
+<ul><li>Name:Data Register 9</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x84</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR9"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR9_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x84</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR9"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR9_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1567,21 +1567,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR10"></a><span>DR10</span></p>
-<ul><li><span>Name:</span>Data Register 10</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR10"></a>DR10</p>
+<ul><li>Name:Data Register 10</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x88</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR10"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR10_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x88</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR10"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR10_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1597,21 +1597,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR11"></a><span>DR11</span></p>
-<ul><li><span>Name:</span>Data Register 11</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR11"></a>DR11</p>
+<ul><li>Name:Data Register 11</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x8c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR11"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR11_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x8c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR11"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR11_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1627,21 +1627,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR12"></a><span>DR12</span></p>
-<ul><li><span>Name:</span>Data Register 12</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR12"></a>DR12</p>
+<ul><li>Name:Data Register 12</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x90</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR12"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR12_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x90</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR12"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR12_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1657,21 +1657,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR13"></a><span>DR13</span></p>
-<ul><li><span>Name:</span>Data Register 13</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR13"></a>DR13</p>
+<ul><li>Name:Data Register 13</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x94</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR13"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR13_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x94</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR13"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR13_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1687,21 +1687,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR14"></a><span>DR14</span></p>
-<ul><li><span>Name:</span>Data Register 14</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR14"></a>DR14</p>
+<ul><li>Name:Data Register 14</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x98</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR14"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR14_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x98</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR14"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR14_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1717,21 +1717,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR15"></a><span>DR15</span></p>
-<ul><li><span>Name:</span>Data Register 15</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR15"></a>DR15</p>
+<ul><li>Name:Data Register 15</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x9c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR15"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR15_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0x9c</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR15"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR15_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1747,21 +1747,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR16"></a><span>DR16</span></p>
-<ul><li><span>Name:</span>Data Register 16</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR16"></a>DR16</p>
+<ul><li>Name:Data Register 16</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xa0</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR16"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR16_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xa0</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR16"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR16_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1777,21 +1777,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR17"></a><span>DR17</span></p>
-<ul><li><span>Name:</span>Data Register 17</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR17"></a>DR17</p>
+<ul><li>Name:Data Register 17</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xa4</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR17"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR17_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xa4</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR17"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR17_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1807,21 +1807,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR18"></a><span>DR18</span></p>
-<ul><li><span>Name:</span>Data Register 18</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR18"></a>DR18</p>
+<ul><li>Name:Data Register 18</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xa8</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR18"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR18_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xa8</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR18"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR18_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1837,21 +1837,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR19"></a><span>DR19</span></p>
-<ul><li><span>Name:</span>Data Register 19</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR19"></a>DR19</p>
+<ul><li>Name:Data Register 19</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xac</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR19"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR19_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xac</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR19"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR19_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1867,21 +1867,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR20"></a><span>DR20</span></p>
-<ul><li><span>Name:</span>Data Register 20</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR20"></a>DR20</p>
+<ul><li>Name:Data Register 20</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xb0</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR20"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR20_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xb0</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR20"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR20_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1897,21 +1897,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR21"></a><span>DR21</span></p>
-<ul><li><span>Name:</span>Data Register 21</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR21"></a>DR21</p>
+<ul><li>Name:Data Register 21</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xb4</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR21"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR21_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xb4</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR21"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR21_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1927,21 +1927,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR22"></a><span>DR22</span></p>
-<ul><li><span>Name:</span>Data Register 22</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR22"></a>DR22</p>
+<ul><li>Name:Data Register 22</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xb8</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR22"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR22_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xb8</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR22"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR22_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1957,21 +1957,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR23"></a><span>DR23</span></p>
-<ul><li><span>Name:</span>Data Register 23</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR23"></a>DR23</p>
+<ul><li>Name:Data Register 23</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xbc</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR23"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR23_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xbc</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR23"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR23_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -1987,21 +1987,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR24"></a><span>DR24</span></p>
-<ul><li><span>Name:</span>Data Register 24</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR24"></a>DR24</p>
+<ul><li>Name:Data Register 24</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xc0</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR24"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR24_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xc0</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR24"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR24_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -2017,21 +2017,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR25"></a><span>DR25</span></p>
-<ul><li><span>Name:</span>Data Register 25</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR25"></a>DR25</p>
+<ul><li>Name:Data Register 25</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xc4</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR25"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR25_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xc4</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR25"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR25_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -2047,21 +2047,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR26"></a><span>DR26</span></p>
-<ul><li><span>Name:</span>Data Register 26</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR26"></a>DR26</p>
+<ul><li>Name:Data Register 26</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xc8</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR26"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR26_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xc8</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR26"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR26_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -2077,21 +2077,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR27"></a><span>DR27</span></p>
-<ul><li><span>Name:</span>Data Register 27</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR27"></a>DR27</p>
+<ul><li>Name:Data Register 27</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xcc</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR27"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR27_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xcc</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR27"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR27_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -2107,21 +2107,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR28"></a><span>DR28</span></p>
-<ul><li><span>Name:</span>Data Register 28</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR28"></a>DR28</p>
+<ul><li>Name:Data Register 28</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xd0</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR28"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR28_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xd0</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR28"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR28_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -2137,21 +2137,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR29"></a><span>DR29</span></p>
-<ul><li><span>Name:</span>Data Register 29</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR29"></a>DR29</p>
+<ul><li>Name:Data Register 29</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xd4</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR29"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR29_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xd4</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR29"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR29_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -2167,21 +2167,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR30"></a><span>DR30</span></p>
-<ul><li><span>Name:</span>Data Register 30</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR30"></a>DR30</p>
+<ul><li>Name:Data Register 30</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xd8</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR30"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR30_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xd8</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR30"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR30_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -2197,21 +2197,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR31"></a><span>DR31</span></p>
-<ul><li><span>Name:</span>Data Register 31</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR31"></a>DR31</p>
+<ul><li>Name:Data Register 31</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xdc</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR31"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR31_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xdc</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR31"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR31_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -2227,21 +2227,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR32"></a><span>DR32</span></p>
-<ul><li><span>Name:</span>Data Register 32</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR32"></a>DR32</p>
+<ul><li>Name:Data Register 32</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xe0</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR32"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR32_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xe0</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR32"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR32_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -2257,21 +2257,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR33"></a><span>DR33</span></p>
-<ul><li><span>Name:</span>Data Register 33</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR33"></a>DR33</p>
+<ul><li>Name:Data Register 33</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xe4</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR33"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR33_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xe4</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR33"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR33_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -2287,21 +2287,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR34"></a><span>DR34</span></p>
-<ul><li><span>Name:</span>Data Register 34</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR34"></a>DR34</p>
+<ul><li>Name:Data Register 34</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xe8</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR34"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR34_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xe8</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR34"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR34_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -2317,21 +2317,21 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR35"></a><span>DR35</span></p>
-<ul><li><span>Name:</span>Data Register 35</li><li><span>Description:</span>The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_DR35"></a>DR35</p>
+<ul><li>Name:Data Register 35</li><li>Description:The DW_apb_ssi data register is a 16/32-bit (depending on SSI_MAX_XFER_SIZE) read/write buffer for
 the transmit/receive FIFOs. If the configuration parameter SSI_MAX_XFER_SIZE is set to 32, then all 32 bits
 are valid, otherwise, only 16 bits ([15:0]) of the register are valid. When the register is read, data in the
 receive FIFO buffer is accessed. When it is written to, data are moved into the transmit FIFO buffer; a write
-can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.<span>NOTE:</span>The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
+can occur only when SSI_EN = 1. FIFOs are reset when SSI_EN = 0.NOTE:The DR register in the DW_apb_ssi occupies thirty-six 32-bit address locations of the memory
 map to facilitate AHB burst transfers. Writing to any of these address locations has the same
 effect as pushing the data from the pwdata bus into the transmit FIFO. Reading from any of
 these locations has the same effect as popping data from the receive FIFO onto the prdata
 bus. The FIFO buffers on the DW_apb_ssi are not addressable.<p class="BLANK"></p>
-<span>Reset Value:</span>0x0</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xec</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR35"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR35_F_31_0">31:0</a></td>
+Reset Value:0x0</li><li>Size:32 bits</li><li>Offset:0xec</li></ul><a name="fld-ssi_memory_map_ssi_address_block_DR35"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_DR35_F_31_0">31:0</a></td>
 </tr>
 <tr><td>DR</td>
 </tr>
@@ -2347,12 +2347,12 @@ parameter is set to 32, all 32 bits are valid. Otherwise, only 16 bits ([15:0]) 
 register are valid.
 Read = Receive FIFO buffer
 Write = Transmit FIFO buffer.</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
-</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RSVD"></a><span>RSVD</span></p>
-<ul><li><span>Name:</span>RSVD - Reserved address location</li><li><span>Description:</span>RSVD - Reserved address location.</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0xfc</li></ul><a name="fld-ssi_memory_map_ssi_address_block_RSVD"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RSVD_F_31_0">31:0</a></td>
+</tbody></table><p><a name="H4-reg-ssi_memory_map_ssi_address_block_RSVD"></a>RSVD</p>
+<ul><li>Name:RSVD - Reserved address location</li><li>Description:RSVD - Reserved address location.</li><li>Size:32 bits</li><li>Offset:0xfc</li></ul><a name="fld-ssi_memory_map_ssi_address_block_RSVD"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-ssi_memory_map_ssi_address_block_RSVD_F_31_0">31:0</a></td>
 </tr>
 <tr><td>RSVD</td>
 </tr>
@@ -2363,8 +2363,8 @@ Write = Transmit FIFO buffer.</p>
 <td>RSVD</td>
 <td>R</td>
 <td><p>RSVD 31to0 Reserved address location</p>
-<p><span>Value After Reset:</span>0x0</p>
-<p><span>Volatile:</span>true</p>
+<p>Value After Reset:0x0</p>
+<p>Volatile:true</p>
 </td>
 </tr>
 </tbody></table></body></html>
