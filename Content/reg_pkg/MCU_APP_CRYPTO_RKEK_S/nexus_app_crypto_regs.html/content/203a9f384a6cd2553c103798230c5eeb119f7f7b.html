@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
@@ -142,51 +142,51 @@
         </p>
         <h2>Field Descriptions</h2>
         <h3 id="gcmivsrc.desc">gcmivsrc - GCM Mode IV Source<a class="headerlink" href="#gcmivsrc.desc" title="Permalink to this headline"></a></h3>
-        <p>AES expects that the IV will be delivered on data bus (as part of the data stream) instead of feeding from the AES IV registers in GCM mode. It is because GCM requires special handling on the IV and the IV size can be very large. However, when the IV is 12 bytes (a special case in GCM mode), the IV can be provided from the AES IV register. This field determines the source of the IV. It is only valid when IV is 12 bytes in GCM mode.<p></p>
-• 0h= IV is provided from AES IV registers.<p></p>
-• 1h= IV is provided through data bus.<p></p>
-Notes:<p></p>
-1. When this field is set, AES expects the following input data order on the data bus in GCM mode:<p></p>
-• Encryption input data order: IV -&gt; AAD -&gt; Payload (Stream)<p></p>
-• Decryption input data order: IV -&gt; AAD -&gt; Payload (Stream) -&gt; Tag<p></p>
-2. When this field is not set, AES expects the following input data order on the data bus in GCM mode:<p></p>
-• Encryption input data order: AAD -&gt; Payload (Stream)<p></p>
-• Decryption input data order: AAD -&gt; Payload (Stream) -&gt; Tag<p></p>
-3. Decryption output data order == encryption input data order. Encryption output data order == decryption input data order.<p></p>
+        <p>AES expects that the IV will be delivered on data bus (as part of the data stream) instead of feeding from the AES IV registers in GCM mode. It is because GCM requires special handling on the IV and the IV size can be very large. However, when the IV is 12 bytes (a special case in GCM mode), the IV can be provided from the AES IV register. This field determines the source of the IV. It is only valid when IV is 12 bytes in GCM mode. 
+• 0h= IV is provided from AES IV registers. 
+• 1h= IV is provided through data bus. 
+Notes: 
+1. When this field is set, AES expects the following input data order on the data bus in GCM mode: 
+• Encryption input data order: IV -&gt; AAD -&gt; Payload (Stream) 
+• Decryption input data order: IV -&gt; AAD -&gt; Payload (Stream) -&gt; Tag 
+2. When this field is not set, AES expects the following input data order on the data bus in GCM mode: 
+• Encryption input data order: AAD -&gt; Payload (Stream) 
+• Decryption input data order: AAD -&gt; Payload (Stream) -&gt; Tag 
+3. Decryption output data order == encryption input data order. Encryption output data order == decryption input data order. 
 4. There is no gap/padding between each data type in the data stream.</p>
         <h3 id="rkek.desc">rkek - RKEK Enable<a class="headerlink" href="#rkek.desc" title="Permalink to this headline"></a></h3>
-        <p>This bit determines whether RKEK should be used as AES key. When this bit is set, RKEK is loaded into AES KEY1 register. Read/ Write to KEY1 register would be blocked until this bit is cleared.<p></p>
-Notes:<p></p>
-1. Resume feature is not allowed if RKEK is used.<p></p>
-2. Read operation on KEY1 while this bit is set will return all 1's.<p></p>
-3. AES clears KEY1 register (RKEK) automatically when this bit is cleared<p></p>
+        <p>This bit determines whether RKEK should be used as AES key. When this bit is set, RKEK is loaded into AES KEY1 register. Read/ Write to KEY1 register would be blocked until this bit is cleared. 
+Notes: 
+1. Resume feature is not allowed if RKEK is used. 
+2. Read operation on KEY1 while this bit is set will return all 1's. 
+3. AES clears KEY1 register (RKEK) automatically when this bit is cleared 
 4. After every AES task that uses RKEK is done, this bit must be cleared. It can be set again if the next AES task still uses RKEK.</p>
         <h3 id="ctrmod.desc">ctrmod - CTR Mode Modular<a class="headerlink" href="#ctrmod.desc" title="Permalink to this headline"></a></h3>
-        <p>This field controls the counter modular in AES CTR mode. The counter increment (+1) only involves counter's LSB m-bit (modular "2^m"). In other words, the active counter bitwidth is limited by this field.<p></p>
-• 0h~Fh= 128-bit (max counter bitwidth)<p></p>
-• Else= Programmed value is the counter bitwidth.<p></p>
-Notes:<p></p>
-1. AES switches to 32-bit counter (m=32) automatically in GCM mode. This field is ignored.<p></p></p>
+        <p>This field controls the counter modular in AES CTR mode. The counter increment (+1) only involves counter's LSB m-bit (modular "2^m"). In other words, the active counter bitwidth is limited by this field. 
+• 0h~Fh= 128-bit (max counter bitwidth) 
+• Else= Programmed value is the counter bitwidth. 
+Notes: 
+1. AES switches to 32-bit counter (m=32) automatically in GCM mode. This field is ignored. </p>
         <h3 id="opmode.desc">opmode - Operation Mode<a class="headerlink" href="#opmode.desc" title="Permalink to this headline"></a></h3>
-        <p>The field determines the AES operation mode<p></p>
-• 0h= ECB mode<p></p>
-• 1h= CBC mode<p></p>
-• 2h= CTR mode<p></p>
-• 3h= XTS mode<p></p>
-• 4h= Key Wrap mode<p></p>
-• 7h= GCM mode<p></p>
-• Else reserved<p></p>
-Notes:<p></p>
-1. CBC mode uses NIST-SP800-38A CS2 algorithm for partial handling<p></p></p>
+        <p>The field determines the AES operation mode 
+• 0h= ECB mode 
+• 1h= CBC mode 
+• 2h= CTR mode 
+• 3h= XTS mode 
+• 4h= Key Wrap mode 
+• 7h= GCM mode 
+• Else reserved 
+Notes: 
+1. CBC mode uses NIST-SP800-38A CS2 algorithm for partial handling </p>
         <h3 id="keylen.desc">keylen - Key Length<a class="headerlink" href="#keylen.desc" title="Permalink to this headline"></a></h3>
-        <p>The field determines the AES key length<p></p>
-• 0h= 128-Bit Key Size<p></p>
-• 1h= 256-Bit Key Size<p></p>
-• 2h= 192-Bit Key Size<p></p>
-• Else reserved<p></p></p>
+        <p>The field determines the AES key length 
+• 0h= 128-Bit Key Size 
+• 1h= 256-Bit Key Size 
+• 2h= 192-Bit Key Size 
+• Else reserved </p>
         <h3 id="decrypt.desc">decrypt - Decryption Indicator<a class="headerlink" href="#decrypt.desc" title="Permalink to this headline"></a></h3>
-        <p>The field determines the AES operation<p></p>
-• 0h= Encryption<p></p>
-• 1h= Decryption<p></p></p>
+        <p>The field determines the AES operation 
+• 0h= Encryption 
+• 1h= Decryption </p>
     </body>
 </html>

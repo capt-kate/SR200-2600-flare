@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
@@ -20,17 +20,17 @@
             <dd class="address">0x14</dd>
         </dl>
         <h2>Description</h2>
-        <p>ZMP Operands<p></p>
-• M (APB Byte Address Offset: 100h)- Moduli for all ZMP operations.- Its value must be a prime (or odd) number.- M operand shall be larger than all other operands.<p></p>
-• X (APB Byte Address Offset: 104h)- Multiplicand for Montgomery Multiplication and Modular<p></p>
-Multiplication.- Base of exponentiation for Modular Exponentiation and Modular Inverse.- Addend for Modular Addition- Minuend for Modular Subtraction<p></p>
-• Y (APB Byte Address Offset: 108h)- Multiplicand for Montgomery Multiplication and Modular<p></p>
-Multiplication..- Summand for Modular Addition- Subtrahend for Modular Subtraction<p></p>
-• Z (APB Byte Address Offset: 10Ch)- Montgomery domain conversion parameter (R=2^2n Mod<p></p>
-M) for all ZMP operations, except Montgomery Multiplication and Pre-Computation.- Computation Result for all ZMP operations<p></p>
-Notes:<p></p>
-1. Operand should be programmed from LSB to MSB.<p></p>
-2. If a ZMP operation is performed right after the Pre-Computation and that operation requires the R, it is ok to not to unload/load the R after Pre-Computation because the Z and R are sharing the same memory space.<p></p></p>
+        <p>ZMP Operands 
+• M (APB Byte Address Offset: 100h)- Moduli for all ZMP operations.- Its value must be a prime (or odd) number.- M operand shall be larger than all other operands. 
+• X (APB Byte Address Offset: 104h)- Multiplicand for Montgomery Multiplication and Modular 
+Multiplication.- Base of exponentiation for Modular Exponentiation and Modular Inverse.- Addend for Modular Addition- Minuend for Modular Subtraction 
+• Y (APB Byte Address Offset: 108h)- Multiplicand for Montgomery Multiplication and Modular 
+Multiplication..- Summand for Modular Addition- Subtrahend for Modular Subtraction 
+• Z (APB Byte Address Offset: 10Ch)- Montgomery domain conversion parameter (R=2^2n Mod 
+M) for all ZMP operations, except Montgomery Multiplication and Pre-Computation.- Computation Result for all ZMP operations 
+Notes: 
+1. Operand should be programmed from LSB to MSB. 
+2. If a ZMP operation is performed right after the Pre-Computation and that operation requires the R, it is ok to not to unload/load the R after Pre-Computation because the Z and R are sharing the same memory space. </p>
         <h2>Contents</h2>
         <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
             <tr class="TableStyle-table-no-head-Body-Body1">

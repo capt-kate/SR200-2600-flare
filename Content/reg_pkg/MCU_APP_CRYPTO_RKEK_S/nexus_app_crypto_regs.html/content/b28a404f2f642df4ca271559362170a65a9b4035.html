@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
@@ -76,15 +76,15 @@
         </p>
         <h2>Field Descriptions</h2>
         <h3 id="outputdis.desc">outputdis - Output Disable<a class="headerlink" href="#outputdis.desc" title="Permalink to this headline"></a></h3>
-        <p>Set this bit to stop AES from outputting data on data bus. Some applications, such as DRBG BCC function, are only interested in the last ciphertext (CTX) of encryption result. Since the current design always saves the last CTX in the AES IV register, it is unnecessary to output the entire encryption result on data bus (save power and memory space).<p></p>
-Notes:<p></p>
-1. The input date stream must be multiple of 128-bits (no partial codeword allowed)<p></p>
-2. Resume operation is supported.<p></p></p>
+        <p>Set this bit to stop AES from outputting data on data bus. Some applications, such as DRBG BCC function, are only interested in the last ciphertext (CTX) of encryption result. Since the current design always saves the last CTX in the AES IV register, it is unnecessary to output the entire encryption result on data bus (save power and memory space). 
+Notes: 
+1. The input date stream must be multiple of 128-bits (no partial codeword allowed) 
+2. Resume operation is supported. </p>
         <h3 id="resume.desc">resume - Resume Operation<a class="headerlink" href="#resume.desc" title="Permalink to this headline"></a></h3>
-        <p>Set this bit to resume previous operation.<p></p>
-Notes:<p></p>
-1. User needs to load the saved configurations, KEY1 and IV back to corresponding registers.<p></p>
-2. Resume operation is not supported in Key Wrap and GCM mode.<p></p>
-3. Refer to AES_STR_SIZE register for data size limitation<p></p></p>
+        <p>Set this bit to resume previous operation. 
+Notes: 
+1. User needs to load the saved configurations, KEY1 and IV back to corresponding registers. 
+2. Resume operation is not supported in Key Wrap and GCM mode. 
+3. Refer to AES_STR_SIZE register for data size limitation </p>
     </body>
 </html>

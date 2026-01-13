@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
@@ -76,19 +76,19 @@
         </p>
         <h2>Field Descriptions</h2>
         <h3 id="merr.desc">merr - Access Mode Error Interrupt<a class="headerlink" href="#merr.desc" title="Permalink to this headline"></a></h3>
-        <p>This bit is set when CPU accesses the Scratch Pad in non-CPU Access mode. Write one to clear the bit.<p></p>
-• 1'h0 = No error<p></p>
-• 1'b1 = Invalid access<p></p>
-Notes:<p></p>
-1. Once this bit is set, only the firmware can clear it.<p></p></p>
+        <p>This bit is set when CPU accesses the Scratch Pad in non-CPU Access mode. Write one to clear the bit. 
+• 1'h0 = No error 
+• 1'b1 = Invalid access 
+Notes: 
+1. Once this bit is set, only the firmware can clear it. </p>
         <h3 id="perr.desc">perr - Parity Error Interrupt<a class="headerlink" href="#perr.desc" title="Permalink to this headline"></a></h3>
-        <p>This bit is set when error occurs during CPU access. Write one to clear the bit.<p></p>
-• 2'b00 = No error<p></p>
-• 2'b01 = 1-bit error has occurred before<p></p>
-• 2'b10 = 2-bit error has occurred before<p></p>
-• 2'b11 = Both 1-bit and 2-biti has occurred before.<p></p>
-Notes:<p></p>
-1. If 1-bit error is detected, the read data would be corrected automatically. If 2-bit error is detected, the read data remains as is (error is uncorrectable).<p></p>
-2. Once this bit is set, only firmware can clear it.<p></p></p>
+        <p>This bit is set when error occurs during CPU access. Write one to clear the bit. 
+• 2'b00 = No error 
+• 2'b01 = 1-bit error has occurred before 
+• 2'b10 = 2-bit error has occurred before 
+• 2'b11 = Both 1-bit and 2-biti has occurred before. 
+Notes: 
+1. If 1-bit error is detected, the read data would be corrected automatically. If 2-bit error is detected, the read data remains as is (error is uncorrectable). 
+2. Once this bit is set, only firmware can clear it. </p>
     </body>
 </html>

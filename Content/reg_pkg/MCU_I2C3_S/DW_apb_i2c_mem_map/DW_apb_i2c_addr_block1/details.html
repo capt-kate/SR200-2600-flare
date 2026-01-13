@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>Register Details</title></head>
+<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>Register Details</title></head>
 <body>
 <h1><a name="idp24018120"></a>Register Details</h1>
 <h2><a name="H3-sect1-reg-DW_apb_i2c_mem_map_DW_apb_i2c_addr_block1"></a>DW_apb_i2c_addr_block1 Register Details</h2>
@@ -167,7 +167,7 @@ Read/Write Access:<ul><li>If configuration parameter I2C_DYNAMIC_TAR_UPDATE="1,"
 <td><p>In Controller mode:</p>
 <ul><li>1'b1: issues the STOP_DET interrupt only when controller is active.</li><li>1'b0: issues the STOP_DET irrespective of whether controller is active or not.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): Controller issues the STOP_DET interrupt only when controller is active</li><li>0x0 (DISABLED): Controller issues the STOP_DET interrupt irrespective of whether controller is active or not</li></ul><p></p>
+<ul><li>0x1 (ENABLED): Controller issues the STOP_DET interrupt only when controller is active</li><li>0x0 (DISABLED): Controller issues the STOP_DET interrupt irrespective of whether controller is active or not</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -180,7 +180,7 @@ DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUF
 as described in the IC_RX_FULL_HLD_BUS_EN parameter.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): Hold bus when RX_FIFO is full</li><li>0x0 (DISABLED): Overflow when RX_FIFO is full</li></ul><p></p>
+<ul><li>0x1 (ENABLED): Hold bus when RX_FIFO is full</li><li>0x0 (DISABLED): Overflow when RX_FIFO is full</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -192,7 +192,7 @@ as described in the IC_RX_FULL_HLD_BUS_EN parameter.</p>
 of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): Controlled generation of TX_EMPTY interrupt</li><li>0x0 (DISABLED): Default behaviour of TX_EMPTY interrupt</li></ul><p></p>
+<ul><li>0x1 (ENABLED): Controlled generation of TX_EMPTY interrupt</li><li>0x0 (DISABLED): Default behaviour of TX_EMPTY interrupt</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -201,7 +201,7 @@ of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register.</p>
 <td>STOP_DET_IFADDRESSED</td>
 <td>R/W</td>
 <td><p>In target mode:</p>
-<ul><li>1'b1: issues the STOP_DET interrupt only when it is addressed.</li><li>1'b0: issues the STOP_DET irrespective of whether it's addressed or not.</li></ul><p></p>
+<ul><li>1'b1: issues the STOP_DET interrupt only when it is addressed.</li><li>1'b0: issues the STOP_DET irrespective of whether it's addressed or not.</li></ul> 
 <p class="BLANK"></p>
 <p>Note:During a general call address, this target does not issue the
 STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1'b1, even if
@@ -210,7 +210,7 @@ The STOP_DET interrupt is generated only when the transmitted
 address matches the target address (SAR).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): target issues STOP_DET intr only if addressed</li><li>0x0 (DISABLED): target issues STOP_DET intr always</li></ul><p></p>
+<ul><li>0x1 (ENABLED): target issues STOP_DET intr only if addressed</li><li>0x0 (DISABLED): target issues STOP_DET intr always</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -232,7 +232,7 @@ a controller and does not perform any action that requires a target.</p>
 then bit 0 should also be written with a 0.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (SLAVE_DISABLED): Target mode is disabled</li><li>0x0 (SLAVE_ENABLED): Target mode is enabled</li></ul><p></p>
+<ul><li>0x1 (SLAVE_DISABLED): Target mode is disabled</li><li>0x0 (SLAVE_ENABLED): Target mode is enabled</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -252,7 +252,7 @@ performed, it will result in setting bit 6 (TX_ABRT) of the
 IC_RAW_INTR_STAT register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): Controller restart enabled</li><li>0x0 (DISABLED): Controller restart disabled</li></ul><p></p>
+<ul><li>0x1 (ENABLED): Controller restart enabled</li><li>0x0 (DISABLED): Controller restart disabled</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -270,7 +270,7 @@ becomes a read-only copy called
 IC_10BITADDR_MASTER_rd_only. In SMBus mode only 7-bit addressing mode is supported.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ADDR_10BITS): Controller 10-bit addressing mode</li><li>0x0 (ADDR_7BITS): Controller 7-bit addressing mode</li></ul><p></p>
+<ul><li>0x1 (ADDR_10BITS): Controller 10-bit addressing mode</li><li>0x0 (ADDR_7BITS): Controller 7-bit addressing mode</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -281,7 +281,7 @@ IC_10BITADDR_MASTER_rd_only. In SMBus mode only 7-bit addressing mode is support
 <td><p>When acting as a target, this bit controls whether the DW_apb_i2c responds to 7- or 10-bit addresses. In SMBus mode only 7-bit addressing mode is supported.</p>
 <ul><li>0: 7-bit addressing. The DW_apb_i2c ignores transactions that involve 10-bit addressing; for 7-bit addressing, only the lower 7 bits of the IC_SAR register are compared.</li><li>1: 10-bit addressing. The DW_apb_i2c responds to only 10-bit addressing transfers that match the full 10 bits of the IC_SAR register.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ADDR_10BITS): Target 10Bit addressing</li><li>0x0 (ADDR_7BITS): Target 7Bit addressing</li></ul><p></p>
+<ul><li>0x1 (ADDR_10BITS): Target 10Bit addressing</li><li>0x0 (ADDR_7BITS): Target 7Bit addressing</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -308,7 +308,7 @@ IC_MAX_SPEED_MODE.</p>
 <p class="BLANK"></p>
 <p>Note:This field is not applicable when IC_ULTRA_FAST_MODE="1</p"><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (STANDARD): Standard Speed mode of operation</li><li>0x2 (FAST): Fast or Fast Plus mode of operation</li><li>0x3 (HIGH): High Speed mode of operation</li></ul><p></p>
+<ul><li>0x1 (STANDARD): Standard Speed mode of operation</li><li>0x2 (FAST): Fast or Fast Plus mode of operation</li><li>0x3 (HIGH): High Speed mode of operation</li></ul> 
 <p>Value After Reset:0x3</p>
 </td>
 </tr>
@@ -322,7 +322,7 @@ IC_MAX_SPEED_MODE.</p>
 then bit 6 should also be written with a '1'.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): Controller mode is enabled</li><li>0x0 (DISABLED): Controller mode is disabled</li></ul><p></p>
+<ul><li>0x1 (ENABLED): Controller mode is enabled</li><li>0x0 (DISABLED): Controller mode is disabled</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -400,7 +400,7 @@ Tx FIFO, then it is possible to update the TAR address even while the Tx FIFO ha
 START BYTE command.</p>
 <ul><li>0: ignore bit 10 GC_OR_START and use IC_TAR normally</li><li>1: perform special I2C command as specified in Device_ID or GC_OR_START bit</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): Enables programming of GENERAL_CALL or START_BYTE transmission</li><li>0x0 (DISABLED): Disables programming of GENERAL_CALL or START_BYTE transmission</li></ul><p></p>
+<ul><li>0x1 (ENABLED): Enables programming of GENERAL_CALL or START_BYTE transmission</li><li>0x0 (DISABLED): Disables programming of GENERAL_CALL or START_BYTE transmission</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -413,7 +413,7 @@ General Call or START byte command is to be performed by the
 DW_apb_i2c.</p>
 <ul><li>0: General Call Address - after issuing a General Call, only writes may be performed. Attempting to issue a read command results in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register. The DW_apb_i2c remains in General Call mode until the SPECIAL bit value (bit 11) is cleared.</li><li>1: START BYTE</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (START_BYTE): START byte transmission</li><li>0x0 (GENERAL_CALL): GENERAL_CALL byte transmission</li></ul><p></p>
+<ul><li>0x1 (START_BYTE): START byte transmission</li><li>0x0 (GENERAL_CALL): GENERAL_CALL byte transmission</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -539,7 +539,7 @@ received after the address phase for receive transfer in Controller receiver or 
 <p>Note:In case of APB_DATA_WIDTH="8,"</p>
 <ul><li>The user has to perform two APB Reads to IC_DATA_CMD in order to get status on 11 bit.</li><li>In order to read the 11 bit, the user has to perform the first data byte read [7:0] (offset 0x10) and then perform the second read[15:8](offset 0x11) in order to know the status of 11 bit (whether the data received in previous read is a first data byte or not).</li><li>The 11th bit is an optional read field, user can ignore 2nd byte read [15:8] (offset 0x11) if not interested in FIRST_DATA_BYTE status.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): Non sequential data byte received</li><li>0x0 (INACTIVE): Sequential data byte received</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): Non sequential data byte received</li><li>0x0 (INACTIVE): Sequential data byte received</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -551,10 +551,10 @@ received after the address phase for receive transfer in Controller receiver or 
 <td><p>This bit controls whether a RESTART is issued before the byte is sent or received.
 This bit is available only if IC_EMPTYFIFO_HOLD_MASTER_EN is configured to 1.</p>
 <p class="BLANK"></p>
-<p></p>
+ 
 <ul><li>1: If IC_RESTART_EN is 1, a RESTART is issued before the data is sent/received (according to the value of CMD), regardless of whether or not the transfer direction is changing from the previous command; if IC_RESTART_EN is 0, a STOP followed by a START is issued instead.</li><li>0: If IC_RESTART_EN is 1, a RESTART is issued only if the transfer direction is changing from the previous command; if IC_RESTART_EN is 0, a STOP followed by a START is issued instead.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLE): Issue RESTART before this command</li><li>0x0 (DISABLE): Do not Issue RESTART before this command</li></ul><p></p>
+<ul><li>0x1 (ENABLE): Issue RESTART before this command</li><li>0x0 (DISABLE): Do not Issue RESTART before this command</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -567,7 +567,7 @@ This bit is available only if IC_EMPTYFIFO_HOLD_MASTER_EN is configured to 1.</p
 This bit is available only if IC_EMPTYFIFO_HOLD_MASTER_EN is configured to 1.</p>
 <ul><li>1 - STOP is issued after this byte, regardless of whether or not the Tx FIFO is empty. If the Tx FIFO is not empty, the controller immediately tries to start a new transfer by issuing a START and arbitrating for the bus.</li><li>0 - STOP is not issued after this byte, regardless of whether or not the Tx FIFO is empty. If the Tx FIFO is not empty, the controller continues the current transfer by sending/receiving data bytes according to the value of the CMD bit. If the Tx FIFO is empty, the controller holds the SCL line low and stalls the bus until a new command is available in the Tx FIFO.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLE): Issue STOP after this command</li><li>0x0 (DISABLE): Do not Issue STOP after this command</li></ul><p></p>
+<ul><li>0x1 (ENABLE): Issue STOP after this command</li><li>0x0 (DISABLE): Do not Issue STOP after this command</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -589,7 +589,7 @@ because writes to this register are not required. In target-transmitter mode, a
 <p>When programming this bit, you should remember the following:</p>
 <ul><li>Attempting to perform a read operation after a General Call command has been sent results in a TX_ABRT interrupt (bit 6 of the IC_RAW_INTR_STAT register), unless bit 11 (SPECIAL) in the IC_TAR register has been cleared.</li><li>If a "1" is written to this bit after receiving a RD_REQ interrupt, then a TX_ABRT interrupt occurs.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (READ): Controller Read Command</li><li>0x0 (WRITE): Controller Write Command</li></ul><p></p>
+<ul><li>0x1 (READ): Controller Read Command</li><li>0x0 (WRITE): Controller Write Command</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -994,7 +994,7 @@ available in the IC_RAW_INTR_STAT register.</li><li>Size:32 bits</li><li>Offset:
 <td><p>R_SCL_STUCK_AT_LOW Register field Reserved bits - Read Only</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): R_SCL_STUCK_AT_LOW interrupt is active</li><li>0x0 (INACTIVE): R_SCL_STUCK_AT_LOW interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): R_SCL_STUCK_AT_LOW interrupt is active</li><li>0x0 (INACTIVE): R_SCL_STUCK_AT_LOW interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1006,7 +1006,7 @@ available in the IC_RAW_INTR_STAT register.</li><li>Size:32 bits</li><li>Offset:
 <td><p>See IC_RAW_INTR_STAT for a detailed description of R_MASTER_ON_HOLD bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): R_MASTER_ON_HOLD interrupt is active</li><li>0x0 (INACTIVE): R_MASTER_ON_HOLD interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): R_MASTER_ON_HOLD interrupt is active</li><li>0x0 (INACTIVE): R_MASTER_ON_HOLD interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1018,7 +1018,7 @@ available in the IC_RAW_INTR_STAT register.</li><li>Size:32 bits</li><li>Offset:
 <td><p>See IC_RAW_INTR_STAT for a detailed description of R_RESTART_DET bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): R_RESTART_DET interrupt is active</li><li>0x0 (INACTIVE): R_RESTART_DET interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): R_RESTART_DET interrupt is active</li><li>0x0 (INACTIVE): R_RESTART_DET interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1030,7 +1030,7 @@ available in the IC_RAW_INTR_STAT register.</li><li>Size:32 bits</li><li>Offset:
 <td><p>See IC_RAW_INTR_STAT for a detailed description of R_GEN_CALL bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): R_GEN_CALL interrupt is active</li><li>0x0 (INACTIVE): R_GEN_CALL interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): R_GEN_CALL interrupt is active</li><li>0x0 (INACTIVE): R_GEN_CALL interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1042,7 +1042,7 @@ available in the IC_RAW_INTR_STAT register.</li><li>Size:32 bits</li><li>Offset:
 <td><p>See IC_RAW_INTR_STAT for a detailed description of R_START_DET bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): R_START_DET interrupt is active</li><li>0x0 (INACTIVE): R_START_DET interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): R_START_DET interrupt is active</li><li>0x0 (INACTIVE): R_START_DET interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1054,7 +1054,7 @@ available in the IC_RAW_INTR_STAT register.</li><li>Size:32 bits</li><li>Offset:
 <td><p>See IC_RAW_INTR_STAT for a detailed description of R_STOP_DET bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): R_STOP_DET interrupt is active</li><li>0x0 (INACTIVE): R_STOP_DET interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): R_STOP_DET interrupt is active</li><li>0x0 (INACTIVE): R_STOP_DET interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1066,7 +1066,7 @@ available in the IC_RAW_INTR_STAT register.</li><li>Size:32 bits</li><li>Offset:
 <td><p>See IC_RAW_INTR_STAT for a detailed description of R_ACTIVITY bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): R_ACTIVITY interrupt is active</li><li>0x0 (INACTIVE): R_ACTIVITY interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): R_ACTIVITY interrupt is active</li><li>0x0 (INACTIVE): R_ACTIVITY interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1078,7 +1078,7 @@ available in the IC_RAW_INTR_STAT register.</li><li>Size:32 bits</li><li>Offset:
 <td><p>See IC_RAW_INTR_STAT for a detailed description of R_RX_DONE bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): R_RX_DONE interrupt is active</li><li>0x0 (INACTIVE): R_RX_DONE interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): R_RX_DONE interrupt is active</li><li>0x0 (INACTIVE): R_RX_DONE interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1090,7 +1090,7 @@ available in the IC_RAW_INTR_STAT register.</li><li>Size:32 bits</li><li>Offset:
 <td><p>See IC_RAW_INTR_STAT for a detailed description of R_TX_ABRT bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): R_TX_ABRT interrupt is active</li><li>0x0 (INACTIVE): R_TX_ABRT interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): R_TX_ABRT interrupt is active</li><li>0x0 (INACTIVE): R_TX_ABRT interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1102,7 +1102,7 @@ available in the IC_RAW_INTR_STAT register.</li><li>Size:32 bits</li><li>Offset:
 <td><p>See IC_RAW_INTR_STAT for a detailed description of R_RD_REQ bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): R_RD_REQ interrupt is active</li><li>0x0 (INACTIVE): R_RD_REQ interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): R_RD_REQ interrupt is active</li><li>0x0 (INACTIVE): R_RD_REQ interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1114,7 +1114,7 @@ available in the IC_RAW_INTR_STAT register.</li><li>Size:32 bits</li><li>Offset:
 <td><p>See IC_RAW_INTR_STAT for a detailed description of R_TX_EMPTY bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): R_TX_EMPTY interrupt is active</li><li>0x0 (INACTIVE): R_TX_EMPTY interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): R_TX_EMPTY interrupt is active</li><li>0x0 (INACTIVE): R_TX_EMPTY interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1126,7 +1126,7 @@ available in the IC_RAW_INTR_STAT register.</li><li>Size:32 bits</li><li>Offset:
 <td><p>See IC_RAW_INTR_STAT for a detailed description of R_TX_OVER bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): R_TX_OVER interrupt is active</li><li>0x0 (INACTIVE): R_TX_OVER interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): R_TX_OVER interrupt is active</li><li>0x0 (INACTIVE): R_TX_OVER interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1138,7 +1138,7 @@ available in the IC_RAW_INTR_STAT register.</li><li>Size:32 bits</li><li>Offset:
 <td><p>See IC_RAW_INTR_STAT for a detailed description of R_RX_FULL bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): R_RX_FULL interrupt is active</li><li>0x0 (INACTIVE): R_RX_FULL interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): R_RX_FULL interrupt is active</li><li>0x0 (INACTIVE): R_RX_FULL interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1150,7 +1150,7 @@ available in the IC_RAW_INTR_STAT register.</li><li>Size:32 bits</li><li>Offset:
 <td><p>See IC_RAW_INTR_STAT for a detailed description of R_RX_OVER bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): R_RX_OVER interrupt is active</li><li>0x0 (INACTIVE): R_RX_OVER interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): R_RX_OVER interrupt is active</li><li>0x0 (INACTIVE): R_RX_OVER interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1162,7 +1162,7 @@ available in the IC_RAW_INTR_STAT register.</li><li>Size:32 bits</li><li>Offset:
 <td><p>See IC_RAW_INTR_STAT for a detailed description of R_RX_UNDER bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): RX_UNDER interrupt is active</li><li>0x0 (INACTIVE): RX_UNDER interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): RX_UNDER interrupt is active</li><li>0x0 (INACTIVE): RX_UNDER interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1278,7 +1278,7 @@ a value of 0 masks the interrupt, whereas a value of 1 unmasks the interrupt.</l
 <td><p>This M_MASTER_ON_HOLD_read_only bit masks the R_MASTER_ON_HOLD interrupt in IC_INTR_STAT register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (DISABLED): MASTER_ON_HOLD interrupt is unmasked</li><li>0x0 (ENABLED): MASTER_ON_HOLD interrupt is masked</li></ul><p></p>
+<ul><li>0x1 (DISABLED): MASTER_ON_HOLD interrupt is unmasked</li><li>0x0 (ENABLED): MASTER_ON_HOLD interrupt is masked</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1289,7 +1289,7 @@ a value of 0 masks the interrupt, whereas a value of 1 unmasks the interrupt.</l
 <td><p>This M_RESTART_DET_read_only bit masks the R_RESTART_DET interrupt in IC_INTR_STAT register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (DISABLED): RESTART_DET interrupt is unmasked</li><li>0x0 (ENABLED): RESTART_DET interrupt is masked</li></ul><p></p>
+<ul><li>0x1 (DISABLED): RESTART_DET interrupt is unmasked</li><li>0x0 (ENABLED): RESTART_DET interrupt is masked</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1300,7 +1300,7 @@ a value of 0 masks the interrupt, whereas a value of 1 unmasks the interrupt.</l
 <td><p>This bit masks the R_GEN_CALL interrupt in IC_INTR_STAT register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (DISABLED): GEN_CALL interrupt is unmasked</li><li>0x0 (ENABLED): GEN_CALL interrupt is masked</li></ul><p></p>
+<ul><li>0x1 (DISABLED): GEN_CALL interrupt is unmasked</li><li>0x0 (ENABLED): GEN_CALL interrupt is masked</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -1311,7 +1311,7 @@ a value of 0 masks the interrupt, whereas a value of 1 unmasks the interrupt.</l
 <td><p>This bit masks the R_START_DET interrupt in IC_INTR_STAT register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (DISABLED): START_DET interrupt is unmasked</li><li>0x0 (ENABLED): START_DET interrupt is masked</li></ul><p></p>
+<ul><li>0x1 (DISABLED): START_DET interrupt is unmasked</li><li>0x0 (ENABLED): START_DET interrupt is masked</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1322,7 +1322,7 @@ a value of 0 masks the interrupt, whereas a value of 1 unmasks the interrupt.</l
 <td><p>This bit masks the R_STOP_DET interrupt in IC_INTR_STAT register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (DISABLED): STOP_DET interrupt is unmasked</li><li>0x0 (ENABLED): STOP_DET interrupt is masked</li></ul><p></p>
+<ul><li>0x1 (DISABLED): STOP_DET interrupt is unmasked</li><li>0x0 (ENABLED): STOP_DET interrupt is masked</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1333,7 +1333,7 @@ a value of 0 masks the interrupt, whereas a value of 1 unmasks the interrupt.</l
 <td><p>This bit masks the R_ACTIVITY interrupt in IC_INTR_STAT register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (DISABLED): ACTIVITY interrupt is unmasked</li><li>0x0 (ENABLED): ACTIVITY interrupt is masked</li></ul><p></p>
+<ul><li>0x1 (DISABLED): ACTIVITY interrupt is unmasked</li><li>0x0 (ENABLED): ACTIVITY interrupt is masked</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1344,7 +1344,7 @@ a value of 0 masks the interrupt, whereas a value of 1 unmasks the interrupt.</l
 <td><p>This bit masks the R_RX_DONE interrupt in IC_INTR_STAT register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (DISABLED): RX_DONE interrupt is unmasked</li><li>0x0 (ENABLED): RX_DONE interrupt is masked</li></ul><p></p>
+<ul><li>0x1 (DISABLED): RX_DONE interrupt is unmasked</li><li>0x0 (ENABLED): RX_DONE interrupt is masked</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -1355,7 +1355,7 @@ a value of 0 masks the interrupt, whereas a value of 1 unmasks the interrupt.</l
 <td><p>This bit masks the R_TX_ABRT interrupt in IC_INTR_STAT register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (DISABLED): TX_ABORT interrupt is unmasked</li><li>0x0 (ENABLED): TX_ABORT interrupt is masked</li></ul><p></p>
+<ul><li>0x1 (DISABLED): TX_ABORT interrupt is unmasked</li><li>0x0 (ENABLED): TX_ABORT interrupt is masked</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -1366,7 +1366,7 @@ a value of 0 masks the interrupt, whereas a value of 1 unmasks the interrupt.</l
 <td><p>This bit masks the R_RD_REQ interrupt in IC_INTR_STAT register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (DISABLED): RD_REQ interrupt is unmasked</li><li>0x0 (ENABLED): RD_REQ interrupt is masked</li></ul><p></p>
+<ul><li>0x1 (DISABLED): RD_REQ interrupt is unmasked</li><li>0x0 (ENABLED): RD_REQ interrupt is masked</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -1377,7 +1377,7 @@ a value of 0 masks the interrupt, whereas a value of 1 unmasks the interrupt.</l
 <td><p>This bit masks the R_TX_EMPTY interrupt in IC_INTR_STAT register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (DISABLED): TX_EMPTY interrupt is unmasked</li><li>0x0 (ENABLED): TX_EMPTY interrupt is masked</li></ul><p></p>
+<ul><li>0x1 (DISABLED): TX_EMPTY interrupt is unmasked</li><li>0x0 (ENABLED): TX_EMPTY interrupt is masked</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -1388,7 +1388,7 @@ a value of 0 masks the interrupt, whereas a value of 1 unmasks the interrupt.</l
 <td><p>This bit masks the R_TX_OVER interrupt in IC_INTR_STAT register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (DISABLED): TX_OVER interrupt is unmasked</li><li>0x0 (ENABLED): TX_OVER interrupt is masked</li></ul><p></p>
+<ul><li>0x1 (DISABLED): TX_OVER interrupt is unmasked</li><li>0x0 (ENABLED): TX_OVER interrupt is masked</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -1399,7 +1399,7 @@ a value of 0 masks the interrupt, whereas a value of 1 unmasks the interrupt.</l
 <td><p>This bit masks the R_RX_FULL interrupt in IC_INTR_STAT register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (DISABLED): RX_FULL interrupt is unmasked</li><li>0x0 (ENABLED): RX_FULL interrupt is masked</li></ul><p></p>
+<ul><li>0x1 (DISABLED): RX_FULL interrupt is unmasked</li><li>0x0 (ENABLED): RX_FULL interrupt is masked</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -1410,7 +1410,7 @@ a value of 0 masks the interrupt, whereas a value of 1 unmasks the interrupt.</l
 <td><p>This bit masks the R_RX_OVER interrupt in IC_INTR_STAT register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (DISABLED): RX_OVER interrupt is unmasked</li><li>0x0 (ENABLED): RX_OVER interrupt is masked</li></ul><p></p>
+<ul><li>0x1 (DISABLED): RX_OVER interrupt is unmasked</li><li>0x0 (ENABLED): RX_OVER interrupt is masked</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -1421,7 +1421,7 @@ a value of 0 masks the interrupt, whereas a value of 1 unmasks the interrupt.</l
 <td><p>This bit masks the R_RX_UNDER interrupt in IC_INTR_STAT register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (DISABLED): RX_UNDER interrupt is unmasked</li><li>0x0 (ENABLED): RX_UNDER interrupt is masked</li></ul><p></p>
+<ul><li>0x1 (DISABLED): RX_UNDER interrupt is unmasked</li><li>0x0 (ENABLED): RX_UNDER interrupt is masked</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -1543,7 +1543,7 @@ always show the true status of the DW_apb_i2c.</li><li>Size:32 bits</li><li>Offs
 <td><p>Indicates whether controller is holding the bus and TX FIFO is empty.
 Enabled only when I2C_DYNAMIC_TAR_UPDATE="1" and IC_EMPTYFIFO_HOLD_MASTER_EN="1.</p"><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): MASTER_ON_HOLD interrupt is active</li><li>0x0 (INACTIVE): MASTER_ON_HOLD interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): MASTER_ON_HOLD interrupt is active</li><li>0x0 (INACTIVE): MASTER_ON_HOLD interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1562,7 +1562,7 @@ per the I2C protocol. In this case, the target is not the addressed target when 
 does not generate the RESTART_DET interrupt.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): RESTART_DET interrupt is active</li><li>0x0 (INACTIVE): RESTART_DET interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): RESTART_DET interrupt is active</li><li>0x0 (INACTIVE): RESTART_DET interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1577,7 +1577,7 @@ reads bit 0 of the IC_CLR_GEN_CALL register. DW_apb_i2c stores the
 received data in the Rx buffer.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): GEN_CALL interrupt is active</li><li>0x0 (INACTIVE): GEN_CALL interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): GEN_CALL interrupt is active</li><li>0x0 (INACTIVE): GEN_CALL interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1591,7 +1591,7 @@ interface regardless of whether DW_apb_i2c is operating in target or controller
 mode.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): START_DET interrupt is active</li><li>0x0 (INACTIVE): START_DET interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): START_DET interrupt is active</li><li>0x0 (INACTIVE): START_DET interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1607,7 +1607,7 @@ mode.</p>
 <ul><li>If IC_CON[7]=1'b0 (STOP_DET_IFADDRESSED), the STOP_DET interrupt is issued irrespective of whether it is being addressed.</li></ul><p>In Controller Mode:</p>
 <ul><li>If IC_CON[10]=1'b1 (STOP_DET_IF_MASTER_ACTIVE),the STOP_DET interrupt will be issued only if Controller is active.</li><li>If IC_CON[10]=1'b0 (STOP_DET_IFADDRESSED),the STOP_DET interrupt will be issued irrespective of whether controller is active or not.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): STOP_DET interrupt is active</li><li>0x0 (INACTIVE): STOP_DET interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): STOP_DET interrupt is active</li><li>0x0 (INACTIVE): STOP_DET interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1621,7 +1621,7 @@ are four ways to clear it:</p>
 <ul><li>Disabling the DW_apb_i2c</li><li>Reading the IC_CLR_ACTIVITY register</li><li>Reading the IC_CLR_INTR register</li><li>System reset</li></ul><p>Once this bit is set, it stays set unless one of the four methods is used to clear it. Even if the DW_apb_i2c module is idle, this bit remains set until cleared, indicating that there was activity on the bus.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): RAW_INTR_ACTIVITY interrupt is active</li><li>0x0 (INACTIVE): RAW_INTR_ACTIVITY interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): RAW_INTR_ACTIVITY interrupt is active</li><li>0x0 (INACTIVE): RAW_INTR_ACTIVITY interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1636,7 +1636,7 @@ a transmitted byte. This occurs on the last byte of
 the transmission, indicating that the transmission is done.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): RX_DONE interrupt is active</li><li>0x0 (INACTIVE): RX_DONE interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): RX_DONE interrupt is active</li><li>0x0 (INACTIVE): RX_DONE interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1661,7 +1661,7 @@ Tx FIFO is then ready to accept more data bytes from the APB interface. RX
 FIFO flush because of TX_ABRT is controlled by the coreConsultant parameter IC_AVOID_RX_FIFO_FLUSH_ON_TX_ABRT.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): TX_ABRT interrupt is active</li><li>0x0 (INACTIVE): TX_ABRT interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): TX_ABRT interrupt is active</li><li>0x0 (INACTIVE): TX_ABRT interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1679,7 +1679,7 @@ requested data to the IC_DATA_CMD register. This bit is set to 0 just after the
 processor reads the IC_CLR_RD_REQ register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): RD_REQ interrupt is active</li><li>0x0 (INACTIVE): RD_REQ interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): RD_REQ interrupt is active</li><li>0x0 (INACTIVE): RD_REQ interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1699,7 +1699,7 @@ provided there is activity in the controller or target state machines. When ther
 longer any activity, then with ic_en="0," this bit is set to 0.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): TX_EMPTY interrupt is active</li><li>0x0 (INACTIVE): TX_EMPTY interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): TX_EMPTY interrupt is active</li><li>0x0 (INACTIVE): TX_EMPTY interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1715,7 +1715,7 @@ until the controller or target state machines go into idle, and when ic_en goes 
 this interrupt is cleared.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): TX_OVER interrupt is active</li><li>0x0 (INACTIVE): TX_OVER interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): TX_OVER interrupt is active</li><li>0x0 (INACTIVE): TX_OVER interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1732,7 +1732,7 @@ bit is cleared once the IC_ENABLE bit 0 is programmed with a 0, regardless of
 the activity that continues.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): RX_FULL interrupt is active</li><li>0x0 (INACTIVE): RX_FULL interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): RX_FULL interrupt is active</li><li>0x0 (INACTIVE): RX_FULL interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1752,7 +1752,7 @@ interrupt is cleared.</p>
 Rx FIFO never overflows.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): RX_OVER interrupt is active</li><li>0x0 (INACTIVE): RX_OVER interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): RX_OVER interrupt is active</li><li>0x0 (INACTIVE): RX_OVER interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1767,7 +1767,7 @@ reading from the IC_DATA_CMD register. If the module is disabled
 machines go into idle, and when ic_en goes to 0, this interrupt is cleared.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): RX_UNDER interrupt is active</li><li>0x0 (INACTIVE): RX_UNDER interrupt is inactive</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): RX_UNDER interrupt is active</li><li>0x0 (INACTIVE): RX_UNDER interrupt is inactive</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2312,7 +2312,7 @@ ABORT bit is cleared automatically after the terminate operation.</p>
 <p>For a detailed description on how to terminate I2C transfers, refer to "Terminating I2C Transfers".</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): Terminate operation in progress</li><li>0x0 (DISABLE): Terminate operation not in progress</li></ul><p></p>
+<ul><li>0x1 (ENABLED): Terminate operation in progress</li><li>0x0 (DISABLE): Terminate operation not in progress</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2340,7 +2340,7 @@ For a detailed description on how to disable DW_apb_i2c, refer to "Disabling
 DW_apb_i2c"</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): I2C is enabled</li><li>0x0 (DISABLED): I2C is disabled</li></ul><p></p>
+<ul><li>0x1 (ENABLED): I2C is enabled</li><li>0x0 (DISABLED): I2C is disabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2548,7 +2548,7 @@ When the I2C is disabled by writing 0 in bit 0 of the IC_ENABLE register:<ul><li
 an additional byte has been received (This kind of Bus hold is applicable if IC_RX_FULL_HLD_BUS_EN is set to 1 and bit 9 of the IC_CON register (RX_FIFO_FULL_HLD_CTRL) is programmed to HIGH).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): Target holds the bus due to Rx FIFO is full</li><li>0x0 (INACTIVE): Target is not holding the bus or Bus hold is not due to Rx FIFO is full</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): Target holds the bus due to Rx FIFO is full</li><li>0x0 (INACTIVE): Target is not holding the bus or Bus hold is not due to Rx FIFO is full</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2562,7 +2562,7 @@ when the Tx FIFO is empty. The Bus is in hold until the Tx FIFO has
 data to Transmit for the read request.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): Target holds the bus due to Tx FIFO is empty</li><li>0x0 (INACTIVE): Target is not holding the bus or Bus hold is not due to Tx FIFO is empty</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): Target holds the bus due to Tx FIFO is empty</li><li>0x0 (INACTIVE): Target is not holding the bus or Bus hold is not due to Tx FIFO is empty</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2575,7 +2575,7 @@ data to Transmit for the read request.</p>
 (This kind of Bus hold is applicable if IC_RX_FULL_HLD_BUS_EN is set to 1 and bit 9 of the IC_CON register (RX_FIFO_FULL_HLD_CTRL) is programmed to HIGH).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): Controller holds the bus due to Rx FIFO is full</li><li>0x0 (INACTIVE): Controller is not holding the bus or Bus hold is not due to Rx FIFO is full</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): Controller holds the bus due to Rx FIFO is full</li><li>0x0 (INACTIVE): Controller is not holding the bus or Bus hold is not due to Rx FIFO is full</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2594,7 +2594,7 @@ Bus hold is applicable if IC_EMPTYFIFO_HOLD_MASTER_EN is
 set to 1).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): Controller holds the bus due to Tx FIFO is empty</li><li>0x0 (INACTIVE): Controller is not holding the bus or Bus hold is not due to Tx FIFO is empty</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): Controller holds the bus due to Tx FIFO is empty</li><li>0x0 (INACTIVE): Controller is not holding the bus or Bus hold is not due to Tx FIFO is empty</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2608,7 +2608,7 @@ When the Target Finite State Machine (FSM) is not
 in the IDLE state, this bit is set.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): Target not idle</li><li>0x0 (IDLE): Target is idle</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): Target not idle</li><li>0x0 (IDLE): Target is idle</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2625,7 +2625,7 @@ not in the IDLE state, this bit is set.</p>
 SLV_ACTIVITY and MST_ACTIVITY bits.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): Controller not idle</li><li>0x0 (IDLE): Controller is idle</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): Controller not idle</li><li>0x0 (IDLE): Controller is idle</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2640,7 +2640,7 @@ bit is set. When the receive FIFO contains one
 or more empty location, this bit is cleared.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (FULL): Rx FIFO is full</li><li>0x0 (NOT_FULL): Rx FIFO not full</li></ul><p></p>
+<ul><li>0x1 (FULL): Rx FIFO is full</li><li>0x0 (NOT_FULL): Rx FIFO not full</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2654,7 +2654,7 @@ This bit is set when the receive FIFO contains one or
 more entries; it is cleared when the receive FIFO is empty.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (NOT_EMPTY): Rx FIFO not empty</li><li>0x0 (EMPTY): Rx FIFO is empty</li></ul><p></p>
+<ul><li>0x1 (NOT_EMPTY): Rx FIFO not empty</li><li>0x0 (EMPTY): Rx FIFO is empty</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2669,7 +2669,7 @@ When it contains one or more valid entries, this bit is
 cleared. This bit field does not request an interrupt.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (EMPTY): Tx FIFO is empty</li><li>0x0 (NON_EMPTY): Tx FIFO not empty</li></ul><p></p>
+<ul><li>0x1 (EMPTY): Tx FIFO is empty</li><li>0x0 (NON_EMPTY): Tx FIFO not empty</li></ul> 
 <p>Value After Reset:0x1</p>
 <p>Volatile:true</p>
 </td>
@@ -2683,7 +2683,7 @@ Set when the transmit FIFO contains one or more
 empty locations, and is cleared when the FIFO is full.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (NOT_FULL): Tx FIFO not full</li><li>0x0 (FULL): Tx FIFO is full</li></ul><p></p>
+<ul><li>0x1 (NOT_FULL): Tx FIFO not full</li><li>0x0 (FULL): Tx FIFO is full</li></ul> 
 <p>Value After Reset:0x1</p>
 <p>Volatile:true</p>
 </td>
@@ -2695,7 +2695,7 @@ empty locations, and is cleared when the FIFO is full.</p>
 <td><p>I2C Activity Status.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): I2C is active</li><li>0x0 (INACTIVE): I2C is idle</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): I2C is active</li><li>0x0 (INACTIVE): I2C is idle</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2914,7 +2914,7 @@ detected the transfer terminate (IC_ENABLE[1])</p>
 <p>Role of DW_apb_i2c:Controller-Transmitter</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ABRT_USER_ABRT_GENERATED): Transfer terminate detected by controller</li><li>0x0 (ABRT_USER_ABRT_VOID): Transfer terminate detected by controller- scenario not present</li></ul><p></p>
+<ul><li>0x1 (ABRT_USER_ABRT_GENERATED): Transfer terminate detected by controller</li><li>0x0 (ABRT_USER_ABRT_VOID): Transfer terminate detected by controller- scenario not present</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2932,7 +2932,7 @@ IC_DATA_CMD register.</p>
 <p>Role of DW_apb_i2c:Target-Transmitter</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ABRT_SLVRD_INTX_GENERATED): Target trying to transmit to remote controller in read mode</li><li>0x0 (ABRT_SLVRD_INTX_VOID): Target trying to transmit to remote controller in read mode- scenario not present</li></ul><p></p>
+<ul><li>0x1 (ABRT_SLVRD_INTX_GENERATED): Target trying to transmit to remote controller in read mode</li><li>0x0 (ABRT_SLVRD_INTX_VOID): Target trying to transmit to remote controller in read mode- scenario not present</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2956,7 +2956,7 @@ longer own the bus.</p>
 <p>Role of DW_apb_i2c:Target-Transmitter</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ABRT_SLV_ARBLOST_GENERATED): Target lost arbitration to remote controller</li><li>0x0 (ABRT_SLV_ARBLOST_VOID): Target lost arbitration to remote controller- scenario not present</li></ul><p></p>
+<ul><li>0x1 (ABRT_SLV_ARBLOST_GENERATED): Target lost arbitration to remote controller</li><li>0x0 (ABRT_SLV_ARBLOST_VOID): Target lost arbitration to remote controller- scenario not present</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2970,7 +2970,7 @@ longer own the bus.</p>
 <p>Role of DW_apb_i2c:Target-Transmitter</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ABRT_SLVFLUSH_TXFIFO_GENERATED): Target flushes existing data in TX-FIFO upon getting read command</li><li>0x0 (ABRT_SLVFLUSH_TXFIFO_VOID): Target flushes existing data in TX-FIFO upon getting read command- scenario not present</li></ul><p></p>
+<ul><li>0x1 (ABRT_SLVFLUSH_TXFIFO_GENERATED): Target flushes existing data in TX-FIFO upon getting read command</li><li>0x0 (ABRT_SLVFLUSH_TXFIFO_VOID): Target flushes existing data in TX-FIFO upon getting read command- scenario not present</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2984,7 +2984,7 @@ longer own the bus.</p>
 <p>Role of DW_apb_i2c:Controller-Transmitter or Target-Transmitter</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ABRT_LOST_GENERATED): Controller or Target-Transmitter lost arbitration</li><li>0x0 (ABRT_LOST_VOID): Controller or Target-Transmitter lost arbitration- scenario not present</li></ul><p></p>
+<ul><li>0x1 (ABRT_LOST_GENERATED): Controller or Target-Transmitter lost arbitration</li><li>0x0 (ABRT_LOST_VOID): Controller or Target-Transmitter lost arbitration- scenario not present</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2998,7 +2998,7 @@ longer own the bus.</p>
 <p>Role of DW_apb_i2c:Controller-Transmitter or Controller-Receiver</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ABRT_MASTER_DIS_GENERATED): User initiating controller operation when CONTROLLER disabled</li><li>0x0 (ABRT_MASTER_DIS_VOID): User initiating controller operation when CONTROLLER disabled- scenario not present</li></ul><p></p>
+<ul><li>0x1 (ABRT_MASTER_DIS_GENERATED): User initiating controller operation when CONTROLLER disabled</li><li>0x0 (ABRT_MASTER_DIS_VOID): User initiating controller operation when CONTROLLER disabled- scenario not present</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3012,7 +3012,7 @@ longer own the bus.</p>
 <p>Role of DW_apb_i2c:Controller-Receiver</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ABRT_10B_RD_GENERATED): Controller trying to read in 10Bit addressing mode when RESTART disabled</li><li>0x0 (ABRT_10B_RD_VOID): Controller not trying to read in 10Bit addressing mode when RESTART disabled</li></ul><p></p>
+<ul><li>0x1 (ABRT_10B_RD_GENERATED): Controller trying to read in 10Bit addressing mode when RESTART disabled</li><li>0x0 (ABRT_10B_RD_VOID): Controller not trying to read in 10Bit addressing mode when RESTART disabled</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3037,7 +3037,7 @@ clears for one cycle and then gets reasserted. When this field is set to 1, the 
 <p>Role of DW_apb_i2c:Controller</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ABRT_SBYTE_NORSTRT_GENERATED): User trying to send START byte when RESTART disabled</li><li>0x0 (ABRT_SBYTE_NORSTRT_VOID): User trying to send START byte when RESTART disabled- scenario not present</li></ul><p></p>
+<ul><li>0x1 (ABRT_SBYTE_NORSTRT_GENERATED): User trying to send START byte when RESTART disabled</li><li>0x0 (ABRT_SBYTE_NORSTRT_VOID): User trying to send START byte when RESTART disabled- scenario not present</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3051,7 +3051,7 @@ clears for one cycle and then gets reasserted. When this field is set to 1, the 
 <p>Role of DW_apb_i2c:Controller-Transmitter or Controller-Receiver</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ABRT_HS_NORSTRT_GENERATED): User trying to switch Controller to HS mode when RESTART disabled</li><li>0x0 (ABRT_HS_NORSTRT_VOID): User trying to switch Controller to HS mode when RESTART disabled- scenario not present</li></ul><p></p>
+<ul><li>0x1 (ABRT_HS_NORSTRT_GENERATED): User trying to switch Controller to HS mode when RESTART disabled</li><li>0x0 (ABRT_HS_NORSTRT_VOID): User trying to switch Controller to HS mode when RESTART disabled- scenario not present</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3065,7 +3065,7 @@ clears for one cycle and then gets reasserted. When this field is set to 1, the 
 <p>Role of DW_apb_i2c:Controller</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ABRT_SBYTE_ACKDET_GENERATED): ACK detected for START byte</li><li>0x0 (ABRT_SBYTE_ACKDET_VOID): ACK detected for START byte- scenario not present</li></ul><p></p>
+<ul><li>0x1 (ABRT_SBYTE_ACKDET_GENERATED): ACK detected for START byte</li><li>0x0 (ABRT_SBYTE_ACKDET_VOID): ACK detected for START byte- scenario not present</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3079,7 +3079,7 @@ clears for one cycle and then gets reasserted. When this field is set to 1, the 
 <p>Role of DW_apb_i2c:Controller</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ABRT_HS_ACK_GENERATED): HS Controller code ACKed in HS Mode</li><li>0x0 (ABRT_HS_ACK_VOID): HS Controller code ACKed in HS Mode- scenario not present</li></ul><p></p>
+<ul><li>0x1 (ABRT_HS_ACK_GENERATED): HS Controller code ACKed in HS Mode</li><li>0x0 (ABRT_HS_ACK_VOID): HS Controller code ACKed in HS Mode- scenario not present</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3093,7 +3093,7 @@ clears for one cycle and then gets reasserted. When this field is set to 1, the 
 <p>Role of DW_apb_i2c:Controller-Transmitter</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ABRT_GCALL_READ_GENERATED): GCALL is followed by read from bus</li><li>0x0 (ABRT_GCALL_READ_VOID): GCALL is followed by read from bus-scenario not present</li></ul><p></p>
+<ul><li>0x1 (ABRT_GCALL_READ_GENERATED): GCALL is followed by read from bus</li><li>0x0 (ABRT_GCALL_READ_VOID): GCALL is followed by read from bus-scenario not present</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3107,7 +3107,7 @@ clears for one cycle and then gets reasserted. When this field is set to 1, the 
 <p>Role of DW_apb_i2c:Controller-Transmitter</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ABRT_GCALL_NOACK_GENERATED): GCALL not ACKed by any target</li><li>0x0 (ABRT_GCALL_NOACK_VOID): GCALL not ACKed by any target-scenario not present</li></ul><p></p>
+<ul><li>0x1 (ABRT_GCALL_NOACK_GENERATED): GCALL not ACKed by any target</li><li>0x0 (ABRT_GCALL_NOACK_VOID): GCALL not ACKed by any target-scenario not present</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3121,7 +3121,7 @@ clears for one cycle and then gets reasserted. When this field is set to 1, the 
 <p>Role of DW_apb_i2c:Controller-Transmitter</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ABRT_TXDATA_NOACK_GENERATED): Transmitted data not ACKed by addressed target</li><li>0x0 (ABRT_TXDATA_NOACK_VOID): Transmitted data non-ACKed by addressed target-scenario not present</li></ul><p></p>
+<ul><li>0x1 (ABRT_TXDATA_NOACK_GENERATED): Transmitted data not ACKed by addressed target</li><li>0x0 (ABRT_TXDATA_NOACK_VOID): Transmitted data non-ACKed by addressed target-scenario not present</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3135,7 +3135,7 @@ clears for one cycle and then gets reasserted. When this field is set to 1, the 
 <p>Role of DW_apb_i2c:Controller-Transmitter or Controller-Receiver</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): Byte 2 of 10Bit Address not ACKed by any target</li><li>0x0 (INACTIVE): This terminate is not generated</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): Byte 2 of 10Bit Address not ACKed by any target</li><li>0x0 (INACTIVE): This terminate is not generated</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3149,7 +3149,7 @@ clears for one cycle and then gets reasserted. When this field is set to 1, the 
 <p>Role of DW_apb_i2c:Controller-Transmitter or Controller-Receiver</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): Byte 1 of 10Bit Address not ACKed by any target</li><li>0x0 (INACTIVE): This terminate is not generated</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): Byte 1 of 10Bit Address not ACKed by any target</li><li>0x0 (INACTIVE): This terminate is not generated</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3163,7 +3163,7 @@ clears for one cycle and then gets reasserted. When this field is set to 1, the 
 <p>Role of DW_apb_i2c:Controller-Transmitter or Controller-Receiver</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): This terminate is generated because of NOACK for 7-bit address</li><li>0x0 (INACTIVE): This terminate is not generated</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): This terminate is generated because of NOACK for 7-bit address</li><li>0x0 (INACTIVE): This terminate is not generated</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3203,7 +3203,7 @@ This bit enables/disables the transmit FIFO DMA
 channel.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): Transmit FIFO DMA channel enabled</li><li>0x0 (DISABLED): transmit FIFO DMA channel disabled</li></ul><p></p>
+<ul><li>0x1 (ENABLED): Transmit FIFO DMA channel enabled</li><li>0x0 (DISABLED): transmit FIFO DMA channel disabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3216,7 +3216,7 @@ This bit enables/disables the receive FIFO DMA
 channel.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): Receive FIFO DMA channel enabled</li><li>0x0 (DISABLED): Receive FIFO DMA channel disabled</li></ul><p></p>
+<ul><li>0x1 (ENABLED): Receive FIFO DMA channel enabled</li><li>0x0 (DISABLED): Receive FIFO DMA channel disabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3366,7 +3366,7 @@ Otherwise, DW_apb_i2c responds with a NACK
 (by negating ic_data_oe).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): Generate ACK for a General Call</li><li>0x0 (DISABLED): Generate NACK for General Call</li></ul><p></p>
+<ul><li>0x1 (ENABLED): Generate ACK for a General Call</li><li>0x0 (DISABLED): Generate NACK for General Call</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3424,7 +3424,7 @@ being actively involved in the data phase of a Target-Receiver transfer.</p>
 <p>Note:The CPU can safely read this bit when IC_EN (bit 0) is read as 0.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): Target RX Data is lost</li><li>0x0 (INACTIVE): Target RX Data is not lost</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): Target RX Data is lost</li><li>0x0 (INACTIVE): Target RX Data is not lost</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3466,7 +3466,7 @@ when there is controller activity, or when the I2C bus is idle.</p>
 <p>Note:The CPU can safely read this bit when IC_EN (bit 0) is read as 0.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ACTIVE): Target is disabled when it is active</li><li>0x0 (INACTIVE): Target is disabled when it is idle</li></ul><p></p>
+<ul><li>0x1 (ACTIVE): Target is disabled when it is active</li><li>0x0 (INACTIVE): Target is disabled when it is idle</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3484,7 +3484,7 @@ read SLV_RX_DATA_LOST (bit 2) and
 SLV_DISABLED_WHILE_BUSY (bit 1).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): I2C enabled</li><li>0x0 (DISABLED): I2C disabled</li></ul><p></p>
+<ul><li>0x1 (ENABLED): I2C enabled</li><li>0x0 (DISABLED): I2C disabled</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3664,7 +3664,7 @@ the setting of any other parameters that are encoded in the
 bits.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): Enables capability of reading encoded parameters</li><li>0x0 (DISBALED): Disables capability of reading encoded parameters</li></ul><p></p>
+<ul><li>0x1 (ENABLED): Enables capability of reading encoded parameters</li><li>0x0 (DISBALED): Disables capability of reading encoded parameters</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3677,7 +3677,7 @@ derived from the IC_HAS_DMA coreConsultant
 parameter.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): DMA handshaking signals are enabled</li><li>0x0 (DISABLED): DMA handshaking signals are disabled</li></ul><p></p>
+<ul><li>0x1 (ENABLED): DMA handshaking signals are enabled</li><li>0x0 (DISABLED): DMA handshaking signals are disabled</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3690,7 +3690,7 @@ derived from the IC_INTR_IO coreConsultant
 parameter.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (COMBINED): COMBINED Interrupt outputs</li><li>0x0 (INDIVIDUAL): INDIVIDUAL Interrupt outputs</li></ul><p></p>
+<ul><li>0x1 (COMBINED): COMBINED Interrupt outputs</li><li>0x0 (INDIVIDUAL): INDIVIDUAL Interrupt outputs</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3703,7 +3703,7 @@ derived from the IC_HC_COUNT VALUES coreConsultant
 parameter.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): Hard code the count values for each mode.</li><li>0x0 (DISABLED): Programmable count values for each mode.</li></ul><p></p>
+<ul><li>0x1 (ENABLED): Hard code the count values for each mode.</li><li>0x0 (DISABLED): Programmable count values for each mode.</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3716,7 +3716,7 @@ derived from the IC_MAX_SPEED_MODE coreConsultant
 parameter.</p>
 <ul><li>0x0: Reserved</li><li>0x1: Standard</li><li>0x2: Fast</li><li>0x3: High</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (STANDARD): IC MAX SPEED is STANDARD MODE</li><li>0x2 (FAST): IC MAX SPEED is FAST MODE</li><li>0x3 (HIGH): IC MAX SPEED is HIGH MODE</li></ul><p></p>
+<ul><li>0x1 (STANDARD): IC MAX SPEED is STANDARD MODE</li><li>0x2 (FAST): IC MAX SPEED is FAST MODE</li><li>0x3 (HIGH): IC MAX SPEED is HIGH MODE</li></ul> 
 <p>Value After Reset:0x3</p>
 </td>
 </tr>
@@ -3729,7 +3729,7 @@ derived from the APB_DATA_WIDTH coreConsultant
 parameter.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (APB_08BITS): APB data bus width is 08 bits</li><li>0x1 (APB_16BITS): APB data bus width is 16 bits</li><li>0x2 (APB_32BITS): APB data bus width is 32 bits</li><li>0x3 (RESERVED): Reserved bits</li></ul><p></p>
+<ul><li>0x0 (APB_08BITS): APB data bus width is 08 bits</li><li>0x1 (APB_16BITS): APB data bus width is 16 bits</li><li>0x2 (APB_32BITS): APB data bus width is 32 bits</li><li>0x3 (RESERVED): Reserved bits</li></ul> 
 <p>Value After Reset:0x2</p>
 </td>
 </tr>

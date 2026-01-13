@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
@@ -197,37 +197,37 @@
         </p>
         <h2>Field Descriptions</h2>
         <h3 id="axi_data_par_en.desc">axi_data_par_en - AXI Data Bus Even Parity Check Enable<a class="headerlink" href="#axi_data_par_en.desc" title="Permalink to this headline"></a></h3>
-        <p>When the following bits are set, the AXI Data Bus Even Parity Check is enabled.<p></p></p>
+        <p>When the following bits are set, the AXI Data Bus Even Parity Check is enabled. </p>
         <h3 id="axi_data_par_even.desc">axi_data_par_even - AXI Data Bus Even Parity<a class="headerlink" href="#axi_data_par_even.desc" title="Permalink to this headline"></a></h3>
-        <p>When the following bits are set, the AXI Data Bus Even Parity is selected.<p></p></p>
+        <p>When the following bits are set, the AXI Data Bus Even Parity is selected. </p>
         <h3 id="ahb_wr_seq_allow.desc">ahb_wr_seq_allow - AHB Allows Sequential Write<a class="headerlink" href="#ahb_wr_seq_allow.desc" title="Permalink to this headline"></a></h3>
-        <p>When this bit is set, the write address of the sequential write will not be written into FIFO. When the this bit is reset, the write address and data will be written into FIFO.<p></p>
-This mode is reserved for AHB bus.<p></p></p>
+        <p>When this bit is set, the write address of the sequential write will not be written into FIFO. When the this bit is reset, the write address and data will be written into FIFO. 
+This mode is reserved for AHB bus. </p>
         <h3 id="axi_sl_rd_prot.desc">axi_sl_rd_prot - AXI Slave Read Protect Mode<a class="headerlink" href="#axi_sl_rd_prot.desc" title="Permalink to this headline"></a></h3>
-        <p>When the following bits are set, the AXI will check the AXI Read Protect mode of the incoming Read Address Field before performing the action:<p></p>
-AXI_SL_RD_PROT[0] = 1, only privileged access can be performed.<p></p>
-AXI_SL_RD_PROT[1] = 1, only secured access can be performed.<p></p>
-AXI_SL_RD_PROT[2] = 1, only data access can be performed.<p></p></p>
+        <p>When the following bits are set, the AXI will check the AXI Read Protect mode of the incoming Read Address Field before performing the action: 
+AXI_SL_RD_PROT[0] = 1, only privileged access can be performed. 
+AXI_SL_RD_PROT[1] = 1, only secured access can be performed. 
+AXI_SL_RD_PROT[2] = 1, only data access can be performed. </p>
         <h3 id="axi_sl_wr_prot.desc">axi_sl_wr_prot - AXI Slave Write Protect Mode<a class="headerlink" href="#axi_sl_wr_prot.desc" title="Permalink to this headline"></a></h3>
-        <p>When the following bits are set, the AXI will check the AXI Write Protect mode of the incmming Read Address Field before performing the action:<p></p>
-AXI_SL_WR_PROT[0] = 1, only privileged access can be performed.<p></p>
-AXI_SL_WR_PROT[1] = 1, only secured access can be performed.<p></p>
-AXI_SL_WR_PROT[2] = 1, only data access can be performed.<p></p></p>
+        <p>When the following bits are set, the AXI will check the AXI Write Protect mode of the incmming Read Address Field before performing the action: 
+AXI_SL_WR_PROT[0] = 1, only privileged access can be performed. 
+AXI_SL_WR_PROT[1] = 1, only secured access can be performed. 
+AXI_SL_WR_PROT[2] = 1, only data access can be performed. </p>
         <h3 id="axi_sl_bypass_fifo.desc">axi_sl_bypass_fifo - AXI Slave Bypass QFIFO Enable<a class="headerlink" href="#axi_sl_bypass_fifo.desc" title="Permalink to this headline"></a></h3>
-        <p>When this bit is set, the read or write command is bypassing the AXI slave input FIFO.<p></p></p>
+        <p>When this bit is set, the read or write command is bypassing the AXI slave input FIFO. </p>
         <h3 id="axi_sl_rd_qena.desc">axi_sl_rd_qena - AXI Slave Queue Read Operation Enable<a class="headerlink" href="#axi_sl_rd_qena.desc" title="Permalink to this headline"></a></h3>
-        <p>When this bit is set, the read command is allowed to be stored in the Input FIFO interleaved w/ write command.<p></p></p>
+        <p>When this bit is set, the read command is allowed to be stored in the Input FIFO interleaved w/ write command. </p>
         <h3 id="axi_sl_bus_sz.desc">axi_sl_bus_sz - AXI Slave Bus Size<a class="headerlink" href="#axi_sl_bus_sz.desc" title="Permalink to this headline"></a></h3>
-        <p>This register provides the maximum bus size. The value is indicated as the following:<p></p>
-0 - 32 bit bus<p></p>
-1 - 62 bit bus<p></p></p>
+        <p>This register provides the maximum bus size. The value is indicated as the following: 
+0 - 32 bit bus 
+1 - 62 bit bus </p>
         <h3 id="out_axi_sl_word_swp.desc">out_axi_sl_word_swp - Slave AXI Output Word Swap Enable<a class="headerlink" href="#out_axi_sl_word_swp.desc" title="Permalink to this headline"></a></h3>
-        <p>The upper and lower word of the 64 bit data bus are swapped.<p></p></p>
+        <p>The upper and lower word of the 64 bit data bus are swapped. </p>
         <h3 id="out_axi_sl_byte_swp.desc">out_axi_sl_byte_swp - Slave AXI Output Byte Swap Enable<a class="headerlink" href="#out_axi_sl_byte_swp.desc" title="Permalink to this headline"></a></h3>
-        <p>The byte locations within the 32 bit word are swapped.<p></p></p>
+        <p>The byte locations within the 32 bit word are swapped. </p>
         <h3 id="in_axi_sl_word_swp.desc">in_axi_sl_word_swp - Slave AXI Input Word Swap Enable<a class="headerlink" href="#in_axi_sl_word_swp.desc" title="Permalink to this headline"></a></h3>
-        <p>The upper and lower word of the 64 bit data bus are swapped.<p></p></p>
+        <p>The upper and lower word of the 64 bit data bus are swapped. </p>
         <h3 id="in_axi_sl_byte_swp.desc">in_axi_sl_byte_swp - Slave AXI Input Byte Swap Enable<a class="headerlink" href="#in_axi_sl_byte_swp.desc" title="Permalink to this headline"></a></h3>
-        <p>The byte locations within the 32 bit word are swapped.<p></p></p>
+        <p>The byte locations within the 32 bit word are swapped. </p>
     </body>
 </html>

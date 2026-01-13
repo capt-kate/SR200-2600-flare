@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
@@ -14,7 +14,7 @@
             <dd class="address">0x4</dd>
         </dl>
         <h2>Description</h2>
-        <p>Set control for each Hash operation.<p></p></p>
+        <p>Set control for each Hash operation. </p>
         <h2>Contents</h2>
         <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
             <tr class="TableStyle-table-no-head-Body-Body1">
@@ -77,17 +77,17 @@
         </p>
         <h2>Field Descriptions</h2>
         <h3 id="reset.desc">reset - FW Reset Hash Control<a class="headerlink" href="#reset.desc" title="Permalink to this headline"></a></h3>
-        <p>FW set this bit to reset hash module all SM and control logic, This bit do not reset hash digest, key and context registers.<p></p></p>
+        <p>FW set this bit to reset hash module all SM and control logic, This bit do not reset hash digest, key and context registers. </p>
         <h3 id="hardware_padded_required.desc">hardware_padded_required - Hardware Padding Required<a class="headerlink" href="#hardware_padded_required.desc" title="Permalink to this headline"></a></h3>
-        <p>1: Hardware padding required<p></p>
-0: Not need hardware padding<p></p></p>
+        <p>1: Hardware padding required 
+0: Not need hardware padding </p>
         <h3 id="hash_op_mode.desc">hash_op_mode - Hash Operation Mode For normal hash:<a class="headerlink" href="#hash_op_mode.desc" title="Permalink to this headline"></a></h3>
-        <p>01: init, use standard constants as digest initial value<p></p>
-10: update, digest incoming message segment based on income message segment size, message size for this operation is module 64 bytes.<p></p>
-11: final, digest last portion of message, if hardware padded required bit is set, hash do hardware pad message. When final and hardware padding required set, incoming message size can be zero, and this means hash last padding block and generated digest.<p></p>
-For HMAC:<p></p>
-01: HMAC init, process key, generated: contexto="hash" (K0+opad) without padding, FW need save contexto for HMAC final use. contexti="hash" (K0+ipad) without padding, contexti will be in digest_context register and FW can read them as context for HMAC update's initial value.<p></p>
-10: HMAC update, digest incoming message<p></p>
-11: HMAC final: digest final portion of message with padding, that is contextm, load contextm to digest scheduler, load contexto as initial value, digest contextm, get final HMAC digest.<p></p></p>
+        <p>01: init, use standard constants as digest initial value 
+10: update, digest incoming message segment based on income message segment size, message size for this operation is module 64 bytes. 
+11: final, digest last portion of message, if hardware padded required bit is set, hash do hardware pad message. When final and hardware padding required set, incoming message size can be zero, and this means hash last padding block and generated digest. 
+For HMAC: 
+01: HMAC init, process key, generated: contexto="hash" (K0+opad) without padding, FW need save contexto for HMAC final use. contexti="hash" (K0+ipad) without padding, contexti will be in digest_context register and FW can read them as context for HMAC update's initial value. 
+10: HMAC update, digest incoming message 
+11: HMAC final: digest final portion of message with padding, that is contextm, load contextm to digest scheduler, load contexto as initial value, digest contextm, get final HMAC digest. </p>
     </body>
 </html>

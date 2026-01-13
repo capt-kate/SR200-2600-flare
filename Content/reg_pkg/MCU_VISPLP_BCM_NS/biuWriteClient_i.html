@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>WriteClient</title></head>
+<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>WriteClient</title></head>
 <body>
 <h1><a name="WriteClient">"WriteClient"</a>
         </h1>
@@ -17,7 +17,7 @@
 </td>
 <td><p>32'h00000000</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -36,9 +36,9 @@
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Start bit for the respective clients.<p></p>
-0 : No effect on hardware.<p></p>
-1 : start the client.<p></p>
+<td><p>Start bit for the respective clients. 
+0 : No effect on hardware. 
+1 : start the client. 
 The write 1 to this register is used to kick the hardware.</p>
 </td>
 </tr>
@@ -48,11 +48,11 @@ The write 1 to this register is used to kick the hardware.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0 : Don't clear, normal state.<p></p>
+<td><p>0 : Don't clear, normal state. 
 1 : Clear the asynchronous FIFO between the respective client and dHub.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -69,7 +69,7 @@ The write 1 to this register is used to kick the hardware.</p>
 </td>
 <td><p>32'h00000004</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -88,11 +88,11 @@ The write 1 to this register is used to kick the hardware.</p>
 </td>
 <td><p>0x64</p>
 </td>
-<td><p>Specifies the total number of pixels expected from input to write client. This is used to generate flush in Write client to write the partially formed 128-bit data (if any) to DDR.<p></p>
+<td><p>Specifies the total number of pixels expected from input to write client. This is used to generate flush in Write client to write the partially formed 128-bit data (if any) to DDR. 
 Should be programmed with (ovres*ohres).</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -109,7 +109,7 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>32'h00000008</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -140,7 +140,7 @@ Should be programmed with (ovres*ohres).</p>
 <td><p>Total number of pixels in a line (for Write Client)</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -157,7 +157,7 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>32'h0000000C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -176,18 +176,18 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>PackSel for Write Client<p></p>
-[0000] : 8 bit packing<p></p>
-[0001] : 10 bit packing<p></p>
-[0010] : 12 bit packing<p></p>
-[0011] : 15 bit packing<p></p>
-[0100] : 16 bit packing<p></p>
-[0101] : 20 bit packing<p></p>
-[0110] : 24 bit packing<p></p>
-[0111] : 30 bit packing<p></p>
+<td><p>PackSel for Write Client 
+[0000] : 8 bit packing 
+[0001] : 10 bit packing 
+[0010] : 12 bit packing 
+[0011] : 15 bit packing 
+[0100] : 16 bit packing 
+[0101] : 20 bit packing 
+[0110] : 24 bit packing 
+[0111] : 30 bit packing 
 [1000] : 32 bit packing</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 </body></html>

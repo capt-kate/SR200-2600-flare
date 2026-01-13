@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>Register Details</title></head>
+<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>Register Details</title></head>
 <body>
 <h1><a name="idp51170680"></a>Register Details</h1>
 <h2><a name="H3-sect1-reg-DWC_mshc_map_DWC_mshc_block"></a>DWC_mshc_block Register Details</h2>
@@ -17,7 +17,7 @@
 transfer, this register points to the system address of the next contiguous data position. It can be accessed only if no transaction is executing. Reading this register during data transfers may</li></ul><p>return an invalid value.</p>
 <ul><li>32-bit Block Count (Host Version 4 Enable = 1): From the Host Controller Version 4.10 specification, this register is redefined as 32-bit Block Count. The Host Controller decrements the block count of this register for every block transfer and the data transfer stops when the count reaches zero. This register must be accessed when no transaction is executing. Reading this register during data transfers may return invalid value.</li></ul><p>Following are the values for BLOCKCNT_SDMASA:</p>
 <ul><li>0xFFFF_FFFF: 4G - 1 Block</li><li>...</li><li>0x0000_0002: 2 Blocks</li><li>0x0000_0001: 1 Block</li><li>0x0000_0000: Stop Count</li></ul><p>Note:</p>
-<ul><li>For Host Version 4 Enable = 0, the Host driver does not program the system address in this register while operating in ADMA mode. The system address must be programmed in the ADMA System Address register.</li><li>For Host Version 4 Enable = 0, the Host driver programs a non-zero 32-bit block count value in this register when Auto CMD23 is enabled for non-DMA and ADMA modes. Auto CMD23 cannot be used with SDMA.</li><li>This register must be programmed with a non-zero value for data transfer if the 32-bit Block count register is used instead of the 16-bit Block count register.</li></ul><p></p>
+<ul><li>For Host Version 4 Enable = 0, the Host driver does not program the system address in this register while operating in ADMA mode. The system address must be programmed in the ADMA System Address register.</li><li>For Host Version 4 Enable = 0, the Host driver programs a non-zero 32-bit block count value in this register when Auto CMD23 is enabled for non-DMA and ADMA modes. Auto CMD23 cannot be used with SDMA.</li><li>This register must be programmed with a non-zero value for data transfer if the 32-bit Block count register is used instead of the 16-bit Block count register.</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -49,7 +49,7 @@ transfer, this register points to the system address of the next contiguous data
 <p>These bits specify the size of contiguous buffer in system memory. The SDMA transfer waits at every boundary specified by these fields and the Host Controller generates the DMA interrupt to request the Host Driver to update the SDMA System Address register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (BYTES_4K): 4K bytes SDMA Buffer Boundary</li><li>0x1 (BYTES_8K): 8K bytes SDMA Buffer Boundary</li><li>0x2 (BYTES_16K): 16K bytes SDMA Buffer Boundary</li><li>0x3 (BYTES_32K): 32K bytes SDMA Buffer Boundary</li><li>0x4 (BYTES_64K): 64K bytes SDMA Buffer Boundary</li><li>0x5 (BYTES_128K): 128K bytes SDMA Buffer Boundary</li><li>0x6 (BYTES_256K): 256K bytes SDMA Buffer Boundary</li><li>0x7 (BYTES_512K): 512K bytes SDMA Buffer Boundary</li></ul><p></p>
+<ul><li>0x0 (BYTES_4K): 4K bytes SDMA Buffer Boundary</li><li>0x1 (BYTES_8K): 8K bytes SDMA Buffer Boundary</li><li>0x2 (BYTES_16K): 16K bytes SDMA Buffer Boundary</li><li>0x3 (BYTES_32K): 32K bytes SDMA Buffer Boundary</li><li>0x4 (BYTES_64K): 64K bytes SDMA Buffer Boundary</li><li>0x5 (BYTES_128K): 128K bytes SDMA Buffer Boundary</li><li>0x6 (BYTES_256K): 256K bytes SDMA Buffer Boundary</li><li>0x7 (BYTES_512K): 512K bytes SDMA Buffer Boundary</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -147,7 +147,7 @@ regardless of the Command Complete Signal Enable.</p>
 <p><em>Note</em>: During tuning (when the Execute Tuning bit in the Host Control2 register is set), the Command Complete Interrupt is not generated irrespective of the Response Interrupt Disable setting.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (ENABLED): Response Interrupt is enabled</li><li>0x1 (DISABLED): Response Interrupt is disabled</li></ul><p></p>
+<ul><li>0x0 (ENABLED): Response Interrupt is enabled</li><li>0x1 (DISABLED): Response Interrupt is disabled</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -164,7 +164,7 @@ If the Host Controller checks the response error, set this bit to 1 and set Resp
 <p><em>Note</em>:</p>
 <ul><li>Response error check must not be enabled for any response type other than R1 and R5.</li><li>Response check must not be enabled for the tuning command.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Response Error Check is disabled</li><li>0x1 (ENABLED): Response Error Check is enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Response Error Check is disabled</li><li>0x1 (ENABLED): Response Error Check is enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -181,7 +181,7 @@ If the Host Controller checks the response error, set this bit to 1 and set Resp
 <ul><li>OUT_OF_RANGE</li><li>ADDRESS_ERROR</li><li>BLOCK_LEN_ERROR</li><li>WP_VIOLATION</li><li>CARD_IS_LOCKED</li><li>COM_CRC_ERROR</li><li>CARD_ECC_FAILED</li><li>CC_ERROR</li><li>ERROR</li></ul><p>Response Flags checked in R5:</p>
 <ul><li>COM_CRC_ERROR</li><li>ERROR</li><li>FUNCTION_NUMBER</li><li>OUT_OF_RANGE</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (RESP_R1): R1 (Memory)</li><li>0x1 (RESP_R5): R5 (SDIO)</li></ul><p></p>
+<ul><li>0x0 (RESP_R1): R1 (Memory)</li><li>0x1 (RESP_R5): R5 (SDIO)</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -195,7 +195,7 @@ If the Host Controller checks the response error, set this bit to 1 and set Resp
 <p>This bit is set when issuing multiple-block transfer commands using the DAT line. If this bit is set to 0, it is not necessary to set the Block Count register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (SINGLE): Single Block</li><li>0x1 (MULTI): Multiple Block</li></ul><p></p>
+<ul><li>0x0 (SINGLE): Single Block</li><li>0x1 (MULTI): Multiple Block</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -210,7 +210,7 @@ If the Host Controller checks the response error, set this bit to 1 and set Resp
 from the SD/eMMC card to the Host Controller and it is set to 0 for all other commands.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (READ): Read (Card to Host)</li><li>0x0 (WRITE): Write (Host to Card)</li></ul><p></p>
+<ul><li>0x1 (READ): Read (Card to Host)</li><li>0x0 (WRITE): Write (Host to Card)</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -226,7 +226,7 @@ from the SD/eMMC card to the Host Controller and it is set to 0 for all other co
 <p><em>Note</em>: In SDIO, this field must be set as 00b (Auto Command Disabled).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (AUTO_CMD_DISABLED): Auto Command Disabled</li><li>0x1 (AUTO_CMD12_ENABLED): Auto CMD12 Enable</li><li>0x2 (AUTO_CMD23_ENABLED): Auto CMD23 Enable</li><li>0x3 (AUTO_CMD_AUTO_SEL): Auto CMD Auto Select</li></ul><p></p>
+<ul><li>0x0 (AUTO_CMD_DISABLED): Auto Command Disabled</li><li>0x1 (AUTO_CMD12_ENABLED): Auto CMD12 Enable</li><li>0x2 (AUTO_CMD23_ENABLED): Auto CMD23 Enable</li><li>0x3 (AUTO_CMD_AUTO_SEL): Auto CMD Auto Select</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -241,7 +241,7 @@ from the SD/eMMC card to the Host Controller and it is set to 0 for all other co
 If this bit is set to 0, the Block Count register is disabled, which is useful in executing an infinite transfer.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): Enable</li><li>0x0 (DISABLED): Disable</li></ul><p></p>
+<ul><li>0x1 (ENABLED): Enable</li><li>0x0 (DISABLED): Disable</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -255,7 +255,7 @@ If this bit is set to 0, the Block Count register is disabled, which is useful i
 <p>This bit enables the DMA functionality. If this bit is set to 1, a DMA operation begins when the Host Driver writes to the Command register. You can select one of the DMA modes by using DMA Select in the Host Control 1 register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLED): DMA Data transfer</li><li>0x0 (DISABLED): No data transfer or Non-DMA data transfer</li></ul><p></p>
+<ul><li>0x1 (ENABLED): DMA Data transfer</li><li>0x0 (DISABLED): No data transfer or Non-DMA data transfer</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -309,7 +309,7 @@ If this bit is set to 0, the Block Count register is disabled, which is useful i
 <p>Note:While issuing Abort CMD using CMD12/CMD52 or reset CMD using CMD0/CMD52, CMD_TYPE field shall be set to 0x3. In case CMD0 is used for initialization set as 0x0</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x3 (ABORT_CMD): Abort</li><li>0x2 (RESUME_CMD): Resume</li><li>0x1 (SUSPEND_CMD): Suspend</li><li>0x0 (NORMAL_CMD): Normal</li></ul><p></p>
+<ul><li>0x3 (ABORT_CMD): Abort</li><li>0x2 (RESUME_CMD): Resume</li><li>0x1 (SUSPEND_CMD): Suspend</li><li>0x0 (NORMAL_CMD): Normal</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -323,7 +323,7 @@ If this bit is set to 0, the Block Count register is disabled, which is useful i
 This bit is set to 0 in the following instances:</p>
 <ul><li>Command using the CMD line</li><li>Command with no data transfer but using busy signal on the DAT[0] line</li><li>Resume Command</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NO_DATA): No Data Present</li><li>0x1 (DATA): Data Present</li></ul><p></p>
+<ul><li>0x0 (NO_DATA): No Data Present</li><li>0x1 (DATA): Data Present</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -338,7 +338,7 @@ This bit is set to 0 in the following instances:</p>
 <p><em>Note</em>:</p>
 <ul><li>Index Check enable must be set to 0 for the command with no response, R2 response, R3 response and R4 response.</li><li>For the tuning command, this bit must always be set to enable the index check.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Disable</li><li>0x1 (ENABLED): Enable</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Disable</li><li>0x1 (ENABLED): Enable</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -353,7 +353,7 @@ This bit is set to 0 in the following instances:</p>
 <p><em>Note</em>:</p>
 <ul><li>CRC Check enable must be set to 0 for the command with no response, R3 response, and R4 response.</li><li>For the tuning command, this bit must always be set to 1 to enable the CRC check.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Disable</li><li>0x1 (ENABLED): Enable</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Disable</li><li>0x1 (ENABLED): Enable</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -366,7 +366,7 @@ This bit is set to 0 in the following instances:</p>
 <p>This bit distinguishes between a main command and a sub command.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (MAIN): Main Command</li><li>0x1 (SUB): Sub Command</li></ul><p></p>
+<ul><li>0x0 (MAIN): Main Command</li><li>0x1 (SUB): Sub Command</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -379,7 +379,7 @@ This bit is set to 0 in the following instances:</p>
 <p>This bit indicates the type of response expected from the card.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NO_RESP): No Response</li><li>0x1 (RESP_LEN_136): Response Length 136</li><li>0x2 (RESP_LEN_48): Response Length 48</li><li>0x3 (RESP_LEN_48B): Response Length 48; Check Busy after response</li></ul><p></p>
+<ul><li>0x0 (NO_RESP): No Response</li><li>0x1 (RESP_LEN_136): Response Length 136</li><li>0x2 (RESP_LEN_48): Response Length 48</li><li>0x3 (RESP_LEN_48B): Response Length 48; Check Busy after response</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -532,7 +532,7 @@ registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li><li>Size:32 bits</li><
 <p>This bit will always be 0 as UHS-II is not supported.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): UHS-II interface is not detected</li><li>0x1 (TRUE): UHS-II interface is detected</li></ul><p></p>
+<ul><li>0x0 (FALSE): UHS-II interface is not detected</li><li>0x1 (TRUE): UHS-II interface is detected</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -546,7 +546,7 @@ registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li><li>Size:32 bits</li><
 <p>This bit will always be 0 as UHS-II is not supported.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): UHS-II PHY is not initialized</li><li>0x1 (TRUE): UHS-II PHY is initialized</li></ul><p></p>
+<ul><li>0x0 (FALSE): UHS-II PHY is not initialized</li><li>0x1 (TRUE): UHS-II PHY is initialized</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -560,7 +560,7 @@ registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li><li>Size:32 bits</li><
 <p>This bit will always be 0 as UHS-II is not supported.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not in DORMANT state</li><li>0x1 (TRUE): In DORMANT state</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not in DORMANT state</li><li>0x1 (TRUE): In DORMANT state</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -574,7 +574,7 @@ registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li><li>Size:32 bits</li><
 <p>This bit is used to distinguish between a main command and a sub command status.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Main Command Status</li><li>0x1 (TRUE): Sub Command Status</li></ul><p></p>
+<ul><li>0x0 (FALSE): Main Command Status</li><li>0x1 (TRUE): Sub Command Status</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -588,7 +588,7 @@ registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li><li>Size:32 bits</li><
 <p>This bit is set if a command cannot be issued after setting the command register due to an error except the Auto CMD12 error.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No error for issuing a command</li><li>0x1 (TRUE): Command cannot be issued</li></ul><p></p>
+<ul><li>0x0 (FALSE): No error for issuing a command</li><li>0x1 (TRUE): Command cannot be issued</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -611,7 +611,7 @@ registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li><li>Size:32 bits</li><
 <p>This bit is used to check whether the host regulator voltage is stable for switching the voltage of UHS-I mode. This bit reflects the synchronized value of the<em>host_reg_vol_stable</em>signal.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Host Regulator Voltage is not stable</li><li>0x1 (TRUE): Host Regulator Voltage is stable</li></ul><p></p>
+<ul><li>0x0 (FALSE): Host Regulator Voltage is not stable</li><li>0x1 (TRUE): Host Regulator Voltage is stable</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -647,7 +647,7 @@ registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li><li>Size:32 bits</li><
 <p>This bit is supported only for memory and combo cards. This bit reflects the synchronized value of the<em>card_write_prot</em>signal.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Write protected</li><li>0x1 (TRUE): Write enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Write protected</li><li>0x1 (TRUE): Write enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -661,7 +661,7 @@ registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li><li>Size:32 bits</li><
 <p>This bit reflects the inverse synchronized value of the<em>card_detect_n</em>signal.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No card present</li><li>0x1 (TRUE): Card Present</li></ul><p></p>
+<ul><li>0x0 (FALSE): No card present</li><li>0x1 (TRUE): Card Present</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -675,7 +675,7 @@ registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li><li>Size:32 bits</li><
 <p>This bit indicates the stability of the Card Detect Pin Level. A card is not detected if this bit is set to 1 and the value of the CARD_INSERTED bit is 0.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Reset or Debouncing</li><li>0x1 (TRUE): No Card or Inserted</li></ul><p></p>
+<ul><li>0x0 (FALSE): Reset or Debouncing</li><li>0x1 (TRUE): No Card or Inserted</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -689,7 +689,7 @@ registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li><li>Size:32 bits</li><
 <p>This bit indicates whether a card has been inserted. The Host Controller debounces this signal so that Host Driver need not wait for it to stabilize.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Reset, Debouncing, or No card</li><li>0x1 (TRUE): Card Inserted</li></ul><p></p>
+<ul><li>0x0 (FALSE): Reset, Debouncing, or No card</li><li>0x1 (TRUE): Card Inserted</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -712,7 +712,7 @@ registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li><li>Size:32 bits</li><
 <p>This bit is used for non-DMA transfers. This bit is set if valid data exists in the Host buffer.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Read disable</li><li>0x1 (ENABLED): Read enable</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Read disable</li><li>0x1 (ENABLED): Read enable</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -726,7 +726,7 @@ registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li><li>Size:32 bits</li><
 <p>This bit is used for non-DMA transfers. This bit is set if space is available for writing data.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Write disable</li><li>0x1 (ENABLED): Write enable</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Write disable</li><li>0x1 (ENABLED): Write enable</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -740,7 +740,7 @@ registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li><li>Size:32 bits</li><
 <p>This bit indicates whether a read transfer is active for SD/eMMC mode.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (INACTIVE): No valid data</li><li>0x1 (ACTIVE): Transferring data</li></ul><p></p>
+<ul><li>0x0 (INACTIVE): No valid data</li><li>0x1 (ACTIVE): Transferring data</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -754,7 +754,7 @@ registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li><li>Size:32 bits</li><
 <p>This status indicates whether a write transfer is active for SD/eMMC mode.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (INACTIVE): No valid data</li><li>0x1 (ACTIVE): Transferring data</li></ul><p></p>
+<ul><li>0x0 (INACTIVE): No valid data</li><li>0x1 (ACTIVE): Transferring data</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -797,7 +797,7 @@ registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li><li>Size:32 bits</li><
 <p>For a command with busy, this status indicates whether the command executing busy is executing on an SD or eMMC bus.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (INACTIVE): DAT Line Inactive</li><li>0x1 (ACTIVE): DAT Line Active</li></ul><p></p>
+<ul><li>0x0 (INACTIVE): DAT Line Inactive</li><li>0x1 (ACTIVE): DAT Line Active</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -813,7 +813,7 @@ registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li><li>Size:32 bits</li><
 If this bit is set to 0, it indicates that the Host Controller can issue subsequent SD/eMMC commands.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (READY): Can issue command which used DAT line</li><li>0x1 (NOT_READY): Cannot issue command which used DAT line</li></ul><p></p>
+<ul><li>0x0 (READY): Can issue command which used DAT line</li><li>0x1 (NOT_READY): Cannot issue command which used DAT line</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -828,7 +828,7 @@ If this bit is set to 0, it indicates that the Host Controller can issue subsequ
 <p class="BLANK"></p>
 <ul><li>SD/eMMC mode: If this bit is set to 0, it indicates that the CMD line is not in use and the Host controller can issue an SD/eMMC command using the CMD line. This bit is set when the command register is written. This bit is cleared when the command response is received. This bit is not cleared by the response of auto CMD12/23 but cleared by the response of read/write command.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (READY): Host Controller is ready to issue a command</li><li>0x1 (NOT_READY): Host Controller is not ready to issue a command</li></ul><p></p>
+<ul><li>0x0 (READY): Host Controller is ready to issue a command</li><li>0x1 (NOT_READY): Host Controller is not ready to issue a command</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -860,7 +860,7 @@ If this bit is set to 0, it indicates that the Host Controller can issue subsequ
 <p>This bit selects a source for card detection. When the source for the card detection is switched, the interrupt must be disabled during the switching period.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (CARD_DT_TEST_LEVEL): Card Detect Test Level is selected (for test purpose)</li><li>0x0 (SDCD_PIN): SDCD# (card_detect_n signal) is selected (for normal use)</li></ul><p></p>
+<ul><li>0x1 (CARD_DT_TEST_LEVEL): Card Detect Test Level is selected (for test purpose)</li><li>0x0 (SDCD_PIN): SDCD# (card_detect_n signal) is selected (for normal use)</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -873,7 +873,7 @@ If this bit is set to 0, it indicates that the Host Controller can issue subsequ
 <p>This bit is enabled while the Card Detect Signal Selection is set to 1 and it indicates whether a card inserted or not.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (CARD_INSERTED): Card Inserted</li><li>0x0 (No_CARD): No Card</li></ul><p></p>
+<ul><li>0x1 (CARD_INSERTED): Card Inserted</li><li>0x0 (No_CARD): No Card</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -886,7 +886,7 @@ If this bit is set to 0, it indicates that the Host Controller can issue subsequ
 <p>This bit controls 8-bit bus width mode of embedded device.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (EIGHT_BIT): 8-bit Bus Width</li><li>0x0 (DEFAULT): Bus Width is selected by the Data Transfer Width</li></ul><p></p>
+<ul><li>0x1 (EIGHT_BIT): 8-bit Bus Width</li><li>0x0 (DEFAULT): Bus Width is selected by the Data Transfer Width</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -899,12 +899,12 @@ If this bit is set to 0, it indicates that the Host Controller can issue subsequ
 <p>This field is used to select the DMA type.</p>
 <p class="BLANK"></p>
 <p>When Host Version 4 Enable is 1 in Host Control 2 register:</p>
-<ul><li>0x0 : SDMA is selected</li><li>0x1 : Reserved</li><li>0x2 : ADMA2 is selected</li><li>0x3 : ADMA2 or ADMA3 is selected</li></ul><p></p>
+<ul><li>0x0 : SDMA is selected</li><li>0x1 : Reserved</li><li>0x2 : ADMA2 is selected</li><li>0x3 : ADMA2 or ADMA3 is selected</li></ul> 
 <p class="BLANK"></p>
 <p>When Host Version 4 Enable is 0 in Host Control 2 register:</p>
 <ul><li>0x0 : SDMA is selected</li><li>0x1 : Reserved</li><li>0x2 : 32-bit Address ADMA2 is selected</li><li>0x3 : 64-bit Address ADMA2 is selected</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (SDMA): SDMA is selected</li><li>0x1 (RSVD_BIT): Reserved</li><li>0x2 (ADMA2): ADMA2 is selected</li><li>0x3 (ADMA2_3): ADMA2 or ADMA3 is selected</li></ul><p></p>
+<ul><li>0x0 (SDMA): SDMA is selected</li><li>0x1 (RSVD_BIT): Reserved</li><li>0x2 (ADMA2): ADMA2 is selected</li><li>0x3 (ADMA2_3): ADMA2 or ADMA3 is selected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -921,7 +921,7 @@ Before setting this bit, the Host Driver checks the High Speed Support in the Ca
 <p><em>Note</em>: DWC_MSHC always outputs the<em>sd_cmd_out</em>and<em>sd_dat_out</em>lines at the rising edge of<em>cclk_tx</em>clock irrespective of this bit. Please refer the section<em>Connecting the Clock IO interface</em>in the Mobile Storage Host Controller user guide on clocking requirement for an SD/eMMC card.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (HIGH_SPEED): High Speed mode</li><li>0x0 (NORMAL_SPEED): Normal Speed mode</li></ul><p></p>
+<ul><li>0x1 (HIGH_SPEED): High Speed mode</li><li>0x0 (NORMAL_SPEED): Normal Speed mode</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -934,7 +934,7 @@ Before setting this bit, the Host Driver checks the High Speed Support in the Ca
 <p>For SD/eMMC mode, this bit selects the data transfer width of the Host Controller. The Host Driver sets it to match the data width of the SD/eMMC card.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (FOUR_BIT): 4-bit mode</li><li>0x0 (ONE_BIT): 1-bit mode</li></ul><p></p>
+<ul><li>0x1 (FOUR_BIT): 4-bit mode</li><li>0x0 (ONE_BIT): 1-bit mode</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -947,7 +947,7 @@ Before setting this bit, the Host Driver checks the High Speed Support in the Ca
 <p>This bit is used to caution the user not to remove the card while the SD card is being accessed. The value is reflected on the<em>led_control</em>signal.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (OFF): LED off</li><li>0x1 (ON): LED on</li></ul><p></p>
+<ul><li>0x0 (OFF): LED off</li><li>0x1 (ON): LED on</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -971,7 +971,7 @@ Before setting this bit, the Host Driver checks the High Speed Support in the Ca
 This bit is irrelevant for SD/eMMC card.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x7 (NOT_USED7): Not used</li><li>0x6 (NOT_USED6): Not used</li><li>0x5 (V_1_8): 1.8V</li><li>0x4 (V_1_2): Reserved for 1.2V</li><li>0x3 (RSVD3): Reserved</li><li>0x2 (RSVD2): Reserved</li><li>0x1 (RSVD1): Reserved</li><li>0x0 (NO_VDD2): VDD2 Not Supported</li></ul><p></p>
+<ul><li>0x7 (NOT_USED7): Not used</li><li>0x6 (NOT_USED6): Not used</li><li>0x5 (V_1_8): 1.8V</li><li>0x4 (V_1_2): Reserved for 1.2V</li><li>0x3 (RSVD3): Reserved</li><li>0x2 (RSVD2): Reserved</li><li>0x1 (RSVD1): Reserved</li><li>0x0 (NO_VDD2): VDD2 Not Supported</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -983,7 +983,7 @@ This bit is irrelevant for SD/eMMC card.</p>
 This bit is irrelevant for SD/eMMC card.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (OFF): Power off</li><li>0x1 (ON): Power on</li></ul><p></p>
+<ul><li>0x0 (OFF): Power off</li><li>0x1 (ON): Power on</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -997,12 +997,12 @@ This bit is irrelevant for SD/eMMC card.</p>
 If an unsupported voltage is selected, the Host System does not supply the SD Bus voltage. The value set in this field is available on the DWC_mshc output signal (sd_vdd1_sel), which is used by the voltage switching circuitry.</p>
 <p class="BLANK"></p>
 <p>SD Bus Voltage Select options:</p>
-<ul><li>0x7 : 3.3V(Typical)</li><li>0x6 : 3.0V(Typical)</li><li>0x5 : 1.8V(Typical) for Embedded</li><li>0x4 : 0x0 - Reserved</li></ul><p></p>
+<ul><li>0x7 : 3.3V(Typical)</li><li>0x6 : 3.0V(Typical)</li><li>0x5 : 1.8V(Typical) for Embedded</li><li>0x4 : 0x0 - Reserved</li></ul> 
 <p class="BLANK"></p>
 <p>eMMC Bus Voltage Select options:</p>
 <ul><li>0x7 : 3.3V(Typical)</li><li>0x6 : 1.8V(Typical)</li><li>0x5 : 1.2V(Typical)</li><li>0x4 : 0x0 - Reserved</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x7 (V_3_3): 3.3V (Typ.)</li><li>0x6 (V_3_0): 3.0V (Typ.)</li><li>0x5 (V_1_8): 1.8V (Typ.) for Embedded</li><li>0x4 (RSVD4): Reserved</li><li>0x3 (RSVD3): Reserved</li><li>0x2 (RSVD2): Reserved</li><li>0x1 (RSVD1): Reserved</li><li>0x0 (RSVD0): Reserved</li></ul><p></p>
+<ul><li>0x7 (V_3_3): 3.3V (Typ.)</li><li>0x6 (V_3_0): 3.0V (Typ.)</li><li>0x5 (V_1_8): 1.8V (Typ.) for Embedded</li><li>0x4 (RSVD4): Reserved</li><li>0x3 (RSVD3): Reserved</li><li>0x2 (RSVD2): Reserved</li><li>0x1 (RSVD1): Reserved</li><li>0x0 (RSVD0): Reserved</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1017,7 +1017,7 @@ If an unsupported voltage is selected, the Host System does not supply the SD Bu
 <p>In SD mode, if this bit is cleared, the Host Controller stops the SD Clock by clearing the SD_CLK_IN bit in the CLK_CTRL_R register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (OFF): Power off</li><li>0x1 (ON): Power on</li></ul><p></p>
+<ul><li>0x0 (OFF): Power off</li><li>0x1 (ON): Power on</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1053,7 +1053,7 @@ If an unsupported voltage is selected, the Host System does not supply the SD Bu
 <p>This bit is valid only in the 4-bit mode of an SDIO card and is used to select a sample point in the interrupt cycle. Setting to 1 enables interrupt detection at the block gap for a multiple block transfer.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLE): Disabled</li><li>0x1 (ENABLE): Enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLE): Disabled</li><li>0x1 (ENABLE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1066,7 +1066,7 @@ If an unsupported voltage is selected, the Host System does not supply the SD Bu
 <p>This bit is used to enable the read wait protocol to stop read data using DAT[2] line if the card supports read wait. Otherwise, the Host Controller has to stop the card clock to hold the read data.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLE): Disable Read Wait Control</li><li>0x1 (ENABLE): Enable Read Wait Control</li></ul><p></p>
+<ul><li>0x0 (DISABLE): Disable Read Wait Control</li><li>0x1 (ENABLE): Enable Read Wait Control</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1079,7 +1079,7 @@ If an unsupported voltage is selected, the Host System does not supply the SD Bu
 <p>This bit is used to restart the transaction, which was stopped using the Stop At Block Gap Request. The Host Controller automatically clears this bit when the transaction restarts. If stop at block gap request is set to 1, any write to this bit is ignored.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NO_AFFECT): No Affect</li><li>0x1 (RESTART): Restart</li></ul><p></p>
+<ul><li>0x0 (NO_AFFECT): No Affect</li><li>0x1 (RESTART): Restart</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1093,7 +1093,7 @@ If an unsupported voltage is selected, the Host System does not supply the SD Bu
 <p>This bit is used to stop executing read and write transactions at the next block gap for non-DMA, SDMA, and ADMA transfers.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (XFER): Transfer</li><li>0x1 (STOP): Stop</li></ul><p></p>
+<ul><li>0x0 (XFER): Transfer</li><li>0x1 (STOP): Stop</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1127,7 +1127,7 @@ setting the SD Bus Power to 1 in the Power Control Register, while a wakeup even
 <p>This bit enables wakeup event through Card Removal assertion in the Normal Interrupt Status register. For the SDIO card, Wake Up Support (FN_WUS) in the Card Information Structure (CIS) register does not affect this bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Disable</li><li>0x1 (ENABLED): Enable</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Disable</li><li>0x1 (ENABLED): Enable</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1140,7 +1140,7 @@ setting the SD Bus Power to 1 in the Power Control Register, while a wakeup even
 <p>This bit enables wakeup event through Card Insertion assertion in the Normal Interrupt Status register. FN_WUS (Wake Up Support) in CIS does not affect this bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Disable</li><li>0x1 (ENABLED): Enable</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Disable</li><li>0x1 (ENABLED): Enable</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1153,7 +1153,7 @@ setting the SD Bus Power to 1 in the Power Control Register, while a wakeup even
 <p>This bit enables wakeup event through a Card Interrupt assertion in the Normal Interrupt Status register. This bit can be set to 1 if FN_WUS (Wake Up Support) in CIS is set to 1.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Disable</li><li>0x1 (ENABLED): Enable</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Disable</li><li>0x1 (ENABLED): Enable</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1189,11 +1189,11 @@ Driver. If Preset Value Enable = 1, these bits are automatically set to a value 
 <p class="BLANK"></p>
 <p class="BLANK"></p>
 <p>10-bit Divided Clock Mode:</p>
-<ul><li>0x3FF : 1/2046 Divided clock</li><li>..........</li><li>N : 1/2N Divided Clock</li><li>..........</li><li>0x002 : 1/4 Divided Clock</li><li>0x001 : 1/2 Divided Clock</li><li>0x000 : Base clock (10MHz - 255 MHz)</li></ul><p></p>
+<ul><li>0x3FF : 1/2046 Divided clock</li><li>..........</li><li>N : 1/2N Divided Clock</li><li>..........</li><li>0x002 : 1/4 Divided Clock</li><li>0x001 : 1/2 Divided Clock</li><li>0x000 : Base clock (10MHz - 255 MHz)</li></ul> 
 <p class="BLANK"></p>
 <p class="BLANK"></p>
 <p>Programmable Clock Mode: Enables the Host System to select a fine grain SD clock frequency:</p>
-<ul><li>0x3FF : Base clock * M /1024</li><li>..........</li><li>N-1 : Base clock * M /N</li><li>..........</li><li>0x002 : Base clock * M /3</li><li>0x001 : Base clock * M /2</li><li>0x000 : Base clock * M</li></ul><p></p>
+<ul><li>0x3FF : Base clock * M /1024</li><li>..........</li><li>N-1 : Base clock * M /N</li><li>..........</li><li>0x002 : Base clock * M /3</li><li>0x001 : Base clock * M /2</li><li>0x000 : Base clock * M</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1217,7 +1217,7 @@ Driver. If Preset Value Enable = 1, these bits are automatically set to a value 
 automatically set to a value specified in one of the Preset Value registers. The value is reflected on the<em>card_clk_gen_sel</em>signal.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Divided Clock Mode</li><li>0x1 (TRUE): Programmable Clock Mode</li></ul><p></p>
+<ul><li>0x0 (FALSE): Divided Clock Mode</li><li>0x1 (TRUE): Programmable Clock Mode</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1241,7 +1241,7 @@ automatically set to a value specified in one of the Preset Value registers. The
 <p>Note:If this bit is not used to active the PLL when Host Version 4 Enable = 1, it is recommended to set this bit to '1' .</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): PLL is in low power mode</li><li>0x1 (TRUE): PLL is enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): PLL is in low power mode</li><li>0x1 (TRUE): PLL is enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1255,7 +1255,7 @@ automatically set to a value specified in one of the Preset Value registers. The
 The value is reflected on the<em>clk2card_on</em>pin.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Disable providing SDCLK/RCLK</li><li>0x1 (TRUE): Enable providing SDCLK/RCLK</li></ul><p></p>
+<ul><li>0x0 (FALSE): Disable providing SDCLK/RCLK</li><li>0x1 (TRUE): Enable providing SDCLK/RCLK</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1270,7 +1270,7 @@ This bit reflects the synchronized value of the<em>intclk_stable</em>signal afte
 the synchronized value of the<em>card_clk_stable</em>signal after the PLL Enable bit is set to 1.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not Ready</li><li>0x1 (TRUE): Ready</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not Ready</li><li>0x1 (TRUE): Ready</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1287,7 +1287,7 @@ must stop its internal clock to enter a very low power state. However, registers
 <p>Note:If this bit is not used to control the internal clock (base clock and manager clock), it is recommended to set this bit to '1' .</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Stop</li><li>0x1 (TRUE): Oscillate</li></ul><p></p>
+<ul><li>0x0 (FALSE): Stop</li><li>0x1 (TRUE): Oscillate</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1317,7 +1317,7 @@ initializing the Host Controller.</li><li>Size:8 bits</li><li>Offset:0x2e</li></
 <p>This value determines the interval by which DAT line timeouts are detected. The Timeout clock frequency is generated by dividing the base clock TMCLK value by this value. When setting this
 register, prevent inadvertent timeout events by clearing the Data Timeout Error Status Enable (in the Error Interrupt Status Enable register).
 The values for these bits are:</p>
-<ul><li>0xF : Reserved</li><li>0xE : TMCLK x 2^27</li><li>.........</li><li>0x1 : TMCLK x 2^14</li><li>0x0 : TMCLK x 2^13</li></ul><p></p>
+<ul><li>0xF : Reserved</li><li>0xE : TMCLK x 2^27</li><li>.........</li><li>0x1 : TMCLK x 2^14</li><li>0x0 : TMCLK x 2^13</li></ul> 
 <p class="BLANK"></p>
 <p>Note:During a boot operating in an eMMC mode, an application must configure the boot data timeout value (approximately 1 sec) in this bit.</p>
 <p>Value After Reset:0x0</p>
@@ -1354,10 +1354,10 @@ The values for these bits are:</p>
 <p>This bit is used in SD/eMMC mode and it resets only a part of the data circuit and the DMA circuit is also reset.</p>
 <p class="BLANK"></p>
 <p>The following registers and bits are cleared by this bit:</p>
-<ul><li>Buffer Data Port register<ul><li>Buffer is cleared and initialized.</li></ul></li><li>Present state register<ul><li>Buffer Read Enable</li><li>Buffer Write Enable</li><li>Read Transfer Active</li><li>Write Transfer Active</li><li>DAT Line Active</li><li>Command Inhibit (DAT)</li></ul></li><li>Block Gap Control register<ul><li>Continue Request</li><li>Stop At Block Gap Request</li></ul></li><li>Normal Interrupt status register<ul><li>Buffer Read Ready</li><li>Buffer Write Ready</li><li>DMA Interrupt</li><li>Block Gap Event</li><li>Transfer Complete</li></ul></li></ul><p></p>
+<ul><li>Buffer Data Port register<ul><li>Buffer is cleared and initialized.</li></ul></li><li>Present state register<ul><li>Buffer Read Enable</li><li>Buffer Write Enable</li><li>Read Transfer Active</li><li>Write Transfer Active</li><li>DAT Line Active</li><li>Command Inhibit (DAT)</li></ul></li><li>Block Gap Control register<ul><li>Continue Request</li><li>Stop At Block Gap Request</li></ul></li><li>Normal Interrupt status register<ul><li>Buffer Read Ready</li><li>Buffer Write Ready</li><li>DMA Interrupt</li><li>Block Gap Event</li><li>Transfer Complete</li></ul></li></ul> 
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Work</li><li>0x1 (TRUE): Reset</li></ul><p></p>
+<ul><li>0x0 (FALSE): Work</li><li>0x1 (TRUE): Reset</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1373,7 +1373,7 @@ The values for these bits are:</p>
 <p>The following registers and bits are cleared by this bit:</p>
 <ul><li>Present State register : Command Inhibit (CMD) bit</li><li>Normal Interrupt Status register : Command Complete bit</li><li>Error Interrupt Status : Response error statuses related to Command Inhibit (CMD) bit</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Work</li><li>0x1 (TRUE): Reset</li></ul><p></p>
+<ul><li>0x0 (FALSE): Work</li><li>0x1 (TRUE): Reset</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1387,7 +1387,7 @@ The values for these bits are:</p>
 <p>This reset affects the entire Host Controller except for the card detection circuit. During its initialization, the Host Driver sets this bit to 1 to reset the Host Controller. All registers are reset except the capabilities register. If this bit is set to 1, the Host Driver must issue reset command and reinitialize the card.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Work</li><li>0x1 (TRUE): Reset</li></ul><p></p>
+<ul><li>0x0 (FALSE): Work</li><li>0x1 (TRUE): Reset</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1437,7 +1437,7 @@ The values for these bits are:</p>
 <p>If any of the bits in the Error Interrupt Status register are set, then this bit is set.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No Error</li><li>0x1 (TRUE): Error</li></ul><p></p>
+<ul><li>0x0 (FALSE): No Error</li><li>0x1 (TRUE): Error</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1451,7 +1451,7 @@ The values for these bits are:</p>
 <p>This status is set if Command Queuing/Crypto related event has occurred in eMMC/SD mode. Read CQHCI's CQIS/CRNQIS register for more details.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No Event</li><li>0x1 (TRUE): Command Queuing Event is detected</li></ul><p></p>
+<ul><li>0x0 (FALSE): No Event</li><li>0x1 (TRUE): Command Queuing Event is detected</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1465,7 +1465,7 @@ The values for these bits are:</p>
 <p>This status is set when R[14] of response register is set to 1 and Response Type R1/R5 is set to 0 in Transfer Mode register. This interrupt is used with response check function.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No Event</li><li>0x1 (TRUE): FX Event is detected</li></ul><p></p>
+<ul><li>0x0 (FALSE): No Event</li><li>0x1 (TRUE): FX Event is detected</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1523,7 +1523,7 @@ The values for these bits are:</p>
 <p>This bit reflects the synchronized value of:</p>
 <ul><li>DAT[1] Interrupt Input for SD Mode</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No Card Interrupt</li><li>0x1 (TRUE): Generate Card Interrupt</li></ul><p></p>
+<ul><li>0x0 (FALSE): No Card Interrupt</li><li>0x1 (TRUE): Generate Card Interrupt</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1537,7 +1537,7 @@ The values for these bits are:</p>
 <p>This bit is set if the Card Inserted in the Present State register changes from 1 to 0.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Card state stable or Debouncing</li><li>0x1 (TRUE): Card Removed</li></ul><p></p>
+<ul><li>0x0 (FALSE): Card state stable or Debouncing</li><li>0x1 (TRUE): Card Removed</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1551,7 +1551,7 @@ The values for these bits are:</p>
 <p>This bit is set if the Card Inserted in the Present State register changes from 0 to 1.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Card state stable or Debouncing</li><li>0x1 (TRUE): Card Inserted</li></ul><p></p>
+<ul><li>0x0 (FALSE): Card state stable or Debouncing</li><li>0x1 (TRUE): Card Inserted</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1565,7 +1565,7 @@ The values for these bits are:</p>
 <p>This bit is set if the Buffer Read Enable changes from 0 to 1.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not ready to read buffer</li><li>0x1 (TRUE): Ready to read buffer</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not ready to read buffer</li><li>0x1 (TRUE): Ready to read buffer</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1579,7 +1579,7 @@ The values for these bits are:</p>
 <p>This bit is set if the Buffer Write Enable changes from 0 to 1.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not ready to write buffer</li><li>0x1 (TRUE): Ready to write buffer</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not ready to write buffer</li><li>0x1 (TRUE): Ready to write buffer</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1594,7 +1594,7 @@ The values for these bits are:</p>
 table, the Host controller generates this interrupt. This interrupt is not generated after a Transfer Complete.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No DMA Interrupt</li><li>0x1 (TRUE): DMA Interrupt is generated</li></ul><p></p>
+<ul><li>0x0 (FALSE): No DMA Interrupt</li><li>0x1 (TRUE): DMA Interrupt is generated</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1608,7 +1608,7 @@ table, the Host controller generates this interrupt. This interrupt is not gener
 <p>This bit is set when both read/write transaction is stopped at block gap due to a Stop at Block Gap Request.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No Block Gap Event</li><li>0x1 (TRUE): Transaction stopped at block gap</li></ul><p></p>
+<ul><li>0x0 (FALSE): No Block Gap Event</li><li>0x1 (TRUE): Transaction stopped at block gap</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1622,7 +1622,7 @@ table, the Host controller generates this interrupt. This interrupt is not gener
 <p>This bit is set when a read/write transfer and a command with status busy is completed.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not complete</li><li>0x1 (TRUE): Command execution is completed</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not complete</li><li>0x1 (TRUE): Command execution is completed</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1638,7 +1638,7 @@ table, the Host controller generates this interrupt. This interrupt is not gener
 <p>This interrupt is not generated when the Response Interrupt Disable in Transfer Mode Register is set to 1.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No command complete</li><li>0x1 (TRUE): Command Complete</li></ul><p></p>
+<ul><li>0x0 (FALSE): No command complete</li><li>0x1 (TRUE): Command Complete</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1713,12 +1713,12 @@ and writing to 0 retains the bit unchanged. Signals defined in this register can
 <td>R/W1C</td>
 <td><p>Boot Acknowledgement Error</p>
 <p class="BLANK"></p>
-<p></p>
+ 
 <p class="BLANK"></p>
 <p>In SD mode, this bit is irrelevant.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul><p></p>
+<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1732,7 +1732,7 @@ and writing to 0 retains the bit unchanged. Signals defined in this register can
 <p>Host Controller Version 4.00 supports response error check function to avoid overhead of response error check by Host Driver during DMA execution. If Response Error Check Enable is set to 1 in the Transfer Mode register, Host Controller Checks R1 or R5 response. If an error is detected in a response, this bit is set to 1. This is applicable in SD/eMMC mode.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul><p></p>
+<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1746,7 +1746,7 @@ and writing to 0 retains the bit unchanged. Signals defined in this register can
 <p>This bit is set when an unrecoverable error is detected in a tuning circuit except during the tuning procedure (occurrence of an error during tuning procedure is indicated by Sampling Clock Select in the Host Control 2 register). By detecting Tuning Error, Host Driver needs to terminate a command executing and perform tuning. To reset tuning circuit, Sampling Clock Select is set to 0 before executing tuning procedure. The Tuning Error is higher priority than the other error interrupts generated during data transfer. By detecting Tuning Error, the Host Driver must discard data transferred by a current read/write command and retry data transfer after the Host Controller retrieved from the tuning circuit error. This is applicable in SD/eMMC mode.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul><p></p>
+<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1765,7 +1765,7 @@ and writing to 0 retains the bit unchanged. Signals defined in this register can
 <p>The Host Controller generates this Interrupt when it detects an invalid descriptor data (Valid=0) at the ST_FDS state. ADMA Error State in the ADMA Error Status indicates that an error has occurred in ST_FDS state. The Host Driver may find that Valid bit is not set at the error descriptor.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul><p></p>
+<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1779,7 +1779,7 @@ and writing to 0 retains the bit unchanged. Signals defined in this register can
 <p>This error status is used by Auto CMD12 and Auto CMD23 in SD/eMMC mode. This bit is set when detecting that any of the bits D00 to D05 in Auto CMD Error Status register has changed from 0 to 1. D07 is effective in case of Auto CMD12. Auto CMD Error Status register is valid while this bit is set to 1 and may be cleared by clearing of this bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul><p></p>
+<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1796,7 +1796,7 @@ power to the SD card due to some failure. A reading of 0 for this bit means that
 detect the current limit. DWC_mshc Host Controller does not support this function, this bit is always set to 0.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Power Fail</li></ul><p></p>
+<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Power Fail</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1810,7 +1810,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>This error occurs in SD/eMMC mode either when detecting 0 at the end bit position of read data that uses the DAT line or at the end bit position of the CRC status.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul><p></p>
+<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1824,7 +1824,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>This error occurs in SD/eMMC mode when detecting CRC error when transferring read data which uses the DAT line, when detecting the Write CRC status having a value of other than 010 or when write CRC status timeout.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul><p></p>
+<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1836,10 +1836,10 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Data Timeout Error</p>
 <p class="BLANK"></p>
 <p>This bit is set in SD/eMMC mode when detecting one of the following timeout conditions:</p>
-<ul><li>Busy timeout for R1b, R5b type</li><li>Busy timeout after Write CRC status</li><li>Write CRC Status timeout</li><li>Read Data timeout</li></ul><p></p>
+<ul><li>Busy timeout for R1b, R5b type</li><li>Busy timeout after Write CRC status</li><li>Write CRC Status timeout</li><li>Read Data timeout</li></ul> 
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Time out</li></ul><p></p>
+<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Time out</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1853,7 +1853,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>This bit is set if a Command Index error occurs in the command response in SD/eMMC mode.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul><p></p>
+<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1867,7 +1867,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>This bit is set when detecting that the end bit of a command response is 0 in SD/eMMC mode.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): End Bit error generated</li></ul><p></p>
+<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): End Bit error generated</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1881,7 +1881,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>Command CRC Error is generated in SD/eMMC mode for following two cases.</p>
 <ul><li>If a response is returned and the Command Timeout Error is set to 0 (indicating no timeout), this bit is set to 1 when detecting a CRC error in the command response.</li><li>The Host Controller detects a CMD line conflict by monitoring the CMD line when a command is issued. If the Host Controller drives the CMD line to 1 level, but detects 0 level on the CMD line at the next SD clock edge, then the Host Controller terminates the command (stop driving CMD line) and set this bit to 1. The Command Timeout Error is also set to 1 to distinguish a CMD line conflict.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): CRC error generated</li></ul><p></p>
+<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): CRC error generated</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1895,7 +1895,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>In SD/eMMC Mode, this bit is set only if no response is returned within 64 SD clock cycles from the end bit of the command. If the Host Controller detects a CMD line conflict, along with Command CRC Error bit, this bit is set to 1, without waiting for 64 SD/eMMC card clock cycles.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Time out</li></ul><p></p>
+<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Time out</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1951,7 +1951,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>CQE Event Status Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1964,7 +1964,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>This bit is added from Version 4.10.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1975,7 +1975,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Re-Tuning Event (UHS-I only) Status Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1988,7 +1988,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>If this bit is set to 0, the Host Controller clears the interrupt request to the System. The Host Driver may clear this bit before servicing the INT_C and may set this bit again after all interrupt requests to INT_C pin are cleared to prevent inadvertent interrupts.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2001,7 +2001,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>If this bit is set to 0, the Host Controller clears the interrupt request to the System. The Host Driver may clear this bit before servicing the INT_B and may set this bit again after all interrupt requests to INT_B pin are cleared to prevent inadvertent interrupts.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2014,7 +2014,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>If this bit is set to 0, the Host Controller clears the interrupt request to the System. The Host Driver may clear this bit before servicing the INT_A and may set this bit again after all interrupt requests to INT_A pin are cleared to prevent inadvertent interrupts.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2029,7 +2029,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>By setting this bit to 0, interrupt input must be masked by implementation so that the interrupt input is not affected by external signal in any state (for example, floating).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2040,7 +2040,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Card Removal Status Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2051,7 +2051,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Card Insertion Status Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2062,7 +2062,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Buffer Read Ready Status Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2073,7 +2073,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Buffer Write Ready Status Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2084,7 +2084,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>DMA Interrupt Status Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2095,7 +2095,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Block Gap Event Status Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2106,7 +2106,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Transfer Complete Status Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2117,7 +2117,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Command Complete Status Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2164,7 +2164,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>The 15th bit of Error Interrupt Status Enable register is reserved.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2175,7 +2175,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>The 14th bit of Error Interrupt Status Enable register is reserved.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2186,7 +2186,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>The 13th bit of Error Interrupt Status Enable register is reserved.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2199,7 +2199,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>Setting this bit to 1 enables setting of Boot Acknowledgement Error in Error Interrupt Status register (ERROR_INT_STAT_R).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2210,7 +2210,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Response Error Status Enable (SD Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2221,7 +2221,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Tuning Error Status Enable (UHS-I Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2232,7 +2232,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>ADMA Error Status Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2243,7 +2243,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Auto CMD Error Status Enable (SD/eMMC Mode only).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2254,7 +2254,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Current Limit Error Status Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2265,7 +2265,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Data End Bit Error Status Enable (SD/eMMC Mode only).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2276,7 +2276,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Data CRC Error Status Enable (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2287,7 +2287,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Data Timeout Error Status Enable (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2298,7 +2298,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Command Index Error Status Enable (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2309,7 +2309,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Command End Bit Error Status Enable (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2320,7 +2320,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Command CRC Error Status Enable (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2331,7 +2331,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Command Timeout Error Status Enable (SD/eMMC Mode only).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2386,7 +2386,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Command Queuing Engine Event Signal Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2397,7 +2397,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>FX Event Signal Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2408,7 +2408,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Re-Tuning Event (UHS-I only) Signal Enable.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2419,7 +2419,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>INT_C (Embedded) Signal Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2430,7 +2430,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>INT_B (Embedded) Signal Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2441,7 +2441,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>INT_A (Embedded) Signal Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2452,7 +2452,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Card Interrupt Signal Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2463,7 +2463,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Card Removal Signal Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2474,7 +2474,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Card Insertion Signal Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2485,7 +2485,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Buffer Read Ready Signal Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2496,7 +2496,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Buffer Write Ready Signal Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2507,7 +2507,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>DMA Interrupt Signal Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2518,7 +2518,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Block Gap Event Signal Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2529,7 +2529,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Transfer Complete Signal Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2540,7 +2540,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Command Complete Signal Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2587,7 +2587,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>The 16th bit of Error Interrupt Signal Enable is reserved.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2598,7 +2598,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>The 15th bit of Error Interrupt Signal Enable is reserved.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2609,7 +2609,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>The 14th bit of Error Interrupt Signal Enable is reserved.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2622,7 +2622,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>Setting this bit to 1 enables generating interrupt signal when Boot Acknowledgement Error in Error Interrupt Status register is set.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2633,7 +2633,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Response Error Signal Enable (SD Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2644,7 +2644,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Tuning Error Signal Enable (UHS-I Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2655,7 +2655,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>ADMA Error Signal Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2666,7 +2666,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Auto CMD Error Signal Enable (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2677,7 +2677,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Current Limit Error Signal Enable</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2688,7 +2688,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Data End Bit Error Signal Enable (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2699,7 +2699,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Data CRC Error Signal Enable (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2710,7 +2710,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Data Timeout Error Signal Enable (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2721,7 +2721,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Command Index Error Signal Enable (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul><p></p>
+<ul><li>0x0 (FALSE): No error</li><li>0x1 (TRUE): Error</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2732,7 +2732,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Command End Bit Error Signal Enable (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2743,7 +2743,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Command CRC Error Signal Enable (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2754,7 +2754,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <td><p>Command Timeout Error Signal Enable (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Masked</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2800,7 +2800,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>This bit is set to 0 when Auto CMD Error is generated by Auto CMD23.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (TRUE): Not Issued</li><li>0x0 (FALSE): No Error</li></ul><p></p>
+<ul><li>0x1 (TRUE): Not Issued</li><li>0x0 (FALSE): No Error</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2823,7 +2823,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>This bit is set when Response Error Check Enable in the Transfer Mode register is set to 1 and an error is detected in R1 response of either Auto CMD12 or CMD13. This status is ignored if any bit between D00 to D04 is set to 1.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (TRUE): Error</li><li>0x0 (FALSE): No Error</li></ul><p></p>
+<ul><li>0x1 (TRUE): Error</li><li>0x0 (FALSE): No Error</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2837,7 +2837,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>This bit is set if the command index error occurs in response to a command.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (TRUE): Error</li><li>0x0 (FALSE): No Error</li></ul><p></p>
+<ul><li>0x1 (TRUE): Error</li><li>0x0 (FALSE): No Error</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2851,7 +2851,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>This bit is set when detecting that the end bit of command response is 0.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (TRUE): End Bit Error Generated</li><li>0x0 (FALSE): No Error</li></ul><p></p>
+<ul><li>0x1 (TRUE): End Bit Error Generated</li><li>0x0 (FALSE): No Error</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2865,7 +2865,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>This bit is set when detecting a CRC error in the command response.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (TRUE): CRC Error Generated</li><li>0x0 (FALSE): No Error</li></ul><p></p>
+<ul><li>0x1 (TRUE): CRC Error Generated</li><li>0x0 (FALSE): No Error</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2881,7 +2881,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>If this bit is set to 1, error status bits (D04-D01) are meaningless.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (TRUE): Time out</li><li>0x0 (FALSE): No Error</li></ul><p></p>
+<ul><li>0x1 (TRUE): Time out</li><li>0x0 (FALSE): No Error</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2897,7 +2897,7 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
 <p>This bit is set to 0 when Auto CMD Error is generated by Auto CMD23.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (TRUE): Not Executed</li><li>0x0 (FALSE): Executed</li></ul><p></p>
+<ul><li>0x1 (TRUE): Not Executed</li><li>0x0 (FALSE): Executed</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2944,7 +2944,7 @@ Select) and the driver strength selection are performed by the controller. These
 <p>Note:For more information, see the FAQ on Preset Register in the DWC_mshc Databook.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): SDCLK and Driver Strength are controlled by Host Driver</li><li>0x1 (TRUE): Automatic Selection by Preset Value are Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): SDCLK and Driver Strength are controlled by Host Driver</li><li>0x1 (TRUE): Automatic Selection by Preset Value are Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2957,7 +2957,7 @@ Select) and the driver strength selection are performed by the controller. These
 <p>This bit can be set if a card supports asynchronous interrupts and Asynchronous Interrupt Support is set to 1 in the Capabilities register.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Disabled</li><li>0x1 (TRUE): Enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Disabled</li><li>0x1 (TRUE): Enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2970,7 +2970,7 @@ Select) and the driver strength selection are performed by the controller. These
 <p>This bit is effective when Host Version 4 Enable is set to 1.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): 32 bits addressing</li><li>0x1 (TRUE): 64 bits addressing</li></ul><p></p>
+<ul><li>0x0 (FALSE): 32 bits addressing</li><li>0x1 (TRUE): 64 bits addressing</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2983,12 +2983,12 @@ Select) and the driver strength selection are performed by the controller. These
 <p>This bit selects either Version 3.00 compatible mode or Version 4 mode.</p>
 <p class="BLANK"></p>
 <p>Functions of following fields are modified for Host Version 4 mode:</p>
-<ul><li>SDMA Address: SDMA uses ADMA System Address (05Fh-058h) instead of SDMA System Address register (003h-000h)</li><li>ADMA2/ADMA3 selection: ADMA3 is selected by DMA select in Host Control 1 register</li><li>64-bit ADMA Descriptor Size: 128-bit descriptor is used instead of 96-bit descriptor when 64-bit Addressing is set to 1</li><li>Selection of 32-bit/64-bit System Addressing: Either 32-bit or 64-bit system addressing is selected by 64-bit Addressing bit in this register</li><li>32-bit Block Count: SDMA System Address register (003h-000h) is modified to 32-bit Block Count register</li></ul><p></p>
+<ul><li>SDMA Address: SDMA uses ADMA System Address (05Fh-058h) instead of SDMA System Address register (003h-000h)</li><li>ADMA2/ADMA3 selection: ADMA3 is selected by DMA select in Host Control 1 register</li><li>64-bit ADMA Descriptor Size: 128-bit descriptor is used instead of 96-bit descriptor when 64-bit Addressing is set to 1</li><li>Selection of 32-bit/64-bit System Addressing: Either 32-bit or 64-bit system addressing is selected by 64-bit Addressing bit in this register</li><li>32-bit Block Count: SDMA System Address register (003h-000h) is modified to 32-bit Block Count register</li></ul> 
 <p class="BLANK"></p>
 <p>Note:It is recommended not to program ADMA3 Integrated Descriptor Address registers, and Command Queuing registers (if applicable) while operating in Host version less than 4 mode (Host Version 4 Enable = 0).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Version 3.00 compatible mode</li><li>0x1 (TRUE): Version 4 mode</li></ul><p></p>
+<ul><li>0x0 (FALSE): Version 3.00 compatible mode</li><li>0x1 (TRUE): Version 4 mode</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3001,7 +3001,7 @@ Select) and the driver strength selection are performed by the controller. These
 <p>If the card supports CMD23, this bit is set to 1. This bit is used to select Auto CMD23 or Auto CMD12 for ADMA3 data transfer.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Auto CMD23 is disabled</li><li>0x1 (TRUE): Auto CMD23 is enabled</li></ul><p></p>
+<ul><li>0x0 (FALSE): Auto CMD23 is disabled</li><li>0x1 (TRUE): Auto CMD23 is enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3014,7 +3014,7 @@ Select) and the driver strength selection are performed by the controller. These
 <p>This bit selects ADMA2 Length mode to be either 16-bit or 26-bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): 16-bit Data Length Mode</li><li>0x1 (TRUE): 26-bit Data Length Mode</li></ul><p></p>
+<ul><li>0x0 (FALSE): 16-bit Data Length Mode</li><li>0x1 (TRUE): 26-bit Data Length Mode</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3035,7 +3035,7 @@ Select) and the driver strength selection are performed by the controller. These
 <p>This bit is used to enable the UHS-II Interface (Not supported). MSHC supports only SD/eMMC interface (value 0).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): SD/eMMC Interface Enabled</li><li>0x1 (TRUE): UHS-II Interface Enabled - Not supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): SD/eMMC Interface Enabled</li><li>0x1 (TRUE): UHS-II Interface Enabled - Not supported</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3048,7 +3048,7 @@ Select) and the driver strength selection are performed by the controller. These
 <p>This bit is used by the Host Controller to select the sampling clock in SD/eMMC mode to receive CMD and DAT. This bit is set by the tuning procedure and is valid after the completion of tuning (when Execute Tuning is cleared). Setting this bit to 1 means that tuning is completed successfully and setting this bit to 0 means that tuning has failed. The value is reflected on the sample_cclk_sel pin.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Fixed clock is used to sample data</li><li>0x1 (TRUE): Tuned clock is used to sample data</li></ul><p></p>
+<ul><li>0x0 (FALSE): Fixed clock is used to sample data</li><li>0x1 (TRUE): Tuned clock is used to sample data</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3062,7 +3062,7 @@ Select) and the driver strength selection are performed by the controller. These
 <p>This bit is set to 1 to start the tuning procedure in UHS-I/eMMC speed modes and this bit is automatically cleared when tuning procedure is completed.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not Tuned or Tuning completed</li><li>0x1 (TRUE): Execute Tuning</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not Tuned or Tuning completed</li><li>0x1 (TRUE): Execute Tuning</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3076,7 +3076,7 @@ Select) and the driver strength selection are performed by the controller. These
 <p>This bit is used to select the Host Controller output driver in 1.8V signaling UHS-I/eMMC speed modes. The bit depends on setting of Preset Value Enable. The value is reflected on the uhs1_drv_sth pin.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (TYPEB): Driver TYPEB is selected</li><li>0x1 (TYPEA): Driver TYPEA is selected</li><li>0x2 (TYPEC): Driver TYPEC is selected</li><li>0x3 (TYPED): Driver TYPED is selected</li></ul><p></p>
+<ul><li>0x0 (TYPEB): Driver TYPEB is selected</li><li>0x1 (TYPEA): Driver TYPEA is selected</li><li>0x2 (TYPEC): Driver TYPEC is selected</li><li>0x3 (TYPED): Driver TYPED is selected</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3093,7 +3093,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>Note:This bit must be set for all UHS-I speed modes (SDR12/SDR25/SDR50/SDR104/DDR50).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (V_3_3): 3.3V Signalling</li><li>0x1 (V_1_8): 1.8V Signalling</li></ul><p></p>
+<ul><li>0x0 (V_3_3): 3.3V Signalling</li><li>0x1 (V_1_8): 1.8V Signalling</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -3110,7 +3110,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>UHS Mode (SD mode only):</p>
 <ul><li>0x0: SDR12</li><li>0x1: SDR25</li><li>0x2: SDR50</li><li>0x3: SDR104</li><li>0x4: DDR50</li><li>0x5: Reserved</li><li>0x6: Reserved</li><li>0x7: Reserved</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (SDR12): SDR12/Legacy</li><li>0x1 (SDR25): SDR25/High Speed SDR</li><li>0x2 (SDR50): SDR50</li><li>0x3 (SDR104): SDR104/HS200</li><li>0x4 (DDR50): DDR50/High Speed DDR</li><li>0x5 (RSVD5): Reserved</li><li>0x6 (RSVD6): Reserved</li><li>0x7 (UHS2): HS400</li></ul><p></p>
+<ul><li>0x0 (SDR12): SDR12/Legacy</li><li>0x1 (SDR25): SDR25/High Speed SDR</li><li>0x2 (SDR50): SDR50</li><li>0x3 (SDR104): SDR104/HS200</li><li>0x4 (DDR50): DDR50/High Speed DDR</li><li>0x5 (RSVD5): Reserved</li><li>0x6 (RSVD6): Reserved</li><li>0x7 (UHS2): HS400</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3163,7 +3163,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>These bits indicate usage of a slot by a specific Host System.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (REMOVABLE_SLOT): Removable Card Slot</li><li>0x1 (EMBEDDED_SLOT): Embedded Slot for one Device</li><li>0x2 (SHARED_SLOT): Shared Bus Slot (SD mode)</li><li>0x3 (UHS2_EMBEDDED_SLOT): Reserved</li></ul><p></p>
+<ul><li>0x0 (REMOVABLE_SLOT): Removable Card Slot</li><li>0x1 (EMBEDDED_SLOT): Embedded Slot for one Device</li><li>0x2 (SHARED_SLOT): Shared Bus Slot (SD mode)</li><li>0x3 (UHS2_EMBEDDED_SLOT): Reserved</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3174,7 +3174,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <td><p>Asynchronous Interrupt Support (SD Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Asynchronous Interrupt Not Supported</li><li>0x1 (TRUE): Asynchronous Interrupt Supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): Asynchronous Interrupt Not Supported</li><li>0x1 (TRUE): Asynchronous Interrupt Supported</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3191,7 +3191,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>If this bit is set to 1, 64-bit ADMA2 with using 96-bit Descriptor can be enabled by setting Host Version 4 Enable (<em>HOST_VER4_ENABLE</em>= 0) and DMA select (<em>DMA_SEL</em>= 11b).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): 64-bit System Address for V3 is Not Supported</li><li>0x1 (TRUE): 64-bit System Address for V3 is Supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): 64-bit System Address for V3 is Not Supported</li><li>0x1 (TRUE): 64-bit System Address for V3 is Supported</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3207,7 +3207,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 (<em>HOST_VER4_ENABLE</em>= 1) and by setting 64-bit Addressing (<em>ADDRESSING</em>=1) in the Host Control 2 register. SDMA can be used and ADMA2 uses 128-bit Descriptor.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): 64-bit System Address for V4 is Not Supported</li><li>0x1 (TRUE): 64-bit System Address for V4 is Supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): 64-bit System Address for V4 is Not Supported</li><li>0x1 (TRUE): 64-bit System Address for V4 is Supported</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3218,7 +3218,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <td><p>Voltage Support for 1.8V</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): 1.8V Not Supported</li><li>0x1 (TRUE): 1.8V Supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): 1.8V Not Supported</li><li>0x1 (TRUE): 1.8V Supported</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3229,7 +3229,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <td><p>Voltage Support for SD 3.0V or Embedded 1.2V</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): SD 3.0V or Embedded 1.2V Not Supported</li><li>0x1 (TRUE): SD 3.0V or Embedded Supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): SD 3.0V or Embedded 1.2V Not Supported</li><li>0x1 (TRUE): SD 3.0V or Embedded Supported</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3240,7 +3240,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <td><p>Voltage Support for 3.3V</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): 3.3V Not Supported</li><li>0x1 (TRUE): 3.3V Supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): 3.3V Not Supported</li><li>0x1 (TRUE): 3.3V Supported</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3253,7 +3253,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>This bit indicates whether the Host Controller supports Suspend/Resume functionality. If this bit is 0, the Host Driver does not issue either Suspend or Resume commands because the Suspend and Resume mechanism is not supported.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not Supported</li><li>0x1 (TRUE): Supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not Supported</li><li>0x1 (TRUE): Supported</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3266,7 +3266,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>This bit indicates whether the Host Controller is capable of using SDMA to transfer data between the system memory and the Host Controller directly.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): SDMA not Supported</li><li>0x1 (TRUE): SDMA Supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): SDMA not Supported</li><li>0x1 (TRUE): SDMA Supported</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3279,7 +3279,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>This bit indicates whether the Host Controller and the Host System supports High Speed mode and they can supply the SD Clock frequency from 25 MHz to 50 MHz.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): High Speed not Supported</li><li>0x1 (TRUE): High Speed Supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): High Speed not Supported</li><li>0x1 (TRUE): High Speed Supported</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3300,7 +3300,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>This bit indicates whether the Host Controller is capable of using ADMA2.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): ADMA2 not Supported</li><li>0x1 (TRUE): ADMA2 Supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): ADMA2 not Supported</li><li>0x1 (TRUE): ADMA2 Supported</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3313,7 +3313,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>This bit indicates whether the Host Controller is capable of using an 8-bit bus width mode. This bit is not effective when the Slot Type is set to 10b.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): 8-bit Bus Width not Supported</li><li>0x1 (TRUE): 8-bit Bus Width Supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): 8-bit Bus Width not Supported</li><li>0x1 (TRUE): 8-bit Bus Width Supported</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3326,7 +3326,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>This bit indicates the maximum block size that the Host driver can read and write to the buffer in the Host Controller. The buffer transfers this block size without wait cycles. The transfer block length is always 512 bytes for the SD Memory irrespective of this bit</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (ZERO): 512 Byte</li><li>0x1 (ONE): 1024 Byte</li><li>0x2 (TWO): 2048 Byte</li><li>0x3 (THREE): Reserved</li></ul><p></p>
+<ul><li>0x0 (ZERO): 512 Byte</li><li>0x1 (ONE): 1024 Byte</li><li>0x2 (TWO): 2048 Byte</li><li>0x3 (THREE): Reserved</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3350,7 +3350,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>This bit shows the unit of base clock frequency used to detect Data TImeout Error.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (KHZ): KHz</li><li>0x1 (MHZ): MHz</li></ul><p></p>
+<ul><li>0x0 (KHZ): KHz</li><li>0x1 (MHZ): MHz</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3369,7 +3369,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <td><p>Timeout Clock Frequency</p>
 <p class="BLANK"></p>
 <p>This bit shows the base clock frequency used to detect Data Timeout Error. The Timeout Clock unit defines the unit of timeout clock frequency. It can be KHz or MHz.</p>
-<ul><li>0x00 : Get information through another method</li><li>0x01 : 1KHz / 1MHz</li><li>0x02 : 2KHz / 2MHz</li><li>0x03 : 3KHz / 3MHz</li><li>...........</li><li>0x3F : 63KHz / 63MHz</li></ul><p></p>
+<ul><li>0x00 : Get information through another method</li><li>0x01 : 1KHz / 1MHz</li><li>0x02 : 2KHz / 2MHz</li><li>0x03 : 3KHz / 3MHz</li><li>...........</li><li>0x3F : 63KHz / 63MHz</li></ul> 
 <p>Value After Reset:0x19</p>
 </td>
 </tr>
@@ -3438,7 +3438,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>This bit indicates support of VDD2 for the Host System.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): 1.8V VDD2 is not Supported</li><li>0x1 (TRUE): 1.8V VDD2 is Supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): 1.8V VDD2 is not Supported</li><li>0x1 (TRUE): 1.8V VDD2 is Supported</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3451,7 +3451,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>This bit indicates whether the Host Controller is capable of using ADMA3.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): ADMA3 not Supported</li><li>0x1 (TRUE): ADMA3 Supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): ADMA3 not Supported</li><li>0x1 (TRUE): ADMA3 Supported</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3470,7 +3470,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <td><p>Clock Multiplier</p>
 <p class="BLANK"></p>
 <p>These bits indicate the clock multiplier of the programmable clock generator. Setting these bits to 0 means that the Host Controller does not support a programmable clock generator.</p>
-<ul><li>0x0: Clock Multiplier is not Supported</li><li>0x1: Clock Multiplier M = 2</li><li>0x2: Clock Multiplier M = 3</li><li>.........</li><li>0xFF: Clock Multiplier M = 256</li></ul><p></p>
+<ul><li>0x0: Clock Multiplier is not Supported</li><li>0x1: Clock Multiplier M = 2</li><li>0x2: Clock Multiplier M = 3</li><li>.........</li><li>0xFF: Clock Multiplier M = 256</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3483,7 +3483,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>These bits select the re-tuning method and limit the maximum data length.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (MODE1): Timer</li><li>0x1 (MODE2): Timer and Re-Tuning Request (Not supported)</li><li>0x2 (MODE3): Auto Re-Tuning (for transfer)</li><li>0x3 (RSVD_MODE): Reserved</li></ul><p></p>
+<ul><li>0x0 (MODE1): Timer</li><li>0x1 (MODE2): Timer and Re-Tuning Request (Not supported)</li><li>0x2 (MODE3): Auto Re-Tuning (for transfer)</li><li>0x3 (RSVD_MODE): Reserved</li></ul> 
 <p>Value After Reset:0x2</p>
 </td>
 </tr>
@@ -3494,7 +3494,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <td><p>Use Tuning for SDR50 (UHS-I only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (ZERO): SDR50 does not require tuning</li><li>0x1 (ONE): SDR50 requires tuning</li></ul><p></p>
+<ul><li>0x0 (ZERO): SDR50 does not require tuning</li><li>0x1 (ONE): SDR50 requires tuning</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3511,7 +3511,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <td>RETUNE_CNT</td>
 <td>R</td>
 <td><p>Timer Count for Re-Tuning (UHS-I only)</p>
-<ul><li>0x0: Re-Tuning Timer disabled</li><li>0x1: 1 seconds</li><li>0x2: 2 seconds</li><li>0x3: 4 seconds</li><li>........</li><li>0xB: 1024 seconds</li><li>0xC: Reserved</li><li>0xD: Reserved</li><li>0xE: Reserved</li><li>0xF: Get information from other source</li></ul><p></p>
+<ul><li>0x0: Re-Tuning Timer disabled</li><li>0x1: 1 seconds</li><li>0x2: 2 seconds</li><li>0x3: 4 seconds</li><li>........</li><li>0xB: 1024 seconds</li><li>0xC: Reserved</li><li>0xD: Reserved</li><li>0xE: Reserved</li><li>0xF: Get information from other source</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3532,7 +3532,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>This bit indicates support of Driver Type D for 1.8 Signaling.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Driver Type D is not supported</li><li>0x1 (TRUE): Driver Type D is supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): Driver Type D is not supported</li><li>0x1 (TRUE): Driver Type D is supported</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3545,7 +3545,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>This bit indicates support of Driver Type C for 1.8 Signaling.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Driver Type C is not supported</li><li>0x1 (TRUE): Driver Type C is supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): Driver Type C is not supported</li><li>0x1 (TRUE): Driver Type C is supported</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3558,7 +3558,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>This bit indicates support of Driver Type A for 1.8 Signaling.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Driver Type A is not supported</li><li>0x1 (TRUE): Driver Type A is supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): Driver Type A is not supported</li><li>0x1 (TRUE): Driver Type A is supported</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3571,7 +3571,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>This bit indicates whether Host Controller supports UHS-II.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): UHS-II is not supported</li><li>0x1 (TRUE): UHS-II is supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): UHS-II is not supported</li><li>0x1 (TRUE): UHS-II is supported</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3582,7 +3582,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <td><p>DDR50 Support (UHS-I only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): DDR50 is not supported</li><li>0x1 (TRUE): DDR50 is supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): DDR50 is not supported</li><li>0x1 (TRUE): DDR50 is supported</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3595,7 +3595,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>This bit mentions that SDR104 requires tuning.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): SDR104 is not supported</li><li>0x1 (TRUE): SDR104 is supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): SDR104 is not supported</li><li>0x1 (TRUE): SDR104 is supported</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3608,7 +3608,7 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
 <p>This bit indicates that SDR50 is supported. The bit 13 (USE_TUNING_SDR50) indicates whether SDR50 requires tuning or not.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): SDR50 is not supported</li><li>0x1 (TRUE): SDR50 is supported</li></ul><p></p>
+<ul><li>0x0 (FALSE): SDR50 is not supported</li><li>0x1 (TRUE): SDR50 is supported</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3726,7 +3726,7 @@ register. If this information is supplied by the Host System through another met
 <td><p>Force Event for Command Not Issued By Auto CMD12 Error</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (TRUE): Command Not Issued By Auto CMD12 Error Status is set</li><li>0x0 (FALSE): Not Affected</li></ul><p></p>
+<ul><li>0x1 (TRUE): Command Not Issued By Auto CMD12 Error Status is set</li><li>0x0 (FALSE): Not Affected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3745,7 +3745,7 @@ register. If this information is supplied by the Host System through another met
 <td><p>Force Event for Auto CMD Response Error</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (TRUE): Auto CMD Response Error Status is set</li><li>0x0 (FALSE): Not Affected</li></ul><p></p>
+<ul><li>0x1 (TRUE): Auto CMD Response Error Status is set</li><li>0x0 (FALSE): Not Affected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3756,7 +3756,7 @@ register. If this information is supplied by the Host System through another met
 <td><p>Force Event for Auto CMD Index Error</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (TRUE): Auto CMD Index Error Status is set</li><li>0x0 (FALSE): Not Affected</li></ul><p></p>
+<ul><li>0x1 (TRUE): Auto CMD Index Error Status is set</li><li>0x0 (FALSE): Not Affected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3767,7 +3767,7 @@ register. If this information is supplied by the Host System through another met
 <td><p>Force Event for Auto CMD End Bit Error</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (TRUE): Auto CMD End Bit Error Status is set</li><li>0x0 (FALSE): Not Affected</li></ul><p></p>
+<ul><li>0x1 (TRUE): Auto CMD End Bit Error Status is set</li><li>0x0 (FALSE): Not Affected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3778,7 +3778,7 @@ register. If this information is supplied by the Host System through another met
 <td><p>Force Event for Auto CMD CRC Error</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (TRUE): Auto CMD CRC Error Status is set</li><li>0x0 (FALSE): Not Affected</li></ul><p></p>
+<ul><li>0x1 (TRUE): Auto CMD CRC Error Status is set</li><li>0x0 (FALSE): Not Affected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3789,7 +3789,7 @@ register. If this information is supplied by the Host System through another met
 <td><p>Force Event for Auto CMD Timeout Error</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (TRUE): Auto CMD Timeout Error Status is set</li><li>0x0 (FALSE): Not Affected</li></ul><p></p>
+<ul><li>0x1 (TRUE): Auto CMD Timeout Error Status is set</li><li>0x0 (FALSE): Not Affected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3800,7 +3800,7 @@ register. If this information is supplied by the Host System through another met
 <td><p>Force Event for Auto CMD12 Not Executed</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (TRUE): Auto CMD12 Not Executed Status is set</li><li>0x0 (FALSE): Not Affected</li></ul><p></p>
+<ul><li>0x1 (TRUE): Auto CMD12 Not Executed Status is set</li><li>0x0 (FALSE): Not Affected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3872,7 +3872,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <td><p>Force Event for Boot Ack error</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Boot ack Error Status is set</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Boot ack Error Status is set</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3883,7 +3883,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <td><p>Force Event for Response Error (SD Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Response Error Status is set</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Response Error Status is set</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3894,7 +3894,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <td><p>Force Event for Tuning Error (UHS-I Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Tuning Error Status is set</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Tuning Error Status is set</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3905,7 +3905,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <td><p>Force Event for ADMA Error</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): ADMA Error Status is set</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): ADMA Error Status is set</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3916,7 +3916,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <td><p>Force Event for Auto CMD Error (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Auto CMD Error Status is set</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Auto CMD Error Status is set</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3927,7 +3927,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <td><p>Force Event for Current Limit Error</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Current Limit Error Status is set</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Current Limit Error Status is set</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3938,7 +3938,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <td><p>Force Event for Data End Bit Error (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Data End Bit Error Status is set</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Data End Bit Error Status is set</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3949,7 +3949,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <td><p>Force Event for Data CRC Error (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Data CRC Error Status is set</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Data CRC Error Status is set</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3960,7 +3960,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <td><p>Force Event for Data Timeout Error (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Data Timeout Error Status is set</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Data Timeout Error Status is set</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3971,7 +3971,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <td><p>Force Event for Command Index Error (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Command Index Error Status is set</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Command Index Error Status is set</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3982,7 +3982,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <td><p>Force Event for Command End Bit Error (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Command End Bit Error Status is set</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Command End Bit Error Status is set</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3993,7 +3993,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <td><p>Force Event for Command CRC Error (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Command CRC Error Status is set</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Command CRC Error Status is set</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4004,7 +4004,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <td><p>Force Event for Command Timeout Error (SD/eMMC Mode only)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Command Timeout Error Status is set</li></ul><p></p>
+<ul><li>0x0 (FALSE): Not Affected</li><li>0x1 (TRUE): Command Timeout Error Status is set</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4036,7 +4036,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>This error occurs in the following instances:</p>
 <ul><li>While the Block Count Enable is being set, the total data length specified by the Descriptor table is different from that specified by the Block Count and Block Length</li><li>When the total data length cannot be divided by the block length</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NO_ERR): No Error</li><li>0x1 (ERROR): Error</li></ul><p></p>
+<ul><li>0x0 (NO_ERR): No Error</li><li>0x1 (ERROR): Error</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -4050,7 +4050,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>These bits indicate the state of ADMA when an error occurs during ADMA data transfer.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (ST_STOP): Stop DMA - SYS_ADR register points to a location next to the error descriptor</li><li>0x1 (ST_FDS): Fetch Descriptor - SYS_ADR register points to the error descriptor</li><li>0x2 (UNUSED): Never set this state</li><li>0x3 (ST_TFR): Transfer Data - SYS_ADR register points to a location next to the error descriptor</li></ul><p></p>
+<ul><li>0x0 (ST_STOP): Stop DMA - SYS_ADR register points to a location next to the error descriptor</li><li>0x1 (ST_FDS): Fetch Descriptor - SYS_ADR register points to the error descriptor</li><li>0x2 (UNUSED): Never set this state</li><li>0x3 (ST_TFR): Transfer Data - SYS_ADR register points to a location next to the error descriptor</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -4068,7 +4068,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <td><p>ADMA System Address</p>
 <p class="BLANK"></p>
 <p>These bits indicate the lower 32 bits of the ADMA system address.</p>
-<ul><li>SDMA: If Host Version 4 Enable is set to 1, this register stores the system address of the data location</li><li>ADMA2: This register stores the byte address of the executing command of the descriptor table</li><li>ADMA3: This register is set by ADMA3. ADMA2 increments the address of this register that points to the next line, every time a Descriptor line is fetched.</li></ul><p></p>
+<ul><li>SDMA: If Host Version 4 Enable is set to 1, this register stores the system address of the data location</li><li>ADMA2: This register stores the byte address of the executing command of the descriptor table</li><li>ADMA3: This register is set by ADMA3. ADMA2 increments the address of this register that points to the next line, every time a Descriptor line is fetched.</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -4094,7 +4094,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>These bits indicate that the Driver strength is supported by 1.8V signaling bus speed modes. These bits are meaningless for 3.3V signaling.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul><p></p>
+<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4115,7 +4115,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>This bit is effective when the Host Controller supports a programmable clock generator.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul><p></p>
+<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4150,7 +4150,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>These bits indicate the Driver strength value supported by 1.8V signaling bus speed modes. This field is meaningless for the Default speed mode as it uses 3.3V signaling.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul><p></p>
+<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4171,7 +4171,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>This bit is effective when Host Controller supports programmable clock generator.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul><p></p>
+<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4206,7 +4206,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>These bits indicate the Driver strength value supported by 1.8V signaling bus speed modes. This field is meaningless for High speed mode as it uses 3.3V signaling.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul><p></p>
+<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4227,7 +4227,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>This bit is effective when Host Controller supports programmable clock generator.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul><p></p>
+<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4262,7 +4262,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>These bits indicate the Driver strength value supported for the SDR12 bus speed mode. These bits are meaningless for 3.3V signaling.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul><p></p>
+<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4283,7 +4283,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>This bit is effective when Host Controller supports programmable clock generator</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul><p></p>
+<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4318,7 +4318,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>These bits indicate the Driver strength value supported for the SDR25 bus speed mode. These bits are meaningless for 3.3V signaling.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul><p></p>
+<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4339,7 +4339,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>This bit is effective when Host Controller supports programmable clock generator.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul><p></p>
+<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4374,7 +4374,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>These bits indicate Driver strength value supported for SDR50 bus speed mode. These bits are meaningless for 3.3V signaling.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul><p></p>
+<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4395,7 +4395,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>This bit is effective when Host Controller supports programmable clock generator.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul><p></p>
+<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4430,7 +4430,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>These bits indicate Driver strength value supported for SDR104 bus speed mode. These bits are meaningless for 3.3V signaling.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul><p></p>
+<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4451,7 +4451,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>This bit is effective when Host Controller supports programmable clock generator.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul><p></p>
+<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4486,7 +4486,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>These bits indicate Driver strength value supported for DDR50 bus speed mode. These bits are meaningless for 3.3V signaling.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul><p></p>
+<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4507,7 +4507,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 <p>This bit is effective when Host Controller supports programmable clock generator.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul><p></p>
+<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4543,7 +4543,7 @@ address is reflected in the Error Interrupt Status register if the corresponding
 the Drive strength value for HS400 mode.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul><p></p>
+<ul><li>0x0 (TYPEB): Driver Type B is selected</li><li>0x1 (TYPEA): Driver Type A is selected</li><li>0x2 (TYPEC): Driver Type C is selected</li><li>0x3 (TYPED): Driver Type D is selected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4564,7 +4564,7 @@ the Drive strength value for HS400 mode.</p>
 <p>This bit is effective when the Host Controller supports a programmable clock generator.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul><p></p>
+<ul><li>0x0 (FALSE): Host Controller Ver2.0 Compatible Clock Generator</li><li>0x1 (PROG): Programmable Clock Generator</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -4699,7 +4699,7 @@ Driver can identify the interrupt that is generated by reading these bits. By a 
 <p>These bits indicate the Host controller specification version. The upper and lower 4-bits indicate the version. Values 0x06-0xFF are reserved.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (VER_1_00): SD Host Controller Specification Version 1.00</li><li>0x1 (VER_2_00): SD Host Controller Specification Version 2.00</li><li>0x2 (VER_3_00): SD Host Controller Specification Version 3.00</li><li>0x3 (VER_4_00): SD Host Controller Specification Version 4.00</li><li>0x4 (VER_4_10): SD Host Controller Specification Version 4.10</li><li>0x5 (VER_4_20): SD Host Controller Specification Version 4.20</li></ul><p></p>
+<ul><li>0x0 (VER_1_00): SD Host Controller Specification Version 1.00</li><li>0x1 (VER_2_00): SD Host Controller Specification Version 2.00</li><li>0x2 (VER_3_00): SD Host Controller Specification Version 3.00</li><li>0x3 (VER_4_00): SD Host Controller Specification Version 4.00</li><li>0x4 (VER_4_10): SD Host Controller Specification Version 4.10</li><li>0x5 (VER_4_20): SD Host Controller Specification Version 4.20</li></ul> 
 <p>Value After Reset:0x5</p>
 </td>
 </tr>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>ulp_gbl</title></head>
+<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>ulp_gbl</title></head>
 <body>
 <h1><a name="ulp_gbl">"ulp_gbl"</a>
         </h1>
@@ -35,12 +35,12 @@
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>PLL Enable:<p></p>
-0 - > Entire PLL (except scan mode) is powered down (outputs<p></p>
-(except SCANOUT) all held at 1'b0)<p></p>
-1 - > Entire PLL is enabled (unless scan mode is turned on<p></p>
-SCANMODE=1)<p></p>
-Enabling scan mode (SCANMODE=1) has the same effect as setting<p></p>
+<td><p>PLL Enable: 
+0 - > Entire PLL (except scan mode) is powered down (outputs 
+(except SCANOUT) all held at 1'b0) 
+1 - > Entire PLL is enabled (unless scan mode is turned on 
+SCANMODE=1) 
+Enabling scan mode (SCANMODE=1) has the same effect as setting 
 PLLEN=0</p>
 </td>
 </tr>
@@ -50,9 +50,9 @@ PLLEN=0</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0 - > Post divided VCO is output on FOUTPOSTDIV<p></p>
-1 - > FREF is bypassed to FOUTPOSTDIV and FOUTVCO<p></p>
-When PLLEN="1"'b1 and bypass mode is active then PLL input pins<p></p>
+<td><p>0 - > Post divided VCO is output on FOUTPOSTDIV 
+1 - > FREF is bypassed to FOUTPOSTDIV and FOUTVCO 
+When PLLEN="1"'b1 and bypass mode is active then PLL input pins 
 must be programmed to correct value</p>
 </td>
 </tr>
@@ -62,8 +62,8 @@ must be programmed to correct value</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Enable of FOUTVCO clock signal<p></p>
-0 - > FOUTVCO clock is powered down (outputs held at 1'b0)<p></p>
+<td><p>Enable of FOUTVCO clock signal 
+0 - > FOUTVCO clock is powered down (outputs held at 1'b0) 
 1 - > FOUTVCO clock is enabled</p>
 </td>
 </tr>
@@ -73,8 +73,8 @@ must be programmed to correct value</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Post divide power down<p></p>
-0 - > FOUTPOSTDIV clock is powered down (outputs held at 1'b0)<p></p>
+<td><p>Post divide power down 
+0 - > FOUTPOSTDIV clock is powered down (outputs held at 1'b0) 
 1 - > FOUTPOSTDIV clock is enabled</p>
 </td>
 </tr>
@@ -84,10 +84,10 @@ must be programmed to correct value</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Enable fractional noise canceling DAC in FRAC mode (this has<p></p>
-no function in integer mode)<p></p>
-0 - > Fractional noise canceling DAC is not active (test mode<p></p>
-only)<p></p>
+<td><p>Enable fractional noise canceling DAC in FRAC mode (this has 
+no function in integer mode) 
+0 - > Fractional noise canceling DAC is not active (test mode 
+only) 
 1 - > Fractional noise canceling DAC is active (default mode)</p>
 </td>
 </tr>
@@ -97,9 +97,9 @@ only)<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>PLL deskew mode select<p></p>
-1'b0 - > Internal (full-rate VCO) feedback mode to select output<p></p>
-of VCO for feedback clock<p></p>
+<td><p>PLL deskew mode select 
+1'b0 - > Internal (full-rate VCO) feedback mode to select output 
+of VCO for feedback clock 
 1'b1 - > External feedback mode to select CKFB for feedback clock</p>
 </td>
 </tr>
@@ -109,12 +109,12 @@ of VCO for feedback clock<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Enable Delta-Sigma Modulator<p></p>
-0 - > DSM is powered down (integer mode)<p></p>
+<td><p>Enable Delta-Sigma Modulator 
+0 - > DSM is powered down (integer mode) 
 1 - > DSM is active (fractional mode)</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -131,7 +131,7 @@ of VCO for feedback clock<p></p>
 </td>
 <td><p>32'h00000004</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -150,12 +150,12 @@ of VCO for feedback clock<p></p>
 </td>
 <td><p>0x30</p>
 </td>
-<td><p>Feedback Divider<p></p>
-PLL Feedback divider value (16-4096 in integer mode, 20 to 4095<p></p>
+<td><p>Feedback Divider 
+PLL Feedback divider value (16-4096 in integer mode, 20 to 4095 
 in fractional mode).</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -172,7 +172,7 @@ in fractional mode).</p>
 </td>
 <td><p>32'h00000008</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -191,11 +191,11 @@ in fractional mode).</p>
 </td>
 <td><p>0x2</p>
 </td>
-<td><p>Post Divider value (1 to 32)<p></p>
+<td><p>Post Divider value (1 to 32) 
 Actual divide value is POSTDIV+1</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -212,7 +212,7 @@ Actual divide value is POSTDIV+1</p>
 </td>
 <td><p>32'h0000000C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -231,11 +231,11 @@ Actual divide value is POSTDIV+1</p>
 </td>
 <td><p>0x2</p>
 </td>
-<td><p>Reference divide value (1 to 63), Divide value is REFDIV<p></p>
+<td><p>Reference divide value (1 to 63), Divide value is REFDIV 
 When programmed to REFDIV="6"'d0 it will divide by 1</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -252,7 +252,7 @@ When programmed to REFDIV="6"'d0 it will divide by 1</p>
 </td>
 <td><p>32'h00000010</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -274,7 +274,7 @@ When programmed to REFDIV="6"'d0 it will divide by 1</p>
 <td><p>Fractional portion of feedback divide value</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -291,7 +291,7 @@ When programmed to REFDIV="6"'d0 it will divide by 1</p>
 </td>
 <td><p>32'h00000014</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -310,26 +310,26 @@ When programmed to REFDIV="6"'d0 it will divide by 1</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[1:0] -- > Programmable lock_int counter:<p></p>
+<td><p>[1:0] -- > Programmable lock_int counter: 
 if(UTILITY[1:0]==2'b00) lock_int_count="64;<p"></p>
 if(UTILITY[1:0]==2'b01) lock_int_count="16;<p"></p>
 if(UTILITY[1:0]==2'b10) lock_int_count="32;<p"></p>
 if(UTILITY[1:0]==2'b11) lock_int_count="128;<p"></p>
-[3:2] -- > Programmable LOCKF counter:<p></p>
+[3:2] -- > Programmable LOCKF counter: 
 if(UTILITY[3:2]==2'b00) LOCKF_count="lock_int_count+32;<p"></p>
 if(UTILITY[3:2]==2'b01) LOCKF_count="lock_int_count+8;<p"></p>
 if(UTILITY[3:2]==2'b10) LOCKF_count="lock_int_count+16;<p"></p>
 if(UTILITY[3:2]==2'b11) LOCKF_count="lock_int_count+64;<p"></p>
-[5:4] -- > Programmable LOCKP counter:<p></p>
+[5:4] -- > Programmable LOCKP counter: 
 if(UTILITY[5:4]==2'b00) LOCKP_count="LOCKF_count+512;<p"></p>
 if(UTILITY[5:4]==2'b01) LOCKP_count="LOCKF_count+256;<p"></p>
 if(UTILITY[5:4]==2'b10) LOCKP_count="LOCKF_count+1024;<p"></p>
 if(UTILITY[5:4]==2'b11) LOCKP_count="LOCKF_count+2048;<p"></p>
-[15:6] -- > Unassigned<p></p>
+[15:6] -- > Unassigned 
 In FRAC mode lock_int_count is equal to programmed value + 128</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -362,11 +362,11 @@ In FRAC mode lock_int_count is equal to programmed value + 128</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#frac_pll_status_LOCKF">LOCKF</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Output. Frequency Lock signal<p></p>
-Indicates frequency settling within threshold provided in<p></p>
+<td><p>Output. Frequency Lock signal 
+Indicates frequency settling within threshold provided in 
 specification</p>
 </td>
 </tr>
@@ -374,15 +374,15 @@ specification</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#frac_pll_status_LOCKP">LOCKP</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Output. Phase Lock signal<p></p>
-Indicates full phase settling within threshold provided in<p></p>
+<td><p>Output. Phase Lock signal 
+Indicates full phase settling within threshold provided in 
 specification</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -399,7 +399,7 @@ specification</p>
 </td>
 <td><p>32'h0000001C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -418,7 +418,7 @@ specification</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>When set to HIGH, writes to VTOR_NS is disabled.<p></p>
+<td><p>When set to HIGH, writes to VTOR_NS is disabled. 
 Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 </tr>
@@ -428,12 +428,12 @@ Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>When set to HIGH, writes to registers associated with the<p></p>
-Non-Secure Memory Protection Unit (MPU) region are disabled<p></p>
+<td><p>When set to HIGH, writes to registers associated with the 
+Non-Secure Memory Protection Unit (MPU) region are disabled 
 Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -450,7 +450,7 @@ Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 <td><p>32'h00000020</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -469,14 +469,14 @@ Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Non-secure SysTick calibration configuration:<p></p>
-[23:0] TENMS<p></p>
-[24] SKEW<p></p>
-[25] NOREF<p></p>
+<td><p>Non-secure SysTick calibration configuration: 
+[23:0] TENMS 
+[24] SKEW 
+[25] NOREF 
 Refer to Arm Cortex-M52 TRM for further details.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -493,7 +493,7 @@ Refer to Arm Cortex-M52 TRM for further details.</p>
 </td>
 <td><p>32'h00000024</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -512,7 +512,7 @@ Refer to Arm Cortex-M52 TRM for further details.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -525,7 +525,7 @@ Refer to Arm Cortex-M52 TRM for further details.</p>
 <td><p>Non-secure vector table offset out of reset</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -542,7 +542,7 @@ Refer to Arm Cortex-M52 TRM for further details.</p>
 </td>
 <td><p>32'h00000028</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -561,12 +561,12 @@ Refer to Arm Cortex-M52 TRM for further details.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0: Enable automatic invalidation of the L1 cache.<p></p>
-1: Disable automatic invalidation of L1 cache.<p></p>
+<td><p>0: Enable automatic invalidation of the L1 cache. 
+1: Disable automatic invalidation of L1 cache. 
 For more information, refer to Arm Cortex-M52 TRM.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -583,7 +583,7 @@ For more information, refer to Arm Cortex-M52 TRM.</p>
 </td>
 <td><p>32'h0000002C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -602,7 +602,7 @@ For more information, refer to Arm Cortex-M52 TRM.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0: clk_hfclk_aon2ulp<p></p>
+<td><p>0: clk_hfclk_aon2ulp 
 1: clk_ulp_rcosc</p>
 </td>
 </tr>
@@ -612,7 +612,7 @@ For more information, refer to Arm Cortex-M52 TRM.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0: clk_ulp_rcosc/2<p></p>
+<td><p>0: clk_ulp_rcosc/2 
 1: clk_hfclk_aon2ulp</p>
 </td>
 </tr>
@@ -622,7 +622,7 @@ For more information, refer to Arm Cortex-M52 TRM.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0: clk_ulp_pll_out<p></p>
+<td><p>0: clk_ulp_pll_out 
 1: clk_hfclk_lp2ulp</p>
 </td>
 </tr>
@@ -632,7 +632,7 @@ For more information, refer to Arm Cortex-M52 TRM.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0: clk_ulp_pll_byp_mux<p></p>
+<td><p>0: clk_ulp_pll_byp_mux 
 1: clk_ulp_rcosc_byp_mux</p>
 </td>
 </tr>
@@ -660,8 +660,8 @@ For more information, refer to Arm Cortex-M52 TRM.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>PLL Output divider Enable<p></p>
-0: Clock gated and divider disabled<p></p>
+<td><p>PLL Output divider Enable 
+0: Clock gated and divider disabled 
 1: Clock is enabled and divider running</p>
 </td>
 </tr>
@@ -671,13 +671,13 @@ For more information, refer to Arm Cortex-M52 TRM.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0: APB clock<p></p>
-1: RCOSC clock<p></p>
-2: AON_PLL clock<p></p>
+<td><p>0: APB clock 
+1: RCOSC clock 
+2: AON_PLL clock 
 3: test_clk_ulp_apb</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -694,7 +694,7 @@ For more information, refer to Arm Cortex-M52 TRM.</p>
 </td>
 <td><p>32'h00000030</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -713,12 +713,12 @@ For more information, refer to Arm Cortex-M52 TRM.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>ECC is disabled by default after reset and may be enabled once<p></p>
-by software. After enabling, the ECC state is locked and cannot<p></p>
+<td><p>ECC is disabled by default after reset and may be enabled once 
+by software. After enabling, the ECC state is locked and cannot 
 be disabled until the next reset.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -735,7 +735,7 @@ be disabled until the next reset.</p>
 </td>
 <td><p>32'h00000034</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -754,9 +754,9 @@ be disabled until the next reset.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>All channel stop request for Non-secure channels. When asserted,<p></p>
-all Non-secure channels that are not in IDLE are stopped.<p></p>
-Channels can be enabled by software, but are immediately<p></p>
+<td><p>All channel stop request for Non-secure channels. When asserted, 
+all Non-secure channels that are not in IDLE are stopped. 
+Channels can be enabled by software, but are immediately 
 stopped if this request is asserted.</p>
 </td>
 </tr>
@@ -766,14 +766,14 @@ stopped if this request is asserted.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>All channel pause request for Non-secure channels. When<p></p>
-asserted, then all Non-secure channels that are not in IDLE are<p></p>
-paused. Channels can be enabled by software, but are immediately<p></p>
-paused if this request is asserted. When the request is<p></p>
+<td><p>All channel pause request for Non-secure channels. When 
+asserted, then all Non-secure channels that are not in IDLE are 
+paused. Channels can be enabled by software, but are immediately 
+paused if this request is asserted. When the request is 
 deasserted, the operation continues.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -790,7 +790,7 @@ deasserted, the operation continues.</p>
 </td>
 <td><p>32'h00000038</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -807,11 +807,11 @@ deasserted, the operation continues.</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_DMA_allch_ctrl1_stop_ack_nonsec">stop_ack_nonsec</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>All channel stopped acknowledge for Non-secure channels. When<p></p>
-asserted, all Non-secure channels are stopped or inactive.<p></p>
+<td><p>All channel stopped acknowledge for Non-secure channels. When 
+asserted, all Non-secure channels are stopped or inactive. 
 Four-phase handshake pair of allch_stop_req_nonsec.</p>
 </td>
 </tr>
@@ -819,17 +819,17 @@ Four-phase handshake pair of allch_stop_req_nonsec.</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_DMA_allch_ctrl1_pause_ack_nonsec">pause_ack_nonsec</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>All channel pause request for Non-secure channels. When<p></p>
-asserted, then all Non-secure channels that are not in IDLE are<p></p>
-paused. Channels can be enabled by software, but are immediately<p></p>
-paused if this request is asserted. When the request is<p></p>
+<td><p>All channel pause request for Non-secure channels. When 
+asserted, then all Non-secure channels that are not in IDLE are 
+paused. Channels can be enabled by software, but are immediately 
+paused if this request is asserted. When the request is 
 deasserted, the operation continues.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -846,7 +846,7 @@ deasserted, the operation continues.</p>
 </td>
 <td><p>32'h0000003C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -865,14 +865,14 @@ deasserted, the operation continues.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Word aligned address for the boot process. When SECEXT_PRESENT<p></p>
-is set to 1, then the boot_addr needs to point to a secure<p></p>
-memory region because channel 0 boots as secure. Sampled once<p></p>
-after reset when power and clock have become stable and boot_en<p></p>
+<td><p>Word aligned address for the boot process. When SECEXT_PRESENT 
+is set to 1, then the boot_addr needs to point to a secure 
+memory region because channel 0 boots as secure. Sampled once 
+after reset when power and clock have become stable and boot_en 
 is HIGH.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -889,7 +889,7 @@ is HIGH.</p>
 </td>
 <td><p>32'h00000040</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -908,9 +908,9 @@ is HIGH.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Boot address memory attributes. Has the same encoding as the<p></p>
-LINKMEMATTRHI and LINKMEMATTRLO registers combined. Sampled<p></p>
-once after reset when power and clock have become stable and<p></p>
+<td><p>Boot address memory attributes. Has the same encoding as the 
+LINKMEMATTRHI and LINKMEMATTRLO registers combined. Sampled 
+once after reset when power and clock have become stable and 
 boot_en is HIGH</p>
 </td>
 </tr>
@@ -920,7 +920,7 @@ boot_en is HIGH</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Privilege status setting for channel 0. Sampled once after reset<p></p>
+<td><p>Privilege status setting for channel 0. Sampled once after reset 
 when power and clock have become stable and boot_en is HIGH</p>
 </td>
 </tr>
@@ -930,8 +930,8 @@ when power and clock have become stable and boot_en is HIGH</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Enables the channel 0 to load a first command after reset from<p></p>
-the specified input address set by boot_addr. Sampled once<p></p>
+<td><p>Enables the channel 0 to load a first command after reset from 
+the specified input address set by boot_addr. Sampled once 
 after reset when power and clock have become stable</p>
 </td>
 </tr>
@@ -941,11 +941,11 @@ after reset when power and clock have become stable</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Boot address memory shareability attributes. Has the same<p></p>
+<td><p>Boot address memory shareability attributes. Has the same 
 encoding as the LINKSHAREATTR register.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -962,7 +962,7 @@ encoding as the LINKSHAREATTR register.</p>
 </td>
 <td><p>32'h00000044</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -981,9 +981,9 @@ encoding as the LINKSHAREATTR register.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>4-KB aligned context area base pointer. When SECEXT_PRESENT is<p></p>
-set to 1, then it will be sampled to SEC_CNTXBASE, otherwise to<p></p>
-NSEC_CNTXBASE register. Sampled once after reset when power and<p></p>
+<td><p>4-KB aligned context area base pointer. When SECEXT_PRESENT is 
+set to 1, then it will be sampled to SEC_CNTXBASE, otherwise to 
+NSEC_CNTXBASE register. Sampled once after reset when power and 
 clock have become stable.</p>
 </td>
 </tr>
@@ -993,11 +993,11 @@ clock have become stable.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Enables context memory initialization after reset. Sampled once<p></p>
+<td><p>Enables context memory initialization after reset. Sampled once 
 after reset when power and clock have become stable</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1014,7 +1014,7 @@ after reset when power and clock have become stable</p>
 </td>
 <td><p>32'h00000048</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1031,11 +1031,11 @@ after reset when power and clock have become stable</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_DMA_ch_ctrl0_enabled">enabled</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Status indication per channel to show when a channel is active.<p></p>
-When SECEXT_PRESENT is set to 1, then channels must be<p></p>
+<td><p>Status indication per channel to show when a channel is active. 
+When SECEXT_PRESENT is set to 1, then channels must be 
 separated based on the ch_nonsec signals.</p>
 </td>
 </tr>
@@ -1043,15 +1043,15 @@ separated based on the ch_nonsec signals.</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_DMA_ch_ctrl0_error">error</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Status indication per channel to show when a channel has<p></p>
-encountered an error. When SECEXT_PRESENT is set to 1, then<p></p>
+<td><p>Status indication per channel to show when a channel has 
+encountered an error. When SECEXT_PRESENT is set to 1, then 
 channels must be separated based on the ch_nonsec signals</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1068,7 +1068,7 @@ channels must be separated based on the ch_nonsec signals</p>
 </td>
 <td><p>32'h0000004C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1085,12 +1085,12 @@ channels must be separated based on the ch_nonsec signals</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_DMA_ch_ctrl1_stopped">stopped</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Status indication per channel to show when the channel is<p></p>
-stopped. When<p></p>
-SECEXT_PRESENT is set to 1, then channels must be separated<p></p>
+<td><p>Status indication per channel to show when the channel is 
+stopped. When 
+SECEXT_PRESENT is set to 1, then channels must be separated 
 based on the ch_nonsec signals</p>
 </td>
 </tr>
@@ -1098,16 +1098,16 @@ based on the ch_nonsec signals</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_DMA_ch_ctrl1_paused">paused</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Status indication per channel to show when the channel is<p></p>
-paused. When<p></p>
-SECEXT_PRESENT is set to 1, then channels must be separated<p></p>
+<td><p>Status indication per channel to show when the channel is 
+paused. When 
+SECEXT_PRESENT is set to 1, then channels must be separated 
 based on the ch_nonsec signals</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1124,7 +1124,7 @@ based on the ch_nonsec signals</p>
 </td>
 <td><p>32'h00000050</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1141,16 +1141,16 @@ based on the ch_nonsec signals</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_DMA_ch_ctrl2_privilage">privilage</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Status indication per channel to show the privilege setting of<p></p>
-the channel. When<p></p>
-SECEXT_PRESENT is set to 1, then channels must be separated<p></p>
+<td><p>Status indication per channel to show the privilege setting of 
+the channel. When 
+SECEXT_PRESENT is set to 1, then channels must be separated 
 based on the ch_nonsec signals</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1167,7 +1167,7 @@ based on the ch_nonsec signals</p>
 </td>
 <td><p>32'h00000054</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1186,9 +1186,9 @@ based on the ch_nonsec signals</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>All channel stop request for Non-secure channels. When asserted,<p></p>
-all Non-secure channels that are not in IDLE are stopped.<p></p>
-Channels can be enabled by software, but are immediately<p></p>
+<td><p>All channel stop request for Non-secure channels. When asserted, 
+all Non-secure channels that are not in IDLE are stopped. 
+Channels can be enabled by software, but are immediately 
 stopped if this request is asserted.</p>
 </td>
 </tr>
@@ -1198,14 +1198,14 @@ stopped if this request is asserted.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>All channel pause request for Non-secure channels. When<p></p>
-asserted, then all Non-secure channels that are not in IDLE are<p></p>
-paused. Channels can be enabled by software, but are immediately<p></p>
-paused if this request is asserted. When the request is<p></p>
+<td><p>All channel pause request for Non-secure channels. When 
+asserted, then all Non-secure channels that are not in IDLE are 
+paused. Channels can be enabled by software, but are immediately 
+paused if this request is asserted. When the request is 
 deasserted, the operation continues.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1222,7 +1222,7 @@ deasserted, the operation continues.</p>
 </td>
 <td><p>32'h00000058</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1239,11 +1239,11 @@ deasserted, the operation continues.</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_DMA_allch_ctrl1_stop_ack_nonsec">stop_ack_nonsec</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>All channel stopped acknowledge for Non-secure channels. When<p></p>
-asserted, all Non-secure channels are stopped or inactive.<p></p>
+<td><p>All channel stopped acknowledge for Non-secure channels. When 
+asserted, all Non-secure channels are stopped or inactive. 
 Four-phase handshake pair of allch_stop_req_nonsec.</p>
 </td>
 </tr>
@@ -1251,17 +1251,17 @@ Four-phase handshake pair of allch_stop_req_nonsec.</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_DMA_allch_ctrl1_pause_ack_nonsec">pause_ack_nonsec</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>All channel pause request for Non-secure channels. When<p></p>
-asserted, then all Non-secure channels that are not in IDLE are<p></p>
-paused. Channels can be enabled by software, but are immediately<p></p>
-paused if this request is asserted. When the request is<p></p>
+<td><p>All channel pause request for Non-secure channels. When 
+asserted, then all Non-secure channels that are not in IDLE are 
+paused. Channels can be enabled by software, but are immediately 
+paused if this request is asserted. When the request is 
 deasserted, the operation continues.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1278,7 +1278,7 @@ deasserted, the operation continues.</p>
 </td>
 <td><p>32'h0000005C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1297,14 +1297,14 @@ deasserted, the operation continues.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Word aligned address for the boot process. When SECEXT_PRESENT<p></p>
-is set to 1, then the boot_addr needs to point to a secure<p></p>
-memory region because channel 0 boots as secure. Sampled once<p></p>
-after reset when power and clock have become stable and boot_en<p></p>
+<td><p>Word aligned address for the boot process. When SECEXT_PRESENT 
+is set to 1, then the boot_addr needs to point to a secure 
+memory region because channel 0 boots as secure. Sampled once 
+after reset when power and clock have become stable and boot_en 
 is HIGH.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1321,7 +1321,7 @@ is HIGH.</p>
 </td>
 <td><p>32'h00000060</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1340,9 +1340,9 @@ is HIGH.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Boot address memory attributes. Has the same encoding as the<p></p>
-LINKMEMATTRHI and LINKMEMATTRLO registers combined. Sampled<p></p>
-once after reset when power and clock have become stable and<p></p>
+<td><p>Boot address memory attributes. Has the same encoding as the 
+LINKMEMATTRHI and LINKMEMATTRLO registers combined. Sampled 
+once after reset when power and clock have become stable and 
 boot_en is HIGH</p>
 </td>
 </tr>
@@ -1352,7 +1352,7 @@ boot_en is HIGH</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Privilege status setting for channel 0. Sampled once after reset<p></p>
+<td><p>Privilege status setting for channel 0. Sampled once after reset 
 when power and clock have become stable and boot_en is HIGH</p>
 </td>
 </tr>
@@ -1362,8 +1362,8 @@ when power and clock have become stable and boot_en is HIGH</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Enables the channel 0 to load a first command after reset from<p></p>
-the specified input address set by boot_addr. Sampled once<p></p>
+<td><p>Enables the channel 0 to load a first command after reset from 
+the specified input address set by boot_addr. Sampled once 
 after reset when power and clock have become stable</p>
 </td>
 </tr>
@@ -1373,11 +1373,11 @@ after reset when power and clock have become stable</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Boot address memory shareability attributes. Has the same<p></p>
+<td><p>Boot address memory shareability attributes. Has the same 
 encoding as the LINKSHAREATTR register.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1394,7 +1394,7 @@ encoding as the LINKSHAREATTR register.</p>
 </td>
 <td><p>32'h00000064</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1413,9 +1413,9 @@ encoding as the LINKSHAREATTR register.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>4-KB aligned context area base pointer. When SECEXT_PRESENT is<p></p>
-set to 1, then it will be sampled to SEC_CNTXBASE, otherwise to<p></p>
-NSEC_CNTXBASE register. Sampled once after reset when power and<p></p>
+<td><p>4-KB aligned context area base pointer. When SECEXT_PRESENT is 
+set to 1, then it will be sampled to SEC_CNTXBASE, otherwise to 
+NSEC_CNTXBASE register. Sampled once after reset when power and 
 clock have become stable.</p>
 </td>
 </tr>
@@ -1425,11 +1425,11 @@ clock have become stable.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Enables context memory initialization after reset. Sampled once<p></p>
+<td><p>Enables context memory initialization after reset. Sampled once 
 after reset when power and clock have become stable</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1446,7 +1446,7 @@ after reset when power and clock have become stable</p>
 </td>
 <td><p>32'h00000068</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1463,11 +1463,11 @@ after reset when power and clock have become stable</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_DMA_ch_ctrl0_enabled">enabled</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Status indication per channel to show when a channel is active.<p></p>
-When SECEXT_PRESENT is set to 1, then channels must be<p></p>
+<td><p>Status indication per channel to show when a channel is active. 
+When SECEXT_PRESENT is set to 1, then channels must be 
 separated based on the ch_nonsec signals.</p>
 </td>
 </tr>
@@ -1475,15 +1475,15 @@ separated based on the ch_nonsec signals.</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_DMA_ch_ctrl0_error">error</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Status indication per channel to show when a channel has<p></p>
-encountered an error. When SECEXT_PRESENT is set to 1, then<p></p>
+<td><p>Status indication per channel to show when a channel has 
+encountered an error. When SECEXT_PRESENT is set to 1, then 
 channels must be separated based on the ch_nonsec signals</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1500,7 +1500,7 @@ channels must be separated based on the ch_nonsec signals</p>
 </td>
 <td><p>32'h0000006C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1517,12 +1517,12 @@ channels must be separated based on the ch_nonsec signals</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_DMA_ch_ctrl1_stopped">stopped</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Status indication per channel to show when the channel is<p></p>
-stopped. When<p></p>
-SECEXT_PRESENT is set to 1, then channels must be separated<p></p>
+<td><p>Status indication per channel to show when the channel is 
+stopped. When 
+SECEXT_PRESENT is set to 1, then channels must be separated 
 based on the ch_nonsec signals</p>
 </td>
 </tr>
@@ -1530,16 +1530,16 @@ based on the ch_nonsec signals</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_DMA_ch_ctrl1_paused">paused</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Status indication per channel to show when the channel is<p></p>
-paused. When<p></p>
-SECEXT_PRESENT is set to 1, then channels must be separated<p></p>
+<td><p>Status indication per channel to show when the channel is 
+paused. When 
+SECEXT_PRESENT is set to 1, then channels must be separated 
 based on the ch_nonsec signals</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1556,7 +1556,7 @@ based on the ch_nonsec signals</p>
 </td>
 <td><p>32'h00000070</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1573,16 +1573,16 @@ based on the ch_nonsec signals</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_DMA_ch_ctrl2_privilage">privilage</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Status indication per channel to show the privilege setting of<p></p>
-the channel. When<p></p>
-SECEXT_PRESENT is set to 1, then channels must be separated<p></p>
+<td><p>Status indication per channel to show the privilege setting of 
+the channel. When 
+SECEXT_PRESENT is set to 1, then channels must be separated 
 based on the ch_nonsec signals</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1599,7 +1599,7 @@ based on the ch_nonsec signals</p>
 </td>
 <td><p>32'h00000074</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1621,7 +1621,7 @@ based on the ch_nonsec signals</p>
 <td><p>Generic software register.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1638,7 +1638,7 @@ based on the ch_nonsec signals</p>
 </td>
 <td><p>32'h00000078</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1660,7 +1660,7 @@ based on the ch_nonsec signals</p>
 <td><p>Generic software register.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1677,7 +1677,7 @@ based on the ch_nonsec signals</p>
 </td>
 <td><p>32'h0000007C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1699,7 +1699,7 @@ based on the ch_nonsec signals</p>
 <td><p>Generic software register.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1716,7 +1716,7 @@ based on the ch_nonsec signals</p>
 </td>
 <td><p>32'h00000080</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1735,11 +1735,11 @@ based on the ch_nonsec signals</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Generic software register. This register can be reset by PAD<p></p>
+<td><p>Generic software register. This register can be reset by PAD 
 reset.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1756,7 +1756,7 @@ reset.</p>
 </td>
 <td><p>32'h00000084</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1775,8 +1775,8 @@ reset.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>When set to HIGH, writes to VTOR_S, AIRCR.PRIS and<p></p>
-AIRCR.BFHFNMINS are disabled.<p></p>
+<td><p>When set to HIGH, writes to VTOR_S, AIRCR.PRIS and 
+AIRCR.BFHFNMINS are disabled. 
 Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 </tr>
@@ -1786,8 +1786,8 @@ Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>When set to HIGH, writes to registers associated with the Secure<p></p>
-Memory Protection Unit (MPU) region are disabled<p></p>
+<td><p>When set to HIGH, writes to registers associated with the Secure 
+Memory Protection Unit (MPU) region are disabled 
 Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 </tr>
@@ -1797,8 +1797,8 @@ Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>When set to HIGH, writes to registers associated with the SAU<p></p>
-region are disabled<p></p>
+<td><p>When set to HIGH, writes to registers associated with the SAU 
+region are disabled 
 Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 </tr>
@@ -1808,8 +1808,8 @@ Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>When set to HIGH, writes to registers associated with ITCM<p></p>
-interface security gating, ITGUCTRL and ITGU_LUTn are disabled.<p></p>
+<td><p>When set to HIGH, writes to registers associated with ITCM 
+interface security gating, ITGUCTRL and ITGU_LUTn are disabled. 
 Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 </tr>
@@ -1819,8 +1819,8 @@ Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>When set to HIGH, writes to registers associated with DTCM<p></p>
-interface security gating, DTGUCTRL and DTGU_LUTn are disabled.<p></p>
+<td><p>When set to HIGH, writes to registers associated with DTCM 
+interface security gating, DTGUCTRL and DTGU_LUTn are disabled. 
 Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 </tr>
@@ -1830,12 +1830,12 @@ Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>When set to HIGH, writes to registers associated with the TCM<p></p>
-region, ITCMCR and DTCMCR are disabled.<p></p>
+<td><p>When set to HIGH, writes to registers associated with the TCM 
+region, ITCMCR and DTCMCR are disabled. 
 Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1852,7 +1852,7 @@ Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 <td><p>32'h00000088</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1871,14 +1871,14 @@ Once set to HIGH, it cannot be cleared until RESET</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Secure SysTick calibration configuration:<p></p>
-[23:0] TENMS<p></p>
-[24] SKEW<p></p>
-[25] NOREF<p></p>
+<td><p>Secure SysTick calibration configuration: 
+[23:0] TENMS 
+[24] SKEW 
+[25] NOREF 
 Refer to Arm Cortex-M52 TRM for further details.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1895,7 +1895,7 @@ Refer to Arm Cortex-M52 TRM for further details.</p>
 </td>
 <td><p>32'h0000008C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1914,16 +1914,16 @@ Refer to Arm Cortex-M52 TRM for further details.</p>
 </td>
 <td><p>0x4</p>
 </td>
-<td><p>Memory address alias bit for ITCM, DTCM, and P-AHB regions. The<p></p>
-address bit used for memory alias is determined by:<p></p>
-3’b001: Alias bit = 26<p></p>
-3’b010: Alias bit = 27<p></p>
-3’b100: Alias bit = 28<p></p>
-3’b000: No alias. TCM security gating is disabled.<p></p>
+<td><p>Memory address alias bit for ITCM, DTCM, and P-AHB regions. The 
+address bit used for memory alias is determined by: 
+3’b001: Alias bit = 26 
+3’b010: Alias bit = 27 
+3’b100: Alias bit = 28 
+3’b000: No alias. TCM security gating is disabled. 
 All other values will result in unpredictable behavior.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1940,7 +1940,7 @@ All other values will result in unpredictable behavior.</p>
 </td>
 <td><p>32'h00000090</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1962,7 +1962,7 @@ All other values will result in unpredictable behavior.</p>
 <td><p>The core is stalled out of reset when set to 1.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1979,7 +1979,7 @@ All other values will result in unpredictable behavior.</p>
 </td>
 <td><p>32'h00000094</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1998,7 +1998,7 @@ All other values will result in unpredictable behavior.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2008,11 +2008,11 @@ All other values will result in unpredictable behavior.</p>
 </td>
 <td><p>0x220000</p>
 </td>
-<td><p>Secure vector table offset out of reset.<p></p>
+<td><p>Secure vector table offset out of reset. 
 Note: Set to 0x1100_0000 upon reset.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2029,7 +2029,7 @@ Note: Set to 0x1100_0000 upon reset.</p>
 </td>
 <td><p>32'h00000098</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2048,13 +2048,13 @@ Note: Set to 0x1100_0000 upon reset.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Response configuration in case of<p></p>
-security violation:<p></p>
-• bus-error (1)<p></p>
+<td><p>Response configuration in case of 
+security violation: 
+• bus-error (1) 
 • RAZ/WI (0)</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2071,7 +2071,7 @@ security violation:<p></p>
 </td>
 <td><p>32'h0000009C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2090,13 +2090,13 @@ security violation:<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Connected to cfg_ap of PPCs to define the privileged access<p></p>
-rights of subordinates.<p></p>
-0: Non-privileged access not allowed<p></p>
+<td><p>Connected to cfg_ap of PPCs to define the privileged access 
+rights of subordinates. 
+0: Non-privileged access not allowed 
 1: Non-privileged access allowed</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2113,7 +2113,7 @@ rights of subordinates.<p></p>
 </td>
 <td><p>32'h000000A0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2132,13 +2132,13 @@ rights of subordinates.<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Connected to cfg_ap of PPCs to define the privileged access<p></p>
-rights of subordinates.<p></p>
-0: Non-privileged access not allowed<p></p>
+<td><p>Connected to cfg_ap of PPCs to define the privileged access 
+rights of subordinates. 
+0: Non-privileged access not allowed 
 1: Non-privileged access allowed</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2155,7 +2155,7 @@ rights of subordinates.<p></p>
 </td>
 <td><p>32'h000000A4</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2174,13 +2174,13 @@ rights of subordinates.<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Connected to cfg_ap of PPCs to define the privileged access<p></p>
-rights of subordinates.<p></p>
-0: Non-privileged access not allowed<p></p>
+<td><p>Connected to cfg_ap of PPCs to define the privileged access 
+rights of subordinates. 
+0: Non-privileged access not allowed 
 1: Non-privileged access allowed</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2197,7 +2197,7 @@ rights of subordinates.<p></p>
 </td>
 <td><p>32'h000000A8</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2216,13 +2216,13 @@ rights of subordinates.<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Connected to cfg_ap of PPCs to define the privileged access<p></p>
-rights of subordinates.<p></p>
-0: Non-privileged access not allowed<p></p>
+<td><p>Connected to cfg_ap of PPCs to define the privileged access 
+rights of subordinates. 
+0: Non-privileged access not allowed 
 1: Non-privileged access allowed</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2257,8 +2257,8 @@ rights of subordinates.<p></p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Enable the HFRCOSC<p></p>
-0:Disable HFRCOSC<p></p>
+<td><p>Enable the HFRCOSC 
+0:Disable HFRCOSC 
 1:Enable HFRCOSC</p>
 </td>
 </tr>
@@ -2286,10 +2286,10 @@ rights of subordinates.<p></p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>CLKOUT Selection<p></p>
-00: 0<p></p>
-01: HFRCOSC<p></p>
-10: aon2ulp_hfclk<p></p>
+<td><p>CLKOUT Selection 
+00: 0 
+01: HFRCOSC 
+10: aon2ulp_hfclk 
 11: PLL OUT + Divider Output</p>
 </td>
 </tr>
@@ -2299,10 +2299,10 @@ rights of subordinates.<p></p>
 </td>
 <td><p>0x2</p>
 </td>
-<td><p>CLKOUT Selection<p></p>
-00: 0<p></p>
-01: HFRCOSC<p></p>
-10: aon2ulp_hfclk<p></p>
+<td><p>CLKOUT Selection 
+00: 0 
+01: HFRCOSC 
+10: aon2ulp_hfclk 
 11: PLL OUT + Divider Output</p>
 </td>
 </tr>
@@ -2312,14 +2312,14 @@ rights of subordinates.<p></p>
 </td>
 <td><p>0x3</p>
 </td>
-<td><p>CLKOUT Selection<p></p>
-00: 0<p></p>
-01: HFRCOSC<p></p>
-10: aon2ulp_hfclk<p></p>
+<td><p>CLKOUT Selection 
+00: 0 
+01: HFRCOSC 
+10: aon2ulp_hfclk 
 11: PLL OUT + Divider Output</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2354,12 +2354,12 @@ rights of subordinates.<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Status of the HFRC clock<p></p>
-0: Not valid<p></p>
+<td><p>Status of the HFRC clock 
+0: Not valid 
 1: Valid</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2376,7 +2376,7 @@ rights of subordinates.<p></p>
 </td>
 <td><p>32'h000000B4</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2398,7 +2398,7 @@ rights of subordinates.<p></p>
 <td><p>Individual bits mask the corresponding DMA request.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2415,7 +2415,7 @@ rights of subordinates.<p></p>
 </td>
 <td><p>32'h000000B8</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2437,7 +2437,7 @@ rights of subordinates.<p></p>
 <td><p>Individual bits mask the corresponding DMA request.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2472,8 +2472,8 @@ rights of subordinates.<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Enables the Clock monitor measurement<p></p>
-0: Disable<p></p>
+<td><p>Enables the Clock monitor measurement 
+0: Disable 
 1: Enable the monitoring</p>
 </td>
 </tr>
@@ -2483,8 +2483,8 @@ rights of subordinates.<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Enable generating the Interrupt from Clock Monitoring logic<p></p>
-0: No interrupt generated<p></p>
+<td><p>Enable generating the Interrupt from Clock Monitoring logic 
+0: No interrupt generated 
 1: Interrupt generated when the clock is out of bounds</p>
 </td>
 </tr>
@@ -2494,13 +2494,13 @@ rights of subordinates.<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Enable generating the Reset with clock monitoring Fault<p></p>
-0: Clock monitoring fault is not generated for Fault monitor<p></p>
-block<p></p>
+<td><p>Enable generating the Reset with clock monitoring Fault 
+0: Clock monitoring fault is not generated for Fault monitor 
+block 
 0: Clock monitoring fault is generated for Fault monitor block</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2517,7 +2517,7 @@ block<p></p>
 </td>
 <td><p>32'h000000C0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2536,15 +2536,15 @@ block<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Upper limit to detect the overflow when the XTAL clock is faster<p></p>
-than expected.<p></p>
-f the XTAL clock is faster, this ULIMIT determines on how much<p></p>
-higher the counter (Accumulation after the adjustment) can go<p></p>
-with in the CLKMON_PERIOD. This should be calculated based on<p></p>
+<td><p>Upper limit to detect the overflow when the XTAL clock is faster 
+than expected. 
+f the XTAL clock is faster, this ULIMIT determines on how much 
+higher the counter (Accumulation after the adjustment) can go 
+with in the CLKMON_PERIOD. This should be calculated based on 
 allowable clock range.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2561,7 +2561,7 @@ allowable clock range.</p>
 </td>
 <td><p>32'h000000C4</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2580,14 +2580,14 @@ allowable clock range.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Lower limit to detect the underflow when the XTAL clock is<p></p>
-slower than expected.<p></p>
-If the XTAL clock is slower, this LLIMIT determines on how much<p></p>
-lower the counter can go with in the CLKMON_PERIOD. This should<p></p>
+<td><p>Lower limit to detect the underflow when the XTAL clock is 
+slower than expected. 
+If the XTAL clock is slower, this LLIMIT determines on how much 
+lower the counter can go with in the CLKMON_PERIOD. This should 
 be calculated based on allowable clock range.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2604,7 +2604,7 @@ be calculated based on allowable clock range.</p>
 </td>
 <td><p>32'h000000C8</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2623,17 +2623,17 @@ be calculated based on allowable clock range.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>How much the faster clock counter needs to adjust for every<p></p>
-measurement period<p></p>
-Example:<p></p>
-As the oscillator clock is 50Mhz x2 of XTAL expected 25MHz,<p></p>
-ideally the Adjust value should be 2x the CLKMON_PERIOD. So for<p></p>
-if the clock monitoring period is programmed to be 16, then this<p></p>
-value needs to be 32. This value can also be used for any OSC<p></p>
+<td><p>How much the faster clock counter needs to adjust for every 
+measurement period 
+Example: 
+As the oscillator clock is 50Mhz x2 of XTAL expected 25MHz, 
+ideally the Adjust value should be 2x the CLKMON_PERIOD. So for 
+if the clock monitoring period is programmed to be 16, then this 
+value needs to be 32. This value can also be used for any OSC 
 clock offset adjustment.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2650,7 +2650,7 @@ clock offset adjustment.</p>
 </td>
 <td><p>32'h000000CC</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2669,16 +2669,16 @@ clock offset adjustment.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>How much the slower clock counter needs to adjust for every<p></p>
-measurement period<p></p>
-As the oscillator clock is 50Mhz x2 of XTAL expected 25MHz,<p></p>
-ideally the Adjust value should be 2x the CLKMON_PERIOD. So for<p></p>
-if the clock monitoring period is programmed to be 16, then this<p></p>
-value needs to be 32. This value can also be used for any OSC<p></p>
+<td><p>How much the slower clock counter needs to adjust for every 
+measurement period 
+As the oscillator clock is 50Mhz x2 of XTAL expected 25MHz, 
+ideally the Adjust value should be 2x the CLKMON_PERIOD. So for 
+if the clock monitoring period is programmed to be 16, then this 
+value needs to be 32. This value can also be used for any OSC 
 clock offset adjustment.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2695,7 +2695,7 @@ clock offset adjustment.</p>
 </td>
 <td><p>32'h000000D0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2714,12 +2714,12 @@ clock offset adjustment.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Clock Monitoring period in the XTAL clock periods.<p></p>
-Ex. Program 0xF to repeat the clock monitoring measuresment for<p></p>
+<td><p>Clock Monitoring period in the XTAL clock periods. 
+Ex. Program 0xF to repeat the clock monitoring measuresment for 
 every 16 clock cycles.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2736,7 +2736,7 @@ every 16 clock cycles.</p>
 </td>
 <td><p>32'h000000D4</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2758,7 +2758,7 @@ every 16 clock cycles.</p>
 <td><p>Indicates that the Clock Monitor Fault occurred.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2796,7 +2796,7 @@ every 16 clock cycles.</p>
 <td><p>Starts the HPRC Calibration when programmed to 1</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2834,7 +2834,7 @@ every 16 clock cycles.</p>
 <td><p>HP Calibration Duration Counter</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2851,7 +2851,7 @@ every 16 clock cycles.</p>
 </td>
 <td><p>32'h000000E0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2873,7 +2873,7 @@ every 16 clock cycles.</p>
 <td><p>HP Calibration Result Counter</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2906,13 +2906,13 @@ every 16 clock cycles.</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_CLK_CALIB_LPCALIB_CTRL_START">START</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 <td><p>Starts the LPRC Calibration when programmed to 1</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2945,13 +2945,13 @@ every 16 clock cycles.</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_CLK_CALIB_LPCALIB_CNTR_VALUE">VALUE</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 <td><p>LP Calibration Duration Counter</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2968,7 +2968,7 @@ every 16 clock cycles.</p>
 </td>
 <td><p>32'h000000EC</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2985,13 +2985,13 @@ every 16 clock cycles.</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_CLK_CALIB_LPCALIB_RESULT_VALUE">VALUE</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 <td><p>LP Calibration Result Counter</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3024,7 +3024,7 @@ every 16 clock cycles.</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_CLK_CALIB_DLYCALIB_CTRL_START">START</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 <td><p>Starts the LPRC Calibration when programmed to 1</p>
@@ -3034,13 +3034,13 @@ every 16 clock cycles.</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_CLK_CALIB_DLYCALIB_CTRL_BYPASS">BYPASS</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 <td><p>Delay Cell Bypass to Pad</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3073,13 +3073,13 @@ every 16 clock cycles.</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_CLK_CALIB_DLYCALIB_PWM_DS_VALUE">VALUE</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 <td><p>Calbration PWM Dutycycle</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3096,7 +3096,7 @@ every 16 clock cycles.</p>
 </td>
 <td><p>32'h000000F8</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3113,13 +3113,13 @@ every 16 clock cycles.</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_CLK_CALIB_DLYCALIB_RESULT_VALUE">VALUE</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 <td><p>LP Calibration Result Counter</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3436,7 +3436,7 @@ every 16 clock cycles.</p>
 <td><p>Sticky Reset timer1_sticky_prstn</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3537,7 +3537,7 @@ every 16 clock cycles.</p>
 <td><p>Sticky Reset wdt0_sticky_srstn</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3572,8 +3572,8 @@ every 16 clock cycles.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sync Reset perif_dma_sync_rstn<p></p>
-0: No Reset<p></p>
+<td><p>Sync Reset perif_dma_sync_rstn 
+0: No Reset 
 1: Reset</p>
 </td>
 </tr>
@@ -3583,8 +3583,8 @@ every 16 clock cycles.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sync Reset perif_sync_rstn<p></p>
-0: No Reset<p></p>
+<td><p>Sync Reset perif_sync_rstn 
+0: No Reset 
 1: Reset</p>
 </td>
 </tr>
@@ -3594,8 +3594,8 @@ every 16 clock cycles.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sync Reset sys_dma_sync_rstn<p></p>
-0: No Reset<p></p>
+<td><p>Sync Reset sys_dma_sync_rstn 
+0: No Reset 
 1: Reset</p>
 </td>
 </tr>
@@ -3605,12 +3605,12 @@ every 16 clock cycles.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sync Reset ulp_hifi_sync_rstn<p></p>
-0: No Reset<p></p>
+<td><p>Sync Reset ulp_hifi_sync_rstn 
+0: No Reset 
 1: Reset</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3645,8 +3645,8 @@ every 16 clock cycles.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sync Reset perif_dma_sync_rstn<p></p>
-0: Reset Not Issues<p></p>
+<td><p>Sync Reset perif_dma_sync_rstn 
+0: Reset Not Issues 
 1: Reset Issued</p>
 </td>
 </tr>
@@ -3656,8 +3656,8 @@ every 16 clock cycles.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sync Reset perif_sync_rstn<p></p>
-0: Reset Not Issues<p></p>
+<td><p>Sync Reset perif_sync_rstn 
+0: Reset Not Issues 
 1: Reset Issued</p>
 </td>
 </tr>
@@ -3667,8 +3667,8 @@ every 16 clock cycles.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sync Reset sys_dma_sync_rstn<p></p>
-0: Reset Not Issues<p></p>
+<td><p>Sync Reset sys_dma_sync_rstn 
+0: Reset Not Issues 
 1: Reset Issued</p>
 </td>
 </tr>
@@ -3678,12 +3678,12 @@ every 16 clock cycles.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sync Reset ulp_hifi_sync_rstn<p></p>
-0: Reset Not Issues<p></p>
+<td><p>Sync Reset ulp_hifi_sync_rstn 
+0: Reset Not Issues 
 1: Reset Issued</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4000,7 +4000,7 @@ every 16 clock cycles.</p>
 <td><p>Clock Gate enable for clk_ulp_cfg_syscnt</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4101,7 +4101,7 @@ every 16 clock cycles.</p>
 <td><p>Clock Gate enable for clk_ulp_wdt0_cclk</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4157,7 +4157,7 @@ every 16 clock cycles.</p>
 <td><p>Clock Divider value. 0: div1..4:div5 and so on</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4213,7 +4213,7 @@ every 16 clock cycles.</p>
 <td><p>Clock Divider value. 0: div1..4:div5 and so on</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4269,7 +4269,7 @@ every 16 clock cycles.</p>
 <td><p>Clock Divider value. 0: div1..4:div5 and so on</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4325,7 +4325,7 @@ every 16 clock cycles.</p>
 <td><p>Clock Divider value. 0: div1..4:div5 and so on</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4342,7 +4342,7 @@ every 16 clock cycles.</p>
 </td>
 <td><p>32'h00000124</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -4361,12 +4361,12 @@ every 16 clock cycles.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Trimming value of all the Sensitive Chains of clock cluster.<p></p>
-Starting from Sensitive Chain 0 to Sensitive Chain 1 of the<p></p>
+<td><p>Trimming value of all the Sensitive Chains of clock cluster. 
+Starting from Sensitive Chain 0 to Sensitive Chain 1 of the 
 cluster 0</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4383,7 +4383,7 @@ cluster 0</p>
 </td>
 <td><p>32'h00000128</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -4402,12 +4402,12 @@ cluster 0</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Trimming value of all the Sensitive Chains of clock cluster.<p></p>
-Starting from Sensitive Chain 0 to Sensitive Chain 1 of the<p></p>
+<td><p>Trimming value of all the Sensitive Chains of clock cluster. 
+Starting from Sensitive Chain 0 to Sensitive Chain 1 of the 
 cluster 1</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4424,7 +4424,7 @@ cluster 1</p>
 </td>
 <td><p>32'h0000012C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -4443,11 +4443,11 @@ cluster 1</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0: trimming_i is not valid<p></p>
+<td><p>0: trimming_i is not valid 
 1: trimming_i is valid</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4464,7 +4464,7 @@ cluster 1</p>
 </td>
 <td><p>32'h00000130</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -4483,11 +4483,11 @@ cluster 1</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Inject fault into Sensitive Chains of clock cluster. Starting<p></p>
+<td><p>Inject fault into Sensitive Chains of clock cluster. Starting 
 from Sensitive Chain 0 to Sensitive Chain 1 of the cluster 0</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4504,7 +4504,7 @@ from Sensitive Chain 0 to Sensitive Chain 1 of the cluster 0</p>
 </td>
 <td><p>32'h00000134</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -4523,11 +4523,11 @@ from Sensitive Chain 0 to Sensitive Chain 1 of the cluster 0</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Inject fault into Sensitive Chains of clock cluster. Starting<p></p>
+<td><p>Inject fault into Sensitive Chains of clock cluster. Starting 
 from Sensitive Chain 0 to Sensitive Chain 1 of the cluster 1</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4544,7 +4544,7 @@ from Sensitive Chain 0 to Sensitive Chain 1 of the cluster 1</p>
 </td>
 <td><p>32'h00000138</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -4563,8 +4563,8 @@ from Sensitive Chain 0 to Sensitive Chain 1 of the cluster 1</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Asynchronous sensor reset (active-low):<p></p>
-Bit 0: Sensor reset of Clock Cluster<p></p>
+<td><p>Asynchronous sensor reset (active-low): 
+Bit 0: Sensor reset of Clock Cluster 
 Bit 1: Sensor reset of Secondary Clock Cluster</p>
 </td>
 </tr>
@@ -4574,14 +4574,14 @@ Bit 1: Sensor reset of Secondary Clock Cluster</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Enable the corresponding controller of an IP. Active HIGH.<p></p>
-Bit 0: Enable the digital sensor controller of the IP Clock<p></p>
-Cluster<p></p>
-Bit 1: Enable the digital sensor controller of the IP Secondary<p></p>
+<td><p>Enable the corresponding controller of an IP. Active HIGH. 
+Bit 0: Enable the digital sensor controller of the IP Clock 
+Cluster 
+Bit 1: Enable the digital sensor controller of the IP Secondary 
 Clock Cluster</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4598,7 +4598,7 @@ Clock Cluster</p>
 </td>
 <td><p>32'h0000013C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -4617,10 +4617,10 @@ Clock Cluster</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Alarm detected.<p></p>
-00: No alarm<p></p>
-01: Indicate only one alarm occurs<p></p>
-10: Indicate multiple alarm occurs<p></p>
+<td><p>Alarm detected. 
+00: No alarm 
+01: Indicate only one alarm occurs 
+10: Indicate multiple alarm occurs 
 11: No possible</p>
 </td>
 </tr>
@@ -4630,16 +4630,16 @@ Clock Cluster</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Automatic error detection and correction of the FSM<p></p>
-(FSM secded error signal).<p></p>
-Two bits by cluster<p></p>
-00 No errors<p></p>
-01: Error detected and corrected<p></p>
-10: Errors detected, stop operation and return to IDLE state<p></p>
+<td><p>Automatic error detection and correction of the FSM 
+(FSM secded error signal). 
+Two bits by cluster 
+00 No errors 
+01: Error detected and corrected 
+10: Errors detected, stop operation and return to IDLE state 
 11: No possible.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4656,7 +4656,7 @@ Two bits by cluster<p></p>
 </td>
 <td><p>32'h00000140</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -4687,7 +4687,7 @@ Two bits by cluster<p></p>
 <td><p>IRQ clear</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4731,7 +4731,7 @@ Two bits by cluster<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sets the value of the quiescence entry delay. Adds 0-255 clk<p></p>
+<td><p>Sets the value of the quiescence entry delay. Adds 0-255 clk 
 cycles of hysteresis to the quiescence entry sequence</p>
 </td>
 </tr>
@@ -4750,7 +4750,7 @@ cycles of hysteresis to the quiescence entry sequence</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sets the value of the quiescence entry delay. Adds 0-255 clk<p></p>
+<td><p>Sets the value of the quiescence entry delay. Adds 0-255 clk 
 cycles of hysteresis to the quiescence entry sequence</p>
 </td>
 </tr>
@@ -4769,11 +4769,11 @@ cycles of hysteresis to the quiescence entry sequence</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sets the value of the quiescence entry delay. Adds 0-255 clk<p></p>
+<td><p>Sets the value of the quiescence entry delay. Adds 0-255 clk 
 cycles of hysteresis to the quiescence entry sequence</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4808,18 +4808,18 @@ cycles of hysteresis to the quiescence entry sequence</p>
 </td>
 <td><p>0x3</p>
 </td>
-<td><p>POFF[1:0] = 2'b00 - No Periphery Off Mode.<p></p>
-POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down<p></p>
-power to periphery and maintain memory contents (VDD=X),<p></p>
-Outputs X.<p></p>
-POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode<p></p>
-to remove source bias.<p></p>
-POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power<p></p>
-to periphery and memory core, no memory data retention<p></p>
+<td><p>POFF[1:0] = 2'b00 - No Periphery Off Mode. 
+POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down 
+power to periphery and maintain memory contents (VDD=X), 
+Outputs X. 
+POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode 
+to remove source bias. 
+POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power 
+to periphery and memory core, no memory data retention 
 (VDD=X), Outputs X.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4854,13 +4854,13 @@ to periphery and memory core, no memory data retention<p></p>
 </td>
 <td><p>0xC9C</p>
 </td>
-<td><p>TEST1 = 0 (default)<p></p>
-TEST_RNM = 0 (default)<p></p>
-RME = 1 (default)<p></p>
-RM [3:0] = 0011 (default)<p></p>
-RA [1:0] = 01 (default)<p></p>
-WA [2:0] = 110 (default)<p></p>
-WPULSE [2:0] = 000 (default)<p></p>
+<td><p>TEST1 = 0 (default) 
+TEST_RNM = 0 (default) 
+RME = 1 (default) 
+RM [3:0] = 0011 (default) 
+RA [1:0] = 01 (default) 
+WA [2:0] = 110 (default) 
+WPULSE [2:0] = 000 (default) 
 Bit 16 not used</p>
 </td>
 </tr>
@@ -4870,17 +4870,17 @@ Bit 16 not used</p>
 </td>
 <td><p>0xC9C</p>
 </td>
-<td><p>TEST1 = 0 (default)<p></p>
-TEST_RNM = 0 (default)<p></p>
-RME = 1 (default)<p></p>
-RM [3:0] = 0011 (default)<p></p>
-RA [1:0] = 01 (default)<p></p>
-WA [2:0] = 110 (default)<p></p>
-WPULSE [2:0] = 000 (default)<p></p>
+<td><p>TEST1 = 0 (default) 
+TEST_RNM = 0 (default) 
+RME = 1 (default) 
+RM [3:0] = 0011 (default) 
+RA [1:0] = 01 (default) 
+WA [2:0] = 110 (default) 
+WPULSE [2:0] = 000 (default) 
 Bit 16 not used</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4915,20 +4915,20 @@ Bit 16 not used</p>
 </td>
 <td><p>0x32678</p>
 </td>
-<td><p>TEST1A = 0 (default)<p></p>
-TEST1B = 0 (default)<p></p>
-TEST_RNMA = 0 (default)<p></p>
-RMEA = 1 (default)<p></p>
-RMEB = 1 (default)<p></p>
-RMA [3:0] = 0011 (default)<p></p>
-RMB [3:0] = 0011 (default)<p></p>
-RA [1:0] = 01 (default)<p></p>
-WA [2:0] = 110 (default)<p></p>
-WPULSE [2:0] = 000 (default)<p></p>
+<td><p>TEST1A = 0 (default) 
+TEST1B = 0 (default) 
+TEST_RNMA = 0 (default) 
+RMEA = 1 (default) 
+RMEB = 1 (default) 
+RMA [3:0] = 0011 (default) 
+RMB [3:0] = 0011 (default) 
+RA [1:0] = 01 (default) 
+WA [2:0] = 110 (default) 
+WPULSE [2:0] = 000 (default) 
 Bit 22 and 23 and 24 not used</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4963,13 +4963,13 @@ Bit 22 and 23 and 24 not used</p>
 </td>
 <td><p>0xF0C</p>
 </td>
-<td><p>TEST1 = 0 (default)<p></p>
-TEST_RNM = 0 (default)<p></p>
-RME = 1 (default)<p></p>
-RM [3:0] = 0001 (default)<p></p>
-RA [1:0] = 10 (default)<p></p>
-WA [2:0] = 111 (default)<p></p>
-WPULSE [2:0] = 000 (default)<p></p>
+<td><p>TEST1 = 0 (default) 
+TEST_RNM = 0 (default) 
+RME = 1 (default) 
+RM [3:0] = 0001 (default) 
+RA [1:0] = 10 (default) 
+WA [2:0] = 111 (default) 
+WPULSE [2:0] = 000 (default) 
 Bit 16 not used</p>
 </td>
 </tr>
@@ -4979,17 +4979,17 @@ Bit 16 not used</p>
 </td>
 <td><p>0xF0C</p>
 </td>
-<td><p>TEST1 = 0 (default)<p></p>
-TEST_RNM = 0 (default)<p></p>
-RME = 1 (default)<p></p>
-RM [3:0] = 0001 (default)<p></p>
-RA [1:0] = 10 (default)<p></p>
-WA [2:0] = 111 (default)<p></p>
-WPULSE [2:0] = 000 (default)<p></p>
+<td><p>TEST1 = 0 (default) 
+TEST_RNM = 0 (default) 
+RME = 1 (default) 
+RM [3:0] = 0001 (default) 
+RA [1:0] = 10 (default) 
+WA [2:0] = 111 (default) 
+WPULSE [2:0] = 000 (default) 
 Bit 16 not used</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -5024,20 +5024,20 @@ Bit 16 not used</p>
 </td>
 <td><p>0x3C238</p>
 </td>
-<td><p>TEST1A = 0 (default)<p></p>
-TEST1B = 0 (default)<p></p>
-TEST_RNMA = 0 (default)<p></p>
-RMEA = 1 (default)<p></p>
-RMEB = 1 (default)<p></p>
-RMA [3:0] = 0001 (default)<p></p>
-RMB [3:0] = 0001 (default)<p></p>
-RA [1:0] = 10 (default)<p></p>
-WA [2:0] = 111 (default)<p></p>
-WPULSE [2:0] = 000 (default)<p></p>
+<td><p>TEST1A = 0 (default) 
+TEST1B = 0 (default) 
+TEST_RNMA = 0 (default) 
+RMEA = 1 (default) 
+RMEB = 1 (default) 
+RMA [3:0] = 0001 (default) 
+RMB [3:0] = 0001 (default) 
+RA [1:0] = 10 (default) 
+WA [2:0] = 111 (default) 
+WPULSE [2:0] = 000 (default) 
 Bit 22 and 23 and 24 not used</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -5054,7 +5054,7 @@ Bit 22 and 23 and 24 not used</p>
 </td>
 <td><p>32'h00000A00</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5073,7 +5073,7 @@ Bit 22 and 23 and 24 not used</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0: I3C Mode<p></p>
+<td><p>0: I3C Mode 
 1: I2C Mode</p>
 </td>
 </tr>
@@ -5083,7 +5083,7 @@ Bit 22 and 23 and 24 not used</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Slave Activity Mode for GETSTATUS CCC Applicable in only Slave<p></p>
+<td><p>Slave Activity Mode for GETSTATUS CCC Applicable in only Slave 
 mode</p>
 </td>
 </tr>
@@ -5093,11 +5093,11 @@ mode</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Pending Interrupt Info for GETSTATUS CCC Applicable in only<p></p>
+<td><p>Pending Interrupt Info for GETSTATUS CCC Applicable in only 
 Slave mode</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -5114,7 +5114,7 @@ Slave mode</p>
 </td>
 <td><p>32'h00000A04</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5151,7 +5151,7 @@ Slave mode</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Slave maximum clock data turnaround time,Applicable in only<p></p>
+<td><p>Slave maximum clock data turnaround time,Applicable in only 
 Slave mode</p>
 </td>
 </tr>
@@ -5164,7 +5164,7 @@ Slave mode</p>
 <td><p>Slave DCR</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -5181,7 +5181,7 @@ Slave mode</p>
 </td>
 <td><p>32'h00000A08</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5203,7 +5203,7 @@ Slave mode</p>
 <td><p>slv_pid[31:0]</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -5220,7 +5220,7 @@ Slave mode</p>
 </td>
 <td><p>32'h00000A0C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5242,7 +5242,7 @@ Slave mode</p>
 <td><p>slv_pid[47:32]</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -5259,7 +5259,7 @@ Slave mode</p>
 </td>
 <td><p>32'h00000A10</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5290,7 +5290,7 @@ Slave mode</p>
 <td><p>Slave static address , Applicable in only Slave mode</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -5307,7 +5307,7 @@ Slave mode</p>
 </td>
 <td><p>32'h00000A14</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5324,13 +5324,13 @@ Slave mode</p>
 </td>
 <td><p><a HREF="ulp_gbl.htm#ULP_PERIF_I3C_STS_legacy_i2c_xfer">legacy_i2c_xfer</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 <td><p>Indicates the Legacy I2C Transfer</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -5347,7 +5347,7 @@ Slave mode</p>
 </td>
 <td><p>32'h00000A18</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5366,14 +5366,14 @@ Slave mode</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0: ulp_i3c_debug_port[3:0];<p></p>
-1: ulp_i3c_debug_port[7:4];<p></p>
-2: ulp_i3c_debug_port[11:8];<p></p>
-3: ulp_i3c_debug_port[15:12];<p></p>
+<td><p>0: ulp_i3c_debug_port[3:0]; 
+1: ulp_i3c_debug_port[7:4]; 
+2: ulp_i3c_debug_port[11:8]; 
+3: ulp_i3c_debug_port[15:12]; 
 ... 12:{1'b0,ulp_i3c_debug_port[54:52]};</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -5390,7 +5390,7 @@ Slave mode</p>
 </td>
 <td><p>32'h00000A1C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5409,14 +5409,14 @@ Slave mode</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0: 0 (no clock connected)<p></p>
-1: clk_hfrcosc<p></p>
-2: clk_ulp_main_pll<p></p>
-3: clk_hfclk_aon2ulp<p></p>
+<td><p>0: 0 (no clock connected) 
+1: clk_hfrcosc 
+2: clk_ulp_main_pll 
+3: clk_hfclk_aon2ulp 
 4: clk_hfclk_lp2ulp</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -5433,7 +5433,7 @@ Slave mode</p>
 </td>
 <td><p>32'h00000A20</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5452,11 +5452,11 @@ Slave mode</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>When set to “1”, sysresetreq output from CM52 will be used to<p></p>
+<td><p>When set to “1”, sysresetreq output from CM52 will be used to 
 assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -5473,7 +5473,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>32'h00000B00</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5582,7 +5582,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>32'h00000B04</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5691,7 +5691,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>32'h00000B08</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5800,7 +5800,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>32'h00000B0C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5867,7 +5867,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 <td><p>ulp_pinmux_cntl_bus[35*3+2:35*3] pinMux Control for ULP_GPIO35</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -5902,7 +5902,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5912,7 +5912,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5922,7 +5922,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5932,7 +5932,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5942,7 +5942,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5952,7 +5952,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -5962,11 +5962,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -6001,7 +6001,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6011,7 +6011,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6021,7 +6021,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6031,7 +6031,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6041,7 +6041,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6051,7 +6051,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6061,11 +6061,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -6100,7 +6100,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6110,7 +6110,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6120,7 +6120,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6130,7 +6130,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6140,7 +6140,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6150,7 +6150,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6160,11 +6160,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -6199,7 +6199,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6209,7 +6209,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6219,7 +6219,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6229,7 +6229,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6239,7 +6239,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6249,7 +6249,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6259,11 +6259,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -6298,7 +6298,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6308,7 +6308,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6318,7 +6318,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6328,7 +6328,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6338,7 +6338,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6348,7 +6348,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6358,11 +6358,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -6397,7 +6397,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6407,7 +6407,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6417,7 +6417,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6427,7 +6427,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6437,7 +6437,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6447,7 +6447,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6457,11 +6457,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -6496,7 +6496,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6506,7 +6506,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6516,7 +6516,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6526,7 +6526,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6536,7 +6536,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6546,7 +6546,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6556,11 +6556,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -6595,7 +6595,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6605,7 +6605,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6615,7 +6615,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6625,7 +6625,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6635,7 +6635,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6645,7 +6645,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6655,11 +6655,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -6694,7 +6694,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6704,7 +6704,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6714,7 +6714,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6724,7 +6724,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6734,7 +6734,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6744,7 +6744,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6754,11 +6754,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -6793,7 +6793,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6803,7 +6803,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6813,7 +6813,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6823,7 +6823,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6833,7 +6833,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6843,7 +6843,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6853,11 +6853,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -6892,7 +6892,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6902,7 +6902,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6912,7 +6912,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6922,7 +6922,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6932,7 +6932,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6942,7 +6942,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -6952,11 +6952,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -6991,7 +6991,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7001,7 +7001,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7011,7 +7011,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7021,7 +7021,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7031,7 +7031,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7041,7 +7041,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7051,11 +7051,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -7090,7 +7090,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7100,7 +7100,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7110,7 +7110,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7120,7 +7120,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7130,7 +7130,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7140,7 +7140,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7150,11 +7150,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -7189,7 +7189,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7199,7 +7199,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7209,7 +7209,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7219,7 +7219,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7229,7 +7229,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7239,7 +7239,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7249,11 +7249,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -7288,7 +7288,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7298,7 +7298,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7308,7 +7308,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7318,7 +7318,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7328,7 +7328,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7338,7 +7338,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7348,11 +7348,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -7387,7 +7387,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7397,7 +7397,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7407,7 +7407,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7417,7 +7417,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7427,7 +7427,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7437,7 +7437,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7447,11 +7447,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -7486,7 +7486,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7496,7 +7496,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7506,7 +7506,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7516,7 +7516,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7526,7 +7526,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7536,7 +7536,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7546,11 +7546,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -7585,7 +7585,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7595,7 +7595,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7605,7 +7605,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7615,7 +7615,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7625,7 +7625,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7635,7 +7635,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7645,11 +7645,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -7684,7 +7684,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7694,7 +7694,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7704,7 +7704,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7714,7 +7714,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7724,7 +7724,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7734,7 +7734,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7744,11 +7744,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -7783,7 +7783,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7793,7 +7793,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7803,7 +7803,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7813,7 +7813,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7823,7 +7823,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7833,7 +7833,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7843,11 +7843,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -7882,7 +7882,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7892,7 +7892,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7902,7 +7902,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7912,7 +7912,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7922,7 +7922,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7932,7 +7932,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7942,11 +7942,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -7981,7 +7981,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -7991,7 +7991,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8001,7 +8001,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8011,7 +8011,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8021,7 +8021,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8031,7 +8031,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8041,11 +8041,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -8080,7 +8080,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8090,7 +8090,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8100,7 +8100,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8110,7 +8110,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8120,7 +8120,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8130,7 +8130,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8140,11 +8140,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -8179,7 +8179,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8189,7 +8189,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8199,7 +8199,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8209,7 +8209,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8219,7 +8219,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8229,7 +8229,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8239,11 +8239,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -8278,7 +8278,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8288,7 +8288,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8298,7 +8298,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8308,7 +8308,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8318,7 +8318,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8328,7 +8328,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8338,11 +8338,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -8377,7 +8377,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8387,7 +8387,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8397,7 +8397,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8407,7 +8407,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8417,7 +8417,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8427,7 +8427,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8437,11 +8437,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -8476,7 +8476,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8486,7 +8486,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8496,7 +8496,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8506,7 +8506,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8516,7 +8516,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8526,7 +8526,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8536,11 +8536,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -8575,7 +8575,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8585,7 +8585,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8595,7 +8595,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8605,7 +8605,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8615,7 +8615,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8625,7 +8625,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8635,11 +8635,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -8674,7 +8674,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8684,7 +8684,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8694,7 +8694,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8704,7 +8704,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8714,7 +8714,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8724,7 +8724,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8734,11 +8734,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -8773,7 +8773,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8783,7 +8783,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8793,7 +8793,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8803,7 +8803,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8813,7 +8813,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8823,7 +8823,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8833,11 +8833,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -8872,7 +8872,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8882,7 +8882,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8892,7 +8892,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8902,7 +8902,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8912,7 +8912,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8922,7 +8922,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8932,11 +8932,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -8971,7 +8971,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8981,7 +8981,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -8991,7 +8991,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9001,7 +9001,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9011,7 +9011,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9021,7 +9021,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9031,11 +9031,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -9070,7 +9070,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9080,7 +9080,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9090,7 +9090,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9100,7 +9100,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9110,7 +9110,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9120,7 +9120,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9130,11 +9130,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -9169,7 +9169,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9179,7 +9179,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9189,7 +9189,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9199,7 +9199,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9209,7 +9209,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9219,7 +9219,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9229,11 +9229,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -9268,7 +9268,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9278,7 +9278,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9288,7 +9288,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9298,7 +9298,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9308,7 +9308,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9318,7 +9318,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9328,11 +9328,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -9367,7 +9367,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9377,7 +9377,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9387,7 +9387,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9397,7 +9397,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9407,7 +9407,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9417,7 +9417,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9427,11 +9427,11 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -9448,7 +9448,7 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 </td>
 <td><p>32'h00000C90</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -9470,6 +9470,6 @@ assert the rstn_por and rstn_sys inputs of CM52</p>
 <td><p>ULP spare register for future use</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 </body></html>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>Register Details</title></head>
+<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>Register Details</title></head>
 <body>
 <h1><a name="idp43395736"></a>Register Details</h1>
 <h2><a name="H3-sect1-reg-DW_apb_gpio_mem_map_DW_apb_gpio_addr_block"></a>DW_apb_gpio_addr_block Register Details</h2>
@@ -36,7 +36,7 @@ default direction can be configured as input or output after
 system reset through the GPIO_DFLT_DIR_A parameter.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (IN): Input Direction</li><li>0x1 (OUT): Output Direction</li></ul><p></p>
+<ul><li>0x0 (IN): Input Direction</li><li>0x1 (OUT): Output Direction</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -58,7 +58,7 @@ Interrupts are disabled on the corresponding bits of Port A if the corresponding
 Port A mode is set to Hardware.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Interrupt is disabled</li><li>0x1 (ENABLED): Interrupt is enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Interrupt is disabled</li><li>0x1 (ENABLED): Interrupt is enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -79,7 +79,7 @@ written to a bit in this register, it masks the interrupt generation capability 
 allowed through. The unmasked status can be read as well as the resultant status after masking.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Interrupt bits are unmasked</li><li>0x1 (ENABLED): Mask interrupt</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Interrupt bits are unmasked</li><li>0x1 (ENABLED): Mask interrupt</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -99,7 +99,7 @@ Whenever a 0 is written to a bit of this register, it configures the interrupt t
 edge-sensitive.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (LEVEL_SENSITIVE): Interrupt is level sensitive</li><li>0x1 (EDGE_SENSITIVE): Interrupt is edge sensitive</li></ul><p></p>
+<ul><li>0x0 (LEVEL_SENSITIVE): Interrupt is level sensitive</li><li>0x1 (EDGE_SENSITIVE): Interrupt is edge sensitive</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -119,7 +119,7 @@ occur on input of Port A. Whenever a 0 is written to a bit of this register, it 
 active-low sensitive; otherwise, it is rising-edge or active-high sensitive.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (ACTIVE_LOW): Active Low polarity</li><li>0x1 (ACTIVE_HIGH): Active High polarity</li></ul><p></p>
+<ul><li>0x0 (ACTIVE_LOW): Active Low polarity</li><li>0x1 (ACTIVE_HIGH): Active High polarity</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -137,7 +137,7 @@ Note:This register is available only if Port A is configured to generate interru
 <td><p>Interrupt status of Port A.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (INACTIVE): Inactive</li><li>0x1 (ACTIVE): Active</li></ul><p></p>
+<ul><li>0x0 (INACTIVE): Inactive</li><li>0x1 (ACTIVE): Active</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -156,7 +156,7 @@ Note:This register is available only if Port A is configured to generate interru
 <td><p>Raw interrupt of status of Port A (premasking bits)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (INACTIVE): Inactive</li><li>0x1 (ACTIVE): Active</li></ul><p></p>
+<ul><li>0x0 (INACTIVE): Inactive</li><li>0x1 (ACTIVE): Active</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -178,7 +178,7 @@ enables the debouncing circuitry. A signal must be valid for two periods of an e
 internally processed.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): No debounce</li><li>0x1 (ENABLED): Enable debounce</li></ul><p></p>
+<ul><li>0x0 (DISABLED): No debounce</li><li>0x1 (ENABLED): Enable debounce</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -198,7 +198,7 @@ When a 1 is written into a corresponding bit of this register, the interrupt is 
 Port A is not configured for interrupts.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): No interrupt clear</li><li>0x1 (ENABLED): Clear Interrupt</li></ul><p></p>
+<ul><li>0x0 (DISABLED): No interrupt clear</li><li>0x1 (ENABLED): Clear Interrupt</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -241,7 +241,7 @@ Port A is not configured for interrupts.</p>
 synchronized to pclk_intr.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): No synchronization to pclk_int (default)</li><li>0x1 (ENABLED): Synchronize to pclk_intr</li></ul><p></p>
+<ul><li>0x0 (DISABLED): No synchronization to pclk_int (default)</li><li>0x1 (ENABLED): Synchronize to pclk_intr</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -283,7 +283,7 @@ considered when the corresponding bit of this register is set to 1.</p>
 gpio_inttype_level and gpio_int_polarity registers.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): single edge sensitive</li><li>0x1 (ENABLED): both edge sensitive</li></ul><p></p>
+<ul><li>0x0 (DISABLED): single edge sensitive</li><li>0x1 (ENABLED): both edge sensitive</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -412,7 +412,7 @@ This register is present when the configuration parameter GPIO_ADD_ENCODED_PARAM
 GPIO_INT_BOTH_EDGE configuration parameter</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Interrupt generation on rising or falling edge</li><li>0x1 (ENABLED): Interrupt generation on both rising and falling edge</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Interrupt generation on rising or falling edge</li><li>0x1 (ENABLED): Interrupt generation on both rising and falling edge</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -433,7 +433,7 @@ GPIO_ID_WIDTH configuration parameter.</p>
 GPIO_ID configuration parameter.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): GPIO_ID not included</li><li>0x1 (ENABLED): GPIO_ID is included</li></ul><p></p>
+<ul><li>0x0 (DISABLED): GPIO_ID not included</li><li>0x1 (ENABLED): GPIO_ID is included</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -445,7 +445,7 @@ GPIO_ID configuration parameter.</p>
 GPIO_ADD_ENCODED_PARAMS configuration parameter.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Encoded parameters not added</li><li>0x1 (ENABLED): Encoded parameters added</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Encoded parameters not added</li><li>0x1 (ENABLED): Encoded parameters added</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -457,7 +457,7 @@ GPIO_ADD_ENCODED_PARAMS configuration parameter.</p>
 GPIO_DEBOUNCE configuration parameter.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Exclude debounce capability</li><li>0x1 (ENABLED): Include debounce capability</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Exclude debounce capability</li><li>0x1 (ENABLED): Include debounce capability</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -533,7 +533,7 @@ GPIO_HW_PORTA configuration parameter.</p>
 GPIO_PORTD_SINGLE_CTL configuration parameter.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): PORTD is not controlled from a single source</li><li>0x1 (ENABLED): PORTD is controlled from a single source</li></ul><p></p>
+<ul><li>0x0 (DISABLED): PORTD is not controlled from a single source</li><li>0x1 (ENABLED): PORTD is controlled from a single source</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -545,7 +545,7 @@ GPIO_PORTD_SINGLE_CTL configuration parameter.</p>
 GPIO_PORTC_SINGLE_CTL configuration parameter.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): PORTC is not controlled from a single source</li><li>0x1 (ENABLED): PORTC is controlled from a single source</li></ul><p></p>
+<ul><li>0x0 (DISABLED): PORTC is not controlled from a single source</li><li>0x1 (ENABLED): PORTC is controlled from a single source</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -557,7 +557,7 @@ GPIO_PORTC_SINGLE_CTL configuration parameter.</p>
 GPIO_PORTB_SINGLE_CTL configuration parameter.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): PORTB is not controlled from a single source</li><li>0x1 (ENABLED): PORTB is controlled from a single source</li></ul><p></p>
+<ul><li>0x0 (DISABLED): PORTB is not controlled from a single source</li><li>0x1 (ENABLED): PORTB is controlled from a single source</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -569,7 +569,7 @@ GPIO_PORTB_SINGLE_CTL configuration parameter.</p>
 GPIO_PORTA_SINGLE_CTL configuration parameter.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): PORTA is not controlled from a single source</li><li>0x1 (ENABLED): PORTA is controlled from a single source</li></ul><p></p>
+<ul><li>0x0 (DISABLED): PORTA is not controlled from a single source</li><li>0x1 (ENABLED): PORTA is controlled from a single source</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -581,7 +581,7 @@ GPIO_PORTA_SINGLE_CTL configuration parameter.</p>
 GPIO_NUM_PORT configuration parameter.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NUM_PORTS_1): Number of ports is 1</li><li>0x1 (NUM_PORTS_2): Number of ports is 2</li><li>0x2 (NUM_PORTS_3): Number of ports is 3</li><li>0x3 (NUM_PORTS_4): Number of ports is 4</li></ul><p></p>
+<ul><li>0x0 (NUM_PORTS_1): Number of ports is 1</li><li>0x1 (NUM_PORTS_2): Number of ports is 2</li><li>0x2 (NUM_PORTS_3): Number of ports is 3</li><li>0x3 (NUM_PORTS_4): Number of ports is 4</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -595,7 +595,7 @@ GPIO_APB_DATA_WIDTH configuration parameter.</p>
 <p>Note:0x3 = Reserved</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (APB_8BITS): APB DATA WIDTH is 8 bits</li><li>0x1 (APB_16BITS): APB DATA WIDTH is 16 bits</li><li>0x2 (APB_32BITS): APB DATA WIDTH is 32 bits</li></ul><p></p>
+<ul><li>0x0 (APB_8BITS): APB DATA WIDTH is 8 bits</li><li>0x1 (APB_16BITS): APB DATA WIDTH is 16 bits</li><li>0x2 (APB_32BITS): APB DATA WIDTH is 32 bits</li></ul> 
 <p>Value After Reset:0x2</p>
 </td>
 </tr>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title>aon_cfg_sec_regs</title>
     </head>
@@ -32,9 +32,9 @@
                     <p>32'h00000000</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>Boot Strap Register (Read Only). Boot straps are latched on<p></p>
-Power On and stored in this register.<p></p>
-This register can be reset only by PAD reset.<p></p>
+                    <p>Boot Strap Register (Read Only). Boot straps are latched on 
+Power On and stored in this register. 
+This register can be reset only by PAD reset. 
 To provide software backward compatible,</p>
                 </td>
             </tr>
@@ -124,9 +124,9 @@ To provide software backward compatible,</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>DFT JTAG sel in ATE/ RMA mode<p></p>
-0: Functional JTAG<p></p>
-1: DFT JTAG selected<p></p>
+                    <p>DFT JTAG sel in ATE/ RMA mode 
+0: Functional JTAG 
+1: DFT JTAG selected 
 This strap is also used to enable the DLTRe in production mode</p>
                 </td>
             </tr>
@@ -142,7 +142,7 @@ This strap is also used to enable the DLTRe in production mode</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>This bit indicates the status of Engineering part enable (From<p></p>
+                    <p>This bit indicates the status of Engineering part enable (From 
 Synaprot)</p>
                 </td>
             </tr>
@@ -178,9 +178,9 @@ Synaprot)</p>
                     <p>32'h00000004</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>Boot Strap Enable register<p></p>
-This register provides the option to over write the Bootstraps<p></p>
-using CPU register write .– Override functionality is not being<p></p>
+                    <p>Boot Strap Enable register 
+This register provides the option to over write the Bootstraps 
+using CPU register write .– Override functionality is not being 
 implemented currently. These are Dummy Registers</p>
                 </td>
             </tr>
@@ -210,8 +210,8 @@ implemented currently. These are Dummy Registers</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>boot_src[2:0] Strap Enable<p></p>
-1 : Allow bootstrap<p></p>
+                    <p>boot_src[2:0] Strap Enable 
+1 : Allow bootstrap 
 0 : Disable bootstrap and use override values</p>
                 </td>
             </tr>
@@ -227,8 +227,8 @@ implemented currently. These are Dummy Registers</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>boot_src[2:0] Strap Enable<p></p>
-1 : Allow bootstrap<p></p>
+                    <p>boot_src[2:0] Strap Enable 
+1 : Allow bootstrap 
 0 : Disable bootstrap and use override values</p>
                 </td>
             </tr>
@@ -244,8 +244,8 @@ implemented currently. These are Dummy Registers</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>boot_src[2:0] Strap Enable<p></p>
-1 : Allow bootstrap<p></p>
+                    <p>boot_src[2:0] Strap Enable 
+1 : Allow bootstrap 
 0 : Disable bootstrap and use override values</p>
                 </td>
             </tr>
@@ -261,8 +261,8 @@ implemented currently. These are Dummy Registers</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PLL Bypass- Strap Enable<p></p>
-1 : Allow bootstrap<p></p>
+                    <p>PLL Bypass- Strap Enable 
+1 : Allow bootstrap 
 0 : Disable bootstrap and use override values</p>
                 </td>
             </tr>
@@ -278,8 +278,8 @@ implemented currently. These are Dummy Registers</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>DFT JTAG Sel - Strap Enable<p></p>
-1 : Allow bootstrap<p></p>
+                    <p>DFT JTAG Sel - Strap Enable 
+1 : Allow bootstrap 
 0 : Disable bootstrap and use override values</p>
                 </td>
             </tr>
@@ -315,8 +315,8 @@ implemented currently. These are Dummy Registers</p>
                     <p>32'h00000014</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>Boot Strap Value register<p></p>
-This register provides the Values of the bootstrap values that<p></p>
+                    <p>Boot Strap Value register 
+This register provides the Values of the bootstrap values that 
 needs to be forced when disabling the Bootstrap Logic</p>
                 </td>
             </tr>
@@ -346,7 +346,7 @@ needs to be forced when disabling the Bootstrap Logic</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>boot_src[2:0] Value that will be overriding the boot straps<p></p>
+                    <p>boot_src[2:0] Value that will be overriding the boot straps 
 when disabled</p>
                 </td>
             </tr>
@@ -362,7 +362,7 @@ when disabled</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>boot_src[2:0] Value that will be overriding the boot straps<p></p>
+                    <p>boot_src[2:0] Value that will be overriding the boot straps 
 when disabled</p>
                 </td>
             </tr>
@@ -378,7 +378,7 @@ when disabled</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>boot_src[2:0] Value that will be overriding the boot straps<p></p>
+                    <p>boot_src[2:0] Value that will be overriding the boot straps 
 when disabled</p>
                 </td>
             </tr>
@@ -394,7 +394,7 @@ when disabled</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>pll_bypass Value that will be overriding the boot straps when<p></p>
+                    <p>pll_bypass Value that will be overriding the boot straps when 
 disabled</p>
                 </td>
             </tr>
@@ -410,7 +410,7 @@ disabled</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>dft_jtag_sel Value that will be overriding the boot straps<p></p>
+                    <p>dft_jtag_sel Value that will be overriding the boot straps 
 when disabled</p>
                 </td>
             </tr>
@@ -554,8 +554,8 @@ when disabled</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Indicates the incoming clocks are valid.<p></p>
-[0]: LP XTAL Valid<p></p>
+                    <p>Indicates the incoming clocks are valid. 
+[0]: LP XTAL Valid 
 [1]: LP RCOSC Valid</p>
                 </td>
             </tr>
@@ -744,10 +744,10 @@ when disabled</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>POR VDDIO is always enabled during boot-up. This register can<p></p>
-bypass POR_VDDIO 1.8V after boot-up to disable the<p></p>
-voltage-monitor feature<p></p>
-0 : Unmasked<p></p>
+                    <p>POR VDDIO is always enabled during boot-up. This register can 
+bypass POR_VDDIO 1.8V after boot-up to disable the 
+voltage-monitor feature 
+0 : Unmasked 
 1: Masked</p>
                 </td>
             </tr>
@@ -778,7 +778,7 @@ voltage-monitor feature<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>MCU 1.8V POR Threshold control. These control bits effect only<p></p>
+                    <p>MCU 1.8V POR Threshold control. These control bits effect only 
 after boot up for voltage-monitor feature</p>
                 </td>
             </tr>
@@ -794,8 +794,8 @@ after boot up for voltage-monitor feature</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>POR VDDIO 3.3V is always enabled during boot-up. This register<p></p>
-can bypass POR_VDDIO 3.3V after boot-up to disable the<p></p>
+                    <p>POR VDDIO 3.3V is always enabled during boot-up. This register 
+can bypass POR_VDDIO 3.3V after boot-up to disable the 
 voltage-monitor feature</p>
                 </td>
             </tr>
@@ -826,7 +826,7 @@ voltage-monitor feature</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>MCU 3.3V POR Threshold control. These control bits effect only<p></p>
+                    <p>MCU 3.3V POR Threshold control. These control bits effect only 
 after boot up for voltage-monitor feature</p>
                 </td>
             </tr>
@@ -842,8 +842,8 @@ after boot up for voltage-monitor feature</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>This register is used to bypass the CORE POR. This is to enable<p></p>
-the internal logic to go to lower voltage levels in Standby and<p></p>
+                    <p>This register is used to bypass the CORE POR. This is to enable 
+the internal logic to go to lower voltage levels in Standby and 
 Retention modes</p>
                 </td>
             </tr>
@@ -879,7 +879,7 @@ Retention modes</p>
                     <p>32'h00000050</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>Reset Mask register. Each bit masks a different reset (Only<p></p>
+                    <p>Reset Mask register. Each bit masks a different reset (Only 
 maskable resets)</p>
                 </td>
             </tr>
@@ -909,8 +909,8 @@ maskable resets)</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>AON WDG0 RST mask<p></p>
-0: Unmask (RST can be used)<p></p>
+                    <p>AON WDG0 RST mask 
+0: Unmask (RST can be used) 
 1: Mask</p>
                 </td>
             </tr>
@@ -1006,8 +1006,8 @@ maskable resets)</p>
                     <p>32'h00000054</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>Chip Reset cause status register. Write 1 to any bit to clear<p></p>
-the status<p></p>
+                    <p>Chip Reset cause status register. Write 1 to any bit to clear 
+the status 
 Status register bits are not masked by the Reset masks.</p>
                 </td>
             </tr>
@@ -1192,8 +1192,8 @@ Status register bits are not masked by the Reset masks.</p>
                     <p>32'h00000058</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>LP Partition Reset cause status register. Write 1 to any bit<p></p>
-to clear the status. If all the below bits are 0, then the<p></p>
+                    <p>LP Partition Reset cause status register. Write 1 to any bit 
+to clear the status. If all the below bits are 0, then the 
 Reset cause is from Chip (AON) level not partition level</p>
                 </td>
             </tr>
@@ -1223,7 +1223,7 @@ Reset cause is from Chip (AON) level not partition level</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Indicates Some of the LP partition logic is reset because of<p></p>
+                    <p>Indicates Some of the LP partition logic is reset because of 
 memory retention- &gt;on state transition.</p>
                 </td>
             </tr>
@@ -1239,7 +1239,7 @@ memory retention- &gt;on state transition.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Indicates Some of the LP partition logic is reset because of<p></p>
+                    <p>Indicates Some of the LP partition logic is reset because of 
 Full retention- &gt;on state transition.</p>
                 </td>
             </tr>
@@ -1255,7 +1255,7 @@ Full retention- &gt;on state transition.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Indicates Some of the LP partition logic is reset because of<p></p>
+                    <p>Indicates Some of the LP partition logic is reset because of 
 standby- &gt;on state transition.</p>
                 </td>
             </tr>
@@ -1271,7 +1271,7 @@ standby- &gt;on state transition.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Indicates LP Partition is reset seperately using the LP RST<p></p>
+                    <p>Indicates LP Partition is reset seperately using the LP RST 
 trigger from AON_RST_TRIG_REG</p>
                 </td>
             </tr>
@@ -1307,8 +1307,8 @@ trigger from AON_RST_TRIG_REG</p>
                     <p>32'h0000005C</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>HP Partition Reset cause status register. Write 1 to any bit<p></p>
-to clear the status. If all the below bits are 0, then the<p></p>
+                    <p>HP Partition Reset cause status register. Write 1 to any bit 
+to clear the status. If all the below bits are 0, then the 
 Reset cause is from Chip (AON) level not partition level</p>
                 </td>
             </tr>
@@ -1338,7 +1338,7 @@ Reset cause is from Chip (AON) level not partition level</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Indicates Some of the HP partition logic is reset because of<p></p>
+                    <p>Indicates Some of the HP partition logic is reset because of 
 memory retention- &gt;on state transition.</p>
                 </td>
             </tr>
@@ -1354,7 +1354,7 @@ memory retention- &gt;on state transition.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Indicates Some of the HP partition logic is reset because of<p></p>
+                    <p>Indicates Some of the HP partition logic is reset because of 
 Full retention- &gt;on state transition.</p>
                 </td>
             </tr>
@@ -1370,7 +1370,7 @@ Full retention- &gt;on state transition.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Indicates Some of the HP partition logic is reset because of<p></p>
+                    <p>Indicates Some of the HP partition logic is reset because of 
 standby- &gt;on state transition.</p>
                 </td>
             </tr>
@@ -1386,7 +1386,7 @@ standby- &gt;on state transition.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Indicates CM85 Partition is reset seperately using the LP RST<p></p>
+                    <p>Indicates CM85 Partition is reset seperately using the LP RST 
 trigger from AON_RST_TRIG_REG</p>
                 </td>
             </tr>
@@ -1422,7 +1422,7 @@ trigger from AON_RST_TRIG_REG</p>
                     <p>32'h00000060</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>Triggers from LP domain. This register can be written by any<p></p>
+                    <p>Triggers from LP domain. This register can be written by any 
 LP master</p>
                 </td>
             </tr>
@@ -1467,8 +1467,8 @@ LP master</p>
                     <p>0x2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0: Wake ULP<p></p>
-1: Wake LP (Self)<p></p>
+                    <p>0: Wake ULP 
+1: Wake LP (Self) 
 2: Wake HP</p>
                 </td>
             </tr>
@@ -1504,7 +1504,7 @@ LP master</p>
                     <p>32'h00000064</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>Triggers from HP domain. This register can be written by any<p></p>
+                    <p>Triggers from HP domain. This register can be written by any 
 LP master</p>
                 </td>
             </tr>
@@ -1549,8 +1549,8 @@ LP master</p>
                     <p>0x4</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0: Wake ULP<p></p>
-1: Wake LP<p></p>
+                    <p>0: Wake ULP 
+1: Wake LP 
 2: Wake HP (Self)</p>
                 </td>
             </tr>
@@ -1586,7 +1586,7 @@ LP master</p>
                     <p>32'h00000068</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>Register to to control the AON SYNC reset trigger to reset the<p></p>
+                    <p>Register to to control the AON SYNC reset trigger to reset the 
 partitions seperately</p>
                 </td>
             </tr>
@@ -1616,8 +1616,8 @@ partitions seperately</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Syn Reset trigger for ULP<p></p>
-Writing 0x1 Asserts reset for at least 300ns to ULP.<p></p>
+                    <p>Syn Reset trigger for ULP 
+Writing 0x1 Asserts reset for at least 300ns to ULP. 
 Writing 0x0 No effect.</p>
                 </td>
             </tr>
@@ -1633,8 +1633,8 @@ Writing 0x0 No effect.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Syn Reset trigger for LP<p></p>
-Writing 0x1 Asserts reset for at least 300ns to LP.<p></p>
+                    <p>Syn Reset trigger for LP 
+Writing 0x1 Asserts reset for at least 300ns to LP. 
 Writing 0x0 No effect.</p>
                 </td>
             </tr>
@@ -1650,8 +1650,8 @@ Writing 0x0 No effect.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Syn Reset trigger for HP<p></p>
-Writing 0x1 Asserts reset for at least 300ns to HP.<p></p>
+                    <p>Syn Reset trigger for HP 
+Writing 0x1 Asserts reset for at least 300ns to HP. 
 Writing 0x0 No effect.</p>
                 </td>
             </tr>
@@ -1719,7 +1719,7 @@ Writing 0x0 No effect.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – No VDD18 to OTP<p></p>
+                    <p>0 – No VDD18 to OTP 
 1 – VDD18 is applied to OTP along with PWRRDY</p>
                 </td>
             </tr>
@@ -1787,9 +1787,9 @@ Writing 0x0 No effect.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>00-Normal<p></p>
-01-Self-Refresh<p></p>
-10-Power Down<p></p>
+                    <p>00-Normal 
+01-Self-Refresh 
+10-Power Down 
 11-Deep Power Down</p>
                 </td>
             </tr>
@@ -1857,7 +1857,7 @@ Writing 0x0 No effect.</p>
                     <p>0x3</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>These two bits to override the PPROT[1:0] bits of the ULP2AON<p></p>
+                    <p>These two bits to override the PPROT[1:0] bits of the ULP2AON 
 APB Bus. PPROT[2] is directly coming from the master.s</p>
                 </td>
             </tr>
@@ -2074,10 +2074,10 @@ APB Bus. PPROT[2] is directly coming from the master.s</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>AMUTE interrupt event cause<p></p>
-0: No Event occurred<p></p>
-1: Mute event occurred (Low-high transition)<p></p>
-2: UnMute event occurred<p></p>
+                    <p>AMUTE interrupt event cause 
+0: No Event occurred 
+1: Mute event occurred (Low-high transition) 
+2: UnMute event occurred 
 (High-low transition)</p>
                 </td>
             </tr>
@@ -2113,9 +2113,9 @@ APB Bus. PPROT[2] is directly coming from the master.s</p>
                     <p>32'h0000008C</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>Interrupt Enable register to generate the AON interrupt to<p></p>
-LP/HP module. 0 of any bit will mask the above status bits to<p></p>
-generating from interrupt. 1 will enable the corresponding<p></p>
+                    <p>Interrupt Enable register to generate the AON interrupt to 
+LP/HP module. 0 of any bit will mask the above status bits to 
+generating from interrupt. 1 will enable the corresponding 
 status bit to generate the AON2LP interrupt.</p>
                 </td>
             </tr>
@@ -2236,14 +2236,14 @@ status bit to generate the AON2LP interrupt.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Timer value for to wait in AON after receiving the MC_ACK from<p></p>
-PMIC to wait, so all power supplies will be stable.<p></p>
-2^mc_ack_timer * clk_aon_main period is the time value.<p></p>
-If it is programmed with 4, then 2^4 = 16. With 24.576 MHz clock<p></p>
-the wait time will be around 640ns, with 5Mhz it will be around<p></p>
-3.2uSec.<p></p>
-Max possible wait is:<p></p>
-24.576MHz – 2.5mSec<p></p>
+                    <p>Timer value for to wait in AON after receiving the MC_ACK from 
+PMIC to wait, so all power supplies will be stable. 
+2^mc_ack_timer * clk_aon_main period is the time value. 
+If it is programmed with 4, then 2^4 = 16. With 24.576 MHz clock 
+the wait time will be around 640ns, with 5Mhz it will be around 
+3.2uSec. 
+Max possible wait is: 
+24.576MHz – 2.5mSec 
 5Mhz – 12.8mSec.</p>
                 </td>
             </tr>
@@ -2259,7 +2259,7 @@ Max possible wait is:<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Ignore MC_ACK from PMIC and use only above timer to generate<p></p>
+                    <p>Ignore MC_ACK from PMIC and use only above timer to generate 
 internal MC_ACK interrupt or Valid once new MCx is requested.</p>
                 </td>
             </tr>
@@ -2324,7 +2324,7 @@ internal MC_ACK interrupt or Valid once new MCx is requested.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PLL Enable:<p></p>
+                    <p>PLL Enable: 
 0x0: PLL is in low-leakage power down mode</p>
                 </td>
             </tr>
@@ -2355,8 +2355,8 @@ internal MC_ACK interrupt or Valid once new MCx is requested.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>VCO Rate output clock Enable<p></p>
-0x0: FOUTVCO = 0<p></p>
+                    <p>VCO Rate output clock Enable 
+0x0: FOUTVCO = 0 
 0x1: FOUTVCO is enabled</p>
                 </td>
             </tr>
@@ -2390,12 +2390,12 @@ internal MC_ACK interrupt or Valid once new MCx is requested.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Lock ount for the LOCK Signal.<p></p>
-LOCK signal will go high After approximately 2^LOCKCOUNT x 8<p></p>
-reference cycles.<p></p>
-0x0: 8<p></p>
-0x1: 16 (default)<p></p>
-0x2: 32<p></p>
+                    <p>Lock ount for the LOCK Signal. 
+LOCK signal will go high After approximately 2^LOCKCOUNT x 8 
+reference cycles. 
+0x0: 8 
+0x1: 16 (default) 
+0x2: 32 
 0x3: 64</p>
                 </td>
             </tr>
@@ -2463,11 +2463,11 @@ reference cycles.<p></p>
                     <p>0x177</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Feedback Divider<p></p>
-PLL Feedback divider value (256-1600). Actual maximum is 16383,<p></p>
-but this value is outside of the useful functional range of VCO<p></p>
-and PDF. Default value 375 should generate a 24.576MHz output<p></p>
-clock from 32.768KHz REF Clock as there is a div 2 after VCO<p></p>
+                    <p>Feedback Divider 
+PLL Feedback divider value (256-1600). Actual maximum is 16383, 
+but this value is outside of the useful functional range of VCO 
+and PDF. Default value 375 should generate a 24.576MHz output 
+clock from 32.768KHz REF Clock as there is a div 2 after VCO 
 before the FBDIV.</p>
                 </td>
             </tr>
@@ -2535,7 +2535,7 @@ before the FBDIV.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Post Divider value (1 to 16)<p></p>
+                    <p>Post Divider value (1 to 16) 
 Actual divide value is POSTDsIV+1</p>
                 </td>
             </tr>
@@ -2600,10 +2600,10 @@ Actual divide value is POSTDsIV+1</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Frequency Calibration Bypass<p></p>
-0x0: use internal SAR frequency Method<p></p>
-0x1: FCALIN is used to set the startup current DAC for three<p></p>
-FREF periods after PLLEN goes high or indefinitely if<p></p>
+                    <p>Frequency Calibration Bypass 
+0x0: use internal SAR frequency Method 
+0x1: FCALIN is used to set the startup current DAC for three 
+FREF periods after PLLEN goes high or indefinitely if 
 FCALTEST=0x1</p>
                 </td>
             </tr>
@@ -2637,8 +2637,8 @@ FCALTEST=0x1</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Lock Calibration input code<p></p>
-0x0: Minimum frequency at startup<p></p>
+                    <p>Lock Calibration input code 
+0x0: Minimum frequency at startup 
 0x1: maximum frequency at startup</p>
                 </td>
             </tr>
@@ -2776,9 +2776,9 @@ FCALTEST=0x1</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Lock calibration output code. This is the final balue used by<p></p>
-the SAR algorithm to set the initial VCO frequency. It can be<p></p>
-stored for future use with FCALBYP to speed up subsequent lock<p></p>
+                    <p>Lock calibration output code. This is the final balue used by 
+the SAR algorithm to set the initial VCO frequency. It can be 
+stored for future use with FCALBYP to speed up subsequent lock 
 times.</p>
                 </td>
             </tr>
@@ -2873,8 +2873,8 @@ times.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PLL Output divider Enable<p></p>
-0: Clock gated and divider disabled<p></p>
+                    <p>PLL Output divider Enable 
+0: Clock gated and divider disabled 
 1: Clock is enabled and divider running</p>
                 </td>
             </tr>
@@ -2890,8 +2890,8 @@ times.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PLL Bypass mux selection<p></p>
-0: lfrcosc clk sel<p></p>
+                    <p>PLL Bypass mux selection 
+0: lfrcosc clk sel 
 1: pll_out_div</p>
                 </td>
             </tr>
@@ -2907,7 +2907,7 @@ times.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Force Enable the clk_aon_main. This disables the low power mode<p></p>
+                    <p>Force Enable the clk_aon_main. This disables the low power mode 
 clock gate disable logic.</p>
                 </td>
             </tr>
@@ -2923,8 +2923,8 @@ clock gate disable logic.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>VAD clock PLL Bypass mux selection<p></p>
-0: lfrcosc clk sel<p></p>
+                    <p>VAD clock PLL Bypass mux selection 
+0: lfrcosc clk sel 
 1: pll_out_div</p>
                 </td>
             </tr>
@@ -2989,7 +2989,7 @@ clock gate disable logic.</p>
                     <p>0x3</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Divider value on the IPLL Output. Default value is 4. Generate<p></p>
+                    <p>Divider value on the IPLL Output. Default value is 4. Generate 
 24.576/4=6.144MHz</p>
                 </td>
             </tr>
@@ -3020,8 +3020,8 @@ clock gate disable logic.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PLL Output divider Enable<p></p>
-0: Clock gated and divider disabled<p></p>
+                    <p>PLL Output divider Enable 
+0: Clock gated and divider disabled 
 1: Clock is enabled and divider running</p>
                 </td>
             </tr>
@@ -3086,8 +3086,8 @@ clock gate disable logic.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Clock gate enable for slow count clock for WDG/ Timer clocks<p></p>
-0: Clock is disabled<p></p>
+                    <p>Clock gate enable for slow count clock for WDG/ Timer clocks 
+0: Clock is disabled 
 1: Clock is enabled</p>
                 </td>
             </tr>
@@ -3103,8 +3103,8 @@ clock gate disable logic.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Clock gate enable for High frequency clock going to ULP<p></p>
-0: Clock is disabled<p></p>
+                    <p>Clock gate enable for High frequency clock going to ULP 
+0: Clock is disabled 
 1: Clock is enabled</p>
                 </td>
             </tr>
@@ -3120,8 +3120,8 @@ clock gate disable logic.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Clock gate enable for High frequency clock going to LP<p></p>
-0: Clock is disabled<p></p>
+                    <p>Clock gate enable for High frequency clock going to LP 
+0: Clock is disabled 
 1: Clock is enabled</p>
                 </td>
             </tr>
@@ -3137,8 +3137,8 @@ clock gate disable logic.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Clock gate enable for PDM APB clock<p></p>
-0: Clock is disabled<p></p>
+                    <p>Clock gate enable for PDM APB clock 
+0: Clock is disabled 
 1: Clock is enabled</p>
                 </td>
             </tr>
@@ -3154,8 +3154,8 @@ clock gate disable logic.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Clock gate enable for GPIO APB clock<p></p>
-0: Clock is disabled<p></p>
+                    <p>Clock gate enable for GPIO APB clock 
+0: Clock is disabled 
 1: Clock is enabled</p>
                 </td>
             </tr>
@@ -3171,8 +3171,8 @@ clock gate disable logic.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Clock gate enable for GPIO debouncer clock<p></p>
-0: Clock is disabled<p></p>
+                    <p>Clock gate enable for GPIO debouncer clock 
+0: Clock is disabled 
 1: Clock is enabled</p>
                 </td>
             </tr>
@@ -3188,10 +3188,10 @@ clock gate disable logic.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Clock for Calibration selection.<p></p>
-0: Clock is disabled<p></p>
-1: AON LFOSC clock is sent for calibration<p></p>
-2: PMIC 32K clock is sent for calibration<p></p>
+                    <p>Clock for Calibration selection. 
+0: Clock is disabled 
+1: AON LFOSC clock is sent for calibration 
+2: PMIC 32K clock is sent for calibration 
 3: reserved</p>
                 </td>
             </tr>
@@ -3207,8 +3207,8 @@ clock gate disable logic.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Clock gate enable for GPIO Interrupt Generation clock<p></p>
-0: Clock is disabled<p></p>
+                    <p>Clock gate enable for GPIO Interrupt Generation clock 
+0: Clock is disabled 
 1: Clock is enabled</p>
                 </td>
             </tr>
@@ -3224,11 +3224,11 @@ clock gate disable logic.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Clock Selection for LP/UPL HFCLK.<p></p>
-0: clk_aon_main is selected as the hfclk for LP/ULP<p></p>
-1: clk_aon_pll_buf (24.576MHz) is selected as the hfclk for<p></p>
-LP/ULP.<p></p>
-This is a static mux, so disable the clock gate first, change<p></p>
+                    <p>Clock Selection for LP/UPL HFCLK. 
+0: clk_aon_main is selected as the hfclk for LP/ULP 
+1: clk_aon_pll_buf (24.576MHz) is selected as the hfclk for 
+LP/ULP. 
+This is a static mux, so disable the clock gate first, change 
 the mux selection and enable it later for switching.</p>
                 </td>
             </tr>
@@ -3293,8 +3293,8 @@ the mux selection and enable it later for switching.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Enable the LFRCOSC<p></p>
-0:Disable LFRCOSC<p></p>
+                    <p>Enable the LFRCOSC 
+0:Disable LFRCOSC 
 1:Enable LFRCOSC</p>
                 </td>
             </tr>
@@ -3310,7 +3310,7 @@ the mux selection and enable it later for switching.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>LFRC OSC TRIM<p></p>
+                    <p>LFRC OSC TRIM 
 Details TBD</p>
                 </td>
             </tr>
@@ -3326,7 +3326,7 @@ Details TBD</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>LFRC OSC Control<p></p>
+                    <p>LFRC OSC Control 
 Details TBD</p>
                 </td>
             </tr>
@@ -3342,7 +3342,7 @@ Details TBD</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>LFRC trim change enable<p></p>
+                    <p>LFRC trim change enable 
 0→1 change on this bit indicates TRIM update</p>
                 </td>
             </tr>
@@ -3407,8 +3407,8 @@ Details TBD</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Status of the LFRC clock<p></p>
-0: Not valid<p></p>
+                    <p>Status of the LFRC clock 
+0: Not valid 
 1: Valid</p>
                 </td>
             </tr>
@@ -3424,11 +3424,11 @@ Details TBD</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Indicates if the RCOSC is not generating clock and Failsafe mode<p></p>
-is activated to boot from XTAL<p></p>
-0: Normal Mode, Boot using LFRCOSC<p></p>
-1: Fail Safe Mode. During boot HW didn’t get the clock on RCOSC,<p></p>
-so fail safe activated and the clock is now from XTAL clock for<p></p>
+                    <p>Indicates if the RCOSC is not generating clock and Failsafe mode 
+is activated to boot from XTAL 
+0: Normal Mode, Boot using LFRCOSC 
+1: Fail Safe Mode. During boot HW didn’t get the clock on RCOSC, 
+so fail safe activated and the clock is now from XTAL clock for 
 AON.</p>
                 </td>
             </tr>
@@ -3493,10 +3493,10 @@ AON.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>AON_CLKOUT0 selection<p></p>
-00: 0x0<p></p>
-01: 32KHz XTAL<p></p>
-10: 5MHz AON Main Clock<p></p>
+                    <p>AON_CLKOUT0 selection 
+00: 0x0 
+01: 32KHz XTAL 
+10: 5MHz AON Main Clock 
 11: 24.576MHz PLL OUT</p>
                 </td>
             </tr>
@@ -3512,10 +3512,10 @@ AON.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>AON_CLKOUT1 selection<p></p>
-00: 0x0<p></p>
-01: 32KHz XTAL<p></p>
-10: 5MHz AON Main Clock<p></p>
+                    <p>AON_CLKOUT1 selection 
+00: 0x0 
+01: 32KHz XTAL 
+10: 5MHz AON Main Clock 
 11: 24.576MHz PLL OUT</p>
                 </td>
             </tr>
@@ -3531,8 +3531,8 @@ AON.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PMIC 32KHz Clock Direction control<p></p>
-0: Clock is input from PMIC<p></p>
+                    <p>PMIC 32KHz Clock Direction control 
+0: Clock is input from PMIC 
 1: Clock is output to PMIC</p>
                 </td>
             </tr>
@@ -3597,10 +3597,10 @@ AON.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Timer 0 External Timer Enable<p></p>
-0: 0<p></p>
-1: 32.768KHz/8192 (¼ sec)<p></p>
-2: 32.768KHz/16384 (½ sec)<p></p>
+                    <p>Timer 0 External Timer Enable 
+0: 0 
+1: 32.768KHz/8192 (¼ sec) 
+2: 32.768KHz/16384 (½ sec) 
 3: 32.768KHz/32768 (1 sec)</p>
                 </td>
             </tr>
@@ -3616,10 +3616,10 @@ AON.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Timer 1 External Timer Enable<p></p>
-0: 0<p></p>
-1: 32.768KHz/8192 (¼ sec)<p></p>
-2: 32.768KHz/16384 (½ sec)<p></p>
+                    <p>Timer 1 External Timer Enable 
+0: 0 
+1: 32.768KHz/8192 (¼ sec) 
+2: 32.768KHz/16384 (½ sec) 
 3: 32.768KHz/32768 (1 sec)</p>
                 </td>
             </tr>
@@ -3635,9 +3635,9 @@ AON.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Enables 1Hz Clock generation<p></p>
-0: Disable the counter<p></p>
-1: Enable the counter<p></p>
+                    <p>Enables 1Hz Clock generation 
+0: Disable the counter 
+1: Enable the counter 
 Clock and Reset Control Region</p>
                 </td>
             </tr>
@@ -3705,8 +3705,8 @@ Clock and Reset Control Region</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sticky Reset for PDM Serial clock domain<p></p>
-0: Asserted<p></p>
+                    <p>Sticky Reset for PDM Serial clock domain 
+0: Asserted 
 1: Deasserted</p>
                 </td>
             </tr>
@@ -3722,8 +3722,8 @@ Clock and Reset Control Region</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sticky Reset for PDM APB clock domain<p></p>
-0: Asserted<p></p>
+                    <p>Sticky Reset for PDM APB clock domain 
+0: Asserted 
 1: Deasserted</p>
                 </td>
             </tr>
@@ -3739,8 +3739,8 @@ Clock and Reset Control Region</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sticky Reset for GPIO debouncer clock domain<p></p>
-0: Asserted<p></p>
+                    <p>Sticky Reset for GPIO debouncer clock domain 
+0: Asserted 
 1: Deasserted</p>
                 </td>
             </tr>
@@ -3756,8 +3756,8 @@ Clock and Reset Control Region</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sticky Reset for GPIO APB clock domain<p></p>
-0: Asserted<p></p>
+                    <p>Sticky Reset for GPIO APB clock domain 
+0: Asserted 
 1: Deasserted</p>
                 </td>
             </tr>
@@ -3773,9 +3773,9 @@ Clock and Reset Control Region</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sticky Reset for Slow Clock counter domain resets all timers/<p></p>
-Watchdogs<p></p>
-0: Asserted<p></p>
+                    <p>Sticky Reset for Slow Clock counter domain resets all timers/ 
+Watchdogs 
+0: Asserted 
 1: Deasserted</p>
                 </td>
             </tr>
@@ -3811,10 +3811,10 @@ Watchdogs<p></p>
                     <p>32'h00000404</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>SW can perform read/write on this register to keep track of<p></p>
-the chip reset.<p></p>
-Note: A Shadow register is implemented for this register which<p></p>
-stores the value that is written to this register. The Shadow<p></p>
+                    <p>SW can perform read/write on this register to keep track of 
+the chip reset. 
+Note: A Shadow register is implemented for this register which 
+stores the value that is written to this register. The Shadow 
 Register gets reset only by the RSTIn Chip Pin.</p>
                 </td>
             </tr>
@@ -3882,10 +3882,10 @@ Register gets reset only by the RSTIn Chip Pin.</p>
                     <p>32'h00000408</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>SW can perform read/write on this register to keep track of<p></p>
-the chip reset.<p></p>
-Note: A Shadow register is implemented for this register which<p></p>
-stores the value that is written to this register. The Shadow<p></p>
+                    <p>SW can perform read/write on this register to keep track of 
+the chip reset. 
+Note: A Shadow register is implemented for this register which 
+stores the value that is written to this register. The Shadow 
 Register gets reset only by the RSTIn Chip Pin.</p>
                 </td>
             </tr>
@@ -3953,10 +3953,10 @@ Register gets reset only by the RSTIn Chip Pin.</p>
                     <p>32'h0000040C</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>SW can perform read/write on this register to keep track of<p></p>
-the chip reset.<p></p>
-Note: A Shadow register is implemented for this register which<p></p>
-stores the value that is written to this register. The Shadow<p></p>
+                    <p>SW can perform read/write on this register to keep track of 
+the chip reset. 
+Note: A Shadow register is implemented for this register which 
+stores the value that is written to this register. The Shadow 
 Register gets reset only by the RSTIn Chip Pin.</p>
                 </td>
             </tr>
@@ -4024,7 +4024,7 @@ Register gets reset only by the RSTIn Chip Pin.</p>
                     <p>32'h000005FC</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>Register to read the LP PCSM Wake events as there is no EWIC<p></p>
+                    <p>Register to read the LP PCSM Wake events as there is no EWIC 
 for the LP</p>
                 </td>
             </tr>
@@ -4121,7 +4121,7 @@ for the LP</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Power Control Feature Disable. When 1, this will disable the<p></p>
+                    <p>Power Control Feature Disable. When 1, this will disable the 
 clock control, power control and other PCSM state movements.</p>
                 </td>
             </tr>
@@ -4137,10 +4137,10 @@ clock control, power control and other PCSM state movements.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sleep control disable. This disables the consolidates Q channel<p></p>
-controlling the global Global Clock gate. Clock will never will<p></p>
-gate at global level and CLK_CTRL modules are byoassed<p></p>
-0: Normal CLK_CTRL operation<p></p>
+                    <p>Sleep control disable. This disables the consolidates Q channel 
+controlling the global Global Clock gate. Clock will never will 
+gate at global level and CLK_CTRL modules are byoassed 
+0: Normal CLK_CTRL operation 
 1: CLK_CTRL disabled and Global clock gate will be disabled.</p>
                 </td>
             </tr>
@@ -4156,10 +4156,10 @@ gate at global level and CLK_CTRL modules are byoassed<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Deep sleep disable. This disables the PCSM logic and will never<p></p>
-enter into any deep sleep state such as mem retection, full<p></p>
-retention and OFF mode<p></p>
-0: DEEP SLEEP States enabled<p></p>
+                    <p>Deep sleep disable. This disables the PCSM logic and will never 
+enter into any deep sleep state such as mem retection, full 
+retention and OFF mode 
+0: DEEP SLEEP States enabled 
 1: DEEP SLEEP states disabled</p>
                 </td>
             </tr>
@@ -4175,12 +4175,12 @@ retention and OFF mode<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>This bit forces PPU Pchnnel to enter into low power modes. This<p></p>
-enables the Static/ Dynamic power transitions possible without<p></p>
-any of the p-channel activity on the devices. This is strictly<p></p>
-for testing only. This will not guarantee the functionality<p></p>
-after wake up from M52/M3.<p></p>
-0x0: Normal functionality.<p></p>
+                    <p>This bit forces PPU Pchnnel to enter into low power modes. This 
+enables the Static/ Dynamic power transitions possible without 
+any of the p-channel activity on the devices. This is strictly 
+for testing only. This will not guarantee the functionality 
+after wake up from M52/M3. 
+0x0: Normal functionality. 
 0x1: Forces PACTIVE to PPU 0s and loops back PREQ to PACCEPT.</p>
                 </td>
             </tr>
@@ -4260,9 +4260,9 @@ after wake up from M52/M3.<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Wakeup event mask.<p></p>
-1: Event is used for wakeup<p></p>
-0: Event is not used for wakeup<p></p>
+                    <p>Wakeup event mask. 
+1: Event is used for wakeup 
+0: Event is not used for wakeup 
 All wakeup events are by default disabled.</p>
                 </td>
             </tr>
@@ -4327,9 +4327,9 @@ All wakeup events are by default disabled.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Wakeup event Polarity.<p></p>
-1: Event trigger when the signal is 0<p></p>
-0: Event trigger whtn the signals is 1<p></p>
+                    <p>Wakeup event Polarity. 
+1: Event trigger when the signal is 0 
+0: Event trigger whtn the signals is 1 
 All wakeup events are by default trigger with high.</p>
                 </td>
             </tr>
@@ -4823,8 +4823,8 @@ All wakeup events are by default trigger with high.</p>
                     <p>32'h00000614</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>PCSM Delay register.<p></p>
-Register indicates number of clocks needs to be waited in each<p></p>
+                    <p>PCSM Delay register. 
+Register indicates number of clocks needs to be waited in each 
 stae. Delay value will be number of clocks x PCSM clock period.</p>
                 </td>
             </tr>
@@ -4904,8 +4904,8 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>32'h00000618</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>PCSM Delay register.<p></p>
-Register indicates number of clocks needs to be waited in each<p></p>
+                    <p>PCSM Delay register. 
+Register indicates number of clocks needs to be waited in each 
 stae. Delay value will be number of clocks x PCSM clock period.</p>
                 </td>
             </tr>
@@ -4985,8 +4985,8 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>32'h0000061C</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>PCSM Delay register.<p></p>
-Register indicates number of clocks needs to be waited in each<p></p>
+                    <p>PCSM Delay register. 
+Register indicates number of clocks needs to be waited in each 
 stae. Delay value will be number of clocks x PCSM clock period.</p>
                 </td>
             </tr>
@@ -5081,8 +5081,8 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>32'h00000620</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>PCSM Delay register.<p></p>
-Register indicates number of clocks needs to be waited in each<p></p>
+                    <p>PCSM Delay register. 
+Register indicates number of clocks needs to be waited in each 
 stae. Delay value will be number of clocks x PCSM clock period.</p>
                 </td>
             </tr>
@@ -5162,8 +5162,8 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>32'h00000624</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>PCSM Delay register.<p></p>
-Register indicates number of clocks needs to be waited in each<p></p>
+                    <p>PCSM Delay register. 
+Register indicates number of clocks needs to be waited in each 
 stae. Delay value will be number of clocks x PCSM clock period.</p>
                 </td>
             </tr>
@@ -5290,7 +5290,7 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – No Action<p></p>
+                    <p>0 – No Action 
 1 – SW requesting a MC change</p>
                 </td>
             </tr>
@@ -5306,10 +5306,10 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – Default voltage required for On mode is 0.6V<p></p>
-1 – Default voltage required for on mode is 0.8V<p></p>
-Initially chip turns on in 0.8V mode but later it this bit can<p></p>
-be kept 0 so default it is on in 0.6V mode and the force_mc_req<p></p>
+                    <p>0 – Default voltage required for On mode is 0.6V 
+1 – Default voltage required for on mode is 0.8V 
+Initially chip turns on in 0.8V mode but later it this bit can 
+be kept 0 so default it is on in 0.6V mode and the force_mc_req 
 can change it to 0.8V part of SW DVFS.</p>
                 </td>
             </tr>
@@ -5325,8 +5325,8 @@ can change it to 0.8V part of SW DVFS.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Writing any value into this bit trigger the RWTC value change.<p></p>
-0: Related to 0.6V RWTC and/or low speed<p></p>
+                    <p>Writing any value into this bit trigger the RWTC value change. 
+0: Related to 0.6V RWTC and/or low speed 
 1: Related to 0.8V RWTC and/or high speed</p>
                 </td>
             </tr>
@@ -5394,9 +5394,9 @@ can change it to 0.8V part of SW DVFS.</p>
                     <p>0x3</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>00: Standby Mode<p></p>
-01: Logic/ Memory Retntion Mode<p></p>
-10: ULP/LP Active @0.6V<p></p>
+                    <p>00: Standby Mode 
+01: Logic/ Memory Retntion Mode 
+10: ULP/LP Active @0.6V 
 11: ULP/LP/HP Active @0.8V</p>
                 </td>
             </tr>
@@ -5427,8 +5427,8 @@ can change it to 0.8V part of SW DVFS.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Current Status of RWTC<p></p>
-0: 0.6V RWTC selected<p></p>
+                    <p>Current Status of RWTC 
+0: 0.6V RWTC selected 
 1: 0.8V RWTC selected</p>
                 </td>
             </tr>
@@ -5590,7 +5590,7 @@ can change it to 0.8V part of SW DVFS.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Power Control Feature Disable. When 1, this will disable the<p></p>
+                    <p>Power Control Feature Disable. When 1, this will disable the 
 clock control, power control and other PCSM state movements.</p>
                 </td>
             </tr>
@@ -5606,10 +5606,10 @@ clock control, power control and other PCSM state movements.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sleep control disable. This disables the consolidates Q channel<p></p>
-controlling the global Global Clock gate. Clock will never will<p></p>
-gate at global level and CLK_CTRL modules are byoassed<p></p>
-0: Normal CLK_CTRL operation<p></p>
+                    <p>Sleep control disable. This disables the consolidates Q channel 
+controlling the global Global Clock gate. Clock will never will 
+gate at global level and CLK_CTRL modules are byoassed 
+0: Normal CLK_CTRL operation 
 1: CLK_CTRL disabled and Global clock gate will be disabled.</p>
                 </td>
             </tr>
@@ -5625,10 +5625,10 @@ gate at global level and CLK_CTRL modules are byoassed<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Deep sleep disable. This disables the PCSM logic and will never<p></p>
-enter into any deep sleep state such as mem retection, full<p></p>
-retention and OFF mode<p></p>
-0: DEEP SLEEP States enabled<p></p>
+                    <p>Deep sleep disable. This disables the PCSM logic and will never 
+enter into any deep sleep state such as mem retection, full 
+retention and OFF mode 
+0: DEEP SLEEP States enabled 
 1: DEEP SLEEP states disabled</p>
                 </td>
             </tr>
@@ -5644,12 +5644,12 @@ retention and OFF mode<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>This bit forces PPU Pchnnel to enter into low power modes. This<p></p>
-enables the Static/ Dynamic power transitions possible without<p></p>
-any of the p-channel activity on the devices. This is strictly<p></p>
-for testing only. This will not guarantee the functionality<p></p>
-after wake up from M52/M3.<p></p>
-0x0: Normal functionality.<p></p>
+                    <p>This bit forces PPU Pchnnel to enter into low power modes. This 
+enables the Static/ Dynamic power transitions possible without 
+any of the p-channel activity on the devices. This is strictly 
+for testing only. This will not guarantee the functionality 
+after wake up from M52/M3. 
+0x0: Normal functionality. 
 0x1: Forces PACTIVE to PPU 0s and loops back PREQ to PACCEPT.</p>
                 </td>
             </tr>
@@ -5729,9 +5729,9 @@ after wake up from M52/M3.<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Wakeup event mask.<p></p>
-1: Event is used for wakeup<p></p>
-0: Event is not used for wakeup<p></p>
+                    <p>Wakeup event mask. 
+1: Event is used for wakeup 
+0: Event is not used for wakeup 
 All wakeup events are by default disabled.</p>
                 </td>
             </tr>
@@ -5796,9 +5796,9 @@ All wakeup events are by default disabled.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Wakeup event Polarity.<p></p>
-1: Event trigger when the signal is 0<p></p>
-0: Event trigger whtn the signals is 1<p></p>
+                    <p>Wakeup event Polarity. 
+1: Event trigger when the signal is 0 
+0: Event trigger whtn the signals is 1 
 All wakeup events are by default trigger with high.</p>
                 </td>
             </tr>
@@ -6292,8 +6292,8 @@ All wakeup events are by default trigger with high.</p>
                     <p>32'h00000714</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>PCSM Delay register.<p></p>
-Register indicates number of clocks needs to be waited in each<p></p>
+                    <p>PCSM Delay register. 
+Register indicates number of clocks needs to be waited in each 
 stae. Delay value will be number of clocks x PCSM clock period.</p>
                 </td>
             </tr>
@@ -6373,8 +6373,8 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>32'h00000718</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>PCSM Delay register.<p></p>
-Register indicates number of clocks needs to be waited in each<p></p>
+                    <p>PCSM Delay register. 
+Register indicates number of clocks needs to be waited in each 
 stae. Delay value will be number of clocks x PCSM clock period.</p>
                 </td>
             </tr>
@@ -6454,8 +6454,8 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>32'h0000071C</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>PCSM Delay register.<p></p>
-Register indicates number of clocks needs to be waited in each<p></p>
+                    <p>PCSM Delay register. 
+Register indicates number of clocks needs to be waited in each 
 stae. Delay value will be number of clocks x PCSM clock period.</p>
                 </td>
             </tr>
@@ -6550,8 +6550,8 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>32'h00000720</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>PCSM Delay register.<p></p>
-Register indicates number of clocks needs to be waited in each<p></p>
+                    <p>PCSM Delay register. 
+Register indicates number of clocks needs to be waited in each 
 stae. Delay value will be number of clocks x PCSM clock period.</p>
                 </td>
             </tr>
@@ -6631,8 +6631,8 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>32'h00000724</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>PCSM Delay register.<p></p>
-Register indicates number of clocks needs to be waited in each<p></p>
+                    <p>PCSM Delay register. 
+Register indicates number of clocks needs to be waited in each 
 stae. Delay value will be number of clocks x PCSM clock period.</p>
                 </td>
             </tr>
@@ -6759,7 +6759,7 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – No Action<p></p>
+                    <p>0 – No Action 
 1 – SW requesting a MC change</p>
                 </td>
             </tr>
@@ -6775,10 +6775,10 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – Default voltage required for On mode is 0.6V<p></p>
-1 – Default voltage required for on mode is 0.8V<p></p>
-Initially chip turns on in 0.8V mode but later it this bit can<p></p>
-be kept 0 so default it is on in 0.6V mode and the force_mc_req<p></p>
+                    <p>0 – Default voltage required for On mode is 0.6V 
+1 – Default voltage required for on mode is 0.8V 
+Initially chip turns on in 0.8V mode but later it this bit can 
+be kept 0 so default it is on in 0.6V mode and the force_mc_req 
 can change it to 0.8V part of SW DVFS.</p>
                 </td>
             </tr>
@@ -6794,8 +6794,8 @@ can change it to 0.8V part of SW DVFS.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Writing any value into this bit trigger the RWTC value change.<p></p>
-0: Related to 0.6V RWTC and/or low speed<p></p>
+                    <p>Writing any value into this bit trigger the RWTC value change. 
+0: Related to 0.6V RWTC and/or low speed 
 1: Related to 0.8V RWTC and/or high speed</p>
                 </td>
             </tr>
@@ -6863,9 +6863,9 @@ can change it to 0.8V part of SW DVFS.</p>
                     <p>0x3</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>00: Standby Mode<p></p>
-01: Logic/ Memory Retntion Mode<p></p>
-10: ULP/LP Active @0.6V<p></p>
+                    <p>00: Standby Mode 
+01: Logic/ Memory Retntion Mode 
+10: ULP/LP Active @0.6V 
 11: ULP/LP/HP Active @0.8V</p>
                 </td>
             </tr>
@@ -6896,8 +6896,8 @@ can change it to 0.8V part of SW DVFS.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Current Status of RWTC<p></p>
-0: 0.6V RWTC selected<p></p>
+                    <p>Current Status of RWTC 
+0: 0.6V RWTC selected 
 1: 0.8V RWTC selected</p>
                 </td>
             </tr>
@@ -7059,8 +7059,8 @@ can change it to 0.8V part of SW DVFS.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Enables the Clock monitor measurement<p></p>
-0: Disable<p></p>
+                    <p>Enables the Clock monitor measurement 
+0: Disable 
 1: Enable the monitoring</p>
                 </td>
             </tr>
@@ -7076,8 +7076,8 @@ can change it to 0.8V part of SW DVFS.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Enable generating the Interrupt from Clock Monitoring logic<p></p>
-0: No interrupt generated<p></p>
+                    <p>Enable generating the Interrupt from Clock Monitoring logic 
+0: No interrupt generated 
 1: Interrupt generated when the clock is out of bounds</p>
                 </td>
             </tr>
@@ -7093,9 +7093,9 @@ can change it to 0.8V part of SW DVFS.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Enable generating the Reset with clock monitoring Fault<p></p>
-0: Clock monitoring fault is not generated for Fault monitor<p></p>
-block<p></p>
+                    <p>Enable generating the Reset with clock monitoring Fault 
+0: Clock monitoring fault is not generated for Fault monitor 
+block 
 0: Clock monitoring fault is generated for Fault monitor block</p>
                 </td>
             </tr>
@@ -7163,11 +7163,11 @@ block<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Upper limit to detect the overflow when the XTAL clock is faster<p></p>
-than expected.<p></p>
-f the XTAL clock is faster, this ULIMIT determines on how much<p></p>
-higher the counter (Accumulation after the adjustment) can go<p></p>
-with in the CLKMON_PERIOD. This should be calculated based on<p></p>
+                    <p>Upper limit to detect the overflow when the XTAL clock is faster 
+than expected. 
+f the XTAL clock is faster, this ULIMIT determines on how much 
+higher the counter (Accumulation after the adjustment) can go 
+with in the CLKMON_PERIOD. This should be calculated based on 
 allowable clock range.</p>
                 </td>
             </tr>
@@ -7235,10 +7235,10 @@ allowable clock range.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Lower limit to detect the underflow when the XTAL clock is<p></p>
-slower than expected.<p></p>
-If the XTAL clock is slower, this LLIMIT determines on how much<p></p>
-lower the counter can go with in the CLKMON_PERIOD. This should<p></p>
+                    <p>Lower limit to detect the underflow when the XTAL clock is 
+slower than expected. 
+If the XTAL clock is slower, this LLIMIT determines on how much 
+lower the counter can go with in the CLKMON_PERIOD. This should 
 be calculated based on allowable clock range.</p>
                 </td>
             </tr>
@@ -7306,13 +7306,13 @@ be calculated based on allowable clock range.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>How much the faster clock counter needs to adjust for every<p></p>
-measurement period<p></p>
-Example:<p></p>
-As the oscillator clock is 50Mhz x2 of XTAL expected 25MHz,<p></p>
-ideally the Adjust value should be 2x the CLKMON_PERIOD. So for<p></p>
-if the clock monitoring period is programmed to be 16, then this<p></p>
-value needs to be 32. This value can also be used for any OSC<p></p>
+                    <p>How much the faster clock counter needs to adjust for every 
+measurement period 
+Example: 
+As the oscillator clock is 50Mhz x2 of XTAL expected 25MHz, 
+ideally the Adjust value should be 2x the CLKMON_PERIOD. So for 
+if the clock monitoring period is programmed to be 16, then this 
+value needs to be 32. This value can also be used for any OSC 
 clock offset adjustment.</p>
                 </td>
             </tr>
@@ -7380,12 +7380,12 @@ clock offset adjustment.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>How much the slower clock counter needs to adjust for every<p></p>
-measurement period<p></p>
-As the oscillator clock is 50Mhz x2 of XTAL expected 25MHz,<p></p>
-ideally the Adjust value should be 2x the CLKMON_PERIOD. So for<p></p>
-if the clock monitoring period is programmed to be 16, then this<p></p>
-value needs to be 32. This value can also be used for any OSC<p></p>
+                    <p>How much the slower clock counter needs to adjust for every 
+measurement period 
+As the oscillator clock is 50Mhz x2 of XTAL expected 25MHz, 
+ideally the Adjust value should be 2x the CLKMON_PERIOD. So for 
+if the clock monitoring period is programmed to be 16, then this 
+value needs to be 32. This value can also be used for any OSC 
 clock offset adjustment.</p>
                 </td>
             </tr>
@@ -7453,8 +7453,8 @@ clock offset adjustment.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Clock Monitoring period in the XTAL clock periods.<p></p>
-Ex. Program 0xF to repeat the clock monitoring measuresment for<p></p>
+                    <p>Clock Monitoring period in the XTAL clock periods. 
+Ex. Program 0xF to repeat the clock monitoring measuresment for 
 every 16 clock cycles.</p>
                 </td>
             </tr>
@@ -7586,8 +7586,8 @@ every 16 clock cycles.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Enabled the PDM Clock output pad.<p></p>
-0: Disables output clock<p></p>
+                    <p>Enabled the PDM Clock output pad. 
+0: Disables output clock 
 1: Enables Output clock</p>
                 </td>
             </tr>
@@ -8544,7 +8544,7 @@ every 16 clock cycles.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Shut down mode achieves highest leakage reduction without<p></p>
+                    <p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
                 </td>
             </tr>
@@ -8560,8 +8560,8 @@ data retention</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+                    <p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -8577,7 +8577,7 @@ array content with lower voltage</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+                    <p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
                 </td>
             </tr>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>Register Details</title></head>
+<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>Register Details</title></head>
 <body>
 <h1><a name="idp41725304"></a>Register Details</h1>
 <h2><a name="H3-sect1-reg-DWC_mshc_map_DWC_mshc_vendor1_block"></a>DWC_mshc_vendor1_block Register Details</h2>
@@ -65,7 +65,7 @@
 <p>Note: Negedge sampling shall be enable only if the total output delay is greater that (t_clockperiod - t_setup - t_diff) and limited to (1.5*t_clockperiod - t_setup - t_diff).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (PEDGE_SMPL): Samples CMD/DATA with respect to positive edge of cclk_rx</li><li>0x1 (NEDGE_SMPL): Samples CMD/DATA with respect to negative edge of cclk_rx</li></ul><p></p>
+<ul><li>0x0 (PEDGE_SMPL): Samples CMD/DATA with respect to positive edge of cclk_rx</li><li>0x1 (NEDGE_SMPL): Samples CMD/DATA with respect to negative edge of cclk_rx</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -76,7 +76,7 @@
 <td><p>Launches CMD/DATA with respect to positive edge of cclk_tx for low speed SDR only support.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NEDGE_DRV): Launches CMD/DATA with respect to negative edge of cclk_tx</li><li>0x1 (PEDGE_DRV): Launches CMD/DATA with respect to positive edge of cclk_tx</li></ul><p></p>
+<ul><li>0x0 (NEDGE_DRV): Launches CMD/DATA with respect to negative edge of cclk_tx</li><li>0x1 (PEDGE_DRV): Launches CMD/DATA with respect to positive edge of cclk_tx</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -95,7 +95,7 @@
 <p>This bit must be used to disable IP's internal clock gating when required. when disabled clocks are not gated. Clocks to the core (except hclk) must be stopped when programming this bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (ENABLE): Internal clock gates are active and clock gating is controlled internally</li><li>0x1 (DISABLE): Internal clock gating is disabled, clocks are not gated internally</li></ul><p></p>
+<ul><li>0x0 (ENABLE): Internal clock gates are active and clock gating is controlled internally</li><li>0x1 (DISABLE): Internal clock gating is disabled, clocks are not gated internally</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -128,7 +128,7 @@ a flop in DWC_mshc. The I/O pad delay is consistent across CMD and DATA lines, a
 <p>(2*t_card_clk_period - t_setup)</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLE_CMD_CONFLICT_CHK): Disable command conflict check</li><li>0x1 (CMD_CONFLICT_CHK_LAT1): Check for command conflict after 1 card clock cycle</li></ul><p></p>
+<ul><li>0x0 (DISABLE_CMD_CONFLICT_CHK): Disable command conflict check</li><li>0x1 (CMD_CONFLICT_CHK_LAT1): Check for command conflict after 1 card clock cycle</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -164,7 +164,7 @@ When more than one bit is set the manager selects the burst it prefers among tho
 <p>Controls generation of INCR16 transfers on Manager interface.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): AHB INCR16 burst type is not generated on Manager I/F</li><li>0x1 (TRUE): AHB INCR16 burst type can be generated on Manager I/F</li></ul><p></p>
+<ul><li>0x0 (FALSE): AHB INCR16 burst type is not generated on Manager I/F</li><li>0x1 (TRUE): AHB INCR16 burst type can be generated on Manager I/F</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -177,7 +177,7 @@ When more than one bit is set the manager selects the burst it prefers among tho
 <p>Controls generation of INCR8 transfers on Manager interface.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): AHB INCR8 burst type is not generated on Manager I/F</li><li>0x1 (TRUE): AHB INCR8 burst type can be generated on Manager I/F</li></ul><p></p>
+<ul><li>0x0 (FALSE): AHB INCR8 burst type is not generated on Manager I/F</li><li>0x1 (TRUE): AHB INCR8 burst type can be generated on Manager I/F</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -190,7 +190,7 @@ When more than one bit is set the manager selects the burst it prefers among tho
 <p>Controls generation of INCR4 transfers on Manager interface.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): AHB INCR4 burst type is not generated on Manager I/F</li><li>0x1 (TRUE): AHB INCR4 burst type can be generated on Manager I/F</li></ul><p></p>
+<ul><li>0x0 (FALSE): AHB INCR4 burst type is not generated on Manager I/F</li><li>0x1 (TRUE): AHB INCR4 burst type can be generated on Manager I/F</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -203,7 +203,7 @@ When more than one bit is set the manager selects the burst it prefers among tho
 <p>Controls generation of undefined length INCR transfer on Manager interface.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FALSE): Undefined INCR type burst is the least preferred burst on AHB Manager I/F</li><li>0x1 (TRUE): Undefined INCR type burst is the most preferred burst on AHB Manager I/F</li></ul><p></p>
+<ul><li>0x0 (FALSE): Undefined INCR type burst is the least preferred burst on AHB Manager I/F</li><li>0x1 (TRUE): Undefined INCR type burst is the most preferred burst on AHB Manager I/F</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -274,7 +274,7 @@ When more than one bit is set the manager selects the burst it prefers among tho
 <p>The maximum value that can be set here depends on the length of delayline used for tuning. A delayLine with 128 taps can use values from 0x0 to 0x7F.</p>
 <p class="BLANK"></p>
 <p>This field is valid only when SWIN_TH_EN is '1'. Should be programmed only when SAMPLE_CLK_SEL is '0'</p>
-<ul><li>0x0 : Threshold values is 0x1, windows of length 1 tap and above can be selected as sampling window.</li><li>0x1 : Threshold values is 0x2, windows of length 2 taps and above can be selected as sampling window.</li><li>0x2 : Threshold values is 0x1, windows of length 3 taps and above can be selected as sampling window.</li><li>........</li><li>0x7F : Threshold values is 0x1, windows of length 127 taps and above can be selected as sampling window.</li></ul><p></p>
+<ul><li>0x0 : Threshold values is 0x1, windows of length 1 tap and above can be selected as sampling window.</li><li>0x1 : Threshold values is 0x2, windows of length 2 taps and above can be selected as sampling window.</li><li>0x2 : Threshold values is 0x1, windows of length 3 taps and above can be selected as sampling window.</li><li>........</li><li>0x7F : Threshold values is 0x1, windows of length 127 taps and above can be selected as sampling window.</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -294,7 +294,7 @@ When more than one bit is set the manager selects the burst it prefers among tho
 Set a value of 0x3 for glitch free clock switching when the PHY Type is SNPS SD/eMMC phy.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (LATENCY_LT_1): Less than 1-cycle latency</li><li>0x1 (LATENCY_LT_2): Less than 2-cycle latency</li><li>0x2 (LATENCY_LT_3): Less than 3-cycle latency</li><li>0x3 (LATENCY_LT_4): Less than 4-cycle latency</li></ul><p></p>
+<ul><li>0x0 (LATENCY_LT_1): Less than 1-cycle latency</li><li>0x1 (LATENCY_LT_2): Less than 2-cycle latency</li><li>0x2 (LATENCY_LT_3): Less than 3-cycle latency</li><li>0x3 (LATENCY_LT_4): Less than 4-cycle latency</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -305,7 +305,7 @@ Set a value of 0x3 for glitch free clock switching when the PHY Type is SNPS SD/
 <td><p>Maximum Latency specification between cclk_tx and cclk_rx.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (LATENCY_LT_1): Less than 1-cycle latency</li><li>0x1 (LATENCY_LT_2): Less than 2-cycle latency</li><li>0x2 (LATENCY_LT_3): Less than 3-cycle latency</li><li>0x3 (LATENCY_LT_4): Less than 4-cycle latency</li></ul><p></p>
+<ul><li>0x0 (LATENCY_LT_1): Less than 1-cycle latency</li><li>0x1 (LATENCY_LT_2): Less than 2-cycle latency</li><li>0x2 (LATENCY_LT_3): Less than 3-cycle latency</li><li>0x3 (LATENCY_LT_4): Less than 4-cycle latency</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -319,7 +319,7 @@ Set a value of 0x3 for glitch free clock switching when the PHY Type is SNPS SD/
 clock, cclk_rx and also drift_cclk_rx. Changing phase code when clocks are stopped ensures glitch free phase switching. Set this bit to 0 if the PHY or delayline can guarantee glitch free switching.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (ENABLE_CLK_STOPPING): Clocks stopped during phase code change</li><li>0x0 (DISABLE_CLK_STOPPING): Clocks not stopped. PHY ensures glitch free phase switching.</li></ul><p></p>
+<ul><li>0x1 (ENABLE_CLK_STOPPING): Clocks stopped during phase code change</li><li>0x0 (DISABLE_CLK_STOPPING): Clocks not stopped. PHY ensures glitch free phase switching.</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -352,7 +352,7 @@ clock, cclk_rx and also drift_cclk_rx. Changing phase code when clocks are stopp
 <td><p>This fields enables software-managed tuning flow.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (SW_TUNING_ENABLE): Software-managed tuning enabled. AT_STAT_R.CENTER_PH_CODE Field is now writable.</li><li>0x0 (SW_TUNING_DISABLE): Software-managed tuning disabled.</li></ul><p></p>
+<ul><li>0x1 (SW_TUNING_ENABLE): Software-managed tuning enabled. AT_STAT_R.CENTER_PH_CODE Field is now writable.</li><li>0x0 (SW_TUNING_DISABLE): Software-managed tuning disabled.</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -363,7 +363,7 @@ clock, cclk_rx and also drift_cclk_rx. Changing phase code when clocks are stopp
 <td><p>Framing errors are not generated when executing tuning. This debug bit allows users to report these errors.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (DEBUG_ERRORS): Debug mode for reporting framing errors</li><li>0x0 (ERRORS_DISABLED): Default mode where as per SD-HCI no errors are reported.</li></ul><p></p>
+<ul><li>0x1 (DEBUG_ERRORS): Debug mode for reporting framing errors</li><li>0x0 (ERRORS_DISABLED): Default mode where as per SD-HCI no errors are reported.</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -378,7 +378,7 @@ clock, cclk_rx and also drift_cclk_rx. Changing phase code when clocks are stopp
 <p>Field should be programmed only when SAMPLE_CLK_SEL is '0'</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (THRESHOLD_MODE): Tuning engine selects the first complete sampling window that meets the threshold set by SWIN_TH_VAL field</li><li>0x0 (LARGEST_WIN_MODE): Tuning engine sweeps all taps and settles at the largest window</li></ul><p></p>
+<ul><li>0x1 (THRESHOLD_MODE): Tuning engine selects the first complete sampling window that meets the threshold set by SWIN_TH_VAL field</li><li>0x0 (LARGEST_WIN_MODE): Tuning engine sweeps all taps and settles at the largest window</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>

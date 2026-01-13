@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
@@ -87,36 +87,36 @@
         </p>
         <h2>Field Descriptions</h2>
         <h3 id="rkek.desc">rkek - RKEK Enable<a class="headerlink" href="#rkek.desc" title="Permalink to this headline"></a></h3>
-        <p>This field determines whether RKEK (root key) should be used in the following operations. When this bit is set, hardware directly uses the RKEK to replace a particular operand (see below) during the operation.<p></p>
-• ZMP - Montgomery Multiplication (X operand)<p></p>
-• ZMP - Modular Multiplication (X operand)<p></p>
-• ECP - Point (Scalar) Multiplication (Y1 operand)<p></p>
-Notes:<p></p>
-1. Do not set this bit if the programmed operation mode is not one of the operations listed above.<p></p>
-2. Currently the max size of RKEK is 521-bit. If RKEK is used, the operand bitwidth shall be less than or equal to 521 in the AMC_SIZE register.<p></p></p>
+        <p>This field determines whether RKEK (root key) should be used in the following operations. When this bit is set, hardware directly uses the RKEK to replace a particular operand (see below) during the operation. 
+• ZMP - Montgomery Multiplication (X operand) 
+• ZMP - Modular Multiplication (X operand) 
+• ECP - Point (Scalar) Multiplication (Y1 operand) 
+Notes: 
+1. Do not set this bit if the programmed operation mode is not one of the operations listed above. 
+2. Currently the max size of RKEK is 521-bit. If RKEK is used, the operand bitwidth shall be less than or equal to 521 in the AMC_SIZE register. </p>
         <h3 id="securemode.desc">securemode - Secure Mode<a class="headerlink" href="#securemode.desc" title="Permalink to this headline"></a></h3>
-        <p>This field determines the operational sequence when performing ZMP-Modular Exponentiation computation.<p></p>
-• 0h= Use unsecured sequence (faster computation)<p></p>
-• 1h= Use secured sequence against Power Analysis attack (slower computation)<p></p>
-Notes:<p></p>
-1. If this field is programmed to one, the internal hardware ensures all calculations (such as multiplication) that appear in the operational sequence take exactly the same number of cycle to complete regardless the value of operands. Otherwise, the internal hardware tires to take the cycle as less as possible to complete the calculation (Applied to all ZMP and ECP operations).<p></p></p>
+        <p>This field determines the operational sequence when performing ZMP-Modular Exponentiation computation. 
+• 0h= Use unsecured sequence (faster computation) 
+• 1h= Use secured sequence against Power Analysis attack (slower computation) 
+Notes: 
+1. If this field is programmed to one, the internal hardware ensures all calculations (such as multiplication) that appear in the operational sequence take exactly the same number of cycle to complete regardless the value of operands. Otherwise, the internal hardware tires to take the cycle as less as possible to complete the calculation (Applied to all ZMP and ECP operations). </p>
         <h3 id="opmode.desc">opmode - Operation Mode<a class="headerlink" href="#opmode.desc" title="Permalink to this headline"></a></h3>
-        <p>The engine supports two algorithms. The various modular operations<p></p>
-(ZMP) are used to support RSA. The various point calculations (ECP) are used to support Elliptic Curve. The field determines this operation mode:<p></p>
-• 00h= ZMP - Montgomery Multiplication<p></p>
-• 01h= ZMP - Modular Multiplication<p></p>
-• 02h= ZMP - Modular Exponentiation<p></p>
-• 03h= ZMP - Modular Inverse<p></p>
-• 04h= ZMP - Pre-Computation (R=2^2n Mod M)<p></p>
-• 05h= ZMP - Modular Addition<p></p>
-• 06h= ZMP - Modular Subtraction<p></p>
-• 10h= ECP - Point (Scalar) Multiplication<p></p>
-• 11h= ECP - Point Addition<p></p>
-• 12h= ECP - Point Subtraction<p></p>
-• 13h= ECP - Point Doubling<p></p>
-• 14h= ECP - Point Additive Inverse<p></p>
-• Else= Reserved<p></p>
-Notes:<p></p>
-1. ZMP's Modular Inverse requires the operands to be in a finite field.<p></p></p>
+        <p>The engine supports two algorithms. The various modular operations 
+(ZMP) are used to support RSA. The various point calculations (ECP) are used to support Elliptic Curve. The field determines this operation mode: 
+• 00h= ZMP - Montgomery Multiplication 
+• 01h= ZMP - Modular Multiplication 
+• 02h= ZMP - Modular Exponentiation 
+• 03h= ZMP - Modular Inverse 
+• 04h= ZMP - Pre-Computation (R=2^2n Mod M) 
+• 05h= ZMP - Modular Addition 
+• 06h= ZMP - Modular Subtraction 
+• 10h= ECP - Point (Scalar) Multiplication 
+• 11h= ECP - Point Addition 
+• 12h= ECP - Point Subtraction 
+• 13h= ECP - Point Doubling 
+• 14h= ECP - Point Additive Inverse 
+• Else= Reserved 
+Notes: 
+1. ZMP's Modular Inverse requires the operands to be in a finite field. </p>
     </body>
 </html>

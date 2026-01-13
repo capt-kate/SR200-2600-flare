@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
@@ -20,18 +20,18 @@
             <dd class="address">0x24</dd>
         </dl>
         <h2>Description</h2>
-        <p>ECP Operands<p></p>
-• Prime (APB Byte Address Offset: 200h)- Prime for all ECP operations.<p></p>
-• Parameter A (APB Byte Address Offset: 204h)- Elliptic Curve parameter a- Used for Point Multiplication and Point Doubling<p></p>
-• Parameter B (APB Byte Address Offset: 208h)- Elliptic Curve parameter b- Used for Point Multiplication<p></p>
-• Point 0 - X Coordinate (APB Byte Address Offset: 20Ch)- X coordinate of point 0 on the Elliptic Curve for all ECP operations except Point Additive Inverse.<p></p>
-• Point 0 - Y Coordinate (APB Byte Address Offset: 210h)- Y coordinate of point 0 on the Elliptic Curve for all ECP operation<p></p>
-• Point 1 - X Coordinate (APB Byte Address Offset: 214h)- X coordinate of point 1 on the Elliptic Curve for Point Addition and Point Subtraction.- A random number for Point Multiplication. The random number must be less than the prime. This is used to prevent security attack during the Point Multiplication.<p></p>
-• Point 1 - Y Coordinate (APB Byte Address Offset: 218h)- Y coordinate of point 1 on the Elliptic Curve for Point Addition and Point Subtraction- Scalar (Key) for Point Multiplication. Its bit length shall not be larger than prime's bit length.<p></p>
-• Point Z - X Coordinate (APB Byte Address Offset: 21Ch)- X coordinate of computation result point (Z) on the Elliptic Curve for all ECP operations<p></p>
-• Point Z - Y Coordinate (APB Byte Address Offset: 220h)- Y coordinate of computation result point (Z) on the Elliptic Curve for all ECP operation<p></p>
-Notes:<p></p>
-1. Operand should be programmed from LSB to MSB.<p></p></p>
+        <p>ECP Operands 
+• Prime (APB Byte Address Offset: 200h)- Prime for all ECP operations. 
+• Parameter A (APB Byte Address Offset: 204h)- Elliptic Curve parameter a- Used for Point Multiplication and Point Doubling 
+• Parameter B (APB Byte Address Offset: 208h)- Elliptic Curve parameter b- Used for Point Multiplication 
+• Point 0 - X Coordinate (APB Byte Address Offset: 20Ch)- X coordinate of point 0 on the Elliptic Curve for all ECP operations except Point Additive Inverse. 
+• Point 0 - Y Coordinate (APB Byte Address Offset: 210h)- Y coordinate of point 0 on the Elliptic Curve for all ECP operation 
+• Point 1 - X Coordinate (APB Byte Address Offset: 214h)- X coordinate of point 1 on the Elliptic Curve for Point Addition and Point Subtraction.- A random number for Point Multiplication. The random number must be less than the prime. This is used to prevent security attack during the Point Multiplication. 
+• Point 1 - Y Coordinate (APB Byte Address Offset: 218h)- Y coordinate of point 1 on the Elliptic Curve for Point Addition and Point Subtraction- Scalar (Key) for Point Multiplication. Its bit length shall not be larger than prime's bit length. 
+• Point Z - X Coordinate (APB Byte Address Offset: 21Ch)- X coordinate of computation result point (Z) on the Elliptic Curve for all ECP operations 
+• Point Z - Y Coordinate (APB Byte Address Offset: 220h)- Y coordinate of computation result point (Z) on the Elliptic Curve for all ECP operation 
+Notes: 
+1. Operand should be programmed from LSB to MSB. </p>
         <h2>Contents</h2>
         <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
             <tr class="TableStyle-table-no-head-Body-Body1">

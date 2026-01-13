@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
@@ -54,27 +54,27 @@
         </p>
         <h2>Field Descriptions</h2>
         <h3 id="accmode.desc">accmode - Access Mode<a class="headerlink" href="#accmode.desc" title="Permalink to this headline"></a></h3>
-        <p>Scratch Pad Access Mode<p></p>
-• 0h: CPU Access Mode<p></p>
-• 1h: Random Access Mode<p></p>
-• 2h: Sequential Access (FIFO) Mode<p></p>
-• 3h: 8-Byte Reverse Write Access Mode<p></p>
-• 4h: 8-Byte Reverse Read Access Mode -CPU Access Mode<p></p>
-• Access any memory location through APB. -Sequential Access (FIFO) Mode<p></p>
-• Access memory through Ready/Valid Interface<p></p>
-• Each input/output data transfer changes FIFO read/write pointer value. The initial pointer values can be programmed through APB.<p></p>
--Random Access Mode<p></p>
-• Access any memory location through Memory Interface. -8-Byte Reverse Write Access Mode<p></p>
-• A special Sequential Access mode that reverses the entire data stream in 8-byte boundary.<p></p>
-• Data is input through Ready/Valid Interface. No data will be output.<p></p>
-• Programmed FIFO write pointer determines the start location of data transfer. Its value remains throughout the entire operation.<p></p>
-• The FIFO is assumed to be empty when the operation starts. FIFO full status is valid, but the empty status is invalid.<p></p>
-• Data size must be multiple of 8 bytes. Maximum data size must be less than Scratch Pad's size. Minimum size is 8 bytes.<p></p>
--8-Byte Reverse Read Access Mode<p></p>
-• A special Sequential Access mode that reverses the entire data stream in 8-byte boundary.<p></p>
-• Data is outputted through Ready/Valid Interface. No input data will be taken.<p></p>
-• Programmed FIFO read and write pointers determine the amount of data in the FIFO.<p></p>
-• FIFO empty status is valid, but the full status is invalid.<p></p>
-• Data size must be multiple of 8 bytes. Maximum data size must be less than Scratch Pad's size. Minimum size is 8 bytes.<p></p></p>
+        <p>Scratch Pad Access Mode 
+• 0h: CPU Access Mode 
+• 1h: Random Access Mode 
+• 2h: Sequential Access (FIFO) Mode 
+• 3h: 8-Byte Reverse Write Access Mode 
+• 4h: 8-Byte Reverse Read Access Mode -CPU Access Mode 
+• Access any memory location through APB. -Sequential Access (FIFO) Mode 
+• Access memory through Ready/Valid Interface 
+• Each input/output data transfer changes FIFO read/write pointer value. The initial pointer values can be programmed through APB. 
+-Random Access Mode 
+• Access any memory location through Memory Interface. -8-Byte Reverse Write Access Mode 
+• A special Sequential Access mode that reverses the entire data stream in 8-byte boundary. 
+• Data is input through Ready/Valid Interface. No data will be output. 
+• Programmed FIFO write pointer determines the start location of data transfer. Its value remains throughout the entire operation. 
+• The FIFO is assumed to be empty when the operation starts. FIFO full status is valid, but the empty status is invalid. 
+• Data size must be multiple of 8 bytes. Maximum data size must be less than Scratch Pad's size. Minimum size is 8 bytes. 
+-8-Byte Reverse Read Access Mode 
+• A special Sequential Access mode that reverses the entire data stream in 8-byte boundary. 
+• Data is outputted through Ready/Valid Interface. No input data will be taken. 
+• Programmed FIFO read and write pointers determine the amount of data in the FIFO. 
+• FIFO empty status is valid, but the full status is invalid. 
+• Data size must be multiple of 8 bytes. Maximum data size must be less than Scratch Pad's size. Minimum size is 8 bytes. </p>
     </body>
 </html>

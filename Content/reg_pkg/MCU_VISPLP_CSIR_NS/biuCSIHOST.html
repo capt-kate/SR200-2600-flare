@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>CSIHOST</title></head>
+<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>CSIHOST</title></head>
 <body>
 <h1><a name="CSIHOST">"CSIHOST"</a>
         </h1>
@@ -17,7 +17,7 @@
 </td>
 <td><p>32'h00000000</p>
 </td>
-<td><p>Dummy (16KB) register space for MIPI CSI2 Host Controller<p></p>
+<td><p>Dummy (16KB) register space for MIPI CSI2 Host Controller 
 Internal memory</p>
 </td>
 </tr>
@@ -34,13 +34,13 @@ Internal memory</p>
 </td>
 <td><p>Memory</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 <td><p>Memory</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -57,7 +57,7 @@ Internal memory</p>
 </td>
 <td><p>32'h00004000</p>
 </td>
-<td><p>General Control and Status registers for DPHY-RX I/Os and<p></p>
+<td><p>General Control and Status registers for DPHY-RX I/Os and 
 wrapper logic</p>
 </td>
 </tr>
@@ -76,12 +76,12 @@ wrapper logic</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>High-speed Frequency Range Selection<p></p>
-See Operating Frequency Range selection and default values. This<p></p>
-signal should be set with the D-PHY in power-down and must not<p></p>
-change during operation.<p></p>
-This signal can be overridden through D-PHY test control<p></p>
-registers<p></p>
+<td><p>High-speed Frequency Range Selection 
+See Operating Frequency Range selection and default values. This 
+signal should be set with the D-PHY in power-down and must not 
+change during operation. 
+This signal can be overridden through D-PHY test control 
+registers 
 Refer Table4-4 in DPHY-RX databook</p>
 </td>
 </tr>
@@ -91,9 +91,9 @@ Refer Table4-4 in DPHY-RX databook</p>
 </td>
 <td><p>0x20</p>
 </td>
-<td><p>System clock frequency configuration preset. Should be set<p></p>
-according to the following equation:<p></p>
-cfgclkfreqrange[5:0] = round[(Fcfg_clk(MHz)-17)*4]<p></p>
+<td><p>System clock frequency configuration preset. Should be set 
+according to the following equation: 
+cfgclkfreqrange[5:0] = round[(Fcfg_clk(MHz)-17)*4] 
 Refer Table4-4 in DPHY-RX databook</p>
 </td>
 </tr>
@@ -103,9 +103,9 @@ Refer Table4-4 in DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>This signal places the macro in IO continuity test mode. All<p></p>
-other<p></p>
-interface signals should be placed in their default values.<p></p>
+<td><p>This signal places the macro in IO continuity test mode. All 
+other 
+interface signals should be placed in their default values. 
 Refer Table4-6 in DPHY-RX databook</p>
 </td>
 </tr>
@@ -115,7 +115,7 @@ Refer Table4-6 in DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Set 1 to start the DPHY-RX bist test.<p></p>
+<td><p>Set 1 to start the DPHY-RX bist test. 
 Refer Table 4-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -125,7 +125,7 @@ Refer Table 4-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>PHY configuration clock (cfg_clk) gating control. Set 1 to stop<p></p>
+<td><p>PHY configuration clock (cfg_clk) gating control. Set 1 to stop 
 cfg_clk</p>
 </td>
 </tr>
@@ -135,17 +135,17 @@ cfg_clk</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Escape mode transmit clock which is used to generate escape<p></p>
-sequences in DPHY can’t be greater than 20MHz.<p></p>
-The txclkesc clock input coming from global clock module of<p></p>
-imageProc subsystem can have higher frequency. This clock is<p></p>
-divided and fed to DPHY-RX<p></p>
-0:div2<p></p>
-1:div3<p></p>
-2:div4<p></p>
-3:div6<p></p>
-4:div8<p></p>
-5:div12<p></p>
+<td><p>Escape mode transmit clock which is used to generate escape 
+sequences in DPHY can’t be greater than 20MHz. 
+The txclkesc clock input coming from global clock module of 
+imageProc subsystem can have higher frequency. This clock is 
+divided and fed to DPHY-RX 
+0:div2 
+1:div3 
+2:div4 
+3:div6 
+4:div8 
+5:div12 
 others:div2</p>
 </td>
 </tr>
@@ -155,8 +155,8 @@ others:div2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Txclkesc divider enable<p></p>
-Keep txclkescen = 0 when txclkescdiv is being written. Set<p></p>
+<td><p>Txclkesc divider enable 
+Keep txclkescen = 0 when txclkescdiv is being written. Set 
 txclkescen to 1 after txclkescdiv is configured</p>
 </td>
 </tr>
@@ -166,11 +166,11 @@ txclkescen to 1 after txclkescdiv is configured</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Txclkesc clock going to the DPHY can be stopped by setting this<p></p>
+<td><p>Txclkesc clock going to the DPHY can be stopped by setting this 
 bit to 1</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -187,7 +187,7 @@ bit to 1</p>
 </td>
 <td><p>32'h00004004</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -224,7 +224,7 @@ bit to 1</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>1'b0 - non isolation operating mode<p></p>
+<td><p>1'b0 - non isolation operating mode 
 1'b1 - PHY will power down the 1.8V domain,</p>
 </td>
 </tr>
@@ -234,7 +234,7 @@ bit to 1</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Write 1 to enable DPHY controllability through BIU register.<p></p>
+<td><p>Write 1 to enable DPHY controllability through BIU register. 
 Refer Table9-3 in DPHY-RX databook</p>
 </td>
 </tr>
@@ -244,11 +244,11 @@ Refer Table9-3 in DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Write 1 to enable DPHY test interface controllability through<p></p>
+<td><p>Write 1 to enable DPHY test interface controllability through 
 BIU registers. Refer Table9-3 in DPHY-RX databook</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -265,7 +265,7 @@ BIU registers. Refer Table9-3 in DPHY-RX databook</p>
 </td>
 <td><p>32'h00004008</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -287,7 +287,7 @@ BIU registers. Refer Table9-3 in DPHY-RX databook</p>
 <td><p>Refer Table9-3 in DPHY-RX databook</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -304,7 +304,7 @@ BIU registers. Refer Table9-3 in DPHY-RX databook</p>
 </td>
 <td><p>32'h0000400C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -326,7 +326,7 @@ BIU registers. Refer Table9-3 in DPHY-RX databook</p>
 <td><p>Refer Table9-3 in DPHY-RX databook</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -343,7 +343,7 @@ BIU registers. Refer Table9-3 in DPHY-RX databook</p>
 </td>
 <td><p>32'h00004010</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -365,7 +365,7 @@ BIU registers. Refer Table9-3 in DPHY-RX databook</p>
 <td><p>Refer Table9-3 in DPHY-RX databook</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -382,7 +382,7 @@ BIU registers. Refer Table9-3 in DPHY-RX databook</p>
 </td>
 <td><p>32'h00004014</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -404,7 +404,7 @@ BIU registers. Refer Table9-3 in DPHY-RX databook</p>
 <td><p>Refer Table9-3 in DPHY-RX databook</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -421,7 +421,7 @@ BIU registers. Refer Table9-3 in DPHY-RX databook</p>
 </td>
 <td><p>32'h00004018</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -452,7 +452,7 @@ BIU registers. Refer Table9-3 in DPHY-RX databook</p>
 <td><p>Host Controller’s ipi_clk gating. Set this bit to 1 to ipi_clk</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -469,7 +469,7 @@ BIU registers. Refer Table9-3 in DPHY-RX databook</p>
 </td>
 <td><p>32'h0000401C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -506,25 +506,25 @@ BIU registers. Refer Table9-3 in DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Each pin of this output bus is used to verify the continuity<p></p>
-from the<p></p>
-chips pin all the way to the PHYs analog ports (package,<p></p>
-bonding, die, among others).<p></p>
-cont_data output signals should be ignored when cont_en is<p></p>
-deasserted (PHY not set for IO Continuity Test mode).<p></p>
-■ cont_data[0]: rext<p></p>
-■ cont_data[1]: clkn<p></p>
-■ cont_data[2]: clkp<p></p>
-■ cont_data[3]: datan0<p></p>
-■ cont_data[4]: datap0<p></p>
-■ cont_data[5]: datan1<p></p>
-■ cont_data[6]: datap1<p></p>
-This signal can be overridden through D-PHY test control<p></p>
-registers.<p></p>
+<td><p>Each pin of this output bus is used to verify the continuity 
+from the 
+chips pin all the way to the PHYs analog ports (package, 
+bonding, die, among others). 
+cont_data output signals should be ignored when cont_en is 
+deasserted (PHY not set for IO Continuity Test mode). 
+■ cont_data[0]: rext 
+■ cont_data[1]: clkn 
+■ cont_data[2]: clkp 
+■ cont_data[3]: datan0 
+■ cont_data[4]: datap0 
+■ cont_data[5]: datan1 
+■ cont_data[6]: datap1 
+This signal can be overridden through D-PHY test control 
+registers. 
 Refer Table4-6 in DPHY-RX databook</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -541,7 +541,7 @@ Refer Table4-6 in DPHY-RX databook</p>
 </td>
 <td><p>32'h00004020</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -563,7 +563,7 @@ Refer Table4-6 in DPHY-RX databook</p>
 <td><p>Refer Table9-3 in DPHY-RX databook</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -598,9 +598,9 @@ Refer Table4-6 in DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Configures the Base Direction for Lane<p></p>
-■ basedir_0 = 1: Configures lane as RX upon startup of the PHY<p></p>
-■ basedir_0 = 0: Configures lane as TX<p></p>
+<td><p>Configures the Base Direction for Lane 
+■ basedir_0 = 1: Configures lane as RX upon startup of the PHY 
+■ basedir_0 = 0: Configures lane as TX 
 Refer Table4-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -610,13 +610,13 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Escape Mode Transmit Request<p></p>
-This signal together with txlpdtesc_0, txulpsesc_0, and<p></p>
-txtriggeresc[3:0] is used to request the entry into any Escape<p></p>
-mode. Once in Escape mode, the lane stays in Escape mode until<p></p>
-txrequestesc_0 is de-asserted.<p></p>
-Note: It can only be asserted by the protocol layer while<p></p>
-txrequestdatahs is at low level.<p></p>
+<td><p>Escape Mode Transmit Request 
+This signal together with txlpdtesc_0, txulpsesc_0, and 
+txtriggeresc[3:0] is used to request the entry into any Escape 
+mode. Once in Escape mode, the lane stays in Escape mode until 
+txrequestesc_0 is de-asserted. 
+Note: It can only be asserted by the protocol layer while 
+txrequestdatahs is at low level. 
 Refer Table4-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -626,13 +626,13 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Escape Mode Transmit Low-Power Data<p></p>
-This signal is asserted with txrequestesc to cause the lane<p></p>
-module to enter low- power data transmission mode. The lane<p></p>
-module remains in this mode until txrequestesc_0 is<p></p>
-de-asserted.<p></p>
-Note: txulpsesc_0 and all the bits of txtriggeresc_0 must be at<p></p>
-low level when txlpdtesc_0 is at high level.<p></p>
+<td><p>Escape Mode Transmit Low-Power Data 
+This signal is asserted with txrequestesc to cause the lane 
+module to enter low- power data transmission mode. The lane 
+module remains in this mode until txrequestesc_0 is 
+de-asserted. 
+Note: txulpsesc_0 and all the bits of txtriggeresc_0 must be at 
+low level when txlpdtesc_0 is at high level. 
 Refer Table4-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -696,7 +696,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table4-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -724,7 +724,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table4-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -734,11 +734,11 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table9-3 of DPHY-RX databook</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -755,7 +755,7 @@ Refer Table9-3 of DPHY-RX databook</p>
 </td>
 <td><p>32'h00004028</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -783,7 +783,7 @@ Refer Table9-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table4-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -793,7 +793,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table4-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -812,7 +812,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table4-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -822,7 +822,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table4-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -850,7 +850,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table9-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -860,7 +860,7 @@ Refer Table9-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table9-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -870,11 +870,11 @@ Refer Table9-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table9-3 of DPHY-RX databook</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -891,7 +891,7 @@ Refer Table9-3 of DPHY-RX databook</p>
 </td>
 <td><p>32'h0000402C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -910,7 +910,7 @@ Refer Table9-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table4-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -920,7 +920,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table4-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -930,7 +930,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table4-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -940,7 +940,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table4-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -950,7 +950,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table9-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -960,7 +960,7 @@ Refer Table9-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table4-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -970,7 +970,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table4-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -998,7 +998,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[0] for lane-0; [1] for lane-1<p></p>
+<td><p>[0] for lane-0; [1] for lane-1 
 Refer Table4-3 of DPHY-RX databook</p>
 </td>
 </tr>
@@ -1011,7 +1011,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 <td><p>Refer Table4-3 of DPHY-RX databook</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1028,7 +1028,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>32'h00004030</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1104,7 +1104,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 <td><p>Refer Table9-3 of DPHY-RX databook</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1121,7 +1121,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>32'h00004034</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1143,7 +1143,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 <td><p>Interrupt Enable for CSI2 Host Controller ‘interrupt’</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1160,7 +1160,7 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>32'h00004038</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1179,13 +1179,13 @@ Refer Table4-3 of DPHY-RX databook</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>This bit reflects the state of CSI2 Host Controller ‘interrupt’<p></p>
-flag.<p></p>
-It is set on the assertion (rising edge) of ‘interrupt’ and<p></p>
+<td><p>This bit reflects the state of CSI2 Host Controller ‘interrupt’ 
+flag. 
+It is set on the assertion (rising edge) of ‘interrupt’ and 
 stays high till SW clears the bit by writing 1 to it.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1202,7 +1202,7 @@ stays high till SW clears the bit by writing 1 to it.</p>
 </td>
 <td><p>32'h0000403C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1224,6 +1224,6 @@ stays high till SW clears the bit by writing 1 to it.</p>
 <td><p>Debug bus mux selection</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 </body></html>

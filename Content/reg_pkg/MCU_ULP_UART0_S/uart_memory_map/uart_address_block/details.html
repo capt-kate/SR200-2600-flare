@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>Register Details</title></head>
+<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>Register Details</title></head>
 <body>
 <h1><a name="idp44644216"></a>Register Details</h1>
 <h2><a name="H3-sect1-reg-uart_memory_map_uart_address_block"></a>uart_address_block Register Details</h2>
@@ -139,7 +139,7 @@ This register can be accessed only when the DLAB bit (LCR[7]) is cleared.</li><l
 <td><p>Programmable THRE Interrupt Mode Enable.Writeable only when THRE_MODE_USER == Enabled, always readable. This is used to enable/disable the generation of THRE Interrupt.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Disable Programmable THRE Interrupt Mode</li><li>0x1 (ENABLED): Enable Programmable THRE Interrupt Mode</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Disable Programmable THRE Interrupt Mode</li><li>0x1 (ENABLED): Enable Programmable THRE Interrupt Mode</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -160,7 +160,7 @@ This is applicable only for Overrun Error, Parity Error, Framing Error, and Brea
 <ul><li>0: LSR status bits are cleared either on reading Rx FIFO (RBR Read) or On reading LSR register.</li><li>1: LSR status bits are cleared only on reading LSR register.</li></ul><p>Writeable only when LSR_STATUS_CLEAR = 1, otherwise always readable.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Disable ALC</li><li>0x1 (ENABLED): Enable ALC</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Disable ALC</li><li>0x1 (ENABLED): Enable ALC</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -171,7 +171,7 @@ This is applicable only for Overrun Error, Parity Error, Framing Error, and Brea
 <td><p>Enable Modem Status Interrupt.This is used to enable/disable the generation of Modem Status Interrupt. This is the fourth highest priority interrupt.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Disable Modem Status Interrupt</li><li>0x1 (ENABLED): Enable Modem Status Interrupt</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Disable Modem Status Interrupt</li><li>0x1 (ENABLED): Enable Modem Status Interrupt</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -182,7 +182,7 @@ This is applicable only for Overrun Error, Parity Error, Framing Error, and Brea
 <td><p>Enable Receiver Line Status Interrupt.This is used to enable/disable the generation of Receiver Line Status Interrupt. This is the highest priority interrupt.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Disable Receiver Line Status Interrupt</li><li>0x1 (ENABLED): Enable Receiver Line Status Interrupt</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Disable Receiver Line Status Interrupt</li><li>0x1 (ENABLED): Enable Receiver Line Status Interrupt</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -193,7 +193,7 @@ This is applicable only for Overrun Error, Parity Error, Framing Error, and Brea
 <td><p>Enable Transmit Holding Register Empty Interrupt.This is used to enable/disable the generation of Transmitter Holding Register Empty Interrupt. This is the third highest priority interrupt.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Disable Transmit empty interrupt</li><li>0x1 (ENABLED): Enable Transmit empty interrupt</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Disable Transmit empty interrupt</li><li>0x1 (ENABLED): Enable Transmit empty interrupt</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -204,7 +204,7 @@ This is applicable only for Overrun Error, Parity Error, Framing Error, and Brea
 <td><p>Enable Received Data Available Interrupt.This is used to enable/disable the generation of Received Data Available Interrupt and the Character Timeout Interrupt (if in FIFO mode and FIFO's enabled). These are the second highest priority interrupts.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Disable Receive data Interrupt</li><li>0x1 (ENABLED): Enable Receive data Interrupt</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Disable Receive data Interrupt</li><li>0x1 (ENABLED): Enable Receive data Interrupt</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -264,7 +264,7 @@ If UART_16550_COMPATIBLE = No, then this register can be accessed only when the 
 <td><p>FIFOs Enabled.This is used to indicate whether the FIFOs are enabled or disabled.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): FIFOs are disabled</li><li>0x3 (ENABLED): FIFOs are enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): FIFOs are disabled</li><li>0x3 (ENABLED): FIFOs are enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -287,7 +287,7 @@ If UART_16550_COMPATIBLE = No, then this register can be accessed only when the 
 <p>Bit 3 indicates an interrupt can only occur when the FIFOs are enabled and used to distinguish a Character Timeout condition interrupt.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (MODEM_STATUS): modem status</li><li>0x1 (NO_INTERRUPT_PENDING): no interrupt pending</li><li>0x2 (THR_EMPTY): THR empty</li><li>0x4 (RECEIVED_DATA_AVAILABLE): received data available</li><li>0x6 (RECEIVER_LINE_STATUS): receiver line status</li><li>0x7 (BUSY_DETECT): busy detect</li><li>0xc (CHARACTER_TIMEOUT): character timeout</li></ul><p></p>
+<ul><li>0x0 (MODEM_STATUS): modem status</li><li>0x1 (NO_INTERRUPT_PENDING): no interrupt pending</li><li>0x2 (THR_EMPTY): THR empty</li><li>0x4 (RECEIVED_DATA_AVAILABLE): received data available</li><li>0x6 (RECEIVER_LINE_STATUS): receiver line status</li><li>0x7 (BUSY_DETECT): busy detect</li><li>0xc (CHARACTER_TIMEOUT): character timeout</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -324,7 +324,7 @@ If UART_16550_COMPATIBLE = No, then this register can be accessed only when the 
 <td><p>RCVR Trigger (or RT).This is used to select the trigger level in the receiver FIFO at which the Received Data Available Interrupt will be generated. In auto flow control mode, it is used to determine when the rts_n signal will be de-asserted only when RTC_FCT is disabled. It also determines when the dma_rx_req_n signal will be asserted when in certain modes of operation. For details on DMA support, refer to 'DMA Support' section of data book.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FIFO_CHAR_1): 1 character in FIFO</li><li>0x1 (FIFO_QUARTER_FULL): FIFO 1/4 full</li><li>0x2 (FIFO_HALF_FULL): FIFO 1/2 full</li><li>0x3 (FIFO_FULL_2): FIFO 2 less than full</li></ul><p></p>
+<ul><li>0x0 (FIFO_CHAR_1): 1 character in FIFO</li><li>0x1 (FIFO_QUARTER_FULL): FIFO 1/4 full</li><li>0x2 (FIFO_HALF_FULL): FIFO 1/2 full</li><li>0x3 (FIFO_FULL_2): FIFO 2 less than full</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -335,7 +335,7 @@ If UART_16550_COMPATIBLE = No, then this register can be accessed only when the 
 <td><p>TX Empty Trigger (or TET).Writes will have no effect when THRE_MODE_USER == Disabled. This is used to select the empty threshold level at which the THRE Interrupts will be generated when the mode is active. It also determines when the dma_tx_req_n signal will be asserted when in certain modes of operation. For details on DMA support, refer to 'DMA Support' section of data book.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FIFO_EMPTY): FIFO Empty</li><li>0x1 (FIFO_CHAR_2): 2 characters in FIFO</li><li>0x2 (FIFO_QUARTER_FULL): FIFO 1/4 full</li><li>0x3 (FIFO_HALF_FULL): FIFO 1/2 full</li></ul><p></p>
+<ul><li>0x0 (FIFO_EMPTY): FIFO Empty</li><li>0x1 (FIFO_CHAR_2): 2 characters in FIFO</li><li>0x2 (FIFO_QUARTER_FULL): FIFO 1/4 full</li><li>0x3 (FIFO_HALF_FULL): FIFO 1/2 full</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -346,7 +346,7 @@ If UART_16550_COMPATIBLE = No, then this register can be accessed only when the 
 <td><p>DMA Mode (or DMAM).This determines the DMA signalling mode used for the dma_tx_req_n and dma_rx_req_n output signals when additional DMA handshaking signals are not selected (DMA_EXTRA == NO). For details on DMA support, refer to 'DMA Support' section of data book.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (MODE0): Mode 0</li><li>0x1 (MODE1): Mode 1</li></ul><p></p>
+<ul><li>0x0 (MODE0): Mode 0</li><li>0x1 (MODE1): Mode 1</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -357,7 +357,7 @@ If UART_16550_COMPATIBLE = No, then this register can be accessed only when the 
 <td><p>XMIT FIFO Reset (or XFIFOR).This resets the control portion of the transmit FIFO and treats the FIFO as empty. This will also de-assert the DMA TX request and single signals when additional DMA handshaking signals are selected (DMA_EXTRA == YES). Note that this bit is 'self-clearing' and it is not necessary to clear this bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (RESET): Transmit FIFO reset</li></ul><p></p>
+<ul><li>0x1 (RESET): Transmit FIFO reset</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -368,7 +368,7 @@ If UART_16550_COMPATIBLE = No, then this register can be accessed only when the 
 <td><p>RCVR FIFO Reset (or RFIFOR).This resets the control portion of the receive FIFO and treats the FIFO as empty. This will also de-assert the DMA RX request and single signals when additional DMA handshaking signals are selected (DMA_EXTRA == YES). Note that this bit is 'self-clearing' and it is not necessary to clear this bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (RESET): Receive FIFO reset</li></ul><p></p>
+<ul><li>0x1 (RESET): Receive FIFO reset</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -379,7 +379,7 @@ If UART_16550_COMPATIBLE = No, then this register can be accessed only when the 
 <td><p>FIFO Enable (or FIFOE).This enables/disables the transmit (XMIT) and receive (RCVR) FIFOs. Whenever the value of this bit is changed both the XMIT and RCVR controller portion of FIFOs is reset.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): FIFO disabled</li><li>0x1 (ENABLED): FIFO enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): FIFO disabled</li><li>0x1 (ENABLED): FIFO enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -424,7 +424,7 @@ rate of the UART. This bit must be cleared after initial baud rate setup in orde
 to access other registers.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Divisor Latch register is writable only when UART Not BUSY</li><li>0x1 (ENABLED): Divisor Latch register is always readable and writable</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Divisor Latch register is writable only when UART Not BUSY</li><li>0x1 (ENABLED): Divisor Latch register is always readable and writable</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -443,7 +443,7 @@ condition is internally looped back to the receiver and the sir_out_n line is
 forced low.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Serial output is released for data transmission</li><li>0x1 (ENABLED): Serial output is forced to spacing state</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Serial output is released for data transmission</li><li>0x1 (ENABLED): Serial output is forced to spacing state</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -461,7 +461,7 @@ logic 0, then parity bit is transmitted and checked as a logic 1. If this bit is
 Stick Parity is disabled.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Stick parity disabled</li><li>0x1 (ENABLED): Stick parity enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Stick parity disabled</li><li>0x1 (ENABLED): Stick parity enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -478,7 +478,7 @@ one, an even number of logic '1's is transmitted or checked. If set to zero, an
 odd number of logic '1's is transmitted or checked.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (ODD_PARITY): an odd parity is transmitted or checked</li><li>0x1 (EVEN_PARITY): an even parity is transmitted or checked</li></ul><p></p>
+<ul><li>0x0 (ODD_PARITY): an odd parity is transmitted or checked</li><li>0x1 (EVEN_PARITY): an even parity is transmitted or checked</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -494,7 +494,7 @@ and disable parity generation and detection in transmitted and received serial
 character respectively.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): disable parity</li><li>0x1 (ENABLED): enable parity</li></ul><p></p>
+<ul><li>0x0 (DISABLED): disable parity</li><li>0x1 (ENABLED): enable parity</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -521,7 +521,7 @@ clock divisor values in the transmit direction; for details on idle time between
 transmitted transfers, refer to 'Back-to-Back Character Stream Transmission' section in data book.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (STOP_1BIT): 1 stop bit</li><li>0x1 (STOP_1_5BIT_OR_2BIT): 1.5 stop bits when DLS (LCR[1:0]) is zero, else 2 stop bit</li></ul><p></p>
+<ul><li>0x0 (STOP_1BIT): 1 stop bit</li><li>0x1 (STOP_1_5BIT_OR_2BIT): 1.5 stop bits when DLS (LCR[1:0]) is zero, else 2 stop bit</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -534,7 +534,7 @@ transmitted transfers, refer to 'Back-to-Back Character Stream Transmission' sec
 <p>If UART_16550_COMPATIBLE == NO then, writeable only when UART is not busy (USR[0] is zero), otherwise always writable and always readable. When DLS_E in LCR_EXT is set to 0, this register is used to select the number of data bits per character that the peripheral will transmit and receive.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (CHAR_5BITS): 5 data bits per character</li><li>0x1 (CHAR_6BITS): 6 data bits per character</li><li>0x2 (CHAR_7BITS): 7 data bits per character</li><li>0x3 (CHAR_8BITS): 8 data bits per character</li></ul><p></p>
+<ul><li>0x0 (CHAR_5BITS): 5 data bits per character</li><li>0x1 (CHAR_6BITS): 6 data bits per character</li><li>0x2 (CHAR_7BITS): 7 data bits per character</li><li>0x3 (CHAR_8BITS): 8 data bits per character</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -579,7 +579,7 @@ disable the IrDA SIR Mode features as described in section 'IrDA 1.0 SIR Protoco
 For details of the recommended programming sequence, refer to 'Programing Examples' section of data book.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): IrDA SIR Mode disabled</li><li>0x1 (ENABLED): IrDA SIR Mode enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): IrDA SIR Mode disabled</li><li>0x1 (ENABLED): IrDA SIR Mode enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -594,7 +594,7 @@ and the Auto Flow Control Enable (AFCE) bit is set, Auto Flow Control features a
 enabled as described in section 'Auto Flow Control' in data book.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Auto Flow Control Mode disabled</li><li>0x1 (ENABLED): Auto Flow Control Mode enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Auto Flow Control Mode disabled</li><li>0x1 (ENABLED): Auto Flow Control Mode enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -617,7 +617,7 @@ data on the sir_out_n line is held low, while serial data output is inverted and
 looped back to the sir_in line.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Loopback mode disabled</li><li>0x1 (ENABLED): Loopback mode enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Loopback mode disabled</li><li>0x1 (ENABLED): Loopback mode enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -633,7 +633,7 @@ Note that in Loopback mode (MCR[4] set to one), the out2_n output is held inacti
 high while the value of this location is internally looped back to an input.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (OUT2_0): out2_n de-asserted (logic 1)</li><li>0x1 (OUT2_1): out2_n asserted (logic 0)</li></ul><p></p>
+<ul><li>0x0 (OUT2_0): out2_n de-asserted (logic 1)</li><li>0x1 (OUT2_1): out2_n asserted (logic 0)</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -649,7 +649,7 @@ Note that in Loopback mode (MCR[4] set to one), the out1_n output is held inacti
 while the value of this location is internally looped back to an input.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (OUT1_0): out1_n de-asserted (logic 1)</li><li>0x1 (OUT1_1): out1_n asserted (logic 0)</li></ul><p></p>
+<ul><li>0x0 (OUT1_0): out1_n de-asserted (logic 1)</li><li>0x1 (OUT1_1): out1_n asserted (logic 0)</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -674,7 +674,7 @@ Note that in Loopback mode (MCR[4] set to one), the rts_n output is held inactiv
 high while the value of this location is internally looped back to an input.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (INACTIVE): Request to Send rts_n de-asserted (logic 1)</li><li>0x1 (ACTIVE): Request to Send rts_n asserted (logic 0)</li></ul><p></p>
+<ul><li>0x0 (INACTIVE): Request to Send rts_n de-asserted (logic 1)</li><li>0x1 (ACTIVE): Request to Send rts_n asserted (logic 0)</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -693,7 +693,7 @@ set to one), the dtr_n output is held inactive high while the value of this
 location is internally looped back to an input.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (INACTIVE): dtr_n de-asserted (logic1)</li><li>0x1 (ACTIVE): dtr_n asserted (logic 0)</li></ul><p></p>
+<ul><li>0x0 (INACTIVE): dtr_n de-asserted (logic1)</li><li>0x1 (ACTIVE): dtr_n asserted (logic 0)</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -751,7 +751,7 @@ error, or break indication in the FIFO.</p>
 top of the receiver FIFO and there are no subsequent errors in the FIFO.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NO_RX_FIFO_ERROR): No error in RX FIFO</li><li>0x1 (RX_FIFO_ERROR): Error in RX FIFO</li></ul><p></p>
+<ul><li>0x0 (NO_RX_FIFO_ERROR): No error in RX FIFO</li><li>0x1 (RX_FIFO_ERROR): Error in RX FIFO</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -767,7 +767,7 @@ If in the non-FIFO mode or FIFO's are disabled, this bit is set whenever the
 Transmitter Holding Register and the Transmitter Shift Register are both empty.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Transmitter not empty</li><li>0x1 (ENABLED): Transmitter empty</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Transmitter not empty</li><li>0x1 (ENABLED): Transmitter empty</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -792,7 +792,7 @@ which are then controlled by the FCR[5:4] threshold setting. Programmable THRE
 interrupt mode operation is described in detail in section 'Programmable THRE Interrupt' in data book.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): THRE interrupt control is disabled</li><li>0x1 (ENABLED): THRE interrupt control is enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): THRE interrupt control is disabled</li><li>0x1 (ENABLED): THRE interrupt control is enabled</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -827,7 +827,7 @@ break condition and all the information associated with it-parity and framing er
 discarded; any information that a break character was received is lost.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NO_BREAK): No break sequence detected</li><li>0x1 (BREAK): Break sequence detected</li></ul><p></p>
+<ul><li>0x0 (NO_BREAK): No break sequence detected</li><li>0x1 (BREAK): Break sequence detected</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -855,7 +855,7 @@ longer than the duration of a character.</p>
 <ul><li>Reading the LSR or RBR register clears the FE bit.</li></ul><p>If configuration parameter LSR_STATUS_CLEAR = 1:</p>
 <ul><li>If register field IER.ELCOLR = 0: Reading the LSR or RBR register clears the FE bit.</li><li>If register field IER.ELCOLR = 1: Reading the LSR register clears the FE bit.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NO_FRAMING_ERROR): no framing error</li><li>0x1 (FRAMING_ERROR): framing error</li></ul><p></p>
+<ul><li>0x0 (NO_FRAMING_ERROR): no framing error</li><li>0x1 (FRAMING_ERROR): framing error</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -880,7 +880,7 @@ bit is set if parity generation and detection is enabled (LCR[3]=1) and the pari
 <ul><li>Reading the LSR or RBR register clears the PE bit.</li></ul><p>If configuration parameter LSR_STATUS_CLEAR = 1:</p>
 <ul><li>If register field IER.ELCOLR = 0: Reading the LSR or RBR register clears the PE bit.</li><li>If register field IER.ELCOLR = 1: Reading the LSR register clears the PE bit.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NO_PARITY_ERROR): no parity error</li><li>0x1 (PARITY_ERROR): parity error</li></ul><p></p>
+<ul><li>0x0 (NO_PARITY_ERROR): no parity error</li><li>0x1 (PARITY_ERROR): parity error</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -905,7 +905,7 @@ is lost.</p>
 If configuration parameter LSR_STATUS_CLEAR = 1:</p>
 <ul><li>If register field IER.ELCOLR = 0: Reading the LSR or RBR register clears the OE bit.</li><li>If register field IER.ELCOLR = 1: Reading the LSR register clears the OE bit.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NO_OVER_RUN_ERROR): no overrun error</li><li>0x1 (OVER_RUN_ERROR): overrun error</li></ul><p></p>
+<ul><li>0x0 (NO_OVER_RUN_ERROR): no overrun error</li><li>0x1 (OVER_RUN_ERROR): overrun error</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -921,7 +921,7 @@ This bit is cleared when the RBR is read in the non-FIFO mode, or when the recei
 FIFO is empty, in the FIFO mode.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NOT_READY): data not ready</li><li>0x1 (READY): data ready</li></ul><p></p>
+<ul><li>0x0 (NOT_READY): data not ready</li><li>0x1 (READY): data ready</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -974,7 +974,7 @@ data set.</p>
 <p>In Loopback Mode (MCR[4] set to one), DCD is the same as MCR[3] (Out2).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DEASSERTED): dcd_n input is de-asserted (logic 1)</li><li>0x1 (ASSERTED): dcd_n input is asserted (logic 0)</li></ul><p></p>
+<ul><li>0x0 (DEASSERTED): dcd_n input is de-asserted (logic 1)</li><li>0x1 (ASSERTED): dcd_n input is asserted (logic 0)</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -992,7 +992,7 @@ or data set.</p>
 <p>In Loopback Mode (MCR[4] set to one), RI is the same as MCR[2] (Out1).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DEASSERTED): ri_n input is de-asserted (logic 1)</li><li>0x1 (ASSERTED): ri_n input is asserted (logic 0)</li></ul><p></p>
+<ul><li>0x0 (DEASSERTED): ri_n input is de-asserted (logic 1)</li><li>0x1 (ASSERTED): ri_n input is asserted (logic 0)</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1010,7 +1010,7 @@ with the DW_apb_uart.</p>
 <p>In Loopback Mode (MCR[4] set to one), DSR is the same as MCR[0] (DTR).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DEASSERTED): dsr_n input is de-asserted (logic 1)</li><li>0x1 (ASSERTED): dsr_n input is asserted (logic 0)</li></ul><p></p>
+<ul><li>0x0 (DEASSERTED): dsr_n input is de-asserted (logic 1)</li><li>0x1 (ASSERTED): dsr_n input is asserted (logic 0)</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1028,7 +1028,7 @@ DW_apb_uart.</p>
 <p>In Loopback Mode (MCR[4] set to one), CTS is the same as MCR[1] (RTS).</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DEASSERTED): cts_n input is de-asserted (logic 1)</li><li>0x1 (ASSERTED): cts_n input is asserted (logic 0)</li></ul><p></p>
+<ul><li>0x0 (DEASSERTED): cts_n input is de-asserted (logic 1)</li><li>0x1 (ASSERTED): cts_n input is asserted (logic 0)</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1049,7 +1049,7 @@ occurs (software or otherwise), then the DDCD bit will get set when the reset is
 removed if the dcd_n signal remains asserted.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NO_CHANGE): No change on dcd_n since last read of MSR</li><li>0x1 (CHANGE): change on dcd_n since last read of MSR</li></ul><p></p>
+<ul><li>0x0 (NO_CHANGE): No change on dcd_n since last read of MSR</li><li>0x1 (CHANGE): change on dcd_n since last read of MSR</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1067,7 +1067,7 @@ In Loopback Mode (MCR[4] set to one), TERI reflects when MCR[2] (Out1) has chang
 state from a high to a low.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NO_CHANGE): no change on ri_n since last read of MSR</li><li>0x1 (CHANGE): change on ri_n since last read of MSR</li></ul><p></p>
+<ul><li>0x0 (NO_CHANGE): no change on ri_n since last read of MSR</li><li>0x1 (CHANGE): change on ri_n since last read of MSR</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1088,7 +1088,7 @@ occurs (software or otherwise), then the DDSR bit will get set when the reset is
 removed if the dsr_n signal remains asserted.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NO_CHANGE): no change on dsr_n since last read of MSR</li><li>0x1 (CHANGE): change on dsr_n since last read of MSR</li></ul><p></p>
+<ul><li>0x0 (NO_CHANGE): no change on dsr_n since last read of MSR</li><li>0x1 (CHANGE): change on dsr_n since last read of MSR</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1109,7 +1109,7 @@ occurs (software or otherwise), then the DCTS bit will get set when the reset is
 removed if the cts_n signal remains asserted.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NO_CHANGE): no change on cts_n since last read of MSR</li><li>0x1 (CHANGE): change on cts_n since last read of MSR</li></ul><p></p>
+<ul><li>0x0 (NO_CHANGE): no change on cts_n since last read of MSR</li><li>0x1 (CHANGE): change on cts_n since last read of MSR</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1223,7 +1223,7 @@ Any attempt to write data when the FIFO is full results in the write data being 
 <p class="BLANK"></p>
 <p>Note:</p>
 <p class="BLANK"></p>
-<p></p>
+ 
 <ul><li>When UART_9BIT_DATA_EN="0," this field width is 8.</li><li>When UART_9BIT_DATA_EN="1," this field width is 9. The 9th bit is applicable only when LCR_EXT[3]=1.</li></ul><p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -1977,7 +1977,7 @@ allows the RBR to be written by the requester and the THR to be read by the requ
 the receive FIFO and transmit FIFO is reset and the FIFO's are treated as empty.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): FIFO access mode disabled</li><li>0x1 (ENABLED): FIFO access mode enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): FIFO access mode disabled</li><li>0x1 (ENABLED): FIFO access mode enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2017,7 +2017,7 @@ receive FIFO is completely full. That is:
 This bit is cleared when the RX FIFO is no longer full.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NOT_FULL): Receive FIFO not full</li><li>0x1 (FULL): Receive FIFO full</li></ul><p></p>
+<ul><li>0x0 (NOT_FULL): Receive FIFO not full</li><li>0x1 (FULL): Receive FIFO full</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2033,7 +2033,7 @@ receive FIFO contains one or more entries.
 This bit is cleared when the RX FIFO is empty.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (EMPTY): Receive FIFO is empty</li><li>0x1 (NOT_EMPTY): Receive FIFO is not empty</li></ul><p></p>
+<ul><li>0x0 (EMPTY): Receive FIFO is empty</li><li>0x1 (NOT_EMPTY): Receive FIFO is not empty</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2049,7 +2049,7 @@ transmit FIFO is completely empty.
 This bit is cleared when the TX FIFO is no longer empty.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NOT_EMPTY): Transmit FIFO is not empty</li><li>0x1 (EMPTY): Transmit FIFO is empty</li></ul><p></p>
+<ul><li>0x0 (NOT_EMPTY): Transmit FIFO is not empty</li><li>0x1 (EMPTY): Transmit FIFO is empty</li></ul> 
 <p>Value After Reset:0x1</p>
 <p>Volatile:true</p>
 </td>
@@ -2065,7 +2065,7 @@ transmit FIFO is not full.
 This bit is cleared when the TX FIFO is full.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FULL): Transmit FIFO is full</li><li>0x1 (NOT_FULL): Transmit FIFO is not full</li></ul><p></p>
+<ul><li>0x0 (FULL): Transmit FIFO is full</li><li>0x1 (NOT_FULL): Transmit FIFO is not full</li></ul> 
 <p>Value After Reset:0x1</p>
 <p>Volatile:true</p>
 </td>
@@ -2099,7 +2099,7 @@ has been implemented (CLOCK_MODE == Enabled) the assertion of this bit will also
 delayed by several cycles of the slower clock.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (IDLE): DW_apb_uart is idle or inactive</li><li>0x1 (BUSY): DW_apb_uart is busy (actively transferring data)</li></ul><p></p>
+<ul><li>0x0 (IDLE): DW_apb_uart is idle or inactive</li><li>0x1 (BUSY): DW_apb_uart is busy (actively transferring data)</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2228,7 +2228,7 @@ handshaking signals are selected (DMA_EXTRA == YES). Note that this bit is
 assertion. For a two clock implementation both pclk and sclk domains will be reset.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NO_RESET): No Uart Reset</li><li>0x1 (RESET): Uart reset</li></ul><p></p>
+<ul><li>0x0 (NO_RESET): No Uart Reset</li><li>0x1 (RESET): Uart reset</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2276,7 +2276,7 @@ slots in the FIFO (rts_n is inactive high when above the threshold).</p>
 high while the value of this location is internally looped back to an input.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DEASSERTED): Shadow Request to Send uart_rts_n logic1</li><li>0x1 (ASSERTED): Shadow Request to Send uart_rts_n logic0</li></ul><p></p>
+<ul><li>0x0 (DEASSERTED): Shadow Request to Send uart_rts_n logic1</li><li>0x1 (ASSERTED): Shadow Request to Send uart_rts_n logic0</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2316,7 +2316,7 @@ sir_out_n line is continuously pulsed. When in Loopback Mode, the break conditio
 is internally looped back to the receiver.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NO_BREAK): No spacing on serial output</li><li>0x1 (BREAK): Serial output forced to the spacing</li></ul><p></p>
+<ul><li>0x0 (NO_BREAK): No spacing on serial output</li><li>0x1 (BREAK): Serial output forced to the spacing</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2350,7 +2350,7 @@ output signals when additional DMA handshaking signals are not selected
 (DMA_EXTRA == NO). See section 5.9 on page 54 for details on DMA support.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (MODE_0): Mode 0</li><li>0x1 (MODE_1): Mode 1</li></ul><p></p>
+<ul><li>0x0 (MODE_0): Mode 0</li><li>0x1 (MODE_1): Mode 1</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2385,7 +2385,7 @@ bit is set to zero (disabled) after being enabled then both the XMIT and RCVR
 controller portion of FIFO's will be reset.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): FIFOs are disabled</li><li>0x1 (ENABLED): FIFOs are enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): FIFOs are disabled</li><li>0x1 (ENABLED): FIFOs are enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2421,7 +2421,7 @@ Data Available Interrupt will be generated. It also determines when the dma_rx_r
 signal will be asserted when DMA Mode (FCR[3]) is set to one.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FIFO_CHAR_1): 1 character in FIFO</li><li>0x1 (FIFO_QUARTER_FULL): FIFO 1/4 full</li><li>0x2 (FIFO_HALF_FULL): FIFO 1/2 full</li><li>0x3 (FIFO_FULL_2): FIFO 2 less than full</li></ul><p></p>
+<ul><li>0x0 (FIFO_CHAR_1): 1 character in FIFO</li><li>0x1 (FIFO_QUARTER_FULL): FIFO 1/4 full</li><li>0x2 (FIFO_HALF_FULL): FIFO 1/2 full</li><li>0x3 (FIFO_FULL_2): FIFO 2 less than full</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2457,7 +2457,7 @@ empty threshold level at which the THRE Interrupts will be generated when the mo
 active.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FIFO_EMPTY): FIFO empty</li><li>0x1 (FIFO_CHAR_2): 2 characters in FIFO</li><li>0x2 (FIFO_QUARTER_FULL): FIFO 1/4 full</li><li>0x3 (FIFO_HALF_FULL): FIFO 1/2 full</li></ul><p></p>
+<ul><li>0x0 (FIFO_EMPTY): FIFO empty</li><li>0x1 (FIFO_CHAR_2): 2 characters in FIFO</li><li>0x2 (FIFO_QUARTER_FULL): FIFO 1/4 full</li><li>0x3 (FIFO_HALF_FULL): FIFO 1/2 full</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2491,7 +2491,7 @@ by the requester when FIFO's are implemented and enabled.</p>
 will have no effect on operation.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Halt Transmission disabled</li><li>0x1 (ENABLED): Halt Transmission enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Halt Transmission disabled</li><li>0x1 (ENABLED): Halt Transmission enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2525,7 +2525,7 @@ single signals to de-assert.
 Note that this bit is 'self-clearing' and it is not necessary to clear this bit.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (SOFT_ACK): DMA software acknowledge</li></ul><p></p>
+<ul><li>0x1 (SOFT_ACK): DMA software acknowledge</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2565,7 +2565,7 @@ exist and reading from this register address returns zero.</li><li>Size:32 bits<
 <ul><li>0x0 (XFER_MODE_0): In this mode, transmit and receive can happen simultaneously. The user can enable DE_EN, RE_EN at any point of time.<p class="BLANK"></p>
 Turn around timing as programmed in the TAT register is not applicable in this mode.</li><li>0x1 (XFER_MODE_1): In this mode, DE and RE are mutually exclusive. Either DE or RE only one of them is expected to be enabled through programming.<p class="BLANK"></p>
 Hardware will consider the Turn Around timings which are programmed in the TAT register while switching from RE to DE or DE to RE.For transmission Hardware will wait if it is in middle of receiving any transfer, before it starts transmitting.</li><li>0x2 (XFER_MODE_2): In this mode, DE and RE are mutually exclusive. Once DE_EN/RE_EN is programed - by default 're' will be enabled and DW_apb_uart controller will be ready to receive. If the user programs the TX FIFO with the data then DW_apb_uart, after ensuring no receive is in progress, disable 're' and enable 'de' signal.<p class="BLANK"></p>
-Once the TX FIFO becomes empty, 're' signal gets enabled and 'de' signal will be disabled.In this mode of operation hardware will consider the Turn Around timings which are programmed in the TAT register while switching from RE to DE or DE to RE. In this mode, 'de' and 're' signals are strictly complementary to each other.</li></ul><p></p>
+Once the TX FIFO becomes empty, 're' signal gets enabled and 'de' signal will be disabled.In this mode of operation hardware will consider the Turn Around timings which are programmed in the TAT register while switching from RE to DE or DE to RE. In this mode, 'de' and 're' signals are strictly complementary to each other.</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2576,7 +2576,7 @@ Once the TX FIFO becomes empty, 're' signal gets enabled and 'de' signal will be
 <td><p>Driver Enable Polarity.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (LOW): DE signal is active low</li><li>0x1 (HIGH): DE signal is active high</li></ul><p></p>
+<ul><li>0x0 (LOW): DE signal is active low</li><li>0x1 (HIGH): DE signal is active high</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -2587,7 +2587,7 @@ Once the TX FIFO becomes empty, 're' signal gets enabled and 'de' signal will be
 <td><p>Receiver Enable Polarity.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (LOW): RE signal is active low</li><li>0x1 (HIGH): RE signal is active high</li></ul><p></p>
+<ul><li>0x0 (LOW): RE signal is active low</li><li>0x1 (HIGH): RE signal is active high</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -2597,11 +2597,11 @@ Once the TX FIFO becomes empty, 're' signal gets enabled and 'de' signal will be
 <td>R/W</td>
 <td><p>RS485 Transfer Enable.</p>
 <p class="BLANK"></p>
-<p></p>
+ 
 <ul><li>0 : In this mode, the transfers are still in the RS232 mode. All other fields in this register are reserved and register
 DE_EN/RE_EN/TAT are also reserved.</li><li>1 : In this mode, the transfers will happen in RS485 mode. All other fields of this register are applicable.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLE): RS232 Mode</li><li>0x1 (ENABLE): RS485 Mode</li></ul><p></p>
+<ul><li>0x0 (DISABLE): RS232 Mode</li><li>0x1 (ENABLE): RS485 Mode</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2635,7 +2635,7 @@ exist and reading from this register address will return zero.</li><li>Size:32 b
 <p class="BLANK"></p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DE_ASSERT): De-assert 'de' signal</li><li>0x1 (ASSERT): Assert 'de' signal</li></ul><p></p>
+<ul><li>0x0 (DE_ASSERT): De-assert 'de' signal</li><li>0x1 (ASSERT): Assert 'de' signal</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2667,7 +2667,7 @@ not exist and reading from this register address will return zero.</li><li>Size:
 <p>The 'RE Enable' register bit is used to control assertion and de-assertion of 're' signal.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DE_ASSERT): De-assert 're' signal</li><li>0x1 (ASSERT): Assert 're' signal</li></ul><p></p>
+<ul><li>0x0 (DE_ASSERT): De-assert 're' signal</li><li>0x1 (ASSERT): Assert 're' signal</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2967,7 +2967,7 @@ from. A zero on the counter will break the hung transaction with PSLVERR high</l
 <td><p>Encoding of FIFO_MODE configuration parameter value.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (FIFO_MODE_0): FIFO mode is 0</li><li>0x1 (FIFO_MODE_16): FIFO mode is 16</li><li>0x2 (FIFO_MODE_32): FIFO mode is 32</li><li>0x4 (FIFO_MODE_64): FIFO mode is 64</li><li>0x8 (FIFO_MODE_128): FIFO mode is 128</li><li>0x10 (FIFO_MODE_256): FIFO mode is 256</li><li>0x20 (FIFO_MODE_512): FIFO mode is 512</li><li>0x40 (FIFO_MODE_1024): FIFO mode is 1024</li><li>0x80 (FIFO_MODE_2048): FIFO mode is 2048</li></ul><p></p>
+<ul><li>0x0 (FIFO_MODE_0): FIFO mode is 0</li><li>0x1 (FIFO_MODE_16): FIFO mode is 16</li><li>0x2 (FIFO_MODE_32): FIFO mode is 32</li><li>0x4 (FIFO_MODE_64): FIFO mode is 64</li><li>0x8 (FIFO_MODE_128): FIFO mode is 128</li><li>0x10 (FIFO_MODE_256): FIFO mode is 256</li><li>0x20 (FIFO_MODE_512): FIFO mode is 512</li><li>0x40 (FIFO_MODE_1024): FIFO mode is 1024</li><li>0x80 (FIFO_MODE_2048): FIFO mode is 2048</li></ul> 
 <p>Value After Reset:0x4</p>
 </td>
 </tr>
@@ -2986,7 +2986,7 @@ from. A zero on the counter will break the hung transaction with PSLVERR high</l
 <td><p>Encoding of DMA_EXTRA configuration parameter value.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): DMA_EXTRA disabled</li><li>0x1 (ENABLED): DMA_EXTRA enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): DMA_EXTRA disabled</li><li>0x1 (ENABLED): DMA_EXTRA enabled</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -2997,7 +2997,7 @@ from. A zero on the counter will break the hung transaction with PSLVERR high</l
 <td><p>Encoding of UART_ADD_ENCODED_PARAMS configuration parameter value.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): UART_ADD_ENCODED_PARAMS disabled</li><li>0x1 (ENABLED): UART_ADD_ENCODED_PARAMS enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): UART_ADD_ENCODED_PARAMS disabled</li><li>0x1 (ENABLED): UART_ADD_ENCODED_PARAMS enabled</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3008,7 +3008,7 @@ from. A zero on the counter will break the hung transaction with PSLVERR high</l
 <td><p>Encoding of SHADOW configuration parameter value.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): SHADOW disabled</li><li>0x1 (ENABLED): SHADOW enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): SHADOW disabled</li><li>0x1 (ENABLED): SHADOW enabled</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3019,7 +3019,7 @@ from. A zero on the counter will break the hung transaction with PSLVERR high</l
 <td><p>Encoding of FIFO_STAT configuration parameter value.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): FIFO_STAT disabled</li><li>0x1 (ENABLED): FIFO_STAT enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): FIFO_STAT disabled</li><li>0x1 (ENABLED): FIFO_STAT enabled</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3030,7 +3030,7 @@ from. A zero on the counter will break the hung transaction with PSLVERR high</l
 <td><p>Encoding of FIFO_ACCESS configuration parameter value.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): FIFO_ACCESS disabled</li><li>0x1 (ENABLED): FIFO ACCESS enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): FIFO_ACCESS disabled</li><li>0x1 (ENABLED): FIFO ACCESS enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3041,7 +3041,7 @@ from. A zero on the counter will break the hung transaction with PSLVERR high</l
 <td><p>Encoding of ADDITIONAL_FEATURES configuration parameter value.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Additional features disabled</li><li>0x1 (ENABLED): Additional features enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Additional features disabled</li><li>0x1 (ENABLED): Additional features enabled</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3052,7 +3052,7 @@ from. A zero on the counter will break the hung transaction with PSLVERR high</l
 <td><p>Encoding of SIR_LP_MODE configuration parameter value.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): SIR_LP mode disabled</li><li>0x1 (ENABLED): SIR_LP mode enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): SIR_LP mode disabled</li><li>0x1 (ENABLED): SIR_LP mode enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3063,7 +3063,7 @@ from. A zero on the counter will break the hung transaction with PSLVERR high</l
 <td><p>Encoding of SIR_MODE configuration parameter value.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): SIR mode disabled</li><li>0x1 (ENABLED): SIR mode enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): SIR mode disabled</li><li>0x1 (ENABLED): SIR mode enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3074,7 +3074,7 @@ from. A zero on the counter will break the hung transaction with PSLVERR high</l
 <td><p>Encoding of THRE_MODE configuration parameter value.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): THRE mode disabled</li><li>0x1 (ENABLED): THRE mode enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): THRE mode disabled</li><li>0x1 (ENABLED): THRE mode enabled</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3085,7 +3085,7 @@ from. A zero on the counter will break the hung transaction with PSLVERR high</l
 <td><p>Encoding of AFCE_MODE configuration parameter value.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): AFCE mode disabled</li><li>0x1 (ENABLED): AFCE mode enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): AFCE mode disabled</li><li>0x1 (ENABLED): AFCE mode enabled</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3104,7 +3104,7 @@ from. A zero on the counter will break the hung transaction with PSLVERR high</l
 <td><p>Encoding of APB_DATA_WIDTH configuration parameter value.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (APB_8BITS): APB data width is 8 bits</li><li>0x1 (APB_16BITS): APB data width is 16 bits</li><li>0x2 (APB_32BITS): APB data width is 32 bits</li></ul><p></p>
+<ul><li>0x0 (APB_8BITS): APB data width is 8 bits</li><li>0x1 (APB_16BITS): APB data width is 16 bits</li><li>0x2 (APB_32BITS): APB data width is 32 bits</li></ul> 
 <p>Value After Reset:0x2</p>
 </td>
 </tr>

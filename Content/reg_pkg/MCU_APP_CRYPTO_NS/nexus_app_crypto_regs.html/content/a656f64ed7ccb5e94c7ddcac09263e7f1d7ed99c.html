@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
@@ -87,34 +87,34 @@
         </p>
         <h2>Field Descriptions</h2>
         <h3 id="extctrlen.desc">extctrlen - External Control Enable<a class="headerlink" href="#extctrlen.desc" title="Permalink to this headline"></a></h3>
-        <p>Set this bit to enable external control. When external control is enabled, engine takes the following information form external source and ignores the configurations from the APB register.<p></p>
-• Start Signal<p></p>
-• Encryption/Decryption signal<p></p>
-• Key length<p></p>
-• Resume signal<p></p>
-• Payload/stream size<p></p>
-• Additional authenticated data size (GCM)<p></p>
-• IV size (GCM)<p></p>
-• Tag size (GCM)<p></p>
-• Key1<p></p>
-• Key2 (XTS)<p></p>
-• IV<p></p></p>
+        <p>Set this bit to enable external control. When external control is enabled, engine takes the following information form external source and ignores the configurations from the APB register. 
+• Start Signal 
+• Encryption/Decryption signal 
+• Key length 
+• Resume signal 
+• Payload/stream size 
+• Additional authenticated data size (GCM) 
+• IV size (GCM) 
+• Tag size (GCM) 
+• Key1 
+• Key2 (XTS) 
+• IV </p>
         <h3 id="dataswap.desc">dataswap - Data Swap<a class="headerlink" href="#dataswap.desc" title="Permalink to this headline"></a></h3>
-        <p>This field decides the Key1, Key2, IV, and input/output data byte ordering (endian) within a DWord.<p></p>
-• 0h= No swap (data feeded in as is)<p></p>
-• 1h= Byte swap<p></p>
-EX: Assuem a DWord data is 0x01234567<p></p>
-• 0h = 0x01234567.<p></p>
-• 1h = 0x67452301<p></p>
-Notes:<p></p>
-1. When External Control Enable bit is set, this field no longer has effect on the Key1, Key2, and IV.<p></p>
-2. This field must be programmed before programming the Key1, Key2, and IV registers in order to take effect.<p></p></p>
+        <p>This field decides the Key1, Key2, IV, and input/output data byte ordering (endian) within a DWord. 
+• 0h= No swap (data feeded in as is) 
+• 1h= Byte swap 
+EX: Assuem a DWord data is 0x01234567 
+• 0h = 0x01234567. 
+• 1h = 0x67452301 
+Notes: 
+1. When External Control Enable bit is set, this field no longer has effect on the Key1, Key2, and IV. 
+2. This field must be programmed before programming the Key1, Key2, and IV registers in order to take effect. </p>
         <h3 id="select.desc">select - AES, DES/TDES and RC4 share some of the registers and internal logic. The field allocates the resource to the selected engine.<a class="headerlink" href="#select.desc" title="Permalink to this headline"></a></h3>
-        <p>• 0h= Reserved<p></p>
-• 1h="AES" engine<p></p>
-• 2h="DES/TDES" engine<p></p>
-• 3h="RC4" engine<p></p>
-Notes:<p></p>
-1. Both AES's IV and DES/TDES's IV are mapped to IV_DW0, IV_DW1, IV_DW2, and IV_DW3 registers. When writing to IV_DW registers, both AES's and DES/TDES's IV value are over-written. When read from IV_DW registers, the read value (AES's or DES/ TDES's IV) is selected by this field.<p></p></p>
+        <p>• 0h= Reserved 
+• 1h="AES" engine 
+• 2h="DES/TDES" engine 
+• 3h="RC4" engine 
+Notes: 
+1. Both AES's IV and DES/TDES's IV are mapped to IV_DW0, IV_DW1, IV_DW2, and IV_DW3 registers. When writing to IV_DW registers, both AES's and DES/TDES's IV value are over-written. When read from IV_DW registers, the read value (AES's or DES/ TDES's IV) is selected by this field. </p>
     </body>
 </html>

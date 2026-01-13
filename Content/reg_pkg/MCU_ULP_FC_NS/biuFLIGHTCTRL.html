@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>FLIGHTCTRL</title></head>
+<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>FLIGHTCTRL</title></head>
 <body>
 <h1><a name="FLIGHTCTRL">"FLIGHTCTRL"</a>
         </h1>
@@ -17,12 +17,12 @@
 </td>
 <td><p>32'h00000000</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
-FAULT_NUM is 40, array size is 2<p></p>
-used to describe HW fault input signal, which is either level<p></p>
-or pulse, if it is pulse, it has to be in powClk domain (inside<p></p>
-flightControl, there is no syncPulse instantiation); if it is<p></p>
-level, flightControl will do clock domain crossing internally.<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
+FAULT_NUM is 40, array size is 2 
+used to describe HW fault input signal, which is either level 
+or pulse, if it is pulse, it has to be in powClk domain (inside 
+flightControl, there is no syncPulse instantiation); if it is 
+level, flightControl will do clock domain crossing internally. 
 Each bit is corresponding to one of fault sources.</p>
 </td>
 </tr>
@@ -41,11 +41,11 @@ Each bit is corresponding to one of fault sources.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0: fault is level signal; 1: fault is pulse signal (powClk<p></p>
+<td><p>0: fault is level signal; 1: fault is pulse signal (powClk 
 domain)</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -62,8 +62,8 @@ domain)</p>
 </td>
 <td><p>32'h00000004</p>
 </td>
-<td><p>fault log masking control, each bit is corresponding to one of<p></p>
-fault sources, once set (1’b1) it is used to mask out (disable)<p></p>
+<td><p>fault log masking control, each bit is corresponding to one of 
+fault sources, once set (1’b1) it is used to mask out (disable) 
 the responding fault source get logged into $FLOGARRAY.</p>
 </td>
 </tr>
@@ -82,11 +82,11 @@ the responding fault source get logged into $FLOGARRAY.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Each bit used to mask out (disable) the corresponding fault<p></p>
+<td><p>Each bit used to mask out (disable) the corresponding fault 
 source get logged in $FLOGARRAY</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -103,10 +103,10 @@ source get logged in $FLOGARRAY</p>
 </td>
 <td><p>32'h00000008</p>
 </td>
-<td><p>used to describe HW fault input signal, which is either level<p></p>
-or pulse, if it is pulse, it has to be in powClk domain (inside<p></p>
-flightControl, there is no syncPulse instantiation); if it is<p></p>
-level, flightControl will do clock domain crossing internally.<p></p>
+<td><p>used to describe HW fault input signal, which is either level 
+or pulse, if it is pulse, it has to be in powClk domain (inside 
+flightControl, there is no syncPulse instantiation); if it is 
+level, flightControl will do clock domain crossing internally. 
 Each bit is corresponding to one of fault sources.</p>
 </td>
 </tr>
@@ -125,11 +125,11 @@ Each bit is corresponding to one of fault sources.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0: fault is level signal; 1: fault is pulse signal (powClk<p></p>
+<td><p>0: fault is level signal; 1: fault is pulse signal (powClk 
 domain)</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -146,8 +146,8 @@ domain)</p>
 </td>
 <td><p>32'h0000000C</p>
 </td>
-<td><p>fault log masking control, each bit is corresponding to one of<p></p>
-fault sources, once set (1’b1) it is used to mask out (disable)<p></p>
+<td><p>fault log masking control, each bit is corresponding to one of 
+fault sources, once set (1’b1) it is used to mask out (disable) 
 the responding fault source get logged into $FLOGARRAY.</p>
 </td>
 </tr>
@@ -166,11 +166,11 @@ the responding fault source get logged into $FLOGARRAY.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Each bit used to mask out (disable) the corresponding fault<p></p>
+<td><p>Each bit used to mask out (disable) the corresponding fault 
 source get logged in $FLOGARRAY</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -187,9 +187,9 @@ source get logged in $FLOGARRAY</p>
 </td>
 <td><p>32'h00000010</p>
 </td>
-<td><p>Array size should equal to ceil(INTR_NUM/32), for example, if<p></p>
-INTR_NUM is 40, array size is 2<p></p>
-interrupt status clear, each bit controls one interrupt<p></p>
+<td><p>Array size should equal to ceil(INTR_NUM/32), for example, if 
+INTR_NUM is 40, array size is 2 
+interrupt status clear, each bit controls one interrupt 
 status, write 1 clear.</p>
 </td>
 </tr>
@@ -208,11 +208,11 @@ status, write 1 clear.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Write 1 to each bit will clear corresponding interrupt status<p></p>
+<td><p>Write 1 to each bit will clear corresponding interrupt status 
 bit STATUS.flag</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -229,8 +229,8 @@ bit STATUS.flag</p>
 </td>
 <td><p>32'h00000014</p>
 </td>
-<td><p>interrupt status time out clear, each bit controls if<p></p>
-corresponding interrupt status will be cleared when TOC (time<p></p>
+<td><p>interrupt status time out clear, each bit controls if 
+corresponding interrupt status will be cleared when TOC (time 
 out counter) counting down to 0</p>
 </td>
 </tr>
@@ -252,7 +252,7 @@ out counter) counting down to 0</p>
 <td><p>Set corresponding bit to enable interrupt status time out clear</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -269,7 +269,7 @@ out counter) counting down to 0</p>
 </td>
 <td><p>32'h00000018</p>
 </td>
-<td><p>used to mask out (disable) the interrupt request bit output<p></p>
+<td><p>used to mask out (disable) the interrupt request bit output 
 from flight control block</p>
 </td>
 </tr>
@@ -288,11 +288,11 @@ from flight control block</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Each bit used to mask out (disable) corresponding interrupt<p></p>
+<td><p>Each bit used to mask out (disable) corresponding interrupt 
 request bit output from flight control block</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -309,7 +309,7 @@ request bit output from flight control block</p>
 </td>
 <td><p>32'h0000001C</p>
 </td>
-<td><p>used to select the interrupt request output: level (0 )or edge<p></p>
+<td><p>used to select the interrupt request output: level (0 )or edge 
 (1)</p>
 </td>
 </tr>
@@ -328,11 +328,11 @@ request bit output from flight control block</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0: interrupt output is level signal;<p></p>
+<td><p>0: interrupt output is level signal; 
 1: interrupt output is edge signal;</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -367,11 +367,11 @@ request bit output from flight control block</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -406,11 +406,11 @@ request bit output from flight control block</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Once set (1’b1), $FLOGARRAY contents and write pointer will be<p></p>
+<td><p>Once set (1’b1), $FLOGARRAY contents and write pointer will be 
 erased (0).</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -427,12 +427,12 @@ erased (0).</p>
 </td>
 <td><p>32'h00000028</p>
 </td>
-<td><p>interrupt status timeout value, each interrupt has option<p></p>
-(enabled by INTRTOEN0 and INTRTOEN1) to use HW timeout to clear<p></p>
-its status, when all associated faults are de-asserted, the HW<p></p>
-timeout counter initiates a count-down until it reaches 0<p></p>
-unless any associated faults are asserted during this process,<p></p>
-in such cases, the HW time out counter will be reloaded with<p></p>
+<td><p>interrupt status timeout value, each interrupt has option 
+(enabled by INTRTOEN0 and INTRTOEN1) to use HW timeout to clear 
+its status, when all associated faults are de-asserted, the HW 
+timeout counter initiates a count-down until it reaches 0 
+unless any associated faults are asserted during this process, 
+in such cases, the HW time out counter will be reloaded with 
 the specified timeout value.</p>
 </td>
 </tr>
@@ -454,7 +454,7 @@ the specified timeout value.</p>
 <td><p>Time out value will be used to clear interrupt status</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -471,11 +471,11 @@ the specified timeout value.</p>
 </td>
 <td><p>32'h0000002C</p>
 </td>
-<td><p>trigger pulse width, any associated fault (0 to 1 rising edge)<p></p>
-will cause relevant trigger assertion, in the meantime,<p></p>
-trigger’s count-down counter will be loaded with the value<p></p>
-of this register, and it will count down if no further fault<p></p>
-rising edge is detected until it reaches 0, trigger will be<p></p>
+<td><p>trigger pulse width, any associated fault (0 to 1 rising edge) 
+will cause relevant trigger assertion, in the meantime, 
+trigger’s count-down counter will be loaded with the value 
+of this register, and it will count down if no further fault 
+rising edge is detected until it reaches 0, trigger will be 
 de-asserted once the counter reaches 0.</p>
 </td>
 </tr>
@@ -494,11 +494,11 @@ de-asserted once the counter reaches 0.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -515,11 +515,11 @@ de-asserted once the counter reaches 0.</p>
 </td>
 <td><p>32'h00000030</p>
 </td>
-<td><p>reset_n negative pulse width, any associated fault (0 to 1<p></p>
-rising edge) will cause relevant reset_n assertion, in the<p></p>
-meantime, reset_n’s count-down counter will be loaded with the<p></p>
-value of this register, and it will count down if no further<p></p>
-fault rising edge is detected until it reaches 0, reset_n will<p></p>
+<td><p>reset_n negative pulse width, any associated fault (0 to 1 
+rising edge) will cause relevant reset_n assertion, in the 
+meantime, reset_n’s count-down counter will be loaded with the 
+value of this register, and it will count down if no further 
+fault rising edge is detected until it reaches 0, reset_n will 
 be de-asserted once the counter reaches 0.</p>
 </td>
 </tr>
@@ -538,11 +538,11 @@ be de-asserted once the counter reaches 0.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -559,10 +559,10 @@ be de-asserted once the counter reaches 0.</p>
 </td>
 <td><p>32'h00000034</p>
 </td>
-<td><p>used to associate multiple faults to specified interrupt, the<p></p>
-Array size need to matched with interrupt number parameter<p></p>
-INTR_NUM<p></p>
-Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>used to associate multiple faults to specified interrupt, the 
+Array size need to matched with interrupt number parameter 
+INTR_NUM 
+Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -581,11 +581,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -602,7 +602,7 @@ input</p>
 </td>
 <td><p>32'h00000038</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -621,11 +621,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -642,7 +642,7 @@ input</p>
 </td>
 <td><p>32'h0000003C</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -661,11 +661,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -682,7 +682,7 @@ input</p>
 </td>
 <td><p>32'h00000040</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -701,11 +701,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -722,7 +722,7 @@ input</p>
 </td>
 <td><p>32'h00000044</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -741,11 +741,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -762,7 +762,7 @@ input</p>
 </td>
 <td><p>32'h00000048</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -781,11 +781,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -802,7 +802,7 @@ input</p>
 </td>
 <td><p>32'h0000004C</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -821,11 +821,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -842,7 +842,7 @@ input</p>
 </td>
 <td><p>32'h00000050</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -861,11 +861,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -882,7 +882,7 @@ input</p>
 </td>
 <td><p>32'h00000054</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -901,11 +901,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -922,7 +922,7 @@ input</p>
 </td>
 <td><p>32'h00000058</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -941,11 +941,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -962,7 +962,7 @@ input</p>
 </td>
 <td><p>32'h0000005C</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -981,11 +981,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1002,7 +1002,7 @@ input</p>
 </td>
 <td><p>32'h00000060</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1021,11 +1021,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1042,7 +1042,7 @@ input</p>
 </td>
 <td><p>32'h00000064</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -1061,11 +1061,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1082,7 +1082,7 @@ input</p>
 </td>
 <td><p>32'h00000068</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1101,11 +1101,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1122,7 +1122,7 @@ input</p>
 </td>
 <td><p>32'h0000006C</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -1141,11 +1141,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1162,7 +1162,7 @@ input</p>
 </td>
 <td><p>32'h00000070</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1181,11 +1181,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1202,7 +1202,7 @@ input</p>
 </td>
 <td><p>32'h00000074</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -1221,11 +1221,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1242,7 +1242,7 @@ input</p>
 </td>
 <td><p>32'h00000078</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1261,11 +1261,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1282,7 +1282,7 @@ input</p>
 </td>
 <td><p>32'h0000007C</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -1301,11 +1301,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1322,7 +1322,7 @@ input</p>
 </td>
 <td><p>32'h00000080</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1341,11 +1341,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1362,7 +1362,7 @@ input</p>
 </td>
 <td><p>32'h00000084</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -1381,11 +1381,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1402,7 +1402,7 @@ input</p>
 </td>
 <td><p>32'h00000088</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1421,11 +1421,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1442,7 +1442,7 @@ input</p>
 </td>
 <td><p>32'h0000008C</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -1461,11 +1461,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1482,7 +1482,7 @@ input</p>
 </td>
 <td><p>32'h00000090</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1501,11 +1501,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1522,7 +1522,7 @@ input</p>
 </td>
 <td><p>32'h00000094</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -1541,11 +1541,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1562,7 +1562,7 @@ input</p>
 </td>
 <td><p>32'h00000098</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1581,11 +1581,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1602,7 +1602,7 @@ input</p>
 </td>
 <td><p>32'h0000009C</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -1621,11 +1621,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1642,7 +1642,7 @@ input</p>
 </td>
 <td><p>32'h000000A0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1661,11 +1661,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1682,7 +1682,7 @@ input</p>
 </td>
 <td><p>32'h000000A4</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -1701,11 +1701,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1722,7 +1722,7 @@ input</p>
 </td>
 <td><p>32'h000000A8</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1741,11 +1741,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1762,7 +1762,7 @@ input</p>
 </td>
 <td><p>32'h000000AC</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -1781,11 +1781,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1802,7 +1802,7 @@ input</p>
 </td>
 <td><p>32'h000000B0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1821,11 +1821,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1842,10 +1842,10 @@ input</p>
 </td>
 <td><p>32'h000000B4</p>
 </td>
-<td><p>used to associate multiple faults to specified trigger, the<p></p>
-Array size need to matched with the configured trigger number<p></p>
-TRIG_NUM<p></p>
-Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>used to associate multiple faults to specified trigger, the 
+Array size need to matched with the configured trigger number 
+TRIG_NUM 
+Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -1864,11 +1864,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1885,7 +1885,7 @@ input</p>
 </td>
 <td><p>32'h000000B8</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1904,11 +1904,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1925,7 +1925,7 @@ input</p>
 </td>
 <td><p>32'h000000BC</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -1944,11 +1944,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1965,7 +1965,7 @@ input</p>
 </td>
 <td><p>32'h000000C0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1984,11 +1984,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2005,7 +2005,7 @@ input</p>
 </td>
 <td><p>32'h000000C4</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -2024,11 +2024,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2045,7 +2045,7 @@ input</p>
 </td>
 <td><p>32'h000000C8</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2064,11 +2064,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2085,7 +2085,7 @@ input</p>
 </td>
 <td><p>32'h000000CC</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -2104,11 +2104,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2125,7 +2125,7 @@ input</p>
 </td>
 <td><p>32'h000000D0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2144,11 +2144,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2165,7 +2165,7 @@ input</p>
 </td>
 <td><p>32'h000000D4</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -2184,11 +2184,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2205,7 +2205,7 @@ input</p>
 </td>
 <td><p>32'h000000D8</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2224,11 +2224,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2245,7 +2245,7 @@ input</p>
 </td>
 <td><p>32'h000000DC</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -2264,11 +2264,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2285,7 +2285,7 @@ input</p>
 </td>
 <td><p>32'h000000E0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2304,11 +2304,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2325,7 +2325,7 @@ input</p>
 </td>
 <td><p>32'h000000E4</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -2344,11 +2344,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2365,7 +2365,7 @@ input</p>
 </td>
 <td><p>32'h000000E8</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2384,11 +2384,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2405,7 +2405,7 @@ input</p>
 </td>
 <td><p>32'h000000EC</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -2424,11 +2424,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2445,7 +2445,7 @@ input</p>
 </td>
 <td><p>32'h000000F0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2464,11 +2464,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2485,10 +2485,10 @@ input</p>
 </td>
 <td><p>32'h000000F4</p>
 </td>
-<td><p>used to associate multiple faults to specified reset, the<p></p>
-Array size need to matched with the configured reset number<p></p>
-RST_NUM<p></p>
-Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>used to associate multiple faults to specified reset, the 
+Array size need to matched with the configured reset number 
+RST_NUM 
+Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -2507,11 +2507,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2528,7 +2528,7 @@ input</p>
 </td>
 <td><p>32'h000000F8</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2547,11 +2547,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2568,7 +2568,7 @@ input</p>
 </td>
 <td><p>32'h000000FC</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -2587,11 +2587,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2608,7 +2608,7 @@ input</p>
 </td>
 <td><p>32'h00000100</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2627,11 +2627,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2648,7 +2648,7 @@ input</p>
 </td>
 <td><p>32'h00000104</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -2667,11 +2667,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2688,7 +2688,7 @@ input</p>
 </td>
 <td><p>32'h00000108</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2707,11 +2707,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2728,7 +2728,7 @@ input</p>
 </td>
 <td><p>32'h0000010C</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -2747,11 +2747,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2768,7 +2768,7 @@ input</p>
 </td>
 <td><p>32'h00000110</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2787,11 +2787,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2808,7 +2808,7 @@ input</p>
 </td>
 <td><p>32'h00000114</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -2827,11 +2827,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2848,7 +2848,7 @@ input</p>
 </td>
 <td><p>32'h00000118</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2867,11 +2867,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2888,7 +2888,7 @@ input</p>
 </td>
 <td><p>32'h0000011C</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -2907,11 +2907,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2928,7 +2928,7 @@ input</p>
 </td>
 <td><p>32'h00000120</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2947,11 +2947,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2968,7 +2968,7 @@ input</p>
 </td>
 <td><p>32'h00000124</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -2987,11 +2987,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3008,7 +3008,7 @@ input</p>
 </td>
 <td><p>32'h00000128</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3027,11 +3027,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3048,7 +3048,7 @@ input</p>
 </td>
 <td><p>32'h0000012C</p>
 </td>
-<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if<p></p>
+<td><p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
 FAULT_NUM is 40, array size is 2</p>
 </td>
 </tr>
@@ -3067,11 +3067,11 @@ FAULT_NUM is 40, array size is 2</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3088,7 +3088,7 @@ input</p>
 </td>
 <td><p>32'h00000130</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3107,11 +3107,11 @@ input</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault<p></p>
+<td><p>every bit of FAULT.entry[31:0] is corresponding to one fault 
 input</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3128,7 +3128,7 @@ input</p>
 </td>
 <td><p>32'h00000400</p>
 </td>
-<td><p>Fault log array used to record the ID of fault triggered in SoC<p></p>
+<td><p>Fault log array used to record the ID of fault triggered in SoC 
 Internal memory</p>
 </td>
 </tr>
@@ -3145,13 +3145,13 @@ Internal memory</p>
 </td>
 <td><p>Memory</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 <td><p>Memory</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3168,9 +3168,9 @@ Internal memory</p>
 </td>
 <td><p>32'h00000800</p>
 </td>
-<td><p>SW can write any log value into this register, but only the<p></p>
-value range FAULT_NUM+1 ~ 2^FLID_WIDTH-1 is allowed to be<p></p>
-stored into $FLOGARRAY, they’re interleaving along with HW<p></p>
+<td><p>SW can write any log value into this register, but only the 
+value range FAULT_NUM+1 ~ 2^FLID_WIDTH-1 is allowed to be 
+stored into $FLOGARRAY, they’re interleaving along with HW 
 fault ID.</p>
 </td>
 </tr>
@@ -3189,11 +3189,11 @@ fault ID.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3228,10 +3228,10 @@ fault ID.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 </body></html>

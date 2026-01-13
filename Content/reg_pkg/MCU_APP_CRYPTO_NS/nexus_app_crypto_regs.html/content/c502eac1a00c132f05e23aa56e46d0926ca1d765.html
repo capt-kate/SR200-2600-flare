@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
@@ -208,52 +208,52 @@
         </p>
         <h2>Field Descriptions</h2>
         <h3 id="in_dis_rec_err_code.desc">in_dis_rec_err_code - Input DMA DATA READ ERROR CHECK DISABLE<a class="headerlink" href="#in_dis_rec_err_code.desc" title="Permalink to this headline"></a></h3>
-        <p>When this bit is asserted, the Input data Transfer Error check is disabled. The error interrupt is still set, but it does not affect the DMA operation.<p></p></p>
+        <p>When this bit is asserted, the Input data Transfer Error check is disabled. The error interrupt is still set, but it does not affect the DMA operation. </p>
         <h3 id="in_dis_ll_err_code.desc">in_dis_ll_err_code - Input DMA LINK LIST ERROR CHECK DISABLE<a class="headerlink" href="#in_dis_ll_err_code.desc" title="Permalink to this headline"></a></h3>
-        <p>When this bit is asserted, the Input Link List Error check is disabled. The error interrupt is still set, but it does not affect the DMA operation.<p></p></p>
+        <p>When this bit is asserted, the Input Link List Error check is disabled. The error interrupt is still set, but it does not affect the DMA operation. </p>
         <h3 id="in_dis_err_code.desc">in_dis_err_code - Input DMA DISABLE FIFO PARITY CHECK SELECT<a class="headerlink" href="#in_dis_err_code.desc" title="Permalink to this headline"></a></h3>
-        <p>When this bit is asserted, the Input FIFO parity check is disabled. The Parity interrupt is still set, but it does not affect the DMA operation.<p></p></p>
+        <p>When this bit is asserted, the Input FIFO parity check is disabled. The Parity interrupt is still set, but it does not affect the DMA operation. </p>
         <h3 id="in_cache_mode.desc">in_cache_mode - Input DMA Cache Mode Select<a class="headerlink" href="#in_cache_mode.desc" title="Permalink to this headline"></a></h3>
-        <p>This field provides the CACHE mode for the DMA read transactions.<p></p></p>
+        <p>This field provides the CACHE mode for the DMA read transactions. </p>
         <h3 id="in_rid_ext.desc">in_rid_ext - Input AXI Read ID Extension<a class="headerlink" href="#in_rid_ext.desc" title="Permalink to this headline"></a></h3>
-        <p>This field provides the upper four bit extension of the RID for the read Link List RID. The subsequent RID+1 thru RID+4 will be used for the four reserved RID's for read data transfers.<p></p>
-The IN_RID should be different from OUT_WID and OUT_WID+1.<p></p></p>
+        <p>This field provides the upper four bit extension of the RID for the read Link List RID. The subsequent RID+1 thru RID+4 will be used for the four reserved RID's for read data transfers. 
+The IN_RID should be different from OUT_WID and OUT_WID+1. </p>
         <h3 id="in_order_dis.desc">in_order_dis - Read Transaction Out of Order Disable<a class="headerlink" href="#in_order_dis.desc" title="Permalink to this headline"></a></h3>
-        <p>When this bit is set, the read transaction out of order feature is disabled, and the RID will always be the same for each read transaction.<p></p></p>
+        <p>When this bit is set, the read transaction out of order feature is disabled, and the RID will always be the same for each read transaction. </p>
         <h3 id="in_req_algn64.desc">in_req_algn64 - Input DMA Request Data Aligned 64 Byte<a class="headerlink" href="#in_req_algn64.desc" title="Permalink to this headline"></a></h3>
         <h3 id="in_req_pause.desc">in_req_pause - Input DMA Request Pause<a class="headerlink" href="#in_req_pause.desc" title="Permalink to this headline"></a></h3>
         <h3 id="in_bus_sz.desc">in_bus_sz - Input DMA FIFO Bus Size<a class="headerlink" href="#in_bus_sz.desc" title="Permalink to this headline"></a></h3>
-        <p>The default of this bit is product dependent.<p></p>
-This register provides the maximum bus size of the AXI input data bus. The value is indicated as the following:<p></p>
-0 - 32 bit bus<p></p>
-1 - 64 bit bus<p></p></p>
+        <p>The default of this bit is product dependent. 
+This register provides the maximum bus size of the AXI input data bus. The value is indicated as the following: 
+0 - 32 bit bus 
+1 - 64 bit bus </p>
         <h3 id="in_burst_type.desc">in_burst_type - Input DMA Burst Type<a class="headerlink" href="#in_burst_type.desc" title="Permalink to this headline"></a></h3>
-        <p>This field provides the Burst Type of the Read Data Transfer.<p></p>
-00 - Fixed<p></p>
-01 - Inc<p></p>
-10 - Wrap<p></p>
-11 - Reserved<p></p></p>
+        <p>This field provides the Burst Type of the Read Data Transfer. 
+00 - Fixed 
+01 - Inc 
+10 - Wrap 
+11 - Reserved </p>
         <h3 id="in_burst_len.desc">in_burst_len - Input DMA Burst Length<a class="headerlink" href="#in_burst_len.desc" title="Permalink to this headline"></a></h3>
-        <p>Burst Len provides the #no beat of data transfer on the bus. The value can be from 1 thru 16.<p></p>
-The total data transfer for each burst is calculated as the following:<p></p>
-Number of bytes = #Burst Size X #Bus_Size (in term of bytes)<p></p></p>
+        <p>Burst Len provides the #no beat of data transfer on the bus. The value can be from 1 thru 16. 
+The total data transfer for each burst is calculated as the following: 
+Number of bytes = #Burst Size X #Bus_Size (in term of bytes) </p>
         <h3 id="in_rid.desc">in_rid - Input AXI Read ID<a class="headerlink" href="#in_rid.desc" title="Permalink to this headline"></a></h3>
-        <p>This field provides the RID for the read Link List RID. The constraints for assignment of RID are the following:<p></p>
-Case1: Out-of-Order Read transfer is selected, and maximum burst size is less than 64 bytes, then<p></p>
-• RID+1 thru RID+4 will be used for the four reserved RID for read data transfers.<p></p>
-• RID+4 can not be larger than 15.<p></p>
-Case2: Out-of-Order Read transfer is selected, and maximum burst size is larger than 64 bytes, then<p></p>
-• RID+1 thru RID+2 will be used for the four reserved RID for read data transfers.<p></p>
-• RID+2 can not be larger than 15.<p></p>
-Case3: Out-of-Order Read transfer is not selected,<p></p>
-• RID+1 will be used for the reserved RID for read data transfers.<p></p>
-• RID+1 can not be larger than 15.<p></p>
-The assignment of RID range should be different from WID and WID+1.<p></p></p>
+        <p>This field provides the RID for the read Link List RID. The constraints for assignment of RID are the following: 
+Case1: Out-of-Order Read transfer is selected, and maximum burst size is less than 64 bytes, then 
+• RID+1 thru RID+4 will be used for the four reserved RID for read data transfers. 
+• RID+4 can not be larger than 15. 
+Case2: Out-of-Order Read transfer is selected, and maximum burst size is larger than 64 bytes, then 
+• RID+1 thru RID+2 will be used for the four reserved RID for read data transfers. 
+• RID+2 can not be larger than 15. 
+Case3: Out-of-Order Read transfer is not selected, 
+• RID+1 will be used for the reserved RID for read data transfers. 
+• RID+1 can not be larger than 15. 
+The assignment of RID range should be different from WID and WID+1. </p>
         <h3 id="in_prot_mode.desc">in_prot_mode - Input DMA Protect Mode Select<a class="headerlink" href="#in_prot_mode.desc" title="Permalink to this headline"></a></h3>
-        <p>This provides the PROT mode field for the DMA read transactions.<p></p></p>
+        <p>This provides the PROT mode field for the DMA read transactions. </p>
         <h3 id="in_dma_ena.desc">in_dma_ena - Input DMA Enable<a class="headerlink" href="#in_dma_ena.desc" title="Permalink to this headline"></a></h3>
-        <p>When this bit is set, the Input DMA is enabled. This bit must be set only after all other registers are setup including RID. The sequence is:<p></p>
-1. Setup all registers, block count, etc., including IN_RID.<p></p>
-2. Set IN_DMA_ENA to high to start the transfer.<p></p></p>
+        <p>When this bit is set, the Input DMA is enabled. This bit must be set only after all other registers are setup including RID. The sequence is: 
+1. Setup all registers, block count, etc., including IN_RID. 
+2. Set IN_DMA_ENA to high to start the transfer. </p>
     </body>
 </html>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>Register Details</title></head>
+<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>Register Details</title></head>
 <body>
 <h1><a name="idp41371432"></a>Register Details</h1>
 <h2><a name="H3-sect1-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block"></a>DWC_mipi_i3c_block Register Details</h2>
@@ -46,7 +46,7 @@ After power on reset, the software can enable I3C slave controller by programmin
 responds to transfer on the bus only after it observes Bus Available condition for BUS_AVAILABLE_TIME*IDLE_CNT_MULTPLIER counts of pclk period. The successful completion of Enable/Disable of the controller depends on availability of SCL to the controller at the time of performing this operation, and hence may not happen instantly.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): DWC_mipi_i3c is disabled</li><li>0x1 (ENABLED): DWC_mipi_i3c is enabled</li></ul><p></p>
+<ul><li>0x0 (DISABLED): DWC_mipi_i3c is disabled</li><li>0x1 (ENABLED): DWC_mipi_i3c is enabled</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -101,11 +101,11 @@ data byte is transferred or received.</p>
 <p class="BLANK"></p>
 <p>This bit is used to enable or disable the DMA Handshaking interface, and is applicable to both Master and Slave modes of operation.</p>
 <p class="BLANK"></p>
-<p></p>
+ 
 <ul><li>1: Enables the DMA handshake control to interact with external DMA.<p class="BLANK"></p>
 </li><li>0: The DMA handshake control has no significance.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): DMA Handshake Interface not present</li><li>0x1 (ENABLED): DMA Handshake Interface present</li></ul><p></p>
+<ul><li>0x0 (DISABLED): DMA Handshake Interface not present</li><li>0x1 (ENABLED): DMA Handshake Interface present</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -151,7 +151,7 @@ This idle time is calculated by multiplying IDLE_CNT_MULITPLIER with BUS_AVAILAB
 - 11 - BUS_AVAILABLE_TIME * 8</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (IDLE_CNT_MULTPLIER_EQ_0): idle time is equal to BUS_AVAILABLE_TIME * 1</li><li>0x1 (IDLE_CNT_MULTPLIER_EQ_1): idle time is equal to BUS_AVAILABLE_TIME * 2</li><li>0x2 (IDLE_CNT_MULTPLIER_EQ_2): idle time is equal to BUS_AVAILABLE_TIME * 4</li><li>0x3 (IDLE_CNT_MULTPLIER_EQ_3): idle time is equal to BUS_AVAILABLE_TIME * 8</li></ul><p></p>
+<ul><li>0x0 (IDLE_CNT_MULTPLIER_EQ_0): idle time is equal to BUS_AVAILABLE_TIME * 1</li><li>0x1 (IDLE_CNT_MULTPLIER_EQ_1): idle time is equal to BUS_AVAILABLE_TIME * 2</li><li>0x2 (IDLE_CNT_MULTPLIER_EQ_2): idle time is equal to BUS_AVAILABLE_TIME * 4</li><li>0x3 (IDLE_CNT_MULTPLIER_EQ_3): idle time is equal to BUS_AVAILABLE_TIME * 8</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -173,7 +173,7 @@ This idle time is calculated by multiplying IDLE_CNT_MULITPLIER with BUS_AVAILAB
 ACK/NACKs the Hot-Join request from other devices connected on the DWC_mipi_i3c bus, based on programming of this bit.</p>
 <ul><li>0: ACK the Hot-join request.</li><li>1: NACK and send broadcast CCC to disable Hot-Join.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Ack Hot-Join requests</li><li>0x1 (ENABLED): Nack and auto-disable Hot-Join request</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Ack Hot-Join requests</li><li>0x1 (ENABLED): Nack and auto-disable Hot-Join request</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -190,7 +190,7 @@ ACK/NACKs the Hot-Join request from other devices connected on the DWC_mipi_i3c 
 <p>In HDR mode, this field is used to select TSL over TSP in a mixed bus configuration.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): I2C Slave not present</li><li>0x1 (ENABLED): I2C Slave present</li></ul><p></p>
+<ul><li>0x0 (DISABLED): I2C Slave not present</li><li>0x1 (ENABLED): I2C Slave present</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -214,7 +214,7 @@ ACK/NACKs the Hot-Join request from other devices connected on the DWC_mipi_i3c 
 driven from Slaves might not win address arbitration. Hence, the IBIs get delayed.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NOT_INCLUDED): I3C Broadcast Address is not included for Private Transfers</li><li>0x1 (INCLUDED): I3C Broadcast Address is included for Private Transfers</li></ul><p></p>
+<ul><li>0x0 (NOT_INCLUDED): I3C Broadcast Address is not included for Private Transfers</li><li>0x1 (INCLUDED): I3C Broadcast Address is included for Private Transfers</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -248,7 +248,7 @@ In the Target mode of operation this Register reflects the Static and Dynamic Ad
 <ul><li>In I3C Main Master mode, the user sets this bit to 1 as it self-assigns its dynamic address.</li><li>In all other operation modes, the Controller sets this bit to 1 when Main Master assigns the Dynamic address during ENTDAA mechanism, SETDASA CCC or SETNEWDA CCC. The bit will be set to 0 with RSTDAA CCC. Application can still program the Dynamic address valid if required under special circumstances like after exiting the low power mode in slave mode of operation.</li></ul><p class="BLANK"></p>
 <ul><li>In I3C Slave Mode the Controller sets this bit to 1 when Main Master assigns the Dynamic address during ENTDAA mechanism, SETDASA CCC or SETNEWDA CCC. The bit will be set to 0 with RSTDAA CCC. Application can still program the Dynamic address valid if required under special circumstances like after exiting the low power mode in slave mode of operation</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (INVALID): Dynamic Address is invalid</li><li>0x1 (VALID): Dynamic Address is valid</li></ul><p></p>
+<ul><li>0x0 (INVALID): Dynamic Address is invalid</li><li>0x1 (VALID): Dynamic Address is valid</li></ul> 
 <p>Value After Reset:0x1</p>
 <p>Volatile:true</p>
 </td>
@@ -283,7 +283,7 @@ In the Target mode of operation this Register reflects the Static and Dynamic Ad
 only if the device supports I2C or I3C Static Address.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (INVALID): Static Address is invalid</li><li>0x1 (VALID): Static Address is valid</li></ul><p></p>
+<ul><li>0x0 (INVALID): Static Address is invalid</li><li>0x1 (VALID): Static Address is valid</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -389,7 +389,7 @@ SETDASA CCC Command to get the Dynamic Address if static address is valid (STATI
 <p>Specifies the Controllers capability to perform HDR-TS transfers.</p>
 <ul><li>0: HDR-TS not supported</li><li>1: HDR-TS supported</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (HDR_TS_ENABLED): HDR TS transfers supported</li><li>0x0 (HDR_TS_DISABLED): HDR TS transfers not supported</li></ul><p></p>
+<ul><li>0x1 (HDR_TS_ENABLED): HDR TS transfers supported</li><li>0x0 (HDR_TS_DISABLED): HDR TS transfers not supported</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -402,7 +402,7 @@ SETDASA CCC Command to get the Dynamic Address if static address is valid (STATI
 <p>Specifies the Controllers capability to perform HDR-DDR transfers.</p>
 <ul><li>0: HDR-DDR not supported</li><li>1: HDR-DDR supported</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (HDR_DDR_ENABLED): HDR DDR transfers supported</li><li>0x0 (HDR_DDR_DISABLED): HDR DDR transfers not supported</li></ul><p></p>
+<ul><li>0x1 (HDR_DDR_ENABLED): HDR DDR transfers supported</li><li>0x0 (HDR_DDR_DISABLED): HDR DDR transfers not supported</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -415,7 +415,7 @@ SETDASA CCC Command to get the Dynamic Address if static address is valid (STATI
 <p>Specifies the configured role of DWC_mipi_i3c controller</p>
 <ul><li>1: Master Only</li><li>3: Secondary Master</li><li>4: Slave Only</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x1 (MASTER): Master only device PGM_MASTER_SLAVE</li><li>0x3 (SEC_MASTER): Secondary Master</li><li>0x4 (SLAVE_ONLY): Slave only</li></ul><p></p>
+<ul><li>0x1 (MASTER): Master only device PGM_MASTER_SLAVE</li><li>0x3 (SEC_MASTER): Secondary Master</li><li>0x4 (SLAVE_ONLY): Slave only</li></ul> 
 <p>Value After Reset:0x3</p>
 </td>
 </tr>
@@ -615,7 +615,7 @@ and a value of 0 sets the threshold to indicate that the queue is completely emp
 <p class="BLANK"></p>
 <p>In master mode of operation when the controller is set up to initiate a read transfer, it waits until either one of the conditions are met before it initiates the read transfer on the I3C Interface.</p>
 <p class="BLANK"></p>
-<p></p>
+ 
 <ul><li>Data length (as specified in the command) number of locations are empty in the Receive FIFO.<p class="BLANK"></p>
 </li><li>Threshold number of locations (or more) are empty in the Receive FIFO.<p class="BLANK"></p>
 </li></ul><p class="BLANK"></p>
@@ -624,7 +624,7 @@ and a value of 0 sets the threshold to indicate that the queue is completely emp
 <p>The supported values for RX_START_THLD are:</p>
 <ul><li>000 - 1</li><li>001 - 4</li><li>010 - 8</li><li>011 - 16</li><li>100 - 32</li><li>101 - 64</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (RX_START_THLD_eq_0): Master initiates read xfer/Slave ACK's write request whenever RX FIFO is having atleast one empty location.</li><li>0x1 (RX_START_THLD_eq_1): Master initiates read xfer/Slave ACK's write request whenever RX FIFO is having minimum of 4 empty locations.</li><li>0x2 (RX_START_THLD_eq_2): Master initiates read xfer/Slave ACK's write request whenever RX FIFO is having minimum of 8 empty locations.</li><li>0x3 (RX_START_THLD_eq_3): Master initiates read xfer/Slave ACK's write request whenever RX FIFO is having minimum of 16 empty locations.</li><li>0x4 (RX_START_THLD_eq_4): Master initiates read xfer/Slave ACK's write request whenever RX FIFO is having minimum of 32 empty locations.</li><li>0x5 (RX_START_THLD_eq_5): Master initiates read xfer/Slave ACK's write request whenever RX FIFO is having minimum of 64 empty locations.</li></ul><p></p>
+<ul><li>0x0 (RX_START_THLD_eq_0): Master initiates read xfer/Slave ACK's write request whenever RX FIFO is having atleast one empty location.</li><li>0x1 (RX_START_THLD_eq_1): Master initiates read xfer/Slave ACK's write request whenever RX FIFO is having minimum of 4 empty locations.</li><li>0x2 (RX_START_THLD_eq_2): Master initiates read xfer/Slave ACK's write request whenever RX FIFO is having minimum of 8 empty locations.</li><li>0x3 (RX_START_THLD_eq_3): Master initiates read xfer/Slave ACK's write request whenever RX FIFO is having minimum of 16 empty locations.</li><li>0x4 (RX_START_THLD_eq_4): Master initiates read xfer/Slave ACK's write request whenever RX FIFO is having minimum of 32 empty locations.</li><li>0x5 (RX_START_THLD_eq_5): Master initiates read xfer/Slave ACK's write request whenever RX FIFO is having minimum of 64 empty locations.</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -643,7 +643,7 @@ and a value of 0 sets the threshold to indicate that the queue is completely emp
 <p class="BLANK"></p>
 <p>In master mode of operation when the controller is set up to initiate a write transfer, it waits until either one of the following conditions are met before it initiates the write transfer on the I3C Interface.</p>
 <p class="BLANK"></p>
-<p></p>
+ 
 <ul><li>Data length (as specified in the command) number of locations are filled in the Transmit FIFO<p class="BLANK"></p>
 </li><li>Threshold number of entries (or more) are available in the Transmit FIFO<p class="BLANK"></p>
 </li></ul><p class="BLANK"></p>
@@ -654,7 +654,7 @@ and a value of 0 sets the threshold to indicate that the queue is completely emp
 <p>The supported values for TX_START_THLD are:</p>
 <ul><li>000: 1</li><li>001: 4</li><li>010: 8</li><li>011: 16</li><li>100: 32</li><li>101: 64</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (TX_START_THLD_eq_0): Master initiates write transfer/Slave ACK's read request whenever TX FIFO is having atleast 1 entry.</li><li>0x1 (TX_START_THLD_eq_1): Master initiates write transfer/Slave ACK's read request whenever TX FIFO is having atleast 4 entries.</li><li>0x2 (TX_START_THLD_eq_2): Master initiates write transfer/Slave ACK's read request whenever TX FIFO is having atleast 8 entries.</li><li>0x3 (TX_START_THLD_eq_3): Master initiates write transfer/Slave ACK's read request whenever TX FIFO is having atleast 16 entries.</li><li>0x4 (TX_START_THLD_eq_4): Master initiates write transfer/Slave ACK's read request whenever TX FIFO is having atleast 32 entries.</li><li>0x5 (TX_START_THLD_eq_5): Master initiates write transfer/Slave ACK's read request whenever TX FIFO is having atleast 64 entries.</li></ul><p></p>
+<ul><li>0x0 (TX_START_THLD_eq_0): Master initiates write transfer/Slave ACK's read request whenever TX FIFO is having atleast 1 entry.</li><li>0x1 (TX_START_THLD_eq_1): Master initiates write transfer/Slave ACK's read request whenever TX FIFO is having atleast 4 entries.</li><li>0x2 (TX_START_THLD_eq_2): Master initiates write transfer/Slave ACK's read request whenever TX FIFO is having atleast 8 entries.</li><li>0x3 (TX_START_THLD_eq_3): Master initiates write transfer/Slave ACK's read request whenever TX FIFO is having atleast 16 entries.</li><li>0x4 (TX_START_THLD_eq_4): Master initiates write transfer/Slave ACK's read request whenever TX FIFO is having atleast 32 entries.</li><li>0x5 (TX_START_THLD_eq_5): Master initiates write transfer/Slave ACK's read request whenever TX FIFO is having atleast 64 entries.</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -677,7 +677,7 @@ and a value of 0 sets the threshold to indicate that the queue is completely emp
 The supported values for RX_BUF_THLD are</p>
 <ul><li>000: 1</li><li>001: 4</li><li>010: 8</li><li>011: 16</li><li>100: 32</li><li>101: 64</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (RX_BUF_THLD_eq_0): whenever RX FIFO is having atleast one entry it triggers RX_THLD_STAT interrupt</li><li>0x1 (RX_BUF_THLD_eq_1): whenever RX FIFO is having minimum of 4 entries it triggers RX_THLD_STAT interrupt</li><li>0x2 (RX_BUF_THLD_eq_2): whenever RX FIFO is having minimum of 8 entries it triggers RX_THLD_STAT interrupt</li><li>0x3 (RX_BUF_THLD_eq_3): whenever RX FIFO is having minimum of 16 entries it triggers RX_THLD_STAT interrupt</li><li>0x4 (RX_BUF_THLD_eq_4): whenever RX FIFO is having minimum of 32 entries it triggers RX_THLD_STAT interrupt</li><li>0x5 (RX_BUF_THLD_eq_5): whenever RX FIFO is having minimum of 64 entries it triggers RX_THLD_STAT interrupt</li></ul><p></p>
+<ul><li>0x0 (RX_BUF_THLD_eq_0): whenever RX FIFO is having atleast one entry it triggers RX_THLD_STAT interrupt</li><li>0x1 (RX_BUF_THLD_eq_1): whenever RX FIFO is having minimum of 4 entries it triggers RX_THLD_STAT interrupt</li><li>0x2 (RX_BUF_THLD_eq_2): whenever RX FIFO is having minimum of 8 entries it triggers RX_THLD_STAT interrupt</li><li>0x3 (RX_BUF_THLD_eq_3): whenever RX FIFO is having minimum of 16 entries it triggers RX_THLD_STAT interrupt</li><li>0x4 (RX_BUF_THLD_eq_4): whenever RX FIFO is having minimum of 32 entries it triggers RX_THLD_STAT interrupt</li><li>0x5 (RX_BUF_THLD_eq_5): whenever RX FIFO is having minimum of 64 entries it triggers RX_THLD_STAT interrupt</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -700,7 +700,7 @@ The supported values for RX_BUF_THLD are</p>
 The supported values for TX_BUF_THLD are</p>
 <ul><li>000: 1</li><li>001: 4</li><li>010: 8</li><li>011: 16</li><li>100: 32</li><li>101: 64</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (TX_EMPTY_BUF_THLD_eq_0): whenever TX FIFO is having atleast one empty location it triggers TX_THLD_STAT interrupt</li><li>0x1 (TX_EMPTY_BUF_THLD_eq_1): whenever TX FIFO is having minimum of 4 empty locations it triggers TX_THLD_STAT interrupt</li><li>0x2 (TX_EMPTY_BUF_THLD_eq_2): whenever TX FIFO is having minimum of 8 empty locations it triggers TX_THLD_STAT interrupt</li><li>0x3 (TX_EMPTY_BUF_THLD_eq_3): whenever TX FIFO is having minimum of 16 empty locations it triggers TX_THLD_STAT interrupt</li><li>0x4 (TX_EMPTY_BUF_THLD_eq_4): whenever TX FIFO is having minimum of 32 empty locations it triggers TX_THLD_STAT interrupt</li><li>0x5 (TX_EMPTY_BUF_THLD_eq_5): whenever TX FIFO is having minimum of 64 empty locations it triggers TX_THLD_STAT interrupt</li></ul><p></p>
+<ul><li>0x0 (TX_EMPTY_BUF_THLD_eq_0): whenever TX FIFO is having atleast one empty location it triggers TX_THLD_STAT interrupt</li><li>0x1 (TX_EMPTY_BUF_THLD_eq_1): whenever TX FIFO is having minimum of 4 empty locations it triggers TX_THLD_STAT interrupt</li><li>0x2 (TX_EMPTY_BUF_THLD_eq_2): whenever TX FIFO is having minimum of 8 empty locations it triggers TX_THLD_STAT interrupt</li><li>0x3 (TX_EMPTY_BUF_THLD_eq_3): whenever TX FIFO is having minimum of 16 empty locations it triggers TX_THLD_STAT interrupt</li><li>0x4 (TX_EMPTY_BUF_THLD_eq_4): whenever TX FIFO is having minimum of 32 empty locations it triggers TX_THLD_STAT interrupt</li><li>0x5 (TX_EMPTY_BUF_THLD_eq_5): whenever TX FIFO is having minimum of 64 empty locations it triggers TX_THLD_STAT interrupt</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -733,7 +733,7 @@ The supported values for TX_BUF_THLD are</p>
 <p>This bit is used to suppress reporting to the application about SIR request rejected.</p>
 <ul><li>0: Suppress passing the IBI Status to the IBI FIFO (hence not notifying the application) when a Slave Interrupt Request is NACKed and auto-disabled based on the IBI_SIR_REQ_REJECT Register.</li><li>1: Writes IBI Status to the IBI FIFO (hence notifying the application) when a Slave Interrupt Request is NACKed and auto-disabled based on the IBI_SIR_REQ_REJECT Register.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Notify SIR Rejected Disable</li><li>0x1 (ENABLED): Notify SIR Rejected Enable</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Notify SIR Rejected Disable</li><li>0x1 (ENABLED): Notify SIR Rejected Enable</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -752,7 +752,7 @@ The supported values for TX_BUF_THLD are</p>
 <p>This bit is used to suppress reporting to the application about Master request rejected.</p>
 <ul><li>0: Suppress passing the IBI Status to the IBI FIFO (hence not notifying the application) when a MR Request is NACKed and auto-disabled based on the IBI_MR_REQ_REJECT Register.</li><li>1: Writes IBI Status to the IBI FIFO (hence notifying the application) when a MR Request is NACKed and auto-disabled based on the IBI_MR_REQ_REJECT Register.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Notify Master Request Rejected Disable</li><li>0x1 (ENABLED): Notify Master Request Rejected Enable</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Notify Master Request Rejected Disable</li><li>0x1 (ENABLED): Notify Master Request Rejected Enable</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -765,7 +765,7 @@ The supported values for TX_BUF_THLD are</p>
 <p>This bit is used to suppress reporting to the application about Hot-Join request rejected (NACK and Auto Disable).</p>
 <ul><li>0: Suppress passing the IBI Status to the IBI FIFO (hence not notifying the application) when a HJ Request is NACKed and auto-disabled based on the DEVICE_CTRL.HOT_JOIN_CTRL.</li><li>1: Writes IBI Status to the IBI FIFO (hence notifying the application) when a HJ Request is NACKed and auto-disabled based on the DEVICE_CTRL.HOT_JOIN_CTRL.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (DISABLED): Notify Hot-Join Rejected Disable</li><li>0x1 (ENABLED): Notify Hot-Join Rejected Enable</li></ul><p></p>
+<ul><li>0x0 (DISABLED): Notify Hot-Join Rejected Disable</li><li>0x1 (ENABLED): Notify Hot-Join Rejected Enable</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -937,7 +937,7 @@ This status can be cleared by writing 1'b1 to this field after reading the updat
 <td>R</td>
 <td><p>Activity State Status.</p>
 <p class="BLANK"></p>
-<p></p>
+ 
 <ul><li>ENTAS0 - 00<p class="BLANK"></p>
 </li><li>ENTAS1 - 01<p class="BLANK"></p>
 </li><li>ENTAS2 - 10<p class="BLANK"></p>
@@ -1839,7 +1839,7 @@ It is relevant in both controller and Target mode of operation.</li><li>Size:32 
 <td><p>This field reflects whether the Controller Mode is in Idle state or not. This bit is set when all the Queues(Command , Response, IBI) and Buffers(Transmit and Receive) are empty along with the Controller State machine is in Idle state.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (CONTROLLER_NOT_IDLE): Controller is not in IDLE State</li><li>0x1 (CONTROLLER_IDLE): Controller is in IDLE State.</li></ul><p></p>
+<ul><li>0x0 (CONTROLLER_NOT_IDLE): Controller is not in IDLE State</li><li>0x1 (CONTROLLER_IDLE): Controller is in IDLE State.</li></ul> 
 <p>Value After Reset:0x1</p>
 <p>Volatile:true</p>
 </td>
@@ -1870,7 +1870,7 @@ This is valid in Master mode only.</p>
 <p class="BLANK"></p>
 <ul><li>6'h0 : IDLE (Controller is Idle state, waiting for commands from application or Slave initiated In-band Interrupt)</li><li>6'h1 : START Generation State.</li><li>6'h2 : RESTART Generation State.</li><li>6'h3 : STOP Generation State.</li><li>6'h4 : START Hold Generation for the Slave Initiated START State.</li><li>6'h5 : Broadcast Write Address Header(7'h7E,W) Generation State.</li><li>6'h6 : Broadcast Read Address Header(7'h7E,R) Generation State.</li><li>6'h7 : Dynamic Address Assignment State.</li><li>6'h8 : Slave Address Generation State.</li><li>6'hB : CCC Byte Generation State.</li><li>6'hC : HDR Command Generation State.</li><li>6'hD : Write Data Transfer State.</li><li>6'hE : Read Data Transfer State.</li><li>6'hF : In-Band Interrupt(SIR) Read Data State.</li><li>6'h10: In-Band Interrupt Auto-Disable State</li><li>6'h11: HDR-DDR CRC Data Generation/Receive State.</li><li>6'h12: Clock Extension State.</li><li>6'h13: Halt State.</li><li>6'h14: IBI Read Data State.</li><li>6'h15: Bus Reset Pattern Generation State.</li><li>6'h16: Defining Byte transmission State.</li><li>6'h17: PEC Byte Transmission State.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (CM_TFR_IDLE): Controller is idle</li><li>0x1 (CM_TFR_START): Start generation state</li><li>0x2 (CM_TFR_RESTART): Restart generation state</li><li>0x3 (CM_TFR_STOP): Stop generation state</li><li>0x4 (CM_TFR_START_SLAVE): START Hold Generation for the Slave Initiated START State</li><li>0x5 (CM_TFR_WRITE_BC): Broadcast Write Address Header(7'h7E,W) Generation State</li><li>0x6 (CM_TFR_READ_BC): Broadcast Read Address Header(7'h7E,R) Generation State</li><li>0x7 (CM_TFR_ADDR_DYN): Dynamic Address Assignment State</li><li>0x8 (CM_TFR_SLV_ADDR): Slave Address Generation State</li><li>0xb (CM_TFR_CCC): CCC Byte Generation State</li><li>0xc (CM_TFR_HDR): HDR Command Generation State</li><li>0xd (CM_TFR_WR): Write Data Transfer State</li><li>0xe (CM_TFR_RD): Read Data Transfer State</li><li>0xf (CM_TFR_SIR_RD): In-Band Interrupt(SIR) Read Data State</li><li>0x10 (CM_TFR_IBI_DISABLE): n-Band Interrupt Auto-Disable State</li><li>0x11 (CM_TFR_CRC_HDR_DDR): HDR-DDR CRC Data Generation/Receive State</li><li>0x12 (CM_TFR_CLKEXT): Clock Extension State.</li><li>0x13 (CM_TFR_HLT): Halt state</li></ul><p></p>
+<ul><li>0x0 (CM_TFR_IDLE): Controller is idle</li><li>0x1 (CM_TFR_START): Start generation state</li><li>0x2 (CM_TFR_RESTART): Restart generation state</li><li>0x3 (CM_TFR_STOP): Stop generation state</li><li>0x4 (CM_TFR_START_SLAVE): START Hold Generation for the Slave Initiated START State</li><li>0x5 (CM_TFR_WRITE_BC): Broadcast Write Address Header(7'h7E,W) Generation State</li><li>0x6 (CM_TFR_READ_BC): Broadcast Read Address Header(7'h7E,R) Generation State</li><li>0x7 (CM_TFR_ADDR_DYN): Dynamic Address Assignment State</li><li>0x8 (CM_TFR_SLV_ADDR): Slave Address Generation State</li><li>0xb (CM_TFR_CCC): CCC Byte Generation State</li><li>0xc (CM_TFR_HDR): HDR Command Generation State</li><li>0xd (CM_TFR_WR): Write Data Transfer State</li><li>0xe (CM_TFR_RD): Read Data Transfer State</li><li>0xf (CM_TFR_SIR_RD): In-Band Interrupt(SIR) Read Data State</li><li>0x10 (CM_TFR_IBI_DISABLE): n-Band Interrupt Auto-Disable State</li><li>0x11 (CM_TFR_CRC_HDR_DDR): HDR-DDR CRC Data Generation/Receive State</li><li>0x12 (CM_TFR_CLKEXT): Clock Extension State.</li><li>0x13 (CM_TFR_HLT): Halt state</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1894,7 +1894,7 @@ This is valid in Master mode only.</p>
 <p>In Slave mode of operation:</p>
 <ul><li>4'h0: IDLE (Controller is in Idle state)</li><li>4'h1: Hot-Join transfer state</li><li>4'h2: IBI transfer state</li><li>4'h3: Master write transfer ongoing</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (MS_IDLE): idle</li><li>0x1 (MS_WR_CCC_BC): Broadcast CCC Write Transfer.</li><li>0x2 (MS_WR_CCC_DIR): Directed CCC Write Transfer.</li><li>0x3 (MS_RD_CCC_DIR): Directed CCC Read transfer.</li><li>0x4 (MS_ENTDAA): ENTDAA Address Assignment Transfer.</li><li>0x5 (MS_SETDASA): SETDASA Address Assignment Transfer.</li><li>0x6 (MS_PVT_SDR_I3CWRITE): Private I3C SDR Write Transfer.</li><li>0x7 (MS_PVT_SDR_I3CREAD): Private I3C SDR Read Transfer.</li><li>0x8 (MS_PVT_SDR_I2CWRITE): Private I2C SDR Write Transfer.</li><li>0x9 (MS_PVT_SDR_I2CREAD): Private I2C SDR Read Transfer.</li><li>0xa (MS_PVT_TS_WR): Private HDR Ternary Symbol(TS) Write Transfer.</li><li>0xb (MS_PVT_TS_RD): Private HDR Ternary Symbol(TS) Read Transfer.</li><li>0xc (MS_PVT_DDRHDR_WR): Private HDR Double-Data Rate(DDR) Write Transfer</li><li>0xd (MS_PVT_DDRHDR_RD): Private HDR Double-Data Rate(DDR) Read Transfer</li><li>0xe (MS_IBI_XFER): Servicing In-Band Interrupt Transfer</li><li>0xf (MS_HLT): Halt state (Controller is in Halt State, waiting for the application to resume through DEVICE_CTRL Register)</li><li>0x0 (SLV_IDLE): IDLE</li><li>0x1 (SLV_HOTJOIN): Hot-Join transfer state</li><li>0x2 (SLV_IBI_XFER): IBI transfer state</li><li>0x3 (SLV_MST_WR): Master write transfer ongoing</li><li>0x5 (SLV_MST_RD_ONGOING): Master read transfer ongoing</li><li>0x6 (SLV_HLT): Slave controller in Halt State waiting for resume from application</li></ul><p></p>
+<ul><li>0x0 (MS_IDLE): idle</li><li>0x1 (MS_WR_CCC_BC): Broadcast CCC Write Transfer.</li><li>0x2 (MS_WR_CCC_DIR): Directed CCC Write Transfer.</li><li>0x3 (MS_RD_CCC_DIR): Directed CCC Read transfer.</li><li>0x4 (MS_ENTDAA): ENTDAA Address Assignment Transfer.</li><li>0x5 (MS_SETDASA): SETDASA Address Assignment Transfer.</li><li>0x6 (MS_PVT_SDR_I3CWRITE): Private I3C SDR Write Transfer.</li><li>0x7 (MS_PVT_SDR_I3CREAD): Private I3C SDR Read Transfer.</li><li>0x8 (MS_PVT_SDR_I2CWRITE): Private I2C SDR Write Transfer.</li><li>0x9 (MS_PVT_SDR_I2CREAD): Private I2C SDR Read Transfer.</li><li>0xa (MS_PVT_TS_WR): Private HDR Ternary Symbol(TS) Write Transfer.</li><li>0xb (MS_PVT_TS_RD): Private HDR Ternary Symbol(TS) Read Transfer.</li><li>0xc (MS_PVT_DDRHDR_WR): Private HDR Double-Data Rate(DDR) Write Transfer</li><li>0xd (MS_PVT_DDRHDR_RD): Private HDR Double-Data Rate(DDR) Read Transfer</li><li>0xe (MS_IBI_XFER): Servicing In-Band Interrupt Transfer</li><li>0xf (MS_HLT): Halt state (Controller is in Halt State, waiting for the application to resume through DEVICE_CTRL Register)</li><li>0x0 (SLV_IDLE): IDLE</li><li>0x1 (SLV_HOTJOIN): Hot-Join transfer state</li><li>0x2 (SLV_IBI_XFER): IBI transfer state</li><li>0x3 (SLV_MST_WR): Master write transfer ongoing</li><li>0x5 (SLV_MST_RD_ONGOING): Master read transfer ongoing</li><li>0x6 (SLV_HLT): Slave controller in Halt State waiting for resume from application</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -1919,7 +1919,7 @@ before initiating any transfer on the line.</p>
 Note: Software reset will not have any effect on this field.</p>
 <ul><li>0: Master is not Current Master</li><li>1: Master is Current Master</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (NOT_BUS_OWNER): Master is not a Current Master</li><li>0x1 (BUS_OWNER): Master is Current Master</li></ul><p></p>
+<ul><li>0x0 (NOT_BUS_OWNER): Master is not a Current Master</li><li>0x1 (BUS_OWNER): Master is Current Master</li></ul> 
 <p>Value After Reset:0x1</p>
 <p>Volatile:true</p>
 </td>
@@ -2471,7 +2471,7 @@ The field is Reset to its default value upon HW/SW Reset. SW must program the va
 <td><p>Specifies the clock to data turnaround time (Tsco parameter) of DWC_mipi_i3c Slave device</p>
 <ul><li>0: 8ns</li><li>1: 9ns</li><li>2: 10ns</li><li>3: 11ns</li><li>4: 12ns</li><li>5-7: Reserved/user Defined</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (TSCO_ZERO): Clock to data turn around time of 8ns</li><li>0x1 (TSCO_ONE): Clock to data turn around time of 9ns</li><li>0x2 (TSCO_TWO): Clock to data turn around time of 10ns</li><li>0x3 (TSCO_THREE): Clock to data turn around time of 11ns</li><li>0x4 (TSCO_FOUR): Clock to data turn around time of 12ns</li></ul><p></p>
+<ul><li>0x0 (TSCO_ZERO): Clock to data turn around time of 8ns</li><li>0x1 (TSCO_ONE): Clock to data turn around time of 9ns</li><li>0x2 (TSCO_TWO): Clock to data turn around time of 10ns</li><li>0x3 (TSCO_THREE): Clock to data turn around time of 11ns</li><li>0x4 (TSCO_FOUR): Clock to data turn around time of 12ns</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2488,7 +2488,7 @@ The field is Reset to its default value upon HW/SW Reset. SW must program the va
 <td><p>Specifies the Maximum Sustained Data Rate for non-CCC messages sent by DWC_mipi_i3c Slave Device to Master Device</p>
 <ul><li>0: 12.5MHz</li><li>1: 8MHZ</li><li>2: 6MHz</li><li>3: 4MHz</li><li>4: 2MHz</li><li>5-7: Reserved/User Defined</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (RDSPEED_0): Maximum Sustained Data Rate for non-CCC messages sent by DWC_mipi_i3c Slave Device to Master device is 12.5 Mhz.</li><li>0x1 (RDSPEED_1): Maximum Sustained Data Rate for non-CCC messages sent by DWC_mipi_i3c Slave Device to Master device is 8 Mhz.</li><li>0x2 (RDSPEED_2): Maximum Sustained Data Rate for non-CCC messages sent by DWC_mipi_i3c Slave Device to Master device is 6 Mhz.</li><li>0x3 (RDSPEED_3): Maximum Sustained Data Rate for non-CCC messages sent by DWC_mipi_i3c Slave Device to Master device is 4 Mhz.</li><li>0x4 (RDSPEED_4): Maximum Sustained Data Rate for non-CCC messages sent by DWC_mipi_i3c Slave Device to Master device is 2 Mhz.</li></ul><p></p>
+<ul><li>0x0 (RDSPEED_0): Maximum Sustained Data Rate for non-CCC messages sent by DWC_mipi_i3c Slave Device to Master device is 12.5 Mhz.</li><li>0x1 (RDSPEED_1): Maximum Sustained Data Rate for non-CCC messages sent by DWC_mipi_i3c Slave Device to Master device is 8 Mhz.</li><li>0x2 (RDSPEED_2): Maximum Sustained Data Rate for non-CCC messages sent by DWC_mipi_i3c Slave Device to Master device is 6 Mhz.</li><li>0x3 (RDSPEED_3): Maximum Sustained Data Rate for non-CCC messages sent by DWC_mipi_i3c Slave Device to Master device is 4 Mhz.</li><li>0x4 (RDSPEED_4): Maximum Sustained Data Rate for non-CCC messages sent by DWC_mipi_i3c Slave Device to Master device is 2 Mhz.</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2505,7 +2505,7 @@ The field is Reset to its default value upon HW/SW Reset. SW must program the va
 <td><p>Specifies the Maximum Sustained Data Rate for non-CCC messages sent by Master Device to DWC_mipi_i3c Slave device</p>
 <ul><li>0: 12.5MHz</li><li>1: 8MHZ</li><li>2: 6MHz</li><li>3: 4MHz</li><li>4: 2MHz</li><li>5-7: Reserved/User Defined</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (WRSPEED_0): Maximum Sustained Data Rate for non-CCC messages sent by Master Device to DWC_mipi_i3c Slave device is 12.5 Mhz.</li><li>0x1 (WRSPEED_1): Maximum Sustained Data Rate for non-CCC messages sent by Master Device to DWC_mipi_i3c Slave device is 8 Mhz.</li><li>0x2 (WRSPEED_2): Maximum Sustained Data Rate for non-CCC messages sent by Master Device to DWC_mipi_i3c Slave device is 6 Mhz.</li><li>0x3 (WRSPEED_3): Maximum Sustained Data Rate for non-CCC messages sent by Master Device to DWC_mipi_i3c Slave device is 4 Mhz.</li><li>0x4 (WRSPEED_4): Maximum Sustained Data Rate for non-CCC messages sent by Master Device to DWC_mipi_i3c Slave device is 2 Mhz.</li></ul><p></p>
+<ul><li>0x0 (WRSPEED_0): Maximum Sustained Data Rate for non-CCC messages sent by Master Device to DWC_mipi_i3c Slave device is 12.5 Mhz.</li><li>0x1 (WRSPEED_1): Maximum Sustained Data Rate for non-CCC messages sent by Master Device to DWC_mipi_i3c Slave device is 8 Mhz.</li><li>0x2 (WRSPEED_2): Maximum Sustained Data Rate for non-CCC messages sent by Master Device to DWC_mipi_i3c Slave device is 6 Mhz.</li><li>0x3 (WRSPEED_3): Maximum Sustained Data Rate for non-CCC messages sent by Master Device to DWC_mipi_i3c Slave device is 4 Mhz.</li><li>0x4 (WRSPEED_4): Maximum Sustained Data Rate for non-CCC messages sent by Master Device to DWC_mipi_i3c Slave device is 2 Mhz.</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2577,7 +2577,7 @@ The field is Reset to its default value upon HW/SW Reset. SW must program the va
 <td><p>Slave Interrupt Request Control</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (REGB_SIR_DATA): [IC_SLV_IBI_DATA==1] Indicates source of SIR data to be from the registers</li><li>0x0 (SEND_DYNAMIC_ADDR): [IC_SLV_IBI_DATA==0] Send the Assigned Dynamic Address</li><li>0x1 (PULL_SDA_LOW): Pull SDA line low and release SDA after sampling SCL low (pulled by controller). Used for CE3 recovery during Controller Handover procedure.</li></ul><p></p>
+<ul><li>0x0 (REGB_SIR_DATA): [IC_SLV_IBI_DATA==1] Indicates source of SIR data to be from the registers</li><li>0x0 (SEND_DYNAMIC_ADDR): [IC_SLV_IBI_DATA==0] Send the Assigned Dynamic Address</li><li>0x1 (PULL_SDA_LOW): Pull SDA line low and release SDA after sampling SCL low (pulled by controller). Used for CE3 recovery during Controller Handover procedure.</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2730,7 +2730,7 @@ This field holds the first byte of SIR DATA that will be passed after the MDB wh
 <td><p>In Slave mode of operation, this bit serves as a control to ACK/NACK GETACCMST CCC from current master.</p>
 <ul><li>0: ACK GETACCMST CCC</li><li>1: NACK GETACCMST CCC</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (ACK): ACK</li><li>0x1 (NACK): NACK</li></ul><p></p>
+<ul><li>0x0 (ACK): ACK</li><li>0x1 (NACK): NACK</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2750,11 +2750,11 @@ This field holds the first byte of SIR DATA that will be passed after the MDB wh
 <p class="BLANK"></p>
 <p>This field will not be cleared during software reset.</p>
 <p class="BLANK"></p>
-<p></p>
+ 
 <ul><li>0: Master</li><li>1: Slave</li><li>2: Reserved</li><li>3: Reserved</li></ul><p>This field is automatically updated by the controller once the role change happens in secondary master mode.Software Reset will not have any effect on this field. Once programmed the value will be retained until power on reset or through role change.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (MASTER): Master</li><li>0x1 (SLAVE): Slave</li></ul><p></p>
+<ul><li>0x0 (MASTER): Master</li><li>0x1 (SLAVE): Slave</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Volatile:true</p>
 </td>
@@ -2997,7 +2997,7 @@ This field holds the first byte of SIR DATA that will be passed after the MDB wh
 <p class="BLANK"></p>
 <p>Extended I3C Read Termination Bit low count for I3C Read transfers.
 Effective Termination-Bit Low Period is derived based on the SDR speed as shown below</p>
-<ul><li>SDR0 speed: I3C_PP_LCNT + I3C_EXT_TERMN_LCNT</li><li>SDR1 speed: I3C_EXT_LCNT_1 + I3C_EXT_TERMN_LCNT</li><li>SDR2 speed: I3C_EXT_LCNT_2 + I3C_EXT_TERMN_LCNT</li><li>SDR3 speed: I3C_EXT_LCNT_3 + I3C_EXT_TERMN_LCNT</li><li>SDR4 speed: I3C_EXT_LCNT_4 + I3C_EXT_TERMN_LCNT</li></ul><p></p>
+<ul><li>SDR0 speed: I3C_PP_LCNT + I3C_EXT_TERMN_LCNT</li><li>SDR1 speed: I3C_EXT_LCNT_1 + I3C_EXT_TERMN_LCNT</li><li>SDR2 speed: I3C_EXT_LCNT_2 + I3C_EXT_TERMN_LCNT</li><li>SDR3 speed: I3C_EXT_LCNT_3 + I3C_EXT_TERMN_LCNT</li><li>SDR4 speed: I3C_EXT_LCNT_4 + I3C_EXT_TERMN_LCNT</li></ul> 
 <p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -3212,7 +3212,7 @@ register, gathers details of the current release.</p>
 <p>- 0x3: 16 DWORDS</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (IBI_BUFSIZE_2): 2 DWORDS</li><li>0x1 (IBI_BUFSIZE_4): 4 DWORDS</li><li>0x2 (IBI_BUFSIZE_8): 8 DWORDS</li><li>0x3 (IBI_BUFSIZE_16): 16 DWORDS</li></ul><p></p>
+<ul><li>0x0 (IBI_BUFSIZE_2): 2 DWORDS</li><li>0x1 (IBI_BUFSIZE_4): 4 DWORDS</li><li>0x2 (IBI_BUFSIZE_8): 8 DWORDS</li><li>0x3 (IBI_BUFSIZE_16): 16 DWORDS</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3236,7 +3236,7 @@ register, gathers details of the current release.</p>
 <p>- 0x3: 16 DWORDS</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (RESP_BUFSIZE_2): 2 DWORDS</li><li>0x1 (RESP_BUFSIZE_4): 4 DWORDS</li><li>0x2 (RESP_BUFSIZE_8): 8 DWORDS</li><li>0x3 (RESP_BUFSIZE_16): 16 DWORDS</li></ul><p></p>
+<ul><li>0x0 (RESP_BUFSIZE_2): 2 DWORDS</li><li>0x1 (RESP_BUFSIZE_4): 4 DWORDS</li><li>0x2 (RESP_BUFSIZE_8): 8 DWORDS</li><li>0x3 (RESP_BUFSIZE_16): 16 DWORDS</li></ul> 
 <p>Value After Reset:0x1</p>
 </td>
 </tr>
@@ -3260,7 +3260,7 @@ register, gathers details of the current release.</p>
 <p>- 0x3: 16 DWORDS</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (CMD_BUFSIZE_2): 2 DWORDS</li><li>0x1 (CMD_BUFSIZE_4): 4 DWORDS</li><li>0x2 (CMD_BUFSIZE_8): 8 DWORDS</li><li>0x3 (CMD_BUFSIZE_16): 16 DWORDS</li></ul><p></p>
+<ul><li>0x0 (CMD_BUFSIZE_2): 2 DWORDS</li><li>0x1 (CMD_BUFSIZE_4): 4 DWORDS</li><li>0x2 (CMD_BUFSIZE_8): 8 DWORDS</li><li>0x3 (CMD_BUFSIZE_16): 16 DWORDS</li></ul> 
 <p>Value After Reset:0x2</p>
 </td>
 </tr>
@@ -3288,7 +3288,7 @@ register, gathers details of the current release.</p>
 <p>- 0x5: 64 DWORDS</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (RX_BUFSIZE_2): 2 DWORDS</li><li>0x1 (RX_BUFSIZE_4): 4 DWORDS</li><li>0x2 (RX_BUFSIZE_8): 8 DWORDS</li><li>0x3 (RX_BUFSIZE_16): 16 DWORDS</li><li>0x4 (RX_BUFSIZE_32): 32 DWORDS</li></ul><p></p>
+<ul><li>0x0 (RX_BUFSIZE_2): 2 DWORDS</li><li>0x1 (RX_BUFSIZE_4): 4 DWORDS</li><li>0x2 (RX_BUFSIZE_8): 8 DWORDS</li><li>0x3 (RX_BUFSIZE_16): 16 DWORDS</li><li>0x4 (RX_BUFSIZE_32): 32 DWORDS</li></ul> 
 <p>Value After Reset:0x4</p>
 </td>
 </tr>
@@ -3316,7 +3316,7 @@ register, gathers details of the current release.</p>
 <p>- 0x5: 64 DWORDS</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (TX_BUFSIZE_2): 2 DWORDS</li><li>0x1 (TX_BUFSIZE_4): 4 DWORDS</li><li>0x2 (TX_BUFSIZE_8): 8 DWORDS</li><li>0x3 (TX_BUFSIZE_16): 16 DWORDS</li><li>0x4 (TX_BUFSIZE_32): 32 DWORDS</li><li>0x5 (TX_BUFSIZE_64): 64 DWORDS</li></ul><p></p>
+<ul><li>0x0 (TX_BUFSIZE_2): 2 DWORDS</li><li>0x1 (TX_BUFSIZE_4): 4 DWORDS</li><li>0x2 (TX_BUFSIZE_8): 8 DWORDS</li><li>0x3 (TX_BUFSIZE_16): 16 DWORDS</li><li>0x4 (TX_BUFSIZE_32): 32 DWORDS</li><li>0x5 (TX_BUFSIZE_64): 64 DWORDS</li></ul> 
 <p>Value After Reset:0x4</p>
 </td>
 </tr>
@@ -3514,10 +3514,10 @@ This register is used in master mode of operation.
 <td>R/W</td>
 <td><p>Type of device</p>
 <p class="BLANK"></p>
-<p></p>
+ 
 <ul><li>0: I3C</li><li>1: I2C</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (I3C_DEVICE): This DEV_ADDR_TABLE location contains data related to an I3C Device transfer.</li><li>0x1 (I2C_DEVICE): This DEV_ADDR_TABLE location contains data related to an I2C Device transfer.</li></ul><p></p>
+<ul><li>0x0 (I3C_DEVICE): This DEV_ADDR_TABLE location contains data related to an I3C Device transfer.</li><li>0x1 (I2C_DEVICE): This DEV_ADDR_TABLE location contains data related to an I2C Device transfer.</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Testable:untestable</p>
 </td>
@@ -3533,7 +3533,7 @@ this count expires. If the Slave does not ACK for the mentioned number of retrie
 generates an error response and move to the Halt state.</p>
 <p class="BLANK"></p>
 <p>This feature is used for Retry Model for the following features mentioned in the I3C Specification:</p>
-<ul><li>Retry Model for Direct GET CCC Commands.</li><li>The incoming SIR-IBI matches with the slave address initiated by the Master.</li></ul><p></p>
+<ul><li>Retry Model for Direct GET CCC Commands.</li><li>The incoming SIR-IBI matches with the slave address initiated by the Master.</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Testable:untestable</p>
 </td>
@@ -3570,7 +3570,7 @@ The MSB[23] bit is the odd parity of the 7-bit Dynamic address used for ENTDAA a
 from Devices.</p>
 <ul><li>0x0 - Accept: ACK the Master Request</li><li>0x1 - Reject: NACK the Master Request and send auto disable CCC.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (MR_ACCEPT): Accept: ACK the Master Request</li><li>0x1 (MR_REJECT): Reject: NACK the Master Request and send auto disable CCC.</li></ul><p></p>
+<ul><li>0x0 (MR_ACCEPT): Accept: ACK the Master Request</li><li>0x1 (MR_REJECT): Reject: NACK the Master Request and send auto disable CCC.</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Testable:untestable</p>
 </td>
@@ -3583,7 +3583,7 @@ from Devices.</p>
 request from Devices.</p>
 <ul><li>0x0 - Accept: ACK the SIR</li><li>0x1 - Reject: NACK the SIR and send auto disable CCC.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (SIR_ACCEPT): Accept: ACK the SIR</li><li>0x1 (SIR_REJECT): Reject: NACK the SIR and send auto disable CCC.</li></ul><p></p>
+<ul><li>0x0 (SIR_ACCEPT): Accept: ACK the SIR</li><li>0x1 (SIR_REJECT): Reject: NACK the SIR and send auto disable CCC.</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Testable:untestable</p>
 </td>
@@ -3595,7 +3595,7 @@ request from Devices.</p>
 <td><p>Mandatory one or more data bytes follow the accepted IBI from the device. Data byte continuation is indicated by T-Bit.</p>
 <ul><li>0x0 - IBI Without Mandatory Byte</li><li>0x1 - IBI with one or more Mandatory Bytes.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (IBI_WO_DATA): IBI Without Mandatory Byte</li><li>0x1 (IBI_WITH_DATA): IBI with one or more Mandatory Bytes</li></ul><p></p>
+<ul><li>0x0 (IBI_WO_DATA): IBI Without Mandatory Byte</li><li>0x1 (IBI_WITH_DATA): IBI with one or more Mandatory Bytes</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Testable:untestable</p>
 </td>
@@ -3610,7 +3610,7 @@ This bit also controls whether PEC byte has to be send for auto disable CCC when
 <ul><li>0x0 - Packet Error Check disabled for IBI</li><li>0x1 - Packet Error Check enabled for IBI</li></ul><p>This field is applicable only if configuration parameter 'IC_HAS_PEC' is set to 1.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
-<ul><li>0x0 (PEC_IBI_DISABLED): Packet Error Check disabled for IBI</li><li>0x1 (PEC_IBI_ENABLED): Packet Error Check enabled for IBI</li></ul><p></p>
+<ul><li>0x0 (PEC_IBI_DISABLED): Packet Error Check disabled for IBI</li><li>0x1 (PEC_IBI_ENABLED): Packet Error Check enabled for IBI</li></ul> 
 <p>Value After Reset:0x0</p>
 <p>Testable:untestable</p>
 </td>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
@@ -54,9 +54,9 @@
         </p>
         <h2>Field Descriptions</h2>
         <h3 id="offset.desc">offset - DWord Offset<a class="headerlink" href="#offset.desc" title="Permalink to this headline"></a></h3>
-        <p>This field shows the current DWord offset (0's base) of the operand. This field is shared by all operands. It is automatically increased by one after each read/write to any of the operand in the AMC_ACC_ZMP_DATA or AMC_ACC_ECP_DATA registers. The values loops around when it reaches the operand size defined by AMC_SIZE register. For example, if the operand size is 67 bits (3 DWords), the maximum value of this field is 2. The offset value returns to zero after 3 read/write to the AMC_ACC_ZMP_DATA or AMC_ACC_ECP_DATA registers.<p></p>
-Notes:<p></p>
-1. The AMC_CFG and AMC_SIZE registers must be configured correctly before loading/unloading the operand.<p></p>
-2. Programming an operand with invalid offset (i.e. exceed the operand size) will corrupt other operands.<p></p></p>
+        <p>This field shows the current DWord offset (0's base) of the operand. This field is shared by all operands. It is automatically increased by one after each read/write to any of the operand in the AMC_ACC_ZMP_DATA or AMC_ACC_ECP_DATA registers. The values loops around when it reaches the operand size defined by AMC_SIZE register. For example, if the operand size is 67 bits (3 DWords), the maximum value of this field is 2. The offset value returns to zero after 3 read/write to the AMC_ACC_ZMP_DATA or AMC_ACC_ECP_DATA registers. 
+Notes: 
+1. The AMC_CFG and AMC_SIZE registers must be configured correctly before loading/unloading the operand. 
+2. Programming an operand with invalid offset (i.e. exceed the operand size) will corrupt other operands. </p>
     </body>
 </html>

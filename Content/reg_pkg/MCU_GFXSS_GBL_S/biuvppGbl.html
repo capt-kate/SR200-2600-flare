@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>vppGbl</title></head>
+<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>vppGbl</title></head>
 <body>
 <h1><a name="vppGbl">"vppGbl"</a>
         </h1>
@@ -17,7 +17,7 @@
 </td>
 <td><p>32'h00000000</p>
 </td>
-<td><p>All the registers for VPLL1 wrapper.<p></p>
+<td><p>All the registers for VPLL1 wrapper. 
 Clock controls for VPLL CLK output</p>
 </td>
 </tr>
@@ -36,7 +36,7 @@ Clock controls for VPLL CLK output</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0: use source clock<p></p>
+<td><p>0: use source clock 
 1: use divided clock (decided by clkD3Switch and clkSel)</p>
 </td>
 </tr>
@@ -46,7 +46,7 @@ Clock controls for VPLL CLK output</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0 : divide factor is decided by clkSwitch and clkSel<p></p>
+<td><p>0 : divide factor is decided by clkSwitch and clkSel 
 1: use divide by 3 clock when clkSwitch = 1</p>
 </td>
 </tr>
@@ -65,8 +65,8 @@ Clock controls for VPLL CLK output</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Clock enable for VPLL CLK output.<p></p>
-Not used.<p></p>
+<td><p>Clock enable for VPLL CLK output. 
+Not used. 
 Clock controls for VPLL CLKO1</p>
 </td>
 </tr>
@@ -76,8 +76,8 @@ Clock controls for VPLL CLKO1</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Not used.<p></p>
-0: use source clock<p></p>
+<td><p>Not used. 
+0: use source clock 
 1: use divided clock (decided by clkD3Switch and clkSel)</p>
 </td>
 </tr>
@@ -87,8 +87,8 @@ Clock controls for VPLL CLKO1</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Not used.<p></p>
-0 : divide factor is decided by clkSwitch and clkSel<p></p>
+<td><p>Not used. 
+0 : divide factor is decided by clkSwitch and clkSel 
 1: use divide by 3 clock when clkSwitch = 1</p>
 </td>
 </tr>
@@ -98,7 +98,7 @@ Clock controls for VPLL CLKO1</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Not used.<p></p>
+<td><p>Not used. 
 Use the following divide factor if clkD3Switch="0.</p>
 </td>
 </tr>
@@ -108,11 +108,11 @@ Use the following divide factor if clkD3Switch="0.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Not used.<p></p>
+<td><p>Not used. 
 Clock enable for VPLL CLKO1.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -129,7 +129,7 @@ Clock enable for VPLL CLKO1.</p>
 </td>
 <td><p>32'h00000004</p>
 </td>
-<td><p>All the registers for VPLL.<p></p>
+<td><p>All the registers for VPLL. 
 PLL Control Register 0</p>
 </td>
 </tr>
@@ -148,12 +148,12 @@ PLL Control Register 0</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>PLL Enable:<p></p>
-0 - > Entire PLL (except scan mode) is powered down (outputs<p></p>
-(except SCANOUT) all held at 1'b0)<p></p>
-1 - > Entire PLL is enabled (unless scan mode is turned on<p></p>
-SCANMODE=1)<p></p>
-Enabling scan mode (SCANMODE=1) has the same effect as setting<p></p>
+<td><p>PLL Enable: 
+0 - > Entire PLL (except scan mode) is powered down (outputs 
+(except SCANOUT) all held at 1'b0) 
+1 - > Entire PLL is enabled (unless scan mode is turned on 
+SCANMODE=1) 
+Enabling scan mode (SCANMODE=1) has the same effect as setting 
 PLLEN=0</p>
 </td>
 </tr>
@@ -163,9 +163,9 @@ PLLEN=0</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0 - > Post divided VCO is output on FOUTPOSTDIV<p></p>
-1 - > FREF is bypassed to FOUTPOSTDIV and FOUTVCO<p></p>
-When PLLEN="1"'b1 and bypass mode is active then PLL input pins<p></p>
+<td><p>0 - > Post divided VCO is output on FOUTPOSTDIV 
+1 - > FREF is bypassed to FOUTPOSTDIV and FOUTVCO 
+When PLLEN="1"'b1 and bypass mode is active then PLL input pins 
 must be programmed to correct value</p>
 </td>
 </tr>
@@ -175,8 +175,8 @@ must be programmed to correct value</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Enable of FOUTVCO clock signal<p></p>
-0 - > FOUTVCO clock is powered down (outputs held at 1'b0)<p></p>
+<td><p>Enable of FOUTVCO clock signal 
+0 - > FOUTVCO clock is powered down (outputs held at 1'b0) 
 1 - > FOUTVCO clock is enabled</p>
 </td>
 </tr>
@@ -186,8 +186,8 @@ must be programmed to correct value</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Post divide power down<p></p>
-0 - > FOUTPOSTDIV clock is powered down (outputs held at 1'b0)<p></p>
+<td><p>Post divide power down 
+0 - > FOUTPOSTDIV clock is powered down (outputs held at 1'b0) 
 1 - > FOUTPOSTDIV clock is enabled</p>
 </td>
 </tr>
@@ -197,10 +197,10 @@ must be programmed to correct value</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Enable fractional noise canceling DAC in FRAC mode (this has<p></p>
-no function in integer mode)<p></p>
-0 - > Fractional noise canceling DAC is not active (test mode<p></p>
-only)<p></p>
+<td><p>Enable fractional noise canceling DAC in FRAC mode (this has 
+no function in integer mode) 
+0 - > Fractional noise canceling DAC is not active (test mode 
+only) 
 1 - > Fractional noise canceling DAC is active (default mode)</p>
 </td>
 </tr>
@@ -210,9 +210,9 @@ only)<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>PLL deskew mode select<p></p>
-1'b0 - > Internal (full-rate VCO) feedback mode to select output<p></p>
-of VCO for feedback clock<p></p>
+<td><p>PLL deskew mode select 
+1'b0 - > Internal (full-rate VCO) feedback mode to select output 
+of VCO for feedback clock 
 1'b1 - > External feedback mode to select CKFB for feedback clock</p>
 </td>
 </tr>
@@ -222,12 +222,12 @@ of VCO for feedback clock<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Enable Delta-Sigma Modulator<p></p>
-0 - > DSM is powered down (integer mode)<p></p>
+<td><p>Enable Delta-Sigma Modulator 
+0 - > DSM is powered down (integer mode) 
 1 - > DSM is active (fractional mode)</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -244,7 +244,7 @@ of VCO for feedback clock<p></p>
 </td>
 <td><p>32'h00000008</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -263,12 +263,12 @@ of VCO for feedback clock<p></p>
 </td>
 <td><p>0x30</p>
 </td>
-<td><p>Feedback Divider<p></p>
-PLL Feedback divider value (16-4096 in integer mode, 20 to 4095<p></p>
+<td><p>Feedback Divider 
+PLL Feedback divider value (16-4096 in integer mode, 20 to 4095 
 in fractional mode).</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -285,7 +285,7 @@ in fractional mode).</p>
 </td>
 <td><p>32'h0000000C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -304,11 +304,11 @@ in fractional mode).</p>
 </td>
 <td><p>0x2</p>
 </td>
-<td><p>Post Divider value (1 to 32)<p></p>
+<td><p>Post Divider value (1 to 32) 
 Actual divide value is POSTDIV+1</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -325,7 +325,7 @@ Actual divide value is POSTDIV+1</p>
 </td>
 <td><p>32'h00000010</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -344,11 +344,11 @@ Actual divide value is POSTDIV+1</p>
 </td>
 <td><p>0x2</p>
 </td>
-<td><p>Reference divide value (1 to 63), Divide value is REFDIV<p></p>
+<td><p>Reference divide value (1 to 63), Divide value is REFDIV 
 When programmed to REFDIV="6"'d0 it will divide by 1</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -365,7 +365,7 @@ When programmed to REFDIV="6"'d0 it will divide by 1</p>
 </td>
 <td><p>32'h00000014</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -387,7 +387,7 @@ When programmed to REFDIV="6"'d0 it will divide by 1</p>
 <td><p>Fractional portion of feedback divide value</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -404,7 +404,7 @@ When programmed to REFDIV="6"'d0 it will divide by 1</p>
 </td>
 <td><p>32'h00000018</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -423,26 +423,26 @@ When programmed to REFDIV="6"'d0 it will divide by 1</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>[1:0] -- > Programmable lock_int counter:<p></p>
+<td><p>[1:0] -- > Programmable lock_int counter: 
 if(UTILITY[1:0]==2'b00) lock_int_count="64;<p"></p>
 if(UTILITY[1:0]==2'b01) lock_int_count="16;<p"></p>
 if(UTILITY[1:0]==2'b10) lock_int_count="32;<p"></p>
 if(UTILITY[1:0]==2'b11) lock_int_count="128;<p"></p>
-[3:2] -- > Programmable LOCKF counter:<p></p>
+[3:2] -- > Programmable LOCKF counter: 
 if(UTILITY[3:2]==2'b00) LOCKF_count="lock_int_count+32;<p"></p>
 if(UTILITY[3:2]==2'b01) LOCKF_count="lock_int_count+8;<p"></p>
 if(UTILITY[3:2]==2'b10) LOCKF_count="lock_int_count+16;<p"></p>
 if(UTILITY[3:2]==2'b11) LOCKF_count="lock_int_count+64;<p"></p>
-[5:4] -- > Programmable LOCKP counter:<p></p>
+[5:4] -- > Programmable LOCKP counter: 
 if(UTILITY[5:4]==2'b00) LOCKP_count="LOCKF_count+512;<p"></p>
 if(UTILITY[5:4]==2'b01) LOCKP_count="LOCKF_count+256;<p"></p>
 if(UTILITY[5:4]==2'b10) LOCKP_count="LOCKF_count+1024;<p"></p>
 if(UTILITY[5:4]==2'b11) LOCKP_count="LOCKF_count+2048;<p"></p>
-[15:6] -- > Unassigned<p></p>
+[15:6] -- > Unassigned 
 In FRAC mode lock_int_count is equal to programmed value + 128</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -475,11 +475,11 @@ In FRAC mode lock_int_count is equal to programmed value + 128</p>
 </td>
 <td><p><a HREF="vppGbl.htm#frac_pll_status_LOCKF">LOCKF</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Output. Frequency Lock signal<p></p>
-Indicates frequency settling within threshold provided in<p></p>
+<td><p>Output. Frequency Lock signal 
+Indicates frequency settling within threshold provided in 
 specification</p>
 </td>
 </tr>
@@ -487,15 +487,15 @@ specification</p>
 </td>
 <td><p><a HREF="vppGbl.htm#frac_pll_status_LOCKP">LOCKP</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Output. Phase Lock signal<p></p>
-Indicates full phase settling within threshold provided in<p></p>
+<td><p>Output. Phase Lock signal 
+Indicates full phase settling within threshold provided in 
 specification</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -512,7 +512,7 @@ specification</p>
 </td>
 <td><p>32'h00000020</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -531,9 +531,9 @@ specification</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Gates the output of VPLL1 after divider and before it is passed to any logic.<p></p>
-0: Disable channel output<p></p>
-1: Enable channel output<p></p>
+<td><p>Gates the output of VPLL1 after divider and before it is passed to any logic. 
+0: Disable channel output 
+1: Enable channel output 
 SW should program this bit as 1 after programming the respective VPLL channel to make sure that clean clock is passed to the logic.</p>
 </td>
 </tr>
@@ -541,14 +541,14 @@ SW should program this bit as 1 after programming the respective VPLL channel to
 </td>
 <td><p><a HREF="vppGbl.htm#vppGbl_AVPLLA_CLK_EN_dbg_mux_sel">reserved0</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Reserved.<p></p>
+<td><p>Reserved. 
 For write, do read and write back the same value. For read, ignore read values.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -565,7 +565,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>32'h00000024</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -584,11 +584,11 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>1: VPLL1 power down<p></p>
+<td><p>1: VPLL1 power down 
 0: Normal operation</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -605,7 +605,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>32'h00000028</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -624,8 +624,8 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>If G64BDHUB_CG_en is 1, then this bit is invalid<p></p>
-1: HW will gate the clock dynamically<p></p>
+<td><p>If G64BDHUB_CG_en is 1, then this bit is invalid 
+1: HW will gate the clock dynamically 
 0: free running clock</p>
 </td>
 </tr>
@@ -635,7 +635,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0: clock gating is based on G64BDHUB_dyCG_en<p></p>
+<td><p>0: clock gating is based on G64BDHUB_dyCG_en 
 1: static clock gating</p>
 </td>
 </tr>
@@ -663,11 +663,11 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0: DSI HOST Debug Bus<p></p>
+<td><p>0: DSI HOST Debug Bus 
 1-15: Reserved</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -684,7 +684,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>32'h0000002C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -703,7 +703,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -713,7 +713,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -723,7 +723,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -733,7 +733,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -860,12 +860,12 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>BCM invalid request Interrupt Event<p></p>
-0: Disable the interrupt<p></p>
+<td><p>BCM invalid request Interrupt Event 
+0: Disable the interrupt 
 1: Enable the interrupt</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -882,7 +882,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>32'h00000030</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -901,7 +901,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -911,7 +911,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -921,7 +921,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -931,7 +931,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -941,7 +941,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -951,7 +951,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -961,7 +961,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -971,7 +971,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -981,7 +981,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -991,7 +991,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1001,7 +1001,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1011,7 +1011,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1021,7 +1021,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1031,7 +1031,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1041,7 +1041,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1051,7 +1051,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1061,7 +1061,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1071,7 +1071,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1081,7 +1081,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1091,7 +1091,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1101,7 +1101,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1111,7 +1111,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1121,7 +1121,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1131,7 +1131,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1141,7 +1141,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1151,12 +1151,12 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Reset for DSI Host controller.<p></p>
-1: de-assert reset<p></p>
+<td><p>Reset for DSI Host controller. 
+1: de-assert reset 
 0: Assert reset</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1173,7 +1173,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>32'h00000034</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1193,10 +1193,10 @@ For write, do read and write back the same value. For read, ignore read values.<
 <td><p>0x0</p>
 </td>
 <td><p>Use the following divide factor if clkD3Switch="0.<p"></p>
-1: Div2<p></p>
-2: Div4<p></p>
-3: Div6<p></p>
-4: Div8<p></p>
+1: Div2 
+2: Div4 
+3: Div6 
+4: Div8 
 5: Div12</p>
 </td>
 </tr>
@@ -1206,8 +1206,8 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Not used.<p></p>
-0: use source clock<p></p>
+<td><p>Not used. 
+0: use source clock 
 1: use divided clock (decided by clkD3Switch and clkSel)</p>
 </td>
 </tr>
@@ -1217,8 +1217,8 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Not used.<p></p>
-0 : divide factor is decided by clkSwitch and clkSel<p></p>
+<td><p>Not used. 
+0 : divide factor is decided by clkSwitch and clkSel 
 1: use divide by 3 clock when clkSwitch = 1</p>
 </td>
 </tr>
@@ -1231,7 +1231,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 <td><p>Clock enable for pixClk.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1248,7 +1248,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>32'h00000038</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1276,7 +1276,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1286,7 +1286,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1296,7 +1296,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1306,7 +1306,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1316,7 +1316,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1326,7 +1326,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1336,11 +1336,11 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x1</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1357,7 +1357,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>32'h0000003C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1379,7 +1379,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 <td><p>Enable flush based on TG end of frame.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1396,7 +1396,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>32'h00000040</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1451,12 +1451,12 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Used to turn ON vppSysClk during VBI programming<p></p>
-1: Turns ON vppSysClk during VBI Programming (window begin)<p></p>
+<td><p>Used to turn ON vppSysClk during VBI programming 
+1: Turns ON vppSysClk during VBI Programming (window begin) 
 0: Turns OFF vppSysClk during VBI Programming (window end)</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1473,7 +1473,7 @@ For write, do read and write back the same value. For read, ignore read values.<
 </td>
 <td><p>32'h00000044</p>
 </td>
-<td><p>Power down control registers for Video Decoder SRAM.<p></p>
+<td><p>Power down control registers for Video Decoder SRAM. 
 Control register</p>
 </td>
 </tr>
@@ -1492,7 +1492,7 @@ Control register</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -1502,8 +1502,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -1513,11 +1513,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1534,7 +1534,7 @@ reduction with data retention</p>
 </td>
 <td><p>32'h00000048</p>
 </td>
-<td><p>Power down control registers for GDHUB SRAM BANK0.<p></p>
+<td><p>Power down control registers for GDHUB SRAM BANK0. 
 Control register</p>
 </td>
 </tr>
@@ -1553,7 +1553,7 @@ Control register</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -1563,8 +1563,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -1574,11 +1574,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1595,7 +1595,7 @@ reduction with data retention</p>
 </td>
 <td><p>32'h0000004C</p>
 </td>
-<td><p>Power down control registers for GDHUB SRAM BANK1.<p></p>
+<td><p>Power down control registers for GDHUB SRAM BANK1. 
 Control register</p>
 </td>
 </tr>
@@ -1614,7 +1614,7 @@ Control register</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -1624,8 +1624,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -1635,11 +1635,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1674,7 +1674,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -1684,8 +1684,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -1695,11 +1695,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1734,7 +1734,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -1744,8 +1744,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -1755,11 +1755,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1794,7 +1794,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -1804,8 +1804,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -1815,11 +1815,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1854,7 +1854,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -1864,8 +1864,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -1875,11 +1875,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1914,7 +1914,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -1924,8 +1924,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -1935,11 +1935,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1974,7 +1974,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -1984,8 +1984,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -1995,11 +1995,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2034,7 +2034,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -2044,8 +2044,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -2055,11 +2055,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2094,7 +2094,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -2104,8 +2104,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -2115,11 +2115,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2154,7 +2154,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -2164,8 +2164,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -2175,11 +2175,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2214,7 +2214,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -2224,8 +2224,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -2235,11 +2235,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2274,7 +2274,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -2284,8 +2284,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -2295,11 +2295,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2334,7 +2334,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -2344,8 +2344,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -2355,11 +2355,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2394,7 +2394,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -2404,8 +2404,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -2415,11 +2415,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2454,7 +2454,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -2464,8 +2464,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -2475,11 +2475,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2514,7 +2514,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -2524,8 +2524,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -2535,11 +2535,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2574,7 +2574,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -2584,8 +2584,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -2595,11 +2595,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2634,7 +2634,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -2644,8 +2644,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -2655,11 +2655,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2694,7 +2694,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -2704,8 +2704,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -2715,11 +2715,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2754,7 +2754,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -2764,8 +2764,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -2775,11 +2775,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2814,7 +2814,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -2824,8 +2824,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -2835,11 +2835,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2874,7 +2874,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -2884,8 +2884,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -2895,11 +2895,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2934,7 +2934,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -2944,8 +2944,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -2955,11 +2955,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2994,7 +2994,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -3004,8 +3004,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -3015,11 +3015,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3054,7 +3054,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -3064,8 +3064,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -3075,11 +3075,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3114,7 +3114,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -3124,8 +3124,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -3135,11 +3135,11 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3174,7 +3174,7 @@ reduction with data retention</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Shut down mode achieves highest leakage reduction without<p></p>
+<td><p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
 </td>
 </tr>
@@ -3184,8 +3184,8 @@ data retention</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+<td><p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
 </td>
 </tr>
@@ -3195,10 +3195,10 @@ array content with lower voltage</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+<td><p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 </body></html>

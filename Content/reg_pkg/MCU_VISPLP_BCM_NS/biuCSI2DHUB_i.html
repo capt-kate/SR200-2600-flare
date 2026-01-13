@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>CSI2DHUB</title></head>
+<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>CSI2DHUB</title></head>
 <body>
 <h1><a name="CSI2DHUB">"CSI2DHUB"</a>
         </h1>
@@ -35,9 +35,9 @@
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Start bit for the respective clients.<p></p>
-0 : No effect on hardware.<p></p>
-1 : start the client.<p></p>
+<td><p>Start bit for the respective clients. 
+0 : No effect on hardware. 
+1 : start the client. 
 The write 1 to this register is used to kick the hardware.</p>
 </td>
 </tr>
@@ -47,11 +47,11 @@ The write 1 to this register is used to kick the hardware.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0 : Don't clear, normal state.<p></p>
+<td><p>0 : Don't clear, normal state. 
 1 : Clear the asynchronous FIFO between the respective client and dHub.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -68,7 +68,7 @@ The write 1 to this register is used to kick the hardware.</p>
 </td>
 <td><p>32'h00000004</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -87,11 +87,11 @@ The write 1 to this register is used to kick the hardware.</p>
 </td>
 <td><p>0x64</p>
 </td>
-<td><p>Specifies the total number of pixels expected from input to write client. This is used to generate flush in Write client to write the partially formed 128-bit data (if any) to DDR.<p></p>
+<td><p>Specifies the total number of pixels expected from input to write client. This is used to generate flush in Write client to write the partially formed 128-bit data (if any) to DDR. 
 Should be programmed with (ovres*ohres).</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -108,7 +108,7 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>32'h00000008</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -139,7 +139,7 @@ Should be programmed with (ovres*ohres).</p>
 <td><p>Total number of pixels in a line (for Write Client)</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -156,7 +156,7 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>32'h0000000C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -175,19 +175,19 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>PackSel for Write Client<p></p>
-[0000] : 8 bit packing<p></p>
-[0001] : 10 bit packing<p></p>
-[0010] : 12 bit packing<p></p>
-[0011] : 15 bit packing<p></p>
-[0100] : 16 bit packing<p></p>
-[0101] : 20 bit packing<p></p>
-[0110] : 24 bit packing<p></p>
-[0111] : 30 bit packing<p></p>
+<td><p>PackSel for Write Client 
+[0000] : 8 bit packing 
+[0001] : 10 bit packing 
+[0010] : 12 bit packing 
+[0011] : 15 bit packing 
+[0100] : 16 bit packing 
+[0101] : 20 bit packing 
+[0110] : 24 bit packing 
+[0111] : 30 bit packing 
 [1000] : 32 bit packing</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -222,9 +222,9 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Start bit for the respective clients.<p></p>
-0 : No effect on hardware.<p></p>
-1 : start the client.<p></p>
+<td><p>Start bit for the respective clients. 
+0 : No effect on hardware. 
+1 : start the client. 
 The write 1 to this register is used to kick the hardware.</p>
 </td>
 </tr>
@@ -234,11 +234,11 @@ The write 1 to this register is used to kick the hardware.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0 : Don't clear, normal state.<p></p>
+<td><p>0 : Don't clear, normal state. 
 1 : Clear the asynchronous FIFO between the respective client and dHub.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -255,7 +255,7 @@ The write 1 to this register is used to kick the hardware.</p>
 </td>
 <td><p>32'h00000014</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -274,11 +274,11 @@ The write 1 to this register is used to kick the hardware.</p>
 </td>
 <td><p>0x64</p>
 </td>
-<td><p>Specifies the total number of pixels expected from input to write client. This is used to generate flush in Write client to write the partially formed 128-bit data (if any) to DDR.<p></p>
+<td><p>Specifies the total number of pixels expected from input to write client. This is used to generate flush in Write client to write the partially formed 128-bit data (if any) to DDR. 
 Should be programmed with (ovres*ohres).</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -295,7 +295,7 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>32'h00000018</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -326,7 +326,7 @@ Should be programmed with (ovres*ohres).</p>
 <td><p>Total number of pixels in a line (for Write Client)</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -343,7 +343,7 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>32'h0000001C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -362,19 +362,19 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>PackSel for Write Client<p></p>
-[0000] : 8 bit packing<p></p>
-[0001] : 10 bit packing<p></p>
-[0010] : 12 bit packing<p></p>
-[0011] : 15 bit packing<p></p>
-[0100] : 16 bit packing<p></p>
-[0101] : 20 bit packing<p></p>
-[0110] : 24 bit packing<p></p>
-[0111] : 30 bit packing<p></p>
+<td><p>PackSel for Write Client 
+[0000] : 8 bit packing 
+[0001] : 10 bit packing 
+[0010] : 12 bit packing 
+[0011] : 15 bit packing 
+[0100] : 16 bit packing 
+[0101] : 20 bit packing 
+[0110] : 24 bit packing 
+[0111] : 30 bit packing 
 [1000] : 32 bit packing</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -409,9 +409,9 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Start bit for the respective clients.<p></p>
-0 : No effect on hardware.<p></p>
-1 : start the client.<p></p>
+<td><p>Start bit for the respective clients. 
+0 : No effect on hardware. 
+1 : start the client. 
 The write 1 to this register is used to kick the hardware.</p>
 </td>
 </tr>
@@ -421,11 +421,11 @@ The write 1 to this register is used to kick the hardware.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>0 : Don't clear, normal state.<p></p>
+<td><p>0 : Don't clear, normal state. 
 1 : Clear the asynchronous FIFO between the respective client and dHub.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -442,7 +442,7 @@ The write 1 to this register is used to kick the hardware.</p>
 </td>
 <td><p>32'h00000024</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -461,11 +461,11 @@ The write 1 to this register is used to kick the hardware.</p>
 </td>
 <td><p>0x64</p>
 </td>
-<td><p>Specifies the total number of pixels expected from input to write client. This is used to generate flush in Write client to write the partially formed 128-bit data (if any) to DDR.<p></p>
+<td><p>Specifies the total number of pixels expected from input to write client. This is used to generate flush in Write client to write the partially formed 128-bit data (if any) to DDR. 
 Should be programmed with (ovres*ohres).</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -482,7 +482,7 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>32'h00000028</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -513,7 +513,7 @@ Should be programmed with (ovres*ohres).</p>
 <td><p>Total number of pixels in a line (for Write Client)</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -530,7 +530,7 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>32'h0000002C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -549,19 +549,19 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>PackSel for Write Client<p></p>
-[0000] : 8 bit packing<p></p>
-[0001] : 10 bit packing<p></p>
-[0010] : 12 bit packing<p></p>
-[0011] : 15 bit packing<p></p>
-[0100] : 16 bit packing<p></p>
-[0101] : 20 bit packing<p></p>
-[0110] : 24 bit packing<p></p>
-[0111] : 30 bit packing<p></p>
+<td><p>PackSel for Write Client 
+[0000] : 8 bit packing 
+[0001] : 10 bit packing 
+[0010] : 12 bit packing 
+[0011] : 15 bit packing 
+[0100] : 16 bit packing 
+[0101] : 20 bit packing 
+[0110] : 24 bit packing 
+[0111] : 30 bit packing 
 [1000] : 32 bit packing</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -578,7 +578,7 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>32'h00000030</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -615,8 +615,8 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Pipe TG Control flow based on write client1 ready.<p></p>
-0: enabled<p></p>
+<td><p>Pipe TG Control flow based on write client1 ready. 
+0: enabled 
 1: disabled</p>
 </td>
 </tr>
@@ -626,8 +626,8 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Pipe TG Control flow based on write client2 ready.<p></p>
-0: enabled<p></p>
+<td><p>Pipe TG Control flow based on write client2 ready. 
+0: enabled 
 1: disabled</p>
 </td>
 </tr>
@@ -637,8 +637,8 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Pipe TG Control flow based on write client3 ready.<p></p>
-0: enabled<p></p>
+<td><p>Pipe TG Control flow based on write client3 ready. 
+0: enabled 
 1: disabled</p>
 </td>
 </tr>
@@ -648,8 +648,8 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Front end (path before IPI fifo) Control flow based on IPI fifo status.<p></p>
-0: disabled<p></p>
+<td><p>Front end (path before IPI fifo) Control flow based on IPI fifo status. 
+0: disabled 
 1: enabled</p>
 </td>
 </tr>
@@ -659,8 +659,8 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Front end (path before IPI fifo) Control flow based on write client1 ready.<p></p>
-0: enabled<p></p>
+<td><p>Front end (path before IPI fifo) Control flow based on write client1 ready. 
+0: enabled 
 1: disabled</p>
 </td>
 </tr>
@@ -670,8 +670,8 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Front end (path before IPI fifo) Control flow based on write client2 ready.<p></p>
-0: enabled<p></p>
+<td><p>Front end (path before IPI fifo) Control flow based on write client2 ready. 
+0: enabled 
 1: disabled</p>
 </td>
 </tr>
@@ -681,8 +681,8 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Front end (path before IPI fifo) Control flow based on write client3 ready.<p></p>
-0: enabled<p></p>
+<td><p>Front end (path before IPI fifo) Control flow based on write client3 ready. 
+0: enabled 
 1: disabled</p>
 </td>
 </tr>
@@ -692,8 +692,8 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Front end (path before IPI fifo) Control flow based on write client 1 and client2 ready.<p></p>
-0: disabled<p></p>
+<td><p>Front end (path before IPI fifo) Control flow based on write client 1 and client2 ready. 
+0: disabled 
 1: enabled</p>
 </td>
 </tr>
@@ -703,8 +703,8 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Pipe TG Control flow based on IPI input FIFO status.<p></p>
-0: enabled<p></p>
+<td><p>Pipe TG Control flow based on IPI input FIFO status. 
+0: enabled 
 1: disabled</p>
 </td>
 </tr>
@@ -714,12 +714,12 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Enable zero line delay programming mode.<p></p>
-1: enabled<p></p>
+<td><p>Enable zero line delay programming mode. 
+1: enabled 
 0: disabled</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -736,7 +736,7 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>32'h00000034</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -785,7 +785,7 @@ Should be programmed with (ovres*ohres).</p>
 <td><p>Enable ipi fifo read also based on TG active signal apart from hde, vde and ipi fifo status.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -802,7 +802,7 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>32'h00000038</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -821,14 +821,14 @@ Should be programmed with (ovres*ohres).</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>In IPI48bit interface, Three 16bit IPI component RAW/Y data position swapping control.<p></p>
-case(IPIswap_Y_ctrl[2:0])<p></p>
-3'b000 : ipidata_raw48b[47:0] = {ipi_pixdata[47:32],ipi_pixdata[31:16],ipi_pixdata[15: 0]};<p></p>
-3'b001 : ipidata_raw48b[47:0] = {ipi_pixdata[15: 0],ipi_pixdata[31:16],ipi_pixdata[47:32]};<p></p>
-3'b010 : ipidata_raw48b[47:0] = {ipi_pixdata[31:16],ipi_pixdata[47:32],ipi_pixdata[15: 0]};<p></p>
-3'b011 : ipidata_raw48b[47:0] = {ipi_pixdata[31:16],ipi_pixdata[15: 0],ipi_pixdata[47:32]};<p></p>
-3'b100 : ipidata_raw48b[47:0] = {ipi_pixdata[47:32],ipi_pixdata[15: 0],ipi_pixdata[31:16]};<p></p>
-3'b101 : ipidata_raw48b[47:0] = {ipi_pixdata[15: 0],ipi_pixdata[47:32],ipi_pixdata[31:16]};<p></p>
+<td><p>In IPI48bit interface, Three 16bit IPI component RAW/Y data position swapping control. 
+case(IPIswap_Y_ctrl[2:0]) 
+3'b000 : ipidata_raw48b[47:0] = {ipi_pixdata[47:32],ipi_pixdata[31:16],ipi_pixdata[15: 0]}; 
+3'b001 : ipidata_raw48b[47:0] = {ipi_pixdata[15: 0],ipi_pixdata[31:16],ipi_pixdata[47:32]}; 
+3'b010 : ipidata_raw48b[47:0] = {ipi_pixdata[31:16],ipi_pixdata[47:32],ipi_pixdata[15: 0]}; 
+3'b011 : ipidata_raw48b[47:0] = {ipi_pixdata[31:16],ipi_pixdata[15: 0],ipi_pixdata[47:32]}; 
+3'b100 : ipidata_raw48b[47:0] = {ipi_pixdata[47:32],ipi_pixdata[15: 0],ipi_pixdata[31:16]}; 
+3'b101 : ipidata_raw48b[47:0] = {ipi_pixdata[15: 0],ipi_pixdata[47:32],ipi_pixdata[31:16]}; 
 NOTE: IPIswap_Y_ctrl can be 0 if “endianness_Y” control programming is used.</p>
 </td>
 </tr>
@@ -838,11 +838,11 @@ NOTE: IPIswap_Y_ctrl can be 0 if “endianness_Y” control programming is used.
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Works on the IPI data given out by the swap (IPIswap_Y_ctrl) logic.<p></p>
-1: Change the Data write order for RAW/Y data. Nth data first (LSB) and N+1th data next (MSB).<p></p>
-Example: wrClient_pixdata[47:0]= {ipidata_raw48b[15:0],ipidata_raw48b[31:16],ipidata_raw48b[47:32]}<p></p>
-0: Do not Change the Data write order for RAW/Y data. order remain same as received from CSI2RX. N+1th data first (LSB) and Nth data next (MSB).<p></p>
-Example wrClient_pixdata[47:0]= {ipidata_raw48b[47:32],ipidata_raw48b[31:16],ipidata_raw48b[15:0]}<p></p>
+<td><p>Works on the IPI data given out by the swap (IPIswap_Y_ctrl) logic. 
+1: Change the Data write order for RAW/Y data. Nth data first (LSB) and N+1th data next (MSB). 
+Example: wrClient_pixdata[47:0]= {ipidata_raw48b[15:0],ipidata_raw48b[31:16],ipidata_raw48b[47:32]} 
+0: Do not Change the Data write order for RAW/Y data. order remain same as received from CSI2RX. N+1th data first (LSB) and Nth data next (MSB). 
+Example wrClient_pixdata[47:0]= {ipidata_raw48b[47:32],ipidata_raw48b[31:16],ipidata_raw48b[15:0]} 
 NOTE: IPIswap_Y_ctrl must be 0 while programming “endianness_Y” control</p>
 </td>
 </tr>
@@ -852,14 +852,14 @@ NOTE: IPIswap_Y_ctrl must be 0 while programming “endianness_Y” control</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>In IPI48bit interface, Three 16bit IPI Embedded data position swapping control.<p></p>
-case(IPIswap_M_ctrl[2:0])<p></p>
-3'b000 : ipidata_raw48b[47:0] = {ipi_pixdata[47:32],ipi_pixdata[31:16],ipi_pixdata[15: 0]};<p></p>
-3'b001 : ipidata_raw48b[47:0] = {ipi_pixdata[15: 0],ipi_pixdata[31:16],ipi_pixdata[47:32]};<p></p>
-3'b010 : ipidata_raw48b[47:0] = {ipi_pixdata[31:16],ipi_pixdata[47:32],ipi_pixdata[15: 0]};<p></p>
-3'b011 : ipidata_raw48b[47:0] = {ipi_pixdata[31:16],ipi_pixdata[15: 0],ipi_pixdata[47:32]};<p></p>
-3'b100 : ipidata_raw48b[47:0] = {ipi_pixdata[47:32],ipi_pixdata[15: 0],ipi_pixdata[31:16]};<p></p>
-3'b101 : ipidata_raw48b[47:0] = {ipi_pixdata[15: 0],ipi_pixdata[47:32],ipi_pixdata[31:16]};<p></p>
+<td><p>In IPI48bit interface, Three 16bit IPI Embedded data position swapping control. 
+case(IPIswap_M_ctrl[2:0]) 
+3'b000 : ipidata_raw48b[47:0] = {ipi_pixdata[47:32],ipi_pixdata[31:16],ipi_pixdata[15: 0]}; 
+3'b001 : ipidata_raw48b[47:0] = {ipi_pixdata[15: 0],ipi_pixdata[31:16],ipi_pixdata[47:32]}; 
+3'b010 : ipidata_raw48b[47:0] = {ipi_pixdata[31:16],ipi_pixdata[47:32],ipi_pixdata[15: 0]}; 
+3'b011 : ipidata_raw48b[47:0] = {ipi_pixdata[31:16],ipi_pixdata[15: 0],ipi_pixdata[47:32]}; 
+3'b100 : ipidata_raw48b[47:0] = {ipi_pixdata[47:32],ipi_pixdata[15: 0],ipi_pixdata[31:16]}; 
+3'b101 : ipidata_raw48b[47:0] = {ipi_pixdata[15: 0],ipi_pixdata[47:32],ipi_pixdata[31:16]}; 
 NOTE: IPIswap_M_ctrl can be 0 if “endianness_M” control programming is used.</p>
 </td>
 </tr>
@@ -869,11 +869,11 @@ NOTE: IPIswap_M_ctrl can be 0 if “endianness_M” control programming is used.
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Works on the IPI Embedded data given out by the swap (IPIswap_M_ctrl) logic.<p></p>
-1: Change the Data write order for Embedded data. Nth data first (LSB) and N+1th data next (MSB).<p></p>
-Example: wrClient_pixdata[47:0]= {ipidata_raw48b[15:0],ipidata_raw48b[31:16],ipidata_raw48b[47:32]}<p></p>
-0: Do not Change the Data write order for Embedded data. order remain same as received from CSI2RX. N+1th data first (LSB) and Nth data next (MSB).<p></p>
-Example wrClient_pixdata[47:0]= {ipidata_raw48b[47:32],ipidata_raw48b[31:16],ipidata_raw48b[15:0]}<p></p>
+<td><p>Works on the IPI Embedded data given out by the swap (IPIswap_M_ctrl) logic. 
+1: Change the Data write order for Embedded data. Nth data first (LSB) and N+1th data next (MSB). 
+Example: wrClient_pixdata[47:0]= {ipidata_raw48b[15:0],ipidata_raw48b[31:16],ipidata_raw48b[47:32]} 
+0: Do not Change the Data write order for Embedded data. order remain same as received from CSI2RX. N+1th data first (LSB) and Nth data next (MSB). 
+Example wrClient_pixdata[47:0]= {ipidata_raw48b[47:32],ipidata_raw48b[31:16],ipidata_raw48b[15:0]} 
 NOTE: IPIswap_M_ctrl must be 0 while programming “endianness_M” control</p>
 </td>
 </tr>
@@ -883,8 +883,8 @@ NOTE: IPIswap_M_ctrl must be 0 while programming “endianness_M” control</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Enable output haltback from IPI data write clients (RAW8/Y)&C.<p></p>
-1: enabled<p></p>
+<td><p>Enable output haltback from IPI data write clients (RAW8/Y)&C. 
+1: enabled 
 0: disabled</p>
 </td>
 </tr>
@@ -894,8 +894,8 @@ NOTE: IPIswap_M_ctrl must be 0 while programming “endianness_M” control</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Enable output haltback from IPI Embedded data write clients (Embedded).<p></p>
-1: enabled<p></p>
+<td><p>Enable output haltback from IPI Embedded data write clients (Embedded). 
+1: enabled 
 0: disabled</p>
 </td>
 </tr>
@@ -905,9 +905,9 @@ NOTE: IPIswap_M_ctrl must be 0 while programming “endianness_M” control</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>CSI2RX < + > IPI Y data WriteClient (RAW8/Y), Control flow based on write client ready.<p></p>
-0: enabled<p></p>
-1: disabled<p></p>
+<td><p>CSI2RX < + > IPI Y data WriteClient (RAW8/Y), Control flow based on write client ready. 
+0: enabled 
+1: disabled 
 Note: The Ready signal from WriteClient Y will be overridden with ClientRdy_ctrl_Y to keep the WriteClient always ready. The Halt signal from WriteClient Y will not be asserted.</p>
 </td>
 </tr>
@@ -917,9 +917,9 @@ Note: The Ready signal from WriteClient Y will be overridden with ClientRdy_ctrl
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>CSI2RX < + > IPI C WriteClient (C data), Control flow based on write client ready.<p></p>
-0: enabled<p></p>
-1: disabled<p></p>
+<td><p>CSI2RX < + > IPI C WriteClient (C data), Control flow based on write client ready. 
+0: enabled 
+1: disabled 
 Note: The Ready signal from WriteClient C will be overridden with ClientRdy_ctrl_C to keep the WriteClient always ready. The Halt signal from WriteClient C will not be asserted.</p>
 </td>
 </tr>
@@ -929,9 +929,9 @@ Note: The Ready signal from WriteClient C will be overridden with ClientRdy_ctrl
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>CSI2RX < + > IPI EmbMeta WriteClient (Embedded Metadata ), Control flow based on write client ready.<p></p>
-0: enabled<p></p>
-1: disabled<p></p>
+<td><p>CSI2RX < + > IPI EmbMeta WriteClient (Embedded Metadata ), Control flow based on write client ready. 
+0: enabled 
+1: disabled 
 Note: The Ready signal from WriteClient Embeddata will be overridden with ClientRdy_ctrl_M to keep the WriteClient always ready. The Halt signal from WriteClient Embeddata will not be asserted.</p>
 </td>
 </tr>
@@ -950,7 +950,7 @@ Note: The Ready signal from WriteClient Embeddata will be overridden with Client
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>IPI data YUV420 format in Contemporary mode (Non-Legacy)<p></p>
+<td><p>IPI data YUV420 format in Contemporary mode (Non-Legacy) 
 UV-data= {ipi_pixdata[19:12],ipi_pixdata[9:2]}</p>
 </td>
 </tr>
@@ -960,9 +960,9 @@ UV-data= {ipi_pixdata[19:12],ipi_pixdata[9:2]}</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>1: {ipidata_uv[7:0],ipidata_uv[15:8]}={V,U}<p></p>
-0: {ipidata_uv[15:8],ipidata_uv[7:0]}={U,V}<p></p>
-NOTE: endianness is not used for UV data.<p></p>
+<td><p>1: {ipidata_uv[7:0],ipidata_uv[15:8]}={V,U} 
+0: {ipidata_uv[15:8],ipidata_uv[7:0]}={U,V} 
+NOTE: endianness is not used for UV data. 
 ipi_uv_swap_ctrl can be used as endianness change while writing UV to Dhub.</p>
 </td>
 </tr>
@@ -975,7 +975,7 @@ ipi_uv_swap_ctrl can be used as endianness change while writing UV to Dhub.</p>
 <td><p>888 format will be packed as 565 before dhub write.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -992,7 +992,7 @@ ipi_uv_swap_ctrl can be used as endianness change while writing UV to Dhub.</p>
 </td>
 <td><p>32'h0000003C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1011,15 +1011,15 @@ ipi_uv_swap_ctrl can be used as endianness change while writing UV to Dhub.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>DHUB write input selection for CSIRX2-IPI to write client C<p></p>
+<td><p>DHUB write input selection for CSIRX2-IPI to write client C 
 4'h0 : Monochrome formats, UV="0<p"></p>
-4'h1 : YUV422-UV16b format :: Write 16bit UV on alternate Pixel<p></p>
-4'h2 : YUV422-C8b format :: Write U in ODD pix, V in EVEN pix<p></p>
-4'h3 : YUV420-UV16b :: Write 16bit UV on even pixel of even Line, Else =0<p></p>
-4'h4 : YUV420-C8b Legacy format<p></p>
-4'h8 : YUV422-UV16b format :: Write 16bit UV on alternate Pixel<p></p>
-4'h9 : YUV422-C8b format :: Write U in ODD pix, V in EVEN pix<p></p>
-4'hA : YUV420-UV16b :: Write 16bit UV on even pixel of even Line, Else =0<p></p>
+4'h1 : YUV422-UV16b format :: Write 16bit UV on alternate Pixel 
+4'h2 : YUV422-C8b format :: Write U in ODD pix, V in EVEN pix 
+4'h3 : YUV420-UV16b :: Write 16bit UV on even pixel of even Line, Else =0 
+4'h4 : YUV420-C8b Legacy format 
+4'h8 : YUV422-UV16b format :: Write 16bit UV on alternate Pixel 
+4'h9 : YUV422-C8b format :: Write U in ODD pix, V in EVEN pix 
+4'hA : YUV420-UV16b :: Write 16bit UV on even pixel of even Line, Else =0 
 4'hB : YUV420-C8b Legacy format</p>
 </td>
 </tr>
@@ -1029,26 +1029,26 @@ ipi_uv_swap_ctrl can be used as endianness change while writing UV to Dhub.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Input control for CSIRX1-IPI0 and CSIRX1-IPI1 write clients<p></p>
-4'h0 : host IPI to DHUB ( 24-bit) RAW8<p></p>
-4'h1 : host IPI to DHUB ( 16/24-bit)<p></p>
-4'h2 : host IPI < FIFO > DHUB ( 24-bit) RAW8<p></p>
-4'h3 : host IPI < FIFO > DHUB ( 16/24-bit)<p></p>
-default : host IPI to DHUB ( 24-bit) RAW8<p></p>
-------------------------------------------<p></p>
-Input control for CSIRX2-IPI Y write clients<p></p>
-4'h0 : RAW8 = 24b/16b (16b for RGB565)<p></p>
-4'h1 : RAW10 = 30b<p></p>
-4'h2 : RAW12 = 36b<p></p>
-4'h3 : RAW16 = 48b<p></p>
-4'h4 : YUV422-Y8b = 8b<p></p>
-4'h5 : YUV420-Y8b = 16b<p></p>
-4'h8 : RAW8 = 24b/16b (16b for RGB565)<p></p>
-4'h9 : RAW10 = 30b<p></p>
-4'hA : RAW12 = 36b<p></p>
-4'hB : RAW16 = 48b<p></p>
-4'hC : YUV422-Y8b = 8b<p></p>
-4'hD : YUV420-Y8b = 16b<p></p>
+<td><p>Input control for CSIRX1-IPI0 and CSIRX1-IPI1 write clients 
+4'h0 : host IPI to DHUB ( 24-bit) RAW8 
+4'h1 : host IPI to DHUB ( 16/24-bit) 
+4'h2 : host IPI < FIFO > DHUB ( 24-bit) RAW8 
+4'h3 : host IPI < FIFO > DHUB ( 16/24-bit) 
+default : host IPI to DHUB ( 24-bit) RAW8 
+------------------------------------------ 
+Input control for CSIRX2-IPI Y write clients 
+4'h0 : RAW8 = 24b/16b (16b for RGB565) 
+4'h1 : RAW10 = 30b 
+4'h2 : RAW12 = 36b 
+4'h3 : RAW16 = 48b 
+4'h4 : YUV422-Y8b = 8b 
+4'h5 : YUV420-Y8b = 16b 
+4'h8 : RAW8 = 24b/16b (16b for RGB565) 
+4'h9 : RAW10 = 30b 
+4'hA : RAW12 = 36b 
+4'hB : RAW16 = 48b 
+4'hC : YUV422-Y8b = 8b 
+4'hD : YUV420-Y8b = 16b 
 default :RAW8 = 24b</p>
 </td>
 </tr>
@@ -1058,8 +1058,8 @@ default :RAW8 = 24b</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Input control for Embedded data Write client<p></p>
-0: Swapped and Endian corrected Embedded data<p></p>
+<td><p>Input control for Embedded data Write client 
+0: Swapped and Endian corrected Embedded data 
 1: Endian corrected Embedded data</p>
 </td>
 </tr>
@@ -1117,7 +1117,7 @@ default :RAW8 = 24b</p>
 <td><p>Embedded data write client start</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1134,7 +1134,7 @@ default :RAW8 = 24b</p>
 </td>
 <td><p>32'h00000040</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1156,7 +1156,7 @@ default :RAW8 = 24b</p>
 <td><p>Total pixel count at IPI input fifo</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1173,7 +1173,7 @@ default :RAW8 = 24b</p>
 </td>
 <td><p>32'h00000044</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1204,7 +1204,7 @@ default :RAW8 = 24b</p>
 <td><p>Image height of sequencer for sync to start end signal conversion.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1221,7 +1221,7 @@ default :RAW8 = 24b</p>
 </td>
 <td><p>32'h00000048</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1252,6 +1252,6 @@ default :RAW8 = 24b</p>
 <td><p>Iif input mode for sync2se block.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 </body></html>

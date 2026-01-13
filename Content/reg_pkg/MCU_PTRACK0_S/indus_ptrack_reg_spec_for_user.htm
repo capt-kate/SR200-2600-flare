@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
@@ -5925,9 +5925,9 @@ name="PTRACK0_BUS_IF_CFG_mark"></a><a name="PTRACK_BUS_IF_CFG_mark">PTRACK_BUS_I
 </td>
 <td><p class="TableContents"><a
 name="OLE_LINK38">Watermark Level
-for BUS I/F FIFO.<p></p>
+for BUS I/F FIFO. 
 When the number of unread samples in the output FIFO is at least
-BUF_IF_WM_LEVEL, a BUFIF_WM_STAT status is set and</a>PTRACK_wmsignal becomes active.<p></p>
+BUF_IF_WM_LEVEL, a BUFIF_WM_STAT status is set and</a>PTRACK_wmsignal becomes active. 
 Note that BUF_IF_WM_LEVEL refers to AHB interface<o:p></o:p></p>
 </td>
 </tr>
@@ -5943,8 +5943,8 @@ Note that BUF_IF_WM_LEVEL refers to AHB interface<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Decimation Ratio of BUF I/F FIFO push.<p></p>
-Push to FIFO occurs very (FIFO_PUSH_DECI+1)arrivelsof new data<p></p>
+<td><p class="TableContents">Decimation Ratio of BUF I/F FIFO push. 
+Push to FIFO occurs very (FIFO_PUSH_DECI+1)arrivelsof new data 
 When FIFO_PUSH_DECI = 0eveynew data is pushed.<o:p></o:p></p>
 </td>
 </tr>
@@ -5960,8 +5960,8 @@ When FIFO_PUSH_DECI = 0eveynew data is pushed.<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Override FIFO I/F LSB with Lock Indication<p></p>
-0 - Do not Override<p></p>
+<td><p class="TableContents">Override FIFO I/F LSB with Lock Indication 
+0 - Do not Override 
 1 - Override<o:p></o:p></p>
 </td>
 </tr>
@@ -5977,9 +5977,9 @@ When FIFO_PUSH_DECI = 0eveynew data is pushed.<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x1<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Bus Interface Clock Enable<p></p>
-0: Clock is disabled<p></p>
-1: Clock is enabled<p></p>
+<td><p class="TableContents">Bus Interface Clock Enable 
+0: Clock is disabled 
+1: Clock is enabled 
 This field may be changed while module is enabled<o:p></o:p></p>
 </td>
 </tr>
@@ -5995,9 +5995,9 @@ This field may be changed while module is enabled<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Reset BUF I/F<p></p>
-0 - Bus interface is not in reset state<p></p>
-1 - Bus interface is in reset state<p></p>
+<td><p class="TableContents">Reset BUF I/F 
+0 - Bus interface is not in reset state 
+1 - Bus interface is in reset state 
 This field may be changed while module is enabled<o:p></o:p></p>
 </td>
 </tr>
@@ -6014,11 +6014,11 @@ This field may be changed while module is enabled<o:p></o:p></p>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
 <td><p class="TableContents">The source of the data to be stored in BUF I/F
-FIFO<p></p>
-0 - Source is Rate Ratio (R) + Lock indication<p></p>
-1 - Source is Phase Out (Pout) + Lock indication<p></p>
-2 - Source is Phase In (Pa) + Lock indication<p></p>
-3 - Source is DPLL Error (e) + Lock indication<p></p>
+FIFO 
+0 - Source is Rate Ratio (R) + Lock indication 
+1 - Source is Phase Out (Pout) + Lock indication 
+2 - Source is Phase In (Pa) + Lock indication 
+3 - Source is DPLL Error (e) + Lock indication 
 4 - Source is smoothed DPLL Error (s_error) + Lock
 indication<o:p></o:p></p>
 </td>
@@ -6035,9 +6035,9 @@ indication<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Enable Phase Tracker<p></p>
-0: Module is disabled<p></p>
-1: Module is enabled<p></p>
+<td><p class="TableContents">Enable Phase Tracker 
+0: Module is disabled 
+1: Module is enabled 
 This field may be changed while module is enabled<o:p></o:p></p>
 </td>
 </tr>
@@ -6088,8 +6088,8 @@ name="PTRACK0_TIC_GEN_CFG_mark"></a><a name="PTRACK_TIC_GEN_CFG_mark">PTRACK_TIC
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Tic GeneratorNfoutdivision factor.<p></p>
-Actualdibsionby (NFOUT_DIV+1).<p></p>
+<td><p class="TableContents">Tic GeneratorNfoutdivision factor. 
+Actualdibsionby (NFOUT_DIV+1). 
 When NFOUT_DIV = 0 divider input is passedunchgedto divider output even ififthe input is constant.<o:p></o:p></p>
 </td>
 </tr>
@@ -6105,8 +6105,8 @@ When NFOUT_DIV = 0 divider input is passedunchgedto divider output even ififthe 
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Enable NFOUT low to high detection output<p></p>
-0 -Nfoutdisable<p></p>
+<td><p class="TableContents">Enable NFOUT low to high detection output 
+0 -Nfoutdisable 
 1 -Nfoutenabled<o:p></o:p></p>
 </td>
 </tr>
@@ -6123,8 +6123,8 @@ When NFOUT_DIV = 0 divider input is passedunchgedto divider output even ififthe 
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
 <td><p class="TableContents">EnableMfinlow to high
-detection output<p></p>
-0 -Mfindisable<p></p>
+detection output 
+0 -Mfindisable 
 1 -Mfinenabled<o:p></o:p></p>
 </td>
 </tr>
@@ -6141,8 +6141,8 @@ detection output<p></p>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
 <td><p class="TableContents">FixMfinto a valueof 1 - to be used when DMFIN rate is the same as
-ASRC operational clock.<p></p>
-0 -Mfinis low to high detector output<p></p>
+ASRC operational clock. 
+0 -Mfinis low to high detector output 
 1 -Mfin=1<o:p></o:p></p>
 </td>
 </tr>
@@ -6158,8 +6158,8 @@ ASRC operational clock.<p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">ApplysyncronizertoNfoutin tic generator<p></p>
-0 - Synchronizer is not applied<p></p>
+<td><p class="TableContents">ApplysyncronizertoNfoutin tic generator 
+0 - Synchronizer is not applied 
 1 - Synchronizer is applied<o:p></o:p></p>
 </td>
 </tr>
@@ -6175,8 +6175,8 @@ ASRC operational clock.<p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">ApplysyncronizertoMfinin tic generator<p></p>
-0 - Synchronizer is not applied<p></p>
+<td><p class="TableContents">ApplysyncronizertoMfinin tic generator 
+0 - Synchronizer is not applied 
 1 - Synchronizer is applied<o:p></o:p></p>
 </td>
 </tr>
@@ -6192,8 +6192,8 @@ ASRC operational clock.<p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Tic GeneratorMfindivision factor.<p></p>
-Actualdibsionby (MFIN_DIV+1).<p></p>
+<td><p class="TableContents">Tic GeneratorMfindivision factor. 
+Actualdibsionby (MFIN_DIV+1). 
 When MFIN_DIV = 0 divider input is passedunchgedto divider output even ififthe input is constant.<o:p></o:p></p>
 </td>
 </tr>
@@ -6244,8 +6244,8 @@ name="PTRACK0_PHASE_MEAS_CFG_mark"></a><a name="PTRACK_PHASE_MEAS_CFG_mark">PTRA
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Enable Calculation of T_RATIO estimation<p></p>
-0 -T_ratio= INIT_T_RATIO<p></p>
+<td><p class="TableContents">Enable Calculation of T_RATIO estimation 
+0 -T_ratio= INIT_T_RATIO 
 1 - Estimate T_RATIO<o:p></o:p></p>
 </td>
 </tr>
@@ -6261,8 +6261,8 @@ name="PTRACK0_PHASE_MEAS_CFG_mark"></a><a name="PTRACK_PHASE_MEAS_CFG_mark">PTRA
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Enable fractional phase calculation<p></p>
-0 - Use only integer phase measurement<p></p>
+<td><p class="TableContents">Enable fractional phase calculation 
+0 - Use only integer phase measurement 
 1 - Use fractional phase calculation<o:p></o:p></p>
 </td>
 </tr>
@@ -6279,8 +6279,8 @@ name="PTRACK0_PHASE_MEAS_CFG_mark"></a><a name="PTRACK_PHASE_MEAS_CFG_mark">PTRA
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
 <td><p class="TableContents">Number of bits to shift right in T ratio
-Estimator<p></p>
-Shiftrighis by (T_RATIO_ALPHA+6) bits.<p></p>
+Estimator 
+Shiftrighis by (T_RATIO_ALPHA+6) bits. 
 0 &#8804; T_RATIO_ALPHA &#8804; 15<o:p></o:p></p>
 </td>
 </tr>
@@ -6296,8 +6296,8 @@ Shiftrighis by (T_RATIO_ALPHA+6) bits.<p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Scaling factor of measured phase.<p></p>
-The phase is right shifted by PHASE_SCALE bits.<p></p>
+<td><p class="TableContents">Scaling factor of measured phase. 
+The phase is right shifted by PHASE_SCALE bits. 
 0 &#8804; PHASE_SCALE &#8804; 10<o:p></o:p></p>
 </td>
 </tr>
@@ -6348,7 +6348,7 @@ name="PTRACK0_DPLL_CFG_mark"></a><a name="PTRACK_DPLL_CFG_mark">PTRACK_DPLL_CFG<
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Wait period for lock monitoring state machine.infouttics till error observation<p></p>
+<td><p class="TableContents">Wait period for lock monitoring state machine.infouttics till error observation 
 Actual wait value is (LOCK_WAIT*64+2)<o:p></o:p></p>
 </td>
 </tr>
@@ -6364,8 +6364,8 @@ Actual wait value is (LOCK_WAIT*64+2)<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Lock monitoring method<p></p>
-0 -Declearlock based on phase tracking error<p></p>
+<td><p class="TableContents">Lock monitoring method 
+0 -Declearlock based on phase tracking error 
 1 -Declearlock based on counter expiration<o:p></o:p></p>
 </td>
 </tr>
@@ -6382,8 +6382,8 @@ Actual wait value is (LOCK_WAIT*64+2)<o:p></o:p></p>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
 <td><p class="TableContents">The index of the gear that is used when
-GEAR_INDEX_SRC = 1.<p></p>
-0 &#8804; GEAR_INDEX &#8804; 4<p></p>
+GEAR_INDEX_SRC = 1. 
+0 &#8804; GEAR_INDEX &#8804; 4 
 This field is a dynamic configuration parameter<o:p></o:p></p>
 </td>
 </tr>
@@ -6399,8 +6399,8 @@ This field is a dynamic configuration parameter<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Source of Gear Index<p></p>
-0 - Source is Gear Control FSM<p></p>
+<td><p class="TableContents">Source of Gear Index 
+0 - Source is Gear Control FSM 
 1 - Sourceiisregsiterfield GEAR_INDEX<o:p></o:p></p>
 </td>
 </tr>
@@ -6416,8 +6416,8 @@ This field is a dynamic configuration parameter<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Source of error used by lock monitoring<p></p>
-0 - Error source is DPLL0<p></p>
+<td><p class="TableContents">Source of error used by lock monitoring 
+0 - Error source is DPLL0 
 1 -Error source is DPLL1<o:p></o:p></p>
 </td>
 </tr>
@@ -6433,8 +6433,8 @@ This field is a dynamic configuration parameter<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Enable DPPL 1<p></p>
-0 - Only DPLL 0 is used<p></p>
+<td><p class="TableContents">Enable DPPL 1 
+0 - Only DPLL 0 is used 
 1 -Both DPLL0 and DPLL1 are used<o:p></o:p></p>
 </td>
 </tr>
@@ -6451,7 +6451,7 @@ This field is a dynamic configuration parameter<o:p></o:p></p>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
 <td><p class="TableContents">Number of bits to shift right in error smoothing
-filter<p></p>
+filter 
 0 &#8804; S_ERR_SHIFT &#8804; 10<o:p></o:p></p>
 </td>
 </tr>
@@ -6569,7 +6569,7 @@ name="PTRACK0_GEAR0_mark"></a><a name="PTRACK_GEAR0_mark">PTRACK_GEAR0</a>( AHB:
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Wait perioduntillswitching to the next gear<p></p>
+<td><p class="TableContents">Wait perioduntillswitching to the next gear 
 Actual wait value is (GEAR_LEN*64)+2 for gear 0 and
 (GEAR_LEN*64)+1 for othergreas.<o:p></o:p></p>
 </td>
@@ -6586,9 +6586,9 @@ Actual wait value is (GEAR_LEN*64)+2 for gear 0 and
 </td>
 <td><p class="TableContents">0x1<o:p></o:p></p>
 </td>
-<td><p class="TableContents">The DPLL Order<p></p>
-0 - 1st order DPLL<p></p>
-1 - 2nd order DPPL<p></p>
+<td><p class="TableContents">The DPLL Order 
+0 - 1st order DPLL 
+1 - 2nd order DPPL 
 This field may changedynamciallywhile gear 0 is
 not selected as the gear used by DPLL<o:p></o:p></p>
 </td>
@@ -6606,8 +6606,8 @@ not selected as the gear used by DPLL<o:p></o:p></p>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
 <td><p class="TableContents">The number of bits of right shift for DPLL
-frequency coefficient<p></p>
-4 &#8804; KF_SHIFT_0 &#8804; 24<p></p>
+frequency coefficient 
+4 &#8804; KF_SHIFT_0 &#8804; 24 
 This field may changedynamciallywhile gear 0 is
 not selected as the gear used by DPLL<o:p></o:p></p>
 </td>
@@ -6625,8 +6625,8 @@ not selected as the gear used by DPLL<o:p></o:p></p>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
 <td><p class="TableContents">The number of bits of right shift for DPLL phase
-coefficient<p></p>
-2 &#8804; KP_SHIFT_0 &#8804; 22<p></p>
+coefficient 
+2 &#8804; KP_SHIFT_0 &#8804; 22 
 This field may changedynamciallywhile gear 0 is
 not selected as the gear used by DPLL<o:p></o:p></p>
 </td>
@@ -6680,7 +6680,7 @@ name="PTRACK0_GEAR1_mark"></a><a name="PTRACK_GEAR1_mark">PTRACK_GEAR1</a>( AHB:
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Wait perioduntillswitching to the next gear<p></p>
+<td><p class="TableContents">Wait perioduntillswitching to the next gear 
 Actual wait value is (GEAR_LEN*64)+2 for gear 0 and
 (GEAR_LEN*64)+1 for othergreas.<o:p></o:p></p>
 </td>
@@ -6697,9 +6697,9 @@ Actual wait value is (GEAR_LEN*64)+2 for gear 0 and
 </td>
 <td><p class="TableContents">0x1<o:p></o:p></p>
 </td>
-<td><p class="TableContents">The DPLL Order<p></p>
-0 - 1st order DPLL<p></p>
-1 - 2nd order DPPL<p></p>
+<td><p class="TableContents">The DPLL Order 
+0 - 1st order DPLL 
+1 - 2nd order DPPL 
 This field may changedynamciallywhile gear 0 is
 not selected as the gear used by DPLL<o:p></o:p></p>
 </td>
@@ -6717,8 +6717,8 @@ not selected as the gear used by DPLL<o:p></o:p></p>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
 <td><p class="TableContents">The number of bits of right shift for DPLL
-frequency coefficient<p></p>
-4 &#8804; KF_SHIFT_0 &#8804; 24<p></p>
+frequency coefficient 
+4 &#8804; KF_SHIFT_0 &#8804; 24 
 This field may changedynamciallywhile gear 0 is
 not selected as the gear used by DPLL<o:p></o:p></p>
 </td>
@@ -6736,8 +6736,8 @@ not selected as the gear used by DPLL<o:p></o:p></p>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
 <td><p class="TableContents">The number of bits of right shift for DPLL phase
-coefficient<p></p>
-2 &#8804; KP_SHIFT_0 &#8804; 22<p></p>
+coefficient 
+2 &#8804; KP_SHIFT_0 &#8804; 22 
 This field may changedynamciallywhile gear 0 is
 not selected as the gear used by DPLL<o:p></o:p></p>
 </td>
@@ -6789,7 +6789,7 @@ name="PTRACK0_GEAR2_mark"></a><a name="PTRACK_GEAR2_mark">PTRACK_GEAR2</a>( AHB:
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Wait perioduntillswitching to the next gear<p></p>
+<td><p class="TableContents">Wait perioduntillswitching to the next gear 
 Actual wait value is (GEAR_LEN*64)+2 for gear 0 and
 (GEAR_LEN*64)+1 for othergreas.<o:p></o:p></p>
 </td>
@@ -6806,9 +6806,9 @@ Actual wait value is (GEAR_LEN*64)+2 for gear 0 and
 </td>
 <td><p class="TableContents">0x1<o:p></o:p></p>
 </td>
-<td><p class="TableContents">The DPLL Order<p></p>
-0 - 1st order DPLL<p></p>
-1 - 2nd order DPPL<p></p>
+<td><p class="TableContents">The DPLL Order 
+0 - 1st order DPLL 
+1 - 2nd order DPPL 
 This field may changedynamciallywhile gear 0 is
 not selected as the gear used by DPLL<o:p></o:p></p>
 </td>
@@ -6826,8 +6826,8 @@ not selected as the gear used by DPLL<o:p></o:p></p>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
 <td><p class="TableContents">The number of bits of right shift for DPLL
-frequency coefficient<p></p>
-4 &#8804; KF_SHIFT_0 &#8804; 24<p></p>
+frequency coefficient 
+4 &#8804; KF_SHIFT_0 &#8804; 24 
 This field may changedynamciallywhile gear 0 is
 not selected as the gear used by DPLL<o:p></o:p></p>
 </td>
@@ -6845,8 +6845,8 @@ not selected as the gear used by DPLL<o:p></o:p></p>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
 <td><p class="TableContents">The number of bits of right shift for DPLL phase
-coefficient<p></p>
-2 &#8804; KP_SHIFT_0 &#8804; 22<p></p>
+coefficient 
+2 &#8804; KP_SHIFT_0 &#8804; 22 
 This field may changedynamciallywhile gear 0 is
 not selected as the gear used by DPLL<o:p></o:p></p>
 </td>
@@ -6898,7 +6898,7 @@ name="PTRACK0_GEAR3_mark"></a><a name="PTRACK_GEAR3_mark">PTRACK_GEAR3</a>( AHB:
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Wait perioduntillswitching to the next gear<p></p>
+<td><p class="TableContents">Wait perioduntillswitching to the next gear 
 Actual wait value is (GEAR_LEN*64)+2 for gear 0 and
 (GEAR_LEN*64)+1 for othergreas.<o:p></o:p></p>
 </td>
@@ -6915,9 +6915,9 @@ Actual wait value is (GEAR_LEN*64)+2 for gear 0 and
 </td>
 <td><p class="TableContents">0x1<o:p></o:p></p>
 </td>
-<td><p class="TableContents">The DPLL Order<p></p>
-0 - 1st order DPLL<p></p>
-1 - 2nd order DPPL<p></p>
+<td><p class="TableContents">The DPLL Order 
+0 - 1st order DPLL 
+1 - 2nd order DPPL 
 This field may changedynamciallywhile gear 0 is
 not selected as the gear used by DPLL<o:p></o:p></p>
 </td>
@@ -6935,8 +6935,8 @@ not selected as the gear used by DPLL<o:p></o:p></p>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
 <td><p class="TableContents">The number of bits of right shift for DPLL
-frequency coefficient<p></p>
-4 &#8804; KF_SHIFT_0 &#8804; 24<p></p>
+frequency coefficient 
+4 &#8804; KF_SHIFT_0 &#8804; 24 
 This field may changedynamciallywhile gear 0 is
 not selected as the gear used by DPLL<o:p></o:p></p>
 </td>
@@ -6954,8 +6954,8 @@ not selected as the gear used by DPLL<o:p></o:p></p>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
 <td><p class="TableContents">The number of bits of right shift for DPLL phase
-coefficient<p></p>
-2 &#8804; KP_SHIFT_0 &#8804; 22<p></p>
+coefficient 
+2 &#8804; KP_SHIFT_0 &#8804; 22 
 This field may changedynamciallywhile gear 0 is
 not selected as the gear used by DPLL<o:p></o:p></p>
 </td>
@@ -7009,9 +7009,9 @@ name="PTRACK0_GEAR4_mark"></a><a name="PTRACK_GEAR4_mark">PTRACK_GEAR4</a>( AHB:
 </td>
 <td><p class="TableContents">0x1<o:p></o:p></p>
 </td>
-<td><p class="TableContents">The DPLL Order<p></p>
-0 - 1st order DPLL<p></p>
-1 - 2nd order DPPL<p></p>
+<td><p class="TableContents">The DPLL Order 
+0 - 1st order DPLL 
+1 - 2nd order DPPL 
 This field may changedynamciallywhile gear 0 is
 not selected as the gear used by DPLL<o:p></o:p></p>
 </td>
@@ -7029,8 +7029,8 @@ not selected as the gear used by DPLL<o:p></o:p></p>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
 <td><p class="TableContents">The number of bits of right shift for DPLL
-frequency coefficient<p></p>
-4 &#8804; KF_SHIFT_0 &#8804; 24<p></p>
+frequency coefficient 
+4 &#8804; KF_SHIFT_0 &#8804; 24 
 This field may changedynamciallywhile gear 0 is
 not selected as the gear used by DPLL<o:p></o:p></p>
 </td>
@@ -7048,8 +7048,8 @@ not selected as the gear used by DPLL<o:p></o:p></p>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
 <td><p class="TableContents">The number of bits of right shift for DPLL phase
-coefficient<p></p>
-2 &#8804; KP_SHIFT_0 &#8804; 22<p></p>
+coefficient 
+2 &#8804; KP_SHIFT_0 &#8804; 22 
 This field may changedynamciallywhile gear 0 is
 not selected as the gear used by DPLL<o:p></o:p></p>
 </td>
@@ -7306,9 +7306,9 @@ name="PTRACK0_STATUS_mark"></a><a name="PTRACK_STATUS_mark">PTRACK_STATUS</a>( A
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Status: DPLLlokindication changed its state from locked to unlocked<p></p>
-0 � Event didn�t occur<p></p>
-1 � Event occurred<p></p>
+<td><p class="TableContents">Status: DPLLlokindication changed its state from locked to unlocked 
+0 � Event didn�t occur 
+1 � Event occurred 
 This field may be cleared while module is enabled<o:p></o:p></p>
 </td>
 </tr>
@@ -7324,9 +7324,9 @@ This field may be cleared while module is enabled<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Status: DPLLlokindication changed its state from unlocked to locked<p></p>
-0 � Event didn�t occur<p></p>
-1 � Event occurred<p></p>
+<td><p class="TableContents">Status: DPLLlokindication changed its state from unlocked to locked 
+0 � Event didn�t occur 
+1 � Event occurred 
 This field may be cleared while module is enabled<o:p></o:p></p>
 </td>
 </tr>
@@ -7343,9 +7343,9 @@ This field may be cleared while module is enabled<o:p></o:p></p>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
 <td><p class="TableContents">Status: FIFO contains at least BUF_IF_WM_LEVEL
-data entries<p></p>
-0 � Event didn�t occur<p></p>
-1 � Event occurred<p></p>
+data entries 
+0 � Event didn�t occur 
+1 � Event occurred 
 This field may be cleared while module is enabled<o:p></o:p></p>
 </td>
 </tr>
@@ -7361,9 +7361,9 @@ This field may be cleared while module is enabled<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Status: Indication of FIFO overrun<p></p>
-0 � Event didn�t occur<p></p>
-1 � Event occurred<p></p>
+<td><p class="TableContents">Status: Indication of FIFO overrun 
+0 � Event didn�t occur 
+1 � Event occurred 
 This field may be cleared while module is enabled<o:p></o:p></p>
 </td>
 </tr>
@@ -7379,9 +7379,9 @@ This field may be cleared while module is enabled<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Status: Indication of FIFO overrun<p></p>
-0 � Event didn�t occur<p></p>
-1 � Event occurred<p></p>
+<td><p class="TableContents">Status: Indication of FIFO overrun 
+0 � Event didn�t occur 
+1 � Event occurred 
 This field may be cleared while module is enabled<o:p></o:p></p>
 </td>
 </tr>
@@ -7397,9 +7397,9 @@ This field may be cleared while module is enabled<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Status: Indication of FIFO full<p></p>
-0 � Event didn�t occur<p></p>
-1 � Event occurred<p></p>
+<td><p class="TableContents">Status: Indication of FIFO full 
+0 � Event didn�t occur 
+1 � Event occurred 
 This field may be cleared while module is enabled<o:p></o:p></p>
 </td>
 </tr>
@@ -7415,9 +7415,9 @@ This field may be cleared while module is enabled<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x1<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Status: Indication of FIFO empty<p></p>
-0 � Event didn�t occur<p></p>
-1 � Event occurred<p></p>
+<td><p class="TableContents">Status: Indication of FIFO empty 
+0 � Event didn�t occur 
+1 � Event occurred 
 This field may be cleared while module is enabled<o:p></o:p></p>
 </td>
 </tr>
@@ -7469,9 +7469,9 @@ name="PTRACK0_IE_mark"></a><a name="PTRACK_IE_mark">PTRACK_IE</a>( AHB: 0x3c )<o
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Interrupt Enable: Indication oflcokloss<p></p>
-0 � Interrupt Disabled<p></p>
-1 � Interrupt Enabled<p></p>
+<td><p class="TableContents">Interrupt Enable: Indication oflcokloss 
+0 � Interrupt Disabled 
+1 � Interrupt Enabled 
 This field may be changed while module is enabled<o:p></o:p></p>
 </td>
 </tr>
@@ -7487,9 +7487,9 @@ This field may be changed while module is enabled<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Interrupt Enable: Indication oflcok<p></p>
-0 � Interrupt Disabled<p></p>
-1 � Interrupt Enabled<p></p>
+<td><p class="TableContents">Interrupt Enable: Indication oflcok 
+0 � Interrupt Disabled 
+1 � Interrupt Enabled 
 This field may be changed while module is enabled<o:p></o:p></p>
 </td>
 </tr>
@@ -7505,9 +7505,9 @@ This field may be changed while module is enabled<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Interrupt Enable: Indication of FIFO watermark<p></p>
-0 � Event didn�t occur<p></p>
-1 � Event occurred<p></p>
+<td><p class="TableContents">Interrupt Enable: Indication of FIFO watermark 
+0 � Event didn�t occur 
+1 � Event occurred 
 This field may be cleared while module is enabled<o:p></o:p></p>
 </td>
 </tr>
@@ -7523,9 +7523,9 @@ This field may be cleared while module is enabled<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Interrupt Enable: Indication of FIFO underrun<p></p>
-0 � Event didn�t occur<p></p>
-1 � Event occurred<p></p>
+<td><p class="TableContents">Interrupt Enable: Indication of FIFO underrun 
+0 � Event didn�t occur 
+1 � Event occurred 
 This field may be cleared while module is enabled<o:p></o:p></p>
 </td>
 </tr>
@@ -7541,9 +7541,9 @@ This field may be cleared while module is enabled<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Interrupt Enable: Indication of FIFO overrun<p></p>
-0 � Event didn�t occur<p></p>
-1 � Event occurred<p></p>
+<td><p class="TableContents">Interrupt Enable: Indication of FIFO overrun 
+0 � Event didn�t occur 
+1 � Event occurred 
 This field may be cleared while module is enabled<o:p></o:p></p>
 </td>
 </tr>
@@ -7595,9 +7595,9 @@ name="PTRACK0_AI_STATUS_mark"></a><a name="PTRACK_AI_STATUS_mark">PTRACK_AI_STAT
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Status: Indication of DPLL lock loss<p></p>
-0 � Event didn�t occur<p></p>
-1 � Event occurred<p></p>
+<td><p class="TableContents">Status: Indication of DPLL lock loss 
+0 � Event didn�t occur 
+1 � Event occurred 
 If related interrupt is disabled, status is always zero<o:p></o:p></p>
 </td>
 </tr>
@@ -7613,9 +7613,9 @@ If related interrupt is disabled, status is always zero<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Status: Indication of DPLL lock<p></p>
-0 � Event didn�t occur<p></p>
-1 � Event occurred<p></p>
+<td><p class="TableContents">Status: Indication of DPLL lock 
+0 � Event didn�t occur 
+1 � Event occurred 
 If related interrupt is disabled, status is always zero<o:p></o:p></p>
 </td>
 </tr>
@@ -7631,9 +7631,9 @@ If related interrupt is disabled, status is always zero<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Status: Indication of FIFO WM<p></p>
-0 � Event didn�t occur<p></p>
-1 � Event occurred<p></p>
+<td><p class="TableContents">Status: Indication of FIFO WM 
+0 � Event didn�t occur 
+1 � Event occurred 
 If related interrupt is disabled, status is always zero<o:p></o:p></p>
 </td>
 </tr>
@@ -7649,9 +7649,9 @@ If related interrupt is disabled, status is always zero<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Status: Indication of FIFO underrun<p></p>
-0 � Event didn�t occur<p></p>
-1 � Event occurred<p></p>
+<td><p class="TableContents">Status: Indication of FIFO underrun 
+0 � Event didn�t occur 
+1 � Event occurred 
 If related interrupt is disabled, status is always zero<o:p></o:p></p>
 </td>
 </tr>
@@ -7667,9 +7667,9 @@ If related interrupt is disabled, status is always zero<o:p></o:p></p>
 </td>
 <td><p class="TableContents">0x0<o:p></o:p></p>
 </td>
-<td><p class="TableContents">Status: Indication of FIFO overrun<p></p>
-0 � Event didn�t occur<p></p>
-1 � Event occurred<p></p>
+<td><p class="TableContents">Status: Indication of FIFO overrun 
+0 � Event didn�t occur 
+1 � Event occurred 
 If related interrupt is disabled, status is always zero<o:p></o:p></p>
 </td>
 </tr>

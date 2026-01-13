@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>hifi1_wrapper</title></head>
+<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>hifi1_wrapper</title></head>
 <body>
 <h1><a name="hifi1_wrapper">"hifi1_wrapper"</a>
         </h1>
@@ -17,7 +17,7 @@
 </td>
 <td><p>32'h00000000</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -72,10 +72,10 @@
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Select between one of the two stationary vector bases.<p></p>
-0:default, 1: alternative<p></p>
-It must be held stable for at least 10 CLK cycles before the<p></p>
-falling edge of BReset , and for 10 CLK cycles after the<p></p>
+<td><p>Select between one of the two stationary vector bases. 
+0:default, 1: alternative 
+It must be held stable for at least 10 CLK cycles before the 
+falling edge of BReset , and for 10 CLK cycles after the 
 falling edge of BReset.</p>
 </td>
 </tr>
@@ -85,39 +85,39 @@ falling edge of BReset.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>External trace buffer enable, when this bit is set to 1,<p></p>
-predefined PDebug* data will be logged into hifi1 trace buffer<p></p>
-(128x64-bit), ‘Ored” result (with each LS counter enable bit in<p></p>
-LSCNTEN) will drive HiFi1 core PDebugEnable input. This bit will<p></p>
-be cleared by HW automatically once predefined number<p></p>
-(LSWCTRL.wlimit+1) of entries has been logged in trace buffer,<p></p>
-an interrupt will be triggered in the same time.<p></p>
-The PDebugEnable signal is used to save power in<p></p>
-configurations with the Traceport and functional clock gating.<p></p>
-When the Traceport output from the Xtensa core is to be<p></p>
-consumed, as in an active debug session, PDebugEnable must be<p></p>
-set high. At other times, PDebugEnable can be set low. If the<p></p>
-configuration has functional clock gating, setting PDebugEnable<p></p>
-low gates off clocks to the flip-flops in the Traceport logic.<p></p>
-This eliminates toggles in the Traceport logic and in the<p></p>
-Xtensa Traceport interface, preventing wasted power.<p></p>
-PDebugEnable is registered once inside the Xtensa core and the<p></p>
-registered version of the signal is used to gate the clock to<p></p>
-the flip-flops in the Traceport logic. Due to the pipelining of<p></p>
-trace data within the processor, the Traceport output will be<p></p>
-undefined for several cycles after PDebugEnable is asserted. In<p></p>
-the cycles where data is undefined, PDebugStatus[5:0] will be<p></p>
-"1111_00," to indicate "All other pipeline bubbles."<p></p>
-PDebugEnable can be changed dynamically while the processor is<p></p>
-running. It is the designer’s responsibility to control this<p></p>
-interface using logic external to the processor. The signal can<p></p>
-be tied high to always enable trace output, tied low to prevent<p></p>
-any trace output, or controlled by external logic that can<p></p>
-dynamically change the value.<p></p>
-There are internal users of the Traceport — such as TRAX and the<p></p>
-Performance Monitor — which also assert the PDebugEnable signal<p></p>
-when the functions (i.e. PC tracing or performance monitoring)<p></p>
-are enabled. This is achieved via an OR gate inside Xtensa that<p></p>
+<td><p>External trace buffer enable, when this bit is set to 1, 
+predefined PDebug* data will be logged into hifi1 trace buffer 
+(128x64-bit), ‘Ored” result (with each LS counter enable bit in 
+LSCNTEN) will drive HiFi1 core PDebugEnable input. This bit will 
+be cleared by HW automatically once predefined number 
+(LSWCTRL.wlimit+1) of entries has been logged in trace buffer, 
+an interrupt will be triggered in the same time. 
+The PDebugEnable signal is used to save power in 
+configurations with the Traceport and functional clock gating. 
+When the Traceport output from the Xtensa core is to be 
+consumed, as in an active debug session, PDebugEnable must be 
+set high. At other times, PDebugEnable can be set low. If the 
+configuration has functional clock gating, setting PDebugEnable 
+low gates off clocks to the flip-flops in the Traceport logic. 
+This eliminates toggles in the Traceport logic and in the 
+Xtensa Traceport interface, preventing wasted power. 
+PDebugEnable is registered once inside the Xtensa core and the 
+registered version of the signal is used to gate the clock to 
+the flip-flops in the Traceport logic. Due to the pipelining of 
+trace data within the processor, the Traceport output will be 
+undefined for several cycles after PDebugEnable is asserted. In 
+the cycles where data is undefined, PDebugStatus[5:0] will be 
+"1111_00," to indicate "All other pipeline bubbles." 
+PDebugEnable can be changed dynamically while the processor is 
+running. It is the designer’s responsibility to control this 
+interface using logic external to the processor. The signal can 
+be tied high to always enable trace output, tied low to prevent 
+any trace output, or controlled by external logic that can 
+dynamically change the value. 
+There are internal users of the Traceport — such as TRAX and the 
+Performance Monitor — which also assert the PDebugEnable signal 
+when the functions (i.e. PC tracing or performance monitoring) 
+are enabled. This is achieved via an OR gate inside Xtensa that 
 combines the respective PDebugEnable signals.</p>
 </td>
 </tr>
@@ -127,16 +127,16 @@ combines the respective PDebugEnable signals.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>All trace buffer resources (including flops and TBUFFER) in<p></p>
-Hifi1 wrapper is running with clock hifi1_cclk_tbcg, which is<p></p>
-CG version of hifi1_clk, CG’s enable is controlled by ORed<p></p>
-result of Ctrl.en_xt_trace and LSCNTEN automatically, but there<p></p>
-is still a chance to enable this clock by this bit (set to 1),<p></p>
-to save power, this bit should be kept in low in normal<p></p>
+<td><p>All trace buffer resources (including flops and TBUFFER) in 
+Hifi1 wrapper is running with clock hifi1_cclk_tbcg, which is 
+CG version of hifi1_clk, CG’s enable is controlled by ORed 
+result of Ctrl.en_xt_trace and LSCNTEN automatically, but there 
+is still a chance to enable this clock by this bit (set to 1), 
+to save power, this bit should be kept in low in normal 
 operation.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -153,7 +153,7 @@ operation.</p>
 </td>
 <td><p>32'h00000004</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -172,20 +172,20 @@ operation.</p>
 </td>
 <td><p>0x271</p>
 </td>
-<td><p>The processor ID (PRID) allows the system logic to provide each<p></p>
-Xtensa processor with a unique identity by adding a 16-bit<p></p>
-input bus, PRID , as an input to the processor core. When the<p></p>
-processor comes out of reset, this input is latched into the<p></p>
-low 16- bits of special register 235, which can be read by an<p></p>
-RSR.PRID instruction. The PRID port is not a dynamic input. The<p></p>
-processor only latches the value of the PRID port at reset time.<p></p>
-The PRID input must be stable for 10 cycles following the<p></p>
-deassertion of BReset. Changing the PRID input before this<p></p>
-point produces unpredictable results. Changing the PRID input<p></p>
+<td><p>The processor ID (PRID) allows the system logic to provide each 
+Xtensa processor with a unique identity by adding a 16-bit 
+input bus, PRID , as an input to the processor core. When the 
+processor comes out of reset, this input is latched into the 
+low 16- bits of special register 235, which can be read by an 
+RSR.PRID instruction. The PRID port is not a dynamic input. The 
+processor only latches the value of the PRID port at reset time. 
+The PRID input must be stable for 10 cycles following the 
+deassertion of BReset. Changing the PRID input before this 
+point produces unpredictable results. Changing the PRID input 
 after this point has no effect on the PRID register.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -202,7 +202,7 @@ after this point has no effect on the PRID register.</p>
 </td>
 <td><p>32'h00000008</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -221,13 +221,13 @@ after this point has no effect on the PRID register.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>When the Relocatable Vectors option is configured, then the<p></p>
-sub-option External Reset Vector can be selected. When<p></p>
-selected, these pins provide an alternate reset vector address.<p></p>
+<td><p>When the Relocatable Vectors option is configured, then the 
+sub-option External Reset Vector can be selected. When 
+selected, these pins provide an alternate reset vector address. 
 The timing of these signals is exactly the same as StatVectorSel</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -244,7 +244,7 @@ The timing of these signals is exactly the same as StatVectorSel</p>
 </td>
 <td><p>32'h0000000C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -261,19 +261,19 @@ The timing of these signals is exactly the same as StatVectorSel</p>
 </td>
 <td><p><a HREF="indus_hifi1_wrap.htm#hifi1_wrapper_PFatalInfoL_PFaultInfoL">PFaultInfoL</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Togeter with PFaultInfoH as 64-bit Fault information signal.<p></p>
-PFaultInfoL mirrors the processor’s internal FIR, using the<p></p>
-same bit encoding to provide the source and severity of the<p></p>
-fault. This signal is set to the encoding of the most recent<p></p>
-and most severe fault. The PFaultInfo signal is cleared by core<p></p>
-reset<p></p>
+<td><p>Togeter with PFaultInfoH as 64-bit Fault information signal. 
+PFaultInfoL mirrors the processor’s internal FIR, using the 
+same bit encoding to provide the source and severity of the 
+fault. This signal is set to the encoding of the most recent 
+and most severe fault. The PFaultInfo signal is cleared by core 
+reset 
 Uses PFaultInfoValid to capture.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -290,7 +290,7 @@ Uses PFaultInfoValid to capture.</p>
 </td>
 <td><p>32'h00000010</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -307,21 +307,21 @@ Uses PFaultInfoValid to capture.</p>
 </td>
 <td><p><a HREF="indus_hifi1_wrap.htm#hifi1_wrapper_PFatalInfoH_PFaultInfoH">PFaultInfoH</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Togeter with PFaultInfoL as 64-bit Fault information signal.<p></p>
-PFaultInfoL mirrors the processor’s internal FIR, using the<p></p>
-same bit encoding to provide the source and severity of the<p></p>
-fault. This signal is set to the encoding of the most recent<p></p>
-and most severe fault. The PFaultInfo signal is cleared by core<p></p>
-reset<p></p>
-Uses PFaultInfoValid to capture PfaultInfoH[17:0]; uses<p></p>
-PfaultInfoNonSpecValid to capture PfaultInfoH[18] and<p></p>
+<td><p>Togeter with PFaultInfoL as 64-bit Fault information signal. 
+PFaultInfoL mirrors the processor’s internal FIR, using the 
+same bit encoding to provide the source and severity of the 
+fault. This signal is set to the encoding of the most recent 
+and most severe fault. The PFaultInfo signal is cleared by core 
+reset 
+Uses PFaultInfoValid to capture PfaultInfoH[17:0]; uses 
+PfaultInfoNonSpecValid to capture PfaultInfoH[18] and 
 PfaultInfoH[31:21]</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -338,7 +338,7 @@ PfaultInfoH[31:21]</p>
 </td>
 <td><p>32'h00000014</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -355,15 +355,15 @@ PfaultInfoH[31:21]</p>
 </td>
 <td><p><a HREF="indus_hifi1_wrap.htm#hifi1_wrapper_Status_PFaultError">PFaultError</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Sticky fatal error notification signal that is asserted when a<p></p>
-fatal error condition occurs (e.g., parity error on AXI<p></p>
-handshake signal, or core trapped in the double exception<p></p>
-vector). It is expected that the system will use the<p></p>
-information presented on the PFaultInfo register and decide<p></p>
-whether to reset the core or the whole system. The PFatalError<p></p>
+<td><p>Sticky fatal error notification signal that is asserted when a 
+fatal error condition occurs (e.g., parity error on AXI 
+handshake signal, or core trapped in the double exception 
+vector). It is expected that the system will use the 
+information presented on the PFaultInfo register and decide 
+whether to reset the core or the whole system. The PFatalError 
 signal is cleared by core reset.</p>
 </td>
 </tr>
@@ -371,7 +371,7 @@ signal is cleared by core reset.</p>
 </td>
 <td><p><a HREF="indus_hifi1_wrap.htm#hifi1_wrapper_Status_DebugMode">DebugMode</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 <td><p>Same as XOCDMode but not maskable by software</p>
@@ -381,7 +381,7 @@ signal is cleared by core reset.</p>
 </td>
 <td><p><a HREF="indus_hifi1_wrap.htm#hifi1_wrapper_Status_XOCDMode">XOCDMode</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 <td><p>Indicates that the processor is in OCD halt mode</p>
@@ -391,11 +391,11 @@ signal is cleared by core reset.</p>
 </td>
 <td><p><a HREF="indus_hifi1_wrap.htm#hifi1_wrapper_Status_DoubleExceptionError">DoubleExceptionError</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Single cycle assertion every time a double exception fault<p></p>
-occurs. Unlike PfatalError, this signal is not sticky. This bit<p></p>
+<td><p>Single cycle assertion every time a double exception fault 
+occurs. Unlike PfatalError, this signal is not sticky. This bit 
 is latched into the register</p>
 </td>
 </tr>
@@ -403,19 +403,19 @@ is latched into the register</p>
 </td>
 <td><p><a HREF="indus_hifi1_wrap.htm#hifi1_wrapper_Status_PWaitMode">PWaitMode</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Serves as an early warning indicator that the processor is about<p></p>
-to begin its shutdown procedure and should no longer be<p></p>
-interacted with. Once this signal and PWaitMode are both driven<p></p>
-high, the PCM module will begin the shutdown sequence for the<p></p>
-Core domain. Once the processor has completed its wakeup<p></p>
-sequence, this signal is driven logic<p></p>
+<td><p>Serves as an early warning indicator that the processor is about 
+to begin its shutdown procedure and should no longer be 
+interacted with. Once this signal and PWaitMode are both driven 
+high, the PCM module will begin the shutdown sequence for the 
+Core domain. Once the processor has completed its wakeup 
+sequence, this signal is driven logic 
 low again</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -432,8 +432,8 @@ low again</p>
 </td>
 <td><p>32'h00000018</p>
 </td>
-<td><p>used to select one of 256 SoC interrupt sources to each of 24<p></p>
-hifi1 BInterrupt input, the Array size is equal to the hifi1<p></p>
+<td><p>used to select one of 256 SoC interrupt sources to each of 24 
+hifi1 BInterrupt input, the Array size is equal to the hifi1 
 BInterrupt bus width</p>
 </td>
 </tr>
@@ -452,11 +452,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -473,7 +473,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h0000001C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -492,11 +492,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -513,7 +513,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000020</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -532,11 +532,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -553,7 +553,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000024</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -572,11 +572,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -593,7 +593,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000028</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -612,11 +612,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -633,7 +633,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h0000002C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -652,11 +652,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -673,7 +673,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000030</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -692,11 +692,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -713,7 +713,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000034</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -732,11 +732,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -753,7 +753,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000038</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -772,11 +772,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -793,7 +793,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h0000003C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -812,11 +812,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -833,7 +833,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000040</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -852,11 +852,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -873,7 +873,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000044</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -892,11 +892,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -913,7 +913,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000048</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -932,11 +932,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -953,7 +953,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h0000004C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -972,11 +972,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -993,7 +993,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000050</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1012,11 +1012,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1033,7 +1033,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000054</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1052,11 +1052,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1073,7 +1073,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000058</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1092,11 +1092,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1113,7 +1113,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h0000005C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1132,11 +1132,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1153,7 +1153,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000060</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1172,11 +1172,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1193,7 +1193,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000064</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1212,11 +1212,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1233,7 +1233,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000068</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1252,11 +1252,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1273,7 +1273,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h0000006C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1292,11 +1292,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1313,7 +1313,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000070</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1332,11 +1332,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1353,7 +1353,7 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000074</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1372,11 +1372,11 @@ BInterrupt bus width</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1393,9 +1393,9 @@ BInterrupt bus width</p>
 </td>
 <td><p>32'h00000078</p>
 </td>
-<td><p>used to assert interrupt by biu register write<p></p>
-Array size should equal to ceil(SYSINTRNUM/32), for example,<p></p>
-if SYSINTRNUM is 40, array size is 2; if SYSINTRNUM is 256,<p></p>
+<td><p>used to assert interrupt by biu register write 
+Array size should equal to ceil(SYSINTRNUM/32), for example, 
+if SYSINTRNUM is 40, array size is 2; if SYSINTRNUM is 256, 
 array size is 8</p>
 </td>
 </tr>
@@ -1414,11 +1414,11 @@ array size is 8</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1435,7 +1435,7 @@ array size is 8</p>
 </td>
 <td><p>32'h0000007C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1454,11 +1454,11 @@ array size is 8</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1475,7 +1475,7 @@ array size is 8</p>
 </td>
 <td><p>32'h00000080</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1494,11 +1494,11 @@ array size is 8</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1515,7 +1515,7 @@ array size is 8</p>
 </td>
 <td><p>32'h00000084</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1534,11 +1534,11 @@ array size is 8</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1555,7 +1555,7 @@ array size is 8</p>
 </td>
 <td><p>32'h00000088</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1574,11 +1574,11 @@ array size is 8</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1595,7 +1595,7 @@ array size is 8</p>
 </td>
 <td><p>32'h0000008C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1614,11 +1614,11 @@ array size is 8</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1635,7 +1635,7 @@ array size is 8</p>
 </td>
 <td><p>32'h00000090</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1654,11 +1654,11 @@ array size is 8</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1675,7 +1675,7 @@ array size is 8</p>
 </td>
 <td><p>32'h00000094</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1694,11 +1694,11 @@ array size is 8</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1715,8 +1715,8 @@ array size is 8</p>
 </td>
 <td><p>32'h00000098</p>
 </td>
-<td><p>Hifi1 Load & Store unit#0 has 8 counters, each counter is used<p></p>
-to count the occurring of predefined event specified by<p></p>
+<td><p>Hifi1 Load & Store unit#0 has 8 counters, each counter is used 
+to count the occurring of predefined event specified by 
 corresponding $LSPORT.unit0[i], i = 0 ~ 7</p>
 </td>
 </tr>
@@ -1735,13 +1735,13 @@ corresponding $LSPORT.unit0[i], i = 0 ~ 7</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Program Counter (PC) low threshold (PC_LO) is used to filter<p></p>
-the value on Trace bus PDebugPC[27:0], PDebugPC[27:0] indicates<p></p>
-the Hifi core internal Program Counter value associated with the<p></p>
+<td><p>Program Counter (PC) low threshold (PC_LO) is used to filter 
+the value on Trace bus PDebugPC[27:0], PDebugPC[27:0] indicates 
+the Hifi core internal Program Counter value associated with the 
 instruction completed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1758,7 +1758,7 @@ instruction completed in the W (Writeback) stage.</p>
 </td>
 <td><p>32'h0000009C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1777,13 +1777,13 @@ instruction completed in the W (Writeback) stage.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Program Counter (PC) high threshold (PC_HI) is used to filter<p></p>
-the value on Tracee bus PDebugPC[27:0], PDebugPC[27:0]<p></p>
-indicates the Hifi core internal Program Counter associated<p></p>
+<td><p>Program Counter (PC) high threshold (PC_HI) is used to filter 
+the value on Tracee bus PDebugPC[27:0], PDebugPC[27:0] 
+indicates the Hifi core internal Program Counter associated 
 with the instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1800,7 +1800,7 @@ with the instruction processed in the W (Writeback) stage.</p>
 </td>
 <td><p>32'h000000A0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1819,13 +1819,13 @@ with the instruction processed in the W (Writeback) stage.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Load/Store low threshold (LS_LO) is used to filter the value<p></p>
-on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0]<p></p>
-indicates the virtual memory address used in a load/store unit<p></p>
+<td><p>Load/Store low threshold (LS_LO) is used to filter the value 
+on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0] 
+indicates the virtual memory address used in a load/store unit 
 < 0/1 > instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1842,7 +1842,7 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>32'h000000A4</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1861,13 +1861,13 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Load/Store high threshold (LS_HI) is used to filter the value<p></p>
-on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0]<p></p>
-indicates the virtual memory address used in a load/store unit<p></p>
+<td><p>Load/Store high threshold (LS_HI) is used to filter the value 
+on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0] 
+indicates the virtual memory address used in a load/store unit 
 < 0/1 > instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1884,7 +1884,7 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>32'h000000A8</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1903,22 +1903,22 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>used to count three filtered condition occurrence: filter#1 on<p></p>
-PDebugInst[7:0] != 0 and PDebugLS< 0/1 >Stat[3:0] is either<p></p>
-LD(0x5) or ST(0x6);l filter#2 on Trace bus PDebugPC[27:0] is<p></p>
-specified by range register [PC_LO[i][27:0], PC_HI[i][27:0]];<p></p>
-filter#3 on Trace bus PDebugLS< 0/1 >Addr[27:0] is specified by<p></p>
-range register [LS< 0/1 >_LO[i][27:0], LS< 0/1 >_HI[i][27:0]].<p></p>
-Counter[i] increments by 1 when all 3 filters conditions are<p></p>
-met. Counter[i] will be capped on the value specified by<p></p>
-register LSCNTSAT.cntsat, if counter[i] hits this value, an<p></p>
-interrupt will be issued if it is not masked. Counter[i] will<p></p>
-be cleared when register LSCNTCLR.ls< 0/1 >_cnt< i >_clr is<p></p>
-asserted or register LSCNTEN.ls< 0/1 >_cnt< i >_en is de-asserted,<p></p>
+<td><p>used to count three filtered condition occurrence: filter#1 on 
+PDebugInst[7:0] != 0 and PDebugLS< 0/1 >Stat[3:0] is either 
+LD(0x5) or ST(0x6);l filter#2 on Trace bus PDebugPC[27:0] is 
+specified by range register [PC_LO[i][27:0], PC_HI[i][27:0]]; 
+filter#3 on Trace bus PDebugLS< 0/1 >Addr[27:0] is specified by 
+range register [LS< 0/1 >_LO[i][27:0], LS< 0/1 >_HI[i][27:0]]. 
+Counter[i] increments by 1 when all 3 filters conditions are 
+met. Counter[i] will be capped on the value specified by 
+register LSCNTSAT.cntsat, if counter[i] hits this value, an 
+interrupt will be issued if it is not masked. Counter[i] will 
+be cleared when register LSCNTCLR.ls< 0/1 >_cnt< i >_clr is 
+asserted or register LSCNTEN.ls< 0/1 >_cnt< i >_en is de-asserted, 
 i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1935,7 +1935,7 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 <td><p>32'h000000AC</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1954,13 +1954,13 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Program Counter (PC) low threshold (PC_LO) is used to filter<p></p>
-the value on Trace bus PDebugPC[27:0], PDebugPC[27:0] indicates<p></p>
-the Hifi core internal Program Counter value associated with the<p></p>
+<td><p>Program Counter (PC) low threshold (PC_LO) is used to filter 
+the value on Trace bus PDebugPC[27:0], PDebugPC[27:0] indicates 
+the Hifi core internal Program Counter value associated with the 
 instruction completed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -1977,7 +1977,7 @@ instruction completed in the W (Writeback) stage.</p>
 </td>
 <td><p>32'h000000B0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -1996,13 +1996,13 @@ instruction completed in the W (Writeback) stage.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Program Counter (PC) high threshold (PC_HI) is used to filter<p></p>
-the value on Tracee bus PDebugPC[27:0], PDebugPC[27:0]<p></p>
-indicates the Hifi core internal Program Counter associated<p></p>
+<td><p>Program Counter (PC) high threshold (PC_HI) is used to filter 
+the value on Tracee bus PDebugPC[27:0], PDebugPC[27:0] 
+indicates the Hifi core internal Program Counter associated 
 with the instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2019,7 +2019,7 @@ with the instruction processed in the W (Writeback) stage.</p>
 </td>
 <td><p>32'h000000B4</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2038,13 +2038,13 @@ with the instruction processed in the W (Writeback) stage.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Load/Store low threshold (LS_LO) is used to filter the value<p></p>
-on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0]<p></p>
-indicates the virtual memory address used in a load/store unit<p></p>
+<td><p>Load/Store low threshold (LS_LO) is used to filter the value 
+on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0] 
+indicates the virtual memory address used in a load/store unit 
 < 0/1 > instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2061,7 +2061,7 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>32'h000000B8</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2080,13 +2080,13 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Load/Store high threshold (LS_HI) is used to filter the value<p></p>
-on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0]<p></p>
-indicates the virtual memory address used in a load/store unit<p></p>
+<td><p>Load/Store high threshold (LS_HI) is used to filter the value 
+on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0] 
+indicates the virtual memory address used in a load/store unit 
 < 0/1 > instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2103,7 +2103,7 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>32'h000000BC</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2122,22 +2122,22 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>used to count three filtered condition occurrence: filter#1 on<p></p>
-PDebugInst[7:0] != 0 and PDebugLS< 0/1 >Stat[3:0] is either<p></p>
-LD(0x5) or ST(0x6);l filter#2 on Trace bus PDebugPC[27:0] is<p></p>
-specified by range register [PC_LO[i][27:0], PC_HI[i][27:0]];<p></p>
-filter#3 on Trace bus PDebugLS< 0/1 >Addr[27:0] is specified by<p></p>
-range register [LS< 0/1 >_LO[i][27:0], LS< 0/1 >_HI[i][27:0]].<p></p>
-Counter[i] increments by 1 when all 3 filters conditions are<p></p>
-met. Counter[i] will be capped on the value specified by<p></p>
-register LSCNTSAT.cntsat, if counter[i] hits this value, an<p></p>
-interrupt will be issued if it is not masked. Counter[i] will<p></p>
-be cleared when register LSCNTCLR.ls< 0/1 >_cnt< i >_clr is<p></p>
-asserted or register LSCNTEN.ls< 0/1 >_cnt< i >_en is de-asserted,<p></p>
+<td><p>used to count three filtered condition occurrence: filter#1 on 
+PDebugInst[7:0] != 0 and PDebugLS< 0/1 >Stat[3:0] is either 
+LD(0x5) or ST(0x6);l filter#2 on Trace bus PDebugPC[27:0] is 
+specified by range register [PC_LO[i][27:0], PC_HI[i][27:0]]; 
+filter#3 on Trace bus PDebugLS< 0/1 >Addr[27:0] is specified by 
+range register [LS< 0/1 >_LO[i][27:0], LS< 0/1 >_HI[i][27:0]]. 
+Counter[i] increments by 1 when all 3 filters conditions are 
+met. Counter[i] will be capped on the value specified by 
+register LSCNTSAT.cntsat, if counter[i] hits this value, an 
+interrupt will be issued if it is not masked. Counter[i] will 
+be cleared when register LSCNTCLR.ls< 0/1 >_cnt< i >_clr is 
+asserted or register LSCNTEN.ls< 0/1 >_cnt< i >_en is de-asserted, 
 i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2154,7 +2154,7 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 <td><p>32'h000000C0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2173,13 +2173,13 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Program Counter (PC) low threshold (PC_LO) is used to filter<p></p>
-the value on Trace bus PDebugPC[27:0], PDebugPC[27:0] indicates<p></p>
-the Hifi core internal Program Counter value associated with the<p></p>
+<td><p>Program Counter (PC) low threshold (PC_LO) is used to filter 
+the value on Trace bus PDebugPC[27:0], PDebugPC[27:0] indicates 
+the Hifi core internal Program Counter value associated with the 
 instruction completed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2196,7 +2196,7 @@ instruction completed in the W (Writeback) stage.</p>
 </td>
 <td><p>32'h000000C4</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2215,13 +2215,13 @@ instruction completed in the W (Writeback) stage.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Program Counter (PC) high threshold (PC_HI) is used to filter<p></p>
-the value on Tracee bus PDebugPC[27:0], PDebugPC[27:0]<p></p>
-indicates the Hifi core internal Program Counter associated<p></p>
+<td><p>Program Counter (PC) high threshold (PC_HI) is used to filter 
+the value on Tracee bus PDebugPC[27:0], PDebugPC[27:0] 
+indicates the Hifi core internal Program Counter associated 
 with the instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2238,7 +2238,7 @@ with the instruction processed in the W (Writeback) stage.</p>
 </td>
 <td><p>32'h000000C8</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2257,13 +2257,13 @@ with the instruction processed in the W (Writeback) stage.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Load/Store low threshold (LS_LO) is used to filter the value<p></p>
-on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0]<p></p>
-indicates the virtual memory address used in a load/store unit<p></p>
+<td><p>Load/Store low threshold (LS_LO) is used to filter the value 
+on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0] 
+indicates the virtual memory address used in a load/store unit 
 < 0/1 > instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2280,7 +2280,7 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>32'h000000CC</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2299,13 +2299,13 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Load/Store high threshold (LS_HI) is used to filter the value<p></p>
-on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0]<p></p>
-indicates the virtual memory address used in a load/store unit<p></p>
+<td><p>Load/Store high threshold (LS_HI) is used to filter the value 
+on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0] 
+indicates the virtual memory address used in a load/store unit 
 < 0/1 > instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2322,7 +2322,7 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>32'h000000D0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2341,22 +2341,22 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>used to count three filtered condition occurrence: filter#1 on<p></p>
-PDebugInst[7:0] != 0 and PDebugLS< 0/1 >Stat[3:0] is either<p></p>
-LD(0x5) or ST(0x6);l filter#2 on Trace bus PDebugPC[27:0] is<p></p>
-specified by range register [PC_LO[i][27:0], PC_HI[i][27:0]];<p></p>
-filter#3 on Trace bus PDebugLS< 0/1 >Addr[27:0] is specified by<p></p>
-range register [LS< 0/1 >_LO[i][27:0], LS< 0/1 >_HI[i][27:0]].<p></p>
-Counter[i] increments by 1 when all 3 filters conditions are<p></p>
-met. Counter[i] will be capped on the value specified by<p></p>
-register LSCNTSAT.cntsat, if counter[i] hits this value, an<p></p>
-interrupt will be issued if it is not masked. Counter[i] will<p></p>
-be cleared when register LSCNTCLR.ls< 0/1 >_cnt< i >_clr is<p></p>
-asserted or register LSCNTEN.ls< 0/1 >_cnt< i >_en is de-asserted,<p></p>
+<td><p>used to count three filtered condition occurrence: filter#1 on 
+PDebugInst[7:0] != 0 and PDebugLS< 0/1 >Stat[3:0] is either 
+LD(0x5) or ST(0x6);l filter#2 on Trace bus PDebugPC[27:0] is 
+specified by range register [PC_LO[i][27:0], PC_HI[i][27:0]]; 
+filter#3 on Trace bus PDebugLS< 0/1 >Addr[27:0] is specified by 
+range register [LS< 0/1 >_LO[i][27:0], LS< 0/1 >_HI[i][27:0]]. 
+Counter[i] increments by 1 when all 3 filters conditions are 
+met. Counter[i] will be capped on the value specified by 
+register LSCNTSAT.cntsat, if counter[i] hits this value, an 
+interrupt will be issued if it is not masked. Counter[i] will 
+be cleared when register LSCNTCLR.ls< 0/1 >_cnt< i >_clr is 
+asserted or register LSCNTEN.ls< 0/1 >_cnt< i >_en is de-asserted, 
 i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2373,7 +2373,7 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 <td><p>32'h000000D4</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2392,13 +2392,13 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Program Counter (PC) low threshold (PC_LO) is used to filter<p></p>
-the value on Trace bus PDebugPC[27:0], PDebugPC[27:0] indicates<p></p>
-the Hifi core internal Program Counter value associated with the<p></p>
+<td><p>Program Counter (PC) low threshold (PC_LO) is used to filter 
+the value on Trace bus PDebugPC[27:0], PDebugPC[27:0] indicates 
+the Hifi core internal Program Counter value associated with the 
 instruction completed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2415,7 +2415,7 @@ instruction completed in the W (Writeback) stage.</p>
 </td>
 <td><p>32'h000000D8</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2434,13 +2434,13 @@ instruction completed in the W (Writeback) stage.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Program Counter (PC) high threshold (PC_HI) is used to filter<p></p>
-the value on Tracee bus PDebugPC[27:0], PDebugPC[27:0]<p></p>
-indicates the Hifi core internal Program Counter associated<p></p>
+<td><p>Program Counter (PC) high threshold (PC_HI) is used to filter 
+the value on Tracee bus PDebugPC[27:0], PDebugPC[27:0] 
+indicates the Hifi core internal Program Counter associated 
 with the instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2457,7 +2457,7 @@ with the instruction processed in the W (Writeback) stage.</p>
 </td>
 <td><p>32'h000000DC</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2476,13 +2476,13 @@ with the instruction processed in the W (Writeback) stage.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Load/Store low threshold (LS_LO) is used to filter the value<p></p>
-on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0]<p></p>
-indicates the virtual memory address used in a load/store unit<p></p>
+<td><p>Load/Store low threshold (LS_LO) is used to filter the value 
+on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0] 
+indicates the virtual memory address used in a load/store unit 
 < 0/1 > instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2499,7 +2499,7 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>32'h000000E0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2518,13 +2518,13 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Load/Store high threshold (LS_HI) is used to filter the value<p></p>
-on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0]<p></p>
-indicates the virtual memory address used in a load/store unit<p></p>
+<td><p>Load/Store high threshold (LS_HI) is used to filter the value 
+on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0] 
+indicates the virtual memory address used in a load/store unit 
 < 0/1 > instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2541,7 +2541,7 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>32'h000000E4</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2560,22 +2560,22 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>used to count three filtered condition occurrence: filter#1 on<p></p>
-PDebugInst[7:0] != 0 and PDebugLS< 0/1 >Stat[3:0] is either<p></p>
-LD(0x5) or ST(0x6);l filter#2 on Trace bus PDebugPC[27:0] is<p></p>
-specified by range register [PC_LO[i][27:0], PC_HI[i][27:0]];<p></p>
-filter#3 on Trace bus PDebugLS< 0/1 >Addr[27:0] is specified by<p></p>
-range register [LS< 0/1 >_LO[i][27:0], LS< 0/1 >_HI[i][27:0]].<p></p>
-Counter[i] increments by 1 when all 3 filters conditions are<p></p>
-met. Counter[i] will be capped on the value specified by<p></p>
-register LSCNTSAT.cntsat, if counter[i] hits this value, an<p></p>
-interrupt will be issued if it is not masked. Counter[i] will<p></p>
-be cleared when register LSCNTCLR.ls< 0/1 >_cnt< i >_clr is<p></p>
-asserted or register LSCNTEN.ls< 0/1 >_cnt< i >_en is de-asserted,<p></p>
+<td><p>used to count three filtered condition occurrence: filter#1 on 
+PDebugInst[7:0] != 0 and PDebugLS< 0/1 >Stat[3:0] is either 
+LD(0x5) or ST(0x6);l filter#2 on Trace bus PDebugPC[27:0] is 
+specified by range register [PC_LO[i][27:0], PC_HI[i][27:0]]; 
+filter#3 on Trace bus PDebugLS< 0/1 >Addr[27:0] is specified by 
+range register [LS< 0/1 >_LO[i][27:0], LS< 0/1 >_HI[i][27:0]]. 
+Counter[i] increments by 1 when all 3 filters conditions are 
+met. Counter[i] will be capped on the value specified by 
+register LSCNTSAT.cntsat, if counter[i] hits this value, an 
+interrupt will be issued if it is not masked. Counter[i] will 
+be cleared when register LSCNTCLR.ls< 0/1 >_cnt< i >_clr is 
+asserted or register LSCNTEN.ls< 0/1 >_cnt< i >_en is de-asserted, 
 i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2592,7 +2592,7 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 <td><p>32'h000000E8</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2611,13 +2611,13 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Program Counter (PC) low threshold (PC_LO) is used to filter<p></p>
-the value on Trace bus PDebugPC[27:0], PDebugPC[27:0] indicates<p></p>
-the Hifi core internal Program Counter value associated with the<p></p>
+<td><p>Program Counter (PC) low threshold (PC_LO) is used to filter 
+the value on Trace bus PDebugPC[27:0], PDebugPC[27:0] indicates 
+the Hifi core internal Program Counter value associated with the 
 instruction completed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2634,7 +2634,7 @@ instruction completed in the W (Writeback) stage.</p>
 </td>
 <td><p>32'h000000EC</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2653,13 +2653,13 @@ instruction completed in the W (Writeback) stage.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Program Counter (PC) high threshold (PC_HI) is used to filter<p></p>
-the value on Tracee bus PDebugPC[27:0], PDebugPC[27:0]<p></p>
-indicates the Hifi core internal Program Counter associated<p></p>
+<td><p>Program Counter (PC) high threshold (PC_HI) is used to filter 
+the value on Tracee bus PDebugPC[27:0], PDebugPC[27:0] 
+indicates the Hifi core internal Program Counter associated 
 with the instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2676,7 +2676,7 @@ with the instruction processed in the W (Writeback) stage.</p>
 </td>
 <td><p>32'h000000F0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2695,13 +2695,13 @@ with the instruction processed in the W (Writeback) stage.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Load/Store low threshold (LS_LO) is used to filter the value<p></p>
-on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0]<p></p>
-indicates the virtual memory address used in a load/store unit<p></p>
+<td><p>Load/Store low threshold (LS_LO) is used to filter the value 
+on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0] 
+indicates the virtual memory address used in a load/store unit 
 < 0/1 > instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2718,7 +2718,7 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>32'h000000F4</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2737,13 +2737,13 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Load/Store high threshold (LS_HI) is used to filter the value<p></p>
-on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0]<p></p>
-indicates the virtual memory address used in a load/store unit<p></p>
+<td><p>Load/Store high threshold (LS_HI) is used to filter the value 
+on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0] 
+indicates the virtual memory address used in a load/store unit 
 < 0/1 > instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2760,7 +2760,7 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>32'h000000F8</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2779,22 +2779,22 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>used to count three filtered condition occurrence: filter#1 on<p></p>
-PDebugInst[7:0] != 0 and PDebugLS< 0/1 >Stat[3:0] is either<p></p>
-LD(0x5) or ST(0x6);l filter#2 on Trace bus PDebugPC[27:0] is<p></p>
-specified by range register [PC_LO[i][27:0], PC_HI[i][27:0]];<p></p>
-filter#3 on Trace bus PDebugLS< 0/1 >Addr[27:0] is specified by<p></p>
-range register [LS< 0/1 >_LO[i][27:0], LS< 0/1 >_HI[i][27:0]].<p></p>
-Counter[i] increments by 1 when all 3 filters conditions are<p></p>
-met. Counter[i] will be capped on the value specified by<p></p>
-register LSCNTSAT.cntsat, if counter[i] hits this value, an<p></p>
-interrupt will be issued if it is not masked. Counter[i] will<p></p>
-be cleared when register LSCNTCLR.ls< 0/1 >_cnt< i >_clr is<p></p>
-asserted or register LSCNTEN.ls< 0/1 >_cnt< i >_en is de-asserted,<p></p>
+<td><p>used to count three filtered condition occurrence: filter#1 on 
+PDebugInst[7:0] != 0 and PDebugLS< 0/1 >Stat[3:0] is either 
+LD(0x5) or ST(0x6);l filter#2 on Trace bus PDebugPC[27:0] is 
+specified by range register [PC_LO[i][27:0], PC_HI[i][27:0]]; 
+filter#3 on Trace bus PDebugLS< 0/1 >Addr[27:0] is specified by 
+range register [LS< 0/1 >_LO[i][27:0], LS< 0/1 >_HI[i][27:0]]. 
+Counter[i] increments by 1 when all 3 filters conditions are 
+met. Counter[i] will be capped on the value specified by 
+register LSCNTSAT.cntsat, if counter[i] hits this value, an 
+interrupt will be issued if it is not masked. Counter[i] will 
+be cleared when register LSCNTCLR.ls< 0/1 >_cnt< i >_clr is 
+asserted or register LSCNTEN.ls< 0/1 >_cnt< i >_en is de-asserted, 
 i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2811,7 +2811,7 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 <td><p>32'h000000FC</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2830,13 +2830,13 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Program Counter (PC) low threshold (PC_LO) is used to filter<p></p>
-the value on Trace bus PDebugPC[27:0], PDebugPC[27:0] indicates<p></p>
-the Hifi core internal Program Counter value associated with the<p></p>
+<td><p>Program Counter (PC) low threshold (PC_LO) is used to filter 
+the value on Trace bus PDebugPC[27:0], PDebugPC[27:0] indicates 
+the Hifi core internal Program Counter value associated with the 
 instruction completed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2853,7 +2853,7 @@ instruction completed in the W (Writeback) stage.</p>
 </td>
 <td><p>32'h00000100</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2872,13 +2872,13 @@ instruction completed in the W (Writeback) stage.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Program Counter (PC) high threshold (PC_HI) is used to filter<p></p>
-the value on Tracee bus PDebugPC[27:0], PDebugPC[27:0]<p></p>
-indicates the Hifi core internal Program Counter associated<p></p>
+<td><p>Program Counter (PC) high threshold (PC_HI) is used to filter 
+the value on Tracee bus PDebugPC[27:0], PDebugPC[27:0] 
+indicates the Hifi core internal Program Counter associated 
 with the instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2895,7 +2895,7 @@ with the instruction processed in the W (Writeback) stage.</p>
 </td>
 <td><p>32'h00000104</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2914,13 +2914,13 @@ with the instruction processed in the W (Writeback) stage.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Load/Store low threshold (LS_LO) is used to filter the value<p></p>
-on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0]<p></p>
-indicates the virtual memory address used in a load/store unit<p></p>
+<td><p>Load/Store low threshold (LS_LO) is used to filter the value 
+on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0] 
+indicates the virtual memory address used in a load/store unit 
 < 0/1 > instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2937,7 +2937,7 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>32'h00000108</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2956,13 +2956,13 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Load/Store high threshold (LS_HI) is used to filter the value<p></p>
-on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0]<p></p>
-indicates the virtual memory address used in a load/store unit<p></p>
+<td><p>Load/Store high threshold (LS_HI) is used to filter the value 
+on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0] 
+indicates the virtual memory address used in a load/store unit 
 < 0/1 > instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -2979,7 +2979,7 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>32'h0000010C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -2998,22 +2998,22 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>used to count three filtered condition occurrence: filter#1 on<p></p>
-PDebugInst[7:0] != 0 and PDebugLS< 0/1 >Stat[3:0] is either<p></p>
-LD(0x5) or ST(0x6);l filter#2 on Trace bus PDebugPC[27:0] is<p></p>
-specified by range register [PC_LO[i][27:0], PC_HI[i][27:0]];<p></p>
-filter#3 on Trace bus PDebugLS< 0/1 >Addr[27:0] is specified by<p></p>
-range register [LS< 0/1 >_LO[i][27:0], LS< 0/1 >_HI[i][27:0]].<p></p>
-Counter[i] increments by 1 when all 3 filters conditions are<p></p>
-met. Counter[i] will be capped on the value specified by<p></p>
-register LSCNTSAT.cntsat, if counter[i] hits this value, an<p></p>
-interrupt will be issued if it is not masked. Counter[i] will<p></p>
-be cleared when register LSCNTCLR.ls< 0/1 >_cnt< i >_clr is<p></p>
-asserted or register LSCNTEN.ls< 0/1 >_cnt< i >_en is de-asserted,<p></p>
+<td><p>used to count three filtered condition occurrence: filter#1 on 
+PDebugInst[7:0] != 0 and PDebugLS< 0/1 >Stat[3:0] is either 
+LD(0x5) or ST(0x6);l filter#2 on Trace bus PDebugPC[27:0] is 
+specified by range register [PC_LO[i][27:0], PC_HI[i][27:0]]; 
+filter#3 on Trace bus PDebugLS< 0/1 >Addr[27:0] is specified by 
+range register [LS< 0/1 >_LO[i][27:0], LS< 0/1 >_HI[i][27:0]]. 
+Counter[i] increments by 1 when all 3 filters conditions are 
+met. Counter[i] will be capped on the value specified by 
+register LSCNTSAT.cntsat, if counter[i] hits this value, an 
+interrupt will be issued if it is not masked. Counter[i] will 
+be cleared when register LSCNTCLR.ls< 0/1 >_cnt< i >_clr is 
+asserted or register LSCNTEN.ls< 0/1 >_cnt< i >_en is de-asserted, 
 i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3030,7 +3030,7 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 <td><p>32'h00000110</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3049,13 +3049,13 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Program Counter (PC) low threshold (PC_LO) is used to filter<p></p>
-the value on Trace bus PDebugPC[27:0], PDebugPC[27:0] indicates<p></p>
-the Hifi core internal Program Counter value associated with the<p></p>
+<td><p>Program Counter (PC) low threshold (PC_LO) is used to filter 
+the value on Trace bus PDebugPC[27:0], PDebugPC[27:0] indicates 
+the Hifi core internal Program Counter value associated with the 
 instruction completed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3072,7 +3072,7 @@ instruction completed in the W (Writeback) stage.</p>
 </td>
 <td><p>32'h00000114</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3091,13 +3091,13 @@ instruction completed in the W (Writeback) stage.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Program Counter (PC) high threshold (PC_HI) is used to filter<p></p>
-the value on Tracee bus PDebugPC[27:0], PDebugPC[27:0]<p></p>
-indicates the Hifi core internal Program Counter associated<p></p>
+<td><p>Program Counter (PC) high threshold (PC_HI) is used to filter 
+the value on Tracee bus PDebugPC[27:0], PDebugPC[27:0] 
+indicates the Hifi core internal Program Counter associated 
 with the instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3114,7 +3114,7 @@ with the instruction processed in the W (Writeback) stage.</p>
 </td>
 <td><p>32'h00000118</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3133,13 +3133,13 @@ with the instruction processed in the W (Writeback) stage.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Load/Store low threshold (LS_LO) is used to filter the value<p></p>
-on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0]<p></p>
-indicates the virtual memory address used in a load/store unit<p></p>
+<td><p>Load/Store low threshold (LS_LO) is used to filter the value 
+on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0] 
+indicates the virtual memory address used in a load/store unit 
 < 0/1 > instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3156,7 +3156,7 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>32'h0000011C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3175,13 +3175,13 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Load/Store high threshold (LS_HI) is used to filter the value<p></p>
-on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0]<p></p>
-indicates the virtual memory address used in a load/store unit<p></p>
+<td><p>Load/Store high threshold (LS_HI) is used to filter the value 
+on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0] 
+indicates the virtual memory address used in a load/store unit 
 < 0/1 > instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3198,7 +3198,7 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>32'h00000120</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3217,22 +3217,22 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>used to count three filtered condition occurrence: filter#1 on<p></p>
-PDebugInst[7:0] != 0 and PDebugLS< 0/1 >Stat[3:0] is either<p></p>
-LD(0x5) or ST(0x6);l filter#2 on Trace bus PDebugPC[27:0] is<p></p>
-specified by range register [PC_LO[i][27:0], PC_HI[i][27:0]];<p></p>
-filter#3 on Trace bus PDebugLS< 0/1 >Addr[27:0] is specified by<p></p>
-range register [LS< 0/1 >_LO[i][27:0], LS< 0/1 >_HI[i][27:0]].<p></p>
-Counter[i] increments by 1 when all 3 filters conditions are<p></p>
-met. Counter[i] will be capped on the value specified by<p></p>
-register LSCNTSAT.cntsat, if counter[i] hits this value, an<p></p>
-interrupt will be issued if it is not masked. Counter[i] will<p></p>
-be cleared when register LSCNTCLR.ls< 0/1 >_cnt< i >_clr is<p></p>
-asserted or register LSCNTEN.ls< 0/1 >_cnt< i >_en is de-asserted,<p></p>
+<td><p>used to count three filtered condition occurrence: filter#1 on 
+PDebugInst[7:0] != 0 and PDebugLS< 0/1 >Stat[3:0] is either 
+LD(0x5) or ST(0x6);l filter#2 on Trace bus PDebugPC[27:0] is 
+specified by range register [PC_LO[i][27:0], PC_HI[i][27:0]]; 
+filter#3 on Trace bus PDebugLS< 0/1 >Addr[27:0] is specified by 
+range register [LS< 0/1 >_LO[i][27:0], LS< 0/1 >_HI[i][27:0]]. 
+Counter[i] increments by 1 when all 3 filters conditions are 
+met. Counter[i] will be capped on the value specified by 
+register LSCNTSAT.cntsat, if counter[i] hits this value, an 
+interrupt will be issued if it is not masked. Counter[i] will 
+be cleared when register LSCNTCLR.ls< 0/1 >_cnt< i >_clr is 
+asserted or register LSCNTEN.ls< 0/1 >_cnt< i >_en is de-asserted, 
 i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3249,7 +3249,7 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 <td><p>32'h00000124</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3268,13 +3268,13 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Program Counter (PC) low threshold (PC_LO) is used to filter<p></p>
-the value on Trace bus PDebugPC[27:0], PDebugPC[27:0] indicates<p></p>
-the Hifi core internal Program Counter value associated with the<p></p>
+<td><p>Program Counter (PC) low threshold (PC_LO) is used to filter 
+the value on Trace bus PDebugPC[27:0], PDebugPC[27:0] indicates 
+the Hifi core internal Program Counter value associated with the 
 instruction completed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3291,7 +3291,7 @@ instruction completed in the W (Writeback) stage.</p>
 </td>
 <td><p>32'h00000128</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3310,13 +3310,13 @@ instruction completed in the W (Writeback) stage.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Program Counter (PC) high threshold (PC_HI) is used to filter<p></p>
-the value on Tracee bus PDebugPC[27:0], PDebugPC[27:0]<p></p>
-indicates the Hifi core internal Program Counter associated<p></p>
+<td><p>Program Counter (PC) high threshold (PC_HI) is used to filter 
+the value on Tracee bus PDebugPC[27:0], PDebugPC[27:0] 
+indicates the Hifi core internal Program Counter associated 
 with the instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3333,7 +3333,7 @@ with the instruction processed in the W (Writeback) stage.</p>
 </td>
 <td><p>32'h0000012C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3352,13 +3352,13 @@ with the instruction processed in the W (Writeback) stage.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Load/Store low threshold (LS_LO) is used to filter the value<p></p>
-on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0]<p></p>
-indicates the virtual memory address used in a load/store unit<p></p>
+<td><p>Load/Store low threshold (LS_LO) is used to filter the value 
+on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0] 
+indicates the virtual memory address used in a load/store unit 
 < 0/1 > instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3375,7 +3375,7 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>32'h00000130</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3394,13 +3394,13 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Load/Store high threshold (LS_HI) is used to filter the value<p></p>
-on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0]<p></p>
-indicates the virtual memory address used in a load/store unit<p></p>
+<td><p>Load/Store high threshold (LS_HI) is used to filter the value 
+on Tracee bus PDebugLS< 0/1 >Addr[27:0], PDebugLS< 0/1 >Addr[27:0] 
+indicates the virtual memory address used in a load/store unit 
 < 0/1 > instruction processed in the W (Writeback) stage.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3417,7 +3417,7 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>32'h00000134</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3436,22 +3436,22 @@ indicates the virtual memory address used in a load/store unit<p></p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>used to count three filtered condition occurrence: filter#1 on<p></p>
-PDebugInst[7:0] != 0 and PDebugLS< 0/1 >Stat[3:0] is either<p></p>
-LD(0x5) or ST(0x6);l filter#2 on Trace bus PDebugPC[27:0] is<p></p>
-specified by range register [PC_LO[i][27:0], PC_HI[i][27:0]];<p></p>
-filter#3 on Trace bus PDebugLS< 0/1 >Addr[27:0] is specified by<p></p>
-range register [LS< 0/1 >_LO[i][27:0], LS< 0/1 >_HI[i][27:0]].<p></p>
-Counter[i] increments by 1 when all 3 filters conditions are<p></p>
-met. Counter[i] will be capped on the value specified by<p></p>
-register LSCNTSAT.cntsat, if counter[i] hits this value, an<p></p>
-interrupt will be issued if it is not masked. Counter[i] will<p></p>
-be cleared when register LSCNTCLR.ls< 0/1 >_cnt< i >_clr is<p></p>
-asserted or register LSCNTEN.ls< 0/1 >_cnt< i >_en is de-asserted,<p></p>
+<td><p>used to count three filtered condition occurrence: filter#1 on 
+PDebugInst[7:0] != 0 and PDebugLS< 0/1 >Stat[3:0] is either 
+LD(0x5) or ST(0x6);l filter#2 on Trace bus PDebugPC[27:0] is 
+specified by range register [PC_LO[i][27:0], PC_HI[i][27:0]]; 
+filter#3 on Trace bus PDebugLS< 0/1 >Addr[27:0] is specified by 
+range register [LS< 0/1 >_LO[i][27:0], LS< 0/1 >_HI[i][27:0]]. 
+Counter[i] increments by 1 when all 3 filters conditions are 
+met. Counter[i] will be capped on the value specified by 
+register LSCNTSAT.cntsat, if counter[i] hits this value, an 
+interrupt will be issued if it is not masked. Counter[i] will 
+be cleared when register LSCNTCLR.ls< 0/1 >_cnt< i >_clr is 
+asserted or register LSCNTEN.ls< 0/1 >_cnt< i >_en is de-asserted, 
 i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3468,7 +3468,7 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 <td><p>32'h00000138</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3553,7 +3553,7 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 <td><p>Counter#7 enable bit in LS unit#0</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3570,7 +3570,7 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 <td><p>32'h0000013C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3589,8 +3589,8 @@ i is 0~7, each LS< 0/1 > has 8 counters.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>LS unit#0 Counter#0 value will be cleared once this bit is<p></p>
-asserted, bit is de-asserted automatically by HW after SW<p></p>
+<td><p>LS unit#0 Counter#0 value will be cleared once this bit is 
+asserted, bit is de-asserted automatically by HW after SW 
 assertion.</p>
 </td>
 </tr>
@@ -3600,8 +3600,8 @@ assertion.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>LS unit#0 Counter#1 value will be cleared once this bit is<p></p>
-asserted, bit is de-asserted automatically by HW after SW<p></p>
+<td><p>LS unit#0 Counter#1 value will be cleared once this bit is 
+asserted, bit is de-asserted automatically by HW after SW 
 assertion.</p>
 </td>
 </tr>
@@ -3611,8 +3611,8 @@ assertion.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>LS unit#0 Counter#2 value will be cleared once this bit is<p></p>
-asserted, bit is de-asserted automatically by HW after SW<p></p>
+<td><p>LS unit#0 Counter#2 value will be cleared once this bit is 
+asserted, bit is de-asserted automatically by HW after SW 
 assertion.</p>
 </td>
 </tr>
@@ -3622,8 +3622,8 @@ assertion.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>LS unit#0 Counter#3 value will be cleared once this bit is<p></p>
-asserted, bit is de-asserted automatically by HW after SW<p></p>
+<td><p>LS unit#0 Counter#3 value will be cleared once this bit is 
+asserted, bit is de-asserted automatically by HW after SW 
 assertion.</p>
 </td>
 </tr>
@@ -3633,8 +3633,8 @@ assertion.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>LS unit#0 Counter#4 value will be cleared once this bit is<p></p>
-asserted, bit is de-asserted automatically by HW after SW<p></p>
+<td><p>LS unit#0 Counter#4 value will be cleared once this bit is 
+asserted, bit is de-asserted automatically by HW after SW 
 assertion.</p>
 </td>
 </tr>
@@ -3644,8 +3644,8 @@ assertion.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>LS unit#0 Counter#5 value will be cleared once this bit is<p></p>
-asserted, bit is de-asserted automatically by HW after SW<p></p>
+<td><p>LS unit#0 Counter#5 value will be cleared once this bit is 
+asserted, bit is de-asserted automatically by HW after SW 
 assertion.</p>
 </td>
 </tr>
@@ -3655,8 +3655,8 @@ assertion.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>LS unit#0 Counter#6 value will be cleared once this bit is<p></p>
-asserted, bit is de-asserted automatically by HW after SW<p></p>
+<td><p>LS unit#0 Counter#6 value will be cleared once this bit is 
+asserted, bit is de-asserted automatically by HW after SW 
 assertion.</p>
 </td>
 </tr>
@@ -3666,12 +3666,12 @@ assertion.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>LS unit#0 Counter#7 value will be cleared once this bit is<p></p>
-asserted, bit is de-asserted automatically by HW after SW<p></p>
+<td><p>LS unit#0 Counter#7 value will be cleared once this bit is 
+asserted, bit is de-asserted automatically by HW after SW 
 assertion.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3688,7 +3688,7 @@ assertion.</p>
 </td>
 <td><p>32'h00000140</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3707,11 +3707,11 @@ assertion.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Each counter in LS0 will be capped to cntsat, when it happens,<p></p>
+<td><p>Each counter in LS0 will be capped to cntsat, when it happens, 
 an interrupt will be sent if it is not masked.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3728,16 +3728,16 @@ an interrupt will be sent if it is not masked.</p>
 </td>
 <td><p>32'h00000400</p>
 </td>
-<td><p>Trace buffer (128 x 64b), used to do PDebug* data logging based<p></p>
-on predefined event occurring, only PDebugInst[7:0] != 0 &&<p></p>
-(PDebugLS0Stat[3:0] == (LD or ST)) is considered as a valid<p></p>
-event, not all valid events are recorded into trace buffer,<p></p>
-only one of every (LSWCTRL.sample_cycle_cnt+1) continuous valid<p></p>
-events will be logged into trace buffer (event decimation), the<p></p>
-number of total logged event is also limited by LSWCTRL.wlimit,<p></p>
-once trace buffer accumulated (LSWCTRL.wlimit+1) entries,<p></p>
-Ctrl.en_xt_trace will be cleared by HW automatically and an<p></p>
-interrupt will be triggered in the same time.<p></p>
+<td><p>Trace buffer (128 x 64b), used to do PDebug* data logging based 
+on predefined event occurring, only PDebugInst[7:0] != 0 && 
+(PDebugLS0Stat[3:0] == (LD or ST)) is considered as a valid 
+event, not all valid events are recorded into trace buffer, 
+only one of every (LSWCTRL.sample_cycle_cnt+1) continuous valid 
+events will be logged into trace buffer (event decimation), the 
+number of total logged event is also limited by LSWCTRL.wlimit, 
+once trace buffer accumulated (LSWCTRL.wlimit+1) entries, 
+Ctrl.en_xt_trace will be cleared by HW automatically and an 
+interrupt will be triggered in the same time. 
 Internal memory</p>
 </td>
 </tr>
@@ -3754,13 +3754,13 @@ Internal memory</p>
 </td>
 <td><p>Memory</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 <td><p>Memory</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3777,7 +3777,7 @@ Internal memory</p>
 </td>
 <td><p>32'h00000800</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3796,9 +3796,9 @@ Internal memory</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Used to limit the number of Trace buffer entries (real number is<p></p>
-LSWCTRL.wlimit+1) can be used to log PDebug* data,<p></p>
-LSWCTRL.wlimit is the maximum address can be hit before<p></p>
+<td><p>Used to limit the number of Trace buffer entries (real number is 
+LSWCTRL.wlimit+1) can be used to log PDebug* data, 
+LSWCTRL.wlimit is the maximum address can be hit before 
 Ctrl.en_xt_trace is turn off by HW.</p>
 </td>
 </tr>
@@ -3808,7 +3808,7 @@ Ctrl.en_xt_trace is turn off by HW.</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3818,18 +3818,18 @@ Ctrl.en_xt_trace is turn off by HW.</p>
 </td>
 <td><p>0x1</p>
 </td>
-<td><p>Used to control the skip number of LS valid event before a trace<p></p>
-buffer event write, in HW it controls the rollover of LS valid<p></p>
-event occurring sample counter, whenever the sample counter<p></p>
-reaches the value of sample_cycle_cnt, the sample counter rolls<p></p>
-back to 0, in the meantime a pulse is generated as trace buffer<p></p>
-write enable, and same pulse is used to increase trace buffer<p></p>
-write address pointer WRPTR by 1 if it doesn’t hit the maximum<p></p>
-address specified by wlimit. The minimum number of<p></p>
+<td><p>Used to control the skip number of LS valid event before a trace 
+buffer event write, in HW it controls the rollover of LS valid 
+event occurring sample counter, whenever the sample counter 
+reaches the value of sample_cycle_cnt, the sample counter rolls 
+back to 0, in the meantime a pulse is generated as trace buffer 
+write enable, and same pulse is used to increase trace buffer 
+write address pointer WRPTR by 1 if it doesn’t hit the maximum 
+address specified by wlimit. The minimum number of 
 sample_cycle_cnt is 0, 0 means no LS valid event skipping.</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3846,7 +3846,7 @@ sample_cycle_cnt is 0, 0 means no LS valid event skipping.</p>
 </td>
 <td><p>32'h00000804</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3863,15 +3863,15 @@ sample_cycle_cnt is 0, 0 means no LS valid event skipping.</p>
 </td>
 <td><p><a HREF="indus_hifi1_wrap.htm#hifi1_wrapper_TBWRPTR_wr_pointer">wr_pointer</a></p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
-<td><p>Reflect real value of HW trace buffer write pointer, incremental<p></p>
-by decimated predefined valid event occurring, cleared once<p></p>
+<td><p>Reflect real value of HW trace buffer write pointer, incremental 
+by decimated predefined valid event occurring, cleared once 
 write pointer reaches LSWCTRL.wlimit</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -3888,7 +3888,7 @@ write pointer reaches LSWCTRL.wlimit</p>
 </td>
 <td><p>32'h00000808</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -3907,7 +3907,7 @@ write pointer reaches LSWCTRL.wlimit</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Set to 1 when LS unit#0 counter#0 is saturated, write “1” to<p></p>
+<td><p>Set to 1 when LS unit#0 counter#0 is saturated, write “1” to 
 clear this bit</p>
 </td>
 </tr>
@@ -3917,7 +3917,7 @@ clear this bit</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Set to 1 when LS unit#0 counter#1 is saturated, write “1” to<p></p>
+<td><p>Set to 1 when LS unit#0 counter#1 is saturated, write “1” to 
 clear this bit</p>
 </td>
 </tr>
@@ -3927,7 +3927,7 @@ clear this bit</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Set to 1 when LS unit#0 counter#2 is saturated, write “1” to<p></p>
+<td><p>Set to 1 when LS unit#0 counter#2 is saturated, write “1” to 
 clear this bit</p>
 </td>
 </tr>
@@ -3937,7 +3937,7 @@ clear this bit</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Set to 1 when LS unit#0 counter#3 is saturated, write “1” to<p></p>
+<td><p>Set to 1 when LS unit#0 counter#3 is saturated, write “1” to 
 clear this bit</p>
 </td>
 </tr>
@@ -3947,7 +3947,7 @@ clear this bit</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Set to 1 when LS unit#0 counter#4 is saturated, write “1” to<p></p>
+<td><p>Set to 1 when LS unit#0 counter#4 is saturated, write “1” to 
 clear this bit</p>
 </td>
 </tr>
@@ -3957,7 +3957,7 @@ clear this bit</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Set to 1 when LS unit#0 counter#5 is saturated, write “1” to<p></p>
+<td><p>Set to 1 when LS unit#0 counter#5 is saturated, write “1” to 
 clear this bit</p>
 </td>
 </tr>
@@ -3967,7 +3967,7 @@ clear this bit</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Set to 1 when LS unit#0 counter#6 is saturated, write “1” to<p></p>
+<td><p>Set to 1 when LS unit#0 counter#6 is saturated, write “1” to 
 clear this bit</p>
 </td>
 </tr>
@@ -3977,7 +3977,7 @@ clear this bit</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Set to 1 when LS unit#0 counter#7 is saturated, write “1” to<p></p>
+<td><p>Set to 1 when LS unit#0 counter#7 is saturated, write “1” to 
 clear this bit</p>
 </td>
 </tr>
@@ -3987,11 +3987,11 @@ clear this bit</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Set to 1 when Trace Buffer write pointer is saturated, write “1”<p></p>
+<td><p>Set to 1 when Trace Buffer write pointer is saturated, write “1” 
 to clear this bit</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4008,7 +4008,7 @@ to clear this bit</p>
 </td>
 <td><p>32'h0000080C</p>
 </td>
-<td><p><p></p>
+<td><p> 
 </p>
 </td>
 </tr>
@@ -4027,7 +4027,7 @@ to clear this bit</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Mask bit for INTR_STA.ls0cnt0_sat, when it is set, Hifi1_wrap<p></p>
+<td><p>Mask bit for INTR_STA.ls0cnt0_sat, when it is set, Hifi1_wrap 
 final interrupt will ignore the status of INTR_STA.ls0cnt0_sat</p>
 </td>
 </tr>
@@ -4037,7 +4037,7 @@ final interrupt will ignore the status of INTR_STA.ls0cnt0_sat</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Mask bit for INTR_STA.ls0cnt1_sat, when it is set, Hifi1_wrap<p></p>
+<td><p>Mask bit for INTR_STA.ls0cnt1_sat, when it is set, Hifi1_wrap 
 final interrupt will ignore the status of INTR_STA.ls0cnt1_sat</p>
 </td>
 </tr>
@@ -4047,7 +4047,7 @@ final interrupt will ignore the status of INTR_STA.ls0cnt1_sat</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Mask bit for INTR_STA.ls0cnt2_sat, when it is set, Hifi1_wrap<p></p>
+<td><p>Mask bit for INTR_STA.ls0cnt2_sat, when it is set, Hifi1_wrap 
 final interrupt will ignore the status of INTR_STA.ls0cnt2_sat</p>
 </td>
 </tr>
@@ -4057,7 +4057,7 @@ final interrupt will ignore the status of INTR_STA.ls0cnt2_sat</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Mask bit for INTR_STA.ls0cnt3_sat, when it is set, Hifi1_wrap<p></p>
+<td><p>Mask bit for INTR_STA.ls0cnt3_sat, when it is set, Hifi1_wrap 
 final interrupt will ignore the status of INTR_STA.ls0cnt3_sat</p>
 </td>
 </tr>
@@ -4067,7 +4067,7 @@ final interrupt will ignore the status of INTR_STA.ls0cnt3_sat</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Mask bit for INTR_STA.ls0cnt4_sat, when it is set, Hifi1_wrap<p></p>
+<td><p>Mask bit for INTR_STA.ls0cnt4_sat, when it is set, Hifi1_wrap 
 final interrupt will ignore the status of INTR_STA.ls0cnt4_sat</p>
 </td>
 </tr>
@@ -4077,7 +4077,7 @@ final interrupt will ignore the status of INTR_STA.ls0cnt4_sat</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Mask bit for INTR_STA.ls0cnt5_sat, when it is set, Hifi1_wrap<p></p>
+<td><p>Mask bit for INTR_STA.ls0cnt5_sat, when it is set, Hifi1_wrap 
 final interrupt will ignore the status of INTR_STA.ls0cnt5_sat</p>
 </td>
 </tr>
@@ -4087,7 +4087,7 @@ final interrupt will ignore the status of INTR_STA.ls0cnt5_sat</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Mask bit for INTR_STA.ls0cnt6_sat, when it is set, Hifi1_wrap<p></p>
+<td><p>Mask bit for INTR_STA.ls0cnt6_sat, when it is set, Hifi1_wrap 
 final interrupt will ignore the status of INTR_STA.ls0cnt6_sat</p>
 </td>
 </tr>
@@ -4097,7 +4097,7 @@ final interrupt will ignore the status of INTR_STA.ls0cnt6_sat</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Mask bit for INTR_STA.ls0cnt7_sat, when it is set, Hifi1_wrap<p></p>
+<td><p>Mask bit for INTR_STA.ls0cnt7_sat, when it is set, Hifi1_wrap 
 final interrupt will ignore the status of INTR_STA.ls0cnt7_sat</p>
 </td>
 </tr>
@@ -4107,10 +4107,10 @@ final interrupt will ignore the status of INTR_STA.ls0cnt7_sat</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Mask bit for INTR_STA.tb_wrptr_sat, when it is set, Hifi1_wrap<p></p>
+<td><p>Mask bit for INTR_STA.tb_wrptr_sat, when it is set, Hifi1_wrap 
 final interrupt will ignore the status of INTR_STA.tb_wrptr_sat</p>
 </td>
 </tr>
-</table><p><p></p>
+</table><p> 
 </p>
 </body></html>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title></title>
     </head>
@@ -14,10 +14,10 @@
             <dd class="address">0x4</dd>
         </dl>
         <h2>Description</h2>
-        <p>The field is the read/write data in CPU access mode. It is only valid in CPU access mode. The standard procedure for reading/writing the Scratch Pad is the following.<p></p>
-1. Program SPAD_ACC_ADDR.<p></p>
-2. Read/Program SPAD_ACC_DATA.<p></p>
-The step 2 triggers the hardware to perform requested operation. The hardware is implemented with an auto-increment feature which automatically increases the SPAD_ACC_ADDR register by one after step 2. If the firmware wants to read/write a contiguous memory space, it just needs to provide the initial address to SPAD_ACC_ADDR register and then keeps reading/writing SPAD_ACC_DATA register.<p></p></p>
+        <p>The field is the read/write data in CPU access mode. It is only valid in CPU access mode. The standard procedure for reading/writing the Scratch Pad is the following. 
+1. Program SPAD_ACC_ADDR. 
+2. Read/Program SPAD_ACC_DATA. 
+The step 2 triggers the hardware to perform requested operation. The hardware is implemented with an auto-increment feature which automatically increases the SPAD_ACC_ADDR register by one after step 2. If the firmware wants to read/write a contiguous memory space, it just needs to provide the initial address to SPAD_ACC_ADDR register and then keeps reading/writing SPAD_ACC_DATA register. </p>
         <h2>Contents</h2>
         <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
             <tr class="TableStyle-table-no-head-Body-Body1">

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title>lp_gbl</title>
     </head>
@@ -64,9 +64,9 @@
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>All channel stop request for Non-secure channels. When asserted,<p></p>
-all Non-secure channels that are not in IDLE are stopped.<p></p>
-Channels can be enabled by software, but are immediately<p></p>
+                    <p>All channel stop request for Non-secure channels. When asserted, 
+all Non-secure channels that are not in IDLE are stopped. 
+Channels can be enabled by software, but are immediately 
 stopped if this request is asserted.</p>
                 </td>
             </tr>
@@ -82,10 +82,10 @@ stopped if this request is asserted.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>All channel pause request for Non-secure channels. When<p></p>
-asserted, then all Non-secure channels that are not in IDLE are<p></p>
-paused. Channels can be enabled by software, but are immediately<p></p>
-paused if this request is asserted. When the request is<p></p>
+                    <p>All channel pause request for Non-secure channels. When 
+asserted, then all Non-secure channels that are not in IDLE are 
+paused. Channels can be enabled by software, but are immediately 
+paused if this request is asserted. When the request is 
 deasserted, the operation continues.</p>
                 </td>
             </tr>
@@ -156,8 +156,8 @@ deasserted, the operation continues.</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>All channel stopped acknowledge for Non-secure channels. When<p></p>
-asserted, all Non-secure channels are stopped or inactive.<p></p>
+                    <p>All channel stopped acknowledge for Non-secure channels. When 
+asserted, all Non-secure channels are stopped or inactive. 
 Four-phase handshake pair of allch_stop_req_nonsec.</p>
                 </td>
             </tr>
@@ -176,10 +176,10 @@ Four-phase handshake pair of allch_stop_req_nonsec.</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>All channel pause request for Non-secure channels. When<p></p>
-asserted, then all Non-secure channels that are not in IDLE are<p></p>
-paused. Channels can be enabled by software, but are immediately<p></p>
-paused if this request is asserted. When the request is<p></p>
+                    <p>All channel pause request for Non-secure channels. When 
+asserted, then all Non-secure channels that are not in IDLE are 
+paused. Channels can be enabled by software, but are immediately 
+paused if this request is asserted. When the request is 
 deasserted, the operation continues.</p>
                 </td>
             </tr>
@@ -259,7 +259,7 @@ deasserted, the operation continues.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk<p></p>
+                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk 
 cycles of hysteresis to the quiescence entry sequence</p>
                 </td>
             </tr>
@@ -327,7 +327,7 @@ cycles of hysteresis to the quiescence entry sequence</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>When set to HIGH, writes to VTOR_NS is disabled.<p></p>
+                    <p>When set to HIGH, writes to VTOR_NS is disabled. 
 Once set to HIGH, it cannot be cleared until RESET</p>
                 </td>
             </tr>
@@ -343,8 +343,8 @@ Once set to HIGH, it cannot be cleared until RESET</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>When set to HIGH, writes to registers associated with the<p></p>
-Non-Secure Memory Protection Unit (MPU) region are disabled<p></p>
+                    <p>When set to HIGH, writes to registers associated with the 
+Non-Secure Memory Protection Unit (MPU) region are disabled 
 Once set to HIGH, it cannot be cleared until RESET</p>
                 </td>
             </tr>
@@ -412,10 +412,10 @@ Once set to HIGH, it cannot be cleared until RESET</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Non-secure SysTick calibration configuration:<p></p>
-[23:0] TENMS<p></p>
-[24] SKEW<p></p>
-[25] NOREF<p></p>
+                    <p>Non-secure SysTick calibration configuration: 
+[23:0] TENMS 
+[24] SKEW 
+[25] NOREF 
 Refer to Arm Cortex-M85 TRM for further details.</p>
                 </td>
             </tr>
@@ -568,8 +568,8 @@ Refer to Arm Cortex-M85 TRM for further details.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0: Enable automatic invalidation of the L1 cache.<p></p>
-1: Disable automatic invalidation of L1 cache.<p></p>
+                    <p>0: Enable automatic invalidation of the L1 cache. 
+1: Disable automatic invalidation of L1 cache. 
 For more information, refer to Arm Cortex-M52 TRM.</p>
                 </td>
             </tr>
@@ -605,12 +605,12 @@ For more information, refer to Arm Cortex-M52 TRM.</p>
                     <p>32'h0000001C</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>Programmable 2-bit register to control which BMC port the ASIB<p></p>
-will target<p></p>
-Below is the mapping of Master (ASIB) to BMC port:<p></p>
-00: bmc_m0<p></p>
-01: bmc_m1<p></p>
-10: bmc_m2<p></p>
+                    <p>Programmable 2-bit register to control which BMC port the ASIB 
+will target 
+Below is the mapping of Master (ASIB) to BMC port: 
+00: bmc_m0 
+01: bmc_m1 
+10: bmc_m2 
 11: bmc_m3</p>
                 </td>
             </tr>
@@ -996,7 +996,7 @@ Below is the mapping of Master (ASIB) to BMC port:<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0: I3C Mode<p></p>
+                    <p>0: I3C Mode 
 1: I2C Mode</p>
                 </td>
             </tr>
@@ -1012,7 +1012,7 @@ Below is the mapping of Master (ASIB) to BMC port:<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Slave Activity Mode for GETSTATUS CCC Applicable in only Slave<p></p>
+                    <p>Slave Activity Mode for GETSTATUS CCC Applicable in only Slave 
 mode</p>
                 </td>
             </tr>
@@ -1028,7 +1028,7 @@ mode</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Pending Interrupt Info for GETSTATUS CCC Applicable in only<p></p>
+                    <p>Pending Interrupt Info for GETSTATUS CCC Applicable in only 
 Slave mode</p>
                 </td>
             </tr>
@@ -1126,7 +1126,7 @@ Slave mode</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Slave maximum clock data turnaround time,Applicable in only<p></p>
+                    <p>Slave maximum clock data turnaround time,Applicable in only 
 Slave mode</p>
                 </td>
             </tr>
@@ -1492,13 +1492,13 @@ Slave mode</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PWM0_OUT select from 10 Counters<p></p>
-0 – TCPWM Counter 0<p></p>
-1 – TCPWM Counter 1<p></p>
-….<p></p>
-9– TCPWM Counter 9<p></p>
-A-TCPWM Counter 10<p></p>
-B-TCPWM Counter 11<p></p>
+                    <p>PWM0_OUT select from 10 Counters 
+0 – TCPWM Counter 0 
+1 – TCPWM Counter 1 
+…. 
+9– TCPWM Counter 9 
+A-TCPWM Counter 10 
+B-TCPWM Counter 11 
 C-F - Reserved</p>
                 </td>
             </tr>
@@ -1514,13 +1514,13 @@ C-F - Reserved</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PWM1_OUT select from 10 Counters<p></p>
-0 – TCPWM Counter 0<p></p>
-1 – TCPWM Counter 1<p></p>
-….<p></p>
-9– TCPWM Counter 9<p></p>
-A-TCPWM Counter 10<p></p>
-B-TCPWM Counter 11<p></p>
+                    <p>PWM1_OUT select from 10 Counters 
+0 – TCPWM Counter 0 
+1 – TCPWM Counter 1 
+…. 
+9– TCPWM Counter 9 
+A-TCPWM Counter 10 
+B-TCPWM Counter 11 
 C-F - Reserved</p>
                 </td>
             </tr>
@@ -1536,13 +1536,13 @@ C-F - Reserved</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PWM2_OUT select from 10 Counters<p></p>
-0 – TCPWM Counter 0<p></p>
-1 – TCPWM Counter 1<p></p>
-….<p></p>
-9– TCPWM Counter 9<p></p>
-A-TCPWM Counter 10<p></p>
-B-TCPWM Counter 11<p></p>
+                    <p>PWM2_OUT select from 10 Counters 
+0 – TCPWM Counter 0 
+1 – TCPWM Counter 1 
+…. 
+9– TCPWM Counter 9 
+A-TCPWM Counter 10 
+B-TCPWM Counter 11 
 C-F - Reserved</p>
                 </td>
             </tr>
@@ -1558,13 +1558,13 @@ C-F - Reserved</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PWM3_OUT select from 10 Counters<p></p>
-0 – TCPWM Counter 0<p></p>
-1 – TCPWM Counter 1<p></p>
-….<p></p>
-9– TCPWM Counter 9<p></p>
-A-TCPWM Counter 10<p></p>
-B-TCPWM Counter 11<p></p>
+                    <p>PWM3_OUT select from 10 Counters 
+0 – TCPWM Counter 0 
+1 – TCPWM Counter 1 
+…. 
+9– TCPWM Counter 9 
+A-TCPWM Counter 10 
+B-TCPWM Counter 11 
 C-F - Reserved</p>
                 </td>
             </tr>
@@ -1580,13 +1580,13 @@ C-F - Reserved</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PWM4_OUT select from 10 Counters<p></p>
-0 – TCPWM Counter 0<p></p>
-1 – TCPWM Counter 1<p></p>
-….<p></p>
-9– TCPWM Counter 9<p></p>
-A-TCPWM Counter 10<p></p>
-B-TCPWM Counter 11<p></p>
+                    <p>PWM4_OUT select from 10 Counters 
+0 – TCPWM Counter 0 
+1 – TCPWM Counter 1 
+…. 
+9– TCPWM Counter 9 
+A-TCPWM Counter 10 
+B-TCPWM Counter 11 
 C-F - Reserved</p>
                 </td>
             </tr>
@@ -1602,13 +1602,13 @@ C-F - Reserved</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PWM5_OUT select from 10 Counters<p></p>
-0 – TCPWM Counter 0<p></p>
-1 – TCPWM Counter 1<p></p>
-….<p></p>
-9– TCPWM Counter 9<p></p>
-A-TCPWM Counter 10<p></p>
-B-TCPWM Counter 11<p></p>
+                    <p>PWM5_OUT select from 10 Counters 
+0 – TCPWM Counter 0 
+1 – TCPWM Counter 1 
+…. 
+9– TCPWM Counter 9 
+A-TCPWM Counter 10 
+B-TCPWM Counter 11 
 C-F - Reserved</p>
                 </td>
             </tr>
@@ -1766,13 +1766,13 @@ C-F - Reserved</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PWM6_OUT select from 10 Counters<p></p>
-0 – TCPWM Counter 0<p></p>
-1 – TCPWM Counter 1<p></p>
-….<p></p>
-9– TCPWM Counter 9<p></p>
-A-TCPWM Counter 10<p></p>
-B-TCPWM Counter 11<p></p>
+                    <p>PWM6_OUT select from 10 Counters 
+0 – TCPWM Counter 0 
+1 – TCPWM Counter 1 
+…. 
+9– TCPWM Counter 9 
+A-TCPWM Counter 10 
+B-TCPWM Counter 11 
 C-F - Reserved</p>
                 </td>
             </tr>
@@ -1788,13 +1788,13 @@ C-F - Reserved</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PWM7_OUT select from 10 Counters<p></p>
-0 – TCPWM Counter 0<p></p>
-1 – TCPWM Counter 1<p></p>
-….<p></p>
-9– TCPWM Counter 9<p></p>
-A-TCPWM Counter 10<p></p>
-B-TCPWM Counter 11<p></p>
+                    <p>PWM7_OUT select from 10 Counters 
+0 – TCPWM Counter 0 
+1 – TCPWM Counter 1 
+…. 
+9– TCPWM Counter 9 
+A-TCPWM Counter 10 
+B-TCPWM Counter 11 
 C-F - Reserved</p>
                 </td>
             </tr>
@@ -1810,13 +1810,13 @@ C-F - Reserved</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PWM8_OUT select from 10 Counters<p></p>
-0 – TCPWM Counter 0<p></p>
-1 – TCPWM Counter 1<p></p>
-….<p></p>
-9– TCPWM Counter 9<p></p>
-A-TCPWM Counter 10<p></p>
-B-TCPWM Counter 11<p></p>
+                    <p>PWM8_OUT select from 10 Counters 
+0 – TCPWM Counter 0 
+1 – TCPWM Counter 1 
+…. 
+9– TCPWM Counter 9 
+A-TCPWM Counter 10 
+B-TCPWM Counter 11 
 C-F - Reserved</p>
                 </td>
             </tr>
@@ -1832,13 +1832,13 @@ C-F - Reserved</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PWM9_OUT select from 10 Counters<p></p>
-0 – TCPWM Counter 0<p></p>
-1 – TCPWM Counter 1<p></p>
-….<p></p>
-9– TCPWM Counter 9<p></p>
-A-TCPWM Counter 10<p></p>
-B-TCPWM Counter 11<p></p>
+                    <p>PWM9_OUT select from 10 Counters 
+0 – TCPWM Counter 0 
+1 – TCPWM Counter 1 
+…. 
+9– TCPWM Counter 9 
+A-TCPWM Counter 10 
+B-TCPWM Counter 11 
 C-F - Reserved</p>
                 </td>
             </tr>
@@ -1854,13 +1854,13 @@ C-F - Reserved</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PWM10_OUT select from 10 Counters<p></p>
-0 – TCPWM Counter 0<p></p>
-1 – TCPWM Counter 1<p></p>
-….<p></p>
-9– TCPWM Counter 9<p></p>
-A-TCPWM Counter 10<p></p>
-B-TCPWM Counter 11<p></p>
+                    <p>PWM10_OUT select from 10 Counters 
+0 – TCPWM Counter 0 
+1 – TCPWM Counter 1 
+…. 
+9– TCPWM Counter 9 
+A-TCPWM Counter 10 
+B-TCPWM Counter 11 
 C-F - Reserved</p>
                 </td>
             </tr>
@@ -1876,13 +1876,13 @@ C-F - Reserved</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PWM11_OUT select from 10 Counters<p></p>
-0 – TCPWM Counter 0<p></p>
-1 – TCPWM Counter 1<p></p>
-….<p></p>
-9– TCPWM Counter 9<p></p>
-A-TCPWM Counter 10<p></p>
-B-TCPWM Counter 11<p></p>
+                    <p>PWM11_OUT select from 10 Counters 
+0 – TCPWM Counter 0 
+1 – TCPWM Counter 1 
+…. 
+9– TCPWM Counter 9 
+A-TCPWM Counter 10 
+B-TCPWM Counter 11 
 C-F - Reserved</p>
                 </td>
             </tr>
@@ -2040,14 +2040,14 @@ C-F - Reserved</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Can fd 0 Trigger mux sel for timestamp Capture<p></p>
-0: usb_sof_toggle_out<p></p>
-1-19: GPIO0-GPIO18<p></p>
-20: pwm7<p></p>
-21: pwm8<p></p>
-22-26: timer_trig<p></p>
-27-29: wdt_trig<p></p>
-30-37: pwm4 – pwm11<p></p>
+                    <p>Can fd 0 Trigger mux sel for timestamp Capture 
+0: usb_sof_toggle_out 
+1-19: GPIO0-GPIO18 
+20: pwm7 
+21: pwm8 
+22-26: timer_trig 
+27-29: wdt_trig 
+30-37: pwm4 – pwm11 
 38-47: 0</p>
                 </td>
             </tr>
@@ -2063,14 +2063,14 @@ C-F - Reserved</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Can fd 1 Trigger mux sel for timestamp Capture<p></p>
-0: usb_sof_toggle_out<p></p>
-1-19: GPIO0-GPIO18<p></p>
-20: pwm7<p></p>
-21: pwm8<p></p>
-22-26: timer_trig<p></p>
-27-29: wdt_trig<p></p>
-30-37: pwm4 – pwm11<p></p>
+                    <p>Can fd 1 Trigger mux sel for timestamp Capture 
+0: usb_sof_toggle_out 
+1-19: GPIO0-GPIO18 
+20: pwm7 
+21: pwm8 
+22-26: timer_trig 
+27-29: wdt_trig 
+30-37: pwm4 – pwm11 
 38-47: 0</p>
                 </td>
             </tr>
@@ -2138,7 +2138,7 @@ C-F - Reserved</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0: Same clock as internal clock to TXC<p></p>
+                    <p>0: Same clock as internal clock to TXC 
 1: 90 deg phase shifted clock from internal clock on to TXC</p>
                 </td>
             </tr>
@@ -2154,9 +2154,9 @@ C-F - Reserved</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Selects the PHY interface type for the MAC<p></p>
-4’b0001 : RGMII<p></p>
-4’b0100 : RMII<p></p>
+                    <p>Selects the PHY interface type for the MAC 
+4’b0001 : RGMII 
+4’b0100 : RMII 
 All other values are invalid and should not be programmed</p>
                 </td>
             </tr>
@@ -2631,12 +2631,12 @@ All other values are invalid and should not be programmed</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Release-MAC operation is controlled by Sideband Signal<p></p>
-sbd_pmac_hold_i<p></p>
-This is Hold and Release Control for Frame Preemption specified<p></p>
-in IEEE 802.3br Std<p></p>
-The MAC considers low to high transitions on this signal as<p></p>
-start of Hold window and high to low transitions on this signal<p></p>
+                    <p>Release-MAC operation is controlled by Sideband Signal 
+sbd_pmac_hold_i 
+This is Hold and Release Control for Frame Preemption specified 
+in IEEE 802.3br Std 
+The MAC considers low to high transitions on this signal as 
+start of Hold window and high to low transitions on this signal 
 as start of Release window</p>
                 </td>
             </tr>
@@ -2704,14 +2704,14 @@ as start of Release window</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PGMII PTP Trigger mux sel for timestamp Capture<p></p>
-0: usb_sof_toggle_out<p></p>
-1-19: GPIO0-GPIO18<p></p>
-20: pwm7<p></p>
-21: pwm8<p></p>
-22-26: timer_trig<p></p>
-27-29: wdt_trig<p></p>
-30-37: pwm4 – pwm11<p></p>
+                    <p>PGMII PTP Trigger mux sel for timestamp Capture 
+0: usb_sof_toggle_out 
+1-19: GPIO0-GPIO18 
+20: pwm7 
+21: pwm8 
+22-26: timer_trig 
+27-29: wdt_trig 
+30-37: pwm4 – pwm11 
 38-47: 0</p>
                 </td>
             </tr>
@@ -2779,7 +2779,7 @@ as start of Release window</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0: Slave mode, RMII clocks from PAD<p></p>
+                    <p>0: Slave mode, RMII clocks from PAD 
 1: Master mode, RMII clocks from Global</p>
                 </td>
             </tr>
@@ -2929,9 +2929,9 @@ as start of Release window</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>All channel stop request for Non-secure channels. When asserted,<p></p>
-all Non-secure channels that are not in IDLE are stopped.<p></p>
-Channels can be enabled by software, but are immediately<p></p>
+                    <p>All channel stop request for Non-secure channels. When asserted, 
+all Non-secure channels that are not in IDLE are stopped. 
+Channels can be enabled by software, but are immediately 
 stopped if this request is asserted.</p>
                 </td>
             </tr>
@@ -2947,10 +2947,10 @@ stopped if this request is asserted.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>All channel pause request for Non-secure channels. When<p></p>
-asserted, then all Non-secure channels that are not in IDLE are<p></p>
-paused. Channels can be enabled by software, but are immediately<p></p>
-paused if this request is asserted. When the request is<p></p>
+                    <p>All channel pause request for Non-secure channels. When 
+asserted, then all Non-secure channels that are not in IDLE are 
+paused. Channels can be enabled by software, but are immediately 
+paused if this request is asserted. When the request is 
 deasserted, the operation continues.</p>
                 </td>
             </tr>
@@ -3021,8 +3021,8 @@ deasserted, the operation continues.</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>All channel stopped acknowledge for Non-secure channels. When<p></p>
-asserted, all Non-secure channels are stopped or inactive.<p></p>
+                    <p>All channel stopped acknowledge for Non-secure channels. When 
+asserted, all Non-secure channels are stopped or inactive. 
 Four-phase handshake pair of allch_stop_req_nonsec.</p>
                 </td>
             </tr>
@@ -3041,10 +3041,10 @@ Four-phase handshake pair of allch_stop_req_nonsec.</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>All channel pause request for Non-secure channels. When<p></p>
-asserted, then all Non-secure channels that are not in IDLE are<p></p>
-paused. Channels can be enabled by software, but are immediately<p></p>
-paused if this request is asserted. When the request is<p></p>
+                    <p>All channel pause request for Non-secure channels. When 
+asserted, then all Non-secure channels that are not in IDLE are 
+paused. Channels can be enabled by software, but are immediately 
+paused if this request is asserted. When the request is 
 deasserted, the operation continues.</p>
                 </td>
             </tr>
@@ -3194,7 +3194,7 @@ deasserted, the operation continues.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Enable the counter increment, SW can make enable = 0 to<p></p>
+                    <p>Enable the counter increment, SW can make enable = 0 to 
 temporarily disable counter increment</p>
                 </td>
             </tr>
@@ -4947,7 +4947,7 @@ temporarily disable counter increment</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Overflow status of total, wait and data counters. Clear will<p></p>
+                    <p>Overflow status of total, wait and data counters. Clear will 
 clear the overflow status as well.</p>
                 </td>
             </tr>
@@ -5015,7 +5015,7 @@ clear the overflow status as well.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>This bit is set by HW when counter values are latched and it's<p></p>
+                    <p>This bit is set by HW when counter values are latched and it's 
 ok for SW to read the counter</p>
                 </td>
             </tr>
@@ -5997,7 +5997,7 @@ ok for SW to read the counter</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Overflow status of total, wait and data counters. Clear will<p></p>
+                    <p>Overflow status of total, wait and data counters. Clear will 
 clear the overflow status as well.</p>
                 </td>
             </tr>
@@ -6065,7 +6065,7 @@ clear the overflow status as well.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>This bit is set by HW when counter values are latched and it's<p></p>
+                    <p>This bit is set by HW when counter values are latched and it's 
 ok for SW to read the counter</p>
                 </td>
             </tr>
@@ -7047,7 +7047,7 @@ ok for SW to read the counter</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Overflow status of total, wait and data counters. Clear will<p></p>
+                    <p>Overflow status of total, wait and data counters. Clear will 
 clear the overflow status as well.</p>
                 </td>
             </tr>
@@ -7115,7 +7115,7 @@ clear the overflow status as well.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>This bit is set by HW when counter values are latched and it's<p></p>
+                    <p>This bit is set by HW when counter values are latched and it's 
 ok for SW to read the counter</p>
                 </td>
             </tr>
@@ -8097,7 +8097,7 @@ ok for SW to read the counter</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Overflow status of total, wait and data counters. Clear will<p></p>
+                    <p>Overflow status of total, wait and data counters. Clear will 
 clear the overflow status as well.</p>
                 </td>
             </tr>
@@ -8165,7 +8165,7 @@ clear the overflow status as well.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>This bit is set by HW when counter values are latched and it's<p></p>
+                    <p>This bit is set by HW when counter values are latched and it's 
 ok for SW to read the counter</p>
                 </td>
             </tr>
@@ -9147,7 +9147,7 @@ ok for SW to read the counter</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Overflow status of total, wait and data counters. Clear will<p></p>
+                    <p>Overflow status of total, wait and data counters. Clear will 
 clear the overflow status as well.</p>
                 </td>
             </tr>
@@ -9215,7 +9215,7 @@ clear the overflow status as well.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>This bit is set by HW when counter values are latched and it's<p></p>
+                    <p>This bit is set by HW when counter values are latched and it's 
 ok for SW to read the counter</p>
                 </td>
             </tr>
@@ -10197,7 +10197,7 @@ ok for SW to read the counter</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Overflow status of total, wait and data counters. Clear will<p></p>
+                    <p>Overflow status of total, wait and data counters. Clear will 
 clear the overflow status as well.</p>
                 </td>
             </tr>
@@ -10265,7 +10265,7 @@ clear the overflow status as well.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>This bit is set by HW when counter values are latched and it's<p></p>
+                    <p>This bit is set by HW when counter values are latched and it's 
 ok for SW to read the counter</p>
                 </td>
             </tr>
@@ -11247,7 +11247,7 @@ ok for SW to read the counter</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Overflow status of total, wait and data counters. Clear will<p></p>
+                    <p>Overflow status of total, wait and data counters. Clear will 
 clear the overflow status as well.</p>
                 </td>
             </tr>
@@ -11315,7 +11315,7 @@ clear the overflow status as well.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>This bit is set by HW when counter values are latched and it's<p></p>
+                    <p>This bit is set by HW when counter values are latched and it's 
 ok for SW to read the counter</p>
                 </td>
             </tr>
@@ -12297,7 +12297,7 @@ ok for SW to read the counter</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Overflow status of total, wait and data counters. Clear will<p></p>
+                    <p>Overflow status of total, wait and data counters. Clear will 
 clear the overflow status as well.</p>
                 </td>
             </tr>
@@ -12365,7 +12365,7 @@ clear the overflow status as well.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>This bit is set by HW when counter values are latched and it's<p></p>
+                    <p>This bit is set by HW when counter values are latched and it's 
 ok for SW to read the counter</p>
                 </td>
             </tr>
@@ -12591,22 +12591,22 @@ ok for SW to read the counter</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Bit 0-7: Controls the value on Data Lines [7:0] pin if the<p></p>
-corresponding override is enabled and i_ovrdir is in<p></p>
-output mode.<p></p>
-Bit 8: Controls the value on Data Strobe pin if<p></p>
-corresponding override is enabled and i_ovrdir is in<p></p>
-output mode.<p></p>
-Bit 9-10: Controls the value on Chip Select [1:0] pins if the<p></p>
-corresponding override is enabled and i_ovrdir is in<p></p>
-output mode.<p></p>
-Bit 11-12: Not used<p></p>
-Bit 13: Controls the value on Clock Output pin if<p></p>
-corresponding override is enabled and i_ovrdir is in<p></p>
-output mode.<p></p>
-Bit 14: Controls the value on Negated Clock Output pin if<p></p>
-corresponding override is enabled and i_ovrdir is in output<p></p>
-mode.<p></p>
+                    <p>Bit 0-7: Controls the value on Data Lines [7:0] pin if the 
+corresponding override is enabled and i_ovrdir is in 
+output mode. 
+Bit 8: Controls the value on Data Strobe pin if 
+corresponding override is enabled and i_ovrdir is in 
+output mode. 
+Bit 9-10: Controls the value on Chip Select [1:0] pins if the 
+corresponding override is enabled and i_ovrdir is in 
+output mode. 
+Bit 11-12: Not used 
+Bit 13: Controls the value on Clock Output pin if 
+corresponding override is enabled and i_ovrdir is in 
+output mode. 
+Bit 14: Controls the value on Negated Clock Output pin if 
+corresponding override is enabled and i_ovrdir is in output 
+mode. 
 Bit 15-19: Not used</p>
                 </td>
             </tr>
@@ -12677,21 +12677,21 @@ Bit 15-19: Not used</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Bit 0-7: Reflects the current value of Data Lanes [7:0] pins<p></p>
-(readback), when corresponding override is<p></p>
-enabled.<p></p>
-Bit 8: Reflects the current value of Data Strobe pin<p></p>
-(readback), when corresponding override is<p></p>
-enabled.<p></p>
-Bit 9-10: Reflects the current value of Chip Selects [1:0] pins<p></p>
-(readback), when corresponding override is<p></p>
-enabled.<p></p>
-Bit 11-12: Not used<p></p>
-Bit 13: Reflects the current value of Clock Output pin<p></p>
-(readback), when corresponding override is<p></p>
-enabled.<p></p>
-Bit 14: Reflects the current value of Negated Clock Output pin<p></p>
-(readback), when corresponding override is enabled.<p></p>
+                    <p>Bit 0-7: Reflects the current value of Data Lanes [7:0] pins 
+(readback), when corresponding override is 
+enabled. 
+Bit 8: Reflects the current value of Data Strobe pin 
+(readback), when corresponding override is 
+enabled. 
+Bit 9-10: Reflects the current value of Chip Selects [1:0] pins 
+(readback), when corresponding override is 
+enabled. 
+Bit 11-12: Not used 
+Bit 13: Reflects the current value of Clock Output pin 
+(readback), when corresponding override is 
+enabled. 
+Bit 14: Reflects the current value of Negated Clock Output pin 
+(readback), when corresponding override is enabled. 
 Bit 15-19: Not used</p>
                 </td>
             </tr>
@@ -12849,7 +12849,7 @@ Bit 15-19: Not used</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Assert RST to TX BCLK domain. This is sticky Active register<p></p>
+                    <p>Assert RST to TX BCLK domain. This is sticky Active register 
 bit.</p>
                 </td>
             </tr>
@@ -12865,7 +12865,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Assert RST to RX BCLK domain. This is sticky Active register<p></p>
+                    <p>Assert RST to RX BCLK domain. This is sticky Active register 
 bit.</p>
                 </td>
             </tr>
@@ -12881,7 +12881,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0: Xtal Clk<p></p>
+                    <p>0: Xtal Clk 
 1: LP_AUDIO_CLK</p>
                 </td>
             </tr>
@@ -12912,7 +12912,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>1: MCLK_DI_2module<p></p>
+                    <p>1: MCLK_DI_2module 
 0: LP_AUDIO_CLK</p>
                 </td>
             </tr>
@@ -13070,7 +13070,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Assert RST to TX BCLK domain. This is sticky Active register<p></p>
+                    <p>Assert RST to TX BCLK domain. This is sticky Active register 
 bit.</p>
                 </td>
             </tr>
@@ -13086,7 +13086,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Assert RST to RX BCLK domain. This is sticky Active register<p></p>
+                    <p>Assert RST to RX BCLK domain. This is sticky Active register 
 bit.</p>
                 </td>
             </tr>
@@ -13102,7 +13102,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0: Xtal Clk<p></p>
+                    <p>0: Xtal Clk 
 1: LP_AUDIO_CLK</p>
                 </td>
             </tr>
@@ -13133,7 +13133,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>1: MCLK_DI_2module<p></p>
+                    <p>1: MCLK_DI_2module 
 0: LP_AUDIO_CLK</p>
                 </td>
             </tr>
@@ -13291,7 +13291,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Assert RST to TX BCLK domain. This is sticky Active register<p></p>
+                    <p>Assert RST to TX BCLK domain. This is sticky Active register 
 bit.</p>
                 </td>
             </tr>
@@ -13307,7 +13307,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Assert RST to RX BCLK domain. This is sticky Active register<p></p>
+                    <p>Assert RST to RX BCLK domain. This is sticky Active register 
 bit.</p>
                 </td>
             </tr>
@@ -13323,7 +13323,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0: Xtal Clk<p></p>
+                    <p>0: Xtal Clk 
 1: LP_AUDIO_CLK</p>
                 </td>
             </tr>
@@ -13354,7 +13354,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>1: MCLK_DI_2module<p></p>
+                    <p>1: MCLK_DI_2module 
 0: LP_AUDIO_CLK</p>
                 </td>
             </tr>
@@ -13370,7 +13370,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0: BCLK<p></p>
+                    <p>0: BCLK 
 1:MCLK</p>
                 </td>
             </tr>
@@ -13528,7 +13528,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Assert RST to TX BCLK domain. This is sticky Active register<p></p>
+                    <p>Assert RST to TX BCLK domain. This is sticky Active register 
 bit.</p>
                 </td>
             </tr>
@@ -13544,7 +13544,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Assert RST to RX BCLK domain. This is sticky Active register<p></p>
+                    <p>Assert RST to RX BCLK domain. This is sticky Active register 
 bit.</p>
                 </td>
             </tr>
@@ -13560,7 +13560,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0: Xtal Clk<p></p>
+                    <p>0: Xtal Clk 
 1: LP_AUDIO_CLK</p>
                 </td>
             </tr>
@@ -13591,7 +13591,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>1: MCLK_DI_2module<p></p>
+                    <p>1: MCLK_DI_2module 
 0: LP_AUDIO_CLK</p>
                 </td>
             </tr>
@@ -13607,7 +13607,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0: BCLK<p></p>
+                    <p>0: BCLK 
 1:MCLK</p>
                 </td>
             </tr>
@@ -13687,10 +13687,10 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>PVT Sensor Measurement mode<p></p>
-00: select temperature-related voltage<p></p>
-01: select external voltage<p></p>
-10: for test purpose<p></p>
+                    <p>PVT Sensor Measurement mode 
+00: select temperature-related voltage 
+01: select external voltage 
+10: for test purpose 
 11: for test purpose</p>
                 </td>
             </tr>
@@ -13721,7 +13721,7 @@ bit.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>TSADC Sample, Writing 1 to this bit Generates one clock cycle<p></p>
+                    <p>TSADC Sample, Writing 1 to this bit Generates one clock cycle 
 Sample Pulse to PVT</p>
                 </td>
             </tr>
@@ -13737,7 +13737,7 @@ Sample Pulse to PVT</p>
                     <p>0xD</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Increase the value of tsadc_data_count to get a higher<p></p>
+                    <p>Increase the value of tsadc_data_count to get a higher 
 precision output</p>
                 </td>
             </tr>
@@ -13753,8 +13753,8 @@ precision output</p>
                     <p>0x8</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Bandgap voltage trim control<p></p>
-4’b1000: minimum voltage<p></p>
+                    <p>Bandgap voltage trim control 
+4’b1000: minimum voltage 
 4’b1111: maximum voltage</p>
                 </td>
             </tr>
@@ -13770,7 +13770,7 @@ precision output</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Delay interms of REFCLK after data ready at which the data is<p></p>
+                    <p>Delay interms of REFCLK after data ready at which the data is 
 to be latched</p>
                 </td>
             </tr>
@@ -13786,9 +13786,9 @@ to be latched</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>When set TSEN continuous sample mode is enabled<p></p>
-Please set TSEN_CONT_SAMPLE_INTERVAL register for sampling<p></p>
-interval<p></p>
+                    <p>When set TSEN continuous sample mode is enabled 
+Please set TSEN_CONT_SAMPLE_INTERVAL register for sampling 
+interval 
 Also disable TSADC_EN in continuous sample mode.</p>
                 </td>
             </tr>
@@ -13856,9 +13856,9 @@ Also disable TSADC_EN in continuous sample mode.</p>
                     <p>0x7FF</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>TSEN continuous sample interval<p></p>
-Default is 2.7 ms interval<p></p>
-Also minimum interval has to be 1 clk as TSEN needs to see 0 to<p></p>
+                    <p>TSEN continuous sample interval 
+Default is 2.7 ms interval 
+Also minimum interval has to be 1 clk as TSEN needs to see 0 to 
 1 transition on Enable port</p>
                 </td>
             </tr>
@@ -13926,8 +13926,8 @@ Also minimum interval has to be 1 clk as TSEN needs to see 0 to<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Bandgap chopper enable control<p></p>
-0: disable chopper<p></p>
+                    <p>Bandgap chopper enable control 
+0: disable chopper 
 1: enable chopper</p>
                 </td>
             </tr>
@@ -13943,8 +13943,8 @@ Also minimum interval has to be 1 clk as TSEN needs to see 0 to<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Temperature-related voltage buffer control<p></p>
-0: disable voltage buffer<p></p>
+                    <p>Temperature-related voltage buffer control 
+0: disable voltage buffer 
 1: enable voltage buffer</p>
                 </td>
             </tr>
@@ -13960,8 +13960,8 @@ Also minimum interval has to be 1 clk as TSEN needs to see 0 to<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Bandgap voltage buffer control<p></p>
-0: disable voltage buffer and select AVDD as reference<p></p>
+                    <p>Bandgap voltage buffer control 
+0: disable voltage buffer and select AVDD as reference 
 1: enable voltage buffer and select bandgap voltage as reference</p>
                 </td>
             </tr>
@@ -13977,8 +13977,8 @@ Also minimum interval has to be 1 clk as TSEN needs to see 0 to<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>External voltage buffer control<p></p>
-0: disable voltage buffer<p></p>
+                    <p>External voltage buffer control 
+0: disable voltage buffer 
 1: enable voltage buffer</p>
                 </td>
             </tr>
@@ -13994,8 +13994,8 @@ Also minimum interval has to be 1 clk as TSEN needs to see 0 to<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Temperature-related voltage control<p></p>
-0: select voltage 1<p></p>
+                    <p>Temperature-related voltage control 
+0: select voltage 1 
 1: select voltage 2</p>
                 </td>
             </tr>
@@ -14011,8 +14011,8 @@ Also minimum interval has to be 1 clk as TSEN needs to see 0 to<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Temperature-related voltage filter bypass control<p></p>
-0: select filter<p></p>
+                    <p>Temperature-related voltage filter bypass control 
+0: select filter 
 1: bypass filter</p>
                 </td>
             </tr>
@@ -14028,8 +14028,8 @@ Also minimum interval has to be 1 clk as TSEN needs to see 0 to<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Bandgap voltage filter bypass control<p></p>
-0: select filter<p></p>
+                    <p>Bandgap voltage filter bypass control 
+0: select filter 
 1: bypass filter</p>
                 </td>
             </tr>
@@ -14045,8 +14045,8 @@ Also minimum interval has to be 1 clk as TSEN needs to see 0 to<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Reference voltgage bypass control<p></p>
-0: Select bandgap related voltage for reference<p></p>
+                    <p>Reference voltgage bypass control 
+0: Select bandgap related voltage for reference 
 1: bypass the reference voltage</p>
                 </td>
             </tr>
@@ -14062,8 +14062,8 @@ Also minimum interval has to be 1 clk as TSEN needs to see 0 to<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Oscillator voltage bypass control<p></p>
-0: select reference voltage of oscillator<p></p>
+                    <p>Oscillator voltage bypass control 
+0: select reference voltage of oscillator 
 1: bypass reference voltage of oscillator</p>
                 </td>
             </tr>
@@ -14079,8 +14079,8 @@ Also minimum interval has to be 1 clk as TSEN needs to see 0 to<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Oscillator control<p></p>
-0: disable oscillator<p></p>
+                    <p>Oscillator control 
+0: disable oscillator 
 1: enable oscillator</p>
                 </td>
             </tr>
@@ -14238,8 +14238,8 @@ Also minimum interval has to be 1 clk as TSEN needs to see 0 to<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>REFCLK Divide by 2 Select<p></p>
-0: REFCLK/2 used as TSEN Clock<p></p>
+                    <p>REFCLK Divide by 2 Select 
+0: REFCLK/2 used as TSEN Clock 
 1: REFCLK/4 used as TSEN Clock</p>
                 </td>
             </tr>
@@ -14255,9 +14255,9 @@ Also minimum interval has to be 1 clk as TSEN needs to see 0 to<p></p>
                     <p>0x2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>TSADC Clock Divider Input clock Selection<p></p>
-0: REFCLK/2<p></p>
-1: REFCLK/4<p></p>
+                    <p>TSADC Clock Divider Input clock Selection 
+0: REFCLK/2 
+1: REFCLK/4 
 2,3: REFCLK</p>
                 </td>
             </tr>
@@ -14273,7 +14273,7 @@ Also minimum interval has to be 1 clk as TSEN needs to see 0 to<p></p>
                     <p>0x20</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>TSADC Clock Divider value<p></p>
+                    <p>TSADC Clock Divider value 
 TSADC_CLK = DIV_INCLK/(TSADC_CLKDIV_VAL)</p>
                 </td>
             </tr>
@@ -14738,7 +14738,7 @@ TSADC_CLK = DIV_INCLK/(TSADC_CLKDIV_VAL)</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>When 0, any manager can set this to 1. Once set to 1, only the<p></p>
+                    <p>When 0, any manager can set this to 1. Once set to 1, only the 
 manager that set this to 1 can set it back to 0 to unlock</p>
                 </td>
             </tr>
@@ -14806,9 +14806,9 @@ manager that set this to 1 can set it back to 0 to unlock</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>The ID of the manager that locked the interface when<p></p>
-INTF_LOCK_STAT.locked is 1.<p></p>
-If INTF_LOCK_STAT.locked is 0, the value in this field is<p></p>
+                    <p>The ID of the manager that locked the interface when 
+INTF_LOCK_STAT.locked is 1. 
+If INTF_LOCK_STAT.locked is 0, the value in this field is 
 irrelevant and has no meaning.</p>
                 </td>
             </tr>
@@ -14824,9 +14824,9 @@ irrelevant and has no meaning.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>When set to 1, the interface is locked and only the manager with<p></p>
-the manager ID in INTF_LOCK_STAT.mid can access the interface as<p></p>
-well as unlock the interface.<p></p>
+                    <p>When set to 1, the interface is locked and only the manager with 
+the manager ID in INTF_LOCK_STAT.mid can access the interface as 
+well as unlock the interface. 
 When locked, other managers will RAZ/WI to the interface.</p>
                 </td>
             </tr>
@@ -14894,8 +14894,8 @@ When locked, other managers will RAZ/WI to the interface.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>When set to 1, a transition of INTF_LOCK_CTRL.locked from 1 to 0<p></p>
-will generate an interrupt and also set the INTF_LOCK_INTR_STAT<p></p>
+                    <p>When set to 1, a transition of INTF_LOCK_CTRL.locked from 1 to 0 
+will generate an interrupt and also set the INTF_LOCK_INTR_STAT 
 to 1</p>
                 </td>
             </tr>
@@ -14963,9 +14963,9 @@ to 1</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>When 1, the previous lock was released. This bit stays 1 until<p></p>
-programmed to 0.<p></p>
-Hardware will not set it back to 0 if another lock/unlock<p></p>
+                    <p>When 1, the previous lock was released. This bit stays 1 until 
+programmed to 0. 
+Hardware will not set it back to 0 if another lock/unlock 
 sequence has occurred.</p>
                 </td>
             </tr>
@@ -15033,7 +15033,7 @@ sequence has occurred.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>When 0, any manager can set this to 1. Once set to 1, only the<p></p>
+                    <p>When 0, any manager can set this to 1. Once set to 1, only the 
 manager that set this to 1 can set it back to 0 to unlock</p>
                 </td>
             </tr>
@@ -15101,9 +15101,9 @@ manager that set this to 1 can set it back to 0 to unlock</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>The ID of the manager that locked the interface when<p></p>
-INTF_LOCK_STAT.locked is 1.<p></p>
-If INTF_LOCK_STAT.locked is 0, the value in this field is<p></p>
+                    <p>The ID of the manager that locked the interface when 
+INTF_LOCK_STAT.locked is 1. 
+If INTF_LOCK_STAT.locked is 0, the value in this field is 
 irrelevant and has no meaning.</p>
                 </td>
             </tr>
@@ -15119,9 +15119,9 @@ irrelevant and has no meaning.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>When set to 1, the interface is locked and only the manager with<p></p>
-the manager ID in INTF_LOCK_STAT.mid can access the interface as<p></p>
-well as unlock the interface.<p></p>
+                    <p>When set to 1, the interface is locked and only the manager with 
+the manager ID in INTF_LOCK_STAT.mid can access the interface as 
+well as unlock the interface. 
 When locked, other managers will RAZ/WI to the interface.</p>
                 </td>
             </tr>
@@ -15189,8 +15189,8 @@ When locked, other managers will RAZ/WI to the interface.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>When set to 1, a transition of INTF_LOCK_CTRL.locked from 1 to 0<p></p>
-will generate an interrupt and also set the INTF_LOCK_INTR_STAT<p></p>
+                    <p>When set to 1, a transition of INTF_LOCK_CTRL.locked from 1 to 0 
+will generate an interrupt and also set the INTF_LOCK_INTR_STAT 
 to 1</p>
                 </td>
             </tr>
@@ -15258,9 +15258,9 @@ to 1</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>When 1, the previous lock was released. This bit stays 1 until<p></p>
-programmed to 0.<p></p>
-Hardware will not set it back to 0 if another lock/unlock<p></p>
+                    <p>When 1, the previous lock was released. This bit stays 1 until 
+programmed to 0. 
+Hardware will not set it back to 0 if another lock/unlock 
 sequence has occurred.</p>
                 </td>
             </tr>
@@ -15328,7 +15328,7 @@ sequence has occurred.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>When 0, any manager can set this to 1. Once set to 1, only the<p></p>
+                    <p>When 0, any manager can set this to 1. Once set to 1, only the 
 manager that set this to 1 can set it back to 0 to unlock</p>
                 </td>
             </tr>
@@ -15396,9 +15396,9 @@ manager that set this to 1 can set it back to 0 to unlock</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>The ID of the manager that locked the interface when<p></p>
-INTF_LOCK_STAT.locked is 1.<p></p>
-If INTF_LOCK_STAT.locked is 0, the value in this field is<p></p>
+                    <p>The ID of the manager that locked the interface when 
+INTF_LOCK_STAT.locked is 1. 
+If INTF_LOCK_STAT.locked is 0, the value in this field is 
 irrelevant and has no meaning.</p>
                 </td>
             </tr>
@@ -15414,9 +15414,9 @@ irrelevant and has no meaning.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>When set to 1, the interface is locked and only the manager with<p></p>
-the manager ID in INTF_LOCK_STAT.mid can access the interface as<p></p>
-well as unlock the interface.<p></p>
+                    <p>When set to 1, the interface is locked and only the manager with 
+the manager ID in INTF_LOCK_STAT.mid can access the interface as 
+well as unlock the interface. 
 When locked, other managers will RAZ/WI to the interface.</p>
                 </td>
             </tr>
@@ -15484,8 +15484,8 @@ When locked, other managers will RAZ/WI to the interface.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>When set to 1, a transition of INTF_LOCK_CTRL.locked from 1 to 0<p></p>
-will generate an interrupt and also set the INTF_LOCK_INTR_STAT<p></p>
+                    <p>When set to 1, a transition of INTF_LOCK_CTRL.locked from 1 to 0 
+will generate an interrupt and also set the INTF_LOCK_INTR_STAT 
 to 1</p>
                 </td>
             </tr>
@@ -15553,9 +15553,9 @@ to 1</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>When 1, the previous lock was released. This bit stays 1 until<p></p>
-programmed to 0.<p></p>
-Hardware will not set it back to 0 if another lock/unlock<p></p>
+                    <p>When 1, the previous lock was released. This bit stays 1 until 
+programmed to 0. 
+Hardware will not set it back to 0 if another lock/unlock 
 sequence has occurred.</p>
                 </td>
             </tr>
@@ -15620,7 +15620,7 @@ sequence has occurred.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Shut down mode achieves highest leakage reduction without<p></p>
+                    <p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
                 </td>
             </tr>
@@ -15636,8 +15636,8 @@ data retention</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+                    <p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -15653,7 +15653,7 @@ array content with lower voltage</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+                    <p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
                 </td>
             </tr>
@@ -15718,14 +15718,14 @@ reduction with data retention</p>
                     <p>0x3</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode.<p></p>
-POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down<p></p>
-power to periphery and maintain memory contents (VDD=X),<p></p>
-Outputs X.<p></p>
-POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode<p></p>
-to remove source bias.<p></p>
-POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power<p></p>
-to periphery and memory core, no memory data retention<p></p>
+                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode. 
+POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down 
+power to periphery and maintain memory contents (VDD=X), 
+Outputs X. 
+POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode 
+to remove source bias. 
+POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power 
+to periphery and memory core, no memory data retention 
 (VDD=X), Outputs X.</p>
                 </td>
             </tr>
@@ -15790,13 +15790,13 @@ to periphery and memory core, no memory data retention<p></p>
                     <p>0xC9C</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>TEST1 = 0 (default)<p></p>
-TEST_RNM = 0 (default)<p></p>
-RME = 1 (default)<p></p>
-RM [3:0] = 0011 (default)<p></p>
-RA [1:0] = 01 (default)<p></p>
-WA [2:0] = 110 (default)<p></p>
-WPULSE [2:0] = 000 (default)<p></p>
+                    <p>TEST1 = 0 (default) 
+TEST_RNM = 0 (default) 
+RME = 1 (default) 
+RM [3:0] = 0011 (default) 
+RA [1:0] = 01 (default) 
+WA [2:0] = 110 (default) 
+WPULSE [2:0] = 000 (default) 
 Bit 16 not used</p>
                 </td>
             </tr>
@@ -15812,13 +15812,13 @@ Bit 16 not used</p>
                     <p>0xC9C</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>TEST1 = 0 (default)<p></p>
-TEST_RNM = 0 (default)<p></p>
-RME = 1 (default)<p></p>
-RM [3:0] = 0011 (default)<p></p>
-RA [1:0] = 01 (default)<p></p>
-WA [2:0] = 110 (default)<p></p>
-WPULSE [2:0] = 000 (default)<p></p>
+                    <p>TEST1 = 0 (default) 
+TEST_RNM = 0 (default) 
+RME = 1 (default) 
+RM [3:0] = 0011 (default) 
+RA [1:0] = 01 (default) 
+WA [2:0] = 110 (default) 
+WPULSE [2:0] = 000 (default) 
 Bit 16 not used</p>
                 </td>
             </tr>
@@ -15883,16 +15883,16 @@ Bit 16 not used</p>
                     <p>0x32678</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>TEST1A = 0 (default)<p></p>
-TEST1B = 0 (default)<p></p>
-TEST_RNMA = 0 (default)<p></p>
-RMEA = 1 (default)<p></p>
-RMEB = 1 (default)<p></p>
-RMA [3:0] = 0011 (default)<p></p>
-RMB [3:0] = 0011 (default)<p></p>
-RA [1:0] = 01 (default)<p></p>
-WA [2:0] = 110 (default)<p></p>
-WPULSE [2:0] = 000 (default)<p></p>
+                    <p>TEST1A = 0 (default) 
+TEST1B = 0 (default) 
+TEST_RNMA = 0 (default) 
+RMEA = 1 (default) 
+RMEB = 1 (default) 
+RMA [3:0] = 0011 (default) 
+RMB [3:0] = 0011 (default) 
+RA [1:0] = 01 (default) 
+WA [2:0] = 110 (default) 
+WPULSE [2:0] = 000 (default) 
 Bit 22 and 23 and 24 not used</p>
                 </td>
             </tr>
@@ -15957,13 +15957,13 @@ Bit 22 and 23 and 24 not used</p>
                     <p>0xF0C</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>TEST1 = 0 (default)<p></p>
-TEST_RNM = 0 (default)<p></p>
-RME = 1 (default)<p></p>
-RM [3:0] = 0001 (default)<p></p>
-RA [1:0] = 10 (default)<p></p>
-WA [2:0] = 111 (default)<p></p>
-WPULSE [2:0] = 000 (default)<p></p>
+                    <p>TEST1 = 0 (default) 
+TEST_RNM = 0 (default) 
+RME = 1 (default) 
+RM [3:0] = 0001 (default) 
+RA [1:0] = 10 (default) 
+WA [2:0] = 111 (default) 
+WPULSE [2:0] = 000 (default) 
 Bit 16 not used</p>
                 </td>
             </tr>
@@ -15979,13 +15979,13 @@ Bit 16 not used</p>
                     <p>0xF0C</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>TEST1 = 0 (default)<p></p>
-TEST_RNM = 0 (default)<p></p>
-RME = 1 (default)<p></p>
-RM [3:0] = 0001 (default)<p></p>
-RA [1:0] = 10 (default)<p></p>
-WA [2:0] = 111 (default)<p></p>
-WPULSE [2:0] = 000 (default)<p></p>
+                    <p>TEST1 = 0 (default) 
+TEST_RNM = 0 (default) 
+RME = 1 (default) 
+RM [3:0] = 0001 (default) 
+RA [1:0] = 10 (default) 
+WA [2:0] = 111 (default) 
+WPULSE [2:0] = 000 (default) 
 Bit 16 not used</p>
                 </td>
             </tr>
@@ -16050,16 +16050,16 @@ Bit 16 not used</p>
                     <p>0x3C238</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>TEST1A = 0 (default)<p></p>
-TEST1B = 0 (default)<p></p>
-TEST_RNMA = 0 (default)<p></p>
-RMEA = 1 (default)<p></p>
-RMEB = 1 (default)<p></p>
-RMA [3:0] = 0001 (default)<p></p>
-RMB [3:0] = 0001 (default)<p></p>
-RA [1:0] = 10 (default)<p></p>
-WA [2:0] = 111 (default)<p></p>
-WPULSE [2:0] = 000 (default)<p></p>
+                    <p>TEST1A = 0 (default) 
+TEST1B = 0 (default) 
+TEST_RNMA = 0 (default) 
+RMEA = 1 (default) 
+RMEB = 1 (default) 
+RMA [3:0] = 0001 (default) 
+RMB [3:0] = 0001 (default) 
+RA [1:0] = 10 (default) 
+WA [2:0] = 111 (default) 
+WPULSE [2:0] = 000 (default) 
 Bit 22 and 23 and 24 not used</p>
                 </td>
             </tr>
@@ -16124,7 +16124,7 @@ Bit 22 and 23 and 24 not used</p>
                     <p>0x5</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>RTSEL [1:0] = 01 (default)<p></p>
+                    <p>RTSEL [1:0] = 01 (default) 
 WTSEL[3:2] = 01 (default)</p>
                 </td>
             </tr>
@@ -16140,7 +16140,7 @@ WTSEL[3:2] = 01 (default)</p>
                     <p>0x9</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>RTSEL [1:0] = 01 (default)<p></p>
+                    <p>RTSEL [1:0] = 01 (default) 
 WTSEL[3:2] = 10 (default)</p>
                 </td>
             </tr>
@@ -16156,9 +16156,9 @@ WTSEL[3:2] = 10 (default)</p>
                     <p>0x35</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>RCT [1:0] = 01 (default)<p></p>
-WCT [3:2] = 01 (default)<p></p>
-KP[6:4] = 011 (default)<p></p>
+                    <p>RCT [1:0] = 01 (default) 
+WCT [3:2] = 01 (default) 
+KP[6:4] = 011 (default) 
 Bit7 not used</p>
                 </td>
             </tr>
@@ -16174,9 +16174,9 @@ Bit7 not used</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>RTSEL [1:0] = 01 (default)<p></p>
-WTSEL [3:2] = 00 (default)<p></p>
-MTSEL [5:4] = 00 (default)<p></p>
+                    <p>RTSEL [1:0] = 01 (default) 
+WTSEL [3:2] = 00 (default) 
+MTSEL [5:4] = 00 (default) 
 Bit 7 and 8 not used</p>
                 </td>
             </tr>
@@ -16192,9 +16192,9 @@ Bit 7 and 8 not used</p>
                     <p>0x15</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>RTSEL [1:0] = 01 (default)<p></p>
-WTSEL [3:2] = 01 (default)<p></p>
-MTSEL [5:4] = 01 (default)<p></p>
+                    <p>RTSEL [1:0] = 01 (default) 
+WTSEL [3:2] = 01 (default) 
+MTSEL [5:4] = 01 (default) 
 Bit 7 and 8 not used</p>
                 </td>
             </tr>
@@ -16259,7 +16259,7 @@ Bit 7 and 8 not used</p>
                     <p>0x5</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>RTSEL[1:0] = 01 (default)<p></p>
+                    <p>RTSEL[1:0] = 01 (default) 
 WTSEL[3:2] = 01 (default)</p>
                 </td>
             </tr>
@@ -16275,7 +16275,7 @@ WTSEL[3:2] = 01 (default)</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>RTSEL[1:0] = 01 (default)<p></p>
+                    <p>RTSEL[1:0] = 01 (default) 
 WTSEL[3:2] = 00 (default)</p>
                 </td>
             </tr>
@@ -16291,7 +16291,7 @@ WTSEL[3:2] = 00 (default)</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>RTSEL[1:0] = 01 (default)<p></p>
+                    <p>RTSEL[1:0] = 01 (default) 
 WTSEL[3:2] = 00 (default)</p>
                 </td>
             </tr>
@@ -16307,7 +16307,7 @@ WTSEL[3:2] = 00 (default)</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>RTSEL[1:0] = 01 (default)<p></p>
+                    <p>RTSEL[1:0] = 01 (default) 
 WTSEL[3:2] = 00 (default)</p>
                 </td>
             </tr>
@@ -16323,7 +16323,7 @@ WTSEL[3:2] = 00 (default)</p>
                     <p>0x5</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>RTSEL[1:0] = 01 (default)<p></p>
+                    <p>RTSEL[1:0] = 01 (default) 
 WTSEL[3:2] = 01 (default)</p>
                 </td>
             </tr>
@@ -16339,7 +16339,7 @@ WTSEL[3:2] = 01 (default)</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>RTSEL[1:0] = 01 (default)<p></p>
+                    <p>RTSEL[1:0] = 01 (default) 
 WTSEL[3:2] = 00 (default)</p>
                 </td>
             </tr>
@@ -16355,7 +16355,7 @@ WTSEL[3:2] = 00 (default)</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>RTSEL[1:0] = 01 (default)<p></p>
+                    <p>RTSEL[1:0] = 01 (default) 
 WTSEL[3:2] = 00 (default)</p>
                 </td>
             </tr>
@@ -16371,7 +16371,7 @@ WTSEL[3:2] = 00 (default)</p>
                     <p>0x5</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>RTSEL[1:0] = 01 (default)<p></p>
+                    <p>RTSEL[1:0] = 01 (default) 
 WTSEL[3:2] = 01 (default)</p>
                 </td>
             </tr>
@@ -16436,7 +16436,7 @@ WTSEL[3:2] = 01 (default)</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>MCR[1:0] = 00 (default)<p></p>
+                    <p>MCR[1:0] = 00 (default) 
 MCW[3:2] = 00 (default)</p>
                 </td>
             </tr>
@@ -16452,7 +16452,7 @@ MCW[3:2] = 00 (default)</p>
                     <p>0x5</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>RTSEL[1:0] = 01 (default)<p></p>
+                    <p>RTSEL[1:0] = 01 (default) 
 WTSEL[3:2] = 01 (default)</p>
                 </td>
             </tr>
@@ -16468,10 +16468,10 @@ WTSEL[3:2] = 01 (default)</p>
                     <p>0x15</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>RTSEL[1:0] = 01 (default)<p></p>
-PTSEL[3:2] = 01 (default)<p></p>
-TRB[5:4]: 01<p></p>
-TM[6]: 0<p></p>
+                    <p>RTSEL[1:0] = 01 (default) 
+PTSEL[3:2] = 01 (default) 
+TRB[5:4]: 01 
+TM[6]: 0 
 Bit 7 not used</p>
                 </td>
             </tr>
@@ -16536,14 +16536,14 @@ Bit 7 not used</p>
                     <p>0x3</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode.<p></p>
-POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down<p></p>
-power to periphery and maintain memory contents (VDD=X),<p></p>
-Outputs X.<p></p>
-POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode<p></p>
-to remove source bias.<p></p>
-POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power<p></p>
-to periphery and memory core, no memory data retention<p></p>
+                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode. 
+POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down 
+power to periphery and maintain memory contents (VDD=X), 
+Outputs X. 
+POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode 
+to remove source bias. 
+POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power 
+to periphery and memory core, no memory data retention 
 (VDD=X), Outputs X.</p>
                 </td>
             </tr>
@@ -16608,14 +16608,14 @@ to periphery and memory core, no memory data retention<p></p>
                     <p>0x3</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode.<p></p>
-POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down<p></p>
-power to periphery and maintain memory contents (VDD=X),<p></p>
-Outputs X.<p></p>
-POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode<p></p>
-to remove source bias.<p></p>
-POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power<p></p>
-to periphery and memory core, no memory data retention<p></p>
+                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode. 
+POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down 
+power to periphery and maintain memory contents (VDD=X), 
+Outputs X. 
+POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode 
+to remove source bias. 
+POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power 
+to periphery and memory core, no memory data retention 
 (VDD=X), Outputs X.</p>
                 </td>
             </tr>
@@ -16680,14 +16680,14 @@ to periphery and memory core, no memory data retention<p></p>
                     <p>0x3</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode.<p></p>
-POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down<p></p>
-power to periphery and maintain memory contents (VDD=X),<p></p>
-Outputs X.<p></p>
-POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode<p></p>
-to remove source bias.<p></p>
-POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power<p></p>
-to periphery and memory core, no memory data retention<p></p>
+                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode. 
+POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down 
+power to periphery and maintain memory contents (VDD=X), 
+Outputs X. 
+POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode 
+to remove source bias. 
+POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power 
+to periphery and memory core, no memory data retention 
 (VDD=X), Outputs X.</p>
                 </td>
             </tr>
@@ -16752,14 +16752,14 @@ to periphery and memory core, no memory data retention<p></p>
                     <p>0x3</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode.<p></p>
-POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down<p></p>
-power to periphery and maintain memory contents (VDD=X),<p></p>
-Outputs X.<p></p>
-POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode<p></p>
-to remove source bias.<p></p>
-POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power<p></p>
-to periphery and memory core, no memory data retention<p></p>
+                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode. 
+POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down 
+power to periphery and maintain memory contents (VDD=X), 
+Outputs X. 
+POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode 
+to remove source bias. 
+POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power 
+to periphery and memory core, no memory data retention 
 (VDD=X), Outputs X.</p>
                 </td>
             </tr>
@@ -16824,14 +16824,14 @@ to periphery and memory core, no memory data retention<p></p>
                     <p>0x3</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode.<p></p>
-POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down<p></p>
-power to periphery and maintain memory contents (VDD=X),<p></p>
-Outputs X.<p></p>
-POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode<p></p>
-to remove source bias.<p></p>
-POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power<p></p>
-to periphery and memory core, no memory data retention<p></p>
+                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode. 
+POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down 
+power to periphery and maintain memory contents (VDD=X), 
+Outputs X. 
+POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode 
+to remove source bias. 
+POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power 
+to periphery and memory core, no memory data retention 
 (VDD=X), Outputs X.</p>
                 </td>
             </tr>
@@ -16896,14 +16896,14 @@ to periphery and memory core, no memory data retention<p></p>
                     <p>0x3</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode.<p></p>
-POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down<p></p>
-power to periphery and maintain memory contents (VDD=X),<p></p>
-Outputs X.<p></p>
-POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode<p></p>
-to remove source bias.<p></p>
-POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power<p></p>
-to periphery and memory core, no memory data retention<p></p>
+                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode. 
+POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down 
+power to periphery and maintain memory contents (VDD=X), 
+Outputs X. 
+POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode 
+to remove source bias. 
+POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power 
+to periphery and memory core, no memory data retention 
 (VDD=X), Outputs X.</p>
                 </td>
             </tr>
@@ -16968,14 +16968,14 @@ to periphery and memory core, no memory data retention<p></p>
                     <p>0x3</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode.<p></p>
-POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down<p></p>
-power to periphery and maintain memory contents (VDD=X),<p></p>
-Outputs X.<p></p>
-POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode<p></p>
-to remove source bias.<p></p>
-POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power<p></p>
-to periphery and memory core, no memory data retention<p></p>
+                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode. 
+POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down 
+power to periphery and maintain memory contents (VDD=X), 
+Outputs X. 
+POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode 
+to remove source bias. 
+POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power 
+to periphery and memory core, no memory data retention 
 (VDD=X), Outputs X.</p>
                 </td>
             </tr>
@@ -17040,14 +17040,14 @@ to periphery and memory core, no memory data retention<p></p>
                     <p>0x3</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode.<p></p>
-POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down<p></p>
-power to periphery and maintain memory contents (VDD=X),<p></p>
-Outputs X.<p></p>
-POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode<p></p>
-to remove source bias.<p></p>
-POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power<p></p>
-to periphery and memory core, no memory data retention<p></p>
+                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode. 
+POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down 
+power to periphery and maintain memory contents (VDD=X), 
+Outputs X. 
+POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode 
+to remove source bias. 
+POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power 
+to periphery and memory core, no memory data retention 
 (VDD=X), Outputs X.</p>
                 </td>
             </tr>
@@ -17112,14 +17112,14 @@ to periphery and memory core, no memory data retention<p></p>
                     <p>0x3</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode.<p></p>
-POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down<p></p>
-power to periphery and maintain memory contents (VDD=X),<p></p>
-Outputs X.<p></p>
-POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode<p></p>
-to remove source bias.<p></p>
-POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power<p></p>
-to periphery and memory core, no memory data retention<p></p>
+                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode. 
+POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down 
+power to periphery and maintain memory contents (VDD=X), 
+Outputs X. 
+POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode 
+to remove source bias. 
+POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power 
+to periphery and memory core, no memory data retention 
 (VDD=X), Outputs X.</p>
                 </td>
             </tr>
@@ -17184,14 +17184,14 @@ to periphery and memory core, no memory data retention<p></p>
                     <p>0x3</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode.<p></p>
-POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down<p></p>
-power to periphery and maintain memory contents (VDD=X),<p></p>
-Outputs X.<p></p>
-POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode<p></p>
-to remove source bias.<p></p>
-POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power<p></p>
-to periphery and memory core, no memory data retention<p></p>
+                    <p>POFF[1:0] = 2'b00 - No Periphery Off Mode. 
+POFF[1:0] = 2'b01 - Standard Periphery Off Mode: It shuts down 
+power to periphery and maintain memory contents (VDD=X), 
+Outputs X. 
+POFF[1:0] = 2'b10 - RM3 Periphery Off Mode: It is a Debug mode 
+to remove source bias. 
+POFF[1:0] = 2'b11 - SD Periphery Off Mode: It shuts down power 
+to periphery and memory core, no memory data retention 
 (VDD=X), Outputs X.</p>
                 </td>
             </tr>
@@ -17256,7 +17256,7 @@ to periphery and memory core, no memory data retention<p></p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Shut down mode achieves highest leakage reduction without<p></p>
+                    <p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
                 </td>
             </tr>
@@ -17272,8 +17272,8 @@ data retention</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+                    <p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -17289,7 +17289,7 @@ array content with lower voltage</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+                    <p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
                 </td>
             </tr>
@@ -17354,7 +17354,7 @@ reduction with data retention</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Shut down mode achieves highest leakage reduction without<p></p>
+                    <p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
                 </td>
             </tr>
@@ -17370,8 +17370,8 @@ data retention</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+                    <p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -17387,7 +17387,7 @@ array content with lower voltage</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+                    <p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
                 </td>
             </tr>
@@ -17452,7 +17452,7 @@ reduction with data retention</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Shut down mode achieves highest leakage reduction without<p></p>
+                    <p>Shut down mode achieves highest leakage reduction without 
 data retention</p>
                 </td>
             </tr>
@@ -17468,8 +17468,8 @@ data retention</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Deep sleep mode powers down the most of peripheral circuit for<p></p>
-leakage reduction and retains memory<p></p>
+                    <p>Deep sleep mode powers down the most of peripheral circuit for 
+leakage reduction and retains memory 
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -17485,7 +17485,7 @@ array content with lower voltage</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sleep mode powers down most peripheral circuit for leakage<p></p>
+                    <p>Sleep mode powers down most peripheral circuit for leakage 
 reduction with data retention</p>
                 </td>
             </tr>
@@ -17690,7 +17690,7 @@ reduction with data retention</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – NPU Powered Off<p></p>
+                    <p>0 – NPU Powered Off 
 1 – NPU Powered On</p>
                 </td>
             </tr>
@@ -17706,7 +17706,7 @@ reduction with data retention</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – NPU Powered Off<p></p>
+                    <p>0 – NPU Powered Off 
 1 – NPU Powered On</p>
                 </td>
             </tr>
@@ -17722,7 +17722,7 @@ reduction with data retention</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – NPU Outputs not isolated<p></p>
+                    <p>0 – NPU Outputs not isolated 
 1 – NPU Outputs isolated</p>
                 </td>
             </tr>
@@ -17790,8 +17790,8 @@ reduction with data retention</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>NPU Power Status<p></p>
-0: NPU Powered Off<p></p>
+                    <p>NPU Power Status 
+0: NPU Powered Off 
 1: NPU Powered On</p>
                 </td>
             </tr>
@@ -17810,8 +17810,8 @@ reduction with data retention</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>NPU Memory Power Status<p></p>
-0: NPU Memory Powered Off<p></p>
+                    <p>NPU Memory Power Status 
+0: NPU Memory Powered Off 
 1: NPU Memory Powered On</p>
                 </td>
             </tr>
@@ -17876,7 +17876,7 @@ reduction with data retention</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – GPU Powered Off<p></p>
+                    <p>0 – GPU Powered Off 
 1 – GPU Powered On</p>
                 </td>
             </tr>
@@ -17892,7 +17892,7 @@ reduction with data retention</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – GPU Powered Off<p></p>
+                    <p>0 – GPU Powered Off 
 1 – GPU Powered On</p>
                 </td>
             </tr>
@@ -17908,7 +17908,7 @@ reduction with data retention</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – GPU Outputs not isolated<p></p>
+                    <p>0 – GPU Outputs not isolated 
 1 – GPU Outputs isolated</p>
                 </td>
             </tr>
@@ -17976,8 +17976,8 @@ reduction with data retention</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>GPU Power Status<p></p>
-0: GPU Powered Off<p></p>
+                    <p>GPU Power Status 
+0: GPU Powered Off 
 1: GPU Powered On</p>
                 </td>
             </tr>
@@ -17996,8 +17996,8 @@ reduction with data retention</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>GPU Memory Power Status<p></p>
-0: GPU Memory Powered Off<p></p>
+                    <p>GPU Memory Power Status 
+0: GPU Memory Powered Off 
 1: GPU Memory Powered On</p>
                 </td>
             </tr>
@@ -18062,7 +18062,7 @@ reduction with data retention</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – HIFI5 Powered Off<p></p>
+                    <p>0 – HIFI5 Powered Off 
 1 – HIFI5 Powered On</p>
                 </td>
             </tr>
@@ -18078,7 +18078,7 @@ reduction with data retention</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – HIFI5 Powered Off<p></p>
+                    <p>0 – HIFI5 Powered Off 
 1 – HIFI5 Powered On</p>
                 </td>
             </tr>
@@ -18094,7 +18094,7 @@ reduction with data retention</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – HIFI5 Outputs not isolated<p></p>
+                    <p>0 – HIFI5 Outputs not isolated 
 1 – HIFI5 Outputs isolated</p>
                 </td>
             </tr>
@@ -18162,8 +18162,8 @@ reduction with data retention</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>HIFI5 Power Status<p></p>
-0: HIFI5 Powered Off<p></p>
+                    <p>HIFI5 Power Status 
+0: HIFI5 Powered Off 
 1: HIFI5 Powered On</p>
                 </td>
             </tr>
@@ -18182,8 +18182,8 @@ reduction with data retention</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>HIFI5 Memory Power Status<p></p>
-0: HIFI5 Memory Powered Off<p></p>
+                    <p>HIFI5 Memory Power Status 
+0: HIFI5 Memory Powered Off 
 1: HIFI5 Memory Powered On</p>
                 </td>
             </tr>
@@ -18248,7 +18248,7 @@ reduction with data retention</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – VISP_SS Powered Off<p></p>
+                    <p>0 – VISP_SS Powered Off 
 1 – VISP_SS Powered On</p>
                 </td>
             </tr>
@@ -18264,7 +18264,7 @@ reduction with data retention</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – VISP_SS Powered Off<p></p>
+                    <p>0 – VISP_SS Powered Off 
 1 – VISP_SS Powered On</p>
                 </td>
             </tr>
@@ -18280,7 +18280,7 @@ reduction with data retention</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – VISP_SS Outputs not isolated<p></p>
+                    <p>0 – VISP_SS Outputs not isolated 
 1 – VISP_SS Outputs isolated</p>
                 </td>
             </tr>
@@ -18348,8 +18348,8 @@ reduction with data retention</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>VISP_SS Power Status<p></p>
-0: VISP_SS Powered Off<p></p>
+                    <p>VISP_SS Power Status 
+0: VISP_SS Powered Off 
 1: VISP_SS Powered On</p>
                 </td>
             </tr>
@@ -18368,8 +18368,8 @@ reduction with data retention</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>VISP_SS Memory Power Status<p></p>
-0: VISP_SS Memory Powered Off<p></p>
+                    <p>VISP_SS Memory Power Status 
+0: VISP_SS Memory Powered Off 
 1: VISP_SS Memory Powered On</p>
                 </td>
             </tr>
@@ -18437,8 +18437,8 @@ reduction with data retention</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>M85 Logic Power Status<p></p>
-0: M85 Logic Powered Off<p></p>
+                    <p>M85 Logic Power Status 
+0: M85 Logic Powered Off 
 1: M85 Logic Powered On</p>
                 </td>
             </tr>
@@ -18457,8 +18457,8 @@ reduction with data retention</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>M85 Memory Power Status<p></p>
-0: M85 Memory Powered Off<p></p>
+                    <p>M85 Memory Power Status 
+0: M85 Memory Powered Off 
 1: M85 Memory Powered On</p>
                 </td>
             </tr>
@@ -18477,8 +18477,8 @@ reduction with data retention</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>M85 Logic Retention Power Status<p></p>
-0: M85 Logic Retention Powered Off<p></p>
+                    <p>M85 Logic Retention Power Status 
+0: M85 Logic Retention Powered Off 
 1: M85 Logic Retention Powered On</p>
                 </td>
             </tr>
@@ -20010,8 +20010,8 @@ reduction with data retention</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sync Reset perif_sync_rstn<p></p>
-0: No Reset<p></p>
+                    <p>Sync Reset perif_sync_rstn 
+0: No Reset 
 1: Reset</p>
                 </td>
             </tr>
@@ -20076,8 +20076,8 @@ reduction with data retention</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sync Reset perif_sync_rstn<p></p>
-0: Reset Not Issues<p></p>
+                    <p>Sync Reset perif_sync_rstn 
+0: Reset Not Issues 
 1: Reset Issued</p>
                 </td>
             </tr>
@@ -24701,7 +24701,7 @@ reduction with data retention</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk<p></p>
+                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk 
 cycles of hysteresis to the quiescence entry sequence</p>
                 </td>
             </tr>
@@ -24732,7 +24732,7 @@ cycles of hysteresis to the quiescence entry sequence</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk<p></p>
+                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk 
 cycles of hysteresis to the quiescence entry sequence</p>
                 </td>
             </tr>
@@ -24763,7 +24763,7 @@ cycles of hysteresis to the quiescence entry sequence</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk<p></p>
+                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk 
 cycles of hysteresis to the quiescence entry sequence</p>
                 </td>
             </tr>
@@ -24843,7 +24843,7 @@ cycles of hysteresis to the quiescence entry sequence</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk<p></p>
+                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk 
 cycles of hysteresis to the quiescence entry sequence</p>
                 </td>
             </tr>
@@ -24874,7 +24874,7 @@ cycles of hysteresis to the quiescence entry sequence</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk<p></p>
+                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk 
 cycles of hysteresis to the quiescence entry sequence</p>
                 </td>
             </tr>
@@ -24905,7 +24905,7 @@ cycles of hysteresis to the quiescence entry sequence</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk<p></p>
+                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk 
 cycles of hysteresis to the quiescence entry sequence</p>
                 </td>
             </tr>
@@ -24985,7 +24985,7 @@ cycles of hysteresis to the quiescence entry sequence</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk<p></p>
+                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk 
 cycles of hysteresis to the quiescence entry sequence</p>
                 </td>
             </tr>
@@ -25016,7 +25016,7 @@ cycles of hysteresis to the quiescence entry sequence</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk<p></p>
+                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk 
 cycles of hysteresis to the quiescence entry sequence</p>
                 </td>
             </tr>
@@ -25047,7 +25047,7 @@ cycles of hysteresis to the quiescence entry sequence</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk<p></p>
+                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk 
 cycles of hysteresis to the quiescence entry sequence</p>
                 </td>
             </tr>
@@ -25127,7 +25127,7 @@ cycles of hysteresis to the quiescence entry sequence</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk<p></p>
+                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk 
 cycles of hysteresis to the quiescence entry sequence</p>
                 </td>
             </tr>
@@ -25158,7 +25158,7 @@ cycles of hysteresis to the quiescence entry sequence</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk<p></p>
+                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk 
 cycles of hysteresis to the quiescence entry sequence</p>
                 </td>
             </tr>
@@ -25189,7 +25189,7 @@ cycles of hysteresis to the quiescence entry sequence</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk<p></p>
+                    <p>Sets the value of the quiescence entry delay. Adds 0-255 clk 
 cycles of hysteresis to the quiescence entry sequence</p>
                 </td>
             </tr>
@@ -25397,8 +25397,8 @@ cycles of hysteresis to the quiescence entry sequence</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>LPBK Clock Enable<p></p>
-1: LP_SD0_CLK_LPBK_INT<p></p>
+                    <p>LPBK Clock Enable 
+1: LP_SD0_CLK_LPBK_INT 
 0: 0</p>
                 </td>
             </tr>
@@ -25414,8 +25414,8 @@ cycles of hysteresis to the quiescence entry sequence</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>LPBK Clock Mux sel<p></p>
-0: LP_GPIO40_DI<p></p>
+                    <p>LPBK Clock Mux sel 
+0: LP_GPIO40_DI 
 1: LP_SD0_CLK_DI_LPBK</p>
                 </td>
             </tr>
@@ -25483,9 +25483,9 @@ cycles of hysteresis to the quiescence entry sequence</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>This bit is used to select the test interface on to EMMC PHY clk<p></p>
-and cmd and data.<p></p>
-0: itst_oe_* and itst_a_* comes from controller regs<p></p>
+                    <p>This bit is used to select the test interface on to EMMC PHY clk 
+and cmd and data. 
+0: itst_oe_* and itst_a_* comes from controller regs 
 1: itst_oe_* and itst_a_* comes from SOC</p>
                 </td>
             </tr>
@@ -25501,9 +25501,9 @@ and cmd and data.<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>This bit is used to select the pad mode when Test interface is<p></p>
-selected<p></p>
-0: ioe_* and ia_* drives the PADs in the PHY<p></p>
+                    <p>This bit is used to select the pad mode when Test interface is 
+selected 
+0: ioe_* and ia_* drives the PADs in the PHY 
 1: itst_oe_* and itst_a_* drives the PADs in the PHY</p>
                 </td>
             </tr>
@@ -25519,7 +25519,7 @@ selected<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>This bit is used to select the delay outputs on EMMC PHY during<p></p>
+                    <p>This bit is used to select the delay outputs on EMMC PHY during 
 test interface selection</p>
                 </td>
             </tr>
@@ -25584,22 +25584,22 @@ test interface selection</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>LP_DBG_OUT mux select<p></p>
-0x0 = USB_PHY_MON[7:0];<p></p>
-0x1 = lp_i3c_debug_port[ 7: 0];<p></p>
-0x2 = lp_i3c_debug_port[15: 8];<p></p>
-0x3 = lp_i3c_debug_port[23:16];<p></p>
-0x4 = lp_i3c_debug_port[31:24];<p></p>
-0x5 = lp_i3c_debug_port[39:32];<p></p>
-0x6 = lp_i3c_debug_port[47:40];<p></p>
-0x7 = {1'b0,lp_i3c_debug_port[54:48]};<p></p>
-0x8 = vispDebugBus[ 7:0];<p></p>
-0x9 = vispDebugBus[15:8];<p></p>
-0xa = vppTop_debug_bus[7:0];<p></p>
-0xb = v2dGPU_DEBUG_OUT[7:0];<p></p>
-0xc = test_points_ptrack0[7:0];<p></p>
-0xd = test_points_ptrack1[7:0];<p></p>
-0xe = 8'h00;<p></p>
+                    <p>LP_DBG_OUT mux select 
+0x0 = USB_PHY_MON[7:0]; 
+0x1 = lp_i3c_debug_port[ 7: 0]; 
+0x2 = lp_i3c_debug_port[15: 8]; 
+0x3 = lp_i3c_debug_port[23:16]; 
+0x4 = lp_i3c_debug_port[31:24]; 
+0x5 = lp_i3c_debug_port[39:32]; 
+0x6 = lp_i3c_debug_port[47:40]; 
+0x7 = {1'b0,lp_i3c_debug_port[54:48]}; 
+0x8 = vispDebugBus[ 7:0]; 
+0x9 = vispDebugBus[15:8]; 
+0xa = vppTop_debug_bus[7:0]; 
+0xb = v2dGPU_DEBUG_OUT[7:0]; 
+0xc = test_points_ptrack0[7:0]; 
+0xd = test_points_ptrack1[7:0]; 
+0xe = 8'h00; 
 0xf = 8'h00;</p>
                 </td>
             </tr>
@@ -25664,14 +25664,14 @@ test interface selection</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0: clk_hfrcosc<p></p>
-1: clk_lp_main_pll<p></p>
-2: clk_lp_audio_pll<p></p>
-3: clk_lp_sec_pll<p></p>
-4: clk_ulp_pll<p></p>
-5: clk_hfclk_aon2lp<p></p>
-6: vPll1_dbgClkOut<p></p>
-7: USB_DEBUG_CLK<p></p>
+                    <p>0: clk_hfrcosc 
+1: clk_lp_main_pll 
+2: clk_lp_audio_pll 
+3: clk_lp_sec_pll 
+4: clk_ulp_pll 
+5: clk_hfclk_aon2lp 
+6: vPll1_dbgClkOut 
+7: USB_DEBUG_CLK 
 8-15: 0</p>
                 </td>
             </tr>
@@ -26451,7 +26451,7 @@ test interface selection</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0: AON clock<p></p>
+                    <p>0: AON clock 
 1: PDM clock</p>
                 </td>
             </tr>
@@ -26716,9 +26716,9 @@ test interface selection</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Status for bist<p></p>
-cfg_status[0]: 0<p></p>
-cfg_status[1]: 1: bist_fail, 0: bist_pass<p></p>
+                    <p>Status for bist 
+cfg_status[0]: 0 
+cfg_status[1]: 1: bist_fail, 0: bist_pass 
 cfg_status[2]: 1: bist_done, 0: bist not finished.</p>
                 </td>
             </tr>
@@ -26879,10 +26879,10 @@ cfg_status[2]: 1: bist_done, 0: bist not finished.</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Interrupt Vector to Local CPU<p></p>
-Bit 2: UMMC_EX_OLDEST_SLOT_REPLACED Note: Bit 2 will be Reserved<p></p>
-for Ex - Access disabled<p></p>
-Bit 1: UMMC_MEM_INIT_FAIL<p></p>
+                    <p>Interrupt Vector to Local CPU 
+Bit 2: UMMC_EX_OLDEST_SLOT_REPLACED Note: Bit 2 will be Reserved 
+for Ex - Access disabled 
+Bit 1: UMMC_MEM_INIT_FAIL 
 Bit 1: UMMC_MEM_INIT_DONE</p>
                 </td>
             </tr>
@@ -27102,9 +27102,9 @@ Bit 1: UMMC_MEM_INIT_DONE</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0: 0<p></p>
-1: LP_XTAL clk<p></p>
-2: HFRC/2 clk<p></p>
+                    <p>0: 0 
+1: LP_XTAL clk 
+2: HFRC/2 clk 
 3: lp_ser_gmac/10 clk</p>
                 </td>
             </tr>

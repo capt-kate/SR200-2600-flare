@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title>aon_cfg_regs</title>
     </head>
@@ -32,7 +32,7 @@
                     <p>32'h00000000</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>LCS latched state for ULP subsystem, This register is<p></p>
+                    <p>LCS latched state for ULP subsystem, This register is 
 available for both LP in Power Down and up states.</p>
                 </td>
             </tr>
@@ -103,8 +103,8 @@ available for both LP in Power Down and up states.</p>
                     <p>32'h00000004</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>ULP Partition Reset cause status register. Write 1 to any bit<p></p>
-to clear the status. If all the below bits are 0, then the<p></p>
+                    <p>ULP Partition Reset cause status register. Write 1 to any bit 
+to clear the status. If all the below bits are 0, then the 
 Reset cause is from Chip (AON) level not partition level</p>
                 </td>
             </tr>
@@ -134,7 +134,7 @@ Reset cause is from Chip (AON) level not partition level</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Indicates Some of the ULP partition logic is reset because of<p></p>
+                    <p>Indicates Some of the ULP partition logic is reset because of 
 memory retention- &gt;on state transition.</p>
                 </td>
             </tr>
@@ -150,7 +150,7 @@ memory retention- &gt;on state transition.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Indicates Some of the ULP partition logic is reset because of<p></p>
+                    <p>Indicates Some of the ULP partition logic is reset because of 
 Full retention- &gt;on state transition.</p>
                 </td>
             </tr>
@@ -166,7 +166,7 @@ Full retention- &gt;on state transition.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Indicates Some of the ULP partition logic is reset because of<p></p>
+                    <p>Indicates Some of the ULP partition logic is reset because of 
 standby- &gt;on state transition.</p>
                 </td>
             </tr>
@@ -182,8 +182,8 @@ standby- &gt;on state transition.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Indicates ULP Partition is reset seperately using the ULP RST<p></p>
-trigger from AON_RST_TRIG_REG from Secure and Non-secure<p></p>
+                    <p>Indicates ULP Partition is reset seperately using the ULP RST 
+trigger from AON_RST_TRIG_REG from Secure and Non-secure 
 domains.</p>
                 </td>
             </tr>
@@ -219,7 +219,7 @@ domains.</p>
                     <p>32'h00000008</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>Triggers from ULP domain. This register either written by M52<p></p>
+                    <p>Triggers from ULP domain. This register either written by M52 
 or Hifi1</p>
                 </td>
             </tr>
@@ -264,8 +264,8 @@ or Hifi1</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0: Wake ULP (Self)<p></p>
-1: Wake LP<p></p>
+                    <p>0: Wake ULP (Self) 
+1: Wake LP 
 2: Wake HP</p>
                 </td>
             </tr>
@@ -301,7 +301,7 @@ or Hifi1</p>
                     <p>32'h0000000C</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>Register to to control the AON SYNC reset trigger to reset the<p></p>
+                    <p>Register to to control the AON SYNC reset trigger to reset the 
 ULP partition seperately in non-sec region</p>
                 </td>
             </tr>
@@ -503,10 +503,10 @@ ULP partition seperately in non-sec region</p>
                     <p>32'h00000018</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>SW can perform read/write on this register to keep track of<p></p>
-the chip reset.<p></p>
-Note: A Shadow register is implemented for this register which<p></p>
-stores the value that is written to this register. The Shadow<p></p>
+                    <p>SW can perform read/write on this register to keep track of 
+the chip reset. 
+Note: A Shadow register is implemented for this register which 
+stores the value that is written to this register. The Shadow 
 Register gets reset only by the RSTIn Chip Pin.</p>
                 </td>
             </tr>
@@ -755,12 +755,12 @@ Register gets reset only by the RSTIn Chip Pin.</p>
                     </p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>AMUTE interrupt event cause<p></p>
-0: No Event occurred<p></p>
-1: Mute event occurred (Low-high transition)<p></p>
-2: UnMute event occurred<p></p>
-(High-low transition)<p></p>
-3: Both Mute and unMute events occurred before one of the events<p></p>
+                    <p>AMUTE interrupt event cause 
+0: No Event occurred 
+1: Mute event occurred (Low-high transition) 
+2: UnMute event occurred 
+(High-low transition) 
+3: Both Mute and unMute events occurred before one of the events 
 cleared.</p>
                 </td>
             </tr>
@@ -796,9 +796,9 @@ cleared.</p>
                     <p>32'h00000028</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>Interrupt Enable register to generate the AON interrupt to ULP<p></p>
-module. 0 of any bit will mask the above status bits to<p></p>
-generating from interrupt. 1 will enable the corresponding<p></p>
+                    <p>Interrupt Enable register to generate the AON interrupt to ULP 
+module. 0 of any bit will mask the above status bits to 
+generating from interrupt. 1 will enable the corresponding 
 status bit to generate the AON2ULP interrupt.</p>
                 </td>
             </tr>
@@ -1062,7 +1062,7 @@ status bit to generate the AON2ULP interrupt.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Power Control Feature Disable. When 1, this will disable the<p></p>
+                    <p>Power Control Feature Disable. When 1, this will disable the 
 clock control, power control and other PCSM state movements.</p>
                 </td>
             </tr>
@@ -1078,10 +1078,10 @@ clock control, power control and other PCSM state movements.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Sleep control disable. This disables the consolidates Q channel<p></p>
-controlling the global Global Clock gate. Clock will never will<p></p>
-gate at global level and CLK_CTRL modules are byoassed<p></p>
-0: Normal CLK_CTRL operation<p></p>
+                    <p>Sleep control disable. This disables the consolidates Q channel 
+controlling the global Global Clock gate. Clock will never will 
+gate at global level and CLK_CTRL modules are byoassed 
+0: Normal CLK_CTRL operation 
 1: CLK_CTRL disabled and Global clock gate will be disabled.</p>
                 </td>
             </tr>
@@ -1097,10 +1097,10 @@ gate at global level and CLK_CTRL modules are byoassed<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Deep sleep disable. This disables the PCSM logic and will never<p></p>
-enter into any deep sleep state such as mem retection, full<p></p>
-retention and OFF mode<p></p>
-0: DEEP SLEEP States enabled<p></p>
+                    <p>Deep sleep disable. This disables the PCSM logic and will never 
+enter into any deep sleep state such as mem retection, full 
+retention and OFF mode 
+0: DEEP SLEEP States enabled 
 1: DEEP SLEEP states disabled</p>
                 </td>
             </tr>
@@ -1116,12 +1116,12 @@ retention and OFF mode<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>This bit forces PPU Pchnnel to enter into low power modes. This<p></p>
-enables the Static/ Dynamic power transitions possible without<p></p>
-any of the p-channel activity on the devices. This is strictly<p></p>
-for testing only. This will not guarantee the functionality<p></p>
-after wake up from M52/M3.<p></p>
-0x0: Normal functionality.<p></p>
+                    <p>This bit forces PPU Pchnnel to enter into low power modes. This 
+enables the Static/ Dynamic power transitions possible without 
+any of the p-channel activity on the devices. This is strictly 
+for testing only. This will not guarantee the functionality 
+after wake up from M52/M3. 
+0x0: Normal functionality. 
 0x1: Forces PACTIVE to PPU 0s and loops back PREQ to PACCEPT.</p>
                 </td>
             </tr>
@@ -1201,9 +1201,9 @@ after wake up from M52/M3.<p></p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Wakeup event mask.<p></p>
-1: Event is used for wakeup<p></p>
-0: Event is not used for wakeup<p></p>
+                    <p>Wakeup event mask. 
+1: Event is used for wakeup 
+0: Event is not used for wakeup 
 All wakeup events are by default disabled.</p>
                 </td>
             </tr>
@@ -1268,9 +1268,9 @@ All wakeup events are by default disabled.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Wakeup event Polarity.<p></p>
-1: Event trigger when the signal is 0<p></p>
-0: Event trigger whtn the signals is 1<p></p>
+                    <p>Wakeup event Polarity. 
+1: Event trigger when the signal is 0 
+0: Event trigger whtn the signals is 1 
 All wakeup events are by default trigger with high.</p>
                 </td>
             </tr>
@@ -1764,8 +1764,8 @@ All wakeup events are by default trigger with high.</p>
                     <p>32'h00000514</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>PCSM Delay register.<p></p>
-Register indicates number of clocks needs to be waited in each<p></p>
+                    <p>PCSM Delay register. 
+Register indicates number of clocks needs to be waited in each 
 stae. Delay value will be number of clocks x PCSM clock period.</p>
                 </td>
             </tr>
@@ -1845,8 +1845,8 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>32'h00000518</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>PCSM Delay register.<p></p>
-Register indicates number of clocks needs to be waited in each<p></p>
+                    <p>PCSM Delay register. 
+Register indicates number of clocks needs to be waited in each 
 stae. Delay value will be number of clocks x PCSM clock period.</p>
                 </td>
             </tr>
@@ -1926,8 +1926,8 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>32'h0000051C</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>PCSM Delay register.<p></p>
-Register indicates number of clocks needs to be waited in each<p></p>
+                    <p>PCSM Delay register. 
+Register indicates number of clocks needs to be waited in each 
 stae. Delay value will be number of clocks x PCSM clock period.</p>
                 </td>
             </tr>
@@ -2022,8 +2022,8 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>32'h00000520</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>PCSM Delay register.<p></p>
-Register indicates number of clocks needs to be waited in each<p></p>
+                    <p>PCSM Delay register. 
+Register indicates number of clocks needs to be waited in each 
 stae. Delay value will be number of clocks x PCSM clock period.</p>
                 </td>
             </tr>
@@ -2103,8 +2103,8 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>32'h00000524</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
-                    <p>PCSM Delay register.<p></p>
-Register indicates number of clocks needs to be waited in each<p></p>
+                    <p>PCSM Delay register. 
+Register indicates number of clocks needs to be waited in each 
 stae. Delay value will be number of clocks x PCSM clock period.</p>
                 </td>
             </tr>
@@ -2231,7 +2231,7 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – No Action<p></p>
+                    <p>0 – No Action 
 1 – SW requesting a MC change</p>
                 </td>
             </tr>
@@ -2247,10 +2247,10 @@ stae. Delay value will be number of clocks x PCSM clock period.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>0 – Default voltage required for On mode is 0.6V<p></p>
-1 – Default voltage required for on mode is 0.8V<p></p>
-Initially chip turns on in 0.8V mode but later it this bit can<p></p>
-be kept 0 so default it is on in 0.6V mode and the force_mc_req<p></p>
+                    <p>0 – Default voltage required for On mode is 0.6V 
+1 – Default voltage required for on mode is 0.8V 
+Initially chip turns on in 0.8V mode but later it this bit can 
+be kept 0 so default it is on in 0.6V mode and the force_mc_req 
 can change it to 0.8V part of SW DVFS.</p>
                 </td>
             </tr>
@@ -2266,8 +2266,8 @@ can change it to 0.8V part of SW DVFS.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Writing any value into this bit trigger the RWTC value change.<p></p>
-0: Related to 0.6V RWTC and/or low speed<p></p>
+                    <p>Writing any value into this bit trigger the RWTC value change. 
+0: Related to 0.6V RWTC and/or low speed 
 1: Related to 0.8V RWTC and/or high speed</p>
                 </td>
             </tr>
@@ -2335,9 +2335,9 @@ can change it to 0.8V part of SW DVFS.</p>
                     <p>0x3</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>00: Standby Mode<p></p>
-01: Logic/ Memory Retntion Mode<p></p>
-10: ULP/LP Active @0.6V<p></p>
+                    <p>00: Standby Mode 
+01: Logic/ Memory Retntion Mode 
+10: ULP/LP Active @0.6V 
 11: ULP/LP/HP Active @0.8V</p>
                 </td>
             </tr>
@@ -2368,8 +2368,8 @@ can change it to 0.8V part of SW DVFS.</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Current Status of RWTC<p></p>
-0: 0.6V RWTC selected<p></p>
+                    <p>Current Status of RWTC 
+0: 0.6V RWTC selected 
 1: 0.8V RWTC selected</p>
                 </td>
             </tr>
@@ -2948,8 +2948,8 @@ can change it to 0.8V part of SW DVFS.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>AON HWVAD Input Clock Enable<p></p>
-0: Clock is disabled<p></p>
+                    <p>AON HWVAD Input Clock Enable 
+0: Clock is disabled 
 1: Clock is enabled</p>
                 </td>
             </tr>
@@ -2965,8 +2965,8 @@ can change it to 0.8V part of SW DVFS.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>AON HWVAD logic Sticky Reset<p></p>
-0x0: HWVAD is in reset<p></p>
+                    <p>AON HWVAD logic Sticky Reset 
+0x0: HWVAD is in reset 
 0x1: HWVAD is out of reset</p>
                 </td>
             </tr>
@@ -2982,8 +2982,8 @@ can change it to 0.8V part of SW DVFS.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Setting 0x1 to this bit enables the logic to wake the ULP only<p></p>
-when HWVAD detected minimum energy. 0X0 in this bit always<p></p>
+                    <p>Setting 0x1 to this bit enables the logic to wake the ULP only 
+when HWVAD detected minimum energy. 0X0 in this bit always 
 wakes the ULP for 10ms when 160 Audio samples are available.</p>
                 </td>
             </tr>
@@ -2999,8 +2999,8 @@ wakes the ULP for 10ms when 160 Audio samples are available.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>Enables the PDM FIFO flush from VAD. When VAD detects no energy<p></p>
-in previous 160 sample it can choose to not wake up the ULP and<p></p>
+                    <p>Enables the PDM FIFO flush from VAD. When VAD detects no energy 
+in previous 160 sample it can choose to not wake up the ULP and 
 flush PDM FIFO</p>
                 </td>
             </tr>
@@ -3016,12 +3016,12 @@ flush PDM FIFO</p>
                     <p>0x1</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>VAD Frame Enable. This is to synchronize the frame 1st sample<p></p>
-with the Deep Sleep PDM sample output. Default is 1, so<p></p>
-whenever the PDM starts outputs the sample they will be treated<p></p>
-as frame starting. If one needs to re-synchronize the frame<p></p>
-change this to 0x0 and later to 0x1. PDM needs to be enable<p></p>
-after this bit is 0x1 so the first sample from the PDM is the<p></p>
+                    <p>VAD Frame Enable. This is to synchronize the frame 1st sample 
+with the Deep Sleep PDM sample output. Default is 1, so 
+whenever the PDM starts outputs the sample they will be treated 
+as frame starting. If one needs to re-synchronize the frame 
+change this to 0x0 and later to 0x1. PDM needs to be enable 
+after this bit is 0x1 so the first sample from the PDM is the 
 frame’s first sample.</p>
                 </td>
             </tr>
@@ -3037,7 +3037,7 @@ frame’s first sample.</p>
                     <p>0x0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
-                    <p>This bit is used to select one of the channel from PDM. Default<p></p>
+                    <p>This bit is used to select one of the channel from PDM. Default 
 is channel 0</p>
                 </td>
             </tr>
