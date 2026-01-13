@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <MadCap:topicToolbarProxy style="mc-topic-toolbar-items: ;" data-mc-skin="/Project/Skins/Toolbar.flskn" />
+        <MadCap:breadcrumbsProxy />
+        <MadCap:bodyProxy class="body-container" />
+        <div class="footer">
+            <hr />
+            <p class="footer">Copyright © <MadCap:variable name="General.NewDateTimeVariable" /> <MadCap:variable name="General.CompanyName" />. All Rights Reserved</p>
+        </div>
+    </body>
+</html>

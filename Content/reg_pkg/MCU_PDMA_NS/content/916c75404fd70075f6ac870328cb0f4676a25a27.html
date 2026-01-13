@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">SEC_CHCFG</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x118</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Secure Channel Configuration Register</p>
+<p>This register provides configuration fields channel attributes.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_1"><td>[31:18]</td>
+<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
+</tr>
+<tr id="CHPRIV"><td>[17]</td>
+<td><a href="#CHPRIV.desc">CHPRIV</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#CHPRIV" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_0"><td>[16:0]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="CHPRIV.desc">CHPRIV<a class="headerlink" href="#CHPRIV.desc" title="Permalink to this headline"></a></h3>
+<p>Secure Channel Privilege Enable. SEC_CHPTR selects the channel. When set to '1' it allows the channel to send transfers marked as Privileged only. The configuration registers of the selected channel are also given privileged only access rights. When set to '0' the channel is only allowed to send unprivileged transfers and the channel registers can be accessed by both privileged and unprivileged register accesses.</p>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+

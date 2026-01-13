@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">SEC_STATUSPTR</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1f0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Secure Unit Status Pointer Register</p>
+<p>This register can set a pointer to an internal status register that can show the global state of the Secure channels.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_0"><td>[31:4]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+<tr id="SECSTATUSPTR"><td>[3:0]</td>
+<td><a href="#SECSTATUSPTR.desc">SECSTATUSPTR</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#SECSTATUSPTR" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="SECSTATUSPTR.desc">SECSTATUSPTR<a class="headerlink" href="#SECSTATUSPTR.desc" title="Permalink to this headline"></a></h3>
+<p>Secure DMA Unit status pointer used to select which status value to view using STATUSVALUE register. Pointer values are:
+- 0: Channel Enabled Status for channel numbers [31 : 0]
+- 1: Channel Enabled Status for channel numbers [63 : 32]
+- 2: Channel Stopped Status for channel numbers [31 : 0]
+- 3: Channel Stopped Status for channel numbers [63 : 32]
+- 4: Channel Paused Status for channel numbers [31 : 0]
+- 5: Channel Paused Status for channel numbers [63 : 32]
+- 6: Channel Allocation Status for channel numbers [31 : 0]. Only implemented if HAS_VCH feature is supported. It shows if a virtual channel is granted allocation to a physical channel.
+- 7: Channel Allocation Status for channel numbers [63 : 32]. Only implemented if HAS_VCH feature is supported.
+- 8: Channel Allocation Stalled Status for channel numbers [31 : 0]. Only implemented if HAS_VCH feature is supported. It shows if a virtual channel is ready to execute the DMA job (it is requesting physical channel allocation), but it is not yet allocated.
+- 9: Channel Allocation Stalled Status for channel numbers [63 : 32]. Only implemented if HAS_VCH feature is supported.
+- Others: Reserved</p>
+

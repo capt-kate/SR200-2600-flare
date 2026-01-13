@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HtmlImport
+  KeepSourceLinks="false"
+  ImportResourcesLocation="NoImport"
+  SourceFolders=""
+  ImportTopics="content"
+  ImportLinkedHtmlFiles="true"
+  LastImport="2026-01-12T12:57:04.9075224-08:00"
+  ImportTopicsLocation="Content/">
+  <Files>
+    <Url
+      Source="../../../MCU_ADMA_NS/biuAUD_DMA_REG.html"
+      AbsoluteSource="file:///E:/Synaptics/SR200/SR200-2026-flare/MCU_ADMA_NS/biuAUD_DMA_REG.html" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/MCU_ADMA_NS/biuAUD_DMA_REG.html"
+      TimeStamp="1/12/2026 12:56:56 PM" />
+    <Url
+      Source="../TOCs/biuAUD_DMA_REG.fltoc"
+      TimeStamp="1/12/2026 12:57:04 PM" />
+  </GeneratedFiles>
+</HtmlImport>

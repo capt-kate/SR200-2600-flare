@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">CDMA_CLK_CTRL</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x30</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Clock control for CSS DMA.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31:9]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="clk_force"><td>[8]</td>
+<td><a href="#clk_force.desc">clk_force</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#clk_force" title="Permalink to this row"></a></td>
+</tr>
+<tr id="entry_delay"><td>[7:0]</td>
+<td><a href="#entry_delay.desc">entry_delay</a></td>
+<td><span>rw</span></td>
+<td>0x1</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#entry_delay" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="clk_force.desc">clk_force<a class="headerlink" href="#clk_force.desc" title="Permalink to this headline"></a></h3>
+<p>Disables the clock gating mechanism.</p>
+<h3 id="entry_delay.desc">entry_delay<a class="headerlink" href="#entry_delay.desc" title="Permalink to this headline"></a></h3>
+<p>Add 0-255 clk cycles of hysteresis to the quiescence entry sequence.</p>
+

@@ -1,0 +1,3400 @@
+﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>vispLPGlob</title></head>
+<body>
+<p><a NAME="vispLPGlob">"vispLPGlob"<p></p>
+</a></p>
+<p><a HREF="#LP_INTR">INTERFACE: LP_INTR</a></p>
+<p><a HREF="#LP_DBUG">INTERFACE: LP_DBUG</a></p>
+<p><a HREF="#LP_CLKG">INTERFACE: LP_CLKG</a></p>
+<p><a HREF="#LP_RSET">INTERFACE: LP_RSET</a></p>
+<p><a HREF="#IPICHCT">INTERFACE: IPICHCT</a></p>
+<p><a HREF="#IPIMUTE">INTERFACE: IPIMUTE</a></p>
+<p><a HREF="#LPGLOB">INTERFACE: LPGLOB</a></p>
+<p><a NAME="LP_INTR"><p></p>
+<a HREF="#vispLPGlob">LP_INTR</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>LP_INTR</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><h1>ENB</h1>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="LP_INTR_ENB_CTRL">CTRL</a></p>
+</td>
+<td><p>0xFFFFFFFF</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: csirx1_irq_pl:- CSI2RX1-Interrupt<p></p>
+1: isplite_mi_irq_pl:- ISPPICO Memory Interface Interrupt<p></p>
+2: isplite_irq_pl:- ISPPICO Processing interrupt<p></p>
+3: eof_pl_to_cpu_captch0_pl:- 1Shot/1inNthShot CSIRX1-IPI0 video capture Interrupt to CPU<p></p>
+4: eof_pl_to_cpu_captch1_pl:- 1Shot/1inNthShot CSIRX1-IPI1video capture Interrupt to CPU<p></p>
+5: eof_pl_to_cpu_captch2_pl:- 1Shot/1inNthShot CSIRX1-IPI2 video capture Interrupt to CPU<p></p>
+6: eof_pl_to_cpu_captch3_pl:- 1Shot/1inNthShot CSIRX1-IPI3 video capture Interrupt to CPU<p></p>
+7: video_mute_intr_sync_pl:- CSI-RX1 Video HW Mute Assert/Deassert Indication Interrupt<p></p>
+8: visp_bcmInvalidReq_pl:- BCMQ invalid Request Flag<p></p>
+9: csiRx1_ipi0_end_frame_pl:- CSI-RX1 IPI0 frame End Interrupt<p></p>
+10: csiRx1_ipi1_end_frame_pl:- CSI-RX1 IPI1 frame End Interrupt<p></p>
+11: csiRx1_ipi2_end_frame_pl:- CSI-RX1 IPI2 frame End Interrupt<p></p>
+12: csiRx1_ipi3_end_frame_pl:- CSI-RX1 IPI3 frame End Interrupt<p></p>
+13: eof_pl_to_bcmq_captch0_pl:- 1Shot/1inNthShot CSIRX1-IPI0 video capture Interrupt to BCM<p></p>
+14: eof_pl_to_bcmq_captch1_pl:- 1Shot/1inNthShot CSIRX1-IPI1 video capture Interrupt to BCM<p></p>
+15: eof_pl_to_bcmq_captch2_pl:- 1Shot/1inNthShot CSIRX1-IPI2 video capture Interrupt to BCM<p></p>
+16: eof_pl_to_bcmq_captch3_pl:- 1Shot/1inNthShot CSIRX1-IPI3 video capture Interrupt to BCM<p></p>
+17: eof_pl_ISPLITE_to_cpu_pl:- ISPLITE input IPI frame End Interrupt<p></p>
+18: eof_pl_ISPL_StreamOut_pl:- ISPPICO Streaming output frame End Interrupt<p></p>
+19: csirx2_irq_pl :- CSI2RX2-Interrupt<p></p>
+20: ispfull_mi_irq_pl:- ISP8000UL Memory Interface Interrupt<p></p>
+21: ispfull_fe_irq_pl:- ISP8000UL Fast Register access Interrupt<p></p>
+22: ispfull_irq_pl:- ISP8000UL Processing interrupt<p></p>
+23: dwp_dwe_int_pl:- Dewarp Processing interrupt<p></p>
+24: dwp_fe_int_pl:- Dewarp Fast Register access interrupt<p></p>
+25: venc_irq_pl:- Vencoder Processing interrupt<p></p>
+26: video_mute_intr_pl:- CSI-RX2 Video HW Mute Assert/Deassert Indication Interrupt<p></p>
+27: eof_pl_to_cpu_captch_pl:- 1Shot/1inNthShot CSIRX2-IPI video capture Interrupt to CPU<p></p>
+28: eof_pl_to_bcmq_captch_pl:- 1Shot/1inNthShot CSIRX2-IPI video capture Interrupt to BCM<p></p>
+29: eof_pl_ISPF_StreamOut_pl:- ISPFULL Streaming output frame End Interrupt<p></p>
+30: csiRx2_ipi_end_frame_pl:- CSI-RX2 IPI frame End Interrupt<p></p>
+31: eof_pl_ISPFULL_to_cpu_pl:- ISPFULL input IPI frame End Interrupt<p></p>
+PINT0 to PIN15 semaphore interrupt selection. Bit location for each interrupt mapping control shown.<p></p>
+0: csirx1_irq_pl:- CSI2RX1-Interrupt<p></p>
+1: isplite_mi_irq_pl:- ISPPICO Memory Interface Interrupt<p></p>
+2: isplite_irq_pl:- ISPPICO Processing interrupt<p></p>
+3: eof_pl_to_cpu_captch0_pl:- 1Shot/1inNthShot CSIRX1-IPI0 video capture Interrupt to CPU<p></p>
+4: eof_pl_to_cpu_captch1_pl:- 1Shot/1inNthShot CSIRX1-IPI1video capture Interrupt to CPU<p></p>
+5: eof_pl_to_cpu_captch2_pl:- 1Shot/1inNthShot CSIRX1-IPI2 video capture Interrupt to CPU<p></p>
+6: eof_pl_to_cpu_captch3_pl:- 1Shot/1inNthShot CSIRX1-IPI3 video capture Interrupt to CPU<p></p>
+7: video_mute_intr_sync_pl:- CSI-RX1 Video HW Mute Assert/Deassert Indication Interrupt<p></p>
+8: visp_bcmInvalidReq_pl:- BCMQ invalid Request Flag<p></p>
+9: csiRx1_ipi0_end_frame_pl:- CSI-RX1 IPI0 frame End Interrupt<p></p>
+10: csiRx1_ipi1_end_frame_pl:- CSI-RX1 IPI1 frame End Interrupt<p></p>
+11: csiRx1_ipi2_end_frame_pl:- CSI-RX1 IPI2 frame End Interrupt<p></p>
+12: csiRx1_ipi3_end_frame_pl:- CSI-RX1 IPI3 frame End Interrupt<p></p>
+13: eof_pl_to_bcmq_captch0_pl:- 1Shot/1inNthShot CSIRX1-IPI0 video capture Interrupt to BCM<p></p>
+14: eof_pl_to_bcmq_captch1_pl:- 1Shot/1inNthShot CSIRX1-IPI1 video capture Interrupt to BCM<p></p>
+15: eof_pl_to_bcmq_captch2_pl:- 1Shot/1inNthShot CSIRX1-IPI2 video capture Interrupt to BCM<p></p>
+16: eof_pl_to_bcmq_captch3_pl:- 1Shot/1inNthShot CSIRX1-IPI3 video capture Interrupt to BCM<p></p>
+17: eof_pl_ISPLITE_to_cpu_pl:- ISPLITE input IPI frame End Interrupt<p></p>
+18: eof_pl_ISPL_StreamOut_pl :- ISPPICO Streaming Output End of Frame Interrupt<p></p>
+19: csirx2_irq_pl :- CSI2RX2-Interrupt<p></p>
+20: ispfull_mi_irq_pl:- ISP8000UL Memory Interface Interrupt<p></p>
+21: ispfull_fe_irq_pl:- ISP8000UL Fast Register access Interrupt<p></p>
+22: ispfull_irq_pl:- ISP8000UL Processing interrupt<p></p>
+23: dwp_dwe_int_pl:- Dewarp Processing interrupt<p></p>
+24: dwp_fe_int_pl:- Dewarp Fast Register access interrupt<p></p>
+25: venc_irq_pl:- Vencoder Processing interrupt<p></p>
+26: video_mute_intr_pl:- CSI-RX2 Video HW Mute Assert/Deassert Indication Interrupt<p></p>
+27: eof_pl_to_cpu_captch_pl:- 1Shot/1inNthShot CSIRX2-IPI video capture Interrupt to CPU<p></p>
+28: eof_pl_to_bcmq_captch_pl:- 1Shot/1inNthShot CSIRX2-IPI video capture Interrupt to BCM<p></p>
+29: eof_pl_ISPF_StreamOut_pl:- ISPFULL Streaming Output frame End Interrupt<p></p>
+30: csiRx2_ipi_end_frame_pl:- CSI-RX2 IPI frame End Interrupt<p></p>
+31: eof_pl_ISPFULL_to_cpu_pl:- ISPFULL input IPI frame End Interrupt</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00004</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT0">PINT0</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT0_ENB">ENB</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00008</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT1">PINT1</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT1_ENB">ENB</a></p>
+</td>
+<td><p>0x2</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0000C</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT2">PINT2</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT2_ENB">ENB</a></p>
+</td>
+<td><p>0x8</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00010</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT3">PINT3</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT3_ENB">ENB</a></p>
+</td>
+<td><p>0x10</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00014</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT4">PINT4</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT4_ENB">ENB</a></p>
+</td>
+<td><p>0x20</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00018</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT5">PINT5</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT5_ENB">ENB</a></p>
+</td>
+<td><p>0x40</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0001C</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT6">PINT6</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT6_ENB">ENB</a></p>
+</td>
+<td><p>0x80</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00020</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT7">PINT7</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT7_ENB">ENB</a></p>
+</td>
+<td><p>0x100</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00024</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT8">PINT8</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT8_ENB">ENB</a></p>
+</td>
+<td><p>0x40000</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00028</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT9">PINT9</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT9_ENB">ENB</a></p>
+</td>
+<td><p>0x80000</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0002C</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT10">PINT10</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT10_ENB">ENB</a></p>
+</td>
+<td><p>0x100000</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00030</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT11">PINT11</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT11_ENB">ENB</a></p>
+</td>
+<td><p>0x800000</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00034</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT12">PINT12</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT12_ENB">ENB</a></p>
+</td>
+<td><p>0x2000000</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00038</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT13">PINT13</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT13_ENB">ENB</a></p>
+</td>
+<td><p>0x4000000</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0003C</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT14">PINT14</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT14_ENB">ENB</a></p>
+</td>
+<td><p>0x8000000</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00040</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT15">PINT15</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="LP_INTR_PINT15_ENB">ENB</a></p>
+</td>
+<td><p>0x20000000</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00044</p>
+</td>
+<td><p><a NAME="LP_INTR_STS">STS</a></p>
+</td>
+<td COLSPAN="5"><p>(R-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="LP_INTR_STS_READ">READ</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Interrupt Status. Bit wise mapping given below<p></p>
+0 : Reserved<p></p>
+1 : Reserved<p></p>
+2 : Reserved<p></p>
+3 : Reserved<p></p>
+4 : Reserved<p></p>
+5 : Reserved<p></p>
+6 : Reserved<p></p>
+7 : Reserved<p></p>
+8 : Reserved<p></p>
+9 : Reserved<p></p>
+10 : Reserved<p></p>
+11 : Reserved<p></p>
+12 : Reserved<p></p>
+13 : Reserved<p></p>
+14 : Reserved<p></p>
+15 : Reserved</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:16]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="LP_INTR_RSVDx44_b16"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="LP_DBUG"><p></p>
+<a HREF="#vispLPGlob">LP_DBUG</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>LP_DBUG</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="LP_DBUG_CTRL">CTRL</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="LP_DBUG_CTRL_CFG">CFG</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>VISP debug control [7:0] : connected to pad_pin_mux</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:8]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="LP_DBUG_RSVDx0_b8"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="LP_CLKG"><p></p>
+<a HREF="#vispLPGlob">LP_CLKG</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>LP_CLKG</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="LP_CLKG_CTRL">CTRL</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [28:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>29</p>
+</td>
+<td><p><a NAME="LP_CLKG_CTRL_CFG">CFG</a></p>
+</td>
+<td><p>0x1FFFFFFF</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0:csi2rx1_cfgClkg =CFG clock Gate to CSIRX1<p></p>
+1:dphy_cfgClk_cg =CFG clock Gate to DPHY<p></p>
+2:vidmute_cfgClkg =CFG clock Gate to VideoMute<p></p>
+3:isplite_cfgClkg =CFG clock Gate to ISPLITE<p></p>
+4:dhbintf_cfgClkg =CFG clock Gate to DHUBINTF<p></p>
+5:dhub64b_cfgClkg =CFG clock Gate to DHUB64B<p></p>
+6:bcmwrap_cfgClkg =CFG clock Gate to BCMBIU<p></p>
+7:isplite_sysClkg =SYS clock Gate to ISPLITE<p></p>
+8:dhub64b_sysClkg =SYS clock Gate to DHUB64B<p></p>
+9:dhbintf_sysClkg =SYS clock Gate to DHUBINT<p></p>
+10:bcmwrap_sysClkg =SYS clock Gate to BCMWRAP<p></p>
+11:csi2rx1_ipiClkg =CLK clock Gate to CSIRX1<p></p>
+12:hostrx1_ipi0Clkg=CFG clock Gate to CSIIPI0<p></p>
+13:hostrx1_ipi1Clkg=CLK clock Gate to CSIIPI1<p></p>
+14:hostrx1_ipi2Clkg=CFG clock Gate to CSIIPI2<p></p>
+15:hostrx1_ipi3Clkg=CLK clock Gate to CSIIPI3<p></p>
+16:rx1tdvp_ipi0Clkg=CLK clock Gate to RX1IPI0<p></p>
+17:rx1tdvp_ipi1Clkg=CLK clock Gate to RX1IPI1<p></p>
+18:rx1tdvp_ipi2Clkg=CLK clock Gate to RX1IPI2<p></p>
+19:rx1tdvp_ipi3Clkg=CLK clock Gate to RX1IPI3<p></p>
+20:rx2tdvp_ipixClkg=CLK clock Gate to RX2IPIx<p></p>
+21:isplite_Clkg =CLK clock Gate to ISPLITE<p></p>
+22:rx1tdhb_ipi0Clkg=CLK clock Gate to DHBIPI0<p></p>
+23:rx1tdhb_ipi1Clkg=CLK clock Gate to DHBIPI1<p></p>
+24:rx1tdhb_ipi2Clkg=CLK clock Gate to DHBIPI2<p></p>
+25:rx1tdhb_ipi3Clkg=CLK clock Gate to DHBIPI3<p></p>
+26:rx2tdhb_ipixClkg=CLK clock Gate to DHBIPIx<p></p>
+27:isplite_biuClkg= BIU clock Gate to ISPLITE<p></p>
+28:dhbintf_biuClkg= BIU clock Gate to DHBINTF</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:29]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>3</p>
+</td>
+<td><p><a NAME="LP_CLKG_RSVDx0_b29"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="LP_RSET"><p></p>
+<a HREF="#vispLPGlob">LP_RSET</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>LP_RSET</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="LP_RSET_SW">SW</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [26:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>27</p>
+</td>
+<td><p><a NAME="LP_RSET_SW_CTRL">CTRL</a></p>
+</td>
+<td><p>0x7FFFFFF</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0:csi2rx1_cfgRstn =CFG Reset Control to CSIRX1<p></p>
+1:vidmute_cfgRstn =CFG Reset Control to VideoMute<p></p>
+2:isplite_cfgRstn =CFG Reset Control to ISPLITE<p></p>
+3:dhbintf_cfgRstn =CFG Reset Control to DHUBINTF<p></p>
+4:dhub64b_cfgRstn =CFG Reset Control to DHUB64B<p></p>
+5:bcmwrap_cfgRstn =CFG Reset Control to BCMBIU<p></p>
+6:isplite_sysRstn =SYS Reset Control to ISPLITE<p></p>
+7:dhub64b_sysRstn =SYS Reset Control to DHUB64B<p></p>
+8:dhbintf_sysRstn =SYS Reset Control to DHUBINT<p></p>
+9:bcmwrap_sysRstn =SYS Reset Control to BCMWRAP<p></p>
+10:csiipi0_clkRstn =CFG Reset Control to CSIIPI0<p></p>
+11:csiipi1_clkRstn =CLK Reset Control to CSIIPI1<p></p>
+12:csiipi2_clkRstn =CFG Reset Control to CSIIPI2<p></p>
+13:csiipi3_clkRstn =CLK Reset Control to CSIIPI3<p></p>
+14:rx1ipi0_clkRstn =CLK Reset Control to RX1IPI0<p></p>
+15:rx1ipi1_clkRstn =CLK Reset Control to RX1IPI1<p></p>
+16:rx1ipi2_clkRstn =CLK Reset Control to RX1IPI2<p></p>
+17:rx1ipi3_clkRstn =CLK Reset Control to RX1IPI3<p></p>
+18:rx2ipix_clkRstn =CLK Reset Control to RX2IPI0<p></p>
+19:isplite_clkRstn =CLK Reset Control to ISPLITE<p></p>
+20:dhbipi0_clkRstn =CLK Reset Control to DHBIPI0<p></p>
+21:dhbipi1_clkRstn =CLK Reset Control to DHBIPI1<p></p>
+22:dhbipi2_clkRstn =CLK Reset Control to DHBIPI2<p></p>
+23:dhbipi3_clkRstn =CLK Reset Control to DHBIPI3<p></p>
+24:dhbipix_clkRstn =CLK Reset Control to DHBIPIx<p></p>
+25:isplite_biuRstn =BIU Reset Control to ISPLITE<p></p>
+26:dhbintf_biuRstn =BIU Reset Control to DHUBINT<p></p>
+VISP Soft Reset control [19:0] :</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:27]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>5</p>
+</td>
+<td><p><a NAME="LP_RSET_RSVDx0_b27"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="IPICHCT"><p></p>
+<a HREF="#vispLPGlob">IPICHCT</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>IPICHCT</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="IPICHCT_IPISWAP">IPISWAP</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="IPICHCT_IPISWAP_en">en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Ipi interface bit position reverse order<p></p>
+0: No IPI Swappping of IPI48bit<p></p>
+1: {ipi_in_data_muxed_t[15:0],ipi_in_data_muxed_t[31:16],ipi_in_data_muxed_t[47:32]}</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [2:1]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>2</p>
+</td>
+<td><p><a NAME="IPICHCT_IPISWAP_sel">sel</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Ipi interface bit position swap. It works on top of IPISWAP_SEL0 output. Center channel will be placed on MSB or LSB lanes.<p></p>
+0: output is 1:1.<p></p>
+1:{ipi_swap_en_out[31:16], ipi_swap_en_out[47:32], ipi_swap_en_out[15:0]}<p></p>
+2:{ipi_swap_en_out[47:32], ipi_swap_en_out[15:0], ipi_swap_en_out[31:16]}</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:3]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>29</p>
+</td>
+<td><p><a NAME="IPICHCT_RSVDx0_b3"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00004</p>
+</td>
+<td><p><a NAME="IPICHCT_CAPTCH">CAPTCH</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="IPICHCT_CAPTCH_enable">enable</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Static control bit to activate/inactivate CSI2RX to ISP/DHUB path<p></p>
+1: IPI data to ISP/DHUB path active<p></p>
+0: IPI data to ISP/DHUB path inactive</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [1:1]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="IPICHCT_CAPTCH_one_shot_capture_on">one_shot_capture_on</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Keep it 1 to activate one_shot capture mode</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [2:2]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="IPICHCT_CAPTCH_one_shot_capture">one_shot_capture</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write 1 followed by write 0 to capture the next frame (One Shot Capture Trigger)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [3:3]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="IPICHCT_CAPTCH_capture_sw">capture_sw</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>1: Software controlled capture mechanism being used. CSI2RX output is active all time available for ISP processing, and the DHUB writes all the frames into DRAM. But hardware sends interrupt to CPU as set by the Frame capture modes. For 1 in Nth capture mode: End of Frame (EOF) interrupt only for N-th frame. For upon One-shot frame capture trigger: End of Frame (EOF) interrupt only for the immediate next frame.<p></p>
+0: Hardware controlled capture mechanism being used. CSI2RX hardware writes only n-th frame or one-shot frame in DRAM and sends EOF interrupt only for those frames</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [11:4]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="IPICHCT_CAPTCH_nframes_skip">nframes_skip</a></p>
+</td>
+<td><p>0x3</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Configure it with number of initial frames to be ignored by this path. When CSI2RX is awaken by SW, it starts to send frame on IPI interface (ipi_vsync, ipi_hsync, ipi_pixen). This path can be configured to ignore first few frames. Configure it with number-of-frames-to-be-skipped.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [19:12]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="IPICHCT_CAPTCH_n_eof">n_eof</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Capture every nth frame<p></p>
+Write 0 to capture every frame<p></p>
+Write 1 to capture every 1st frame<p></p>
+Write 2 to capture every 2nd frame<p></p>
+…<p></p>
+Write 255 to capture every 255th frame</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [20:20]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="IPICHCT_CAPTCH_Intr_skip">Intr_skip</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Delay the Interrupt to BCMQ and DHUB-Semaphore for the initial “nframes_skip” frames</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:21]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>11</p>
+</td>
+<td><p><a NAME="IPICHCT_RSVDx4_b21"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00008</p>
+</td>
+<td><p><a NAME="IPICHCT_IPIMSB">IPIMSB</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="IPICHCT_IPIMSB_mask">mask</a></p>
+</td>
+<td><p>0xFFFF</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Format based mask 16bMASB at ipi0_48bit interface.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:16]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="IPICHCT_RSVDx8_b16"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0000C</p>
+</td>
+<td><p><a NAME="IPICHCT_IPILSB">IPILSB</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="IPICHCT_IPILSB_mask">mask</a></p>
+</td>
+<td><p>0xFFFFFFFF</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Format based mask 32bLSB at ipi0_48bit interface.</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="IPIMUTE"><p></p>
+<a HREF="#vispLPGlob">IPIMUTE</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>IPIMUTE</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Hardware MUTE for the IPI videos</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="IPIMUTE_HWMUTE">HWMUTE</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="IPIMUTE_HWMUTE_DEB_DELAY">DEB_DELAY</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Debounce delay in milliseconds for VIDEO_MUTE switch transition<p></p>
+Range: 0ms to 255ms</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:8]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="IPIMUTE_HWMUTE_EFF_DELAY">EFF_DELAY</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Effective delay in milliseconds for VIDEO_MUTE switch transition<p></p>
+Range: 0ms to 255ms</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [16:16]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="IPIMUTE_HWMUTE_polarity_sel">polarity_sel</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Select input mute signal polarity<p></p>
+1: active low<p></p>
+0: active high(default)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:17]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>15</p>
+</td>
+<td><p><a NAME="IPIMUTE_RSVDx0_b17"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="LPGLOB"><p></p>
+<a HREF="#vispLPGlob">LPGLOB</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>LPGLOB</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>VISP SubSystem LP module Global Register controls</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="LPGLOB_"><p></p>
+</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#LP_RSET">$LP_RSET</a></p>
+</td>
+<td><p><a NAME="LPGLOB_VISPLP_RSET">VISPLP_RSET</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00004</p>
+</td>
+<td><p><a NAME="LPGLOB_"><p></p>
+</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#LP_CLKG">$LP_CLKG</a></p>
+</td>
+<td><p><a NAME="LPGLOB_VISPLP_CLKG">VISPLP_CLKG</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00008</p>
+</td>
+<td><p><a NAME="LPGLOB_"><p></p>
+</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#LP_INTR">$LP_INTR</a></p>
+</td>
+<td><p><a NAME="LPGLOB_VISPLP_INTR">VISPLP_INTR</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00050</p>
+</td>
+<td><p><a NAME="LPGLOB_"><p></p>
+</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#LP_DBUG">$LP_DBUG</a></p>
+</td>
+<td><p><a NAME="LPGLOB_VISPLP_DBUG">VISPLP_DBUG</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00054</p>
+</td>
+<td><p><a NAME="LPGLOB_CTRL">CTRL</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="LPGLOB_CTRL_DHUB_dyCG_en">DHUB_dyCG_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>If AIODHUB_CG_en is 1, then this bit is invalid<p></p>
+1: HW will gate the clock dynamically<p></p>
+0: free running clock</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [1:1]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="LPGLOB_CTRL_DHUB_CG_en">DHUB_CG_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: clock gating is based on AIODHUB_dyCG_en<p></p>
+1: static clock gating</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [2:2]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="LPGLOB_CTRL_BCM_FIFO_FLUSH">BCM_FIFO_FLUSH</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Flushes OCPF async FIFO between vdHub64bdhub and BCM.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [3:3]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="LPGLOB_CTRL_BCMQ_FIFO_FLUSH">BCMQ_FIFO_FLUSH</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Flushes OCPF async FIFO between vdHub64bdhub and BCMQ.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:4]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>4</p>
+</td>
+<td><p><a NAME="LPGLOB_CTRL_INTR_EN">INTR_EN</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Bit[0]:=1, enable for BCM invalid request interrupt</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [8:8]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="LPGLOB_CTRL_CSIRX1_IPI0rstn">CSIRX1_IPI0rstn</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: Enable use of IPI0 channel reset from CSIRX1 to reset IPI0 channel along with Global IPI0 channel reset.<p></p>
+1: Disable use of IPI0 channel reset from CSIRX1 to reset IPI0 channel, Only Global IPI0 channel reset is effective.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [9:9]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="LPGLOB_CTRL_CSIRX1_IPI1rstn">CSIRX1_IPI1rstn</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: Enable use of IPI0 channel reset from CSIRX1 to reset IPI0 channel along with Global IPI0 channel reset.<p></p>
+1: Disable use of IPI0 channel reset from CSIRX1 to reset IPI0 channel, Only Global IPI0 channel reset is effective.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [10:10]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="LPGLOB_CTRL_CSIRX1_IPI2rstn">CSIRX1_IPI2rstn</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: Enable use of IPI2 channel reset from CSIRX1 to reset IPI2 channel along with Global IPI2 channel reset.<p></p>
+1: Disable use of IPI2 channel reset from CSIRX1 to reset IPI2 channel, Only Global IPI2 channel reset is effective.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [11:11]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="LPGLOB_CTRL_CSIRX1_IPI3rstn">CSIRX1_IPI3rstn</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: Enable use of IPI3 channel reset from CSIRX1 to reset IPI3 channel along with Global IPI3 channel reset.<p></p>
+1: Disable use of IPI3 channel reset from CSIRX1 to reset IPI3 channel, Only Global IPI3 channel reset is effective.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:12]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>20</p>
+</td>
+<td><p><a NAME="LPGLOB_RSVDx54_b12"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00058</p>
+</td>
+<td><p><a NAME="LPGLOB_PWR_CTRL">PWR_CTRL</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [2:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>3</p>
+</td>
+<td><p><a NAME="LPGLOB_PWR_CTRL_CSISRAM">CSISRAM</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>CSI2-RX1 SRAM power controls</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:3]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>29</p>
+</td>
+<td><p><a NAME="LPGLOB_RSVDx58_b3"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0005C</p>
+</td>
+<td><p><a NAME="LPGLOB_AXIENB">AXIENB</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="LPGLOB_AXIENB_ISO">ISO</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>[i] : 1 means Isolate AXI bus [i]</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:8]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="LPGLOB_RSVDx5C_b8"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00060</p>
+</td>
+<td><p><a NAME="LPGLOB_AXICLR">AXICLR</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="LPGLOB_AXICLR_ISO">ISO</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>[i] : clear AXI bus[i] ISO status machine</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:8]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="LPGLOB_RSVDx60_b8"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00064</p>
+</td>
+<td><p><a NAME="LPGLOB_AXISTAT">AXISTAT</a></p>
+</td>
+<td COLSPAN="5"><p>(R-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="LPGLOB_AXISTAT_ISO">ISO</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>[i] : AXI bus[i] ISO status. 1: busy</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:8]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="LPGLOB_RSVDx64_b8"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00068</p>
+</td>
+<td><p><a NAME="LPGLOB_CFGENB">CFGENB</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="LPGLOB_CFGENB_ISO">ISO</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>[i] : 1 means Isolate CFG bus [i]</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:8]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="LPGLOB_RSVDx68_b8"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0006C</p>
+</td>
+<td><p><a NAME="LPGLOB_CFGCLR">CFGCLR</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="LPGLOB_CFGCLR_ISO">ISO</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>[i] : clear CFG bus[i] ISO status machine</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:8]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="LPGLOB_RSVDx6C_b8"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00070</p>
+</td>
+<td><p><a NAME="LPGLOB_CFGSTAT">CFGSTAT</a></p>
+</td>
+<td COLSPAN="5"><p>(R-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="LPGLOB_CFGSTAT_ISO">ISO</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>[i] : CFG bus[i] ISO status. 1: busy</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:8]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="LPGLOB_RSVDx70_b8"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00074</p>
+</td>
+<td><p><a NAME="LPGLOB_SWMUTE">SWMUTE</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [3:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>4</p>
+</td>
+<td><p><a NAME="LPGLOB_SWMUTE_VID">VID</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>[0] Software MUTE for the IPI0 video<p></p>
+[1] Software MUTE for the IPI1 video<p></p>
+[2] Software MUTE for the IPI2 video<p></p>
+[3] Software MUTE for the IPI3 video</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:4]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>28</p>
+</td>
+<td><p><a NAME="LPGLOB_RSVDx74_b4"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00078</p>
+</td>
+<td><p><a NAME="LPGLOB_"><p></p>
+</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#IPIMUTE">$IPIMUTE</a></p>
+</td>
+<td><p><a NAME="LPGLOB_IPIMUTE">IPIMUTE</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>For IPI0 to IPI3 inputs, both Hardware and Software MUTE logic, interrupt generation controls.</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0007C</p>
+</td>
+<td><p><a NAME="LPGLOB_IPIMUX">IPIMUX</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [2:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>3</p>
+</td>
+<td><p><a NAME="LPGLOB_IPIMUX_SEL">SEL</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>IPI Selection Multiplexer<p></p>
+0: IPI0 from CSI2-RX1<p></p>
+RAW8~12b or MONO-8b<p></p>
+1: IPI1 from CSI2-RX1<p></p>
+RAW8~12b or MONO-8b<p></p>
+2: IPI2 from CSI2-RX1<p></p>
+RAW8~12b or MONO-8b<p></p>
+3: IPI3 from CSI2-RX1<p></p>
+RAW8~12b or MONO-8b<p></p>
+4: IPI from CSI2-RX2<p></p>
+RAW8~12b or MONO-8b<p></p>
+5,6,7: IPI turn OFF</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [5:3]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>3</p>
+</td>
+<td><p><a NAME="LPGLOB_IPIMUX_FORMAT">FORMAT</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>ISPPICO input data format selection<p></p>
+0:RAW8 MSB aligned in 12bit ISP data<p></p>
+1:RAW10 MSB aligned in 12bit ISP data<p></p>
+2:RAW12 MSB aligned in 12bit ISP data<p></p>
+3:Not used<p></p>
+4:RAW8 LSB aligned in 12bit ISP data<p></p>
+5:RAW10 LSB aligned in 12bit ISP data<p></p>
+6:RAW12 LSB aligned in 12bit ISP data<p></p>
+7:Not used</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [6:6]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="LPGLOB_IPIMUX_ppc_sel">ppc_sel</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Input IPI data type selection<p></p>
+0: 3PPC 3 pixel per clock<p></p>
+1: 1PPC 1 pixel per clock</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [18:7]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>12</p>
+</td>
+<td><p><a NAME="LPGLOB_IPIMUX_IPIHALT_SEL">IPIHALT_SEL</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>IPIHALT_SEL[2:0] : CSI2-RX1_IPI0 ipi_halt selection<p></p>
+000: 1'b0;<p></p>
+001: isplite;<p></p>
+010: dhub_writeclient;<p></p>
+011: isplite|dhub_writeclient;<p></p>
+100: ispfull;<p></p>
+101: isplite|ispfull;<p></p>
+110: dhub_writeclient | ispfull;<p></p>
+111:isplite|dhub_writeclient|ispfull<p></p>
+Similarly for CSI2-RX1_IPI1,CSI2-RX1_IPI2 and CSI2-RX1_IPI3, same above selection order followed.<p></p>
+IPIHALT_SEL[5:3]: CSI2-RX1 ipi1_halt selection<p></p>
+IPIHALT_SEL[8:6]: CSI2-RX1 ipi2_halt selection<p></p>
+IPIHALT_SEL[11:9]: CSI2-RX1 ipi3_halt selection</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:19]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>13</p>
+</td>
+<td><p><a NAME="LPGLOB_RSVDx7C_b19"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00080</p>
+</td>
+<td><p><a NAME="LPGLOB_RX1HACT">RX1HACT</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [12:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>13</p>
+</td>
+<td><p><a NAME="LPGLOB_RX1HACT_PIXNUM">PIXNUM</a></p>
+</td>
+<td><p>0x280</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Horizontal Active Pixels for CSIRX1 Sensor data<p></p>
+Used during IPI-3PPC to DVP-1PPC conversion, for pixel enable generation/Horizontal cropping.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:13]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>19</p>
+</td>
+<td><p><a NAME="LPGLOB_RSVDx80_b13"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00084</p>
+</td>
+<td><p><a NAME="LPGLOB_RX2HACT">RX2HACT</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [12:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>13</p>
+</td>
+<td><p><a NAME="LPGLOB_RX2HACT_PIXNUM">PIXNUM</a></p>
+</td>
+<td><p>0x280</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Horizontal Active Pixels for CSIRX2 Sensor data<p></p>
+Used during IPI-3PPC to DVP-1PPC conversion, for pixel enable generation/Horizontal cropping.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:13]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>19</p>
+</td>
+<td><p><a NAME="LPGLOB_RSVDx84_b13"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00088</p>
+</td>
+<td><p><a NAME="LPGLOB_IPIGATE">IPIGATE</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [1:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>2</p>
+</td>
+<td><p><a NAME="LPGLOB_IPIGATE_ipimux">ipimux</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: IPI blocked , 1: IPI enabled<p></p>
+[0] IPI gate for the CSIRX1-IPIx given to IPItoDVP conversion FIFO.<p></p>
+[1] IPI gate for the CSIRX2-IPI given to IPItoDVP conversion FIFO.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [8:2]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>7</p>
+</td>
+<td><p><a NAME="LPGLOB_IPIGATE_dhintf">dhintf</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: IPI blocked , 1: IPI enabled<p></p>
+[0] Enable gatelogic for the IPI input to CSIRX1-IPI0 to DHUB write client fifo.<p></p>
+[1] Enable gatelogic for the IPI input to CSIRX1-IPI1 to DHUB write client fifo.<p></p>
+[2] Enable gatelogic for the IPI input to CSIRX1-IPI2 to DHUB write client fifo.<p></p>
+[3] Enable gatelogic for the IPI input to CSIRX1-IPI3 to DHUB write client fifo.<p></p>
+[4] Enable gatelogic for the Embedded data input to CSIRX1-IPIembed to DHUB write client fifo.<p></p>
+[5] Enable gatelogic for the IPI input to CSIRX2-IPI to DHUB write client fifo.<p></p>
+[6] Enable gatelogic for the Embedded data input to CSIRX2-IPIembed to DHUB write client fifo.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:9]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>23</p>
+</td>
+<td><p><a NAME="LPGLOB_RSVDx88_b9"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0008C</p>
+</td>
+<td><p><a NAME="LPGLOB_CTRL1">CTRL1</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [4:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>5</p>
+</td>
+<td><p><a NAME="LPGLOB_CTRL1_fifoFlush">fifoFlush</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>[0]: set 0-- >1-- >0 to flush the CSIRX1 IPItoDVP fifo<p></p>
+[1]: Set 1 to use fifoflush[0] pulse to reset the counter used for the CSI2RX1 3PPC IPI output to 1PPC DVP converter.<p></p>
+0: Vsync from CSI2RX1 IPIs used for 3PPC to 1PPC converter mod3 counter reset.<p></p>
+[2]: set 0-- >1-- >0 to flush the CSIRX2 IPItoDVP fifo<p></p>
+[3]: Set 1 to use fifoflush[2] pulse to reset the counter used for the CSI2RX2 3PPC IPI output to 1PPC DVP converter.<p></p>
+0: Vsync from CSI2RX2 IPIs used for 3PPC to 1PPC converter mod3 counter reset.<p></p>
+fifoFlush[4]: IPItoDVP Sync conversion option<p></p>
+0: H and V Sync pulse Overlap with Pixel Enable at the first pixel of the line.<p></p>
+1: H and V Sync pulses are positioned as received from the CSI2RX, I.e to disable the Sync overlap with First pixel of the line</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [6:5]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>2</p>
+</td>
+<td><p><a NAME="LPGLOB_CTRL1_ipicntrst">ipicntrst</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>IPI 3PPC to 1PPC : MOD3 converter Reset options.<p></p>
+0: Vsync OR Hsync based Reset<p></p>
+1: Vsync only based Reset<p></p>
+2: Hsync only based Reset<p></p>
+3: FIFO flush based Reset</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:7]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="LPGLOB_CTRL1_ipiHcrop">ipiHcrop</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>1: Disable IPItoDVP Horizontal Crop<p></p>
+to limiting to RX1HACT/ RX2HACT to ISP<p></p>
+0: Enable IPItoDVP Horizontal Crop<p></p>
+to limiting to RX1HACT/ RX2HACT to ISP</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:8]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="LPGLOB_RSVDx8C_b8"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00090</p>
+</td>
+<td><p><a NAME="LPGLOB_"><p></p>
+</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#IPICHCT">$IPICHCT</a></p>
+</td>
+<td><p><a NAME="LPGLOB_IPICH0CT">IPICH0CT</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>IPI0 Input SWAP control, MASKing and Video capture trigger interrupt generation</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x000A0</p>
+</td>
+<td><p><a NAME="LPGLOB_"><p></p>
+</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#IPICHCT">$IPICHCT</a></p>
+</td>
+<td><p><a NAME="LPGLOB_IPICH1CT">IPICH1CT</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>IPI1 Input SWAP control, MASKing and Video capture trigger interrupts generation</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x000B0</p>
+</td>
+<td><p><a NAME="LPGLOB_"><p></p>
+</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#IPICHCT">$IPICHCT</a></p>
+</td>
+<td><p><a NAME="LPGLOB_IPICH2CT">IPICH2CT</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>IPI2 Input SWAP control, MASKing and Video capture trigger interrupt generation</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x000C0</p>
+</td>
+<td><p><a NAME="LPGLOB_"><p></p>
+</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#IPICHCT">$IPICHCT</a></p>
+</td>
+<td><p><a NAME="LPGLOB_IPICH3CT">IPICH3CT</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>IPI3 Input SWAP control, MASKing and Video capture trigger interrupts generation</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x000D0</p>
+</td>
+<td><p><a NAME="LPGLOB_LPSTART">LPSTART</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="LPGLOB_LPSTART_isplite">isplite</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>ISP LITE Start bit</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="LPGLOB_RSVDxD0_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x000D4</p>
+</td>
+<td><p><a NAME="LPGLOB_LPSTAT">LPSTAT</a></p>
+</td>
+<td COLSPAN="5"><p>(R-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="LPGLOB_LPSTAT_FLAGS">FLAGS</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>FIFO Full status.<p></p>
+[0]: VispLP IPItoDVP FIFO overflow status<p></p>
+[1]: rx1 ipi0 RAW8 WClient Overflow status<p></p>
+[2]: rx1 ipi1 RAW8 WClient Overflow status<p></p>
+[3]: rx1 ipi2 RAW8 WClient Overflow status<p></p>
+[4]: rx1 ipi3 RAW8 WClient Overflow status<p></p>
+[5]: rx1 Embedded WrClient Overflow status<p></p>
+[6]: rx2 ipi Y WClient Overflow status<p></p>
+[7]: rx2 ipi C WClient Overflow status<p></p>
+[8]: rx2 Embedded WrClient Overflow status<p></p>
+[9]: Sensor Hsync to ISP<p></p>
+[10]:Sensor Vsync to ISP<p></p>
+[11]:Sensor DataValid to ISP<p></p>
+[12]:Sensor EndofFrame to ISP<p></p>
+[13:15]: NA</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:16]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="LPGLOB_RSVDxD4_b16"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x000D8</p>
+</td>
+<td><p><a NAME="LPGLOB_STSCLR">STSCLR</a></p>
+</td>
+<td COLSPAN="5"><p>(WOC-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="LPGLOB_STSCLR_CLEAR">CLEAR</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write 1 to clear status bit registers.<p></p>
+End</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:16]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="LPGLOB_RSVDxD8_b16"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+</body></html>

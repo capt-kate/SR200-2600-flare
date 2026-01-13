@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">HMAC Key Length</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0xa0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>This register hold HMAC key length, size unit is byte. For SHA1/256/224/MD5, Our hash engine limits HMAC key length to not larger than 64bytes.<p></p>
+For SHA512/384, Our hash engine limits HMAC key length to not larger than 128bytes.<p></p>
+</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31:8]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="len"><td>[7:0]</td>
+<td><a href="#len.desc">len</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>HMAC Key Length</td>
+<td>H<a class="headerlink" href="#len" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="len.desc">len - HMAC Key Length<a class="headerlink" href="#len.desc" title="Permalink to this headline"></a></h3>
+<p>HMAC key length, size unit is byte. For SHA1/256/224/MD5, Our hash engine limits HMAC key length to not larger than 64bytes. For SHA512/384, Our hash engine limits HMAC key length to not larger than 128bytes.<p></p>
+</p>
+

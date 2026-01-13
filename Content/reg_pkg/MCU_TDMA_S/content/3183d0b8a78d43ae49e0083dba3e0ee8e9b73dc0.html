@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">SEC_STATUS</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x108</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Secure Status Register</p>
+<p>This register provides information about the overall status of the Secure channels.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_1"><td>[31:20]</td>
+<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
+</tr>
+<tr id="STAT_ALLCHPAUSED"><td>[19]</td>
+<td><a href="#STAT_ALLCHPAUSED.desc">STAT_ALLCHPAUSED</a></td>
+<td><span>rw</span>,<span>woclr</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#STAT_ALLCHPAUSED" title="Permalink to this row"></a></td>
+</tr>
+<tr id="STAT_ALLCHSTOPPED"><td>[18]</td>
+<td><a href="#STAT_ALLCHSTOPPED.desc">STAT_ALLCHSTOPPED</a></td>
+<td><span>rw</span>,<span>woclr</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#STAT_ALLCHSTOPPED" title="Permalink to this row"></a></td>
+</tr>
+<tr id="STAT_ALLCHIDLE"><td>[17]</td>
+<td><a href="#STAT_ALLCHIDLE.desc">STAT_ALLCHIDLE</a></td>
+<td><span>rw</span>,<span>woclr</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#STAT_ALLCHIDLE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_0"><td>[16:4]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTR_ALLCHPAUSED"><td>[3]</td>
+<td><a href="#INTR_ALLCHPAUSED.desc">INTR_ALLCHPAUSED</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTR_ALLCHPAUSED" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTR_ALLCHSTOPPED"><td>[2]</td>
+<td><a href="#INTR_ALLCHSTOPPED.desc">INTR_ALLCHSTOPPED</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTR_ALLCHSTOPPED" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTR_ALLCHIDLE"><td>[1]</td>
+<td><a href="#INTR_ALLCHIDLE.desc">INTR_ALLCHIDLE</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTR_ALLCHIDLE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTR_ANYCHINTR"><td>[0]</td>
+<td><a href="#INTR_ANYCHINTR.desc">INTR_ANYCHINTR</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTR_ANYCHINTR" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="STAT_ALLCHPAUSED.desc">STAT_ALLCHPAUSED<a class="headerlink" href="#STAT_ALLCHPAUSED.desc" title="Permalink to this headline"></a></h3>
+<p>All Secure Channel Paused Status. Set to '1' whenever all Secure DMA channel is in paused or inactive state and the ALLCHPAUSE request is active. Not set when channels reach the paused state for other reasons. All Secure channels are forced to an immediate pause until ALLCHPAUSE request is asserted even if they were enabled after the request. Cleared by writing '1' to this bit which results in all secure channels to resume their operation. The ALLCHPAUSE request is also cleared when this bit is cleared.</p>
+<h3 id="STAT_ALLCHSTOPPED.desc">STAT_ALLCHSTOPPED<a class="headerlink" href="#STAT_ALLCHSTOPPED.desc" title="Permalink to this headline"></a></h3>
+<p>All Secure Channel Stopped Status. Set to '1' whenever all Secure DMA channels are in stopped or inactive state and the ALLCHSTOP request is active. Not set when channels reach the stopped state for other reasons. All Secure channels are forced to an immediate stopped state until ALLCHSTOP request is asserted even if they were enabled after the request. Cleared by writing '1' to this bit. The ALLCHSTOP request is also cleared when this bit is cleared.</p>
+<h3 id="STAT_ALLCHIDLE.desc">STAT_ALLCHIDLE<a class="headerlink" href="#STAT_ALLCHIDLE.desc" title="Permalink to this headline"></a></h3>
+<p>All Secure Channel Idle Status. Set to '1' whenever all Secure DMA channel is in idle state after at least one channel was running. Cleared by writing '1' to this bit.</p>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="INTR_ALLCHPAUSED.desc">INTR_ALLCHPAUSED<a class="headerlink" href="#INTR_ALLCHPAUSED.desc" title="Permalink to this headline"></a></h3>
+<p>All Secure Channel Paused Interrupt Status. Set to '1' when SECCTRL.STAT_ALLCHPAUSED is asserted and SECCTRL.INTREN_ALLCHPAUSED = 1. Cleared automatically when STAT_ALLCHPAUSED is cleared.</p>
+<h3 id="INTR_ALLCHSTOPPED.desc">INTR_ALLCHSTOPPED<a class="headerlink" href="#INTR_ALLCHSTOPPED.desc" title="Permalink to this headline"></a></h3>
+<p>All Secure Channel Stopped Interrupt Status. Set to '1' when SECCTRL.STAT_ALLCHSTOPPED is asserted and SECCTRL.INTREN_ALLCHSTOPPED = 1. Cleared automatically when STAT_ALLCHSTOPPED is cleared.</p>
+<h3 id="INTR_ALLCHIDLE.desc">INTR_ALLCHIDLE<a class="headerlink" href="#INTR_ALLCHIDLE.desc" title="Permalink to this headline"></a></h3>
+<p>All Secure Channel Idle Interrupt Status. Set to '1' when SECCTRL.STAT_ALLCHIDLE is asserted and SECCTRL.INTREN_ALLCHIDLE = 1. Cleared automatically when STAT_ALLCHIDLE is cleared.</p>
+<h3 id="INTR_ANYCHINTR.desc">INTR_ANYCHINTR<a class="headerlink" href="#INTR_ANYCHINTR.desc" title="Permalink to this headline"></a></h3>
+<p>Combined Secure Channel Interrupt Flag. Set to '1' when any Secure channel has an interrupt request in CHINTRSTATUS0 and SECCTRL.INTREN_ANYCHINTR = 1. Cleared automatically when the source of the channel interrupt is cleared.</p>
+

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">DES_INTP</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x50</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31:5]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="txerr"><td>[4]</td>
+<td><a href="#txerr.desc">txerr</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>Data Transfer Error Interrupt</td>
+<td>H<a class="headerlink" href="#txerr" title="Permalink to this row"></a></td>
+</tr>
+<tr class="reserved-field"><td>[3:2]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="lenerr"><td>[1]</td>
+<td><a href="#lenerr.desc">lenerr</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>Length Error Interrupt This bit is set when:</td>
+<td>H<a class="headerlink" href="#lenerr" title="Permalink to this row"></a></td>
+</tr>
+<tr id="done"><td>[0]</td>
+<td><a href="#done.desc">done</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>Done Interrupt</td>
+<td>H<a class="headerlink" href="#done" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="txerr.desc">txerr - Data Transfer Error Interrupt<a class="headerlink" href="#txerr.desc" title="Permalink to this headline"></a></h3>
+<p>This bit is set when there is an uncorrectable data error during the data transfer. When the error occurs, the engine continues the current operation based on corrupted data. As soon as the engine finishes the operation (by checking either busy bit or done interrupt bit), firmware can clear this bit by writing one to this bit or trigger the start of the next operation.<p></p>
+</p>
+<h3 id="lenerr.desc">lenerr - Length Error Interrupt This bit is set when:<a class="headerlink" href="#lenerr.desc" title="Permalink to this headline"></a></h3>
+<p>• ECB Mode<p></p>
+• DES_STR_SIZE register is not multiple of 16 bytes<p></p>
+• DES_STR_SIZE register is 0 byte.<p></p>
+• CBC Mode<p></p>
+• DES_STR_SIZE register is 0 byte<p></p>
+Write one to clear this bit. Triggering the start of the next operation also clears this bit.<p></p>
+</p>
+<h3 id="done.desc">done - Done Interrupt<a class="headerlink" href="#done.desc" title="Permalink to this headline"></a></h3>
+<p>This bit is set when DES/TDES has finished the given task. Write one to clear this bit. Triggering the start of the next operation also clears this bit.<p></p>
+</p>
+

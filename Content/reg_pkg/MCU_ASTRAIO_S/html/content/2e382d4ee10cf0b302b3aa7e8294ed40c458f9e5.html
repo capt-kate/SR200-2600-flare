@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">timer_cntrl</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0xa0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Controls the internal timer</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="limit"><td>[31:8]</td>
+<td><a href="#limit.desc">limit</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#limit" title="Permalink to this row"></a></td>
+</tr>
+<tr class="reserved-field"><td>[7:4]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="mode1"><td>[3:2]</td>
+<td><a href="#mode1.desc">mode1</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td><select id="_FieldValueEnumTestermode1" class="field-value-enum-tester"
+data-name="mode1" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">disable</option><option value="0x1">enable</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#mode1" title="Permalink to this row"></a></td>
+</tr>
+<tr id="mode0"><td>[1:0]</td>
+<td><a href="#mode0.desc">mode0</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td><select id="_FieldValueEnumTestermode0" class="field-value-enum-tester"
+data-name="mode0" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">disable</option><option value="0x1">enable</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#mode0" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="limit.desc">limit<a class="headerlink" href="#limit.desc" title="Permalink to this headline"></a></h3>
+<p>Sets the timer count limit</p>
+<h3 id="mode1.desc">mode1<a class="headerlink" href="#mode1.desc" title="Permalink to this headline"></a></h3>
+<p>Sets the timer1 mode</p>
+<table><tr><th colspan="3">enum timer_mode_enum</th></tr>
+<tr><td>disable</td>
+<td>0x0</td>
+<td><p>Timer is disabled</p>
+</td>
+</tr>
+<tr><td>enable</td>
+<td>0x1</td>
+<td><p>Timer is running</p>
+</td>
+</tr>
+</table><h3 id="mode0.desc">mode0<a class="headerlink" href="#mode0.desc" title="Permalink to this headline"></a></h3>
+<p>Sets the timer0 mode</p>
+<table><tr><th colspan="3">enum timer_mode_enum</th></tr>
+<tr><td>disable</td>
+<td>0x0</td>
+<td><p>Timer is disabled</p>
+</td>
+</tr>
+<tr><td>enable</td>
+<td>0x1</td>
+<td><p>Timer is running</p>
+</td>
+</tr>
+</table>

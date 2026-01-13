@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">DMA_BUILDCFG0</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0xfb0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>DMA Build Configuration Register 0</p>
+<p>This register is used to provide information about the configuration parameters of the DMAC.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_2"><td>[31:25]</td>
+<td><a href="#RAZWI_2.desc">RAZWI_2</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_2" title="Permalink to this row"></a></td>
+</tr>
+<tr id="CHID_WIDTH"><td>[24:20]</td>
+<td><a href="#CHID_WIDTH.desc">CHID_WIDTH</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#CHID_WIDTH" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_1"><td>[19]</td>
+<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DATA_WIDTH"><td>[18:16]</td>
+<td><a href="#DATA_WIDTH.desc">DATA_WIDTH</a></td>
+<td><span>r</span></td>
+<td>0x2</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DATA_WIDTH" title="Permalink to this row"></a></td>
+</tr>
+<tr id="ADDR_WIDTH"><td>[15:10]</td>
+<td><a href="#ADDR_WIDTH.desc">ADDR_WIDTH</a></td>
+<td><span>r</span></td>
+<td>0x1f</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#ADDR_WIDTH" title="Permalink to this row"></a></td>
+</tr>
+<tr id="NUM_CHANNELS"><td>[9:4]</td>
+<td><a href="#NUM_CHANNELS.desc">NUM_CHANNELS</a></td>
+<td><span>r</span></td>
+<td>0xf</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#NUM_CHANNELS" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_0"><td>[3]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+<tr id="FRAMETYPE"><td>[2:0]</td>
+<td><a href="#FRAMETYPE.desc">FRAMETYPE</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#FRAMETYPE" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="RAZWI_2.desc">RAZWI_2<a class="headerlink" href="#RAZWI_2.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="CHID_WIDTH.desc">CHID_WIDTH<a class="headerlink" href="#CHID_WIDTH.desc" title="Permalink to this headline"></a></h3>
+<p>Channel ID Width. '0' means CHID is not present.</p>
+<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="DATA_WIDTH.desc">DATA_WIDTH<a class="headerlink" href="#DATA_WIDTH.desc" title="Permalink to this headline"></a></h3>
+<p>Data Width.
+- 000: 8-bit
+- 001: 16-bit
+- 010: 32-bit
+- 011: 64-bit
+- 100: 128-bit
+- 101: 256-bit
+- 110: 512- bit
+- 111: 1024-bit</p>
+<h3 id="ADDR_WIDTH.desc">ADDR_WIDTH<a class="headerlink" href="#ADDR_WIDTH.desc" title="Permalink to this headline"></a></h3>
+<p>Address Width in bits = ADDR_WIDTH + 1</p>
+<h3 id="NUM_CHANNELS.desc">NUM_CHANNELS<a class="headerlink" href="#NUM_CHANNELS.desc" title="Permalink to this headline"></a></h3>
+<p>Number of Channels + 1 supported by the DMAC</p>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="FRAMETYPE.desc">FRAMETYPE<a class="headerlink" href="#FRAMETYPE.desc" title="Permalink to this headline"></a></h3>
+<p>Register Frame Type.
+- 000: Combined Frame
+- 001: Security Configuration Frame
+- 010: Secure Control Frame, or if TrustZone not implement, Control Frame
+- 011: Non-secure Control Frame
+- 100: DMA Channel Frame
+Note that each frame replicates the Information fields.</p>
+

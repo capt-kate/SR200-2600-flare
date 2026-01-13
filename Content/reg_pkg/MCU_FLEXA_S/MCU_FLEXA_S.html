@@ -1,0 +1,6735 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<!DOCTYPE html>
+<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>MCU_FLEXA_S</title><style type = "text/css">table.summary {
+border: 1px solid black;
+table-layout: fixed;
+width: auto;
+}
+table.regs {
+border: 1px solid black;
+table-layout: auto;
+width: 100%;
+}
+table.fields {
+border: 1px solid black;
+table-layout: auto;
+width: 100%;
+}
+table.summary th {
+background-
+}
+table.regs th {
+background-
+}
+table.fields th {
+background-
+}
+table.summary td {
+border: 1px solid black;
+}
+table.regs td {
+border: 1px solid black;
+}
+table.fields td {
+border: 1px solid black;
+}</style></head>
+<table><thead><tr><th>Address</th><th>Register</th></tr></thead><tbody><tr><td>0x0</td>
+<td><a href="#PRODUCT_IDENTIFIER">PRODUCT_IDENTIFIER</a></td>
+</tr>
+<tr><td>0x4</td>
+<td><a href="#PRODUCT_CONFIGURATION">PRODUCT_CONFIGURATION</a></td>
+</tr>
+<tr><td>0x8</td>
+<td><a href="#SOFTWARE_CONTROL">SOFTWARE_CONTROL</a></td>
+</tr>
+<tr><td>0xc</td>
+<td><a href="#SHORT_TIME_THRESHOLD">SHORT_TIME_THRESHOLD</a></td>
+</tr>
+<tr><td>0x10</td>
+<td><a href="#PRODUCER_LONG_TIME_THRESHOLD">PRODUCER_LONG_TIME_THRESHOLD</a></td>
+</tr>
+<tr><td>0x14</td>
+<td><a href="#CONSUMER_LONG_TIME_THRESHOLD">CONSUMER_LONG_TIME_THRESHOLD</a></td>
+</tr>
+<tr><td>0x18</td>
+<td><a href="#SBI_IMSC">SBI_IMSC</a></td>
+</tr>
+<tr><td>0x1c</td>
+<td><a href="#SBI_RAW_INT">SBI_RAW_INT</a></td>
+</tr>
+<tr><td>0x20</td>
+<td><a href="#SBI_MASKED_INT">SBI_MASKED_INT</a></td>
+</tr>
+<tr><td>0x24</td>
+<td><a href="#SBI_ICR">SBI_ICR</a></td>
+</tr>
+<tr><td>0x28</td>
+<td><a href="#SBI_ISR">SBI_ISR</a></td>
+</tr>
+<tr><td>0x30</td>
+<td><a href="#STREAM0_BASIC_CFG">STREAM0_BASIC_CFG</a></td>
+</tr>
+<tr><td>0x34</td>
+<td><a href="#STREAM0_STATUS">STREAM0_STATUS</a></td>
+</tr>
+<tr><td>0x38</td>
+<td><a href="#STREAM0_SLOT0_VALID_ENTRY_COUNT">STREAM0_SLOT0_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x3c</td>
+<td><a href="#STREAM0_SLOT1_VALID_ENTRY_COUNT">STREAM0_SLOT1_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x40</td>
+<td><a href="#STREAM0_SLOT2_VALID_ENTRY_COUNT">STREAM0_SLOT2_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x44</td>
+<td><a href="#STREAM0_SLOT3_VALID_ENTRY_COUNT">STREAM0_SLOT3_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x48</td>
+<td><a href="#STREAM0_IMSC">STREAM0_IMSC</a></td>
+</tr>
+<tr><td>0x4c</td>
+<td><a href="#STREAM0_RAW_INT">STREAM0_RAW_INT</a></td>
+</tr>
+<tr><td>0x50</td>
+<td><a href="#STREAM0_MASKED_INT">STREAM0_MASKED_INT</a></td>
+</tr>
+<tr><td>0x54</td>
+<td><a href="#STREAM0_ICR">STREAM0_ICR</a></td>
+</tr>
+<tr><td>0x58</td>
+<td><a href="#STREAM0_ISR">STREAM0_ISR</a></td>
+</tr>
+<tr><td>0x60</td>
+<td><a href="#STREAM1_BASIC_CFG">STREAM1_BASIC_CFG</a></td>
+</tr>
+<tr><td>0x64</td>
+<td><a href="#STREAM1_STATUS">STREAM1_STATUS</a></td>
+</tr>
+<tr><td>0x68</td>
+<td><a href="#STREAM1_SLOT0_VALID_ENTRY_COUNT">STREAM1_SLOT0_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x6c</td>
+<td><a href="#STREAM1_SLOT1_VALID_ENTRY_COUNT">STREAM1_SLOT1_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x70</td>
+<td><a href="#STREAM1_SLOT2_VALID_ENTRY_COUNT">STREAM1_SLOT2_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x74</td>
+<td><a href="#STREAM1_SLOT3_VALID_ENTRY_COUNT">STREAM1_SLOT3_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x78</td>
+<td><a href="#STREAM1_IMSC">STREAM1_IMSC</a></td>
+</tr>
+<tr><td>0x7c</td>
+<td><a href="#STREAM1_RAW_INT">STREAM1_RAW_INT</a></td>
+</tr>
+<tr><td>0x80</td>
+<td><a href="#STREAM1_MASKED_INT">STREAM1_MASKED_INT</a></td>
+</tr>
+<tr><td>0x84</td>
+<td><a href="#STREAM1_ICR">STREAM1_ICR</a></td>
+</tr>
+<tr><td>0x88</td>
+<td><a href="#STREAM1_ISR">STREAM1_ISR</a></td>
+</tr>
+<tr><td>0x90</td>
+<td><a href="#STREAM2_BASIC_CFG">STREAM2_BASIC_CFG</a></td>
+</tr>
+<tr><td>0x94</td>
+<td><a href="#STREAM2_STATUS">STREAM2_STATUS</a></td>
+</tr>
+<tr><td>0x98</td>
+<td><a href="#STREAM2_SLOT0_VALID_ENTRY_COUNT">STREAM2_SLOT0_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x9c</td>
+<td><a href="#STREAM2_SLOT1_VALID_ENTRY_COUNT">STREAM2_SLOT1_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0xa0</td>
+<td><a href="#STREAM2_SLOT2_VALID_ENTRY_COUNT">STREAM2_SLOT2_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0xa4</td>
+<td><a href="#STREAM2_SLOT3_VALID_ENTRY_COUNT">STREAM2_SLOT3_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0xa8</td>
+<td><a href="#STREAM2_IMSC">STREAM2_IMSC</a></td>
+</tr>
+<tr><td>0xac</td>
+<td><a href="#STREAM2_RAW_INT">STREAM2_RAW_INT</a></td>
+</tr>
+<tr><td>0xb0</td>
+<td><a href="#STREAM2_MASKED_INT">STREAM2_MASKED_INT</a></td>
+</tr>
+<tr><td>0xb4</td>
+<td><a href="#STREAM2_ICR">STREAM2_ICR</a></td>
+</tr>
+<tr><td>0xb8</td>
+<td><a href="#STREAM2_ISR">STREAM2_ISR</a></td>
+</tr>
+<tr><td>0xc0</td>
+<td><a href="#STREAM3_BASIC_CFG">STREAM3_BASIC_CFG</a></td>
+</tr>
+<tr><td>0xc4</td>
+<td><a href="#STREAM3_STATUS">STREAM3_STATUS</a></td>
+</tr>
+<tr><td>0xc8</td>
+<td><a href="#STREAM3_SLOT0_VALID_ENTRY_COUNT">STREAM3_SLOT0_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0xcc</td>
+<td><a href="#STREAM3_SLOT1_VALID_ENTRY_COUNT">STREAM3_SLOT1_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0xd0</td>
+<td><a href="#STREAM3_SLOT2_VALID_ENTRY_COUNT">STREAM3_SLOT2_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0xd4</td>
+<td><a href="#STREAM3_SLOT3_VALID_ENTRY_COUNT">STREAM3_SLOT3_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0xd8</td>
+<td><a href="#STREAM3_IMSC">STREAM3_IMSC</a></td>
+</tr>
+<tr><td>0xdc</td>
+<td><a href="#STREAM3_RAW_INT">STREAM3_RAW_INT</a></td>
+</tr>
+<tr><td>0xe0</td>
+<td><a href="#STREAM3_MASKED_INT">STREAM3_MASKED_INT</a></td>
+</tr>
+<tr><td>0xe4</td>
+<td><a href="#STREAM3_ICR">STREAM3_ICR</a></td>
+</tr>
+<tr><td>0xe8</td>
+<td><a href="#STREAM3_ISR">STREAM3_ISR</a></td>
+</tr>
+<tr><td>0xf0</td>
+<td><a href="#STREAM4_BASIC_CFG">STREAM4_BASIC_CFG</a></td>
+</tr>
+<tr><td>0xf4</td>
+<td><a href="#STREAM4_STATUS">STREAM4_STATUS</a></td>
+</tr>
+<tr><td>0xf8</td>
+<td><a href="#STREAM4_SLOT0_VALID_ENTRY_COUNT">STREAM4_SLOT0_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0xfc</td>
+<td><a href="#STREAM4_SLOT1_VALID_ENTRY_COUNT">STREAM4_SLOT1_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x100</td>
+<td><a href="#STREAM4_SLOT2_VALID_ENTRY_COUNT">STREAM4_SLOT2_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x104</td>
+<td><a href="#STREAM4_SLOT3_VALID_ENTRY_COUNT">STREAM4_SLOT3_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x108</td>
+<td><a href="#STREAM4_IMSC">STREAM4_IMSC</a></td>
+</tr>
+<tr><td>0x10c</td>
+<td><a href="#STREAM4_RAW_INT">STREAM4_RAW_INT</a></td>
+</tr>
+<tr><td>0x110</td>
+<td><a href="#STREAM4_MASKED_INT">STREAM4_MASKED_INT</a></td>
+</tr>
+<tr><td>0x114</td>
+<td><a href="#STREAM4_ICR">STREAM4_ICR</a></td>
+</tr>
+<tr><td>0x118</td>
+<td><a href="#STREAM4_ISR">STREAM4_ISR</a></td>
+</tr>
+<tr><td>0x120</td>
+<td><a href="#STREAM5_BASIC_CFG">STREAM5_BASIC_CFG</a></td>
+</tr>
+<tr><td>0x124</td>
+<td><a href="#STREAM5_STATUS">STREAM5_STATUS</a></td>
+</tr>
+<tr><td>0x128</td>
+<td><a href="#STREAM5_SLOT0_VALID_ENTRY_COUNT">STREAM5_SLOT0_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x12c</td>
+<td><a href="#STREAM5_SLOT1_VALID_ENTRY_COUNT">STREAM5_SLOT1_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x130</td>
+<td><a href="#STREAM5_SLOT2_VALID_ENTRY_COUNT">STREAM5_SLOT2_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x134</td>
+<td><a href="#STREAM5_SLOT3_VALID_ENTRY_COUNT">STREAM5_SLOT3_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x138</td>
+<td><a href="#STREAM5_IMSC">STREAM5_IMSC</a></td>
+</tr>
+<tr><td>0x13c</td>
+<td><a href="#STREAM5_RAW_INT">STREAM5_RAW_INT</a></td>
+</tr>
+<tr><td>0x140</td>
+<td><a href="#STREAM5_MASKED_INT">STREAM5_MASKED_INT</a></td>
+</tr>
+<tr><td>0x144</td>
+<td><a href="#STREAM5_ICR">STREAM5_ICR</a></td>
+</tr>
+<tr><td>0x148</td>
+<td><a href="#STREAM5_ISR">STREAM5_ISR</a></td>
+</tr>
+<tr><td>0x150</td>
+<td><a href="#STREAM6_BASIC_CFG">STREAM6_BASIC_CFG</a></td>
+</tr>
+<tr><td>0x154</td>
+<td><a href="#STREAM6_STATUS">STREAM6_STATUS</a></td>
+</tr>
+<tr><td>0x158</td>
+<td><a href="#STREAM6_SLOT0_VALID_ENTRY_COUNT">STREAM6_SLOT0_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x15c</td>
+<td><a href="#STREAM6_SLOT1_VALID_ENTRY_COUNT">STREAM6_SLOT1_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x160</td>
+<td><a href="#STREAM6_SLOT2_VALID_ENTRY_COUNT">STREAM6_SLOT2_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x164</td>
+<td><a href="#STREAM6_SLOT3_VALID_ENTRY_COUNT">STREAM6_SLOT3_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x168</td>
+<td><a href="#STREAM6_IMSC">STREAM6_IMSC</a></td>
+</tr>
+<tr><td>0x16c</td>
+<td><a href="#STREAM6_RAW_INT">STREAM6_RAW_INT</a></td>
+</tr>
+<tr><td>0x170</td>
+<td><a href="#STREAM6_MASKED_INT">STREAM6_MASKED_INT</a></td>
+</tr>
+<tr><td>0x174</td>
+<td><a href="#STREAM6_ICR">STREAM6_ICR</a></td>
+</tr>
+<tr><td>0x178</td>
+<td><a href="#STREAM6_ISR">STREAM6_ISR</a></td>
+</tr>
+<tr><td>0x180</td>
+<td><a href="#STREAM7_BASIC_CFG">STREAM7_BASIC_CFG</a></td>
+</tr>
+<tr><td>0x184</td>
+<td><a href="#STREAM7_STATUS">STREAM7_STATUS</a></td>
+</tr>
+<tr><td>0x188</td>
+<td><a href="#STREAM7_SLOT0_VALID_ENTRY_COUNT">STREAM7_SLOT0_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x18c</td>
+<td><a href="#STREAM7_SLOT1_VALID_ENTRY_COUNT">STREAM7_SLOT1_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x190</td>
+<td><a href="#STREAM7_SLOT2_VALID_ENTRY_COUNT">STREAM7_SLOT2_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x194</td>
+<td><a href="#STREAM7_SLOT3_VALID_ENTRY_COUNT">STREAM7_SLOT3_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x198</td>
+<td><a href="#STREAM7_IMSC">STREAM7_IMSC</a></td>
+</tr>
+<tr><td>0x19c</td>
+<td><a href="#STREAM7_RAW_INT">STREAM7_RAW_INT</a></td>
+</tr>
+<tr><td>0x1a0</td>
+<td><a href="#STREAM7_MASKED_INT">STREAM7_MASKED_INT</a></td>
+</tr>
+<tr><td>0x1a4</td>
+<td><a href="#STREAM7_ICR">STREAM7_ICR</a></td>
+</tr>
+<tr><td>0x1a8</td>
+<td><a href="#STREAM7_ISR">STREAM7_ISR</a></td>
+</tr>
+<tr><td>0x1b0</td>
+<td><a href="#STREAM8_BASIC_CFG">STREAM8_BASIC_CFG</a></td>
+</tr>
+<tr><td>0x1b4</td>
+<td><a href="#STREAM8_STATUS">STREAM8_STATUS</a></td>
+</tr>
+<tr><td>0x1b8</td>
+<td><a href="#STREAM8_SLOT0_VALID_ENTRY_COUNT">STREAM8_SLOT0_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x1bc</td>
+<td><a href="#STREAM8_SLOT1_VALID_ENTRY_COUNT">STREAM8_SLOT1_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x1c0</td>
+<td><a href="#STREAM8_SLOT2_VALID_ENTRY_COUNT">STREAM8_SLOT2_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x1c4</td>
+<td><a href="#STREAM8_SLOT3_VALID_ENTRY_COUNT">STREAM8_SLOT3_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x1c8</td>
+<td><a href="#STREAM8_IMSC">STREAM8_IMSC</a></td>
+</tr>
+<tr><td>0x1cc</td>
+<td><a href="#STREAM8_RAW_INT">STREAM8_RAW_INT</a></td>
+</tr>
+<tr><td>0x1d0</td>
+<td><a href="#STREAM8_MASKED_INT">STREAM8_MASKED_INT</a></td>
+</tr>
+<tr><td>0x1d4</td>
+<td><a href="#STREAM8_ICR">STREAM8_ICR</a></td>
+</tr>
+<tr><td>0x1d8</td>
+<td><a href="#STREAM8_ISR">STREAM8_ISR</a></td>
+</tr>
+<tr><td>0x1e0</td>
+<td><a href="#STREAM9_BASIC_CFG">STREAM9_BASIC_CFG</a></td>
+</tr>
+<tr><td>0x1e4</td>
+<td><a href="#STREAM9_STATUS">STREAM9_STATUS</a></td>
+</tr>
+<tr><td>0x1e8</td>
+<td><a href="#STREAM9_SLOT0_VALID_ENTRY_COUNT">STREAM9_SLOT0_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x1ec</td>
+<td><a href="#STREAM9_SLOT1_VALID_ENTRY_COUNT">STREAM9_SLOT1_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x1f0</td>
+<td><a href="#STREAM9_SLOT2_VALID_ENTRY_COUNT">STREAM9_SLOT2_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x1f4</td>
+<td><a href="#STREAM9_SLOT3_VALID_ENTRY_COUNT">STREAM9_SLOT3_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x1f8</td>
+<td><a href="#STREAM9_IMSC">STREAM9_IMSC</a></td>
+</tr>
+<tr><td>0x1fc</td>
+<td><a href="#STREAM9_RAW_INT">STREAM9_RAW_INT</a></td>
+</tr>
+<tr><td>0x200</td>
+<td><a href="#STREAM9_MASKED_INT">STREAM9_MASKED_INT</a></td>
+</tr>
+<tr><td>0x204</td>
+<td><a href="#STREAM9_ICR">STREAM9_ICR</a></td>
+</tr>
+<tr><td>0x208</td>
+<td><a href="#STREAM9_ISR">STREAM9_ISR</a></td>
+</tr>
+<tr><td>0x210</td>
+<td><a href="#STREAM10_BASIC_CFG">STREAM10_BASIC_CFG</a></td>
+</tr>
+<tr><td>0x214</td>
+<td><a href="#STREAM10_STATUS">STREAM10_STATUS</a></td>
+</tr>
+<tr><td>0x218</td>
+<td><a href="#STREAM10_SLOT0_VALID_ENTRY_COUNT">STREAM10_SLOT0_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x21c</td>
+<td><a href="#STREAM10_SLOT1_VALID_ENTRY_COUNT">STREAM10_SLOT1_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x220</td>
+<td><a href="#STREAM10_SLOT2_VALID_ENTRY_COUNT">STREAM10_SLOT2_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x224</td>
+<td><a href="#STREAM10_SLOT3_VALID_ENTRY_COUNT">STREAM10_SLOT3_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x228</td>
+<td><a href="#STREAM10_IMSC">STREAM10_IMSC</a></td>
+</tr>
+<tr><td>0x22c</td>
+<td><a href="#STREAM10_RAW_INT">STREAM10_RAW_INT</a></td>
+</tr>
+<tr><td>0x230</td>
+<td><a href="#STREAM10_MASKED_INT">STREAM10_MASKED_INT</a></td>
+</tr>
+<tr><td>0x234</td>
+<td><a href="#STREAM10_ICR">STREAM10_ICR</a></td>
+</tr>
+<tr><td>0x238</td>
+<td><a href="#STREAM10_ISR">STREAM10_ISR</a></td>
+</tr>
+<tr><td>0x240</td>
+<td><a href="#STREAM11_BASIC_CFG">STREAM11_BASIC_CFG</a></td>
+</tr>
+<tr><td>0x244</td>
+<td><a href="#STREAM11_STATUS">STREAM11_STATUS</a></td>
+</tr>
+<tr><td>0x248</td>
+<td><a href="#STREAM11_SLOT0_VALID_ENTRY_COUNT">STREAM11_SLOT0_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x24c</td>
+<td><a href="#STREAM11_SLOT1_VALID_ENTRY_COUNT">STREAM11_SLOT1_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x250</td>
+<td><a href="#STREAM11_SLOT2_VALID_ENTRY_COUNT">STREAM11_SLOT2_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x254</td>
+<td><a href="#STREAM11_SLOT3_VALID_ENTRY_COUNT">STREAM11_SLOT3_VALID_ENTRY_COUNT</a></td>
+</tr>
+<tr><td>0x258</td>
+<td><a href="#STREAM11_IMSC">STREAM11_IMSC</a></td>
+</tr>
+<tr><td>0x25c</td>
+<td><a href="#STREAM11_RAW_INT">STREAM11_RAW_INT</a></td>
+</tr>
+<tr><td>0x260</td>
+<td><a href="#STREAM11_MASKED_INT">STREAM11_MASKED_INT</a></td>
+</tr>
+<tr><td>0x264</td>
+<td><a href="#STREAM11_ICR">STREAM11_ICR</a></td>
+</tr>
+<tr><td>0x268</td>
+<td><a href="#STREAM11_ISR">STREAM11_ISR</a></td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<p></p>
+<p></p>
+<table id="PRODUCT_IDENTIFIER"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>PRODUCT_IDENTIFIER</td>
+<td>0x0</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:24]</td>
+<td>product_id</td>
+<td>Denotation of FLEXA SBI synchronizer</td>
+<td>ro</td>
+<td>0xf0</td>
+</tr>
+<tr><td>[23:16]</td>
+<td>product_version</td>
+<td>Product version number. High 4 bits are major version, and low 4 bits are minor version</td>
+<td>ro</td>
+<td>0x10</td>
+</tr>
+<tr><td>[15:0]</td>
+<td>product_build_id</td>
+<td>A unique ID of every instantiation</td>
+<td>ro</td>
+<td>0x01</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="PRODUCT_CONFIGURATION"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>PRODUCT_CONFIGURATION</td>
+<td>0x4</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:28]</td>
+<td>reserved_sbi</td>
+<td>reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[27:24]</td>
+<td>stream_slot_number</td>
+<td>stream slot for each stream</td>
+<td>ro</td>
+<td>0x4</td>
+</tr>
+<tr><td>[23:16]</td>
+<td>stream_number</td>
+<td>internal stream number</td>
+<td>ro</td>
+<td>0xc</td>
+</tr>
+<tr><td>[15:8]</td>
+<td>consumer_number</td>
+<td>consumer number</td>
+<td>ro</td>
+<td>0x8</td>
+</tr>
+<tr><td>[7:0]</td>
+<td>producer_number</td>
+<td>producer number</td>
+<td>ro</td>
+<td>0x8</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="SOFTWARE_CONTROL"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>SOFTWARE_CONTROL</td>
+<td>0x8</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:31]</td>
+<td>sw_reset</td>
+<td>Software sets the bit to 1 to reset the synchronizer. The bit returns to 0 after reset.</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[30:0]</td>
+<td>reserved_sbi_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="SHORT_TIME_THRESHOLD"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>SHORT_TIME_THRESHOLD</td>
+<td>0xc</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:16]</td>
+<td>producer_short_time_threshold</td>
+<td>the short threshold of time that the producer can wait</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[15:0]</td>
+<td>consumer_short_time_threshold</td>
+<td>the short threshold of time that the consumers can wait</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="PRODUCER_LONG_TIME_THRESHOLD"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>PRODUCER_LONG_TIME_THRESHOLD</td>
+<td>0x10</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:0]</td>
+<td>producer_long_time_threshold</td>
+<td>the long threshold of time that the producer can wait</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="CONSUMER_LONG_TIME_THRESHOLD"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>CONSUMER_LONG_TIME_THRESHOLD</td>
+<td>0x14</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:0]</td>
+<td>consumer_long_time_threshold</td>
+<td>the long threshold of time that the consumers can wait</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="SBI_IMSC"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>SBI_IMSC</td>
+<td>0x18</td>
+<td>interrupt mask for all stream</td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:12]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[11:11]</td>
+<td>stream11_int_mask</td>
+<td>mask status of Stream 11 interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[10:10]</td>
+<td>stream10_int_mask</td>
+<td>mask status of Stream 10 interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>stream9_int_mask</td>
+<td>mask status of Stream 9 interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>stream8_int_mask</td>
+<td>mask status of Stream 8 interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>stream7_int_mask</td>
+<td>mask status of Stream 7 interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>stream6_int_mask</td>
+<td>mask status of Stream 6 interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>stream5_int_mask</td>
+<td>mask status of Stream 5 interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>stream4_int_mask</td>
+<td>mask status of Stream 4 interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>stream3_int_mask</td>
+<td>mask status of Stream 3 interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>stream2_int_mask</td>
+<td>mask status of Stream 2 interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>stream1_int_mask</td>
+<td>mask status of Stream 1 interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>stream0_int_mask</td>
+<td>mask status of Stream 0 interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="SBI_RAW_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>SBI_RAW_INT</td>
+<td>0x1c</td>
+<td>Raw interrupt for all stream</td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:12]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[11:11]</td>
+<td>stream11_raw_int</td>
+<td>raw status of Stream 11 interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[10:10]</td>
+<td>stream10_raw_int</td>
+<td>raw status of Stream 10 interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>stream9_raw_int</td>
+<td>raw status of Stream 9 interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>stream8_raw_int</td>
+<td>raw status of Stream 8 interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>stream7_raw_int</td>
+<td>raw status of Stream 7 interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>stream6_raw_int</td>
+<td>raw status of Stream 6 interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>stream5_raw_int</td>
+<td>raw status of Stream 5 interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>stream4_raw_int</td>
+<td>raw status of Stream 4 interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>stream3_raw_int</td>
+<td>raw status of Stream 3 interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>stream2_raw_int</td>
+<td>raw status of Stream 2 interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>stream1_raw_int</td>
+<td>raw status of Stream 1 interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>stream0_raw_int</td>
+<td>raw status of Stream 0 interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="SBI_MASKED_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>SBI_MASKED_INT</td>
+<td>0x20</td>
+<td>masked interrupt for all stream</td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:12]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[11:11]</td>
+<td>stream11_masked_int</td>
+<td>masked interrupt of Stream 11</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[10:10]</td>
+<td>stream10_masked_int</td>
+<td>masked interrupt of Stream 10</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>stream9_masked_int</td>
+<td>masked interrupt of Stream 9</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>stream8_masked_int</td>
+<td>masked interrupt of Stream 8</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>stream7_masked_int</td>
+<td>masked interrupt of Stream 7</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>stream6_masked_int</td>
+<td>masked interrupt of Stream 6</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>stream5_masked_int</td>
+<td>masked interrupt of Stream 5</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>stream4_masked_int</td>
+<td>masked interrupt of Stream 4</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>stream3_masked_int</td>
+<td>masked interrupt of Stream 3</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>stream2_masked_int</td>
+<td>masked interrupt of Stream 2</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>stream1_masked_int</td>
+<td>masked interrupt of Stream 1</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>stream0_masked_int</td>
+<td>masked interrupt of Stream 0</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="SBI_ICR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>SBI_ICR</td>
+<td>0x24</td>
+<td>interrupt clear register for all streams</td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:12]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[11:11]</td>
+<td>stream11_int_clr</td>
+<td>clear Stream 11 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[10:10]</td>
+<td>stream10_int_clr</td>
+<td>clear Stream 10 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>stream9_int_clr</td>
+<td>clear Stream 9 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>stream8_int_clr</td>
+<td>clear Stream 8 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>stream7_int_clr</td>
+<td>clear Stream 7 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>stream6_int_clr</td>
+<td>clear Stream 6 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>stream5_int_clr</td>
+<td>clear Stream 5 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>stream4_int_clr</td>
+<td>clear Stream 4 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>stream3_int_clr</td>
+<td>clear Stream 3 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>stream2_int_clr</td>
+<td>clear Stream 2 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>stream1_int_clr</td>
+<td>clear Stream 1 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>stream0_int_clr</td>
+<td>clear Stream 0 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="SBI_ISR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>SBI_ISR</td>
+<td>0x28</td>
+<td>interrupt set register for all streams</td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:12]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[11:11]</td>
+<td>stream11_int_set</td>
+<td>set Stream 11 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[10:10]</td>
+<td>stream10_int_set</td>
+<td>set Stream 10 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>stream9_int_set</td>
+<td>set Stream 9 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>stream8_int_set</td>
+<td>set Stream 8 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>stream7_int_set</td>
+<td>set Stream 7 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>stream6_int_set</td>
+<td>set Stream 6 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>stream5_int_set</td>
+<td>set Stream 5 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>stream4_int_set</td>
+<td>set Stream 4 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>stream3_int_set</td>
+<td>set Stream 3 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>stream2_int_set</td>
+<td>set Stream 2 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>stream1_int_set</td>
+<td>set Stream 1 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>stream0_int_set</td>
+<td>set Stream 0 interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM0_BASIC_CFG"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM0_BASIC_CFG</td>
+<td>0x30</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:24]</td>
+<td>stream_id</td>
+<td>The stream ID of this stream</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[23:8]</td>
+<td>entry_count</td>
+<td>The value + 1 is the amount of entries in the segment buffer of the stream.</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:1]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>valid</td>
+<td>Software sets to 1 to finish the configuration</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM0_STATUS"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM0_STATUS</td>
+<td>0x34</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:6]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:2]</td>
+<td>active_consumer_number</td>
+<td>Current active consumer connectin to this stream</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:0]</td>
+<td>streaming_state</td>
+<td>0: uninitialized
+1: out of sync
+2: running
+3: reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM0_SLOT0_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM0_SLOT0_VALID_ENTRY_COUNT</td>
+<td>0x38</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot0_valid_entry_count</td>
+<td>valid entry number in slot0</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM0_SLOT1_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM0_SLOT1_VALID_ENTRY_COUNT</td>
+<td>0x3c</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot1_valid_entry_count</td>
+<td>valid entry number in slot1</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM0_SLOT2_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM0_SLOT2_VALID_ENTRY_COUNT</td>
+<td>0x40</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot2_valid_entry_count</td>
+<td>valid entry number in slot2</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM0_SLOT3_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM0_SLOT3_VALID_ENTRY_COUNT</td>
+<td>0x44</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot3_valid_entry_count</td>
+<td>valid entry number in slot3</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM0_IMSC"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM0_IMSC</td>
+<td>0x48</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_mask</td>
+<td>mask status of slot3 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_mask</td>
+<td>mask status of slot2 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_mask</td>
+<td>mask status of slot1 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_mask</td>
+<td>mask status of slot0 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_mask</td>
+<td>mask status of pr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_mask</td>
+<td>mask status of frame overflow interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_mask</td>
+<td>mask status of slot3 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_mask</td>
+<td>mask status of slot2 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_mask</td>
+<td>mask status of slot1 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_mask</td>
+<td>mask status of slot0 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM0_RAW_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM0_RAW_INT</td>
+<td>0x4c</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_raw</td>
+<td>raw status of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_raw</td>
+<td>raw status of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_raw</td>
+<td>raw status of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_raw</td>
+<td>raw status of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_raw</td>
+<td>raw status of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_raw</td>
+<td>raw status of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_raw</td>
+<td>raw status of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_raw</td>
+<td>raw status of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_raw</td>
+<td>raw status of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_raw</td>
+<td>raw status of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM0_MASKED_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM0_MASKED_INT</td>
+<td>0x50</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>masked_slot3_cr_timeout_mask</td>
+<td>masked int of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>masked_slot2_cr_timeout_mask</td>
+<td>masked int of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>masked_slot1_cr_timeout_mask</td>
+<td>masked int of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>masked_slot0_cr_timeout_mask</td>
+<td>masked int of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>masked_pr_timeout_mask</td>
+<td>masked int of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>masked_on_fly_frame_overflow_mask</td>
+<td>masked int of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>masked_slot3_framelast_entry_loss_mask</td>
+<td>masked int of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>masked_slot2_framelast_entry_loss_mask</td>
+<td>masked int of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>masked_slot1_framelast_entry_loss_mask</td>
+<td>masked int of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>masked_slot0_framelast_entry_loss_mask</td>
+<td>masked int of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM0_ICR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM0_ICR</td>
+<td>0x54</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_clr</td>
+<td>clear slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_clr</td>
+<td>clear slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_clr</td>
+<td>clear slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_clr</td>
+<td>clear slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_clr</td>
+<td>clear pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_clr</td>
+<td>clear frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_clr</td>
+<td>clear slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_clr</td>
+<td>clear slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_clr</td>
+<td>clear slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_clr</td>
+<td>clear slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM0_ISR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM0_ISR</td>
+<td>0x58</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_set</td>
+<td>set slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_set</td>
+<td>set slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_set</td>
+<td>set slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_set</td>
+<td>set slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_set</td>
+<td>set pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_set</td>
+<td>set frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_set</td>
+<td>set slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_set</td>
+<td>set slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_set</td>
+<td>set slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_set</td>
+<td>set slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM1_BASIC_CFG"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM1_BASIC_CFG</td>
+<td>0x60</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:24]</td>
+<td>stream_id</td>
+<td>The stream ID of this stream</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[23:8]</td>
+<td>entry_count</td>
+<td>The value + 1 is the amount of entries in the segment buffer of the stream.</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:1]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>valid</td>
+<td>Software sets to 1 to finish the configuration</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM1_STATUS"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM1_STATUS</td>
+<td>0x64</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:6]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:2]</td>
+<td>active_consumer_number</td>
+<td>Current active consumer connectin to this stream</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:0]</td>
+<td>streaming_state</td>
+<td>0: uninitialized
+1: out of sync
+2: running
+3: reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM1_SLOT0_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM1_SLOT0_VALID_ENTRY_COUNT</td>
+<td>0x68</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot0_valid_entry_count</td>
+<td>valid entry number in slot0</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM1_SLOT1_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM1_SLOT1_VALID_ENTRY_COUNT</td>
+<td>0x6c</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot1_valid_entry_count</td>
+<td>valid entry number in slot1</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM1_SLOT2_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM1_SLOT2_VALID_ENTRY_COUNT</td>
+<td>0x70</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot2_valid_entry_count</td>
+<td>valid entry number in slot2</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM1_SLOT3_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM1_SLOT3_VALID_ENTRY_COUNT</td>
+<td>0x74</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot3_valid_entry_count</td>
+<td>valid entry number in slot3</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM1_IMSC"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM1_IMSC</td>
+<td>0x78</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_mask</td>
+<td>mask status of slot3 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_mask</td>
+<td>mask status of slot2 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_mask</td>
+<td>mask status of slot1 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_mask</td>
+<td>mask status of slot0 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_mask</td>
+<td>mask status of pr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_mask</td>
+<td>mask status of frame overflow interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_mask</td>
+<td>mask status of slot3 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_mask</td>
+<td>mask status of slot2 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_mask</td>
+<td>mask status of slot1 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_mask</td>
+<td>mask status of slot0 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM1_RAW_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM1_RAW_INT</td>
+<td>0x7c</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_raw</td>
+<td>raw status of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_raw</td>
+<td>raw status of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_raw</td>
+<td>raw status of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_raw</td>
+<td>raw status of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_raw</td>
+<td>raw status of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_raw</td>
+<td>raw status of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_raw</td>
+<td>raw status of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_raw</td>
+<td>raw status of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_raw</td>
+<td>raw status of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_raw</td>
+<td>raw status of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM1_MASKED_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM1_MASKED_INT</td>
+<td>0x80</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>masked_slot3_cr_timeout_mask</td>
+<td>masked int of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>masked_slot2_cr_timeout_mask</td>
+<td>masked int of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>masked_slot1_cr_timeout_mask</td>
+<td>masked int of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>masked_slot0_cr_timeout_mask</td>
+<td>masked int of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>masked_pr_timeout_mask</td>
+<td>masked int of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>masked_on_fly_frame_overflow_mask</td>
+<td>masked int of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>masked_slot3_framelast_entry_loss_mask</td>
+<td>masked int of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>masked_slot2_framelast_entry_loss_mask</td>
+<td>masked int of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>masked_slot1_framelast_entry_loss_mask</td>
+<td>masked int of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>masked_slot0_framelast_entry_loss_mask</td>
+<td>masked int of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM1_ICR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM1_ICR</td>
+<td>0x84</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_clr</td>
+<td>clear slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_clr</td>
+<td>clear slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_clr</td>
+<td>clear slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_clr</td>
+<td>clear slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_clr</td>
+<td>clear pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_clr</td>
+<td>clear frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_clr</td>
+<td>clear slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_clr</td>
+<td>clear slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_clr</td>
+<td>clear slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_clr</td>
+<td>clear slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM1_ISR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM1_ISR</td>
+<td>0x88</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_set</td>
+<td>set slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_set</td>
+<td>set slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_set</td>
+<td>set slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_set</td>
+<td>set slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_set</td>
+<td>set pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_set</td>
+<td>set frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_set</td>
+<td>set slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_set</td>
+<td>set slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_set</td>
+<td>set slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_set</td>
+<td>set slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM2_BASIC_CFG"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM2_BASIC_CFG</td>
+<td>0x90</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:24]</td>
+<td>stream_id</td>
+<td>The stream ID of this stream</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[23:8]</td>
+<td>entry_count</td>
+<td>The value + 1 is the amount of entries in the segment buffer of the stream.</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:1]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>valid</td>
+<td>Software sets to 1 to finish the configuration</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM2_STATUS"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM2_STATUS</td>
+<td>0x94</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:6]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:2]</td>
+<td>active_consumer_number</td>
+<td>Current active consumer connectin to this stream</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:0]</td>
+<td>streaming_state</td>
+<td>0: uninitialized
+1: out of sync
+2: running
+3: reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM2_SLOT0_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM2_SLOT0_VALID_ENTRY_COUNT</td>
+<td>0x98</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot0_valid_entry_count</td>
+<td>valid entry number in slot0</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM2_SLOT1_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM2_SLOT1_VALID_ENTRY_COUNT</td>
+<td>0x9c</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot1_valid_entry_count</td>
+<td>valid entry number in slot1</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM2_SLOT2_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM2_SLOT2_VALID_ENTRY_COUNT</td>
+<td>0xa0</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot2_valid_entry_count</td>
+<td>valid entry number in slot2</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM2_SLOT3_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM2_SLOT3_VALID_ENTRY_COUNT</td>
+<td>0xa4</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot3_valid_entry_count</td>
+<td>valid entry number in slot3</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM2_IMSC"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM2_IMSC</td>
+<td>0xa8</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_mask</td>
+<td>mask status of slot3 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_mask</td>
+<td>mask status of slot2 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_mask</td>
+<td>mask status of slot1 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_mask</td>
+<td>mask status of slot0 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_mask</td>
+<td>mask status of pr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_mask</td>
+<td>mask status of frame overflow interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_mask</td>
+<td>mask status of slot3 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_mask</td>
+<td>mask status of slot2 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_mask</td>
+<td>mask status of slot1 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_mask</td>
+<td>mask status of slot0 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM2_RAW_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM2_RAW_INT</td>
+<td>0xac</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_raw</td>
+<td>raw status of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_raw</td>
+<td>raw status of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_raw</td>
+<td>raw status of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_raw</td>
+<td>raw status of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_raw</td>
+<td>raw status of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_raw</td>
+<td>raw status of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_raw</td>
+<td>raw status of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_raw</td>
+<td>raw status of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_raw</td>
+<td>raw status of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_raw</td>
+<td>raw status of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM2_MASKED_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM2_MASKED_INT</td>
+<td>0xb0</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>masked_slot3_cr_timeout_mask</td>
+<td>masked int of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>masked_slot2_cr_timeout_mask</td>
+<td>masked int of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>masked_slot1_cr_timeout_mask</td>
+<td>masked int of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>masked_slot0_cr_timeout_mask</td>
+<td>masked int of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>masked_pr_timeout_mask</td>
+<td>masked int of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>masked_on_fly_frame_overflow_mask</td>
+<td>masked int of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>masked_slot3_framelast_entry_loss_mask</td>
+<td>masked int of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>masked_slot2_framelast_entry_loss_mask</td>
+<td>masked int of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>masked_slot1_framelast_entry_loss_mask</td>
+<td>masked int of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>masked_slot0_framelast_entry_loss_mask</td>
+<td>masked int of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM2_ICR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM2_ICR</td>
+<td>0xb4</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_clr</td>
+<td>clear slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_clr</td>
+<td>clear slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_clr</td>
+<td>clear slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_clr</td>
+<td>clear slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_clr</td>
+<td>clear pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_clr</td>
+<td>clear frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_clr</td>
+<td>clear slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_clr</td>
+<td>clear slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_clr</td>
+<td>clear slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_clr</td>
+<td>clear slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM2_ISR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM2_ISR</td>
+<td>0xb8</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_set</td>
+<td>set slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_set</td>
+<td>set slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_set</td>
+<td>set slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_set</td>
+<td>set slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_set</td>
+<td>set pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_set</td>
+<td>set frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_set</td>
+<td>set slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_set</td>
+<td>set slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_set</td>
+<td>set slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_set</td>
+<td>set slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM3_BASIC_CFG"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM3_BASIC_CFG</td>
+<td>0xc0</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:24]</td>
+<td>stream_id</td>
+<td>The stream ID of this stream</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[23:8]</td>
+<td>entry_count</td>
+<td>The value + 1 is the amount of entries in the segment buffer of the stream.</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:1]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>valid</td>
+<td>Software sets to 1 to finish the configuration</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM3_STATUS"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM3_STATUS</td>
+<td>0xc4</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:6]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:2]</td>
+<td>active_consumer_number</td>
+<td>Current active consumer connectin to this stream</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:0]</td>
+<td>streaming_state</td>
+<td>0: uninitialized
+1: out of sync
+2: running
+3: reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM3_SLOT0_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM3_SLOT0_VALID_ENTRY_COUNT</td>
+<td>0xc8</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot0_valid_entry_count</td>
+<td>valid entry number in slot0</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM3_SLOT1_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM3_SLOT1_VALID_ENTRY_COUNT</td>
+<td>0xcc</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot1_valid_entry_count</td>
+<td>valid entry number in slot1</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM3_SLOT2_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM3_SLOT2_VALID_ENTRY_COUNT</td>
+<td>0xd0</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot2_valid_entry_count</td>
+<td>valid entry number in slot2</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM3_SLOT3_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM3_SLOT3_VALID_ENTRY_COUNT</td>
+<td>0xd4</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot3_valid_entry_count</td>
+<td>valid entry number in slot3</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM3_IMSC"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM3_IMSC</td>
+<td>0xd8</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_mask</td>
+<td>mask status of slot3 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_mask</td>
+<td>mask status of slot2 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_mask</td>
+<td>mask status of slot1 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_mask</td>
+<td>mask status of slot0 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_mask</td>
+<td>mask status of pr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_mask</td>
+<td>mask status of frame overflow interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_mask</td>
+<td>mask status of slot3 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_mask</td>
+<td>mask status of slot2 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_mask</td>
+<td>mask status of slot1 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_mask</td>
+<td>mask status of slot0 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM3_RAW_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM3_RAW_INT</td>
+<td>0xdc</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_raw</td>
+<td>raw status of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_raw</td>
+<td>raw status of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_raw</td>
+<td>raw status of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_raw</td>
+<td>raw status of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_raw</td>
+<td>raw status of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_raw</td>
+<td>raw status of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_raw</td>
+<td>raw status of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_raw</td>
+<td>raw status of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_raw</td>
+<td>raw status of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_raw</td>
+<td>raw status of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM3_MASKED_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM3_MASKED_INT</td>
+<td>0xe0</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>masked_slot3_cr_timeout_mask</td>
+<td>masked int of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>masked_slot2_cr_timeout_mask</td>
+<td>masked int of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>masked_slot1_cr_timeout_mask</td>
+<td>masked int of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>masked_slot0_cr_timeout_mask</td>
+<td>masked int of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>masked_pr_timeout_mask</td>
+<td>masked int of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>masked_on_fly_frame_overflow_mask</td>
+<td>masked int of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>masked_slot3_framelast_entry_loss_mask</td>
+<td>masked int of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>masked_slot2_framelast_entry_loss_mask</td>
+<td>masked int of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>masked_slot1_framelast_entry_loss_mask</td>
+<td>masked int of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>masked_slot0_framelast_entry_loss_mask</td>
+<td>masked int of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM3_ICR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM3_ICR</td>
+<td>0xe4</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_clr</td>
+<td>clear slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_clr</td>
+<td>clear slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_clr</td>
+<td>clear slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_clr</td>
+<td>clear slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_clr</td>
+<td>clear pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_clr</td>
+<td>clear frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_clr</td>
+<td>clear slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_clr</td>
+<td>clear slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_clr</td>
+<td>clear slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_clr</td>
+<td>clear slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM3_ISR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM3_ISR</td>
+<td>0xe8</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_set</td>
+<td>set slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_set</td>
+<td>set slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_set</td>
+<td>set slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_set</td>
+<td>set slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_set</td>
+<td>set pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_set</td>
+<td>set frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_set</td>
+<td>set slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_set</td>
+<td>set slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_set</td>
+<td>set slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_set</td>
+<td>set slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM4_BASIC_CFG"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM4_BASIC_CFG</td>
+<td>0xf0</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:24]</td>
+<td>stream_id</td>
+<td>The stream ID of this stream</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[23:8]</td>
+<td>entry_count</td>
+<td>The value + 1 is the amount of entries in the segment buffer of the stream.</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:1]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>valid</td>
+<td>Software sets to 1 to finish the configuration</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM4_STATUS"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM4_STATUS</td>
+<td>0xf4</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:6]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:2]</td>
+<td>active_consumer_number</td>
+<td>Current active consumer connectin to this stream</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:0]</td>
+<td>streaming_state</td>
+<td>0: uninitialized
+1: out of sync
+2: running
+3: reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM4_SLOT0_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM4_SLOT0_VALID_ENTRY_COUNT</td>
+<td>0xf8</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot0_valid_entry_count</td>
+<td>valid entry number in slot0</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM4_SLOT1_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM4_SLOT1_VALID_ENTRY_COUNT</td>
+<td>0xfc</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot1_valid_entry_count</td>
+<td>valid entry number in slot1</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM4_SLOT2_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM4_SLOT2_VALID_ENTRY_COUNT</td>
+<td>0x100</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot2_valid_entry_count</td>
+<td>valid entry number in slot2</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM4_SLOT3_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM4_SLOT3_VALID_ENTRY_COUNT</td>
+<td>0x104</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot3_valid_entry_count</td>
+<td>valid entry number in slot3</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM4_IMSC"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM4_IMSC</td>
+<td>0x108</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_mask</td>
+<td>mask status of slot3 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_mask</td>
+<td>mask status of slot2 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_mask</td>
+<td>mask status of slot1 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_mask</td>
+<td>mask status of slot0 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_mask</td>
+<td>mask status of pr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_mask</td>
+<td>mask status of frame overflow interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_mask</td>
+<td>mask status of slot3 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_mask</td>
+<td>mask status of slot2 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_mask</td>
+<td>mask status of slot1 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_mask</td>
+<td>mask status of slot0 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM4_RAW_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM4_RAW_INT</td>
+<td>0x10c</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_raw</td>
+<td>raw status of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_raw</td>
+<td>raw status of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_raw</td>
+<td>raw status of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_raw</td>
+<td>raw status of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_raw</td>
+<td>raw status of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_raw</td>
+<td>raw status of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_raw</td>
+<td>raw status of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_raw</td>
+<td>raw status of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_raw</td>
+<td>raw status of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_raw</td>
+<td>raw status of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM4_MASKED_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM4_MASKED_INT</td>
+<td>0x110</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>masked_slot3_cr_timeout_mask</td>
+<td>masked int of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>masked_slot2_cr_timeout_mask</td>
+<td>masked int of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>masked_slot1_cr_timeout_mask</td>
+<td>masked int of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>masked_slot0_cr_timeout_mask</td>
+<td>masked int of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>masked_pr_timeout_mask</td>
+<td>masked int of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>masked_on_fly_frame_overflow_mask</td>
+<td>masked int of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>masked_slot3_framelast_entry_loss_mask</td>
+<td>masked int of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>masked_slot2_framelast_entry_loss_mask</td>
+<td>masked int of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>masked_slot1_framelast_entry_loss_mask</td>
+<td>masked int of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>masked_slot0_framelast_entry_loss_mask</td>
+<td>masked int of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM4_ICR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM4_ICR</td>
+<td>0x114</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_clr</td>
+<td>clear slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_clr</td>
+<td>clear slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_clr</td>
+<td>clear slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_clr</td>
+<td>clear slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_clr</td>
+<td>clear pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_clr</td>
+<td>clear frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_clr</td>
+<td>clear slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_clr</td>
+<td>clear slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_clr</td>
+<td>clear slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_clr</td>
+<td>clear slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM4_ISR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM4_ISR</td>
+<td>0x118</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_set</td>
+<td>set slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_set</td>
+<td>set slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_set</td>
+<td>set slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_set</td>
+<td>set slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_set</td>
+<td>set pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_set</td>
+<td>set frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_set</td>
+<td>set slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_set</td>
+<td>set slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_set</td>
+<td>set slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_set</td>
+<td>set slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM5_BASIC_CFG"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM5_BASIC_CFG</td>
+<td>0x120</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:24]</td>
+<td>stream_id</td>
+<td>The stream ID of this stream</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[23:8]</td>
+<td>entry_count</td>
+<td>The value + 1 is the amount of entries in the segment buffer of the stream.</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:1]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>valid</td>
+<td>Software sets to 1 to finish the configuration</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM5_STATUS"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM5_STATUS</td>
+<td>0x124</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:6]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:2]</td>
+<td>active_consumer_number</td>
+<td>Current active consumer connectin to this stream</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:0]</td>
+<td>streaming_state</td>
+<td>0: uninitialized
+1: out of sync
+2: running
+3: reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM5_SLOT0_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM5_SLOT0_VALID_ENTRY_COUNT</td>
+<td>0x128</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot0_valid_entry_count</td>
+<td>valid entry number in slot0</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM5_SLOT1_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM5_SLOT1_VALID_ENTRY_COUNT</td>
+<td>0x12c</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot1_valid_entry_count</td>
+<td>valid entry number in slot1</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM5_SLOT2_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM5_SLOT2_VALID_ENTRY_COUNT</td>
+<td>0x130</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot2_valid_entry_count</td>
+<td>valid entry number in slot2</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM5_SLOT3_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM5_SLOT3_VALID_ENTRY_COUNT</td>
+<td>0x134</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot3_valid_entry_count</td>
+<td>valid entry number in slot3</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM5_IMSC"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM5_IMSC</td>
+<td>0x138</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_mask</td>
+<td>mask status of slot3 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_mask</td>
+<td>mask status of slot2 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_mask</td>
+<td>mask status of slot1 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_mask</td>
+<td>mask status of slot0 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_mask</td>
+<td>mask status of pr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_mask</td>
+<td>mask status of frame overflow interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_mask</td>
+<td>mask status of slot3 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_mask</td>
+<td>mask status of slot2 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_mask</td>
+<td>mask status of slot1 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_mask</td>
+<td>mask status of slot0 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM5_RAW_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM5_RAW_INT</td>
+<td>0x13c</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_raw</td>
+<td>raw status of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_raw</td>
+<td>raw status of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_raw</td>
+<td>raw status of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_raw</td>
+<td>raw status of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_raw</td>
+<td>raw status of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_raw</td>
+<td>raw status of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_raw</td>
+<td>raw status of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_raw</td>
+<td>raw status of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_raw</td>
+<td>raw status of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_raw</td>
+<td>raw status of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM5_MASKED_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM5_MASKED_INT</td>
+<td>0x140</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>masked_slot3_cr_timeout_mask</td>
+<td>masked int of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>masked_slot2_cr_timeout_mask</td>
+<td>masked int of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>masked_slot1_cr_timeout_mask</td>
+<td>masked int of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>masked_slot0_cr_timeout_mask</td>
+<td>masked int of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>masked_pr_timeout_mask</td>
+<td>masked int of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>masked_on_fly_frame_overflow_mask</td>
+<td>masked int of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>masked_slot3_framelast_entry_loss_mask</td>
+<td>masked int of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>masked_slot2_framelast_entry_loss_mask</td>
+<td>masked int of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>masked_slot1_framelast_entry_loss_mask</td>
+<td>masked int of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>masked_slot0_framelast_entry_loss_mask</td>
+<td>masked int of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM5_ICR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM5_ICR</td>
+<td>0x144</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_clr</td>
+<td>clear slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_clr</td>
+<td>clear slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_clr</td>
+<td>clear slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_clr</td>
+<td>clear slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_clr</td>
+<td>clear pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_clr</td>
+<td>clear frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_clr</td>
+<td>clear slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_clr</td>
+<td>clear slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_clr</td>
+<td>clear slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_clr</td>
+<td>clear slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM5_ISR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM5_ISR</td>
+<td>0x148</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_set</td>
+<td>set slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_set</td>
+<td>set slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_set</td>
+<td>set slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_set</td>
+<td>set slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_set</td>
+<td>set pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_set</td>
+<td>set frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_set</td>
+<td>set slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_set</td>
+<td>set slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_set</td>
+<td>set slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_set</td>
+<td>set slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM6_BASIC_CFG"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM6_BASIC_CFG</td>
+<td>0x150</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:24]</td>
+<td>stream_id</td>
+<td>The stream ID of this stream</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[23:8]</td>
+<td>entry_count</td>
+<td>The value + 1 is the amount of entries in the segment buffer of the stream.</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:1]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>valid</td>
+<td>Software sets to 1 to finish the configuration</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM6_STATUS"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM6_STATUS</td>
+<td>0x154</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:6]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:2]</td>
+<td>active_consumer_number</td>
+<td>Current active consumer connectin to this stream</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:0]</td>
+<td>streaming_state</td>
+<td>0: uninitialized
+1: out of sync
+2: running
+3: reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM6_SLOT0_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM6_SLOT0_VALID_ENTRY_COUNT</td>
+<td>0x158</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot0_valid_entry_count</td>
+<td>valid entry number in slot0</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM6_SLOT1_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM6_SLOT1_VALID_ENTRY_COUNT</td>
+<td>0x15c</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot1_valid_entry_count</td>
+<td>valid entry number in slot1</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM6_SLOT2_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM6_SLOT2_VALID_ENTRY_COUNT</td>
+<td>0x160</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot2_valid_entry_count</td>
+<td>valid entry number in slot2</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM6_SLOT3_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM6_SLOT3_VALID_ENTRY_COUNT</td>
+<td>0x164</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot3_valid_entry_count</td>
+<td>valid entry number in slot3</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM6_IMSC"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM6_IMSC</td>
+<td>0x168</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_mask</td>
+<td>mask status of slot3 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_mask</td>
+<td>mask status of slot2 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_mask</td>
+<td>mask status of slot1 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_mask</td>
+<td>mask status of slot0 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_mask</td>
+<td>mask status of pr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_mask</td>
+<td>mask status of frame overflow interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_mask</td>
+<td>mask status of slot3 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_mask</td>
+<td>mask status of slot2 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_mask</td>
+<td>mask status of slot1 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_mask</td>
+<td>mask status of slot0 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM6_RAW_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM6_RAW_INT</td>
+<td>0x16c</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_raw</td>
+<td>raw status of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_raw</td>
+<td>raw status of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_raw</td>
+<td>raw status of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_raw</td>
+<td>raw status of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_raw</td>
+<td>raw status of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_raw</td>
+<td>raw status of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_raw</td>
+<td>raw status of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_raw</td>
+<td>raw status of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_raw</td>
+<td>raw status of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_raw</td>
+<td>raw status of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM6_MASKED_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM6_MASKED_INT</td>
+<td>0x170</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>masked_slot3_cr_timeout_mask</td>
+<td>masked int of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>masked_slot2_cr_timeout_mask</td>
+<td>masked int of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>masked_slot1_cr_timeout_mask</td>
+<td>masked int of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>masked_slot0_cr_timeout_mask</td>
+<td>masked int of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>masked_pr_timeout_mask</td>
+<td>masked int of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>masked_on_fly_frame_overflow_mask</td>
+<td>masked int of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>masked_slot3_framelast_entry_loss_mask</td>
+<td>masked int of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>masked_slot2_framelast_entry_loss_mask</td>
+<td>masked int of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>masked_slot1_framelast_entry_loss_mask</td>
+<td>masked int of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>masked_slot0_framelast_entry_loss_mask</td>
+<td>masked int of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM6_ICR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM6_ICR</td>
+<td>0x174</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_clr</td>
+<td>clear slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_clr</td>
+<td>clear slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_clr</td>
+<td>clear slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_clr</td>
+<td>clear slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_clr</td>
+<td>clear pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_clr</td>
+<td>clear frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_clr</td>
+<td>clear slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_clr</td>
+<td>clear slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_clr</td>
+<td>clear slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_clr</td>
+<td>clear slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM6_ISR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM6_ISR</td>
+<td>0x178</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_set</td>
+<td>set slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_set</td>
+<td>set slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_set</td>
+<td>set slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_set</td>
+<td>set slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_set</td>
+<td>set pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_set</td>
+<td>set frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_set</td>
+<td>set slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_set</td>
+<td>set slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_set</td>
+<td>set slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_set</td>
+<td>set slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM7_BASIC_CFG"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM7_BASIC_CFG</td>
+<td>0x180</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:24]</td>
+<td>stream_id</td>
+<td>The stream ID of this stream</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[23:8]</td>
+<td>entry_count</td>
+<td>The value + 1 is the amount of entries in the segment buffer of the stream.</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:1]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>valid</td>
+<td>Software sets to 1 to finish the configuration</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM7_STATUS"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM7_STATUS</td>
+<td>0x184</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:6]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:2]</td>
+<td>active_consumer_number</td>
+<td>Current active consumer connectin to this stream</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:0]</td>
+<td>streaming_state</td>
+<td>0: uninitialized
+1: out of sync
+2: running
+3: reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM7_SLOT0_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM7_SLOT0_VALID_ENTRY_COUNT</td>
+<td>0x188</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot0_valid_entry_count</td>
+<td>valid entry number in slot0</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM7_SLOT1_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM7_SLOT1_VALID_ENTRY_COUNT</td>
+<td>0x18c</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot1_valid_entry_count</td>
+<td>valid entry number in slot1</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM7_SLOT2_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM7_SLOT2_VALID_ENTRY_COUNT</td>
+<td>0x190</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot2_valid_entry_count</td>
+<td>valid entry number in slot2</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM7_SLOT3_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM7_SLOT3_VALID_ENTRY_COUNT</td>
+<td>0x194</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot3_valid_entry_count</td>
+<td>valid entry number in slot3</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM7_IMSC"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM7_IMSC</td>
+<td>0x198</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_mask</td>
+<td>mask status of slot3 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_mask</td>
+<td>mask status of slot2 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_mask</td>
+<td>mask status of slot1 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_mask</td>
+<td>mask status of slot0 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_mask</td>
+<td>mask status of pr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_mask</td>
+<td>mask status of frame overflow interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_mask</td>
+<td>mask status of slot3 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_mask</td>
+<td>mask status of slot2 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_mask</td>
+<td>mask status of slot1 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_mask</td>
+<td>mask status of slot0 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM7_RAW_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM7_RAW_INT</td>
+<td>0x19c</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_raw</td>
+<td>raw status of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_raw</td>
+<td>raw status of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_raw</td>
+<td>raw status of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_raw</td>
+<td>raw status of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_raw</td>
+<td>raw status of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_raw</td>
+<td>raw status of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_raw</td>
+<td>raw status of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_raw</td>
+<td>raw status of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_raw</td>
+<td>raw status of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_raw</td>
+<td>raw status of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM7_MASKED_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM7_MASKED_INT</td>
+<td>0x1a0</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>masked_slot3_cr_timeout_mask</td>
+<td>masked int of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>masked_slot2_cr_timeout_mask</td>
+<td>masked int of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>masked_slot1_cr_timeout_mask</td>
+<td>masked int of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>masked_slot0_cr_timeout_mask</td>
+<td>masked int of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>masked_pr_timeout_mask</td>
+<td>masked int of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>masked_on_fly_frame_overflow_mask</td>
+<td>masked int of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>masked_slot3_framelast_entry_loss_mask</td>
+<td>masked int of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>masked_slot2_framelast_entry_loss_mask</td>
+<td>masked int of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>masked_slot1_framelast_entry_loss_mask</td>
+<td>masked int of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>masked_slot0_framelast_entry_loss_mask</td>
+<td>masked int of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM7_ICR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM7_ICR</td>
+<td>0x1a4</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_clr</td>
+<td>clear slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_clr</td>
+<td>clear slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_clr</td>
+<td>clear slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_clr</td>
+<td>clear slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_clr</td>
+<td>clear pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_clr</td>
+<td>clear frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_clr</td>
+<td>clear slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_clr</td>
+<td>clear slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_clr</td>
+<td>clear slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_clr</td>
+<td>clear slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM7_ISR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM7_ISR</td>
+<td>0x1a8</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_set</td>
+<td>set slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_set</td>
+<td>set slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_set</td>
+<td>set slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_set</td>
+<td>set slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_set</td>
+<td>set pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_set</td>
+<td>set frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_set</td>
+<td>set slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_set</td>
+<td>set slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_set</td>
+<td>set slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_set</td>
+<td>set slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM8_BASIC_CFG"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM8_BASIC_CFG</td>
+<td>0x1b0</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:24]</td>
+<td>stream_id</td>
+<td>The stream ID of this stream</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[23:8]</td>
+<td>entry_count</td>
+<td>The value + 1 is the amount of entries in the segment buffer of the stream.</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:1]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>valid</td>
+<td>Software sets to 1 to finish the configuration</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM8_STATUS"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM8_STATUS</td>
+<td>0x1b4</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:6]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:2]</td>
+<td>active_consumer_number</td>
+<td>Current active consumer connectin to this stream</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:0]</td>
+<td>streaming_state</td>
+<td>0: uninitialized
+1: out of sync
+2: running
+3: reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM8_SLOT0_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM8_SLOT0_VALID_ENTRY_COUNT</td>
+<td>0x1b8</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot0_valid_entry_count</td>
+<td>valid entry number in slot0</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM8_SLOT1_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM8_SLOT1_VALID_ENTRY_COUNT</td>
+<td>0x1bc</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot1_valid_entry_count</td>
+<td>valid entry number in slot1</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM8_SLOT2_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM8_SLOT2_VALID_ENTRY_COUNT</td>
+<td>0x1c0</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot2_valid_entry_count</td>
+<td>valid entry number in slot2</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM8_SLOT3_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM8_SLOT3_VALID_ENTRY_COUNT</td>
+<td>0x1c4</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot3_valid_entry_count</td>
+<td>valid entry number in slot3</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM8_IMSC"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM8_IMSC</td>
+<td>0x1c8</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_mask</td>
+<td>mask status of slot3 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_mask</td>
+<td>mask status of slot2 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_mask</td>
+<td>mask status of slot1 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_mask</td>
+<td>mask status of slot0 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_mask</td>
+<td>mask status of pr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_mask</td>
+<td>mask status of frame overflow interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_mask</td>
+<td>mask status of slot3 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_mask</td>
+<td>mask status of slot2 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_mask</td>
+<td>mask status of slot1 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_mask</td>
+<td>mask status of slot0 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM8_RAW_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM8_RAW_INT</td>
+<td>0x1cc</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_raw</td>
+<td>raw status of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_raw</td>
+<td>raw status of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_raw</td>
+<td>raw status of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_raw</td>
+<td>raw status of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_raw</td>
+<td>raw status of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_raw</td>
+<td>raw status of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_raw</td>
+<td>raw status of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_raw</td>
+<td>raw status of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_raw</td>
+<td>raw status of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_raw</td>
+<td>raw status of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM8_MASKED_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM8_MASKED_INT</td>
+<td>0x1d0</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>masked_slot3_cr_timeout_mask</td>
+<td>masked int of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>masked_slot2_cr_timeout_mask</td>
+<td>masked int of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>masked_slot1_cr_timeout_mask</td>
+<td>masked int of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>masked_slot0_cr_timeout_mask</td>
+<td>masked int of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>masked_pr_timeout_mask</td>
+<td>masked int of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>masked_on_fly_frame_overflow_mask</td>
+<td>masked int of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>masked_slot3_framelast_entry_loss_mask</td>
+<td>masked int of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>masked_slot2_framelast_entry_loss_mask</td>
+<td>masked int of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>masked_slot1_framelast_entry_loss_mask</td>
+<td>masked int of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>masked_slot0_framelast_entry_loss_mask</td>
+<td>masked int of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM8_ICR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM8_ICR</td>
+<td>0x1d4</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_clr</td>
+<td>clear slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_clr</td>
+<td>clear slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_clr</td>
+<td>clear slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_clr</td>
+<td>clear slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_clr</td>
+<td>clear pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_clr</td>
+<td>clear frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_clr</td>
+<td>clear slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_clr</td>
+<td>clear slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_clr</td>
+<td>clear slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_clr</td>
+<td>clear slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM8_ISR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM8_ISR</td>
+<td>0x1d8</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_set</td>
+<td>set slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_set</td>
+<td>set slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_set</td>
+<td>set slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_set</td>
+<td>set slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_set</td>
+<td>set pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_set</td>
+<td>set frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_set</td>
+<td>set slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_set</td>
+<td>set slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_set</td>
+<td>set slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_set</td>
+<td>set slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM9_BASIC_CFG"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM9_BASIC_CFG</td>
+<td>0x1e0</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:24]</td>
+<td>stream_id</td>
+<td>The stream ID of this stream</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[23:8]</td>
+<td>entry_count</td>
+<td>The value + 1 is the amount of entries in the segment buffer of the stream.</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:1]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>valid</td>
+<td>Software sets to 1 to finish the configuration</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM9_STATUS"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM9_STATUS</td>
+<td>0x1e4</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:6]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:2]</td>
+<td>active_consumer_number</td>
+<td>Current active consumer connectin to this stream</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:0]</td>
+<td>streaming_state</td>
+<td>0: uninitialized
+1: out of sync
+2: running
+3: reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM9_SLOT0_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM9_SLOT0_VALID_ENTRY_COUNT</td>
+<td>0x1e8</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot0_valid_entry_count</td>
+<td>valid entry number in slot0</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM9_SLOT1_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM9_SLOT1_VALID_ENTRY_COUNT</td>
+<td>0x1ec</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot1_valid_entry_count</td>
+<td>valid entry number in slot1</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM9_SLOT2_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM9_SLOT2_VALID_ENTRY_COUNT</td>
+<td>0x1f0</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot2_valid_entry_count</td>
+<td>valid entry number in slot2</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM9_SLOT3_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM9_SLOT3_VALID_ENTRY_COUNT</td>
+<td>0x1f4</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot3_valid_entry_count</td>
+<td>valid entry number in slot3</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM9_IMSC"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM9_IMSC</td>
+<td>0x1f8</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_mask</td>
+<td>mask status of slot3 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_mask</td>
+<td>mask status of slot2 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_mask</td>
+<td>mask status of slot1 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_mask</td>
+<td>mask status of slot0 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_mask</td>
+<td>mask status of pr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_mask</td>
+<td>mask status of frame overflow interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_mask</td>
+<td>mask status of slot3 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_mask</td>
+<td>mask status of slot2 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_mask</td>
+<td>mask status of slot1 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_mask</td>
+<td>mask status of slot0 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM9_RAW_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM9_RAW_INT</td>
+<td>0x1fc</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_raw</td>
+<td>raw status of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_raw</td>
+<td>raw status of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_raw</td>
+<td>raw status of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_raw</td>
+<td>raw status of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_raw</td>
+<td>raw status of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_raw</td>
+<td>raw status of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_raw</td>
+<td>raw status of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_raw</td>
+<td>raw status of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_raw</td>
+<td>raw status of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_raw</td>
+<td>raw status of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM9_MASKED_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM9_MASKED_INT</td>
+<td>0x200</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>masked_slot3_cr_timeout_mask</td>
+<td>masked int of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>masked_slot2_cr_timeout_mask</td>
+<td>masked int of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>masked_slot1_cr_timeout_mask</td>
+<td>masked int of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>masked_slot0_cr_timeout_mask</td>
+<td>masked int of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>masked_pr_timeout_mask</td>
+<td>masked int of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>masked_on_fly_frame_overflow_mask</td>
+<td>masked int of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>masked_slot3_framelast_entry_loss_mask</td>
+<td>masked int of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>masked_slot2_framelast_entry_loss_mask</td>
+<td>masked int of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>masked_slot1_framelast_entry_loss_mask</td>
+<td>masked int of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>masked_slot0_framelast_entry_loss_mask</td>
+<td>masked int of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM9_ICR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM9_ICR</td>
+<td>0x204</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_clr</td>
+<td>clear slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_clr</td>
+<td>clear slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_clr</td>
+<td>clear slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_clr</td>
+<td>clear slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_clr</td>
+<td>clear pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_clr</td>
+<td>clear frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_clr</td>
+<td>clear slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_clr</td>
+<td>clear slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_clr</td>
+<td>clear slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_clr</td>
+<td>clear slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM9_ISR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM9_ISR</td>
+<td>0x208</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_set</td>
+<td>set slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_set</td>
+<td>set slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_set</td>
+<td>set slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_set</td>
+<td>set slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_set</td>
+<td>set pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_set</td>
+<td>set frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_set</td>
+<td>set slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_set</td>
+<td>set slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_set</td>
+<td>set slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_set</td>
+<td>set slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM10_BASIC_CFG"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM10_BASIC_CFG</td>
+<td>0x210</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:24]</td>
+<td>stream_id</td>
+<td>The stream ID of this stream</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[23:8]</td>
+<td>entry_count</td>
+<td>The value + 1 is the amount of entries in the segment buffer of the stream.</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:1]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>valid</td>
+<td>Software sets to 1 to finish the configuration</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM10_STATUS"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM10_STATUS</td>
+<td>0x214</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:6]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:2]</td>
+<td>active_consumer_number</td>
+<td>Current active consumer connectin to this stream</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:0]</td>
+<td>streaming_state</td>
+<td>0: uninitialized
+1: out of sync
+2: running
+3: reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM10_SLOT0_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM10_SLOT0_VALID_ENTRY_COUNT</td>
+<td>0x218</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot0_valid_entry_count</td>
+<td>valid entry number in slot0</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM10_SLOT1_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM10_SLOT1_VALID_ENTRY_COUNT</td>
+<td>0x21c</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot1_valid_entry_count</td>
+<td>valid entry number in slot1</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM10_SLOT2_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM10_SLOT2_VALID_ENTRY_COUNT</td>
+<td>0x220</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot2_valid_entry_count</td>
+<td>valid entry number in slot2</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM10_SLOT3_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM10_SLOT3_VALID_ENTRY_COUNT</td>
+<td>0x224</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot3_valid_entry_count</td>
+<td>valid entry number in slot3</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM10_IMSC"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM10_IMSC</td>
+<td>0x228</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_mask</td>
+<td>mask status of slot3 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_mask</td>
+<td>mask status of slot2 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_mask</td>
+<td>mask status of slot1 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_mask</td>
+<td>mask status of slot0 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_mask</td>
+<td>mask status of pr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_mask</td>
+<td>mask status of frame overflow interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_mask</td>
+<td>mask status of slot3 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_mask</td>
+<td>mask status of slot2 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_mask</td>
+<td>mask status of slot1 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_mask</td>
+<td>mask status of slot0 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM10_RAW_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM10_RAW_INT</td>
+<td>0x22c</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_raw</td>
+<td>raw status of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_raw</td>
+<td>raw status of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_raw</td>
+<td>raw status of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_raw</td>
+<td>raw status of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_raw</td>
+<td>raw status of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_raw</td>
+<td>raw status of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_raw</td>
+<td>raw status of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_raw</td>
+<td>raw status of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_raw</td>
+<td>raw status of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_raw</td>
+<td>raw status of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM10_MASKED_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM10_MASKED_INT</td>
+<td>0x230</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>masked_slot3_cr_timeout_mask</td>
+<td>masked int of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>masked_slot2_cr_timeout_mask</td>
+<td>masked int of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>masked_slot1_cr_timeout_mask</td>
+<td>masked int of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>masked_slot0_cr_timeout_mask</td>
+<td>masked int of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>masked_pr_timeout_mask</td>
+<td>masked int of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>masked_on_fly_frame_overflow_mask</td>
+<td>masked int of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>masked_slot3_framelast_entry_loss_mask</td>
+<td>masked int of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>masked_slot2_framelast_entry_loss_mask</td>
+<td>masked int of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>masked_slot1_framelast_entry_loss_mask</td>
+<td>masked int of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>masked_slot0_framelast_entry_loss_mask</td>
+<td>masked int of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM10_ICR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM10_ICR</td>
+<td>0x234</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_clr</td>
+<td>clear slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_clr</td>
+<td>clear slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_clr</td>
+<td>clear slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_clr</td>
+<td>clear slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_clr</td>
+<td>clear pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_clr</td>
+<td>clear frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_clr</td>
+<td>clear slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_clr</td>
+<td>clear slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_clr</td>
+<td>clear slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_clr</td>
+<td>clear slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM10_ISR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM10_ISR</td>
+<td>0x238</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_set</td>
+<td>set slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_set</td>
+<td>set slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_set</td>
+<td>set slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_set</td>
+<td>set slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_set</td>
+<td>set pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_set</td>
+<td>set frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_set</td>
+<td>set slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_set</td>
+<td>set slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_set</td>
+<td>set slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_set</td>
+<td>set slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM11_BASIC_CFG"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM11_BASIC_CFG</td>
+<td>0x240</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:24]</td>
+<td>stream_id</td>
+<td>The stream ID of this stream</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[23:8]</td>
+<td>entry_count</td>
+<td>The value + 1 is the amount of entries in the segment buffer of the stream.</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:1]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>valid</td>
+<td>Software sets to 1 to finish the configuration</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM11_STATUS"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM11_STATUS</td>
+<td>0x244</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:6]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:2]</td>
+<td>active_consumer_number</td>
+<td>Current active consumer connectin to this stream</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:0]</td>
+<td>streaming_state</td>
+<td>0: uninitialized
+1: out of sync
+2: running
+3: reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM11_SLOT0_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM11_SLOT0_VALID_ENTRY_COUNT</td>
+<td>0x248</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot0_valid_entry_count</td>
+<td>valid entry number in slot0</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM11_SLOT1_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM11_SLOT1_VALID_ENTRY_COUNT</td>
+<td>0x24c</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot1_valid_entry_count</td>
+<td>valid entry number in slot1</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM11_SLOT2_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM11_SLOT2_VALID_ENTRY_COUNT</td>
+<td>0x250</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot2_valid_entry_count</td>
+<td>valid entry number in slot2</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM11_SLOT3_VALID_ENTRY_COUNT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM11_SLOT3_VALID_ENTRY_COUNT</td>
+<td>0x254</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[16:0]</td>
+<td>slot3_valid_entry_count</td>
+<td>valid entry number in slot3</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM11_IMSC"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM11_IMSC</td>
+<td>0x258</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_mask</td>
+<td>mask status of slot3 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_mask</td>
+<td>mask status of slot2 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_mask</td>
+<td>mask status of slot1 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_mask</td>
+<td>mask status of slot0 cr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_mask</td>
+<td>mask status of pr timeout</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_mask</td>
+<td>mask status of frame overflow interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_mask</td>
+<td>mask status of slot3 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_mask</td>
+<td>mask status of slot2 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_mask</td>
+<td>mask status of slot1 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_mask</td>
+<td>mask status of slot0 framelast entry loss interrupt</td>
+<td>rw</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM11_RAW_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM11_RAW_INT</td>
+<td>0x25c</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_raw</td>
+<td>raw status of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_raw</td>
+<td>raw status of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_raw</td>
+<td>raw status of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_raw</td>
+<td>raw status of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_raw</td>
+<td>raw status of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_raw</td>
+<td>raw status of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_raw</td>
+<td>raw status of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_raw</td>
+<td>raw status of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_raw</td>
+<td>raw status of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_raw</td>
+<td>raw status of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM11_MASKED_INT"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM11_MASKED_INT</td>
+<td>0x260</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>masked_slot3_cr_timeout_mask</td>
+<td>masked int of slot3 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>masked_slot2_cr_timeout_mask</td>
+<td>masked int of slot2 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>masked_slot1_cr_timeout_mask</td>
+<td>masked int of slot1 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>masked_slot0_cr_timeout_mask</td>
+<td>masked int of slot0 cr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>masked_pr_timeout_mask</td>
+<td>masked int of pr timeout</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>masked_on_fly_frame_overflow_mask</td>
+<td>masked int of frame overflow interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>masked_slot3_framelast_entry_loss_mask</td>
+<td>masked int of slot3 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>masked_slot2_framelast_entry_loss_mask</td>
+<td>masked int of slot2 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>masked_slot1_framelast_entry_loss_mask</td>
+<td>masked int of slot1 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>masked_slot0_framelast_entry_loss_mask</td>
+<td>masked int of slot0 framelast entry loss interrupt</td>
+<td>ro</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM11_ICR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM11_ICR</td>
+<td>0x264</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_clr</td>
+<td>clear slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_clr</td>
+<td>clear slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_clr</td>
+<td>clear slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_clr</td>
+<td>clear slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_clr</td>
+<td>clear pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_clr</td>
+<td>clear frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_clr</td>
+<td>clear slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_clr</td>
+<td>clear slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_clr</td>
+<td>clear slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_clr</td>
+<td>clear slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+<table id="STREAM11_ISR"><thead><tr><th>Name</th><th>Address</th><th>Description</th></tr></thead><tbody><tr><td>STREAM11_ISR</td>
+<td>0x268</td>
+<td></td>
+</tr>
+</tbody></table><p></p>
+<table><thead><tr><th>Bits</th><th>Name</th><th>Description</th><th>Access</th><th>Reset</th></tr></thead><tbody><tr><td>[31:10]</td>
+<td>reserved_sbi</td>
+<td>Reserved</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[9:9]</td>
+<td>slot3_cr_timeout_set</td>
+<td>set slot3 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[8:8]</td>
+<td>slot2_cr_timeout_set</td>
+<td>set slot2 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[7:7]</td>
+<td>slot1_cr_timeout_set</td>
+<td>set slot1 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[6:6]</td>
+<td>slot0_cr_timeout_set</td>
+<td>set slot0 cr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[5:5]</td>
+<td>pr_timeout_set</td>
+<td>set pr timeout</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[4:4]</td>
+<td>on_fly_frame_overflow_set</td>
+<td>set frame overflow interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[3:3]</td>
+<td>slot3_framelast_entry_loss_set</td>
+<td>set slot3 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[2:2]</td>
+<td>slot2_framelast_entry_loss_set</td>
+<td>set slot2 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[1:1]</td>
+<td>slot1_framelast_entry_loss_set</td>
+<td>set slot1 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+<tr><td>[0:0]</td>
+<td>slot0_framelast_entry_loss_set</td>
+<td>set slot0 framelast entry loss interrupt</td>
+<td>write-only</td>
+<td>0x0</td>
+</tr>
+</tbody></table><p></p>
+<p></p>
+</html>

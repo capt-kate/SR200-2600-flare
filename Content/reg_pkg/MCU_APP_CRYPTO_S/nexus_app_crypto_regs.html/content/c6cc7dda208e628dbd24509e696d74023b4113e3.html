@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">AMC_INTP</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x10</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31:5]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="txerr"><td>[4]</td>
+<td><a href="#txerr.desc">txerr</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>Data Transfer Error Interrupt</td>
+<td>H<a class="headerlink" href="#txerr" title="Permalink to this row"></a></td>
+</tr>
+<tr class="reserved-field"><td>[3:2]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="operr"><td>[1]</td>
+<td><a href="#operr.desc">operr</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>Invalid Operand Error Interrupt</td>
+<td>H<a class="headerlink" href="#operr" title="Permalink to this row"></a></td>
+</tr>
+<tr id="done"><td>[0]</td>
+<td><a href="#done.desc">done</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>Done Interrupt</td>
+<td>H<a class="headerlink" href="#done" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="txerr.desc">txerr - Data Transfer Error Interrupt<a class="headerlink" href="#txerr.desc" title="Permalink to this headline"></a></h3>
+<p>This bit is set when there is an uncorrectable data error during memory access. This includes the firmware access through AMC_ACC_XXX_DATA registers and hardware access during the operation. Write one to clear this bit.<p></p>
+</p>
+<h3 id="operr.desc">operr - Invalid Operand Error Interrupt<a class="headerlink" href="#operr.desc" title="Permalink to this headline"></a></h3>
+<p>This bit is set when engine detects invalid operand(s) value that can cause unexpected result. When the error occurs, the engine stops the operation. All given operands are lost. Write one to clear this bit.<p></p>
+</p>
+<h3 id="done.desc">done - Done Interrupt<a class="headerlink" href="#done.desc" title="Permalink to this headline"></a></h3>
+<p>This bit is set when engine has finished the given task. Write one to clear this bit.<p></p>
+</p>
+

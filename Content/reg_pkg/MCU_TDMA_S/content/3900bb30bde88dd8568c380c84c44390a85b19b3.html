@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">CH_SRCTMPLT</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1044</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Channel Source Template Pattern Register</p>
+<p>This register sets the template pattern used for reading the source memory area.</p>
+<p>The content of this register can be updated during command linking by setting bit[17] in the command link header.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="SRCTMPLT"><td>[31:1]</td>
+<td><a href="#SRCTMPLT.desc">SRCTMPLT</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#SRCTMPLT" title="Permalink to this row"></a></td>
+</tr>
+<tr id="SRCTMPLTLSB"><td>[0]</td>
+<td><a href="#SRCTMPLTLSB.desc">SRCTMPLTLSB</a></td>
+<td><span>r</span></td>
+<td>0x1</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#SRCTMPLTLSB" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="SRCTMPLT.desc">SRCTMPLT<a class="headerlink" href="#SRCTMPLT.desc" title="Permalink to this headline"></a></h3>
+<p>Source Packing Template. Bit[0] is read only and always set to 1 as template patterns can only start from the base address of the transfer. Not present when HAS_TMPLT is 0.</p>
+<h3 id="SRCTMPLTLSB.desc">SRCTMPLTLSB<a class="headerlink" href="#SRCTMPLTLSB.desc" title="Permalink to this headline"></a></h3>
+<p>Source Packing Template Least Significant Bit. This bit of the template is read only and always set to 1 as template patterns can only start from the base address of the transfer. Not present when HAS_TMPLT is 0.</p>
+

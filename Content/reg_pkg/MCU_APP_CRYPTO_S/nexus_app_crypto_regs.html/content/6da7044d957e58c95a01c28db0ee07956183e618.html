@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">Output DMA Interrupt 1 Mask</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x34</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>This register contains the individual interrupt mask bits.<p></p>
+</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31:6]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="data_par_err_msk"><td>[5]</td>
+<td><a href="#data_par_err_msk.desc">data_par_err_msk</a></td>
+<td><span>rw</span></td>
+<td>0x1</td>
+<td></td>
+<td>AXI Data Parity Error Mask</td>
+<td>H<a class="headerlink" href="#data_par_err_msk" title="Permalink to this row"></a></td>
+</tr>
+<tr id="out_dma_pause_cmpl_msk"><td>[4]</td>
+<td><a href="#out_dma_pause_cmpl_msk.desc">out_dma_pause_cmpl_msk</a></td>
+<td><span>rw</span></td>
+<td>0x1</td>
+<td></td>
+<td>Output DMA Pause Complete Interrupt Mask</td>
+<td>H<a class="headerlink" href="#out_dma_pause_cmpl_msk" title="Permalink to this row"></a></td>
+</tr>
+<tr id="out_par_err_msk"><td>[3]</td>
+<td><a href="#out_par_err_msk.desc">out_par_err_msk</a></td>
+<td><span>rw</span></td>
+<td>0x1</td>
+<td></td>
+<td>Input FIFO Parity Error Interrupt Mask</td>
+<td>H<a class="headerlink" href="#out_par_err_msk" title="Permalink to this row"></a></td>
+</tr>
+<tr id="out_ll_err_msk"><td>[2]</td>
+<td><a href="#out_ll_err_msk.desc">out_ll_err_msk</a></td>
+<td><span>rw</span></td>
+<td>0x1</td>
+<td></td>
+<td>Input Link List Bus Access Error Interrupt Mask</td>
+<td>H<a class="headerlink" href="#out_ll_err_msk" title="Permalink to this row"></a></td>
+</tr>
+<tr id="out_dma_bus_err_msk"><td>[1]</td>
+<td><a href="#out_dma_bus_err_msk.desc">out_dma_bus_err_msk</a></td>
+<td><span>rw</span></td>
+<td>0x1</td>
+<td></td>
+<td>AXI Read Cycle Access Error Interrupt Mask</td>
+<td>H<a class="headerlink" href="#out_dma_bus_err_msk" title="Permalink to this row"></a></td>
+</tr>
+<tr id="out_dma_done_msk"><td>[0]</td>
+<td><a href="#out_dma_done_msk.desc">out_dma_done_msk</a></td>
+<td><span>rw</span></td>
+<td>0x1</td>
+<td></td>
+<td>Input DMA Transfer Complete Mask</td>
+<td>H<a class="headerlink" href="#out_dma_done_msk" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="data_par_err_msk.desc">data_par_err_msk - AXI Data Parity Error Mask<a class="headerlink" href="#data_par_err_msk.desc" title="Permalink to this headline"></a></h3>
+<p>Output DMA Link List AXI Read Data Bus parity error mask.<p></p>
+</p>
+<h3 id="out_dma_pause_cmpl_msk.desc">out_dma_pause_cmpl_msk - Output DMA Pause Complete Interrupt Mask<a class="headerlink" href="#out_dma_pause_cmpl_msk.desc" title="Permalink to this headline"></a></h3>
+<h3 id="out_par_err_msk.desc">out_par_err_msk - Input FIFO Parity Error Interrupt Mask<a class="headerlink" href="#out_par_err_msk.desc" title="Permalink to this headline"></a></h3>
+<h3 id="out_ll_err_msk.desc">out_ll_err_msk - Input Link List Bus Access Error Interrupt Mask<a class="headerlink" href="#out_ll_err_msk.desc" title="Permalink to this headline"></a></h3>
+<h3 id="out_dma_bus_err_msk.desc">out_dma_bus_err_msk - AXI Read Cycle Access Error Interrupt Mask<a class="headerlink" href="#out_dma_bus_err_msk.desc" title="Permalink to this headline"></a></h3>
+<h3 id="out_dma_done_msk.desc">out_dma_done_msk - Input DMA Transfer Complete Mask<a class="headerlink" href="#out_dma_done_msk.desc" title="Permalink to this headline"></a></h3>
+

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap HTML5 Target"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  ShowMadCapBacklink="false"
+  MasterToc="/Project/TOCs/TOC.fltoc"
+  ResolveCssVariables="true"
+  Skin="/Project/Skins/Side-Navigation.flskn"
+  FaviconSkin="/Project/Skins/FavIcon.flskn"
+  ContentInclusionType="Toc"
+  DefaultUrl="/Content/sm_reg_pkg/reg_pkg/memmap.html"
+  DisableAutoSync="true"
+  MasterStylesheet="/Content/Resources/Stylesheets/MainStyles.css"
+  OutputFile="index"
+  SearchBarSkin="/Project/Skins/Search-Bar.flskn"
+  TopicToolbarSkin="/Project/Skins/Toolbar.flskn"
+  OutputFolder="C:\Flare_Output"
+  EquationsOutputType="PNG"
+  MasterPage="/Content/Resources/TemplatePages/Topics.flmsp"
+  PartialWordSearch="true"
+  ConditionTagExpression="exclude[Status.Obsolete]">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/montressor.fldes"
+      Publish="true"
+      IsResource="false" />
+  </Destinations>
+  <MicroContentSearch>
+    <FeaturedSnippets
+      type="AllFiles"
+      numberOfResults="1">
+      <microContentSubset />
+    </FeaturedSnippets>
+    <KnowledgePanel
+      type="Empty"
+      numberOfResults="1">
+      <microContentSubset />
+    </KnowledgePanel>
+  </MicroContentSearch>
+  <Variables>
+    <Variable
+      Name="General/ProductName">SL2610-sm</Variable>
+  </Variables>
+</CatapultTarget>

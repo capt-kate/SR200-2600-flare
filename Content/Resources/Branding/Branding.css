@@ -1,0 +1,17 @@
+/*<meta />*/
+
+/* MadCap-Branding templates:flare-templates/Projects/synaptics.flprj/ */
+
+:root
+{
+	--Primary: #076685;
+	--Secondary: #CDE0E7;
+	--Dark: #000000;
+	--Darkest: #000000;
+	--Light: #DADEE1;
+	--Lightest: #FFFFFF;
+	--Medium: #A4AAAE;
+	--FontFamily: Century Gothic, Verdana, Arial, Helvetica, sans-serif;
+	--LogoImage: url('../Images/logo-synaptics.png');
+}
+

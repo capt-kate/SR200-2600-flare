@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="PDF"
+  Destinations=""
+  ShowMadCapBacklink="true"
+  GlossaryTermConversion="marked"
+  PatchHeadingLevels="true"
+  MasterToc="/Project/TOCs/TOC.fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/MainStyles.css"
+  OutputFile="SL2610_sm"
+  OutputFolder="C:\Flare_Output"
+  DisableAutoSync="true"
+  MasterPageLayout="/Content/Resources/PageLayouts/pdfPages.flpgl"
+  BrandingStylesheet="/Content/Resources/Branding/Branding.css">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    OutputFormat="doc" />
+  <PDF
+    Tagged="true"
+    TitleBar="DocumentTitle"
+    ShowUsedBookmarks="false" />
+  <DocumentProperties
+    Author=""
+    Title="SL2610-sm" />
+</CatapultTarget>

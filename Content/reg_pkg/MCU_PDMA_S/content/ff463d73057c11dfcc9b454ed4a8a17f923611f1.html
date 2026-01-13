@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">CH_AUTOCFG</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x2d74</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Channel Automatic Command Restart Configuration Register</p>
+<p>This register configures the automatic restart behavior of the currently running command.</p>
+<p>The content of this register can be updated during command linking by setting bit[29] in the command link header.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_0"><td>[31:17]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+<tr id="CMDRESTARTINFEN"><td>[16]</td>
+<td><a href="#CMDRESTARTINFEN.desc">CMDRESTARTINFEN</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#CMDRESTARTINFEN" title="Permalink to this row"></a></td>
+</tr>
+<tr id="CMDRESTARTCNT"><td>[15:0]</td>
+<td><a href="#CMDRESTARTCNT.desc">CMDRESTARTCNT</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#CMDRESTARTCNT" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="CMDRESTARTINFEN.desc">CMDRESTARTINFEN<a class="headerlink" href="#CMDRESTARTINFEN.desc" title="Permalink to this headline"></a></h3>
+<p>Enable Infinite Automatic Command Restart. When set, CMDRESTARTCNT is ignored and the command is always restarted after it is completed, including output triggering if enabled and autoreloading the registers but it will not perform a link to the next command. This means that the infinite loop of automatic restarts can only be broken by DISABLECMD or STOPCMD. When CMDRESTARTINFEN is set to '0', then the autorestarting of a command depends on CMDRESTARTCNT and when that counter is set to '0' the autorestarting is finished. In this case the next linked command is read or the command is complete.</p>
+<h3 id="CMDRESTARTCNT.desc">CMDRESTARTCNT<a class="headerlink" href="#CMDRESTARTCNT.desc" title="Permalink to this headline"></a></h3>
+<p>Automatic Command Restart Counter. Defines the number of times automatic restarting will occur at end of DMA command. Auto restarting will occur after the command is completed, including output triggering if enabled and autoreloading the registers, but it will only perfrom a link to the next command when CMDRESTARTCNT == 0. When CMDRESTARTCNT and CMDRESTARTINF are both set to '0', autorestart is disabled.</p>
+

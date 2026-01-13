@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">CH_STATUS</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1a04</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Channel Status Register</p>
+<p>This register shows the internal status of the DMA command and also reports interrupts about internal events.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_3"><td>[31:27]</td>
+<td><a href="#RAZWI_3.desc">RAZWI_3</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_3" title="Permalink to this row"></a></td>
+</tr>
+<tr id="STAT_TRIGOUTACKWAIT"><td>[26]</td>
+<td><a href="#STAT_TRIGOUTACKWAIT.desc">STAT_TRIGOUTACKWAIT</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#STAT_TRIGOUTACKWAIT" title="Permalink to this row"></a></td>
+</tr>
+<tr id="STAT_DESTRIGINWAIT"><td>[25]</td>
+<td><a href="#STAT_DESTRIGINWAIT.desc">STAT_DESTRIGINWAIT</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#STAT_DESTRIGINWAIT" title="Permalink to this row"></a></td>
+</tr>
+<tr id="STAT_SRCTRIGINWAIT"><td>[24]</td>
+<td><a href="#STAT_SRCTRIGINWAIT.desc">STAT_SRCTRIGINWAIT</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#STAT_SRCTRIGINWAIT" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_2"><td>[23:22]</td>
+<td><a href="#RAZWI_2.desc">RAZWI_2</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_2" title="Permalink to this row"></a></td>
+</tr>
+<tr id="STAT_RESUMEWAIT"><td>[21]</td>
+<td><a href="#STAT_RESUMEWAIT.desc">STAT_RESUMEWAIT</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#STAT_RESUMEWAIT" title="Permalink to this row"></a></td>
+</tr>
+<tr id="STAT_PAUSED"><td>[20]</td>
+<td><a href="#STAT_PAUSED.desc">STAT_PAUSED</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#STAT_PAUSED" title="Permalink to this row"></a></td>
+</tr>
+<tr id="STAT_STOPPED"><td>[19]</td>
+<td><a href="#STAT_STOPPED.desc">STAT_STOPPED</a></td>
+<td><span>rw</span>,<span>woclr</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#STAT_STOPPED" title="Permalink to this row"></a></td>
+</tr>
+<tr id="STAT_DISABLED"><td>[18]</td>
+<td><a href="#STAT_DISABLED.desc">STAT_DISABLED</a></td>
+<td><span>rw</span>,<span>woclr</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#STAT_DISABLED" title="Permalink to this row"></a></td>
+</tr>
+<tr id="STAT_ERR"><td>[17]</td>
+<td><a href="#STAT_ERR.desc">STAT_ERR</a></td>
+<td><span>rw</span>,<span>woclr</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#STAT_ERR" title="Permalink to this row"></a></td>
+</tr>
+<tr id="STAT_DONE"><td>[16]</td>
+<td><a href="#STAT_DONE.desc">STAT_DONE</a></td>
+<td><span>rw</span>,<span>woclr</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#STAT_DONE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_1"><td>[15:11]</td>
+<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTR_TRIGOUTACKWAIT"><td>[10]</td>
+<td><a href="#INTR_TRIGOUTACKWAIT.desc">INTR_TRIGOUTACKWAIT</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTR_TRIGOUTACKWAIT" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTR_DESTRIGINWAIT"><td>[9]</td>
+<td><a href="#INTR_DESTRIGINWAIT.desc">INTR_DESTRIGINWAIT</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTR_DESTRIGINWAIT" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTR_SRCTRIGINWAIT"><td>[8]</td>
+<td><a href="#INTR_SRCTRIGINWAIT.desc">INTR_SRCTRIGINWAIT</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTR_SRCTRIGINWAIT" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_0"><td>[7:4]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTR_STOPPED"><td>[3]</td>
+<td><a href="#INTR_STOPPED.desc">INTR_STOPPED</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTR_STOPPED" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTR_DISABLED"><td>[2]</td>
+<td><a href="#INTR_DISABLED.desc">INTR_DISABLED</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTR_DISABLED" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTR_ERR"><td>[1]</td>
+<td><a href="#INTR_ERR.desc">INTR_ERR</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTR_ERR" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTR_DONE"><td>[0]</td>
+<td><a href="#INTR_DONE.desc">INTR_DONE</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTR_DONE" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="RAZWI_3.desc">RAZWI_3<a class="headerlink" href="#RAZWI_3.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="STAT_TRIGOUTACKWAIT.desc">STAT_TRIGOUTACKWAIT<a class="headerlink" href="#STAT_TRIGOUTACKWAIT.desc" title="Permalink to this headline"></a></h3>
+<p>Channel is waiting for output Trigger Acknowledgement Status. This bit is set to '1' when DMA starts waiting for output trigger acknowledgement. Automatically cleared when the output trigger acknowledgement is received either from from hardware or software source.</p>
+<h3 id="STAT_DESTRIGINWAIT.desc">STAT_DESTRIGINWAIT<a class="headerlink" href="#STAT_DESTRIGINWAIT.desc" title="Permalink to this headline"></a></h3>
+<p>Channel is waiting for Destination Trigger Status. This bit is set to '1' when DMA starts waiting for destination input trigger request. Automatically cleared when the destination trigger request is received either from hardware or software source.</p>
+<h3 id="STAT_SRCTRIGINWAIT.desc">STAT_SRCTRIGINWAIT<a class="headerlink" href="#STAT_SRCTRIGINWAIT.desc" title="Permalink to this headline"></a></h3>
+<p>Channel is waiting for Source Trigger Status. This bit is set to '1' when DMA starts waiting for source input trigger request. Automatically cleared when the source trigger request is received either from hardware or software source.</p>
+<h3 id="RAZWI_2.desc">RAZWI_2<a class="headerlink" href="#RAZWI_2.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="STAT_RESUMEWAIT.desc">STAT_RESUMEWAIT<a class="headerlink" href="#STAT_RESUMEWAIT.desc" title="Permalink to this headline"></a></h3>
+<p>Waiting for resume from software Flag. This flag indicates that the DMA channel successfully paused the operation of the command and needs SW acknowledgment to resume the operation. Is set to '1' if STAT_PAUSED is asserted and the PAUSECMD bit set in the command register or when the STAT_DONE is asserted and the DONEPAUSEEN bit is set. Cleared when the RESUME bit is set in the command register.</p>
+<h3 id="STAT_PAUSED.desc">STAT_PAUSED<a class="headerlink" href="#STAT_PAUSED.desc" title="Permalink to this headline"></a></h3>
+<p>Paused Status Flag. This flag is set to '1' if the DMA channel successfully paused the operation of the command. The pause request can come from many internal or external sources. When the request to pause is not asserted anymore the bit will be cleared automatically and the command operation can continue.</p>
+<h3 id="STAT_STOPPED.desc">STAT_STOPPED<a class="headerlink" href="#STAT_STOPPED.desc" title="Permalink to this headline"></a></h3>
+<p>Stopped Status Flag. This flag is set to '1' if the DMA channel successfully reached the stopped state. The stop request can come from many internal or external sources. Write '1' to this bit to clear it. Automatically cleared when the ENABLECMD is set.</p>
+<h3 id="STAT_DISABLED.desc">STAT_DISABLED<a class="headerlink" href="#STAT_DISABLED.desc" title="Permalink to this headline"></a></h3>
+<p>Disabled Status Flag. This flag is set to '1' if the DMA channel is successfully disabled using the DISABLECMD command. Write '1' to this bit to clear it. Automatically cleared when the ENABLECMD is set.</p>
+<h3 id="STAT_ERR.desc">STAT_ERR<a class="headerlink" href="#STAT_ERR.desc" title="Permalink to this headline"></a></h3>
+<p>Error Status Flag. This flag is set to '1' if the DMA encounters an error during its operation. The details about the error event can be found in the ERRINFO register. When cleared, it also clears the ERRINFO register. Automatically cleared when the ENABLECMD is set.</p>
+<h3 id="STAT_DONE.desc">STAT_DONE<a class="headerlink" href="#STAT_DONE.desc" title="Permalink to this headline"></a></h3>
+<p>Done Status Flag. This flag is set to '1' when the DMA command reaches the state defined by the DONETYPE settings. When DONEPAUSEEN is set the DMA command operation is paused when this flag is asserted. Writing '1' to this bit to clear it. Automatically cleared when the ENABLECMD is set.</p>
+<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="INTR_TRIGOUTACKWAIT.desc">INTR_TRIGOUTACKWAIT<a class="headerlink" href="#INTR_TRIGOUTACKWAIT.desc" title="Permalink to this headline"></a></h3>
+<p>Channel is waiting for output Trigger Acknowledgement Interrupt Flag. This interrupt is set to '1' if the INTREN_TRIGOUTACKWAIT is set and the STAT_TRIGOUTACKWAIT status flag is asserted. Automatically cleared when STAT_TRIGOUTACKWAIT is cleared.</p>
+<h3 id="INTR_DESTRIGINWAIT.desc">INTR_DESTRIGINWAIT<a class="headerlink" href="#INTR_DESTRIGINWAIT.desc" title="Permalink to this headline"></a></h3>
+<p>Channel is waiting for Destination Trigger Interrupt Flag. This interrupt is set to '1' if the INTREN_DESTRIGINWAIT is set and the STAT_DESTRIGINWAIT status flag is asserted. Automatically cleared when STAT_DESTRIGINWAIT is cleared.</p>
+<h3 id="INTR_SRCTRIGINWAIT.desc">INTR_SRCTRIGINWAIT<a class="headerlink" href="#INTR_SRCTRIGINWAIT.desc" title="Permalink to this headline"></a></h3>
+<p>Channel is waiting for Source Trigger Interrupt Flag. This interrupt is set to '1' if the INTREN_SRCTRIGINWAIT is set and the STAT_SRCTRIGINWAIT status flag is asserted. Automatically cleared when STAT_SRCTRIGINWAIT is cleared.</p>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="INTR_STOPPED.desc">INTR_STOPPED<a class="headerlink" href="#INTR_STOPPED.desc" title="Permalink to this headline"></a></h3>
+<p>Stopped Interrupt Flag. This interrupt is set to '1' if the INTREN_STOPPED is set and the STAT_STOPPED flag gets raised. Automatically cleared when STAT_STOPPED is cleared.</p>
+<h3 id="INTR_DISABLED.desc">INTR_DISABLED<a class="headerlink" href="#INTR_DISABLED.desc" title="Permalink to this headline"></a></h3>
+<p>Disabled Interrupt Flag. This interrupt is set to '1' if the INTREN_DISABLED is set and the STAT_DISABLED flag gets raised. Automatically cleared when STAT_DISABLED is cleared.</p>
+<h3 id="INTR_ERR.desc">INTR_ERR<a class="headerlink" href="#INTR_ERR.desc" title="Permalink to this headline"></a></h3>
+<p>Error Interrupt Flag. This interrupt is set to '1' if the INTREN_ERR is set and the STAT_ERR status flag gets gets raised. Automatically cleared when STAT_ERR is cleared.</p>
+<h3 id="INTR_DONE.desc">INTR_DONE<a class="headerlink" href="#INTR_DONE.desc" title="Permalink to this headline"></a></h3>
+<p>Done Interrupt Flag. This interrupt is set to '1' if the INTREN_DONE is set and the STAT_DONE status flag gets raised. Automatically cleared when STAT_DONE is cleared.</p>
+

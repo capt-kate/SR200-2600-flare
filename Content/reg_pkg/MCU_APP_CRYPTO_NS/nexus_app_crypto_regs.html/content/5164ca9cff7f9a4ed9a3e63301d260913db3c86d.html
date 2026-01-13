@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">SPAD_CTRL</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x4</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31:5]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="ignperr"><td>[4]</td>
+<td><a href="#ignperr.desc">ignperr</a></td>
+<td><span>rw</span></td>
+<td>0x1</td>
+<td></td>
+<td>Ignore Memory Parity Error</td>
+<td>H<a class="headerlink" href="#ignperr" title="Permalink to this row"></a></td>
+</tr>
+<tr class="reserved-field"><td>[3:2]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="frcperr"><td>[1:0]</td>
+<td><a href="#frcperr.desc">frcperr</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>Force Memory Parity Error</td>
+<td>H<a class="headerlink" href="#frcperr" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="ignperr.desc">ignperr - Ignore Memory Parity Error<a class="headerlink" href="#ignperr.desc" title="Permalink to this headline"></a></h3>
+<h3 id="frcperr.desc">frcperr - Force Memory Parity Error<a class="headerlink" href="#frcperr.desc" title="Permalink to this headline"></a></h3>
+<p>Program this field to inject error into the parity bits during a read/pop operation.<p></p>
+• 2'b00 = No Error Injection<p></p>
+• 2'b01 = 1-bit error injection<p></p>
+• 2'b10 = 2-bit error injection<p></p>
+• 2'b11 = Reserved<p></p>
+</p>
+

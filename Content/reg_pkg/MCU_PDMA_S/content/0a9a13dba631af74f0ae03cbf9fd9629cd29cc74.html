@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">SCFG_CHSEC0</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Secure Configuration Channel Security Mapping Register 0</p>
+<p>This register is used to define the security attribute of each channel from Channel 0 to Channel 31.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="SCFGCHSEC0"><td>[31:0]</td>
+<td><a href="#SCFGCHSEC0.desc">SCFGCHSEC0</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#SCFGCHSEC0" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="SCFGCHSEC0.desc">SCFGCHSEC0<a class="headerlink" href="#SCFGCHSEC0.desc" title="Permalink to this headline"></a></h3>
+<p>Secure Configuration Channel Security Mapping for Channel 0 to 31. When set to '1', CH is Non-secure world, else Secure world. The NUM_CHANNELS parameter limits this field, unused bits are RAZ/WI. Value for bit can only be changed if the selected channel is not enabled, so reading back the register content is needed to check the success of the change.</p>
+

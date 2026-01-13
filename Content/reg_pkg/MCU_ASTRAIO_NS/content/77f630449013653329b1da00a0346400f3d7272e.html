@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">group_cntrl_fifo</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x140</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Controls the GPIO setttings for all pins in the group with a FIFO output</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="write_disable"><td>[30:29]</td>
+<td><a href="#write_disable.desc">write_disable</a></td>
+<td><span>w</span></td>
+<td>-</td>
+<td><select id="_FieldValueEnumTesterwrite_disable" class="field-value-enum-tester"
+data-name="write_disable" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">write</option><option value="0x1">dummy</option><option value="0x2">read_write</option><option value="0x3">read_only</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#write_disable" title="Permalink to this row"></a></td>
+</tr>
+<tr id="timer_sel"><td>[28:26]</td>
+<td><a href="#timer_sel.desc">timer_sel</a></td>
+<td><span>w</span></td>
+<td>-</td>
+<td><select id="_FieldValueEnumTestertimer_sel" class="field-value-enum-tester"
+data-name="timer_sel" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">free_run</option><option value="0x1">timer0</option><option value="0x2">timer1</option><option value="0x3">pos_edge</option><option value="0x4">neg_edge</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#timer_sel" title="Permalink to this row"></a></td>
+</tr>
+<tr id="group_sel"><td>[25:24]</td>
+<td><a href="#group_sel.desc">group_sel</a></td>
+<td><span>w</span></td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#group_sel" title="Permalink to this row"></a></td>
+</tr>
+<tr id="pd_clear"><td>[23]</td>
+<td><a href="#pd_clear.desc">pd_clear</a></td>
+<td><span>w</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#pd_clear" title="Permalink to this row"></a></td>
+</tr>
+<tr id="pd_set"><td>[22]</td>
+<td><a href="#pd_set.desc">pd_set</a></td>
+<td><span>w</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#pd_set" title="Permalink to this row"></a></td>
+</tr>
+<tr id="pu_clear"><td>[21]</td>
+<td><a href="#pu_clear.desc">pu_clear</a></td>
+<td><span>w</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#pu_clear" title="Permalink to this row"></a></td>
+</tr>
+<tr id="pu_set"><td>[20]</td>
+<td><a href="#pu_set.desc">pu_set</a></td>
+<td><span>w</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#pu_set" title="Permalink to this row"></a></td>
+</tr>
+<tr id="oe_clear"><td>[19]</td>
+<td><a href="#oe_clear.desc">oe_clear</a></td>
+<td><span>w</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#oe_clear" title="Permalink to this row"></a></td>
+</tr>
+<tr id="oe_set"><td>[18]</td>
+<td><a href="#oe_set.desc">oe_set</a></td>
+<td><span>w</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#oe_set" title="Permalink to this row"></a></td>
+</tr>
+<tr id="ie_clear"><td>[17]</td>
+<td><a href="#ie_clear.desc">ie_clear</a></td>
+<td><span>w</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#ie_clear" title="Permalink to this row"></a></td>
+</tr>
+<tr id="ie_set"><td>[16]</td>
+<td><a href="#ie_set.desc">ie_set</a></td>
+<td><span>w</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#ie_set" title="Permalink to this row"></a></td>
+</tr>
+<tr id="val"><td>[15:0]</td>
+<td><a href="#val.desc">val</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#val" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="write_disable.desc">write_disable<a class="headerlink" href="#write_disable.desc" title="Permalink to this headline"></a></h3>
+<p>Selects write, read, or both operations on the command</p>
+<table><tr><th colspan="3">enum mode_enum</th></tr>
+<tr><td>write</td>
+<td>0x0</td>
+<td><p>Writes to GPIO values and settings</p>
+</td>
+</tr>
+<tr><td>dummy</td>
+<td>0x1</td>
+<td><p>Holds slot in the FIFO, but doesn't do anything</p>
+</td>
+</tr>
+<tr><td>read_write</td>
+<td>0x2</td>
+<td><p>Writes to GPIO settings and reads the group</p>
+</td>
+</tr>
+<tr><td>read_only</td>
+<td>0x3</td>
+<td><p>Triggers a read-only of the group</p>
+</td>
+</tr>
+</table><h3 id="timer_sel.desc">timer_sel<a class="headerlink" href="#timer_sel.desc" title="Permalink to this headline"></a></h3>
+<p>Selects the timer mode for when the command is applied</p>
+<table><tr><th colspan="3">enum timer_mode_enum</th></tr>
+<tr><td>free_run</td>
+<td>0x0</td>
+<td><p>Control word is immediately applied</p>
+</td>
+</tr>
+<tr><td>timer0</td>
+<td>0x1</td>
+<td><p>Control word is gated by a timer0 event</p>
+</td>
+</tr>
+<tr><td>timer1</td>
+<td>0x2</td>
+<td><p>Control word is gated by a timer1 event</p>
+</td>
+</tr>
+<tr><td>pos_edge</td>
+<td>0x3</td>
+<td><p>Control word is gated by positive edge of the group</p>
+</td>
+</tr>
+<tr><td>neg_edge</td>
+<td>0x4</td>
+<td><p>Control word is gated by positive edge of the group</p>
+</td>
+</tr>
+</table><h3 id="group_sel.desc">group_sel<a class="headerlink" href="#group_sel.desc" title="Permalink to this headline"></a></h3>
+<p>Selects which group is used for waiting on the instruction</p>
+<h3 id="pd_clear.desc">pd_clear<a class="headerlink" href="#pd_clear.desc" title="Permalink to this headline"></a></h3>
+<p>Clears the pulldown enable to all GPIOs in the group</p>
+<h3 id="pd_set.desc">pd_set<a class="headerlink" href="#pd_set.desc" title="Permalink to this headline"></a></h3>
+<p>Sets the pulldown enable to all GPIOs in the group</p>
+<h3 id="pu_clear.desc">pu_clear<a class="headerlink" href="#pu_clear.desc" title="Permalink to this headline"></a></h3>
+<p>Clears the pullup enable to all GPIOs in the group</p>
+<h3 id="pu_set.desc">pu_set<a class="headerlink" href="#pu_set.desc" title="Permalink to this headline"></a></h3>
+<p>Sets the pullup enable to all GPIOs in the group</p>
+<h3 id="oe_clear.desc">oe_clear<a class="headerlink" href="#oe_clear.desc" title="Permalink to this headline"></a></h3>
+<p>Clears the output enable to all GPIOs in the group</p>
+<h3 id="oe_set.desc">oe_set<a class="headerlink" href="#oe_set.desc" title="Permalink to this headline"></a></h3>
+<p>Sets the output enable to all GPIOs in the group</p>
+<h3 id="ie_clear.desc">ie_clear<a class="headerlink" href="#ie_clear.desc" title="Permalink to this headline"></a></h3>
+<p>Clears the input enable to all GPIOs in the group</p>
+<h3 id="ie_set.desc">ie_set<a class="headerlink" href="#ie_set.desc" title="Permalink to this headline"></a></h3>
+<p>Sets the input enable to all GPIOs in the group</p>
+<h3 id="val.desc">val<a class="headerlink" href="#val.desc" title="Permalink to this headline"></a></h3>
+<p>Writes the output GPIOs in the group</p>
+

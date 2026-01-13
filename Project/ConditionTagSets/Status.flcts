@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultConditionTagSet>
+  <ConditionTag
+    Comment=""
+    Name="Broken"
+    BackgroundColor="Red" />
+  <ConditionTag
+    BackgroundColor="#008000"
+    Name="Complete"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#8b008b"
+    Name="In TOC"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#0000ff"
+    Name="Table-Multi"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#ffa500"
+    Name="Table-Register"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#00bfff"
+    Name="Table-Basic"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#000000"
+    Name="EmptyFolder"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#00ff00"
+    Name="Needs Work"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#bfe9fe"
+    Name="Table-NoHeader"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#8b4513"
+    Name="Obsolete"
+    Comment="" />
+</CatapultConditionTagSet>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">CH_LINKATTR</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1a70</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Channel Link Address Memory Attributes Register</p>
+<p>This register provides transfer attribute settings for the command link related read transfers. The security and privilege attributes cannot be adjusted, they match the attributes of the channel.</p>
+<p>The content of this register can be updated during command linking by setting bit[28] in the command link header.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_0"><td>[31:10]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+<tr id="LINKSHAREATTR"><td>[9:8]</td>
+<td><a href="#LINKSHAREATTR.desc">LINKSHAREATTR</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#LINKSHAREATTR" title="Permalink to this row"></a></td>
+</tr>
+<tr id="LINKMEMATTRHI"><td>[7:4]</td>
+<td><a href="#LINKMEMATTRHI.desc">LINKMEMATTRHI</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#LINKMEMATTRHI" title="Permalink to this row"></a></td>
+</tr>
+<tr id="LINKMEMATTRLO"><td>[3:0]</td>
+<td><a href="#LINKMEMATTRLO.desc">LINKMEMATTRLO</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#LINKMEMATTRLO" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="LINKSHAREATTR.desc">LINKSHAREATTR<a class="headerlink" href="#LINKSHAREATTR.desc" title="Permalink to this headline"></a></h3>
+<p>Link Address Transfer Shareability Attribute.
+- 00: Non-shareable
+- 01: Reserved
+- 10: Outer shareable
+- 11: Inner shareable</p>
+<h3 id="LINKMEMATTRHI.desc">LINKMEMATTRHI<a class="headerlink" href="#LINKMEMATTRHI.desc" title="Permalink to this headline"></a></h3>
+<p>Link Address Read Transfer Memory Attribute field [7:4].
+- 0000: Device memory
+- 0001: Normal memory, Outer Write allocate, Outer Write-through transient
+- 0010: Normal memory, Outer Read allocate, Outer Write-through transient
+- 0011: Normal memory, Outer Read/Write allocate, Outer Write-through transient
+- 0100: Normal memory, Outer non-cacheable
+- 0101: Normal memory, Outer Write allocate, Outer Write-back transient
+- 0110: Normal memory, Outer Read allocate, Outer Write-back transient
+- 0111: Normal memory, Outer Read/Write allocate, Outer Write-back transient
+- 1000: Normal memory, Outer Write-through non-transient
+- 1001: Normal memory, Outer Write allocate, Outer Write-through non-transient
+- 1010: Normal memory, Outer Read allocate, Outer Write-through non-transient
+- 1011: Normal memory, Outer Read/Write allocate, Outer Write-through non-transient
+- 1100: Normal memory, Outer Write-back non-transient
+- 1101: Normal memory, Outer Write allocate, Outer Write-back non-transient
+- 1110: Normal memory, Outer Read allocate, Outer Write-back non-transient
+- 1111: Normal memory, Outer Read/Write allocate, Outer Write-back non-transient</p>
+<h3 id="LINKMEMATTRLO.desc">LINKMEMATTRLO<a class="headerlink" href="#LINKMEMATTRLO.desc" title="Permalink to this headline"></a></h3>
+<p>Link Address Read Transfer Memory Attribute field [3:0].
+When LINKMEMATTRHI is Device type (0000) then this field means:
+- 0000: Device-nGnRnE
+- 0100: Device-nGnRE
+- 1000: Device-nGRE
+- 1100: Device-GRE
+- Others: Invalid resulting in UNPREDICTABLE behavior
+When LINKMEMATTRHI is Normal memory type (other than 0000) then this field means:
+- 0000: Reserved
+- 0001: Normal memory, Inner Write allocate, Inner Write-through transient
+- 0010: Normal memory, Inner Read allocate, Inner Write-through transient
+- 0011: Normal memory, Inner Read/Write allocate, Inner Write-through transient
+- 0100: Normal memory, Inner non-cacheable
+- 0101: Normal memory, Inner Write allocate, Inner Write-back transient
+- 0110: Normal memory, Inner Read allocate, Inner Write-back transient
+- 0111: Normal memory, Inner Read/Write allocate, Inner Write-back transient
+- 1000: Normal memory, Inner Write-through non-transient
+- 1001: Normal memory, Inner Write allocate, Inner Write-through non-transient
+- 1010: Normal memory, Inner Read allocate, Inner Write-through non-transient
+- 1011: Normal memory, Inner Read/Write allocate, Inner Write-through non-transient
+- 1100: Normal memory, Inner Write-back non-transient
+- 1101: Normal memory, Inner Write allocate, Inner Write-back non-transient
+- 1110: Normal memory, Inner Read allocate, Inner Write-back non-transient
+- 1111: Normal memory, Inner Read/Write allocate, Inner Write-back non-transient</p>
+

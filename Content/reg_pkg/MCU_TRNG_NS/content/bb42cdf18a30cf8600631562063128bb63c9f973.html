@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">ISTAT</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x14</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>The ISTAT register allows the user to monitor the interrupt contributions of the DWC TRNG NIST.</p>
+<p>Note that these status signals are used for both polling mode and interrupt modes. Whether they assert the O_irq output depends on whether the IE.GLBL_EN and one or more of the other individual IE bits are set to 1.
+ZEROIZED and KAT_COMPLETED bits are only set after a command has explicitly requested for a RUN_KAT or ZEROIZE operation. During an alarm event or a start-up test, in which the core automatically performs a zeroize operation or runs a KAT, ZEROIZED and KAT_COMPLETED interrupts does not occur.
+ZEROIZED can also happen after a zeroize operation request through the input zeroize pin (I_ctl_zeroize). Zeroize operatoin through the input pin is not completed until the pin is de-asserted.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31:5]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="DONE"><td>[4]</td>
+<td><a href="#DONE.desc">DONE</a></td>
+<td><span>rw</span>,<span>woclr</span></td>
+<td>0x0</td>
+<td><select id="_FieldValueEnumTesterDONE" class="field-value-enum-tester"
+data-name="DONE" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">DONE_R0</option><option value="0x1">DONE_R1</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DONE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="ALARMS"><td>[3]</td>
+<td><a href="#ALARMS.desc">ALARMS</a></td>
+<td><span>rw</span>,<span>woclr</span></td>
+<td>0x0</td>
+<td><select id="_FieldValueEnumTesterALARMS" class="field-value-enum-tester"
+data-name="ALARMS" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">ALARMS_R0</option><option value="0x1">ALARMS_R1</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#ALARMS" title="Permalink to this row"></a></td>
+</tr>
+<tr id="NOISE_RDY"><td>[2]</td>
+<td><a href="#NOISE_RDY.desc">NOISE_RDY</a></td>
+<td><span>rw</span>,<span>woclr</span></td>
+<td>0x0</td>
+<td><select id="_FieldValueEnumTesterNOISE_RDY" class="field-value-enum-tester"
+data-name="NOISE_RDY" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">NOISE_RDY_R0</option><option value="0x1">NOISE_RDY_R1</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#NOISE_RDY" title="Permalink to this row"></a></td>
+</tr>
+<tr id="KAT_COMPLETED"><td>[1]</td>
+<td><a href="#KAT_COMPLETED.desc">KAT_COMPLETED</a></td>
+<td><span>rw</span>,<span>woclr</span></td>
+<td>0x0</td>
+<td><select id="_FieldValueEnumTesterKAT_COMPLETED" class="field-value-enum-tester"
+data-name="KAT_COMPLETED" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">KAT_COMPLETED_R0</option><option value="0x1">KAT_COMPLETED_R1</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#KAT_COMPLETED" title="Permalink to this row"></a></td>
+</tr>
+<tr id="ZEROIZED"><td>[0]</td>
+<td><a href="#ZEROIZED.desc">ZEROIZED</a></td>
+<td><span>rw</span>,<span>woclr</span></td>
+<td>0x0</td>
+<td><select id="_FieldValueEnumTesterZEROIZED" class="field-value-enum-tester"
+data-name="ZEROIZED" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">ZEROIZED_R0</option><option value="0x1">ZEROIZED_R1</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#ZEROIZED" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="DONE.desc">DONE<a class="headerlink" href="#DONE.desc" title="Permalink to this headline"></a></h3>
+<p>The DONE bit allows the user to poll the completion of all commands except RUN_KAT and ZEROIZE which have their own interrupt.</p>
+<table><tr><th colspan="3">enum DONE_enum_t</th></tr>
+<tr><td>DONE_R0</td>
+<td>0x0</td>
+<td><p>R0: No unacknowledged command completion</p>
+</td>
+</tr>
+<tr><td>DONE_R1</td>
+<td>0x1</td>
+<td><p>R1: Unacknowledged command completion</p>
+</td>
+</tr>
+</table><h3 id="ALARMS.desc">ALARMS<a class="headerlink" href="#ALARMS.desc" title="Permalink to this headline"></a></h3>
+<p>The ALARMS bit allows the user to poll failures. When an alarm occurs, an automatic zeroize happens. Clearing this interrupt also clears the O_alarm pin.</p>
+<table><tr><th colspan="3">enum ALARMS_enum_t</th></tr>
+<tr><td>ALARMS_R0</td>
+<td>0x0</td>
+<td><p>R0: No unacknowledged ALARMS</p>
+</td>
+</tr>
+<tr><td>ALARMS_R1</td>
+<td>0x1</td>
+<td><p>R1: Unacknowledged ALARMS</p>
+</td>
+</tr>
+</table><h3 id="NOISE_RDY.desc">NOISE_RDY<a class="headerlink" href="#NOISE_RDY.desc" title="Permalink to this headline"></a></h3>
+<p>When DWC TRNG NIST is generating a full-entropy seed in the self-seeding mode, SMODE.MISSION_MODE is 0 (TEST mode) and SMODE.NOISE_COLLECT is set to 1, the NOISE_RDY bit informs the user when 512 bits of noise have been generated. This interrupt never happens in the MISSION mode of operation.</p>
+<table><tr><th colspan="3">enum NOISE_RDY_enum_t</th></tr>
+<tr><td>NOISE_RDY_R0</td>
+<td>0x0</td>
+<td><p>R0: No unacknowledged noise generation completion</p>
+</td>
+</tr>
+<tr><td>NOISE_RDY_R1</td>
+<td>0x1</td>
+<td><p>R1: Unacknowledged noise generation completion</p>
+</td>
+</tr>
+</table><h3 id="KAT_COMPLETED.desc">KAT_COMPLETED<a class="headerlink" href="#KAT_COMPLETED.desc" title="Permalink to this headline"></a></h3>
+<p>Indicates the completion of the RUN_KAT command.</p>
+<table><tr><th colspan="3">enum KAT_COMPLETED_enum_t</th></tr>
+<tr><td>KAT_COMPLETED_R0</td>
+<td>0x0</td>
+<td><p>R0: No unacknowledged KAT_COMPLETED</p>
+</td>
+</tr>
+<tr><td>KAT_COMPLETED_R1</td>
+<td>0x1</td>
+<td><p>R1: Unacknowledged KAT_COMPLETED</p>
+</td>
+</tr>
+</table><h3 id="ZEROIZED.desc">ZEROIZED<a class="headerlink" href="#ZEROIZED.desc" title="Permalink to this headline"></a></h3>
+<p>Indicates the completion of the ZEROIZE operation.</p>
+<table><tr><th colspan="3">enum ZEROIZED_enum_t</th></tr>
+<tr><td>ZEROIZED_R0</td>
+<td>0x0</td>
+<td><p>R0: No unacknowledged ZEROIZED</p>
+</td>
+</tr>
+<tr><td>ZEROIZED_R1</td>
+<td>0x1</td>
+<td><p>R1: Unacknowledged ZEROIZED</p>
+</td>
+</tr>
+</table>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">fifo_status</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x118</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Reports FIFO status</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31:18]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="read_size"><td>[17:16]</td>
+<td><a href="#read_size.desc">read_size</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#read_size" title="Permalink to this row"></a></td>
+</tr>
+<tr id="depth"><td>[15:8]</td>
+<td><a href="#depth.desc">depth</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#depth" title="Permalink to this row"></a></td>
+</tr>
+<tr class="reserved-field"><td>[7:4]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="overflow"><td>[3]</td>
+<td><a href="#overflow.desc">overflow</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#overflow" title="Permalink to this row"></a></td>
+</tr>
+<tr id="not_empty"><td>[2]</td>
+<td><a href="#not_empty.desc">not_empty</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#not_empty" title="Permalink to this row"></a></td>
+</tr>
+<tr id="full"><td>[1]</td>
+<td><a href="#full.desc">full</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#full" title="Permalink to this row"></a></td>
+</tr>
+<tr id="out_valid"><td>[0]</td>
+<td><a href="#out_valid.desc">out_valid</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#out_valid" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="read_size.desc">read_size<a class="headerlink" href="#read_size.desc" title="Permalink to this headline"></a></h3>
+<p>Sets the FIFO read size (1-byte, 2-byte, or 4-bytes)</p>
+<h3 id="depth.desc">depth<a class="headerlink" href="#depth.desc" title="Permalink to this headline"></a></h3>
+<p>Reports the FIFO depth in bytes</p>
+<h3 id="overflow.desc">overflow<a class="headerlink" href="#overflow.desc" title="Permalink to this headline"></a></h3>
+<p>Reports if FIFO has overflow</p>
+<h3 id="not_empty.desc">not_empty<a class="headerlink" href="#not_empty.desc" title="Permalink to this headline"></a></h3>
+<p>Reports if FIFO has at least 1 byte in it</p>
+<h3 id="full.desc">full<a class="headerlink" href="#full.desc" title="Permalink to this headline"></a></h3>
+<p>Reports if FIFO is full</p>
+<h3 id="out_valid.desc">out_valid<a class="headerlink" href="#out_valid.desc" title="Permalink to this headline"></a></h3>
+<p>Reports if FIFO contains at least read_size amount of data</p>
+

@@ -1,0 +1,645 @@
+﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><meta http-equiv="Content-Type" content="text/html; charset="ISO-8859-1""><title>Register Details</title></head>
+<body>
+<h2 class="title"><a name="idp1549192"></a>Register Details</h2>
+<hr><hr><h2 class="title"><a name="H3-sect1-reg-DWC_mshc_map_DWC_mshc_vendor1_block"></a>DWC_mshc_vendor1_block Register Details</h2>
+<p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_VER_ID_R"></a><span>MSHC_VER_ID_R</span></p>
+<ul><li><span>Name:</span>MSHC version</li><li><span>Description:</span>This register reflects the current release number of DWC_mshc/DWC_mshc_lite.</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x500</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_VER_ID_R"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_VER_ID_R_F_31_0">31:0</a></td>
+</tr>
+<tr><td>MSHC_VER_ID</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_VER_ID_R"></a><p class="title">Table�1.�Fields for Register: MSHC_VER_ID_R</p>
+<table summary="Fields for Register: MSHC_VER_ID_R" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_VER_ID_R_F_31_0"></a>31:0</p>
+</td>
+<td>MSHC_VER_ID</td>
+<td>R</td>
+<td><p>Current release number</p>
+<p class="BLANK"></p>
+<p>This field indicates the Synopsys DesignWare Cores DWC_mshc/DWC_mshc_lite current release number that is read by an application.</p>
+<p class="BLANK"></p>
+<p>An application reading this register in conjunction with the MSHC_VER_TYPE_R register, gathers details of the current release.</p>
+<p><span>Value After Reset:</span>0x30323030</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_VER_TYPE_R"></a><span>MSHC_VER_TYPE_R</span></p>
+<ul><li><span>Name:</span>MSHC version type</li><li><span>Description:</span>This register reflects the current release type of DWC_mshc/DWC_mshc_lite.</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x504</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_VER_TYPE_R"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_VER_TYPE_R_F_31_0">31:0</a></td>
+</tr>
+<tr><td>MSHC_VER_TYPE</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_VER_TYPE_R"></a><p class="title">Table�2.�Fields for Register: MSHC_VER_TYPE_R</p>
+<table summary="Fields for Register: MSHC_VER_TYPE_R" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_VER_TYPE_R_F_31_0"></a>31:0</p>
+</td>
+<td>MSHC_VER_TYPE</td>
+<td>R</td>
+<td><p>Current release type</p>
+<p class="BLANK"></p>
+<p>This field indicates the Synopsys DesignWare Cores DWC_mshc/DWC_mshc_lite current release type that is read by an application.</p>
+<p class="BLANK"></p>
+<p>An application reading this register in conjunction with the MSHC_VER_ID_R register, gathers details of the current release.</p>
+<p><span>Value After Reset:</span>0x6c753037</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_CTRL_R"></a><span>MSHC_CTRL_R</span></p>
+<ul><li><span>Name:</span>MSHC Control register</li><li><span>Description:</span>This register is used to control the operation of MSHC Host Controller.</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x508</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_CTRL_R"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_CTRL_R_F_7_5">7:5</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_CTRL_R_F_4">4</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_CTRL_R_F_3_2">3:2</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_CTRL_R_F_1">1</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_CTRL_R_F_0">0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>SW_CG_DIS</td>
+<td>RSVD1</td>
+<td>NEGEDGE_DATAOUT_EN</td>
+<td>CMD_CONFLICT_CHECK</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_CTRL_R"></a><p class="title">Table�3.�Fields for Register: MSHC_CTRL_R</p>
+<table summary="Fields for Register: MSHC_CTRL_R" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_CTRL_R_F_7_5"></a>7:5</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_CTRL_R_F_4"></a>4</p>
+</td>
+<td>SW_CG_DIS</td>
+<td>R/W</td>
+<td><p>Internal clock gating disable control</p>
+<p class="BLANK"></p>
+<p>This bit must be used to disable IP's internal clock gating when required. when disabled clocks are not gated. Clocks to the core (except hclk) must be stopped when programming this bit.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (ENABLE): Internal clock gates are active and clock gating is controlled internally</li><li>0x1 (DISABLE): Internal clock gating is disabled, clocks are not gated internally</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_CTRL_R_F_3_2"></a>3:2</p>
+</td>
+<td>RSVD1</td>
+<td>R</td>
+<td><p>These bits (RSVD1) of the MSHC_CTRL_R register are reserved. They always return 0.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_CTRL_R_F_1"></a>1</p>
+</td>
+<td>NEGEDGE_DATAOUT_EN</td>
+<td>R/W</td>
+<td><p>Negedge Data Out</p>
+<p class="BLANK"></p>
+<p>This bit enables the data to be sent out on negedge of cclk_tx. This is valid only for speed mode HS400.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (DISABLED): Negedge data sent out disabled</li><li>0x1 (ENABLED): Negedge data sent out enabled</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MSHC_CTRL_R_F_0"></a>0</p>
+</td>
+<td>CMD_CONFLICT_CHECK</td>
+<td>R/W</td>
+<td><p>Command conflict check</p>
+<p class="BLANK"></p>
+<p>This bit enables command conflict check.</p>
+<p class="BLANK"></p>
+<p><span><em><span>Note</span></em></span>: DWC_mshc controller monitors the CMD line whenever a command is issued and checks whether the value driven on sd_cmd_out matches the value on sd_cmd_in at next subsequent edge
+of cclk_tx to determine command conflict error. This bit is cleared only if the feed back delay (including IO Pad delay) is more than (t_card_clk_period - t_setup), where t_setup is the setup time of
+a flop in DWC_mshc. The I/O pad delay is consistent across CMD and DATA lines, and it is within the value:</p>
+<p class="BLANK"></p>
+<p>(2*t_card_clk_period - t_setup)</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (DISABLE_CMD_CONFLICT_CHK): Disable command conflict check</li><li>0x1 (CMD_CONFLICT_CHK_LAT1): Check for command conflict after 1 card clock cycle</li></ul><p></p>
+<p><span>Value After Reset:</span>0x1</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MBIU_CTRL_R"></a><span>MBIU_CTRL_R</span></p>
+<ul><li><span>Name:</span>MBIU Control register</li><li><span>Description:</span>This register is used to select the valid burst types that the AHB Manager bus interface can generate.
+When more than one bit is set the manager selects the burst it prefers among those that are enabled in this register.</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x510</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_vendor1_block_MBIU_CTRL_R"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MBIU_CTRL_R_F_7_4">7:4</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MBIU_CTRL_R_F_3">3</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MBIU_CTRL_R_F_2">2</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MBIU_CTRL_R_F_1">1</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MBIU_CTRL_R_F_0">0</a></td>
+</tr>
+<tr><td>RSVD</td>
+<td>BURST_INCR16_EN</td>
+<td>BURST_INCR8_EN</td>
+<td>BURST_INCR4_EN</td>
+<td>UNDEFL_INCR_EN</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_vendor1_block_MBIU_CTRL_R"></a><p class="title">Table�4.�Fields for Register: MBIU_CTRL_R</p>
+<table summary="Fields for Register: MBIU_CTRL_R" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MBIU_CTRL_R_F_7_4"></a>7:4</p>
+</td>
+<td>RSVD</td>
+<td>R</td>
+<td><p>Reserved field</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MBIU_CTRL_R_F_3"></a>3</p>
+</td>
+<td>BURST_INCR16_EN</td>
+<td>R/W</td>
+<td><p>INCR16 Burst</p>
+<p class="BLANK"></p>
+<p>Controls generation of INCR16 transfers on Manager interface.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (FALSE): AHB INCR16 burst type is not generated on Manager I/F</li><li>0x1 (TRUE): AHB INCR16 burst type can be generated on Manager I/F</li></ul><p></p>
+<p><span>Value After Reset:</span>0x1</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MBIU_CTRL_R_F_2"></a>2</p>
+</td>
+<td>BURST_INCR8_EN</td>
+<td>R/W</td>
+<td><p>INCR8 Burst</p>
+<p class="BLANK"></p>
+<p>Controls generation of INCR8 transfers on Manager interface.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (FALSE): AHB INCR8 burst type is not generated on Manager I/F</li><li>0x1 (TRUE): AHB INCR8 burst type can be generated on Manager I/F</li></ul><p></p>
+<p><span>Value After Reset:</span>0x1</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MBIU_CTRL_R_F_1"></a>1</p>
+</td>
+<td>BURST_INCR4_EN</td>
+<td>R/W</td>
+<td><p>INCR4 Burst</p>
+<p class="BLANK"></p>
+<p>Controls generation of INCR4 transfers on Manager interface.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (FALSE): AHB INCR4 burst type is not generated on Manager I/F</li><li>0x1 (TRUE): AHB INCR4 burst type can be generated on Manager I/F</li></ul><p></p>
+<p><span>Value After Reset:</span>0x1</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_MBIU_CTRL_R_F_0"></a>0</p>
+</td>
+<td>UNDEFL_INCR_EN</td>
+<td>R/W</td>
+<td><p>Undefined INCR Burst</p>
+<p class="BLANK"></p>
+<p>Controls generation of undefined length INCR transfer on Manager interface.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (FALSE): Undefined INCR type burst is the least preferred burst on AHB Manager I/F</li><li>0x1 (TRUE): Undefined INCR type burst is the most preferred burst on AHB Manager I/F</li></ul><p></p>
+<p><span>Value After Reset:</span>0x1</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R"></a><span>EMMC_CTRL_R</span></p>
+<ul><li><span>Name:</span>eMMC Control register</li><li><span>Description:</span>This register is used to control the eMMC operation.</li><li><span>Size:</span>16 bits</li><li><span>Offset:</span>0x52c</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_15_11">15:11</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_10">10</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_9">9</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_8">8</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_7_4">7:4</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_3">3</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_2">2</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_1">1</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_0">0</a></td>
+</tr>
+<tr><td>RSVD</td>
+<td>CQE_PREFETCH_DISABLE</td>
+<td>CQE_ALGO_SEL</td>
+<td>ENH_STROBE_ENABLE</td>
+<td>Rsvd</td>
+<td>EMMC_RST_N_OE</td>
+<td>EMMC_RST_N</td>
+<td>DISABLE_DATA_CRC_CHK</td>
+<td>CARD_IS_EMMC</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R"></a><p class="title">Table�5.�Fields for Register: EMMC_CTRL_R</p>
+<table summary="Fields for Register: EMMC_CTRL_R" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_15_11"></a>15:11</p>
+</td>
+<td>RSVD</td>
+<td>R</td>
+<td><p>These bits (RSVD) of the EMMC_CTRL_R register are reserved. They always return 0.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_10"></a>10</p>
+</td>
+<td>CQE_PREFETCH_DISABLE</td>
+<td>R/W</td>
+<td><p>Enable or Disable CQE's PREFETCH feature</p>
+<p class="BLANK"></p>
+<p>This field allows Software to disable CQE's data prefetch feature when set to 1.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (PREFETCH_ENABLE): CQE can Prefetch data for successive WRITE transfers and pipeline successive READ transfers</li><li>0x1 (PREFETCH_DISABLE): Prefetch for WRITE and Pipeline for READ are disabled</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_9"></a>9</p>
+</td>
+<td>CQE_ALGO_SEL</td>
+<td>R/W</td>
+<td><p>Scheduler algorithm selected for execution</p>
+<p class="BLANK"></p>
+<p>This bit selects the Algorithm used for selecting one of the many ready tasks for execution.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (PRI_REORDER_PLUS_FCFS): Priority based reordering with FCFS to resolve equal priority tasks</li><li>0x1 (FCFS_ONLY): First come First serve, in the order of DBR rings</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_8"></a>8</p>
+</td>
+<td>ENH_STROBE_ENABLE</td>
+<td>R/W</td>
+<td><p>Enhanced Strobe Enable</p>
+<p class="BLANK"></p>
+<p>This bit instructs DWC_mshc to sample the CMD line using data strobe for HS400 mode.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (ENH_STB_FOR_CMD): CMD line is sampled using data strobe for HS400 mode</li><li>0x0 (NO_STB_FOR_CMD): CMD line is sampled using cclk_rx for HS400 mode</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_7_4"></a>7:4</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_3"></a>3</p>
+</td>
+<td>EMMC_RST_N_OE</td>
+<td>R/W</td>
+<td><p>Output Enable control for EMMC Device Reset signal PAD control.</p>
+<p class="BLANK"></p>
+<p>This field drives sd_rst_n_oe output of DWC_mshc</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (ENABLE): sd_rst_n_oe is 1</li><li>0x0 (DISABLE): sd_rst_n_oe is 0</li></ul><p></p>
+<p><span>Value After Reset:</span>0x1</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_2"></a>2</p>
+</td>
+<td>EMMC_RST_N</td>
+<td>R/W</td>
+<td><p>EMMC Device Reset signal control.</p>
+<p class="BLANK"></p>
+<p>This register field controls the sd_rst_n output of DWC_mshc</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (RST_DEASSERT): Reset to eMMC device is deasserted</li><li>0x0 (RST_ASSERT): Reset to eMMC device asserted (active low)</li></ul><p></p>
+<p><span>Value After Reset:</span>0x1</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_1"></a>1</p>
+</td>
+<td>DISABLE_DATA_CRC_CHK</td>
+<td>R/W</td>
+<td><p>Disable Data CRC Check</p>
+<p class="BLANK"></p>
+<p>This bit controls masking of CRC16 error for Card Write in eMMC mode. This is useful in bus testing (CMD19) for an eMMC device. In bus testing, an eMMC card does not send CRC status for a block, which may generate CRC error. This CRC error can be masked using this bit during bus testing.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (DISABLE): DATA CRC check is disabled</li><li>0x0 (ENABLE): DATA CRC check is enabled</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_EMMC_CTRL_R_F_0"></a>0</p>
+</td>
+<td>CARD_IS_EMMC</td>
+<td>R/W</td>
+<td><p>eMMC Card present</p>
+<p class="BLANK"></p>
+<p>This bit indicates the type of card connected. An application program this bit based on the card connected to MSHC.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (EMMC_CARD): Card connected to MSHC is an eMMC card</li><li>0x0 (NON_EMMC_CARD): Card connected to MSHC is a non-eMMC card</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_BOOT_CTRL_R"></a><span>BOOT_CTRL_R</span></p>
+<ul><li><span>Name:</span>eMMC Boot Control register</li><li><span>Description:</span>This register is used to control the eMMC Boot operation.</li><li><span>Size:</span>16 bits</li><li><span>Offset:</span>0x52e</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_vendor1_block_BOOT_CTRL_R"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_BOOT_CTRL_R_F_15_12">15:12</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_BOOT_CTRL_R_F_11_9">11:9</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_BOOT_CTRL_R_F_8">8</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_BOOT_CTRL_R_F_7">7</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_BOOT_CTRL_R_F_6_1">6:1</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_BOOT_CTRL_R_F_0">0</a></td>
+</tr>
+<tr><td>BOOT_TOUT_CNT</td>
+<td>RSVD_11_9</td>
+<td>BOOT_ACK_ENABLE</td>
+<td>VALIDATE_BOOT</td>
+<td>RSVD_6_1</td>
+<td>MAN_BOOT_EN</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_vendor1_block_BOOT_CTRL_R"></a><p class="title">Table�6.�Fields for Register: BOOT_CTRL_R</p>
+<table summary="Fields for Register: BOOT_CTRL_R" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_BOOT_CTRL_R_F_15_12"></a>15:12</p>
+</td>
+<td>BOOT_TOUT_CNT</td>
+<td>R/W</td>
+<td><p>Boot Ack Timeout Counter Value.</p>
+<p class="BLANK"></p>
+<p>This value determines the interval by which boot ack timeout (50 ms) is detected when boot ack is expected during boot operation.</p>
+<ul><li>0xF : Reserved</li><li>0xE : TMCLK x 2^27</li><li>.. - ............</li><li>0x1 : TMCLK x 2^14</li><li>0x0 : TMCLK x 2^13</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_BOOT_CTRL_R_F_11_9"></a>11:9</p>
+</td>
+<td>RSVD_11_9</td>
+<td>R</td>
+<td><p>These bits (RSVD_11_9) of the BOOT_CTRL_R register are reserved. They always return 0.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_BOOT_CTRL_R_F_8"></a>8</p>
+</td>
+<td>BOOT_ACK_ENABLE</td>
+<td>R/W</td>
+<td><p>Boot Acknowledge Enable</p>
+<p class="BLANK"></p>
+<p>When this bit set, DWC_mshc checks for boot acknowledge start pattern of 0-1-0 during boot operation. This bit is applicable for both mandatory and alternate boot mode.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (TRUE): Boot Ack enable</li><li>0x0 (FALSE): Boot Ack disable</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_BOOT_CTRL_R_F_7"></a>7</p>
+</td>
+<td>VALIDATE_BOOT</td>
+<td>W</td>
+<td><p>Validate Mandatory Boot Enable bit</p>
+<p class="BLANK"></p>
+<p>This bit is used to validate the MAN_BOOT_EN bit.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (TRUE): Validate Mandatory boot enable bit</li><li>0x0 (FALSE): Ignore Mandatory boot Enable bit</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_BOOT_CTRL_R_F_6_1"></a>6:1</p>
+</td>
+<td>RSVD_6_1</td>
+<td>R</td>
+<td><p>These bits (RSVD _6_1) of the BOOT_CTRL_R register are reserved. They always return 0.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_BOOT_CTRL_R_F_0"></a>0</p>
+</td>
+<td>MAN_BOOT_EN</td>
+<td>R/W</td>
+<td><p>Mandatory Boot Enable</p>
+<p class="BLANK"></p>
+<p>This bit is used to initiate the mandatory boot operation. The application sets this bit along with VALIDATE_BOOT bit. Writing 0 is ignored. The DWC_mshc clears this bit after the boot transfer is completed or terminated.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (MAN_BOOT_EN): Mandatory boot enable</li><li>0x0 (MAN_BOOT_DIS): Mandatory boot disable</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+<p><span>Volatile:</span>true</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R"></a><span>AT_CTRL_R</span></p>
+<ul><li><span>Name:</span>Tuning and Auto-tuning control register</li><li><span>Description:</span>This register controls some aspects of tuning and auto-tuning features. Do not program this register when HOST_CTRL2_R.SAMPLE_CLK_SEL is '1'</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x540</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_31">31</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_30_24">30:24</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_23_21">23:21</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_20_19">20:19</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_18_17">18:17</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_16">16</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_15_12">15:12</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_11_8">11:8</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_7_5">7:5</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_4">4</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_3">3</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_2">2</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_1">1</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_0">0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>SWIN_TH_VAL</td>
+<td>Rsvd</td>
+<td>POST_CHANGE_DLY</td>
+<td>PRE_CHANGE_DLY</td>
+<td>TUNE_CLK_STOP_EN</td>
+<td>RSDV3</td>
+<td>WIN_EDGE_SEL</td>
+<td>RSDV2</td>
+<td>SW_TUNE_EN</td>
+<td>RPT_TUNE_ERR</td>
+<td>SWIN_TH_EN</td>
+<td>CI_SEL</td>
+<td>AT_EN</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R"></a><p class="title">Table�7.�Fields for Register: AT_CTRL_R</p>
+<table summary="Fields for Register: AT_CTRL_R" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_31"></a>31</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_30_24"></a>30:24</p>
+</td>
+<td>SWIN_TH_VAL</td>
+<td>R/W</td>
+<td><p>Sampling window threshold value setting</p>
+<p class="BLANK"></p>
+<p>The maximum value that can be set here depends on the length of delayline used for tuning. A delayLine with 128 taps can use values from 0x0 to 0x7F.</p>
+<p class="BLANK"></p>
+<p>This field is valid only when SWIN_TH_EN is '1'. Should be programmed only when SAMPLE_CLK_SEL is '0'</p>
+<ul><li>0x0 : Threshold values is 0x1, windows of length 1 tap and above can be selected as sampling window.</li><li>0x1 : Threshold values is 0x2, windows of length 2 taps and above can be selected as sampling window.</li><li>0x2 : Threshold values is 0x1, windows of length 3 taps and above can be selected as sampling window.</li><li>........</li><li>0x7F : Threshold values is 0x1, windows of length 127 taps and above can be selected as sampling window.</li></ul><p></p>
+<p><span>Value After Reset:</span>0x1f</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_23_21"></a>23:21</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_20_19"></a>20:19</p>
+</td>
+<td>POST_CHANGE_DLY</td>
+<td>R/W</td>
+<td><p>Time taken for phase switching and stable clock output.</p>
+<p class="BLANK"></p>
+<p>Specifies the maximum time (in terms of cclk cycles) that the delay line can take to switch its output phase after a change in tuning_cclk_sel or autotuning_cclk_sel.
+Set a value of 0x3 for glitch free clock switching when the PHY Type is SNPS SD/eMMC phy.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (LATENCY_LT_1): Less than 1-cycle latency</li><li>0x1 (LATENCY_LT_2): Less than 2-cycle latency</li><li>0x2 (LATENCY_LT_3): Less than 3-cycle latency</li><li>0x3 (LATENCY_LT_4): Less than 4-cycle latency</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_18_17"></a>18:17</p>
+</td>
+<td>PRE_CHANGE_DLY</td>
+<td>R/W</td>
+<td><p>Maximum Latency specification between cclk_tx and cclk_rx.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (LATENCY_LT_1): Less than 1-cycle latency</li><li>0x1 (LATENCY_LT_2): Less than 2-cycle latency</li><li>0x2 (LATENCY_LT_3): Less than 3-cycle latency</li><li>0x3 (LATENCY_LT_4): Less than 4-cycle latency</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_16"></a>16</p>
+</td>
+<td>TUNE_CLK_STOP_EN</td>
+<td>R/W</td>
+<td><p>Clock stopping control for Tuning and auto-tuning circuit.</p>
+<p class="BLANK"></p>
+<p>When enabled, clock gate control output of DWC_mshc (clk2card_on) is pulled low before changing phase select codes on tuning_cclk_sel and autotuning_cclk_sel. This effectively stops the Device/Card
+clock, cclk_rx and also drift_cclk_rx. Changing phase code when clocks are stopped ensures glitch free phase switching. Set this bit to 0 if the PHY or delayline can guarantee glitch free switching.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (ENABLE_CLK_STOPPING): Clocks stopped during phase code change</li><li>0x0 (DISABLE_CLK_STOPPING): Clocks not stopped. PHY ensures glitch free phase switching.</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_15_12"></a>15:12</p>
+</td>
+<td>RSDV3</td>
+<td>R</td>
+<td><p>These bits (RSVD3) of the AT_CTRL_R register are reserved. They always return 0.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_11_8"></a>11:8</p>
+</td>
+<td>WIN_EDGE_SEL</td>
+<td>R/W</td>
+<td><p>This field sets the phase for Left and Right edges for drift monitoring. [Left edge offset + Right edge offset] must not be less than total taps of delayLine.</p>
+<ul><li>0x0: User selection disabled. Tuning calculated edges are used.</li><li>0x1: Right edge Phase is center + 2 stages, Left edge Phase is center - 2 stages.</li><li>0x2: Right edge Phase is center + 3 stages, Left edge Phase is center - 3 stages.</li><li>...</li><li>0xF: Right edge Phase is center + 16 stages, Left edge Phase is center - 16 stages.</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_7_5"></a>7:5</p>
+</td>
+<td>RSDV2</td>
+<td>R</td>
+<td><p>These bits (RSVD2) of the AT_CTRL_R register are reserved. They always return 0.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_4"></a>4</p>
+</td>
+<td>SW_TUNE_EN</td>
+<td>R/W</td>
+<td><p>This fields enables software-managed tuning flow.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (SW_TUNING_ENABLE): Software-managed tuning enabled. AT_STAT_R.CENTER_PH_CODE Field is now writable.</li><li>0x0 (SW_TUNING_DISABLE): Software-managed tuning disabled.</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_3"></a>3</p>
+</td>
+<td>RPT_TUNE_ERR</td>
+<td>R/W</td>
+<td><p>Framing errors are not generated when executing tuning. This debug bit allows users to report these errors.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (DEBUG_ERRORS): Debug mode for reporting framing errors</li><li>0x0 (ERRORS_DISABLED): Default mode where as per SD-HCI no errors are reported.</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_2"></a>2</p>
+</td>
+<td>SWIN_TH_EN</td>
+<td>R/W</td>
+<td><p>Sampling window Threshold enable</p>
+<p class="BLANK"></p>
+<p>Selects the tuning mode</p>
+<p class="BLANK"></p>
+<p>Field should be programmed only when SAMPLE_CLK_SEL is '0'</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (THRESHOLD_MODE): Tuning engine selects the first complete sampling window that meets the threshold set by SWIN_TH_VAL field</li><li>0x0 (LARGEST_WIN_MODE): Tuning engine sweeps all taps and settles at the largest window</li></ul><p></p>
+<p><span>Value After Reset:</span>0x1</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_1"></a>1</p>
+</td>
+<td>CI_SEL</td>
+<td>R/W</td>
+<td><p>Selects the interval when the corrected center phase select code can be driven on tuning_cclk_sel output.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (WHEN_IN_BLK_GAP): Driven in block gap interval</li><li>0x1 (WHEN_IN_IDLE): Driven at the end of the transfer</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_CTRL_R_F_0"></a>0</p>
+</td>
+<td>AT_EN</td>
+<td>R/W</td>
+<td><p>Setting this bit enables Auto tuning engine. This bit is enabled by default when core is configured with mode3 retuning support. Clear this bit to 0 when core is configured to have Mode3 re-tuning but SW wishes to disable mode3 re-tuning.</p>
+<p class="BLANK"></p>
+<p>This field should be programmed only when CLK_CTRL_R.SD_CLK_EN is 0.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (AT_ENABLE): AutoTuning is enabled</li><li>0x0 (AT_DISABLE): AutoTuning is disabled</li></ul><p></p>
+<p><span>Value After Reset:</span>0x1</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_STAT_R"></a><span>AT_STAT_R</span></p>
+<ul><li><span>Name:</span>Tuning and Auto-tuning status register</li><li><span>Description:</span>Register to read the Center, Left and Right codes used by tuning and auto-tuning engines. Center code field is also used for software managed tuning.</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x544</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_vendor1_block_AT_STAT_R"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_STAT_R_F_31">31</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_STAT_R_F_30_24">30:24</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_STAT_R_F_23_16">23:16</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_STAT_R_F_15_8">15:8</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_STAT_R_F_7_0">7:0</a></td>
+</tr>
+<tr><td>DL2_BUSY</td>
+<td>RSDV1</td>
+<td>L_EDGE_PH_CODE</td>
+<td>R_EDGE_PH_CODE</td>
+<td>CENTER_PH_CODE</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_vendor1_block_AT_STAT_R"></a><p class="title">Table�8.�Fields for Register: AT_STAT_R</p>
+<table summary="Fields for Register: AT_STAT_R" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_STAT_R_F_31"></a>31</p>
+</td>
+<td>DL2_BUSY</td>
+<td>R</td>
+<td><p>Delay Line 2 busy indication. If this bit is set then it indicates that the cclk_rx delay line is in the process of delay code updation.</p>
+<p><span>Value After Reset:</span>0x1</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_STAT_R_F_30_24"></a>30:24</p>
+</td>
+<td>RSDV1</td>
+<td>R</td>
+<td><p>These bits of the AT_STAT_R register are reserved. They always return 0.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_STAT_R_F_23_16"></a>23:16</p>
+</td>
+<td>L_EDGE_PH_CODE</td>
+<td>R</td>
+<td><p>Left Edge Phase code. Reading this field returns the phase code value used by Auto-tuning engine to sample data on Left edge of sampling window.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_STAT_R_F_15_8"></a>15:8</p>
+</td>
+<td>R_EDGE_PH_CODE</td>
+<td>R</td>
+<td><p>Right Edge Phase code. Reading this field returns the phase code value used by Auto-tuning engine to sample data on Right edge of sampling window.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_vendor1_block_AT_STAT_R_F_7_0"></a>7:0</p>
+</td>
+<td>CENTER_PH_CODE</td>
+<td>R/W</td>
+<td><p>Centered Phase code. Reading this field returns the current value on tuning_cclk_sel output. Setting AT_CTRL_R.SW_TUNE_EN enables software to write to this field and its contents are reflected on tuning_cclk_sel.</p>
+<p><span>Value After Reset:</span>0x6</p>
+<p><span>Volatile:</span>true</p>
+</td>
+</tr>
+</tbody></table></body></html>
+

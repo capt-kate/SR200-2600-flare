@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">Hash Status</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0xc</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>This register holds status from the last hash operation.<p></p>
+</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31:4]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="hmac_sm_busy"><td>[3]</td>
+<td><a href="#hmac_sm_busy.desc">hmac_sm_busy</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>Hash HMAC SM Busy For debug.</td>
+<td>H<a class="headerlink" href="#hmac_sm_busy" title="Permalink to this row"></a></td>
+</tr>
+<tr id="xfer_sm_busy"><td>[2]</td>
+<td><a href="#xfer_sm_busy.desc">xfer_sm_busy</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>Hash Xfer SM Busy For debug.</td>
+<td>H<a class="headerlink" href="#xfer_sm_busy" title="Permalink to this row"></a></td>
+</tr>
+<tr id="hash_busy"><td>[1]</td>
+<td><a href="#hash_busy.desc">hash_busy</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>Hash Busy</td>
+<td>H<a class="headerlink" href="#hash_busy" title="Permalink to this row"></a></td>
+</tr>
+<tr id="hash_done"><td>[0]</td>
+<td><a href="#hash_done.desc">hash_done</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>Hash Done</td>
+<td>H<a class="headerlink" href="#hash_done" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="hmac_sm_busy.desc">hmac_sm_busy - Hash HMAC SM Busy For debug.<a class="headerlink" href="#hmac_sm_busy.desc" title="Permalink to this headline"></a></h3>
+<h3 id="xfer_sm_busy.desc">xfer_sm_busy - Hash Xfer SM Busy For debug.<a class="headerlink" href="#xfer_sm_busy.desc" title="Permalink to this headline"></a></h3>
+<h3 id="hash_busy.desc">hash_busy - Hash Busy<a class="headerlink" href="#hash_busy.desc" title="Permalink to this headline"></a></h3>
+<p>If this bit is 1, it means Hash engine is processing data in the operation.<p></p>
+</p>
+<h3 id="hash_done.desc">hash_done - Hash Done<a class="headerlink" href="#hash_done.desc" title="Permalink to this headline"></a></h3>
+<p>If this bit is 1, it means last hash operation finished successfully. FW needs clean this bit before issue next hash command.<p></p>
+</p>
+

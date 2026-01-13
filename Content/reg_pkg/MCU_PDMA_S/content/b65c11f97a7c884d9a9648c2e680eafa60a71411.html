@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">CH_DESTRIGINCFG</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x2250</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Channel Destination Trigger In Configuration Register</p>
+<p>This register provides configuration settings when using destination side trigger input for the current DMA command.</p>
+<p>The content of this register can be updated during command linking by setting bit[20] in the command link header.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_2"><td>[31:24]</td>
+<td><a href="#RAZWI_2.desc">RAZWI_2</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_2" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DESTRIGINBLKSIZE"><td>[23:16]</td>
+<td><a href="#DESTRIGINBLKSIZE.desc">DESTRIGINBLKSIZE</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DESTRIGINBLKSIZE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_1"><td>[15:12]</td>
+<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DESTRIGINMODE"><td>[11:10]</td>
+<td><a href="#DESTRIGINMODE.desc">DESTRIGINMODE</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DESTRIGINMODE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DESTRIGINTYPE"><td>[9:8]</td>
+<td><a href="#DESTRIGINTYPE.desc">DESTRIGINTYPE</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DESTRIGINTYPE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_0"><td>[7:0]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="RAZWI_2.desc">RAZWI_2<a class="headerlink" href="#RAZWI_2.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="DESTRIGINBLKSIZE.desc">DESTRIGINBLKSIZE<a class="headerlink" href="#DESTRIGINBLKSIZE.desc" title="Permalink to this headline"></a></h3>
+<p>Destination Trigger Input Default Transfer Size. Defined transfer size per trigger + 1.</p>
+<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="DESTRIGINMODE.desc">DESTRIGINMODE<a class="headerlink" href="#DESTRIGINMODE.desc" title="Permalink to this headline"></a></h3>
+<p>Destination Trigger Input Mode:
+- 00: Command
+- 01: Reserved
+- 10: DMA driven Flow control. Only allowed when HAS_TRIGIN is enabled.
+- 11: Peripheral driven Flow control. Only allowed when HAS_TRIGIN is enabled.
+Note: This field is ignored for Internal triggers as they only support Command triggers</p>
+<h3 id="DESTRIGINTYPE.desc">DESTRIGINTYPE<a class="headerlink" href="#DESTRIGINTYPE.desc" title="Permalink to this headline"></a></h3>
+<p>Destination Trigger Input Type:
+- 00: Software only Trigger Request. DESTRIGINSEL is ignored.
+- 01: Reserved
+- 10: Hardware Trigger Request. Only allowed when HAS_TRIGIN is enabled. DESTRIGINSEL selects between external trigger inputs if HAS_TRIGSEL is enabled.
+- 11: Internal Trigger Request. Only allowed when HAS_TRIGSEL is enabled and the DMAC has multiple channels, otherwise treated as HW Trigger Request. DESTRIGINSEL selects between DMA channels.</p>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+

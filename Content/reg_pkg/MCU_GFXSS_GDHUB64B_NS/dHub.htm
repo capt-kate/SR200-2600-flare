@@ -1,0 +1,9194 @@
+﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>dHub</title></head>
+<body>
+<p><a NAME="dHub">"dHub"<p></p>
+</a></p>
+<p><a HREF="#SemaINTR">INTERFACE: SemaINTR</a></p>
+<p><a HREF="#Semaphore">INTERFACE: Semaphore</a></p>
+<p><a HREF="#SemaQuery">INTERFACE: SemaQuery</a></p>
+<p><a HREF="#SemaQueryMap">INTERFACE: SemaQueryMap</a></p>
+<p><a HREF="#SemaHub">INTERFACE: SemaHub</a></p>
+<p><a HREF="#FiFo">INTERFACE: FiFo</a></p>
+<p><a HREF="#HBO">INTERFACE: HBO</a></p>
+<p><a HREF="#LLDesFmt">INTERFACE: LLDesFmt</a></p>
+<p><a HREF="#dHubCmdHDR">INTERFACE: dHubCmdHDR</a></p>
+<p><a HREF="#dHubCmd">INTERFACE: dHubCmd</a></p>
+<p><a HREF="#dHubChannel">INTERFACE: dHubChannel</a></p>
+<p><a HREF="#dHubReg">INTERFACE: dHubReg</a></p>
+<p><a HREF="#dHubCmd2D">INTERFACE: dHubCmd2D</a></p>
+<p><a HREF="#dHubCmd2ND">INTERFACE: dHubCmd2ND</a></p>
+<p><a HREF="#dHubCmd3ND">INTERFACE: dHubCmd3ND</a></p>
+<p><a HREF="#dHubCmd4ND">INTERFACE: dHubCmd4ND</a></p>
+<p><a HREF="#dHubQuery">INTERFACE: dHubQuery</a></p>
+<p><a HREF="#dHubReg2D">INTERFACE: dHubReg2D</a></p>
+<p><a NAME="SemaINTR"><p></p>
+<a HREF="#dHub">SemaINTR</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>SemaINTR</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><h1>mask</h1>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaINTR_mask_empty">empty</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Enable interrupt on 'empty' condition</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [1:1]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaINTR_mask_full">full</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Enable interrupt on 'full' condition</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [2:2]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaINTR_mask_almostEmpty">almostEmpty</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Enable interrupt on 'almostEmpty' condition</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [3:3]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaINTR_mask_almostFull">almostFull</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Enable interrupt on 'almostFull' condition</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:4]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>28</p>
+</td>
+<td><p><a NAME="SemaINTR_RSVDx0_b4"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="Semaphore"><p></p>
+<a HREF="#dHub">Semaphore</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>Semaphore</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="Semaphore_CFG">CFG</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="Semaphore_CFG_DEPTH">DEPTH</a></p>
+</td>
+<td><p>0xF</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Max level of semaphore<p></p>
+Note: write this register will trigger counter reset</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:16]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="Semaphore_RSVDx0_b16"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00004</p>
+</td>
+<td><p><a NAME="Semaphore_"><p></p>
+</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#SemaINTR">$SemaINTR</a></p>
+</td>
+<td><p><a NAME="Semaphore_INTR">INTR</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p>[3]</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Interrupt mask for 3 CPUs</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00010</p>
+</td>
+<td><p><a NAME="Semaphore_mask">mask</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="Semaphore_mask_full">full</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [1:1]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="Semaphore_mask_emp">emp</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>When full bit is set to one, to the producer, the semaphore will<p></p>
+never be full, so that the producer will never be blocked.<p></p>
+When emp bit is set to one, to the consumer, the semaphore will<p></p>
+never be empty, so that the consumer will never be blocked.<p></p>
+When the emp/full bit is set, the semaphore/FIFO pointer will be<p></p>
+maintained, but the counter will be not correct anymore.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:2]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>30</p>
+</td>
+<td><p><a NAME="Semaphore_RSVDx10_b2"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00014</p>
+</td>
+<td><p><a NAME="Semaphore_thresh">thresh</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [1:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>2</p>
+</td>
+<td><p><a NAME="Semaphore_thresh_aFull">aFull</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [3:2]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>2</p>
+</td>
+<td><p><a NAME="Semaphore_thresh_aEmp">aEmp</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Selects almost full and almost empty threshold levels<p></p>
+2'b0: 1/2<p></p>
+2'b1: 1/4<p></p>
+2'b2: 3/4<p></p>
+2'b3: 1/8 for aEmp 7/8 for aFull<p></p>
+For aFull, the aFull flag is set when >= level chosen<p></p>
+For aEmp, the aEmp flag is set when < = level chosen.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:4]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>28</p>
+</td>
+<td><p><a NAME="Semaphore_RSVDx14_b4"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="SemaQuery"><p></p>
+<a HREF="#dHub">SemaQuery</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>SemaQuery</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="SemaQuery_RESP">RESP</a></p>
+</td>
+<td COLSPAN="5"><p>(R-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="SemaQuery_RESP_CNT">CNT</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Semaphore counter level</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:16]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="SemaQuery_RESP_PTR">PTR</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Semaphore pointer:<p></p>
+producer-wptr or consumer-rptr</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="SemaQueryMap"><p></p>
+<a HREF="#dHub">SemaQueryMap</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>SemaQueryMap</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="SemaQueryMap_ADDR">ADDR</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [1:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>2</p>
+</td>
+<td><p><a NAME="SemaQueryMap_ADDR_byte">byte</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [6:2]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>5</p>
+</td>
+<td><p><a NAME="SemaQueryMap_ADDR_ID">ID</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Semaphore cell index</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:7]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaQueryMap_ADDR_master">master</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>producer</p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>consumer</p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Select which counter to read</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:8]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="SemaQueryMap_RSVDx0_b8"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="SemaHub"><p></p>
+<a HREF="#dHub">SemaHub</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>SemaHub</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="SemaHub_Query">Query</a></p>
+</td>
+<td COLSPAN="5"><p>(R-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#SemaQuery">$SemaQuery</a></p>
+</td>
+<td><p><a NAME="SemaHub_counter">counter</a></p>
+</td>
+<td><p>MEM</p>
+</td>
+<td><p>[64]</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Access address as defined above</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00100</p>
+</td>
+<td><p><a NAME="SemaHub_ARR">ARR</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#Semaphore">$Semaphore</a></p>
+</td>
+<td><p><a NAME="SemaHub_cell">cell</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p>[32]</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Up-to 32 semaphore cells</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00400</p>
+</td>
+<td><p><a NAME="SemaHub_PUSH">PUSH</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="SemaHub_PUSH_ID">ID</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:8]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="SemaHub_PUSH_delta">delta</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>CPU increases PCounter by delta (0 as push 256)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:16]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="SemaHub_RSVDx400_b16"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00404</p>
+</td>
+<td><p><a NAME="SemaHub_POP">POP</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="SemaHub_POP_ID">ID</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:8]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="SemaHub_POP_delta">delta</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>CPU decreases CCounter by delta (0 as pop 256)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:16]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="SemaHub_RSVDx404_b16"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00408</p>
+</td>
+<td><p><a NAME="SemaHub_empty">empty</a></p>
+</td>
+<td COLSPAN="5"><p>(WOC-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_0i">ST_0i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [1:1]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_1i">ST_1i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [2:2]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_2i">ST_2i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [3:3]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_3i">ST_3i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [4:4]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_4i">ST_4i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [5:5]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_5i">ST_5i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [6:6]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_6i">ST_6i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:7]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_7i">ST_7i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [8:8]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_8i">ST_8i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [9:9]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_9i">ST_9i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [10:10]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_10i">ST_10i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [11:11]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_11i">ST_11i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [12:12]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_12i">ST_12i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [13:13]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_13i">ST_13i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [14:14]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_14i">ST_14i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:15]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_15i">ST_15i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [16:16]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_16i">ST_16i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [17:17]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_17i">ST_17i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [18:18]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_18i">ST_18i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [19:19]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_19i">ST_19i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [20:20]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_20i">ST_20i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [21:21]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_21i">ST_21i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [22:22]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_22i">ST_22i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:23]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_23i">ST_23i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [24:24]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_24i">ST_24i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [25:25]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_25i">ST_25i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [26:26]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_26i">ST_26i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [27:27]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_27i">ST_27i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [28:28]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_28i">ST_28i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [29:29]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_29i">ST_29i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [30:30]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_30i">ST_30i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:31]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_empty_ST_31i">ST_31i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>All cell 'empty' status</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0040C</p>
+</td>
+<td><p><a NAME="SemaHub_full">full</a></p>
+</td>
+<td COLSPAN="5"><p>(WOC-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_0i">ST_0i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [1:1]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_1i">ST_1i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [2:2]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_2i">ST_2i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [3:3]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_3i">ST_3i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [4:4]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_4i">ST_4i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [5:5]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_5i">ST_5i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [6:6]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_6i">ST_6i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:7]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_7i">ST_7i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [8:8]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_8i">ST_8i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [9:9]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_9i">ST_9i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [10:10]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_10i">ST_10i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [11:11]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_11i">ST_11i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [12:12]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_12i">ST_12i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [13:13]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_13i">ST_13i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [14:14]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_14i">ST_14i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:15]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_15i">ST_15i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [16:16]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_16i">ST_16i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [17:17]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_17i">ST_17i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [18:18]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_18i">ST_18i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [19:19]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_19i">ST_19i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [20:20]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_20i">ST_20i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [21:21]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_21i">ST_21i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [22:22]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_22i">ST_22i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:23]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_23i">ST_23i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [24:24]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_24i">ST_24i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [25:25]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_25i">ST_25i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [26:26]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_26i">ST_26i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [27:27]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_27i">ST_27i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [28:28]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_28i">ST_28i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [29:29]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_29i">ST_29i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [30:30]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_30i">ST_30i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:31]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_full_ST_31i">ST_31i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>All cell 'full' status</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00410</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty">almostEmpty</a></p>
+</td>
+<td COLSPAN="5"><p>(WOC-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_0i">ST_0i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [1:1]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_1i">ST_1i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [2:2]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_2i">ST_2i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [3:3]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_3i">ST_3i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [4:4]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_4i">ST_4i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [5:5]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_5i">ST_5i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [6:6]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_6i">ST_6i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:7]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_7i">ST_7i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [8:8]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_8i">ST_8i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [9:9]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_9i">ST_9i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [10:10]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_10i">ST_10i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [11:11]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_11i">ST_11i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [12:12]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_12i">ST_12i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [13:13]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_13i">ST_13i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [14:14]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_14i">ST_14i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:15]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_15i">ST_15i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [16:16]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_16i">ST_16i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [17:17]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_17i">ST_17i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [18:18]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_18i">ST_18i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [19:19]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_19i">ST_19i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [20:20]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_20i">ST_20i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [21:21]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_21i">ST_21i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [22:22]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_22i">ST_22i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:23]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_23i">ST_23i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [24:24]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_24i">ST_24i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [25:25]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_25i">ST_25i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [26:26]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_26i">ST_26i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [27:27]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_27i">ST_27i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [28:28]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_28i">ST_28i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [29:29]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_29i">ST_29i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [30:30]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_30i">ST_30i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:31]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostEmpty_ST_31i">ST_31i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>All cell 'almostEmpty' status</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00414</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull">almostFull</a></p>
+</td>
+<td COLSPAN="5"><p>(WOC-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_0i">ST_0i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [1:1]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_1i">ST_1i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [2:2]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_2i">ST_2i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [3:3]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_3i">ST_3i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [4:4]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_4i">ST_4i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [5:5]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_5i">ST_5i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [6:6]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_6i">ST_6i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:7]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_7i">ST_7i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [8:8]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_8i">ST_8i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [9:9]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_9i">ST_9i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [10:10]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_10i">ST_10i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [11:11]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_11i">ST_11i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [12:12]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_12i">ST_12i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [13:13]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_13i">ST_13i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [14:14]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_14i">ST_14i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:15]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_15i">ST_15i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [16:16]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_16i">ST_16i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [17:17]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_17i">ST_17i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [18:18]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_18i">ST_18i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [19:19]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_19i">ST_19i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [20:20]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_20i">ST_20i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [21:21]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_21i">ST_21i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [22:22]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_22i">ST_22i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:23]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_23i">ST_23i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [24:24]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_24i">ST_24i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [25:25]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_25i">ST_25i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [26:26]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_26i">ST_26i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [27:27]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_27i">ST_27i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [28:28]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_28i">ST_28i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [29:29]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_29i">ST_29i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [30:30]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_30i">ST_30i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:31]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="SemaHub_almostFull_ST_31i">ST_31i</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>All cell 'almostFull' status</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [1855:0]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>1856</p>
+</td>
+<td><p><a NAME="SemaHub_RSVDx418"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="FiFo"><p></p>
+<a HREF="#dHub">FiFo</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>FiFo</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="FiFo_CFG">CFG</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [19:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>20</p>
+</td>
+<td><p><a NAME="FiFo_CFG_BASE">BASE</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Base address (byte-address) of a FIFO in the shared SRAM. A<p></p>
+channel's read/write pointers will be added to this “BASE” to<p></p>
+get exact location of shared SRAM.<p></p>
+Note: aligned with base SRAM data bus.<p></p>
+For example, if SRAM data is 64-bit, then base[2:0] should be<p></p>
+3'b0;</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:20]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>12</p>
+</td>
+<td><p><a NAME="FiFo_RSVDx0_b20"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00004</p>
+</td>
+<td><p><a NAME="FiFo_START">START</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="FiFo_START_EN">EN</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write 1 to this register will enable this channel, or 0 to this<p></p>
+register will disable this channel.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="FiFo_RSVDx4_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00008</p>
+</td>
+<td><p><a NAME="FiFo_CLEAR">CLEAR</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="FiFo_CLEAR_EN">EN</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write anything to clear FIFO pointers to 0.<p></p>
+Note :<p></p>
+CPU should make sure to disabled the channel (write 0 to<p></p>
+START_EN register) before issue clear command, otherwise the<p></p>
+clear request will be ignored.<p></p>
+Do not restart the channel when clear operation is in process.<p></p>
+HW will make sure there is no pending transactions before<p></p>
+execute the clear operation.<p></p>
+Associated semaphore cell needs reset separately by re-write<p></p>
+“CFG_DEPTH”</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="FiFo_RSVDx8_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0000C</p>
+</td>
+<td><p><a NAME="FiFo_FLUSH">FLUSH</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="FiFo_FLUSH_EN">EN</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>No support for now</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="FiFo_RSVDxC_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="HBO"><p></p>
+<a HREF="#dHub">HBO</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>HBO</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="HBO_"><p></p>
+</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#SemaHub">$SemaHub</a></p>
+</td>
+<td><p><a NAME="HBO_FiFoCtl">FiFoCtl</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00500</p>
+</td>
+<td><p><a NAME="HBO_ARR">ARR</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#FiFo">$FiFo</a></p>
+</td>
+<td><p><a NAME="HBO_FiFo">FiFo</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p>[32]</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Up-to 32 FIFO channels<p></p>
+FiFo[N] is controlled by HBO.FiFoCtl.Channel[N]</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00700</p>
+</td>
+<td><p><a NAME="HBO_BUSY">BUSY</a></p>
+</td>
+<td COLSPAN="5"><p>(R-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="HBO_BUSY_ST">ST</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Per channel status<p></p>
+Indicate the clear operation status.<p></p>
+1: clear is in process.<p></p>
+0 : clear is done.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [2015:0]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>2016</p>
+</td>
+<td><p><a NAME="HBO_RSVDx704"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="LLDesFmt"><p></p>
+<a HREF="#dHub">LLDesFmt</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>LLDesFmt</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="LLDesFmt_mem">mem</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="LLDesFmt_mem_size">size</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>The size of one piece of scattered memory.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:16]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="LLDesFmt_RSVDx0_b16"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="dHubCmdHDR"><p></p>
+<a HREF="#dHub">dHubCmdHDR</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>dHubCmdHDR</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>32-bit dHub command header<p></p>
+[0:31]</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="dHubCmdHDR_DESC">DESC</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="dHubCmdHDR_DESC_size">size</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>amount of data to be transferred, in bytes or MTU.<p></p>
+Size of 0 is forbidden.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [16:16]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmdHDR_DESC_sizeMTU">sizeMTU</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: size given in bytes;<p></p>
+1: size given in MTU (see dHubChCtl.CFG.MTU for MTU size<p></p>
+definition)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [17:17]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmdHDR_DESC_semOpMTU">semOpMTU</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: semaphore operations applied on dHubCmd level<p></p>
+1: semaphore operations applied on MTU level</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [22:18]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>5</p>
+</td>
+<td><p><a NAME="dHubCmdHDR_DESC_chkSemId">chkSemId</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>ID of semaphore to check before cmd / MTU;<p></p>
+0 indicates semaphore check is disabled</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [27:23]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>5</p>
+</td>
+<td><p><a NAME="dHubCmdHDR_DESC_updSemId">updSemId</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>ID of semaphore to update after cmd / MTU;<p></p>
+0 indicates semaphore update is disabled</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [28:28]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmdHDR_DESC_interrupt">interrupt</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>1: raise interrupt upon command finish</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [29:29]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmdHDR_DESC_ovrdQos">ovrdQos</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: AxQOS selection between HI value and LO value is a function<p></p>
+of FIFO occupancy<p></p>
+1: AxQOS selection between HI value and LO value is determined<p></p>
+by qosSel in dHubCmd</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [30:30]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmdHDR_DESC_disSem">disSem</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Changes the way the *SemId 10-bit field are used.<p></p>
+0:<p></p>
+updSemId and chkSemId operates as normal, AxUser[9:0] = 0;<p></p>
+1:<p></p>
+Disables updSemId and chkSemId,<p></p>
+AxUser[9:0] = {updSemId[4:0], chkSemId[4:0]}</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:31]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmdHDR_DESC_qosSel">qosSel</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0 : Select dHubChannel.AxQOS.LO value<p></p>
+1 : Select dHubChannel.AxQOS.HI value<p></p>
+end dHubCmdHDR</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="dHubCmd"><p></p>
+<a HREF="#dHub">dHubCmd</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>dHubCmd</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>64-bit dHub command issued by read/write masters<p></p>
+[0:31]</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="dHubCmd_MEM">MEM</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="dHubCmd_MEM_addr">addr</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>DRAM data address, in bytes; not necessarily MTU aligned.<p></p>
+[32:63]</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00004</p>
+</td>
+<td><p><a NAME="dHubCmd_"><p></p>
+</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#dHubCmdHDR">$dHubCmdHDR</a></p>
+</td>
+<td><p><a NAME="dHubCmd_HDR">HDR</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>end dHubCmd</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="dHubChannel"><p></p>
+<a HREF="#dHub">dHubChannel</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>dHubChannel</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="dHubChannel_CFG">CFG</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [3:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>4</p>
+</td>
+<td><p><a NAME="dHubChannel_CFG_MTU">MTU</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>8byte</p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>16byte</p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>32byte</p>
+</td>
+<td><p>0x2</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>64byte</p>
+</td>
+<td><p>0x3</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>128byte</p>
+</td>
+<td><p>0x4</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>256byte</p>
+</td>
+<td><p>0x5</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>512byte</p>
+</td>
+<td><p>0x6</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>1024byte</p>
+</td>
+<td><p>0x7</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>2048byte</p>
+</td>
+<td><p>0x8</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>4096byte</p>
+</td>
+<td><p>0x9</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Minimum transfer unit of the channel<p></p>
+Values > 9 are set to 4096byte<p></p>
+Important note for 64-bit dHubs:<p></p>
+Cannot set to values >= 9. A full 256-beat burst of 8-bytes is<p></p>
+2048 bytes.<p></p>
+Behavior is unpredictable if set to MTU = 4KB.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [4:4]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubChannel_CFG_QoS">QoS</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write 1 to turn on QoS detection<p></p>
+When QoS detection is on, AxQOS values is dynamically chosen<p></p>
+from AxQOS.HI and AxQOS.LO</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [5:5]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubChannel_CFG_selfLoop">selfLoop</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write 1 to enable cmd looping support; 0 to turn off</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [6:6]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubChannel_CFG_intrCtl">intrCtl</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>cmdDone</p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>chIdle</p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0 : default vlaue, the interrupt is triggered by the finish of<p></p>
+the dHub command if the interrupt bit is defined in the dHub<p></p>
+command.<p></p>
+1 : The interrupt is triggered if the dHub channel is idle ( no<p></p>
+busy and no pending and the corresponding dHub command Q is<p></p>
+empty).</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:7]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubChannel_CFG_hScan">hScan</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>rastScan</p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>invScan</p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>This parameter will only apply to read channels.<p></p>
+It will affect 1D dHub command for the channel.<p></p>
+When scan is set to 1 (invScan), the data (beat) inside the dHub<p></p>
+command will be fetched in the inverse order. ie. The data from<p></p>
+the last address will come first and the data (beat) from the<p></p>
+first address will come lastly.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [8:8]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubChannel_CFG_vScan">vScan</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>rastScan</p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>:</p>
+</td>
+<td><p>invScan</p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>This parameter will only apply to read channels.<p></p>
+It will affect 2D channels.<p></p>
+When scan is set to 1 (invScan),<p></p>
+The last address line (1D command) will be fetched first, and<p></p>
+the first address line will be fetched lastly.<p></p>
+Note: This parameter cannot be set to 1 if MTU results in ><p></p>
+256byte. The cost of using a > 256byte buffer in current<p></p>
+architecture is too much.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:9]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>23</p>
+</td>
+<td><p><a NAME="dHubChannel_RSVDx0_b9"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00004</p>
+</td>
+<td><p><a NAME="dHubChannel_ROB_MAP">ROB_MAP</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [3:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>4</p>
+</td>
+<td><p><a NAME="dHubChannel_ROB_MAP_ID">ID</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Maps a read channel to this ROB index.<p></p>
+A user can configure from 1 to the number of read channel number<p></p>
+of hardware ROBs. (Using .cfg)<p></p>
+This field will map this channel if it is a read channel to the<p></p>
+ROB specified here. Has no effect on write channels.<p></p>
+ROBs are indexed from 0 to NUM_ROB-1<p></p>
+If the setting is invalid, ie ID > NUM_ROB-1, then HW will remap<p></p>
+it to 0.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:4]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>28</p>
+</td>
+<td><p><a NAME="dHubChannel_RSVDx4_b4"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00008</p>
+</td>
+<td><p><a NAME="dHubChannel_AWQOS">AWQOS</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [3:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>4</p>
+</td>
+<td><p><a NAME="dHubChannel_AWQOS_LO">LO</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>AWQOS value when low priority</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:4]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>4</p>
+</td>
+<td><p><a NAME="dHubChannel_AWQOS_HI">HI</a></p>
+</td>
+<td><p>0xF</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>AWQOS value when high priority</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:8]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubChannel_RSVDx8_b8"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0000C</p>
+</td>
+<td><p><a NAME="dHubChannel_ARQOS">ARQOS</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [3:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>4</p>
+</td>
+<td><p><a NAME="dHubChannel_ARQOS_LO">LO</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>ARQOS value when low priority</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:4]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>4</p>
+</td>
+<td><p><a NAME="dHubChannel_ARQOS_HI">HI</a></p>
+</td>
+<td><p>0xF</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>ARQOS value when high priority</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:8]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubChannel_RSVDxC_b8"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00010</p>
+</td>
+<td><p><a NAME="dHubChannel_AWPARAMS">AWPARAMS</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [1:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>2</p>
+</td>
+<td><p><a NAME="dHubChannel_AWPARAMS_LOCK">LOCK</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Programmable AWLOCK[1:0] value</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [4:2]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>3</p>
+</td>
+<td><p><a NAME="dHubChannel_AWPARAMS_PROT">PROT</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Programmable AWPROT[2:0] value</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [10:5]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>6</p>
+</td>
+<td><p><a NAME="dHubChannel_AWPARAMS_USER">USER</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Programmable AWUSER[15:10] value. Whether upper four bits is<p></p>
+sent out the AXI interface is determined by USER_HI_EN bit.<p></p>
+AWUSER[9:0] is controlled by dHubCmd</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [13:11]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>3</p>
+</td>
+<td><p><a NAME="dHubChannel_AWPARAMS_CACHE">CACHE</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Programmable AWCACHE[3:1] value. AWCACHE[0], non-bufferable bit,<p></p>
+is controlled by dHub hardware</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [14:14]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubChannel_AWPARAMS_USER_HI_EN">USER_HI_EN</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: AWUSER[15:12] = Channel ID<p></p>
+1: AWUSER[15:12] = AWPARAMS.USER[5:2]<p></p>
+If user does not configure dHub with Multi ID Enabled but wants<p></p>
+to identify the originating channel of the transaction, the<p></p>
+user can use the MSB of AWUSER for this purpose.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:15]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>17</p>
+</td>
+<td><p><a NAME="dHubChannel_RSVDx10_b15"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00014</p>
+</td>
+<td><p><a NAME="dHubChannel_ARPARAMS">ARPARAMS</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [1:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>2</p>
+</td>
+<td><p><a NAME="dHubChannel_ARPARAMS_LOCK">LOCK</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Programmable ARLOCK[1:0] value</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [4:2]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>3</p>
+</td>
+<td><p><a NAME="dHubChannel_ARPARAMS_PROT">PROT</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Programmable ARPROT[2:0] value</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [10:5]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>6</p>
+</td>
+<td><p><a NAME="dHubChannel_ARPARAMS_USER">USER</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Programmable ARUSER[15:10] value. ARUSER[9:0] is controlled by<p></p>
+dHubCmd</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [14:11]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>4</p>
+</td>
+<td><p><a NAME="dHubChannel_ARPARAMS_CACHE">CACHE</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Programmable AWCACHE[3:0] value</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:15]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubChannel_ARPARAMS_USER_HI_EN">USER_HI_EN</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: ARUSER[15:12] = Channel ID<p></p>
+1: ARUSER[15:12] = ARPARAMS.USER[5:2]<p></p>
+If user does not configure dHub with Multi ID Enabled but wants<p></p>
+to identify the originating channel of the transaction, the<p></p>
+user can use the MSB of ARUSER for this purpose.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:16]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="dHubChannel_RSVDx14_b16"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00018</p>
+</td>
+<td><p><a NAME="dHubChannel_START">START</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubChannel_START_EN">EN</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write 1 to enable the channel; 0 to pause the channel</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="dHubChannel_RSVDx18_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0001C</p>
+</td>
+<td><p><a NAME="dHubChannel_CLEAR">CLEAR</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubChannel_CLEAR_EN">EN</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write anything to reset the channel controller state</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="dHubChannel_RSVDx1C_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00020</p>
+</td>
+<td><p><a NAME="dHubChannel_FLUSH">FLUSH</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubChannel_FLUSH_EN">EN</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write anything to start the data flushing process. Invalid for<p></p>
+read (M2H) channels<p></p>
+end dHubChannel</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="dHubChannel_RSVDx20_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="dHubReg"><p></p>
+<a HREF="#dHub">dHubReg</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>dHubReg</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="dHubReg_"><p></p>
+</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#SemaHub">$SemaHub</a></p>
+</td>
+<td><p><a NAME="dHubReg_SemaHub">SemaHub</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>For dHub internal interrupts, also provide semaphore service for<p></p>
+external (all channels will be opened to external to access).<p></p>
+Channel 0 is used for dHub.HBO interrupt.<p></p>
+Channel N+1 is used for dHub.Channel[N] interrupt.</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00500</p>
+</td>
+<td><p><a NAME="dHubReg_"><p></p>
+</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#HBO">$HBO</a></p>
+</td>
+<td><p><a NAME="dHubReg_HBO">HBO</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>For dHub channels (command/data queues), also provide (unused)<p></p>
+FIFO service for external.<p></p>
+Channel 2N is used for dHub.Channel[N] command.<p></p>
+Channel 2N+1 is used for dHub.Channel[N] data.</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00D00</p>
+</td>
+<td><p><a NAME="dHubReg_ARR">ARR</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#dHubChannel">$dHubChannel</a></p>
+</td>
+<td><p><a NAME="dHubReg_channelCtl">channelCtl</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p>[16]</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Up-to 16 channels</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00F40</p>
+</td>
+<td><p><a NAME="dHubReg_BUSY">BUSY</a></p>
+</td>
+<td COLSPAN="5"><p>(R-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="dHubReg_BUSY_ST">ST</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Per channel status<p></p>
+0: no ongoing command is being processed, and no flushing is<p></p>
+taking place<p></p>
+1: channel controller is busy</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:16]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="dHubReg_RSVDxF40_b16"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00F44</p>
+</td>
+<td><p><a NAME="dHubReg_PENDING">PENDING</a></p>
+</td>
+<td COLSPAN="5"><p>(R-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="dHubReg_PENDING_ST">ST</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Per channel status<p></p>
+0: Response queue is empty, meaning no outstanding AXI<p></p>
+transactions<p></p>
+1: there exist some outstanding AXI transactions</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:16]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="dHubReg_RSVDxF44_b16"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00F48</p>
+</td>
+<td><p><a NAME="dHubReg_busRstEn">busRstEn</a></p>
+</td>
+<td COLSPAN="5"><p>(RW-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubReg_busRstEn_reg">reg</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write one to this register will trigger gate-keeper to take over<p></p>
+the AXI bus.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="dHubReg_RSVDxF48_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00F4C</p>
+</td>
+<td><p><a NAME="dHubReg_busRstDone">busRstDone</a></p>
+</td>
+<td COLSPAN="5"><p>(R-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubReg_busRstDone_reg">reg</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>After gate-keeper take over the AXI bus, it will assert this bit<p></p>
+once there is no outstanding transactions on AXI bus.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="dHubReg_RSVDxF4C_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00F50</p>
+</td>
+<td><p><a NAME="dHubReg_flowCtl">flowCtl</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [7:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubReg_flowCtl_rAlpha">rAlpha</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:8]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubReg_flowCtl_wAlpha">wAlpha</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Flow control parameter for read and write axi master.<p></p>
+clkCnt=(alpha*bstLen) > >4.<p></p>
+This # of clock cycles will be blocked for the axi master after<p></p>
+an axi command with the burst length of “bstLen”.<p></p>
+When set alpha to be 0, the master will never be blocked.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:16]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="dHubReg_RSVDxF50_b16"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00F54</p>
+</td>
+<td><p><a NAME="dHubReg_axiCmdCol">axiCmdCol</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="dHubReg_axiCmdCol_rCnt">rCnt</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:16]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="dHubReg_axiCmdCol_wCnt">wCnt</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Axi command collection. The counter value indicate read/write do<p></p>
+the command collection for # of clock cycles, start from the<p></p>
+first command pushed to an empty command Q. Here are the<p></p>
+conditions that will trigger the Axi master to send out<p></p>
+command.<p></p>
+Cmd Q full or the counter count down to “0” from the programmed<p></p>
+value.<p></p>
+Set the counter to 0 will disable the command collection.</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00F58</p>
+</td>
+<td><p><a NAME="dHubReg_axiMultiIdEn">axiMultiIdEn</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubReg_axiMultiIdEn_reg">reg</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>When 0, the read channel will have AXI_ID = ROB_ID. ROB_ID is<p></p>
+dependent on which ROB the read channel is mapped to in<p></p>
+dHubChannel.ROB_MAP.ID<p></p>
+write channel will have AXI_ID = 0.<p></p>
+Write one to this register to enable multi-ID support.<p></p>
+Multi-ID when enabled will issue AXI IDs = channel number for<p></p>
+each AXI transaction.<p></p>
+Note: If set to 1, the read slave return must never interleave<p></p>
+RIDs. If slave return interleaves RID, this bit must never be<p></p>
+set to 1.<p></p>
+end dHubReg</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="dHubReg_RSVDxF58_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [1311:0]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>1312</p>
+</td>
+<td><p><a NAME="dHubReg_RSVDxF5C"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="dHubCmd2D"><p></p>
+<a HREF="#dHub">dHubCmd2D</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>dHubCmd2D</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="dHubCmd2D_MEM">MEM</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="dHubCmd2D_MEM_addr">addr</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>DRAM data address of the 2D buffer, in bytes.</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00004</p>
+</td>
+<td><p><a NAME="dHubCmd2D_DESC">DESC</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="dHubCmd2D_DESC_stride">stride</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Line stride size in bytes</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [28:16]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>13</p>
+</td>
+<td><p><a NAME="dHubCmd2D_DESC_numLine">numLine</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of lines in buffer. Size of 0 is forbidden.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [30:29]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>2</p>
+</td>
+<td><p><a NAME="dHubCmd2D_DESC_hdrLoop">hdrLoop</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Size of line-loop for choosing dHubCmdHDR<p></p>
+0 is treated as 4</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:31]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd2D_DESC_interrupt">interrupt</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>1: raise interrupt upon whole 2D command finish.<p></p>
+1: set the last 1D command interrupt bit.<p></p>
+0 : use the default 1D command interrupt bit.</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00008</p>
+</td>
+<td><p><a NAME="dHubCmd2D_START">START</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd2D_START_EN">EN</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write 1 to enable the channel; 0 to pause the channel</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="dHubCmd2D_RSVDx8_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0000C</p>
+</td>
+<td><p><a NAME="dHubCmd2D_CLEAR">CLEAR</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd2D_CLEAR_EN">EN</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write anything to reset the 2D engine.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="dHubCmd2D_RSVDxC_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00010</p>
+</td>
+<td><p><a NAME="dHubCmd2D_"><p></p>
+</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#dHubCmdHDR">$dHubCmdHDR</a></p>
+</td>
+<td><p><a NAME="dHubCmd2D_HDR">HDR</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p>[4]</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Headers used in generating dHubCmd for each line in looping<p></p>
+order, loop size (1,2,3,4) specified by DESC_hdrLoop<p></p>
+end dHubCmd2D</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="dHubCmd2ND"><p></p>
+<a HREF="#dHub">dHubCmd2ND</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>dHubCmd2ND</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_MEM">MEM</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_MEM_addr">addr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>DRAM data address of the 2D buffer, in bytes.</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00004</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_DESC">DESC</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_DESC_burst">burst</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of bytes to transfer per step.<p></p>
+Value of 0 is invalid and treated as 1<p></p>
+Equivalent to dHubCmdHDR.size</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [20:16]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>5</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_DESC_chkSemId">chkSemId</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: Semaphore check is disabled<p></p>
+ID: ID of semaphore to check for the first command sent out by<p></p>
+2ND engine</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [25:21]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>5</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_DESC_updSemId">updSemId</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: Semaphore update is disabled<p></p>
+ID: ID of semaphore to update for the last command sent out by<p></p>
+2ND engine</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [26:26]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_DESC_interrupt">interrupt</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>1: raise interrupt upon whole 2D command finish.<p></p>
+0 : no interrupt<p></p>
+Equivalent to setting dHubCmdHDR.interrupt on the last 2D<p></p>
+command.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [27:27]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_DESC_ovrdQos">ovrdQos</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Follows the definition of dHubCmdHDR.ovrdQos</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [28:28]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_DESC_disSem">disSem</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Follows the definition of dHubCmdHdr.disSem</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [29:29]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_DESC_qosSel">qosSel</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Follows the definition of dHubCmdHdr.qosSel</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:30]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>2</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_RSVDx4_b30"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00008</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_DESC_1D_ST">DESC_1D_ST</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_DESC_1D_ST_step">step</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of bytes to step per address.<p></p>
+Signed 24-bit 2's complement number<p></p>
+-8M to +8M<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_RSVDx8_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0000C</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_DESC_1D_SZ">DESC_1D_SZ</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_DESC_1D_SZ_size">size</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of steps per dimension<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_RSVDxC_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00010</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_DESC_2D_ST">DESC_2D_ST</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_DESC_2D_ST_step">step</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of bytes to step per address.<p></p>
+Signed 24-bit 2's complement number<p></p>
+-8M to +8M<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_RSVDx10_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00014</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_DESC_2D_SZ">DESC_2D_SZ</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_DESC_2D_SZ_size">size</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of steps per dimension<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_RSVDx14_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00018</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_START">START</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_START_EN">EN</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write 1 to enable the channel. Will step through full 2D buffer<p></p>
+till done (!busy)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_RSVDx18_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0001C</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_CLEAR">CLEAR</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_CLEAR_EN">EN</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write anything to reset the 2D engine.<p></p>
+end dHubCmd2ND</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="dHubCmd2ND_RSVDx1C_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="dHubCmd3ND"><p></p>
+<a HREF="#dHub">dHubCmd3ND</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>dHubCmd3ND</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_MEM">MEM</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_MEM_addr">addr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>DRAM data address of the 3D buffer, in bytes.</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00004</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC">DESC</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_burst">burst</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of bytes to transfer per step.<p></p>
+Value of 0 is invalid and treated as 1<p></p>
+Equivalent to dHubCmdHDR.size</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [20:16]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>5</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_chkSemId">chkSemId</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: Semaphore check is disabled<p></p>
+ID: ID of semaphore to check for the first command sent out by<p></p>
+2ND engine</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [25:21]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>5</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_updSemId">updSemId</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: Semaphore update is disabled<p></p>
+ID: ID of semaphore to update for the last command sent out by<p></p>
+2ND engine</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [26:26]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_interrupt">interrupt</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>1: raise interrupt upon whole 3D command finish.<p></p>
+0 : no interrupt<p></p>
+Equivalent to setting dHubCmdHDR.interrupt on the last 2D<p></p>
+command.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [27:27]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_ovrdQos">ovrdQos</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Follows the definition of dHubCmdHDR.ovrdQos</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [28:28]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_disSem">disSem</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Follows the definition of dHubCmdHdr.disSem</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [29:29]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_qosSel">qosSel</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Follows the definition of dHubCmdHdr.qosSel</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:30]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>2</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_RSVDx4_b30"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00008</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_1D_ST">DESC_1D_ST</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_1D_ST_step">step</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of bytes to step per address.<p></p>
+Signed 24-bit 2's complement number<p></p>
+-8M to +8M<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_RSVDx8_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0000C</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_1D_SZ">DESC_1D_SZ</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_1D_SZ_size">size</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of steps per dimension<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_RSVDxC_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00010</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_2D_ST">DESC_2D_ST</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_2D_ST_step">step</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of bytes to step per address.<p></p>
+Signed 24-bit 2's complement number<p></p>
+-8M to +8M<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_RSVDx10_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00014</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_2D_SZ">DESC_2D_SZ</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_2D_SZ_size">size</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of steps per dimension<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_RSVDx14_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00018</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_3D_ST">DESC_3D_ST</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_3D_ST_step">step</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of bytes to step per address.<p></p>
+Signed 24-bit 2's complement number<p></p>
+-8M to +8M<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_RSVDx18_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0001C</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_3D_SZ">DESC_3D_SZ</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_DESC_3D_SZ_size">size</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of steps per dimension<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_RSVDx1C_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00020</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_START">START</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_START_EN">EN</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write 1 to enable the channel. Will step through full 3D buffer<p></p>
+till done (!busy)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_RSVDx20_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00024</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_CLEAR">CLEAR</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_CLEAR_EN">EN</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write anything to reset the 3D engine.<p></p>
+end dHubCmd3ND</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="dHubCmd3ND_RSVDx24_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="dHubCmd4ND"><p></p>
+<a HREF="#dHub">dHubCmd4ND</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>dHubCmd4ND</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_MEM">MEM</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>32</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_MEM_addr">addr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>DRAM data address of the 4D buffer, in bytes.</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00004</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC">DESC</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_burst">burst</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of bytes to transfer per step.<p></p>
+Value of 0 is invalid and treated as 1<p></p>
+Equivalent to dHubCmdHDR.size</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [20:16]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>5</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_chkSemId">chkSemId</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: Semaphore check is disabled<p></p>
+ID: ID of semaphore to check for the first command sent out by<p></p>
+2ND engine</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [25:21]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>5</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_updSemId">updSemId</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>0: Semaphore update is disabled<p></p>
+ID: ID of semaphore to update for the last command sent out by<p></p>
+2ND engine</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [26:26]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_interrupt">interrupt</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>1: raise interrupt upon whole 4D command finish.<p></p>
+0 : no interrupt<p></p>
+Equivalent to setting dHubCmdHDR.interrupt on the last 4D<p></p>
+command.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [27:27]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_ovrdQos">ovrdQos</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Follows the definition of dHubCmdHDR.ovrdQos</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [28:28]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_disSem">disSem</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Follows the definition of dHubCmdHdr.disSem</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [29:29]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_qosSel">qosSel</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Follows the definition of dHubCmdHdr.qosSel</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:30]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>2</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_RSVDx4_b30"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00008</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_1D_ST">DESC_1D_ST</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_1D_ST_step">step</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of bytes to step per address.<p></p>
+Signed 24-bit 2's complement number<p></p>
+-8M to +8M<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_RSVDx8_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0000C</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_1D_SZ">DESC_1D_SZ</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_1D_SZ_size">size</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of steps per dimension<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_RSVDxC_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00010</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_2D_ST">DESC_2D_ST</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_2D_ST_step">step</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of bytes to step per address.<p></p>
+Signed 24-bit 2's complement number<p></p>
+-8M to +8M<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_RSVDx10_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00014</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_2D_SZ">DESC_2D_SZ</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_2D_SZ_size">size</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of steps per dimension<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_RSVDx14_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00018</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_3D_ST">DESC_3D_ST</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_3D_ST_step">step</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of bytes to step per address.<p></p>
+Signed 24-bit 2's complement number<p></p>
+-8M to +8M<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_RSVDx18_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0001C</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_3D_SZ">DESC_3D_SZ</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_3D_SZ_size">size</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of steps per dimension<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_RSVDx1C_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00020</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_4D_ST">DESC_4D_ST</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_4D_ST_step">step</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of bytes to step per address.<p></p>
+Signed 24-bit 2's complement number<p></p>
+-8M to +8M<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_RSVDx20_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00024</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_4D_SZ">DESC_4D_SZ</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [23:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>24</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_DESC_4D_SZ_size">size</a></p>
+</td>
+<td><p>0x1</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Number of steps per dimension<p></p>
+Value of 0 is invalid and treated as 1</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:24]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>8</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_RSVDx24_b24"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00028</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_START">START</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_START_EN">EN</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write 1 to enable the channel. Will step through full 4D buffer<p></p>
+till done (!busy)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_RSVDx28_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x0002C</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_CLEAR">CLEAR</a></p>
+</td>
+<td COLSPAN="5"><p>(W-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [0:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_CLEAR_EN">EN</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Write anything to reset the 4D engine.<p></p>
+end dHubCmd4ND</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:1]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>31</p>
+</td>
+<td><p><a NAME="dHubCmd4ND_RSVDx2C_b1"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="dHubQuery"><p></p>
+<a HREF="#dHub">dHubQuery</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>dHubQuery</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="dHubQuery_RESP">RESP</a></p>
+</td>
+<td COLSPAN="5"><p>(R-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="dHubQuery_RESP_ST">ST</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Dhub channel state machine status.</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:16]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="dHubQuery_RSVDx0_b16"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<p><a NAME="dHubReg2D"><p></p>
+<a HREF="#dHub">dHubReg2D</a></a></p>
+<table width="100%"><tr><td COLSPAN="2"><p>Word Offset</p>
+</td>
+<td><p>Word ID</p>
+</td>
+<td><p>Type</p>
+</td>
+<td><p>Bits</p>
+</td>
+<td><p>Bit Field - Enums</p>
+</td>
+<td><p>Reset<p></p>
+Access</p>
+</td>
+<td><p>Array</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p>$INTERFACE</p>
+</td>
+<td><p>dHubReg2D</p>
+</td>
+<td><p>biu</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td COLSPAN="4"><p>(4,4)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x00000</p>
+</td>
+<td><p><a NAME="dHubReg2D_"><p></p>
+</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#dHubReg">$dHubReg</a></p>
+</td>
+<td><p><a NAME="dHubReg2D_dHub">dHub</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x01000</p>
+</td>
+<td><p><a NAME="dHubReg2D_ARR">ARR</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#dHubCmd2D">$dHubCmd2D</a></p>
+</td>
+<td><p><a NAME="dHubReg2D_Cmd2D">Cmd2D</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p>[16]</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Up-to 16 2D channels.<p></p>
+2D Channel[N] is connected to dHub.Channel[N] command queue,<p></p>
+that is, dHub.HBO.Channel[2N]<p></p>
+Note: Number of 2D channels could be less than dHub channels<p></p>
+(rest of are 1D only)</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x01200</p>
+</td>
+<td><p><a NAME="dHubReg2D_ARR_2ND">ARR_2ND</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#dHubCmd2ND">$dHubCmd2ND</a></p>
+</td>
+<td><p><a NAME="dHubReg2D_Cmd2ND">Cmd2ND</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p>[16]</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Up-to 16 2ND channels.<p></p>
+2ND Channel[N] is connected to dHub.Channel[N] command queue,<p></p>
+that is, dHub.HBO.Channel[2N]<p></p>
+Note: 2ND engines are instantiated in the same way as the old 2D<p></p>
+engine. It is allowed to have multiple 1D, 2D, 2ND, 3ND and 4ND<p></p>
+channels in a dHub. Restriction is each channel can only have<p></p>
+one type.</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x01400</p>
+</td>
+<td><p><a NAME="dHubReg2D_ARR_3ND">ARR_3ND</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#dHubCmd3ND">$dHubCmd3ND</a></p>
+</td>
+<td><p><a NAME="dHubReg2D_Cmd3ND">Cmd3ND</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p>[16]</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Up-to 16 3ND channels.<p></p>
+3ND Channel[N] is connected to dHub.Channel[N] command queue,<p></p>
+that is, dHub.HBO.Channel[2N]<p></p>
+Note: 3ND engines are instantiated in the same way as the old 2D<p></p>
+engine. It is allowed to have multiple 1D, 2D, 2ND, 3ND and 4ND<p></p>
+channels in a dHub. Restriction is each channel can only have<p></p>
+one type.</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x01680</p>
+</td>
+<td><p><a NAME="dHubReg2D_ARR_4ND">ARR_4ND</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#dHubCmd4ND">$dHubCmd4ND</a></p>
+</td>
+<td><p><a NAME="dHubReg2D_Cmd4ND">Cmd4ND</a></p>
+</td>
+<td><p>REG</p>
+</td>
+<td><p>[16]</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Up-to 16 4ND channels.<p></p>
+4ND Channel[N] is connected to dHub.Channel[N] command queue,<p></p>
+that is, dHub.HBO.Channel[2N]<p></p>
+Note: 4ND engines are instantiated in the same way as the old 2D<p></p>
+engine. It is allowed to have multiple 1D, 2D, 2ND, 3ND and 4ND<p></p>
+channels in a dHub. Restriction is each channel can only have<p></p>
+one type.</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x01980</p>
+</td>
+<td><p><a NAME="dHubReg2D_BUSY">BUSY</a></p>
+</td>
+<td COLSPAN="5"><p>(R-)</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [15:0]</p>
+</td>
+<td><p>%unsigned</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="dHubReg2D_BUSY_ST">ST</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>Per channel status<p></p>
+0: no ongoing command is being processed<p></p>
+1: channel controller is busy</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [31:16]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>16</p>
+</td>
+<td><p><a NAME="dHubReg2D_RSVDx1980_b16"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="2"><p><p></p>
+</p>
+</td>
+<td><p># [479:0]</p>
+</td>
+<td><p>%%</p>
+</td>
+<td><p>480</p>
+</td>
+<td><p><a NAME="dHubReg2D_RSVDx1984"><p></p>
+</a></p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>@</p>
+</td>
+<td><p>0x019C0</p>
+</td>
+<td><p><a NAME="dHubReg2D_"><p></p>
+</a></p>
+</td>
+<td COLSPAN="5"><p>(P)</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p><p></p>
+</p>
+</td>
+<td COLSPAN="2"><p><a HREF="#dHubQuery">$dHubQuery</a></p>
+</td>
+<td><p><a NAME="dHubReg2D_CH_ST">CH_ST</a></p>
+</td>
+<td><p>MEM</p>
+</td>
+<td><p>[16]</p>
+</td>
+</tr>
+<tr><td COLSPAN="4"><p><p></p>
+</p>
+</td>
+<td><p>*</p>
+</td>
+<td COLSPAN="3"><p>end dHubReg2D</p>
+</td>
+</tr>
+<tr><td COLSPAN="8"><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td COLSPAN="3"><p>$ENDOFINTERFACE</p>
+</td>
+<td COLSPAN="5"><p><p></p>
+</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+</body></html>

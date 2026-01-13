@@ -1,0 +1,1167 @@
+﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><meta http-equiv="Content-Type" content="text/html; charset="ISO-8859-1""><title>Register Details</title></head>
+<body>
+<h2 class="title"><a name="idp23577480"></a>Register Details</h2>
+<hr><hr><h2 class="title"><a name="H3-sect1-reg-DWC_mshc_map_DWC_mshc_phy_block"></a>DWC_mshc_phy_block Register Details</h2>
+<p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHY_CNFG"></a><span>PHY_CNFG</span></p>
+<ul><li><span>Name:</span>SD/eMMC PHY General Configuration</li><li><span>Description:</span>SD/eMMC PHY general configuration register</li><li><span>Size:</span>32 bits</li><li><span>Offset:</span>0x300</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_PHY_CNFG"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHY_CNFG_F_31_24">31:24</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHY_CNFG_F_23_20">23:20</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHY_CNFG_F_19_16">19:16</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHY_CNFG_F_15_2">15:2</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHY_CNFG_F_1">1</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHY_CNFG_F_0">0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>PAD_SN</td>
+<td>PAD_SP</td>
+<td>Rsvd</td>
+<td>PHY_PWRGOOD</td>
+<td>PHY_RSTN</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_PHY_CNFG"></a><p class="title">Table�1.�Fields for Register: PHY_CNFG</p>
+<table summary="Fields for Register: PHY_CNFG" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHY_CNFG_F_31_24"></a>31:24</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHY_CNFG_F_23_20"></a>23:20</p>
+</td>
+<td>PAD_SN</td>
+<td>R/W</td>
+<td><p>NMOS TX drive strength control. Common config for all for SD/eMMC Pads.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHY_CNFG_F_19_16"></a>19:16</p>
+</td>
+<td>PAD_SP</td>
+<td>R/W</td>
+<td><p>PMOS TX drive strength control. Common config for all for SD/eMMC Pads.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHY_CNFG_F_15_2"></a>15:2</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHY_CNFG_F_1"></a>1</p>
+</td>
+<td>PHY_PWRGOOD</td>
+<td>R</td>
+<td><p>Phy's Power Good status is captured here. Ensure this is '1' before stating transactions.</p>
+<p><span>Value After Reset:</span>0x0</p>
+<p><span>Reset Mask:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHY_CNFG_F_0"></a>0</p>
+</td>
+<td>PHY_RSTN</td>
+<td>R/W</td>
+<td><p>Active-Low reset control for PHY, write '0' to reset PHY, Write '1' to deassert reset.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CMDPAD_CNFG"></a><span>CMDPAD_CNFG</span></p>
+<ul><li><span>Name:</span>SD/eMMC PHY CMD/RESP PAD Setting</li><li><span>Description:</span>SD/eMMC PHY's Command/Response PAD settings are controlled here</li><li><span>Size:</span>16 bits</li><li><span>Offset:</span>0x304</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_CMDPAD_CNFG"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CMDPAD_CNFG_F_15_13">15:13</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CMDPAD_CNFG_F_12_9">12:9</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CMDPAD_CNFG_F_8_5">8:5</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CMDPAD_CNFG_F_4_3">4:3</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CMDPAD_CNFG_F_2_0">2:0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>TXSLEW_CTRL_N</td>
+<td>TXSLEW_CTRL_P</td>
+<td>WEAKPULL_EN</td>
+<td>RXSEL</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_CMDPAD_CNFG"></a><p class="title">Table�2.�Fields for Register: CMDPAD_CNFG</p>
+<table summary="Fields for Register: CMDPAD_CNFG" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CMDPAD_CNFG_F_15_13"></a>15:13</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CMDPAD_CNFG_F_12_9"></a>12:9</p>
+</td>
+<td>TXSLEW_CTRL_N</td>
+<td>R/W</td>
+<td><p>Slew control for N-Type CMD Pad's TX</p>
+<p><span>Value After Reset:</span>0x2</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CMDPAD_CNFG_F_8_5"></a>8:5</p>
+</td>
+<td>TXSLEW_CTRL_P</td>
+<td>R/W</td>
+<td><p>Slew control for P-Type CMD Pad's TX</p>
+<p><span>Value After Reset:</span>0x2</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CMDPAD_CNFG_F_4_3"></a>4:3</p>
+</td>
+<td>WEAKPULL_EN</td>
+<td>R/W</td>
+<td><p>Pull-up/Pull-down enable control for CMD PAD</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (DISABLED): Pull-up and pull-down functionality disabled</li><li>0x1 (PULLUP): Weak pull up enabled</li><li>0x2 (PULLDOWN): Weak pull down enabled</li><li>0x3 (ILLEGAL): Should not be used</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CMDPAD_CNFG_F_2_0"></a>2:0</p>
+</td>
+<td>RXSEL</td>
+<td>R/W</td>
+<td><p>Receiver type select for PAD. Controls the RXSEL value of SD/eMMC PHY CMD PAD</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DATPAD_CNFG"></a><span>DATPAD_CNFG</span></p>
+<ul><li><span>Name:</span>SD/eMMC PHY Data PAD Setting</li><li><span>Description:</span>SD/eMMC PHY's Data PAD settings are controlled here. common settings for all data pads</li><li><span>Size:</span>16 bits</li><li><span>Offset:</span>0x306</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_DATPAD_CNFG"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DATPAD_CNFG_F_15_13">15:13</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DATPAD_CNFG_F_12_9">12:9</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DATPAD_CNFG_F_8_5">8:5</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DATPAD_CNFG_F_4_3">4:3</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DATPAD_CNFG_F_2_0">2:0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>TXSLEW_CTRL_N</td>
+<td>TXSLEW_CTRL_P</td>
+<td>WEAKPULL_EN</td>
+<td>RXSEL</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_DATPAD_CNFG"></a><p class="title">Table�3.�Fields for Register: DATPAD_CNFG</p>
+<table summary="Fields for Register: DATPAD_CNFG" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DATPAD_CNFG_F_15_13"></a>15:13</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DATPAD_CNFG_F_12_9"></a>12:9</p>
+</td>
+<td>TXSLEW_CTRL_N</td>
+<td>R/W</td>
+<td><p>Slew control for N-Type DATA Pad's TX</p>
+<p><span>Value After Reset:</span>0x2</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DATPAD_CNFG_F_8_5"></a>8:5</p>
+</td>
+<td>TXSLEW_CTRL_P</td>
+<td>R/W</td>
+<td><p>Slew control for P-Type DATA Pad's TX</p>
+<p><span>Value After Reset:</span>0x2</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DATPAD_CNFG_F_4_3"></a>4:3</p>
+</td>
+<td>WEAKPULL_EN</td>
+<td>R/W</td>
+<td><p>Pull-up/Pull-down enable control for DATA PADs</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (DISABLED): Pull-up and pull-down functionality disabled</li><li>0x1 (PULLUP): Weak pull up enabled</li><li>0x2 (PULLDOWN): Weak pull down enabled</li><li>0x3 (ILLEGAL): Should not be used</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DATPAD_CNFG_F_2_0"></a>2:0</p>
+</td>
+<td>RXSEL</td>
+<td>R/W</td>
+<td><p>Receiver type select for PAD. Controls the RXSEL value of SD/eMMC PHY DATA PADs</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CLKPAD_CNFG"></a><span>CLKPAD_CNFG</span></p>
+<ul><li><span>Name:</span>SD/eMMC PHY Clock PAD Setting</li><li><span>Description:</span>SD/eMMC PHY's CLK PAD settings are controlled here.</li><li><span>Size:</span>16 bits</li><li><span>Offset:</span>0x308</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_CLKPAD_CNFG"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CLKPAD_CNFG_F_15_13">15:13</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CLKPAD_CNFG_F_12_9">12:9</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CLKPAD_CNFG_F_8_5">8:5</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CLKPAD_CNFG_F_4_3">4:3</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CLKPAD_CNFG_F_2_0">2:0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>TXSLEW_CTRL_N</td>
+<td>TXSLEW_CTRL_P</td>
+<td>WEAKPULL_EN</td>
+<td>RXSEL</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_CLKPAD_CNFG"></a><p class="title">Table�4.�Fields for Register: CLKPAD_CNFG</p>
+<table summary="Fields for Register: CLKPAD_CNFG" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CLKPAD_CNFG_F_15_13"></a>15:13</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CLKPAD_CNFG_F_12_9"></a>12:9</p>
+</td>
+<td>TXSLEW_CTRL_N</td>
+<td>R/W</td>
+<td><p>Slew control for N-Type CLK Pad's TX</p>
+<p><span>Value After Reset:</span>0x2</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CLKPAD_CNFG_F_8_5"></a>8:5</p>
+</td>
+<td>TXSLEW_CTRL_P</td>
+<td>R/W</td>
+<td><p>Slew control for P-Type CLK Pad's TX</p>
+<p><span>Value After Reset:</span>0x2</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CLKPAD_CNFG_F_4_3"></a>4:3</p>
+</td>
+<td>WEAKPULL_EN</td>
+<td>R/W</td>
+<td><p>Pull-up/Pull-down enable control for CLK PAD</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (DISABLED): Pull-up and pull-down functionality disabled</li><li>0x1 (PULLUP): Weak pull up enabled</li><li>0x2 (PULLDOWN): Weak pull down enabled</li><li>0x3 (ILLEGAL): Should not be used</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_CLKPAD_CNFG_F_2_0"></a>2:0</p>
+</td>
+<td>RXSEL</td>
+<td>R/W</td>
+<td><p>Receiver type select for PAD. Controls the RXSEL value of SD/eMMC PHY CLK PAD</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_STBPAD_CNFG"></a><span>STBPAD_CNFG</span></p>
+<ul><li><span>Name:</span>SD/eMMC PHY Strobe PAD Setting</li><li><span>Description:</span>SD/eMMC PHY's Strobe PAD settings are controlled here.</li><li><span>Size:</span>16 bits</li><li><span>Offset:</span>0x30a</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_STBPAD_CNFG"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_STBPAD_CNFG_F_15_13">15:13</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_STBPAD_CNFG_F_12_9">12:9</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_STBPAD_CNFG_F_8_5">8:5</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_STBPAD_CNFG_F_4_3">4:3</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_STBPAD_CNFG_F_2_0">2:0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>TXSLEW_CTRL_N</td>
+<td>TXSLEW_CTRL_P</td>
+<td>WEAKPULL_EN</td>
+<td>RXSEL</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_STBPAD_CNFG"></a><p class="title">Table�5.�Fields for Register: STBPAD_CNFG</p>
+<table summary="Fields for Register: STBPAD_CNFG" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_STBPAD_CNFG_F_15_13"></a>15:13</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_STBPAD_CNFG_F_12_9"></a>12:9</p>
+</td>
+<td>TXSLEW_CTRL_N</td>
+<td>R/W</td>
+<td><p>Slew control for N-Type Strobe Pad's TX</p>
+<p><span>Value After Reset:</span>0x2</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_STBPAD_CNFG_F_8_5"></a>8:5</p>
+</td>
+<td>TXSLEW_CTRL_P</td>
+<td>R/W</td>
+<td><p>Slew control for P-Type Strobe Pad's TX</p>
+<p><span>Value After Reset:</span>0x2</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_STBPAD_CNFG_F_4_3"></a>4:3</p>
+</td>
+<td>WEAKPULL_EN</td>
+<td>R/W</td>
+<td><p>Pull-up/Pull-down enable control for STROBE PAD</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (DISABLED): Pull-up and pull-down functionality disabled</li><li>0x1 (PULLUP): Weak pull up enabled</li><li>0x2 (PULLDOWN): Weak pull down enabled</li><li>0x3 (ILLEGAL): Should not be used</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_STBPAD_CNFG_F_2_0"></a>2:0</p>
+</td>
+<td>RXSEL</td>
+<td>R/W</td>
+<td><p>Receiver type select for PAD. Controls the RXSEL value of SD/eMMC PHY STROBE PAD</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_RSTNPAD_CNFG"></a><span>RSTNPAD_CNFG</span></p>
+<ul><li><span>Name:</span>SD/eMMC PHY RSTN PAD Setting</li><li><span>Description:</span>SD/eMMC PHY's RSTN PAD settings are controlled here.</li><li><span>Size:</span>16 bits</li><li><span>Offset:</span>0x30c</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_RSTNPAD_CNFG"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_RSTNPAD_CNFG_F_15_13">15:13</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_RSTNPAD_CNFG_F_12_9">12:9</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_RSTNPAD_CNFG_F_8_5">8:5</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_RSTNPAD_CNFG_F_4_3">4:3</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_RSTNPAD_CNFG_F_2_0">2:0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>TXSLEW_CTRL_N</td>
+<td>TXSLEW_CTRL_P</td>
+<td>WEAKPULL_EN</td>
+<td>RXSEL</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_RSTNPAD_CNFG"></a><p class="title">Table�6.�Fields for Register: RSTNPAD_CNFG</p>
+<table summary="Fields for Register: RSTNPAD_CNFG" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_RSTNPAD_CNFG_F_15_13"></a>15:13</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_RSTNPAD_CNFG_F_12_9"></a>12:9</p>
+</td>
+<td>TXSLEW_CTRL_N</td>
+<td>R/W</td>
+<td><p>Slew control for N-Type RST_N Pad's TX</p>
+<p><span>Value After Reset:</span>0x2</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_RSTNPAD_CNFG_F_8_5"></a>8:5</p>
+</td>
+<td>TXSLEW_CTRL_P</td>
+<td>R/W</td>
+<td><p>Slew control for P-Type RST_N Pad's TX</p>
+<p><span>Value After Reset:</span>0x2</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_RSTNPAD_CNFG_F_4_3"></a>4:3</p>
+</td>
+<td>WEAKPULL_EN</td>
+<td>R/W</td>
+<td><p>Pull-up/Pull-down enable control for RST_N PAD(s)</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (DISABLED): Pull-up and pull-down functionality disabled</li><li>0x1 (PULLUP): Weak pull up enabled</li><li>0x2 (PULLDOWN): Weak pull down enabled</li><li>0x3 (ILLEGAL): Should not be used</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_RSTNPAD_CNFG_F_2_0"></a>2:0</p>
+</td>
+<td>RXSEL</td>
+<td>R/W</td>
+<td><p>Receiver type select for PAD. Controls the RXSEL value of SD/eMMC PHY RST_N PAD(s)</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_CNFG"></a><span>PADTEST_CNFG</span></p>
+<ul><li><span>Name:</span>SD/eMMC PHY PAD TEST interface Setting</li><li><span>Description:</span>PAD TEST Path and direction control</li><li><span>Size:</span>16 bits</li><li><span>Offset:</span>0x30e</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_CNFG"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_CNFG_F_15_4">15:4</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_CNFG_F_3">3</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_CNFG_F_2">2</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_CNFG_F_1">1</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_CNFG_F_0">0</a></td>
+</tr>
+<tr><td>TEST_OE</td>
+<td>RSVD_1</td>
+<td>TEST_CLK_EN</td>
+<td>TEST_DLY_LINE_EN</td>
+<td>TESTMODE_EN</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_CNFG"></a><p class="title">Table�7.�Fields for Register: PADTEST_CNFG</p>
+<table summary="Fields for Register: PADTEST_CNFG" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_CNFG_F_15_4"></a>15:4</p>
+</td>
+<td>TEST_OE</td>
+<td>R/W</td>
+<td><p>test interface OE control. Drives PHY's itest_oe inputs.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_CNFG_F_3"></a>3</p>
+</td>
+<td>RSVD_1</td>
+<td>R</td>
+<td><p>RSVD1 field is reserved</p>
+<p><span>Reserved Field:</span>Yes</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_CNFG_F_2"></a>2</p>
+</td>
+<td>TEST_CLK_EN</td>
+<td>R/W</td>
+<td><p>. While updating delay codes during testmode, this signal is used to gate the test clock. Functional interface is disabled.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (TEST_CLK_GATED): Gate the test clock</li><li>0x1 (TEST_CLK_ENABLED): Test clock is enabled</li></ul><p></p>
+<p><span>Value After Reset:</span>0x1</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_CNFG_F_1"></a>1</p>
+</td>
+<td>TEST_DLY_LINE_EN</td>
+<td>R/W</td>
+<td><p>Test enable for delay line testing
+This signal enables the testing of delay lines with the test clock.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (TEST_DLY_LINE_DIS): Testing of Delay line disabled</li><li>0x1 (TEST_DLY_LINE_EN): Testing of delay line enabled</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_CNFG_F_0"></a>0</p>
+</td>
+<td>TESTMODE_EN</td>
+<td>R/W</td>
+<td><p>enables test mode interface for all PADS. Functional interface is disabled.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x0 (PAD_FUNCMODE): PAD's functional mode I/F is active</li><li>0x1 (PAD_TESTMODE): PAD's test mode interface is active</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_OUT"></a><span>PADTEST_OUT</span></p>
+<ul><li><span>Name:</span>SD/eMMC PHY PAD TEST Data out value</li><li><span>Description:</span>PAD TEST Path Data out, Drives itest_a input of SD/eMMC PHY</li><li><span>Size:</span>16 bits</li><li><span>Offset:</span>0x310</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_OUT"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_OUT_F_15_12">15:12</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_OUT_F_11_0">11:0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>TESTDATA_OUT</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_OUT"></a><p class="title">Table�8.�Fields for Register: PADTEST_OUT</p>
+<table summary="Fields for Register: PADTEST_OUT" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_OUT_F_15_12"></a>15:12</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_OUT_F_11_0"></a>11:0</p>
+</td>
+<td>TESTDATA_OUT</td>
+<td>R/W</td>
+<td><p>Data written here is reflected on corresponding itest_a. Individual bits are mapped to corresponding itest_a inputs of the PHY</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_IN"></a><span>PADTEST_IN</span></p>
+<ul><li><span>Name:</span>SD/eMMC PHY PAD TEST Data in value</li><li><span>Description:</span>PAD TEST Path Data in, reflects value of otest_y output of SD/eMMC PHY</li><li><span>Size:</span>16 bits</li><li><span>Offset:</span>0x312</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_IN"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_IN_F_15_12">15:12</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_IN_F_11_0">11:0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>TESTDATA_IN</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_IN"></a><p class="title">Table�9.�Fields for Register: PADTEST_IN</p>
+<table summary="Fields for Register: PADTEST_IN" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_IN_F_15_12"></a>15:12</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PADTEST_IN_F_11_0"></a>11:0</p>
+</td>
+<td>TESTDATA_IN</td>
+<td>R</td>
+<td><p>individual bits here capture data available on corresponding otest_y output. should be used for DC test and low freq data patterns.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PRBS_CNFG"></a><span>PRBS_CNFG</span></p>
+<ul><li><span>Name:</span>Controller PRBS Config register</li><li><span>Description:</span>Register to configure PRBS engine</li><li><span>Size:</span>16 bits</li><li><span>Offset:</span>0x318</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_PRBS_CNFG"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PRBS_CNFG_F_15_0">15:0</a></td>
+</tr>
+<tr><td>INIT_SEED</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_PRBS_CNFG"></a><p class="title">Table�10.�Fields for Register: PRBS_CNFG</p>
+<table summary="Fields for Register: PRBS_CNFG" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PRBS_CNFG_F_15_0"></a>15:0</p>
+</td>
+<td>INIT_SEED</td>
+<td>R/W</td>
+<td><p>Value programmed here is used as SEED for PRBS engine</p>
+<p><span>Value After Reset:</span>0xffff</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHYLPBK_CNFG"></a><span>PHYLPBK_CNFG</span></p>
+<ul><li><span>Name:</span>Loopback Config register</li><li><span>Description:</span>Register to setup loopback mode</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x31a</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_PHYLPBK_CNFG"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHYLPBK_CNFG_F_7_2">7:2</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHYLPBK_CNFG_F_1">1</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHYLPBK_CNFG_F_0">0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>OUT_EN_PHYLPBK_MODE</td>
+<td>PHYLPBK_EN</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_PHYLPBK_CNFG"></a><p class="title">Table�11.�Fields for Register: PHYLPBK_CNFG</p>
+<table summary="Fields for Register: PHYLPBK_CNFG" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHYLPBK_CNFG_F_7_2"></a>7:2</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHYLPBK_CNFG_F_1"></a>1</p>
+</td>
+<td>OUT_EN_PHYLPBK_MODE</td>
+<td>R/W</td>
+<td><p>CMD/DATA output enable in PHY loopback mode</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (OUTPUT_EN): CMD/DATA output is enable PHY Loopback mode</li><li>0x0 (OUTPUT_DIS): CMD/DATA output is disable PHY Loopback mode</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_PHYLPBK_CNFG_F_0"></a>0</p>
+</td>
+<td>PHYLPBK_EN</td>
+<td>R/W</td>
+<td><p>PHY Local loop back mode is enable</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (PHYLPBK_MODE_EN): Controller is now in PHY Loopback mode</li><li>0x0 (PHYLPBK_MODE_DIS): Controller is not in PHY loopback mode</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_COMMDL_CNFG"></a><span>COMMDL_CNFG</span></p>
+<ul><li><span>Name:</span>Common DelayLine config settings register</li><li><span>Description:</span>Config register to settings common to all DelayLines used in PHY</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x31c</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_COMMDL_CNFG"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_COMMDL_CNFG_F_7_2">7:2</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_COMMDL_CNFG_F_1">1</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_COMMDL_CNFG_F_0">0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>DLOUT_EN</td>
+<td>DLSTEP_SEL</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_COMMDL_CNFG"></a><p class="title">Table�12.�Fields for Register: COMMDL_CNFG</p>
+<table summary="Fields for Register: COMMDL_CNFG" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_COMMDL_CNFG_F_7_2"></a>7:2</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_COMMDL_CNFG_F_1"></a>1</p>
+</td>
+<td>DLOUT_EN</td>
+<td>R/W</td>
+<td><p>When '1' DL outputs can be sampled on PADs. Drives idlout_en for all PADs</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (DL_OUTEN): DelayLine outputs on PAD enabled</li><li>0x0 (DL_OUTDIS): DelayLine outputs on PAD disabled</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_COMMDL_CNFG_F_0"></a>0</p>
+</td>
+<td>DLSTEP_SEL</td>
+<td>R/W</td>
+<td><p>DelayLine's per step delay selection, Drives PHY's idl_step input</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_CNFG"></a><span>SDCLKDL_CNFG</span></p>
+<ul><li><span>Name:</span>SD/eMMC DelayLine settings</li><li><span>Description:</span>Settings for SD/eMMC CLK DelayLine.</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x31d</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_CNFG"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_CNFG_F_7_5">7:5</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_CNFG_F_4">4</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_CNFG_F_3_2">3:2</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_CNFG_F_1">1</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_CNFG_F_0">0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>UPDATE_DC</td>
+<td>INPSEL_CNFG</td>
+<td>BYPASS_EN</td>
+<td>EXTDLY_EN</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_CNFG"></a><p class="title">Table�13.�Fields for Register: SDCLKDL_CNFG</p>
+<table summary="Fields for Register: SDCLKDL_CNFG" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_CNFG_F_7_5"></a>7:5</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_CNFG_F_4"></a>4</p>
+</td>
+<td>UPDATE_DC</td>
+<td>R/W</td>
+<td><p>Prepares DealyLine for code update when '1'. Its recommended that this bit is 1 when SDCLKDL_DC is being written. Ensure this is '0' when not updating code.<span><em><span>Note</span></em></span>: Turn-off card clock using CLK_CTRL_R.SD_CLK_EN before programing this field.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (BYPASSMODE): output of DelayLine is DelayLine output active</li><li>0x0 (DLMODE): DelayLine output is enabled</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_CNFG_F_3_2"></a>3:2</p>
+</td>
+<td>INPSEL_CNFG</td>
+<td>R/W</td>
+<td><p>Drives SD/eMMC CLK DelayLine's config input. Value here selects the input source to DelayLine</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_CNFG_F_1"></a>1</p>
+</td>
+<td>BYPASS_EN</td>
+<td>R/W</td>
+<td><p>Drives SD/eMMC CLK DelayLine's bypassen input</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (BYPASSMODE): DelayLine is bypass mode</li><li>0x0 (DLMODE): Delay line active mode</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_CNFG_F_0"></a>0</p>
+</td>
+<td>EXTDLY_EN</td>
+<td>R/W</td>
+<td><p>Drives SD/eMMC CLK DelayLine's extdlyen input</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (EXTDL_MODE): DelayLine works with extended delay range setting</li><li>0x0 (DEF_MODE): Delay line default range setting</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_DC"></a><span>SDCLKDL_DC</span></p>
+<ul><li><span>Name:</span>SD/eMMC DelayLine Delay code setting</li><li><span>Description:</span>SD/eMMC CLK DelayLine Delay Code value</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x31e</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_DC"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_DC_F_7">7</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_DC_F_6_0">6:0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>CCKDL_DC</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_DC"></a><p class="title">Table�14.�Fields for Register: SDCLKDL_DC</p>
+<table summary="Fields for Register: SDCLKDL_DC" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_DC_F_7"></a>7</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SDCLKDL_DC_F_6_0"></a>6:0</p>
+</td>
+<td>CCKDL_DC</td>
+<td>R/W</td>
+<td><p>Drives SD/eMMC CLK DelayLine's Delay Code input.
+Value here Selects the number of active stages in the card clock delay line.<span><em><span>Note</span></em></span>: Turn-off card clock using CLK_CTRL_R.SD_CLK_EN before programing this field.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SMPLDL_CNFG"></a><span>SMPLDL_CNFG</span></p>
+<ul><li><span>Name:</span>SD/eMMC cclk_rx DelayLine settings</li><li><span>Description:</span>SD/eMMC cclk_rx DelayLine configuration settings</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x320</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_SMPLDL_CNFG"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SMPLDL_CNFG_F_7_5">7:5</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SMPLDL_CNFG_F_4">4</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SMPLDL_CNFG_F_3_2">3:2</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SMPLDL_CNFG_F_1">1</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SMPLDL_CNFG_F_0">0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>INPSEL_OVERRIDE</td>
+<td>INPSEL_CNFG</td>
+<td>BYPASS_EN</td>
+<td>EXTDLY_EN</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_SMPLDL_CNFG"></a><p class="title">Table�15.�Fields for Register: SMPLDL_CNFG</p>
+<table summary="Fields for Register: SMPLDL_CNFG" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SMPLDL_CNFG_F_7_5"></a>7:5</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SMPLDL_CNFG_F_4"></a>4</p>
+</td>
+<td>INPSEL_OVERRIDE</td>
+<td>R/W</td>
+<td><p>PHY's Sampling delay line config is controlled by controller using sample_cclk_sel,
+this signal overrides sample_cclk_sel such that INPSEL_CFG field directly control's PHY's config input.</p>
+<ul><li>0x0 : Controller logic drive Sampling delay line config.</li><li>0x1 : SMPLDL_CNFG.INPSEL_CNFG drives sampling delay line config.</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SMPLDL_CNFG_F_3_2"></a>3:2</p>
+</td>
+<td>INPSEL_CNFG</td>
+<td>R/W</td>
+<td><p>Drives CCLK_RX DelayLine's config input. Value here selects the input source to DelayLine</p>
+<p><span>Value After Reset:</span>0x3</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SMPLDL_CNFG_F_1"></a>1</p>
+</td>
+<td>BYPASS_EN</td>
+<td>R/W</td>
+<td><p>Drives CCLK_RX DelayLine's bypassen input</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (BYPASSMODE): DelayLine is bypass mode</li><li>0x0 (DLMODE): Delay line active mode</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_SMPLDL_CNFG_F_0"></a>0</p>
+</td>
+<td>EXTDLY_EN</td>
+<td>R/W</td>
+<td><p>Drives CCLK_RX DelayLine's extdlyen input</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (EXTDL_MODE): DelayLine works with extended delay range setting</li><li>0x0 (DEF_MODE): Delay line default range setting</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_ATDL_CNFG"></a><span>ATDL_CNFG</span></p>
+<ul><li><span>Name:</span>SD/eMMC drift_cclk_rx DelayLine configuration settings</li><li><span>Description:</span>SD/eMMC drift_cclk_rx DelayLine configuration settings</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x321</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_ATDL_CNFG"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_ATDL_CNFG_F_7_4">7:4</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_ATDL_CNFG_F_3_2">3:2</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_ATDL_CNFG_F_1">1</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_ATDL_CNFG_F_0">0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>INPSEL_CNFG</td>
+<td>BYPASS_EN</td>
+<td>EXTDLY_EN</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_ATDL_CNFG"></a><p class="title">Table�16.�Fields for Register: ATDL_CNFG</p>
+<table summary="Fields for Register: ATDL_CNFG" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_ATDL_CNFG_F_7_4"></a>7:4</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_ATDL_CNFG_F_3_2"></a>3:2</p>
+</td>
+<td>INPSEL_CNFG</td>
+<td>R/W</td>
+<td><p>Drives drift_cclk_rx DelayLine's config input. Value here selects the input source to DelayLine</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_ATDL_CNFG_F_1"></a>1</p>
+</td>
+<td>BYPASS_EN</td>
+<td>R/W</td>
+<td><p>Drives drift_cclk_rx DelayLine's bypassen input</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (BYPASSMODE): DelayLine is bypass mode</li><li>0x0 (DLMODE): Delay line active mode</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_ATDL_CNFG_F_0"></a>0</p>
+</td>
+<td>EXTDLY_EN</td>
+<td>R/W</td>
+<td><p>Drives drift_cclk_rx DelayLine's extdlyen input</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (EXTDL_MODE): DelayLine works with extended delay range setting</li><li>0x0 (DEF_MODE): Delay line default range setting</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CTRL"></a><span>DLL_CTRL</span></p>
+<ul><li><span>Name:</span>SD/eMMC PHY DLL control setting</li><li><span>Description:</span>SD/eMMC PHY's DLL Control settings register</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x324</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_DLL_CTRL"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CTRL_F_7_3">7:3</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CTRL_F_2">2</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CTRL_F_1">1</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CTRL_F_0">0</a></td>
+</tr>
+<tr><td>RSVD_3_7</td>
+<td>SLV_SWDC_UPDATE</td>
+<td>OFFST_EN</td>
+<td>DLL_EN</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_DLL_CTRL"></a><p class="title">Table�17.�Fields for Register: DLL_CTRL</p>
+<table summary="Fields for Register: DLL_CTRL" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CTRL_F_7_3"></a>7:3</p>
+</td>
+<td>RSVD_3_7</td>
+<td>R</td>
+<td><p>These bits of the register are reserved.</p>
+<p><span>Reserved Field:</span>Yes</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CTRL_F_2"></a>2</p>
+</td>
+<td>SLV_SWDC_UPDATE</td>
+<td>R/W</td>
+<td><p>Corresponding output drives PHY's DLL Subordinate's dc update input.
+This is used to turn-off Subordinate Delay line's output when changing its delay code using DLL_OFFST register</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (DL_OUT_OFF): Update in progress</li><li>0x0 (DL_OUT_ON): Update completed</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CTRL_F_1"></a>1</p>
+</td>
+<td>OFFST_EN</td>
+<td>R/W</td>
+<td><p>Enables offset mode of PHY when DLL is enabled. when DLL is disabled this allows direct control of delay generated by DLL's Subordinate</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (OFFSTEN): Offset value is valid</li><li>0x0 (OFFSTDIS): offset value is invalid</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CTRL_F_0"></a>0</p>
+</td>
+<td>DLL_EN</td>
+<td>R/W</td>
+<td><p>Enables DLL when '1'</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (DLLENABLE): PHY DLL is enabled</li><li>0x0 (DLLDISABLE): PHY DLL is disabled</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG1"></a><span>DLL_CNFG1</span></p>
+<ul><li><span>Name:</span>DLL Config register 1</li><li><span>Description:</span>SD/eMMC PHY DLL configuration register 1</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x325</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG1"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG1_F_7_6">7:6</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG1_F_5_4">5:4</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG1_F_3">3</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG1_F_2_0">2:0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>SLVDLY</td>
+<td>Rsvd</td>
+<td>WAITCYCLE</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG1"></a><p class="title">Table�18.�Fields for Register: DLL_CNFG1</p>
+<table summary="Fields for Register: DLL_CNFG1" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG1_F_7_6"></a>7:6</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG1_F_5_4"></a>5:4</p>
+</td>
+<td>SLVDLY</td>
+<td>R/W</td>
+<td><p>Sets the value of DLL subordinate's update delay input islv_update_dly</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG1_F_3"></a>3</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG1_F_2_0"></a>2:0</p>
+</td>
+<td>WAITCYCLE</td>
+<td>R/W</td>
+<td><p>Sets the value of DLL's wait cycle input</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG2"></a><span>DLL_CNFG2</span></p>
+<ul><li><span>Name:</span>DLL Config register 2</li><li><span>Description:</span>SD/eMMC PHY DLL configuration register 2</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x326</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG2"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG2_F_7">7</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG2_F_6_0">6:0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>JUMPSTEP</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG2"></a><p class="title">Table�19.�Fields for Register: DLL_CNFG2</p>
+<table summary="Fields for Register: DLL_CNFG2" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG2_F_7"></a>7</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_CNFG2_F_6_0"></a>6:0</p>
+</td>
+<td>JUMPSTEP</td>
+<td>R/W</td>
+<td><p>Sets the value of DLL's jump step input</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDL_CNFG"></a><span>DLLDL_CNFG</span></p>
+<ul><li><span>Name:</span>DLL Delay Line Config register</li><li><span>Description:</span>SD/eMMC PHY DLL MST &amp; Subordinate DL configuration settings</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x328</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_DLLDL_CNFG"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDL_CNFG_F_7">7</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDL_CNFG_F_6_5">6:5</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDL_CNFG_F_4">4</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDL_CNFG_F_3">3</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDL_CNFG_F_2_1">2:1</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDL_CNFG_F_0">0</a></td>
+</tr>
+<tr><td>SLV_BYPASS</td>
+<td>SLV_INPSEL</td>
+<td>SLV_EXTDLYEN</td>
+<td>MST_BYPASS</td>
+<td>MST_INPSEL</td>
+<td>MST_EXTDLYEN</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_DLLDL_CNFG"></a><p class="title">Table�20.�Fields for Register: DLLDL_CNFG</p>
+<table summary="Fields for Register: DLLDL_CNFG" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDL_CNFG_F_7"></a>7</p>
+</td>
+<td>SLV_BYPASS</td>
+<td>R/W</td>
+<td><p>Bypass enable control for Subordinate DL</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDL_CNFG_F_6_5"></a>6:5</p>
+</td>
+<td>SLV_INPSEL</td>
+<td>R/W</td>
+<td><p>Clock source select for Subordinate DL</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDL_CNFG_F_4"></a>4</p>
+</td>
+<td>SLV_EXTDLYEN</td>
+<td>R/W</td>
+<td><p>Enable Extended delay mode for Subordinate</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDL_CNFG_F_3"></a>3</p>
+</td>
+<td>MST_BYPASS</td>
+<td>R/W</td>
+<td><p>Bypass enable control for Manager DL</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDL_CNFG_F_2_1"></a>2:1</p>
+</td>
+<td>MST_INPSEL</td>
+<td>R/W</td>
+<td><p>Clock source select for Manager DL</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDL_CNFG_F_0"></a>0</p>
+</td>
+<td>MST_EXTDLYEN</td>
+<td>R/W</td>
+<td><p>Enable Extended delay mode for manager</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_OFFST"></a><span>DLL_OFFST</span></p>
+<ul><li><span>Name:</span>DLL Offset setting register</li><li><span>Description:</span>SD/eMMC PHY DLL Offset value settings</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x329</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_DLL_OFFST"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_OFFST_F_7">7</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_OFFST_F_6_0">6:0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>OFFST</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_DLL_OFFST"></a><p class="title">Table�21.�Fields for Register: DLL_OFFST</p>
+<table summary="Fields for Register: DLL_OFFST" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_OFFST_F_7"></a>7</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_OFFST_F_6_0"></a>6:0</p>
+</td>
+<td>OFFST</td>
+<td>R/W</td>
+<td><p>Sets the value of DLL's offset input</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLMST_TSTDC"></a><span>DLLMST_TSTDC</span></p>
+<ul><li><span>Name:</span>DLL Manager test code setting register</li><li><span>Description:</span>SD/eMMC PHY DLL Manager testing Delay code register</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x32a</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_DLLMST_TSTDC"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLMST_TSTDC_F_7">7</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLMST_TSTDC_F_6_0">6:0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>MSTTST_DC</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_DLLMST_TSTDC"></a><p class="title">Table�22.�Fields for Register: DLLMST_TSTDC</p>
+<table summary="Fields for Register: DLLMST_TSTDC" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLMST_TSTDC_F_7"></a>7</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLMST_TSTDC_F_6_0"></a>6:0</p>
+</td>
+<td>MSTTST_DC</td>
+<td>R/W</td>
+<td><p>Sets the value of DLL's Manager test code input when DLL is disabled.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLLBT_CNFG"></a><span>DLLLBT_CNFG</span></p>
+<ul><li><span>Name:</span>DLL LBT setting register</li><li><span>Description:</span>SD/eMMC PHY DLL Low Bandwidth Timer configuration register</li><li><span>Size:</span>16 bits</li><li><span>Offset:</span>0x32c</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_DLLLBT_CNFG"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLLBT_CNFG_F_15_0">15:0</a></td>
+</tr>
+<tr><td>LBT_LOADVAL</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_DLLLBT_CNFG"></a><p class="title">Table�23.�Fields for Register: DLLLBT_CNFG</p>
+<table summary="Fields for Register: DLLLBT_CNFG" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLLBT_CNFG_F_15_0"></a>15:0</p>
+</td>
+<td>LBT_LOADVAL</td>
+<td>R/W</td>
+<td><p>Sets the value of DLL's olbt_loadval input. Controls the lbt timer's timeout value at which DLL runs a revalidation cycle.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_STATUS"></a><span>DLL_STATUS</span></p>
+<ul><li><span>Name:</span>DLL Status register</li><li><span>Description:</span>SD/eMMC PHY DLL Status register</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x32e</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_DLL_STATUS"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_STATUS_F_7_2">7:2</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_STATUS_F_1">1</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_STATUS_F_0">0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>ERROR_STS</td>
+<td>LOCK_STS</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_DLL_STATUS"></a><p class="title">Table�24.�Fields for Register: DLL_STATUS</p>
+<table summary="Fields for Register: DLL_STATUS" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_STATUS_F_7_2"></a>7:2</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_STATUS_F_1"></a>1</p>
+</td>
+<td>ERROR_STS</td>
+<td>R</td>
+<td><p>Captures the value of DLL's lock error status information. Value is valid only when LOCK_STS is set.</p>
+<ul><li>IF LOCK_STS =1 and ERR_STS = 0 then DLL is locked and no errors are generated</li><li>IF LOCK_STS =1 and ERR_STS = 1 then DLL is locked to default and has errors. Transactions at this phase can fail</li></ul><p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (DLL_ERROR): DLL is locked and ready</li><li>0x0 (DLL_LOCK_OKAY): DLL has not locked</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLL_STATUS_F_0"></a>0</p>
+</td>
+<td>LOCK_STS</td>
+<td>R</td>
+<td><p>Captures the value of DLL's lock status information</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (DLL_IS_LOCKED): DLL is locked and ready</li><li>0x0 (DLL_NOT_LOCKED): DLL has not locked</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDBG_MLKDC"></a><span>DLLDBG_MLKDC</span></p>
+<ul><li><span>Name:</span>DLL Manager lock code debug register</li><li><span>Description:</span>SD/eMMC PHY DLL's Manager lock code status</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x330</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_DLLDBG_MLKDC"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDBG_MLKDC_F_7">7</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDBG_MLKDC_F_6_0">6:0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>MSTLKDC</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_DLLDBG_MLKDC"></a><p class="title">Table�25.�Fields for Register: DLLDBG_MLKDC</p>
+<table summary="Fields for Register: DLLDBG_MLKDC" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDBG_MLKDC_F_7"></a>7</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDBG_MLKDC_F_6_0"></a>6:0</p>
+</td>
+<td>MSTLKDC</td>
+<td>R</td>
+<td><p>Captures the value Delay Code to which DLL's Manager has locked</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDBG_SLKDC"></a><span>DLLDBG_SLKDC</span></p>
+<ul><li><span>Name:</span>DLL Manager Subordinate code debug register</li><li><span>Description:</span>SD/eMMC PHY DLL's Subordinate lock code status</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x332</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_DLLDBG_SLKDC"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDBG_SLKDC_F_7">7</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDBG_SLKDC_F_6_0">6:0</a></td>
+</tr>
+<tr><td>Rsvd</td>
+<td>SLVLKDC</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_DLLDBG_SLKDC"></a><p class="title">Table�26.�Fields for Register: DLLDBG_SLKDC</p>
+<table summary="Fields for Register: DLLDBG_SLKDC" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDBG_SLKDC_F_7"></a>7</p>
+</td>
+<td>�</td>
+<td>�</td>
+<td><span>Reserved Field:</span>Yes</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_DLLDBG_SLKDC_F_6_0"></a>6:0</p>
+</td>
+<td>SLVLKDC</td>
+<td>R</td>
+<td><p>Captures the value Delay Code to which DLL's Subordinate has locked</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY1_DL0"></a><span>TST_PHY1_DL0</span></p>
+<ul><li><span>Name:</span>Testmode Phy1 Delay line0 Settings register</li><li><span>Description:</span>Settings for PHY1 Delay line 0 during testmode</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x334</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY1_DL0"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY1_DL0_F_7">7</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY1_DL0_F_6_0">6:0</a></td>
+</tr>
+<tr><td>PHY1_DL0_UPDATE_DC</td>
+<td>PHY1_DL0_DC</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY1_DL0"></a><p class="title">Table�27.�Fields for Register: TST_PHY1_DL0</p>
+<table summary="Fields for Register: TST_PHY1_DL0" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY1_DL0_F_7"></a>7</p>
+</td>
+<td>PHY1_DL0_UPDATE_DC</td>
+<td>R/W</td>
+<td><p>Delay code Update for PHY1 Delay Line0
+Prepares Delay Line0 of PHY1 for code update when '1'. Its recommended that this bit is 1 when PHY1_DL0_DC is being written. Ensure this is 0 when not updating the code. This bit is used only for testmode purposes. The value of this bit is reflected on the signal test_phy1_dl0_dc_update.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (TST_UPDATEMODE): During delay code update</li><li>0x0 (TST_DLMODE): DelayLine output is enabled</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY1_DL0_F_6_0"></a>6:0</p>
+</td>
+<td>PHY1_DL0_DC</td>
+<td>R/W</td>
+<td><p>Delay code for PHY1 Delay Line0
+Drives Delay Line0 delay code input for PHY1. Value here selects the number of active stages in the Delay line 0 of PHY1. These bits are used only for testmode purposes. The value of these bits are reflected on the signal test_phy1_dl0_dc.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY2_DL0"></a><span>TST_PHY2_DL0</span></p>
+<ul><li><span>Name:</span>Testmode Phy2 Delay line0 Settings register</li><li><span>Description:</span>Settings for PHY2 Delay line 0 during testmode</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x335</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY2_DL0"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY2_DL0_F_7">7</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY2_DL0_F_6_0">6:0</a></td>
+</tr>
+<tr><td>PHY2_DL0_UPDATE_DC</td>
+<td>PHY2_DL0_DC</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY2_DL0"></a><p class="title">Table�28.�Fields for Register: TST_PHY2_DL0</p>
+<table summary="Fields for Register: TST_PHY2_DL0" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY2_DL0_F_7"></a>7</p>
+</td>
+<td>PHY2_DL0_UPDATE_DC</td>
+<td>R/W</td>
+<td><p>Delay code Update for PHY2 Delay Line0
+Prepares Delay Line0 of PHY2 for code update when '1'. Its recommended that this bit is 1 when PHY2_DL0_DC is being written. Ensure this is 0 when not updating the code. This bit is used only for testmode purposes. The value of this bit is reflected on the signal test_phy2_dl0_dc_update.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (TST_UPDATEMODE): During delay code update</li><li>0x0 (TST_DLMODE): DelayLine output is enabled</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY2_DL0_F_6_0"></a>6:0</p>
+</td>
+<td>PHY2_DL0_DC</td>
+<td>R/W</td>
+<td><p>Delay code for PHY2 Delay Line0
+Drives Delay Line0 delay code input for PHY2. Value here selects the number of active stages in the Delay line 0 of PHY2. These bits are used only for testmode purposes. The value of these bits are reflected on the signal test_phy2_dl0_dc.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY2_DL1"></a><span>TST_PHY2_DL1</span></p>
+<ul><li><span>Name:</span>Testmode Phy2 Delay line1 Settings register</li><li><span>Description:</span>Settings for PHY2 Delay line 1 during testmode</li><li><span>Size:</span>8 bits</li><li><span>Offset:</span>0x336</li></ul><a name="fld-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY2_DL1"></a><table><colgroup></colgroup><tbody><tr><td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY2_DL1_F_7">7</a></td>
+<td><a class="link" href="#H4-reg-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY2_DL1_F_6_0">6:0</a></td>
+</tr>
+<tr><td>PHY2_DL1_UPDATE_DC</td>
+<td>PHY2_DL1_DC</td>
+</tr>
+</tbody></table><a name="fieldtable-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY2_DL1"></a><p class="title">Table�29.�Fields for Register: TST_PHY2_DL1</p>
+<table summary="Fields for Register: TST_PHY2_DL1" width="100%"><colgroup></colgroup><thead><tr><tr><th>Bits</th><th>Name</th><th>Memory Access</th><th>Description</th></tr>
+</tr></thead><tbody><tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY2_DL1_F_7"></a>7</p>
+</td>
+<td>PHY2_DL1_UPDATE_DC</td>
+<td>R/W</td>
+<td><p>Delay code Update for PHY2 Delay Line1
+Prepares Delay Line1 of PHY2 for code update when '1'. Its recommended that this bit is 1 when PHY2_DL1_DC is being written. Ensure this is 0 when not updating the code. This bit is used only for testmode purposes. The value of this bit is reflected on the signal test_phy2_dl1_dc_update.</p>
+<p class="BLANK"></p>
+<p><span>Values:</span></p>
+<ul><li>0x1 (TST_UPDATEMODE): During delay code update</li><li>0x0 (TST_DLMODE): DelayLine output is enabled</li></ul><p></p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+<tr><td><p><a name="H4-reg-DWC_mshc_map_DWC_mshc_phy_block_TST_PHY2_DL1_F_6_0"></a>6:0</p>
+</td>
+<td>PHY2_DL1_DC</td>
+<td>R/W</td>
+<td><p>Delay code for PHY2 Delay Line1
+Drives Delay Line1 delay code input for PHY2. Value here selects the number of active stages in the Delay line 1 of PHY2. These bits are used only for testmode purposes. The value of these bits are reflected on the signal test_phy2_dl1_dc.</p>
+<p><span>Value After Reset:</span>0x0</p>
+</td>
+</tr>
+</tbody></table></body></html>
+

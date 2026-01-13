@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>WriteClient</title></head>
+<body>
+<p><a NAME="WriteClient">"WriteClient"<p></p>
+</a></p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P-)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#WriteClient_Wr">WriteClient_Wr</a></p>
+</td>
+<td><p>32'h00000000</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#WriteClient_Wr_start">start</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Start bit for the respective clients.<p></p>
+0 : No effect on hardware.<p></p>
+1 : start the client.<p></p>
+The write 1 to this register is used to kick the hardware.</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#WriteClient_Wr_clear">clear</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>0 : Don't clear, normal state.<p></p>
+1 : Clear the asynchronous FIFO between the respective client and dHub.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#WriteClient_pix">WriteClient_pix</a></p>
+</td>
+<td><p>32'h00000004</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#WriteClient_pix_tot">tot</a></p>
+</td>
+<td><p>0x64</p>
+</td>
+<td><p>Specifies the total number of pixels expected from input to write client. This is used to generate flush in Write client to write the partially formed 128-bit data (if any) to DDR.<p></p>
+Should be programmed with (ovres*ohres).</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#WriteClient_NonStdRes">WriteClient_NonStdRes</a></p>
+</td>
+<td><p>32'h00000008</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#WriteClient_NonStdRes_enable">enable</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enable for Read Client when resolution is not integer multiple of 16</p>
+</td>
+</tr>
+<tr><td><p>[13:1]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#WriteClient_NonStdRes_pixlineTot">pixlineTot</a></p>
+</td>
+<td><p>0x64</p>
+</td>
+<td><p>Total number of pixels in a line (for Write Client)</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="vpp_common.htm#WriteClient_pack">WriteClient_pack</a></p>
+</td>
+<td><p>32'h0000000C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[3:0]</p>
+</td>
+<td><p><a HREF="vpp_common.htm#WriteClient_pack_Sel">Sel</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>PackSel for Write Client<p></p>
+[0000] : 8 bit packing<p></p>
+[0001] : 10 bit packing<p></p>
+[0010] : 12 bit packing<p></p>
+[0011] : 15 bit packing<p></p>
+[0100] : 16 bit packing<p></p>
+[0101] : 20 bit packing<p></p>
+[0110] : 24 bit packing<p></p>
+[0111] : 30 bit packing<p></p>
+[1000] : 32 bit packing</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+</body></html>

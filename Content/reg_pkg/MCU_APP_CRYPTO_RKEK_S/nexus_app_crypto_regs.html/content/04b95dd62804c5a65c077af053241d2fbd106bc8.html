@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">Input DMA Interrupt 1</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x14</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31:6]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="axi_data_par_err"><td>[5]</td>
+<td><a href="#axi_data_par_err.desc">axi_data_par_err</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>AXI Data Parity Error</td>
+<td>H<a class="headerlink" href="#axi_data_par_err" title="Permalink to this row"></a></td>
+</tr>
+<tr id="in_dma_pause_cmpl"><td>[4]</td>
+<td><a href="#in_dma_pause_cmpl.desc">in_dma_pause_cmpl</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>Input DMA Pause Complete</td>
+<td>H<a class="headerlink" href="#in_dma_pause_cmpl" title="Permalink to this row"></a></td>
+</tr>
+<tr id="in_par_err"><td>[3]</td>
+<td><a href="#in_par_err.desc">in_par_err</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>Input FIFO Parity Error</td>
+<td>H<a class="headerlink" href="#in_par_err" title="Permalink to this row"></a></td>
+</tr>
+<tr id="in_ll_err"><td>[2]</td>
+<td><a href="#in_ll_err.desc">in_ll_err</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>Link List AXI Bus Access Error</td>
+<td>H<a class="headerlink" href="#in_ll_err" title="Permalink to this row"></a></td>
+</tr>
+<tr id="in_dma_bus_err"><td>[1]</td>
+<td><a href="#in_dma_bus_err.desc">in_dma_bus_err</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>AXI Read Cycle Access Error Code</td>
+<td>H<a class="headerlink" href="#in_dma_bus_err" title="Permalink to this row"></a></td>
+</tr>
+<tr id="in_dma_done"><td>[0]</td>
+<td><a href="#in_dma_done.desc">in_dma_done</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>Input DMA Transfer Complete</td>
+<td>H<a class="headerlink" href="#in_dma_done" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="axi_data_par_err.desc">axi_data_par_err - AXI Data Parity Error<a class="headerlink" href="#axi_data_par_err.desc" title="Permalink to this headline"></a></h3>
+<p>When this bit is set, the DMA transfer has detected an AXI input read data parity error.<p></p>
+The Input DMA Enable bit must be reset before one can clear this interrupt. This bit is reset by writing a one to it.<p></p>
+</p>
+<h3 id="in_dma_pause_cmpl.desc">in_dma_pause_cmpl - Input DMA Pause Complete<a class="headerlink" href="#in_dma_pause_cmpl.desc" title="Permalink to this headline"></a></h3>
+<p>When this bit is set, the DMA is paused. This bit is set only when all current AXI read transactions are completed, and the Input DMA transfer count will reflect the actual amount of receive data transferred. The Input DMA FIFO count will show the remaining data in the FIFO.<p></p>
+The Input DMA Request bit must be reset before one can clear this interrupt.<p></p>
+</p>
+<h3 id="in_par_err.desc">in_par_err - Input FIFO Parity Error<a class="headerlink" href="#in_par_err.desc" title="Permalink to this headline"></a></h3>
+<p>When this bit is set, the DMA transfer has detected an Input DMA FIFO parity error.<p></p>
+The Input DMA Enable bit must be reset before one can clear this interrupt. This bit is reset by writing one a to it.<p></p>
+</p>
+<h3 id="in_ll_err.desc">in_ll_err - Link List AXI Bus Access Error<a class="headerlink" href="#in_ll_err.desc" title="Permalink to this headline"></a></h3>
+<p>When this bit is set, the Input DMA Link List read operation detected a bus error.<p></p>
+The Input DMA Enable bit must be reset before one can clear this interrupt. This bit is reset by writing a one to it.<p></p>
+</p>
+<h3 id="in_dma_bus_err.desc">in_dma_bus_err - AXI Read Cycle Access Error Code<a class="headerlink" href="#in_dma_bus_err.desc" title="Permalink to this headline"></a></h3>
+<p>When this bit is set, the DMA transfer has detected a bus error.<p></p>
+The Input DMA Enable bit must be reset before the user can clear this interrupt. This bit is reset by writing a one to it.<p></p>
+</p>
+<h3 id="in_dma_done.desc">in_dma_done - Input DMA Transfer Complete<a class="headerlink" href="#in_dma_done.desc" title="Permalink to this headline"></a></h3>
+<p>When this bit is set, the current DMA transfer is completed and all data has been received into the DMA input FIFO. It might take a while for the data to be transferred to the accelerator engines. The Input DMA Enable bit must be reset before one can clear this interrupt. This bit is reset by writing a one to it<p></p>
+</p>
+

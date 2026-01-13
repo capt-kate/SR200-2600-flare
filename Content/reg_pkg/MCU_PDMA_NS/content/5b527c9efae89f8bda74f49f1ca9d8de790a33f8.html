@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">CH_TRIGOUTCFG</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x2154</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Channel Trigger Out Configuration Register</p>
+<p>This register provides configuration settings when using trigger output for the current DMA command.</p>
+<p>The content of this register can be updated during command linking by setting bit[21] in the command link header.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_1"><td>[31:10]</td>
+<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
+</tr>
+<tr id="TRIGOUTTYPE"><td>[9:8]</td>
+<td><a href="#TRIGOUTTYPE.desc">TRIGOUTTYPE</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#TRIGOUTTYPE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_0"><td>[7:0]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="TRIGOUTTYPE.desc">TRIGOUTTYPE<a class="headerlink" href="#TRIGOUTTYPE.desc" title="Permalink to this headline"></a></h3>
+<p>Trigger Output Type
+- 00: Software only Trigger Acknowledgement.
+- 01: Reserved
+- 10: Hardware Trigger Acknowledgement. Only allowed when HAS_TRIGOUT is enabled.
+- 11: Internal Trigger Acknowledgement. Only allowed when HAS_TRIGSEL is enabled and the DMAC has multiple channels, otherwise treated as Hardware Trigger Acknowledgement.</p>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+

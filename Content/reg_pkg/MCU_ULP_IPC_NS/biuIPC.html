@@ -1,0 +1,4979 @@
+﻿<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>IPC</title></head>
+<body>
+<p><a NAME="IPC">"IPC"<p></p>
+</a></p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(WOC-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS">IPC_IPC_CSR_P0_IPC_INT_STATUS</a></p>
+</td>
+<td><p>32'h00000000</p>
+</td>
+<td><p>IPC for Cortex-M85</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_mbx0_intr">ipc_mbx0_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that IPC_MBX0 has generated an interrupt<p></p>
+event. Writing a 1 to this bit will clear it. Writing a 0 to<p></p>
+this bit will have no effect.<p></p>
+[0]</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_mbx1_intr">ipc_mbx1_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that IPC_MBX1 has generated an interrupt<p></p>
+event. Writing a 1 to this bit will clear it. Writing a 0 to<p></p>
+this bit will have no effect.<p></p>
+[1]</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_mbx2_intr">ipc_mbx2_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that IPC_MBX2 has generated an interrupt<p></p>
+event. Writing a 1 to this bit will clear it. Writing a 0 to<p></p>
+this bit will have no effect.<p></p>
+[2]</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_mbx3_intr">ipc_mbx3_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that IPC_MBX3 has generated an interrupt<p></p>
+event. Writing a 1 to this bit will clear it. Writing a 0 to<p></p>
+this bit will have no effect.<p></p>
+[3]</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_lock_intr">ipc_lock_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that a bit in the IPC_LOCK_STATUS register,<p></p>
+which has been enabled to generate an interrupt, has<p></p>
+transitioned from 1 to 0.<p></p>
+Writing a 1 to this bit will clear it. Writing a 0 to this bit<p></p>
+will have no effect<p></p>
+[4]</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_fifo_intr">ipc_fifo_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that the IPC_FIFO has generated an interrupt<p></p>
+event<p></p>
+Writing a 1 to this bit will clear it. Writing a 0 to this bit<p></p>
+will have no effect<p></p>
+[5]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK">IPC_IPC_CSR_P0_IPC_INT_MASK</a></p>
+</td>
+<td><p>32'h00000004</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_mbx0_intr_msk">ipc_mbx0_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[0]</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_mbx1_intr_msk">ipc_mbx1_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[1]</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_mbx2_intr_msk">ipc_mbx2_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[2]</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_mbx3_intr_msk">ipc_mbx3_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[3]</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_lock_intr_msk">ipc_lock_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[4]</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_fifo_intr_msk">ipc_fifo_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[5]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT">IPC_IPC_CSR_P0_IPC_MASK_INT</a></p>
+</td>
+<td><p>32'h00000008</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_mbx0_msk_intr">ipc_mbx0_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[0]</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_mbx1_msk_intr">ipc_mbx1_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[1]</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_mbx2_msk_intr">ipc_mbx2_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[2]</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_mbx3_msk_intr">ipc_mbx3_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[3]</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_lock_msk_intr">ipc_lock_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[4]</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_fifo_msk_intr">ipc_fifo_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[5]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_INT_ENABLE">IPC_IPC_CSR_P0_IPC_LOCK_INT_ENABLE</a></p>
+</td>
+<td><p>32'h0000000C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_INT_ENABLE_ipc_lock_intr_en">ipc_lock_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>A set bit in this register allows the corresponding bit in the<p></p>
+IPC_LOCK_STATUS register to generate an interrupt, by the<p></p>
+change of the value of the Lock bit in the Interrupt_Status<p></p>
+register.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_INT_POL">IPC_IPC_CSR_P0_IPC_LOCK_INT_POL</a></p>
+</td>
+<td><p>32'h00000010</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_INT_POL_ipc_lock_intr_pol">ipc_lock_intr_pol</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Determines if an interrupt is generated when the LOCK is<p></p>
+released or granted.<p></p>
+0: Interrupt is generated when the corresponding IPC_LOCK_STATUS<p></p>
+bit goes from 0 to 1<p></p>
+1: Interrupt is generated when the corresponding IPC_LOCK_STATUS<p></p>
+bit goes from 1 to 0<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_STATUS">IPC_IPC_CSR_P0_IPC_LOCK_STATUS</a></p>
+</td>
+<td><p>32'h00000014</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_STATUS_ipc_lock_status">ipc_lock_status</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>A 1 in a bit of this register indicates that the corresponding<p></p>
+resource is locked by the core. A 0 indicates that the resource<p></p>
+is not locked by the Processor.<p></p>
+Bits in this register are set/cleared through the<p></p>
+IPC_LOCK_SET/IPC_LOCK_REQ/IPC_LOCK_CLR register and cannot be<p></p>
+written to directly. (This register is read-only.)<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_REQ">IPC_IPC_CSR_P0_IPC_LOCK_REQ</a></p>
+</td>
+<td><p>32'h00000018</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_REQ_ipc_lock_request">ipc_lock_request</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Writing a 1 to a bit in the register will cause the<p></p>
+corresponding bit in the IPC_LOCK_STATUS to be set 1, if the<p></p>
+corresponding bit in all of the other IPC_LOCK_STATUS registers<p></p>
+are clear (0).<p></p>
+If the corresponding bit is set when a 1 is written to this<p></p>
+register, it will stay as 1 until the corresponding bit in the<p></p>
+IPC_LOCK_STATUS register is granted. Once granted, the bit will<p></p>
+self clear.<p></p>
+Writing a 0 to any bit in this register will have no effect.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(WOC-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_CLR">IPC_IPC_CSR_P0_IPC_LOCK_CLR</a></p>
+</td>
+<td><p>32'h0000001C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_CLR_ipc_lock_clr">ipc_lock_clr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Writing a 1 to a bit in this register will cause the<p></p>
+corresponding bit in the IPC_LOCK_STATUS register to be<p></p>
+cleared.<p></p>
+Writing a 0 to any bit in this register will have no effect.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_PRIO">IPC_IPC_CSR_P0_IPC_LOCK_PRIO</a></p>
+</td>
+<td><p>32'h00000020</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[1:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_PRIO_ipc_lock_priority">ipc_lock_priority</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>This sets the arbitration priority of the processor’s lock<p></p>
+request against other processors’ lock pending lock requests.<p></p>
+The higher value wins.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE">IPC_IPC_CSR_P0_IPC_MBX_INT_ENABLE</a></p>
+</td>
+<td><p>32'h00000024</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx0_write_intr_en">ipc_mbx0_write_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX0 to generate an interrupt whenever it<p></p>
+is written to.<p></p>
+[0]</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx1_write_intr_en">ipc_mbx1_write_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX1 to generate an interrupt whenever it<p></p>
+is written to.<p></p>
+[1]</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx2_write_intr_en">ipc_mbx2_write_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX2 to generate an interrupt whenever it<p></p>
+is written to.<p></p>
+[2]</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx3_write_intr_en">ipc_mbx3_write_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX3 to generate an interrupt whenever it<p></p>
+is written to.<p></p>
+[3]</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx0_chg_intr_en">ipc_mbx0_chg_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX0 to generate an interrupt whenever its<p></p>
+value changes.<p></p>
+[4]</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx1_chg_intr_en">ipc_mbx1_chg_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX1 to generate an interrupt whenever its<p></p>
+value changes.<p></p>
+[5]</p>
+</td>
+</tr>
+<tr><td><p>[6:6]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx2_chg_intr_en">ipc_mbx2_chg_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX2 to generate an interrupt whenever its<p></p>
+value changes.<p></p>
+[6]</p>
+</td>
+</tr>
+<tr><td><p>[7:7]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx3_chg_intr_en">ipc_mbx3_chg_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX3 to generate an interrupt whenever its<p></p>
+value changes.<p></p>
+[7]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX0">IPC_IPC_CSR_P0_IPC_MBX0</a></p>
+</td>
+<td><p>32'h00000028</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX0_ipc_mbx0">ipc_mbx0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The register will retain the last value written to it.<p></p>
+If enabled to do so in the IPC_MBX_INT_ENABLE register, this<p></p>
+register will generate an interrupt to the Processor whenever<p></p>
+it is written to, or whenever its value changes.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX1">IPC_IPC_CSR_P0_IPC_MBX1</a></p>
+</td>
+<td><p>32'h0000002C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX1_ipc_mbx1">ipc_mbx1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The register will retain the last value written to it.<p></p>
+If enabled to do so in the IPC_MBX_INT_ENABLE register, this<p></p>
+register will generate an interrupt to the Processor whenever<p></p>
+it is written to, or whenever its value changes.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX2">IPC_IPC_CSR_P0_IPC_MBX2</a></p>
+</td>
+<td><p>32'h00000030</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX2_ipc_mbx2">ipc_mbx2</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The register will retain the last value written to it.<p></p>
+If enabled to do so in the IPC_MBX_INT_ENABLE register, this<p></p>
+register will generate an interrupt to the Processor whenever<p></p>
+it is written to, or whenever its value changes.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX3">IPC_IPC_CSR_P0_IPC_MBX3</a></p>
+</td>
+<td><p>32'h00000034</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX3_ipc_mbx3">ipc_mbx3</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The register will retain the last value written to it.<p></p>
+If enabled to do so in the IPC_MBX_INT_ENABLE register, this<p></p>
+register will generate an interrupt to the Processor whenever<p></p>
+it is written to, or whenever its value changes.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(W-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_PUSH">IPC_IPC_CSR_P0_IPC_FIFO_PUSH</a></p>
+</td>
+<td><p>32'h00000038</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_PUSH_ipc_fifo_push">ipc_fifo_push</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Writing to this register will push the data into the tail of the<p></p>
+FIFO<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_POP">IPC_IPC_CSR_P0_IPC_FIFO_POP</a></p>
+</td>
+<td><p>32'h0000003C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_POP_ipc_fifo_pop">ipc_fifo_pop</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Reading from this register will pop the FIFO and return the data<p></p>
+on the head of the FIFO<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_PEEK">IPC_IPC_CSR_P0_IPC_FIFO_PEEK</a></p>
+</td>
+<td><p>32'h00000040</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_PEEK_ipc_fifo_peek">ipc_fifo_peek</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Reading from this register will return the data on the head of<p></p>
+the FIFO without popping the FIFO<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT">IPC_IPC_CSR_P0_IPC_FIFO_STAT</a></p>
+</td>
+<td><p>32'h00000044</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_exist">ipc_fifo_exist</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When 1, FIFO is implemented</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_full">ipc_fifo_full</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>FIFO is full</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_empty">ipc_fifo_empty</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>FIFO is empty</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_overflow">ipc_fifo_overflow</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>FIFO has overflowed. It was written to when full. The only bit<p></p>
+that can be written to by software in this register. Writing a<p></p>
+1 will clear it. Writing a 0 will have no effect</p>
+</td>
+</tr>
+<tr><td><p>[10:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_level">ipc_fifo_level</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The number of valid entries in the FIFO</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_THR">IPC_IPC_CSR_P0_IPC_FIFO_THR</a></p>
+</td>
+<td><p>32'h00000048</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[6:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_THR_ipc_fifo_thr">ipc_fifo_thr</a></p>
+</td>
+<td><p>0x40</p>
+</td>
+<td><p>Threshold value used to generate an interrupt based on the<p></p>
+occupancy level of the FIFO. Interrupt is generated when the<p></p>
+level is greater than or equal to the threshold.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE">IPC_IPC_CSR_P0_IPC_FIFO_INT_ENABLE</a></p>
+</td>
+<td><p>32'h0000004C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE_ipc_fifo_full">ipc_fifo_full</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enables FIFO full to raise an interrupt</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE_ipc_fifo_empty">ipc_fifo_empty</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enables FIFO empty to raise an interrupt</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE_ipc_fifo_overflow">ipc_fifo_overflow</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enables FIFO overlow to raise an interrupt</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE_ipc_fifo_level_reached">ipc_fifo_level_reached</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enables FIFO level reached to raise an interrupt</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT">IPC_IPC_CSR_P0_IPC_FIFO_INT_STAT</a></p>
+</td>
+<td><p>32'h00000050</p>
+</td>
+<td><p>Status of the enabled interrupt.</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT_ipc_fifo_full">ipc_fifo_full</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Sets to 1 if FIFO is full when enabled by the corresponding<p></p>
+IPC_FIFO_INT_EN bit</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT_ipc_fifo_empty">ipc_fifo_empty</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Sets to 1 if FIFO is empty when enabled by the corresponding<p></p>
+IPC_FIFO_INT_EN bit</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT_ipc_fifo_overflow">ipc_fifo_overflow</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Sets to 1 if FIFO overflowed when enabled by the corresponding<p></p>
+IPC_FIFO_INT_EN bit</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT_ipc_fifo_level_reached">ipc_fifo_level_reached</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Sets to 1 if FIFO reaches the threshold level when enabled by<p></p>
+the corresponding IPC_FIFO_INT_EN bit</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(WOC-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS">IPC_IPC_CSR_P1_IPC_INT_STATUS</a></p>
+</td>
+<td><p>32'h00000054</p>
+</td>
+<td><p>IPC for HiFi5</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_mbx0_intr">ipc_mbx0_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that IPC_MBX0 has generated an interrupt<p></p>
+event. Writing a 1 to this bit will clear it. Writing a 0 to<p></p>
+this bit will have no effect.<p></p>
+[0]</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_mbx1_intr">ipc_mbx1_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that IPC_MBX1 has generated an interrupt<p></p>
+event. Writing a 1 to this bit will clear it. Writing a 0 to<p></p>
+this bit will have no effect.<p></p>
+[1]</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_mbx2_intr">ipc_mbx2_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that IPC_MBX2 has generated an interrupt<p></p>
+event. Writing a 1 to this bit will clear it. Writing a 0 to<p></p>
+this bit will have no effect.<p></p>
+[2]</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_mbx3_intr">ipc_mbx3_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that IPC_MBX3 has generated an interrupt<p></p>
+event. Writing a 1 to this bit will clear it. Writing a 0 to<p></p>
+this bit will have no effect.<p></p>
+[3]</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_lock_intr">ipc_lock_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that a bit in the IPC_LOCK_STATUS register,<p></p>
+which has been enabled to generate an interrupt, has<p></p>
+transitioned from 1 to 0.<p></p>
+Writing a 1 to this bit will clear it. Writing a 0 to this bit<p></p>
+will have no effect<p></p>
+[4]</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_fifo_intr">ipc_fifo_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that the IPC_FIFO has generated an interrupt<p></p>
+event<p></p>
+Writing a 1 to this bit will clear it. Writing a 0 to this bit<p></p>
+will have no effect<p></p>
+[5]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK">IPC_IPC_CSR_P1_IPC_INT_MASK</a></p>
+</td>
+<td><p>32'h00000058</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_mbx0_intr_msk">ipc_mbx0_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[0]</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_mbx1_intr_msk">ipc_mbx1_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[1]</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_mbx2_intr_msk">ipc_mbx2_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[2]</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_mbx3_intr_msk">ipc_mbx3_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[3]</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_lock_intr_msk">ipc_lock_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[4]</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_fifo_intr_msk">ipc_fifo_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[5]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT">IPC_IPC_CSR_P1_IPC_MASK_INT</a></p>
+</td>
+<td><p>32'h0000005C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_mbx0_msk_intr">ipc_mbx0_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[0]</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_mbx1_msk_intr">ipc_mbx1_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[1]</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_mbx2_msk_intr">ipc_mbx2_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[2]</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_mbx3_msk_intr">ipc_mbx3_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[3]</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_lock_msk_intr">ipc_lock_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[4]</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_fifo_msk_intr">ipc_fifo_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[5]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_INT_ENABLE">IPC_IPC_CSR_P1_IPC_LOCK_INT_ENABLE</a></p>
+</td>
+<td><p>32'h00000060</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_INT_ENABLE_ipc_lock_intr_en">ipc_lock_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>A set bit in this register allows the corresponding bit in the<p></p>
+IPC_LOCK_STATUS register to generate an interrupt, by the<p></p>
+change of the value of the Lock bit in the Interrupt_Status<p></p>
+register.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_INT_POL">IPC_IPC_CSR_P1_IPC_LOCK_INT_POL</a></p>
+</td>
+<td><p>32'h00000064</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_INT_POL_ipc_lock_intr_pol">ipc_lock_intr_pol</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Determines if an interrupt is generated when the LOCK is<p></p>
+released or granted.<p></p>
+0: Interrupt is generated when the corresponding IPC_LOCK_STATUS<p></p>
+bit goes from 0 to 1<p></p>
+1: Interrupt is generated when the corresponding IPC_LOCK_STATUS<p></p>
+bit goes from 1 to 0<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_STATUS">IPC_IPC_CSR_P1_IPC_LOCK_STATUS</a></p>
+</td>
+<td><p>32'h00000068</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_STATUS_ipc_lock_status">ipc_lock_status</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>A 1 in a bit of this register indicates that the corresponding<p></p>
+resource is locked by the core. A 0 indicates that the resource<p></p>
+is not locked by the Processor.<p></p>
+Bits in this register are set/cleared through the<p></p>
+IPC_LOCK_SET/IPC_LOCK_REQ/IPC_LOCK_CLR register and cannot be<p></p>
+written to directly. (This register is read-only.)<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_REQ">IPC_IPC_CSR_P1_IPC_LOCK_REQ</a></p>
+</td>
+<td><p>32'h0000006C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_REQ_ipc_lock_request">ipc_lock_request</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Writing a 1 to a bit in the register will cause the<p></p>
+corresponding bit in the IPC_LOCK_STATUS to be set 1, if the<p></p>
+corresponding bit in all of the other IPC_LOCK_STATUS registers<p></p>
+are clear (0).<p></p>
+If the corresponding bit is set when a 1 is written to this<p></p>
+register, it will stay as 1 until the corresponding bit in the<p></p>
+IPC_LOCK_STATUS register is granted. Once granted, the bit will<p></p>
+self clear.<p></p>
+Writing a 0 to any bit in this register will have no effect.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(WOC-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_CLR">IPC_IPC_CSR_P1_IPC_LOCK_CLR</a></p>
+</td>
+<td><p>32'h00000070</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_CLR_ipc_lock_clr">ipc_lock_clr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Writing a 1 to a bit in this register will cause the<p></p>
+corresponding bit in the IPC_LOCK_STATUS register to be<p></p>
+cleared.<p></p>
+Writing a 0 to any bit in this register will have no effect.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_PRIO">IPC_IPC_CSR_P1_IPC_LOCK_PRIO</a></p>
+</td>
+<td><p>32'h00000074</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[1:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_PRIO_ipc_lock_priority">ipc_lock_priority</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>This sets the arbitration priority of the processor’s lock<p></p>
+request against other processors’ lock pending lock requests.<p></p>
+The higher value wins.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE">IPC_IPC_CSR_P1_IPC_MBX_INT_ENABLE</a></p>
+</td>
+<td><p>32'h00000078</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx0_write_intr_en">ipc_mbx0_write_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX0 to generate an interrupt whenever it<p></p>
+is written to.<p></p>
+[0]</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx1_write_intr_en">ipc_mbx1_write_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX1 to generate an interrupt whenever it<p></p>
+is written to.<p></p>
+[1]</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx2_write_intr_en">ipc_mbx2_write_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX2 to generate an interrupt whenever it<p></p>
+is written to.<p></p>
+[2]</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx3_write_intr_en">ipc_mbx3_write_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX3 to generate an interrupt whenever it<p></p>
+is written to.<p></p>
+[3]</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx0_chg_intr_en">ipc_mbx0_chg_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX0 to generate an interrupt whenever its<p></p>
+value changes.<p></p>
+[4]</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx1_chg_intr_en">ipc_mbx1_chg_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX1 to generate an interrupt whenever its<p></p>
+value changes.<p></p>
+[5]</p>
+</td>
+</tr>
+<tr><td><p>[6:6]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx2_chg_intr_en">ipc_mbx2_chg_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX2 to generate an interrupt whenever its<p></p>
+value changes.<p></p>
+[6]</p>
+</td>
+</tr>
+<tr><td><p>[7:7]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx3_chg_intr_en">ipc_mbx3_chg_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX3 to generate an interrupt whenever its<p></p>
+value changes.<p></p>
+[7]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX0">IPC_IPC_CSR_P1_IPC_MBX0</a></p>
+</td>
+<td><p>32'h0000007C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX0_ipc_mbx0">ipc_mbx0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The register will retain the last value written to it.<p></p>
+If enabled to do so in the IPC_MBX_INT_ENABLE register, this<p></p>
+register will generate an interrupt to the Processor whenever<p></p>
+it is written to, or whenever its value changes.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX1">IPC_IPC_CSR_P1_IPC_MBX1</a></p>
+</td>
+<td><p>32'h00000080</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX1_ipc_mbx1">ipc_mbx1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The register will retain the last value written to it.<p></p>
+If enabled to do so in the IPC_MBX_INT_ENABLE register, this<p></p>
+register will generate an interrupt to the Processor whenever<p></p>
+it is written to, or whenever its value changes.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX2">IPC_IPC_CSR_P1_IPC_MBX2</a></p>
+</td>
+<td><p>32'h00000084</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX2_ipc_mbx2">ipc_mbx2</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The register will retain the last value written to it.<p></p>
+If enabled to do so in the IPC_MBX_INT_ENABLE register, this<p></p>
+register will generate an interrupt to the Processor whenever<p></p>
+it is written to, or whenever its value changes.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX3">IPC_IPC_CSR_P1_IPC_MBX3</a></p>
+</td>
+<td><p>32'h00000088</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX3_ipc_mbx3">ipc_mbx3</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The register will retain the last value written to it.<p></p>
+If enabled to do so in the IPC_MBX_INT_ENABLE register, this<p></p>
+register will generate an interrupt to the Processor whenever<p></p>
+it is written to, or whenever its value changes.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(W-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_PUSH">IPC_IPC_CSR_P1_IPC_FIFO_PUSH</a></p>
+</td>
+<td><p>32'h0000008C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_PUSH_ipc_fifo_push">ipc_fifo_push</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Writing to this register will push the data into the tail of the<p></p>
+FIFO<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_POP">IPC_IPC_CSR_P1_IPC_FIFO_POP</a></p>
+</td>
+<td><p>32'h00000090</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_POP_ipc_fifo_pop">ipc_fifo_pop</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Reading from this register will pop the FIFO and return the data<p></p>
+on the head of the FIFO<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_PEEK">IPC_IPC_CSR_P1_IPC_FIFO_PEEK</a></p>
+</td>
+<td><p>32'h00000094</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_PEEK_ipc_fifo_peek">ipc_fifo_peek</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Reading from this register will return the data on the head of<p></p>
+the FIFO without popping the FIFO<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT">IPC_IPC_CSR_P1_IPC_FIFO_STAT</a></p>
+</td>
+<td><p>32'h00000098</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_exist">ipc_fifo_exist</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When 1, FIFO is implemented</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_full">ipc_fifo_full</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>FIFO is full</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_empty">ipc_fifo_empty</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>FIFO is empty</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_overflow">ipc_fifo_overflow</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>FIFO has overflowed. It was written to when full. The only bit<p></p>
+that can be written to by software in this register. Writing a<p></p>
+1 will clear it. Writing a 0 will have no effect</p>
+</td>
+</tr>
+<tr><td><p>[10:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_level">ipc_fifo_level</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The number of valid entries in the FIFO</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_THR">IPC_IPC_CSR_P1_IPC_FIFO_THR</a></p>
+</td>
+<td><p>32'h0000009C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[6:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_THR_ipc_fifo_thr">ipc_fifo_thr</a></p>
+</td>
+<td><p>0x40</p>
+</td>
+<td><p>Threshold value used to generate an interrupt based on the<p></p>
+occupancy level of the FIFO. Interrupt is generated when the<p></p>
+level is greater than or equal to the threshold.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE">IPC_IPC_CSR_P1_IPC_FIFO_INT_ENABLE</a></p>
+</td>
+<td><p>32'h000000A0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE_ipc_fifo_full">ipc_fifo_full</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enables FIFO full to raise an interrupt</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE_ipc_fifo_empty">ipc_fifo_empty</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enables FIFO empty to raise an interrupt</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE_ipc_fifo_overflow">ipc_fifo_overflow</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enables FIFO overlow to raise an interrupt</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE_ipc_fifo_level_reached">ipc_fifo_level_reached</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enables FIFO level reached to raise an interrupt</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT">IPC_IPC_CSR_P1_IPC_FIFO_INT_STAT</a></p>
+</td>
+<td><p>32'h000000A4</p>
+</td>
+<td><p>Status of the enabled interrupt.</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT_ipc_fifo_full">ipc_fifo_full</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Sets to 1 if FIFO is full when enabled by the corresponding<p></p>
+IPC_FIFO_INT_EN bit</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT_ipc_fifo_empty">ipc_fifo_empty</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Sets to 1 if FIFO is empty when enabled by the corresponding<p></p>
+IPC_FIFO_INT_EN bit</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT_ipc_fifo_overflow">ipc_fifo_overflow</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Sets to 1 if FIFO overflowed when enabled by the corresponding<p></p>
+IPC_FIFO_INT_EN bit</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT_ipc_fifo_level_reached">ipc_fifo_level_reached</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Sets to 1 if FIFO reaches the threshold level when enabled by<p></p>
+the corresponding IPC_FIFO_INT_EN bit</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(WOC-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS">IPC_IPC_CSR_P2_IPC_INT_STATUS</a></p>
+</td>
+<td><p>32'h000000A8</p>
+</td>
+<td><p>IPC for Cortex-M52</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_mbx0_intr">ipc_mbx0_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that IPC_MBX0 has generated an interrupt<p></p>
+event. Writing a 1 to this bit will clear it. Writing a 0 to<p></p>
+this bit will have no effect.<p></p>
+[0]</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_mbx1_intr">ipc_mbx1_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that IPC_MBX1 has generated an interrupt<p></p>
+event. Writing a 1 to this bit will clear it. Writing a 0 to<p></p>
+this bit will have no effect.<p></p>
+[1]</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_mbx2_intr">ipc_mbx2_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that IPC_MBX2 has generated an interrupt<p></p>
+event. Writing a 1 to this bit will clear it. Writing a 0 to<p></p>
+this bit will have no effect.<p></p>
+[2]</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_mbx3_intr">ipc_mbx3_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that IPC_MBX3 has generated an interrupt<p></p>
+event. Writing a 1 to this bit will clear it. Writing a 0 to<p></p>
+this bit will have no effect.<p></p>
+[3]</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_lock_intr">ipc_lock_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that a bit in the IPC_LOCK_STATUS register,<p></p>
+which has been enabled to generate an interrupt, has<p></p>
+transitioned from 1 to 0.<p></p>
+Writing a 1 to this bit will clear it. Writing a 0 to this bit<p></p>
+will have no effect<p></p>
+[4]</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_fifo_intr">ipc_fifo_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that the IPC_FIFO has generated an interrupt<p></p>
+event<p></p>
+Writing a 1 to this bit will clear it. Writing a 0 to this bit<p></p>
+will have no effect<p></p>
+[5]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK">IPC_IPC_CSR_P2_IPC_INT_MASK</a></p>
+</td>
+<td><p>32'h000000AC</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_mbx0_intr_msk">ipc_mbx0_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[0]</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_mbx1_intr_msk">ipc_mbx1_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[1]</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_mbx2_intr_msk">ipc_mbx2_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[2]</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_mbx3_intr_msk">ipc_mbx3_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[3]</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_lock_intr_msk">ipc_lock_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[4]</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_fifo_intr_msk">ipc_fifo_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[5]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT">IPC_IPC_CSR_P2_IPC_MASK_INT</a></p>
+</td>
+<td><p>32'h000000B0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_mbx0_msk_intr">ipc_mbx0_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[0]</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_mbx1_msk_intr">ipc_mbx1_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[1]</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_mbx2_msk_intr">ipc_mbx2_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[2]</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_mbx3_msk_intr">ipc_mbx3_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[3]</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_lock_msk_intr">ipc_lock_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[4]</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_fifo_msk_intr">ipc_fifo_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[5]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_INT_ENABLE">IPC_IPC_CSR_P2_IPC_LOCK_INT_ENABLE</a></p>
+</td>
+<td><p>32'h000000B4</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_INT_ENABLE_ipc_lock_intr_en">ipc_lock_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>A set bit in this register allows the corresponding bit in the<p></p>
+IPC_LOCK_STATUS register to generate an interrupt, by the<p></p>
+change of the value of the Lock bit in the Interrupt_Status<p></p>
+register.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_INT_POL">IPC_IPC_CSR_P2_IPC_LOCK_INT_POL</a></p>
+</td>
+<td><p>32'h000000B8</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_INT_POL_ipc_lock_intr_pol">ipc_lock_intr_pol</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Determines if an interrupt is generated when the LOCK is<p></p>
+released or granted.<p></p>
+0: Interrupt is generated when the corresponding IPC_LOCK_STATUS<p></p>
+bit goes from 0 to 1<p></p>
+1: Interrupt is generated when the corresponding IPC_LOCK_STATUS<p></p>
+bit goes from 1 to 0<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_STATUS">IPC_IPC_CSR_P2_IPC_LOCK_STATUS</a></p>
+</td>
+<td><p>32'h000000BC</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_STATUS_ipc_lock_status">ipc_lock_status</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>A 1 in a bit of this register indicates that the corresponding<p></p>
+resource is locked by the core. A 0 indicates that the resource<p></p>
+is not locked by the Processor.<p></p>
+Bits in this register are set/cleared through the<p></p>
+IPC_LOCK_SET/IPC_LOCK_REQ/IPC_LOCK_CLR register and cannot be<p></p>
+written to directly. (This register is read-only.)<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_REQ">IPC_IPC_CSR_P2_IPC_LOCK_REQ</a></p>
+</td>
+<td><p>32'h000000C0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_REQ_ipc_lock_request">ipc_lock_request</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Writing a 1 to a bit in the register will cause the<p></p>
+corresponding bit in the IPC_LOCK_STATUS to be set 1, if the<p></p>
+corresponding bit in all of the other IPC_LOCK_STATUS registers<p></p>
+are clear (0).<p></p>
+If the corresponding bit is set when a 1 is written to this<p></p>
+register, it will stay as 1 until the corresponding bit in the<p></p>
+IPC_LOCK_STATUS register is granted. Once granted, the bit will<p></p>
+self clear.<p></p>
+Writing a 0 to any bit in this register will have no effect.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(WOC-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_CLR">IPC_IPC_CSR_P2_IPC_LOCK_CLR</a></p>
+</td>
+<td><p>32'h000000C4</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_CLR_ipc_lock_clr">ipc_lock_clr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Writing a 1 to a bit in this register will cause the<p></p>
+corresponding bit in the IPC_LOCK_STATUS register to be<p></p>
+cleared.<p></p>
+Writing a 0 to any bit in this register will have no effect.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_PRIO">IPC_IPC_CSR_P2_IPC_LOCK_PRIO</a></p>
+</td>
+<td><p>32'h000000C8</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[1:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_PRIO_ipc_lock_priority">ipc_lock_priority</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>This sets the arbitration priority of the processor’s lock<p></p>
+request against other processors’ lock pending lock requests.<p></p>
+The higher value wins.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE">IPC_IPC_CSR_P2_IPC_MBX_INT_ENABLE</a></p>
+</td>
+<td><p>32'h000000CC</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx0_write_intr_en">ipc_mbx0_write_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX0 to generate an interrupt whenever it<p></p>
+is written to.<p></p>
+[0]</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx1_write_intr_en">ipc_mbx1_write_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX1 to generate an interrupt whenever it<p></p>
+is written to.<p></p>
+[1]</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx2_write_intr_en">ipc_mbx2_write_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX2 to generate an interrupt whenever it<p></p>
+is written to.<p></p>
+[2]</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx3_write_intr_en">ipc_mbx3_write_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX3 to generate an interrupt whenever it<p></p>
+is written to.<p></p>
+[3]</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx0_chg_intr_en">ipc_mbx0_chg_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX0 to generate an interrupt whenever its<p></p>
+value changes.<p></p>
+[4]</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx1_chg_intr_en">ipc_mbx1_chg_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX1 to generate an interrupt whenever its<p></p>
+value changes.<p></p>
+[5]</p>
+</td>
+</tr>
+<tr><td><p>[6:6]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx2_chg_intr_en">ipc_mbx2_chg_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX2 to generate an interrupt whenever its<p></p>
+value changes.<p></p>
+[6]</p>
+</td>
+</tr>
+<tr><td><p>[7:7]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx3_chg_intr_en">ipc_mbx3_chg_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX3 to generate an interrupt whenever its<p></p>
+value changes.<p></p>
+[7]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX0">IPC_IPC_CSR_P2_IPC_MBX0</a></p>
+</td>
+<td><p>32'h000000D0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX0_ipc_mbx0">ipc_mbx0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The register will retain the last value written to it.<p></p>
+If enabled to do so in the IPC_MBX_INT_ENABLE register, this<p></p>
+register will generate an interrupt to the Processor whenever<p></p>
+it is written to, or whenever its value changes.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX1">IPC_IPC_CSR_P2_IPC_MBX1</a></p>
+</td>
+<td><p>32'h000000D4</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX1_ipc_mbx1">ipc_mbx1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The register will retain the last value written to it.<p></p>
+If enabled to do so in the IPC_MBX_INT_ENABLE register, this<p></p>
+register will generate an interrupt to the Processor whenever<p></p>
+it is written to, or whenever its value changes.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX2">IPC_IPC_CSR_P2_IPC_MBX2</a></p>
+</td>
+<td><p>32'h000000D8</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX2_ipc_mbx2">ipc_mbx2</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The register will retain the last value written to it.<p></p>
+If enabled to do so in the IPC_MBX_INT_ENABLE register, this<p></p>
+register will generate an interrupt to the Processor whenever<p></p>
+it is written to, or whenever its value changes.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX3">IPC_IPC_CSR_P2_IPC_MBX3</a></p>
+</td>
+<td><p>32'h000000DC</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX3_ipc_mbx3">ipc_mbx3</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The register will retain the last value written to it.<p></p>
+If enabled to do so in the IPC_MBX_INT_ENABLE register, this<p></p>
+register will generate an interrupt to the Processor whenever<p></p>
+it is written to, or whenever its value changes.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(W-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_PUSH">IPC_IPC_CSR_P2_IPC_FIFO_PUSH</a></p>
+</td>
+<td><p>32'h000000E0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_PUSH_ipc_fifo_push">ipc_fifo_push</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Writing to this register will push the data into the tail of the<p></p>
+FIFO<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_POP">IPC_IPC_CSR_P2_IPC_FIFO_POP</a></p>
+</td>
+<td><p>32'h000000E4</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_POP_ipc_fifo_pop">ipc_fifo_pop</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Reading from this register will pop the FIFO and return the data<p></p>
+on the head of the FIFO<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_PEEK">IPC_IPC_CSR_P2_IPC_FIFO_PEEK</a></p>
+</td>
+<td><p>32'h000000E8</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_PEEK_ipc_fifo_peek">ipc_fifo_peek</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Reading from this register will return the data on the head of<p></p>
+the FIFO without popping the FIFO<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT">IPC_IPC_CSR_P2_IPC_FIFO_STAT</a></p>
+</td>
+<td><p>32'h000000EC</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_exist">ipc_fifo_exist</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When 1, FIFO is implemented</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_full">ipc_fifo_full</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>FIFO is full</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_empty">ipc_fifo_empty</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>FIFO is empty</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_overflow">ipc_fifo_overflow</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>FIFO has overflowed. It was written to when full. The only bit<p></p>
+that can be written to by software in this register. Writing a<p></p>
+1 will clear it. Writing a 0 will have no effect</p>
+</td>
+</tr>
+<tr><td><p>[10:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_level">ipc_fifo_level</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The number of valid entries in the FIFO</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_THR">IPC_IPC_CSR_P2_IPC_FIFO_THR</a></p>
+</td>
+<td><p>32'h000000F0</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[6:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_THR_ipc_fifo_thr">ipc_fifo_thr</a></p>
+</td>
+<td><p>0x40</p>
+</td>
+<td><p>Threshold value used to generate an interrupt based on the<p></p>
+occupancy level of the FIFO. Interrupt is generated when the<p></p>
+level is greater than or equal to the threshold.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE">IPC_IPC_CSR_P2_IPC_FIFO_INT_ENABLE</a></p>
+</td>
+<td><p>32'h000000F4</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE_ipc_fifo_full">ipc_fifo_full</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enables FIFO full to raise an interrupt</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE_ipc_fifo_empty">ipc_fifo_empty</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enables FIFO empty to raise an interrupt</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE_ipc_fifo_overflow">ipc_fifo_overflow</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enables FIFO overlow to raise an interrupt</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE_ipc_fifo_level_reached">ipc_fifo_level_reached</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enables FIFO level reached to raise an interrupt</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT">IPC_IPC_CSR_P2_IPC_FIFO_INT_STAT</a></p>
+</td>
+<td><p>32'h000000F8</p>
+</td>
+<td><p>Status of the enabled interrupt.</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT_ipc_fifo_full">ipc_fifo_full</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Sets to 1 if FIFO is full when enabled by the corresponding<p></p>
+IPC_FIFO_INT_EN bit</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT_ipc_fifo_empty">ipc_fifo_empty</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Sets to 1 if FIFO is empty when enabled by the corresponding<p></p>
+IPC_FIFO_INT_EN bit</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT_ipc_fifo_overflow">ipc_fifo_overflow</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Sets to 1 if FIFO overflowed when enabled by the corresponding<p></p>
+IPC_FIFO_INT_EN bit</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT_ipc_fifo_level_reached">ipc_fifo_level_reached</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Sets to 1 if FIFO reaches the threshold level when enabled by<p></p>
+the corresponding IPC_FIFO_INT_EN bit</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(WOC-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS">IPC_IPC_CSR_P3_IPC_INT_STATUS</a></p>
+</td>
+<td><p>32'h000000FC</p>
+</td>
+<td><p>IPC for HiFi1</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_mbx0_intr">ipc_mbx0_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that IPC_MBX0 has generated an interrupt<p></p>
+event. Writing a 1 to this bit will clear it. Writing a 0 to<p></p>
+this bit will have no effect.<p></p>
+[0]</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_mbx1_intr">ipc_mbx1_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that IPC_MBX1 has generated an interrupt<p></p>
+event. Writing a 1 to this bit will clear it. Writing a 0 to<p></p>
+this bit will have no effect.<p></p>
+[1]</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_mbx2_intr">ipc_mbx2_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that IPC_MBX2 has generated an interrupt<p></p>
+event. Writing a 1 to this bit will clear it. Writing a 0 to<p></p>
+this bit will have no effect.<p></p>
+[2]</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_mbx3_intr">ipc_mbx3_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that IPC_MBX3 has generated an interrupt<p></p>
+event. Writing a 1 to this bit will clear it. Writing a 0 to<p></p>
+this bit will have no effect.<p></p>
+[3]</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_lock_intr">ipc_lock_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that a bit in the IPC_LOCK_STATUS register,<p></p>
+which has been enabled to generate an interrupt, has<p></p>
+transitioned from 1 to 0.<p></p>
+Writing a 1 to this bit will clear it. Writing a 0 to this bit<p></p>
+will have no effect<p></p>
+[4]</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_STATUS_ipc_fifo_intr">ipc_fifo_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, indicates that the IPC_FIFO has generated an interrupt<p></p>
+event<p></p>
+Writing a 1 to this bit will clear it. Writing a 0 to this bit<p></p>
+will have no effect<p></p>
+[5]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK">IPC_IPC_CSR_P3_IPC_INT_MASK</a></p>
+</td>
+<td><p>32'h00000100</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_mbx0_intr_msk">ipc_mbx0_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[0]</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_mbx1_intr_msk">ipc_mbx1_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[1]</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_mbx2_intr_msk">ipc_mbx2_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[2]</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_mbx3_intr_msk">ipc_mbx3_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[3]</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_lock_intr_msk">ipc_lock_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[4]</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_INT_MASK_ipc_fifo_intr_msk">ipc_fifo_intr_msk</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows the corresponding bit in the Interrupt Status<p></p>
+register generate an interrupt.<p></p>
+[5]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT">IPC_IPC_CSR_P3_IPC_MASK_INT</a></p>
+</td>
+<td><p>32'h00000104</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_mbx0_msk_intr">ipc_mbx0_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[0]</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_mbx1_msk_intr">ipc_mbx1_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[1]</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_mbx2_msk_intr">ipc_mbx2_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[2]</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_mbx3_msk_intr">ipc_mbx3_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[3]</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_lock_msk_intr">ipc_lock_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[4]</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MASK_INT_ipc_fifo_msk_intr">ipc_fifo_msk_intr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Masked interrupt, when it is set, it causes an interrupt.<p></p>
+[5]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_INT_ENABLE">IPC_IPC_CSR_P3_IPC_LOCK_INT_ENABLE</a></p>
+</td>
+<td><p>32'h00000108</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_INT_ENABLE_ipc_lock_intr_en">ipc_lock_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>A set bit in this register allows the corresponding bit in the<p></p>
+IPC_LOCK_STATUS register to generate an interrupt, by the<p></p>
+change of the value of the Lock bit in the Interrupt_Status<p></p>
+register.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_INT_POL">IPC_IPC_CSR_P3_IPC_LOCK_INT_POL</a></p>
+</td>
+<td><p>32'h0000010C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_INT_POL_ipc_lock_intr_pol">ipc_lock_intr_pol</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Determines if an interrupt is generated when the LOCK is<p></p>
+released or granted.<p></p>
+0: Interrupt is generated when the corresponding IPC_LOCK_STATUS<p></p>
+bit goes from 0 to 1<p></p>
+1: Interrupt is generated when the corresponding IPC_LOCK_STATUS<p></p>
+bit goes from 1 to 0<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_STATUS">IPC_IPC_CSR_P3_IPC_LOCK_STATUS</a></p>
+</td>
+<td><p>32'h00000110</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_STATUS_ipc_lock_status">ipc_lock_status</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>A 1 in a bit of this register indicates that the corresponding<p></p>
+resource is locked by the core. A 0 indicates that the resource<p></p>
+is not locked by the Processor.<p></p>
+Bits in this register are set/cleared through the<p></p>
+IPC_LOCK_SET/IPC_LOCK_REQ/IPC_LOCK_CLR register and cannot be<p></p>
+written to directly. (This register is read-only.)<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_REQ">IPC_IPC_CSR_P3_IPC_LOCK_REQ</a></p>
+</td>
+<td><p>32'h00000114</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_REQ_ipc_lock_request">ipc_lock_request</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Writing a 1 to a bit in the register will cause the<p></p>
+corresponding bit in the IPC_LOCK_STATUS to be set 1, if the<p></p>
+corresponding bit in all of the other IPC_LOCK_STATUS registers<p></p>
+are clear (0).<p></p>
+If the corresponding bit is set when a 1 is written to this<p></p>
+register, it will stay as 1 until the corresponding bit in the<p></p>
+IPC_LOCK_STATUS register is granted. Once granted, the bit will<p></p>
+self clear.<p></p>
+Writing a 0 to any bit in this register will have no effect.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(WOC-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_CLR">IPC_IPC_CSR_P3_IPC_LOCK_CLR</a></p>
+</td>
+<td><p>32'h00000118</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_CLR_ipc_lock_clr">ipc_lock_clr</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Writing a 1 to a bit in this register will cause the<p></p>
+corresponding bit in the IPC_LOCK_STATUS register to be<p></p>
+cleared.<p></p>
+Writing a 0 to any bit in this register will have no effect.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_PRIO">IPC_IPC_CSR_P3_IPC_LOCK_PRIO</a></p>
+</td>
+<td><p>32'h0000011C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[1:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_LOCK_PRIO_ipc_lock_priority">ipc_lock_priority</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>This sets the arbitration priority of the processor’s lock<p></p>
+request against other processors’ lock pending lock requests.<p></p>
+The higher value wins.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE">IPC_IPC_CSR_P3_IPC_MBX_INT_ENABLE</a></p>
+</td>
+<td><p>32'h00000120</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx0_write_intr_en">ipc_mbx0_write_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX0 to generate an interrupt whenever it<p></p>
+is written to.<p></p>
+[0]</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx1_write_intr_en">ipc_mbx1_write_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX1 to generate an interrupt whenever it<p></p>
+is written to.<p></p>
+[1]</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx2_write_intr_en">ipc_mbx2_write_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX2 to generate an interrupt whenever it<p></p>
+is written to.<p></p>
+[2]</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx3_write_intr_en">ipc_mbx3_write_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX3 to generate an interrupt whenever it<p></p>
+is written to.<p></p>
+[3]</p>
+</td>
+</tr>
+<tr><td><p>[4:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx0_chg_intr_en">ipc_mbx0_chg_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX0 to generate an interrupt whenever its<p></p>
+value changes.<p></p>
+[4]</p>
+</td>
+</tr>
+<tr><td><p>[5:5]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx1_chg_intr_en">ipc_mbx1_chg_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX1 to generate an interrupt whenever its<p></p>
+value changes.<p></p>
+[5]</p>
+</td>
+</tr>
+<tr><td><p>[6:6]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx2_chg_intr_en">ipc_mbx2_chg_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX2 to generate an interrupt whenever its<p></p>
+value changes.<p></p>
+[6]</p>
+</td>
+</tr>
+<tr><td><p>[7:7]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX_INT_ENABLE_ipc_mbx3_chg_intr_en">ipc_mbx3_chg_intr_en</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When set, allows IPC_MBX3 to generate an interrupt whenever its<p></p>
+value changes.<p></p>
+[7]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX0">IPC_IPC_CSR_P3_IPC_MBX0</a></p>
+</td>
+<td><p>32'h00000124</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX0_ipc_mbx0">ipc_mbx0</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The register will retain the last value written to it.<p></p>
+If enabled to do so in the IPC_MBX_INT_ENABLE register, this<p></p>
+register will generate an interrupt to the Processor whenever<p></p>
+it is written to, or whenever its value changes.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX1">IPC_IPC_CSR_P3_IPC_MBX1</a></p>
+</td>
+<td><p>32'h00000128</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX1_ipc_mbx1">ipc_mbx1</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The register will retain the last value written to it.<p></p>
+If enabled to do so in the IPC_MBX_INT_ENABLE register, this<p></p>
+register will generate an interrupt to the Processor whenever<p></p>
+it is written to, or whenever its value changes.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX2">IPC_IPC_CSR_P3_IPC_MBX2</a></p>
+</td>
+<td><p>32'h0000012C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX2_ipc_mbx2">ipc_mbx2</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The register will retain the last value written to it.<p></p>
+If enabled to do so in the IPC_MBX_INT_ENABLE register, this<p></p>
+register will generate an interrupt to the Processor whenever<p></p>
+it is written to, or whenever its value changes.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX3">IPC_IPC_CSR_P3_IPC_MBX3</a></p>
+</td>
+<td><p>32'h00000130</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_MBX3_ipc_mbx3">ipc_mbx3</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The register will retain the last value written to it.<p></p>
+If enabled to do so in the IPC_MBX_INT_ENABLE register, this<p></p>
+register will generate an interrupt to the Processor whenever<p></p>
+it is written to, or whenever its value changes.<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(W-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_PUSH">IPC_IPC_CSR_P3_IPC_FIFO_PUSH</a></p>
+</td>
+<td><p>32'h00000134</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_PUSH_ipc_fifo_push">ipc_fifo_push</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Writing to this register will push the data into the tail of the<p></p>
+FIFO<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_POP">IPC_IPC_CSR_P3_IPC_FIFO_POP</a></p>
+</td>
+<td><p>32'h00000138</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_POP_ipc_fifo_pop">ipc_fifo_pop</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Reading from this register will pop the FIFO and return the data<p></p>
+on the head of the FIFO<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(R-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_PEEK">IPC_IPC_CSR_P3_IPC_FIFO_PEEK</a></p>
+</td>
+<td><p>32'h0000013C</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_PEEK_ipc_fifo_peek">ipc_fifo_peek</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Reading from this register will return the data on the head of<p></p>
+the FIFO without popping the FIFO<p></p>
+[31:0]</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT">IPC_IPC_CSR_P3_IPC_FIFO_STAT</a></p>
+</td>
+<td><p>32'h00000140</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_exist">ipc_fifo_exist</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>When 1, FIFO is implemented</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_full">ipc_fifo_full</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>FIFO is full</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_empty">ipc_fifo_empty</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>FIFO is empty</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_overflow">ipc_fifo_overflow</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>FIFO has overflowed. It was written to when full. The only bit<p></p>
+that can be written to by software in this register. Writing a<p></p>
+1 will clear it. Writing a 0 will have no effect</p>
+</td>
+</tr>
+<tr><td><p>[10:4]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_STAT_ipc_fifo_level">ipc_fifo_level</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>The number of valid entries in the FIFO</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_THR">IPC_IPC_CSR_P3_IPC_FIFO_THR</a></p>
+</td>
+<td><p>32'h00000144</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[6:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_THR_ipc_fifo_thr">ipc_fifo_thr</a></p>
+</td>
+<td><p>0x40</p>
+</td>
+<td><p>Threshold value used to generate an interrupt based on the<p></p>
+occupancy level of the FIFO. Interrupt is generated when the<p></p>
+level is greater than or equal to the threshold.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(P)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE">IPC_IPC_CSR_P3_IPC_FIFO_INT_ENABLE</a></p>
+</td>
+<td><p>32'h00000148</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE_ipc_fifo_full">ipc_fifo_full</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enables FIFO full to raise an interrupt</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE_ipc_fifo_empty">ipc_fifo_empty</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enables FIFO empty to raise an interrupt</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE_ipc_fifo_overflow">ipc_fifo_overflow</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enables FIFO overlow to raise an interrupt</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_ENABLE_ipc_fifo_level_reached">ipc_fifo_level_reached</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Enables FIFO level reached to raise an interrupt</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(RW-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT">IPC_IPC_CSR_P3_IPC_FIFO_INT_STAT</a></p>
+</td>
+<td><p>32'h0000014C</p>
+</td>
+<td><p>Status of the enabled interrupt.</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[0:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT_ipc_fifo_full">ipc_fifo_full</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Sets to 1 if FIFO is full when enabled by the corresponding<p></p>
+IPC_FIFO_INT_EN bit</p>
+</td>
+</tr>
+<tr><td><p>[1:1]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT_ipc_fifo_empty">ipc_fifo_empty</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Sets to 1 if FIFO is empty when enabled by the corresponding<p></p>
+IPC_FIFO_INT_EN bit</p>
+</td>
+</tr>
+<tr><td><p>[2:2]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT_ipc_fifo_overflow">ipc_fifo_overflow</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Sets to 1 if FIFO overflowed when enabled by the corresponding<p></p>
+IPC_FIFO_INT_EN bit</p>
+</td>
+</tr>
+<tr><td><p>[3:3]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_CSR_IPC_FIFO_INT_STAT_ipc_fifo_level_reached">ipc_fifo_level_reached</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Sets to 1 if FIFO reaches the threshold level when enabled by<p></p>
+the corresponding IPC_FIFO_INT_EN bit</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(WOS-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_IPC_SEM_SET">IPC_IPC_SEM_SET</a></p>
+</td>
+<td><p>32'h00000150</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_IPC_SEM_SET_value">value</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Writing a 1 to a bit in this register will cause the<p></p>
+corresponding bit in the IPC_SEM_SET register to be set.<p></p>
+Writing a 0 to any bit in this register will have no effect.<p></p>
+When reading this register, the values set will be returned as<p></p>
+1.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+<table width="100%"><tr><td><p>Access</p>
+</td>
+<td><p>Register</p>
+</td>
+<td><p>Address</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>(WOC-)</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_IPC_SEM_CLR">IPC_IPC_SEM_CLR</a></p>
+</td>
+<td><p>32'h00000154</p>
+</td>
+<td><p><p></p>
+</p>
+</td>
+</tr>
+<tr><td><p>Range</p>
+</td>
+<td><p>Field</p>
+</td>
+<td><p>Reset</p>
+</td>
+<td><p>Description</p>
+</td>
+</tr>
+<tr><td><p>[31:0]</p>
+</td>
+<td><p><a HREF="ipc.htm#IPC_IPC_SEM_CLR_value">value</a></p>
+</td>
+<td><p>0x0</p>
+</td>
+<td><p>Writing a 1 to a bit in this register will cause the<p></p>
+corresponding bit in the IPC_SEM_SET register to be cleared.<p></p>
+Writing a 0 to any bit in this register will have no effect.<p></p>
+When reading this register, the values set by IPC_SEM_SET will<p></p>
+be returned.</p>
+</td>
+</tr>
+</table><p><p></p>
+</p>
+</body></html>

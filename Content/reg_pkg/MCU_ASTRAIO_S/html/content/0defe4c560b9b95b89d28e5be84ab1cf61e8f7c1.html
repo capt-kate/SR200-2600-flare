@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">mcu_cntrl</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Controls the processor signals</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="rev"><td>[31:8]</td>
+<td><a href="#rev.desc">rev</a></td>
+<td><span>r</span></td>
+<td>0x600</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#rev" title="Permalink to this row"></a></td>
+</tr>
+<tr class="reserved-field"><td>[7]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="halted"><td>[6]</td>
+<td><a href="#halted.desc">halted</a></td>
+<td><span>r</span></td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#halted" title="Permalink to this row"></a></td>
+</tr>
+<tr id="running"><td>[5]</td>
+<td><a href="#running.desc">running</a></td>
+<td><span>r</span></td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#running" title="Permalink to this row"></a></td>
+</tr>
+<tr id="havereset"><td>[4]</td>
+<td><a href="#havereset.desc">havereset</a></td>
+<td><span>r</span></td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#havereset" title="Permalink to this row"></a></td>
+</tr>
+<tr id="core_sleep"><td>[3]</td>
+<td><a href="#core_sleep.desc">core_sleep</a></td>
+<td><span>r</span></td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#core_sleep" title="Permalink to this row"></a></td>
+</tr>
+<tr id="debug_request"><td>[2]</td>
+<td><a href="#debug_request.desc">debug_request</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#debug_request" title="Permalink to this row"></a></td>
+</tr>
+<tr id="rstb"><td>[1]</td>
+<td><a href="#rstb.desc">rstb</a></td>
+<td><span>rw</span></td>
+<td>0x1</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#rstb" title="Permalink to this row"></a></td>
+</tr>
+<tr id="fetch_enable"><td>[0]</td>
+<td><a href="#fetch_enable.desc">fetch_enable</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#fetch_enable" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="rev.desc">rev<a class="headerlink" href="#rev.desc" title="Permalink to this headline"></a></h3>
+<p>This holds revision number</p>
+<h3 id="halted.desc">halted<a class="headerlink" href="#halted.desc" title="Permalink to this headline"></a></h3>
+<p>Reports when the MCU is halted</p>
+<h3 id="running.desc">running<a class="headerlink" href="#running.desc" title="Permalink to this headline"></a></h3>
+<p>Reports when the MCU is running</p>
+<h3 id="havereset.desc">havereset<a class="headerlink" href="#havereset.desc" title="Permalink to this headline"></a></h3>
+<p>Reports when the MCU is in reset</p>
+<h3 id="core_sleep.desc">core_sleep<a class="headerlink" href="#core_sleep.desc" title="Permalink to this headline"></a></h3>
+<p>Reports if the MCU is in sleep mode</p>
+<h3 id="debug_request.desc">debug_request<a class="headerlink" href="#debug_request.desc" title="Permalink to this headline"></a></h3>
+<p>Sends a interrupt to the AstraIO MCU</p>
+<h3 id="rstb.desc">rstb<a class="headerlink" href="#rstb.desc" title="Permalink to this headline"></a></h3>
+<p>RISCV core reset</p>
+<h3 id="fetch_enable.desc">fetch_enable<a class="headerlink" href="#fetch_enable.desc" title="Permalink to this headline"></a></h3>
+<p>Set to 1 starts the RISCV processor running</p>
+

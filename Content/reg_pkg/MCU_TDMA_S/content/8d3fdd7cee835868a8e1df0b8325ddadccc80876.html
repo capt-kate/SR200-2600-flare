@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">CH_FILLVAL</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1038</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Channel Fill Pattern Value Register</p>
+<p>This register provides a predefined value to be used to fill the remaining part of the destination memory area when the source side of the command is finished.</p>
+<p>The content of this register can be updated during command linking by setting bit[14] in the command link header.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="FILLVAL"><td>[31:0]</td>
+<td><a href="#FILLVAL.desc">FILLVAL</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#FILLVAL" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="FILLVAL.desc">FILLVAL<a class="headerlink" href="#FILLVAL.desc" title="Permalink to this headline"></a></h3>
+<p>Fill pattern value. When XTYPE or YTYPE is set to fill mode, then this register value is used on the write data bus when the command starts to fill the memory area. The TRANSIZE defines the width of the FILLVAL used for the command. For byte transfers the FILLVAL[7:0] is used, other bits are ignored. For halfword transfers the FILLVAL[15:0] is used, other bits are ignored. For 64-bit and wider transfers the FILLVAL[31:0] pattern is repeated on the full width of the data bus. Not present when HAS_WRAP is 0.</p>
+

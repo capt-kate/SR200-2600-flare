@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultSkin
+  Version="6"
+  SkinType="Component"
+  Comment="HTML5 Favicon skin"
+  ComponentType="Favicon">
+  <Stylesheet>
+    <Resources>
+      <Resource
+        Name="synaptics-favicon.png">H4sIAAAAAAAEAOsM8HPn5ZLiYmBg4PX0cAkC0gIgzMEGJOU//08EUpwFHpHFDAx6yiDMWLHUvgwoyF7i6evK/pSFTUzN8t4x3mSwkGtEiWNpSUZ+EcPKdWc8gEI8ICGX1OLkosyCksz8PAZhTkWgMQxcIHHn/ILKosz0jBKGNfxnrICifGDRotREkFKFkszcVAbT7/ycICeAZILz00rKE4tSGWIL/oOUc4MNzyxOzkkEKi1i2H5gSz9QmAMkHJ5YlJeZl85wQPpZO8xpwfmlRcmpDF//N7+GKXPOz81NzSth+HZm2n6gGBtILCSzJCeVYcW7S+oMDIxPPV0cQyx6l0729QgJlGib/37ez0D1SSKLOHqiOHR51ENcTufuf2AUFXFhUUZgwJYJM/XiCrZESerFXFl3KFYiUEBXqctQ6aRQtMtaFw/ulYrLn1XV7xM7dCPVjdvq9ndb/fPf6553rPpkr/5NX01yzr3uE5I6XLMyz7pt6eV48usMn9NL91Lpxj5hY/eP3uZX8mb/1W7k8Z3v/MTkhezZJeeZT3zw4Q17xBHAt0FLL64mUvnw+3eKl9wDrBbO/JIRyXNXvOOqzjbdUOYjlQGnp7nI8U6y2Vfv8Pacf/2rqqW1ciZ+m8rDS5k218oExm/+3feyWH2FVbTEjhk/5nXxHZlp1fNQ4eCpc1+rIk2lph/QFl4zNaNwWoD71Ze/tJjfP54Rf7flHXvpLnt3piu+jaHyko450RcWMJ6Xn3znSp7QPZVjJUE/AncmL+08wK3EqPNNSuezW3FscYuV24uzWWa1vu58ui4v9O1XOi8RPV3Tw/LirJn8V/lTS9N7F8hWaAuHPvfPteM0Cfo1s1+IYc/c6lOT9BZHqcyzCb04d27+srLLHIkV4e1Vp1JE/SPnhNdeyd/r+/G2cs17MTHvFVvnVyQxpAgucTbWjb/GyzDh4PXjG8+EHlmzTvvLwSNqGmJ6GevS7R7d/WD8VG12wV6rIF7uW/c/7Z313Dwt6+B9jmnrg4FJgMHT1c9lnVNCEwBeNz41GgMAAA==</Resource>
+    </Resources>
+  </Stylesheet>
+  <Master
+    Image="synaptics-favicon.png" />
+  <Browser>
+    <SmallFavicon
+      Image="(generated)"
+      SizePx="16 px" />
+    <MediumFavicon
+      Image="(none)"
+      SizePx="" />
+    <LargeFavicon
+      Image="(none)"
+      SizePx="" />
+  </Browser>
+  <ShortcutIcon
+    Image="(none)" />
+  <Touch>
+    <TouchIcon
+      Image="(none)"
+      SizePx="" />
+  </Touch>
+  <Windows>
+    <MicrosoftSmallTile
+      Image="(none)" />
+    <MicrosoftMediumTile
+      Image="(none)" />
+    <MicrosoftWideTile
+      Image="(none)" />
+    <MicrosoftLargeTile
+      Image="(none)" />
+  </Windows>
+  <Strings />
+</CatapultSkin>

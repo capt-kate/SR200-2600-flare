@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles MadCap:conditions="Output.PDF,General.Import" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <Page Width="800" Height="800" Padding="20px" PageSize="A4" PageType="left" PaddingLeft="2.5cm" PaddingRight="3.5cm" PaddingTop="2.5cm" PaddingBottom="2.5cm" Name="Left">
+        <Frame Flow="body" ColumnCount="1" Anchors="" PaddingLeft="0in" PaddingRight="0in" PaddingTop="0in" PaddingBottom="0in" X="0in" Y="0in" Right="-0.2395833in" Bottom="0.01041667in" Width="15.63688cm" Height="24.71208cm">
+        </Frame>
+        <Frame Flow="header" Anchors="" Right="-0.2708333in" Bottom="9.989583in" X="0in" Y="-1.878542cm" ColumnCount="1" PaddingLeft="0in" PaddingRight="0in" PaddingTop="0in" PaddingBottom="0in" Height="1.243542cm" VerticalAlign="bottom" TextAlign="left" BorderBottomStyle="none" BorderBottomWidth="3pt" BorderBottomColor="#000000" Width="15.71625cm">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <xhtml:p xhtml:style="color: #029089;">•&#160;&#160;•&#160;&#160;•&#160;&#160;•&#160;&#160;•&#160;&#160;•&#160;&#160;</xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame Flow="footer" Anchors="" Right="-0.21875in" Bottom="-69px" X="0in" Y="25.32063cm" ColumnCount="1" PaddingLeft="0in" PaddingRight="0in" PaddingTop="0in" PaddingBottom="0in" FlowIndex="1" Height="1.243542cm" VerticalAlign="middle" TextAlign="center" BorderTopStyle="none" BorderTopWidth="0px" Width="15.58396cm" BorderLeftStyle="none" BorderLeftWidth="0px" BorderRightStyle="none" BorderRightWidth="0px" BorderBottomStyle="none" BorderBottomWidth="0px">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:head>
+                    </xhtml:head>
+                    <xhtml:body>
+                        <xhtml:table xhtml:style="width: 100%;">
+                            <xhtml:col />
+                            <xhtml:col />
+                            <xhtml:col />
+                            <xhtml:tbody>
+                                <xhtml:tr>
+                                    <xhtml:td>
+                                        <xhtml:p xhtml:class="Footer" xhtml:style="font-style: normal;"><MadCap:variable xhtml:name="General.ProductName" />
+                                        </xhtml:p>
+                                    </xhtml:td>
+                                    <xhtml:td>&#160;</xhtml:td>
+                                    <xhtml:td xhtml:style="text-align: right;">
+                                        <xhtml:p xhtml:class="Footer"><MadCap:variable xhtml:name="System.PageNumber" />
+                                        </xhtml:p>
+                                    </xhtml:td>
+                                </xhtml:tr>
+                            </xhtml:tbody>
+                        </xhtml:table>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+    </Page>
+    <Page Width="800" Height="800" Padding="20px" PageSize="A4" PageType="right" PaddingLeft="2.5cm" PaddingRight="3.5cm" PaddingTop="2.5cm" PaddingBottom="2.5cm" Name="Right">
+        <Frame Flow="body" ColumnCount="1" Anchors="" PaddingLeft="0in" PaddingRight="0in" PaddingTop="0in" PaddingBottom="0in" X="0in" Y="0in" Right="-0.2395833in" Bottom="0.01041667in" Width="15.63688cm" Height="24.71208cm">
+        </Frame>
+        <Frame Flow="header" Anchors="" Right="-0.2708333in" Bottom="9.989583in" X="0in" Y="-1.878542cm" ColumnCount="1" PaddingLeft="0in" PaddingRight="0in" PaddingTop="0in" PaddingBottom="0in" Height="1.243542cm" VerticalAlign="bottom" TextAlign="left" BorderBottomStyle="none" BorderBottomWidth="3pt" BorderBottomColor="#000000" Width="15.71625cm">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <xhtml:p xhtml:style="color: #029089;text-align: right;">•&#160;&#160;•&#160;&#160;•&#160;&#160;•&#160;&#160;•&#160;&#160;•&#160;&#160;</xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame Flow="footer" Anchors="" Right="-0.21875in" Bottom="-69px" X="0in" Y="25.32063cm" ColumnCount="1" PaddingLeft="0in" PaddingRight="0in" PaddingTop="0in" PaddingBottom="0in" FlowIndex="1" Height="1.243542cm" VerticalAlign="middle" TextAlign="center" BorderTopStyle="none" BorderTopWidth="0px" Width="15.58396cm" BorderLeftStyle="none" BorderLeftWidth="0px" BorderRightStyle="none" BorderRightWidth="0px" BorderBottomStyle="none" BorderBottomWidth="0px">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:head>
+                    </xhtml:head>
+                    <xhtml:body>
+                        <xhtml:table xhtml:style="width: 100%;">
+                            <xhtml:col />
+                            <xhtml:col />
+                            <xhtml:col />
+                            <xhtml:tbody>
+                                <xhtml:tr>
+                                    <xhtml:td>
+                                        <xhtml:p xhtml:class="Footer" xhtml:style="font-style: italic;"><MadCap:variable xhtml:name="pdfVars.Title" />
+                                        </xhtml:p>
+                                    </xhtml:td>
+                                    <xhtml:td>&#160;</xhtml:td>
+                                    <xhtml:td xhtml:style="text-align: right;">
+                                        <xhtml:p xhtml:class="Footer"><MadCap:variable xhtml:name="System.PageNumber" />
+                                        </xhtml:p>
+                                    </xhtml:td>
+                                </xhtml:tr>
+                            </xhtml:tbody>
+                        </xhtml:table>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+    </Page>
+    <Page Width="800" Height="800" Padding="20px" PageSize="A4" PageType="title" PaddingLeft="3.5cm" PaddingRight="2.5cm" PaddingTop="2.5cm" PaddingBottom="2.5cm" Name="Title">
+        <Frame X="-36px" Y="27px" Width="653px" Height="354px" Right="-49px" Bottom="554px" Anchors="" />
+        <Frame X="151px" Y="830px" Width="413px" Height="110px" Flow="decoration0" Right="4px" Bottom="-5px">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+    </Page>
+    <Page Width="800" Height="800" Padding="20px" PageSize="A4" PageType="empty" Name="Empty" PaddingRight="3.5cm" PaddingLeft="2.5cm" PaddingTop="2.5cm" PaddingBottom="2.5cm">
+    </Page>
+</PageStyles>

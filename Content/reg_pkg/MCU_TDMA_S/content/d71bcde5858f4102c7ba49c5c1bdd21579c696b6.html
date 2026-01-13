@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">SCFG_INTRSTATUS</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x44</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Secure Configuration Interrupt Status</p>
+<p>This register shows the interrupt status for security access violations.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_1"><td>[31:17]</td>
+<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
+</tr>
+<tr id="STAT_SECACCVIO"><td>[16]</td>
+<td><a href="#STAT_SECACCVIO.desc">STAT_SECACCVIO</a></td>
+<td><span>rw</span>,<span>woclr</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#STAT_SECACCVIO" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_0"><td>[15:1]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+<tr id="INTR_SECACCVIO"><td>[0]</td>
+<td><a href="#INTR_SECACCVIO.desc">INTR_SECACCVIO</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#INTR_SECACCVIO" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="STAT_SECACCVIO.desc">STAT_SECACCVIO<a class="headerlink" href="#STAT_SECACCVIO.desc" title="Permalink to this headline"></a></h3>
+<p>Secure Access Violation Status. Set to '1' when a security violation occurred. Write '1' to clear.</p>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="INTR_SECACCVIO.desc">INTR_SECACCVIO<a class="headerlink" href="#INTR_SECACCVIO.desc" title="Permalink to this headline"></a></h3>
+<p>Secure Access Violation Interrupt Status. Set to '1' when SCFG.STAT_SECACCVIO is asserted and SCFG.INTREN_SECACCVIO = 1. Cleared automatically when STAT_SECACCVIO is cleared.</p>
+

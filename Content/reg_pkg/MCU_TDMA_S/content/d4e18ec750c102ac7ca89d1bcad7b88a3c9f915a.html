@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">CH_YSIZE</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x103c</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Channel Y Dimensions Size Register</p>
+<p>This register defines the number of lines copied during the DMA command up to 16 bits in the Y dimension. The read and write size of the command may be different for some transfer types. When read during the execution of the DMA command, the register shows the remaining number of lines in both read and write directions.</p>
+<p>The content of this register can be updated during command linking by setting bit[15] in the command link header.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="DESYSIZE"><td>[31:16]</td>
+<td><a href="#DESYSIZE.desc">DESYSIZE</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DESYSIZE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="SRCYSIZE"><td>[15:0]</td>
+<td><a href="#SRCYSIZE.desc">SRCYSIZE</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#SRCYSIZE" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="DESYSIZE.desc">DESYSIZE<a class="headerlink" href="#DESYSIZE.desc" title="Permalink to this headline"></a></h3>
+<p>Destination Y dimension or number of lines. Not present when HAS_2D is 0. HAS_WRAP or HAS_STREAM configuration needs to be set to allow writes to this register, otherwise it is read-only.</p>
+<h3 id="SRCYSIZE.desc">SRCYSIZE<a class="headerlink" href="#SRCYSIZE.desc" title="Permalink to this headline"></a></h3>
+<p>Source Y dimension or number of lines. Not present when HAS_2D is 0.</p>
+

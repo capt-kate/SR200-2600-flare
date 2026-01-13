@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">AMC_ACC_ZMP_DATA</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x100</dd><dt>Size:</dt><dd class="address">0x4</dd><dt>Array Dimensions:</dt><dd>[5]</dd><dt>Array Stride:</dt><dd>+0x4</dd><dt>Total Size:</dt><dd class="address">0x14</dd></dl><h2>Description</h2>
+<p>ZMP Operands<p></p>
+• M (APB Byte Address Offset: 100h)- Moduli for all ZMP operations.- Its value must be a prime (or odd) number.- M operand shall be larger than all other operands.<p></p>
+• X (APB Byte Address Offset: 104h)- Multiplicand for Montgomery Multiplication and Modular<p></p>
+Multiplication.- Base of exponentiation for Modular Exponentiation and Modular Inverse.- Addend for Modular Addition- Minuend for Modular Subtraction<p></p>
+• Y (APB Byte Address Offset: 108h)- Multiplicand for Montgomery Multiplication and Modular<p></p>
+Multiplication..- Summand for Modular Addition- Subtrahend for Modular Subtraction<p></p>
+• Z (APB Byte Address Offset: 10Ch)- Montgomery domain conversion parameter (R=2^2n Mod<p></p>
+M) for all ZMP operations, except Montgomery Multiplication and Pre-Computation.- Computation Result for all ZMP operations<p></p>
+Notes:<p></p>
+1. Operand should be programmed from LSB to MSB.<p></p>
+2. If a ZMP operation is performed right after the Pre-Computation and that operation requires the R, it is ok to not to unload/load the R after Pre-Computation because the Z and R are sharing the same memory space.<p></p>
+</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="amc_acc_zmp_data"><td>[31:0]</td>
+<td><a href="#amc_acc_zmp_data.desc">amc_acc_zmp_data</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#amc_acc_zmp_data" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="amc_acc_zmp_data.desc">amc_acc_zmp_data<a class="headerlink" href="#amc_acc_zmp_data.desc" title="Permalink to this headline"></a></h3>
+

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">FEATURES</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x20</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>The FEATURES register returns the state of various build-time parameter values.
+NOTE: DEPRECATED - for backward compatibility only. Use BUILD_CFGx register(s) instead.
+This register will be DELETED in the next release of the core.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31:10]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="AES_256"><td>[9]</td>
+<td><a href="#AES_256.desc">AES_256</a></td>
+<td><span>r</span></td>
+<td>0x1</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#AES_256" title="Permalink to this row"></a></td>
+</tr>
+<tr id="PS_PRESENT"><td>[8]</td>
+<td><a href="#PS_PRESENT.desc">PS_PRESENT</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#PS_PRESENT" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DIAG_LEVEL_NS"><td>[7]</td>
+<td><a href="#DIAG_LEVEL_NS.desc">DIAG_LEVEL_NS</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DIAG_LEVEL_NS" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DIAG_LEVEL_CLP800"><td>[6:4]</td>
+<td><a href="#DIAG_LEVEL_CLP800.desc">DIAG_LEVEL_CLP800</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DIAG_LEVEL_CLP800" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DIAG_LEVEL_ST_HLT"><td>[3:1]</td>
+<td><a href="#DIAG_LEVEL_ST_HLT.desc">DIAG_LEVEL_ST_HLT</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DIAG_LEVEL_ST_HLT" title="Permalink to this row"></a></td>
+</tr>
+<tr id="SECURE_RST_STATE"><td>[0]</td>
+<td><a href="#SECURE_RST_STATE.desc">SECURE_RST_STATE</a></td>
+<td><span>r</span></td>
+<td>0x1</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#SECURE_RST_STATE" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="AES_256.desc">AES_256<a class="headerlink" href="#AES_256.desc" title="Permalink to this headline"></a></h3>
+<p>Indicates whether the instantiated AES is 128-bit or 256-bit.</p>
+<h3 id="PS_PRESENT.desc">PS_PRESENT<a class="headerlink" href="#PS_PRESENT.desc" title="Permalink to this headline"></a></h3>
+<p>Determines whether the content of the NPA_DATAx registers is used as a Personalization String during the Create_State command.</p>
+<h3 id="DIAG_LEVEL_NS.desc">DIAG_LEVEL_NS<a class="headerlink" href="#DIAG_LEVEL_NS.desc" title="Permalink to this headline"></a></h3>
+<p>Level of diagnostic circuitry for Noise Source output Registers.</p>
+<h3 id="DIAG_LEVEL_CLP800.desc">DIAG_LEVEL_CLP800<a class="headerlink" href="#DIAG_LEVEL_CLP800.desc" title="Permalink to this headline"></a></h3>
+<p>Level of diagnostic circuitry for DWC_trng (Noise Source).</p>
+<h3 id="DIAG_LEVEL_ST_HLT.desc">DIAG_LEVEL_ST_HLT<a class="headerlink" href="#DIAG_LEVEL_ST_HLT.desc" title="Permalink to this headline"></a></h3>
+<p>Level of diagnostic circuitry for the health test.</p>
+<h3 id="SECURE_RST_STATE.desc">SECURE_RST_STATE<a class="headerlink" href="#SECURE_RST_STATE.desc" title="Permalink to this headline"></a></h3>
+<p>Indicates if the core resets to MISSION or TEST mode.</p>
+

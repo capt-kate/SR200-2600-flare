@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">CH_CMD</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1000</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Channel DMA Command Register</p>
+<p>This register allows the SW to control the operation of a DMA command.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_0"><td>[31:6]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RESUMECMD"><td>[5]</td>
+<td><a href="#RESUMECMD.desc">RESUMECMD</a></td>
+<td><span>rw</span>,<span>woset</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RESUMECMD" title="Permalink to this row"></a></td>
+</tr>
+<tr id="PAUSECMD"><td>[4]</td>
+<td><a href="#PAUSECMD.desc">PAUSECMD</a></td>
+<td><span>rw</span>,<span>woset</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#PAUSECMD" title="Permalink to this row"></a></td>
+</tr>
+<tr id="STOPCMD"><td>[3]</td>
+<td><a href="#STOPCMD.desc">STOPCMD</a></td>
+<td><span>rw</span>,<span>woset</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#STOPCMD" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DISABLECMD"><td>[2]</td>
+<td><a href="#DISABLECMD.desc">DISABLECMD</a></td>
+<td><span>rw</span>,<span>woset</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DISABLECMD" title="Permalink to this row"></a></td>
+</tr>
+<tr id="CLEARCMD"><td>[1]</td>
+<td><a href="#CLEARCMD.desc">CLEARCMD</a></td>
+<td><span>rw</span>,<span>woset</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#CLEARCMD" title="Permalink to this row"></a></td>
+</tr>
+<tr id="ENABLECMD"><td>[0]</td>
+<td><a href="#ENABLECMD.desc">ENABLECMD</a></td>
+<td><span>rw</span>,<span>woset</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#ENABLECMD" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="RESUMECMD.desc">RESUMECMD<a class="headerlink" href="#RESUMECMD.desc" title="Permalink to this headline"></a></h3>
+<p>Resume Current DMA Operation. Writing this bit to '1' means that the DMAC can continue the operation of a paused channel. Can be set to '1' when the PAUSECMD or a STAT_DONE assertion with DONEPAUSEEN set '1' results in pausing the current DMA channel operation indicated by the STAT_PAUSED and STAT_RESUMEWAIT bits. Otherwise, writes to this bit are ignored. This field is always read as '0'.</p>
+<h3 id="PAUSECMD.desc">PAUSECMD<a class="headerlink" href="#PAUSECMD.desc" title="Permalink to this headline"></a></h3>
+<p>Pause Current DMA Operation. Once set to '1' the status cannot change until the DMA operation reached the paused state indicated by the STAT_PAUSED and STAT_RESUMEWAIT bits. The bit can be set by software by writing it to '1', the current active DMA operation is paused as soon as possible, but the ENABLECMD bit remains '1' to show that the operation is still active. Cleared automatically when STAT_RESUMEWAIT is set and the RESUMECMD bit is written to '1', meaning that the doftware continues the operation of the channel. Note that each DMA channel can have other sources of a pause request and this field will not reflect the state of the other sources. When set at the same time as ENABLECMD or when the channel is not enabled then write to this register is ignored.</p>
+<h3 id="STOPCMD.desc">STOPCMD<a class="headerlink" href="#STOPCMD.desc" title="Permalink to this headline"></a></h3>
+<p>Stop Current DMA Operation. Once set to '1', this remains high until the DMA channel is stopped cleanly. Then this returns to '0' and ENABLECMD is also cleared. When trying to set at the same time as ENABLECMD or when the channel is not enabled then write to this register is ignored. Note that each DMA channel can have other sources of a stop request and this field does not reflect the state of the other sources.</p>
+<h3 id="DISABLECMD.desc">DISABLECMD<a class="headerlink" href="#DISABLECMD.desc" title="Permalink to this headline"></a></h3>
+<p>Disable DMA Operation at the end of the current DMA command operation. Once set to '1', this field stays high and the current DMA command is allowed to complete, but the DMA does not fetch the next linked command or auto-restarts the DMA command even if they are set. Once the DMA has stopped, it returns to '0' and ENABLECMD is also cleared. When set at the same time as ENABLECMD or when the channel is not enabled then write to this register is ignored.</p>
+<h3 id="CLEARCMD.desc">CLEARCMD<a class="headerlink" href="#CLEARCMD.desc" title="Permalink to this headline"></a></h3>
+<p>DMA Clear command. When set to '1', it remains high until all DMA Channel registers and any internal queues and buffers are cleared, before returning to '0'. When set at the same time as ENABLECMD or while the DMA channel is already enabled, the clear only occurs after any ongoing DMA operation is either completed, stopped or disabled and the ENABLECMD bit is deasserted by the DMA.</p>
+<h3 id="ENABLECMD.desc">ENABLECMD<a class="headerlink" href="#ENABLECMD.desc" title="Permalink to this headline"></a></h3>
+<p>Channel Enable. When set to '1', enable to channel to run its programmed task. When set to '1', it cannot be set back to '0', and this field automatically clears to '0' when a DMA process is completed. To force the DMA to stop prematurely, you must use CH_CMD.STOPCMD instead.</p>
+

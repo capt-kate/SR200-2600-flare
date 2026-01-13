@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Comment=""
+    Name="CompanyName"
+    EvaluatedDefinition="Synaptics, Incorporated">Synaptics, Incorporated</Variable>
+  <Variable
+    Name="NewDateTimeVariable"
+    Comment=""
+    Type="DateTime"
+    LastUpdated="2025-07-10T14:16:15.6771628-07:00"
+    EvaluatedDefinition="yyyy">yyyy</Variable>
+  <Variable
+    Name="ProductName"
+    Comment=""
+    EvaluatedDefinition="SL2610">SL2610</Variable>
+  <Variable
+    Name="PackedStructsUnions"
+    Comment=""
+    EvaluatedDefinition="PackedStructsUnions">PackedStructsUnions</Variable>
+  <Variable
+    Name="Component Registers"
+    Comment=""
+    EvaluatedDefinition="Component Registers">Component Registers</Variable>
+  <Variable
+    Name="ProductTitle"
+    Comment=""
+    EvaluatedDefinition="System Manager Memory Map">System Manager Memory Map</Variable>
+</CatapultVariableSet>

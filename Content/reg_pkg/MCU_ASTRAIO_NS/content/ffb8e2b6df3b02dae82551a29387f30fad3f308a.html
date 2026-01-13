@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">gpio_cntrl_fifo_config</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x128</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Main configuration for GPIO control fifos</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31:18]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="fifo1_reset"><td>[17]</td>
+<td><a href="#fifo1_reset.desc">fifo1_reset</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#fifo1_reset" title="Permalink to this row"></a></td>
+</tr>
+<tr id="fifo1_enable"><td>[16]</td>
+<td><a href="#fifo1_enable.desc">fifo1_enable</a></td>
+<td><span>rw</span></td>
+<td>0x1</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#fifo1_enable" title="Permalink to this row"></a></td>
+</tr>
+<tr class="reserved-field"><td>[15:2]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="fifo0_reset"><td>[1]</td>
+<td><a href="#fifo0_reset.desc">fifo0_reset</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#fifo0_reset" title="Permalink to this row"></a></td>
+</tr>
+<tr id="fifo0_enable"><td>[0]</td>
+<td><a href="#fifo0_enable.desc">fifo0_enable</a></td>
+<td><span>rw</span></td>
+<td>0x1</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#fifo0_enable" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="fifo1_reset.desc">fifo1_reset<a class="headerlink" href="#fifo1_reset.desc" title="Permalink to this headline"></a></h3>
+<p>Resets the fifo state including overflow with an active high signal</p>
+<h3 id="fifo1_enable.desc">fifo1_enable<a class="headerlink" href="#fifo1_enable.desc" title="Permalink to this headline"></a></h3>
+<p>Enables the GPIO control FIFO1. You can load instructions and release with the enable</p>
+<h3 id="fifo0_reset.desc">fifo0_reset<a class="headerlink" href="#fifo0_reset.desc" title="Permalink to this headline"></a></h3>
+<p>Resets the fifo state including overflow with an active high signal</p>
+<h3 id="fifo0_enable.desc">fifo0_enable<a class="headerlink" href="#fifo0_enable.desc" title="Permalink to this headline"></a></h3>
+<p>Enables the GPIO control FIFO0. You can load instructions and release with the enable</p>
+

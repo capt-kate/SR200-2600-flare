@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">CH_ERRINFO</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1490</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Channel Error Information Register</p>
+<p>This register provides information about internal errors encountered during command exectuion by the DMA channel.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="ERRINFO"><td>[31:16]</td>
+<td><a href="#ERRINFO.desc">ERRINFO</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#ERRINFO" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_1"><td>[15:9]</td>
+<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
+</tr>
+<tr id="CTXERR"><td>[8]</td>
+<td><a href="#CTXERR.desc">CTXERR</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#CTXERR" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_0"><td>[7:2]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+<tr id="CFGERR"><td>[1]</td>
+<td><a href="#CFGERR.desc">CFGERR</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#CFGERR" title="Permalink to this row"></a></td>
+</tr>
+<tr id="BUSERR"><td>[0]</td>
+<td><a href="#BUSERR.desc">BUSERR</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#BUSERR" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="ERRINFO.desc">ERRINFO<a class="headerlink" href="#ERRINFO.desc" title="Permalink to this headline"></a></h3>
+<p>Error information Register. Additional information for the error that is encountered by the DMA. The meaning of the bits is IMPLEMENTATION DEFINED.</p>
+<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="CTXERR.desc">CTXERR<a class="headerlink" href="#CTXERR.desc" title="Permalink to this headline"></a></h3>
+<p>Virtual Channel Context Memory Access Error Flag. Set to '1' when accessing the context memory area of this channel results in an error.</p>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="CFGERR.desc">CFGERR<a class="headerlink" href="#CFGERR.desc" title="Permalink to this headline"></a></h3>
+<p>Configuration Error Flag. Set when the DMA command is enabled or a linked command is read but it is configured in a mode that is not supported by the implementation.</p>
+<h3 id="BUSERR.desc">BUSERR<a class="headerlink" href="#BUSERR.desc" title="Permalink to this headline"></a></h3>
+<p>Bus Error Flag. Set when the DMA encounters a bus error during data or command read transfers.</p>
+

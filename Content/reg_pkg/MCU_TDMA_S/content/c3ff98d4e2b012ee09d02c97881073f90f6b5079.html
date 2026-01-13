@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">CH_TMPLTCFG</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1040</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Channel Template Configuration Register</p>
+<p>This register provides configuration settings when using template pattern based copy operations.</p>
+<p>The content of this register can be updated during command linking by setting bit[16] in the command link header.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_2"><td>[31:21]</td>
+<td><a href="#RAZWI_2.desc">RAZWI_2</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_2" title="Permalink to this row"></a></td>
+</tr>
+<tr id="DESTMPLTSIZE"><td>[20:16]</td>
+<td><a href="#DESTMPLTSIZE.desc">DESTMPLTSIZE</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#DESTMPLTSIZE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_1"><td>[15:13]</td>
+<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
+</tr>
+<tr id="SRCTMPLTSIZE"><td>[12:8]</td>
+<td><a href="#SRCTMPLTSIZE.desc">SRCTMPLTSIZE</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#SRCTMPLTSIZE" title="Permalink to this row"></a></td>
+</tr>
+<tr id="RAZWI_0"><td>[7:0]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="RAZWI_2.desc">RAZWI_2<a class="headerlink" href="#RAZWI_2.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="DESTMPLTSIZE.desc">DESTMPLTSIZE<a class="headerlink" href="#DESTMPLTSIZE.desc" title="Permalink to this headline"></a></h3>
+<p>Destination Template Size in number of transfers plus one.
+- 0: Destination template is disabled.
+- 1 to 31: DESTMPLT[DESTMPLTSIZE:0] is used as the destination template. Not present when HAS_TMPLT is 0.</p>
+<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="SRCTMPLTSIZE.desc">SRCTMPLTSIZE<a class="headerlink" href="#SRCTMPLTSIZE.desc" title="Permalink to this headline"></a></h3>
+<p>Source Template Size in number of transfers plus one.
+- 0: Source template is disabled.
+- 1 to 31: Bits SRCTMPLT[SRCTMPLTSIZE:0] is used as the source template. Not present when HAS_TMPLT is 0.</p>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+

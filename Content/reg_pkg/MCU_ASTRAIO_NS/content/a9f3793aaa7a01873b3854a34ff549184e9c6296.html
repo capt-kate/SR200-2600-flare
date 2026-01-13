@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">irq_out</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x54</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Sets the output IRQ configuration</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="mask1"><td>[31:24]</td>
+<td><a href="#mask1.desc">mask1</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#mask1" title="Permalink to this row"></a></td>
+</tr>
+<tr id="mask0"><td>[23:16]</td>
+<td><a href="#mask0.desc">mask0</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#mask0" title="Permalink to this row"></a></td>
+</tr>
+<tr class="reserved-field"><td>[15:8]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="irq"><td>[7:0]</td>
+<td><a href="#irq.desc">irq</a></td>
+<td><span>r</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#irq" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="mask1.desc">mask1<a class="headerlink" href="#mask1.desc" title="Permalink to this headline"></a></h3>
+<p>Sets the mask for IRQ pin[1] on the block</p>
+<h3 id="mask0.desc">mask0<a class="headerlink" href="#mask0.desc" title="Permalink to this headline"></a></h3>
+<p>Sets the mask for IRQ pin[0] on the block</p>
+<h3 id="irq.desc">irq<a class="headerlink" href="#irq.desc" title="Permalink to this headline"></a></h3>
+<p>Sets the input IRQ control bits</p>
+

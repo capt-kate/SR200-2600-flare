@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">MODE</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x4</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>The MODE register is used to enable or disable certain run-time features within the DWC TRNG NIST.
+This register can only be written when the core is not busy (see STAT.BUSY).
+the SEC_ALG field indicates the security algorithm for the DRBG, which determines the key size of the AES function. A SEC_ALG of 1 is only valid if the core is built with a 256-bit AES. If the AES module is an AES-128, the SEC_ALG never changes to one and a write of 1 to this field is ignored. This field must not change when the DRBG state is instantiated (that is, Create_State command has created an state for the DRBG). Any write to the SEC_ALG field while the DRBG state is instantiated is treated as a NOP.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31:9]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="KAT_SEL"><td>[8:7]</td>
+<td><a href="#KAT_SEL.desc">KAT_SEL</a></td>
+<td><span>rw</span></td>
+<td>0x2</td>
+<td><select id="_FieldValueEnumTesterKAT_SEL" class="field-value-enum-tester"
+data-name="KAT_SEL" onchange="onDecodedFieldEnumChange(this)"><option value="0x2">KAT_BOTH</option><option value="0x1">KAT_DF</option><option value="0x0">KAT_DRBG</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#KAT_SEL" title="Permalink to this row"></a></td>
+</tr>
+<tr id="KAT_VEC"><td>[6:5]</td>
+<td><a href="#KAT_VEC.desc">KAT_VEC</a></td>
+<td><span>rw</span></td>
+<td>0x3</td>
+<td><select id="_FieldValueEnumTesterKAT_VEC" class="field-value-enum-tester"
+data-name="KAT_VEC" onchange="onDecodedFieldEnumChange(this)"><option value="0x3">KAT_ALL</option><option value="0x0">KAT_VEC0</option><option value="0x1">KAT_VEC1</option><option value="0x2">KAT_VEC2</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#KAT_VEC" title="Permalink to this row"></a></td>
+</tr>
+<tr id="ADDIN_PRESENT"><td>[4]</td>
+<td><a href="#ADDIN_PRESENT.desc">ADDIN_PRESENT</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td><select id="_FieldValueEnumTesterADDIN_PRESENT" class="field-value-enum-tester"
+data-name="ADDIN_PRESENT" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">ADDIN_NOT_REQ</option><option value="0x1">ADDIN_REQ</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#ADDIN_PRESENT" title="Permalink to this row"></a></td>
+</tr>
+<tr id="PRED_RESIST"><td>[3]</td>
+<td><a href="#PRED_RESIST.desc">PRED_RESIST</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td><select id="_FieldValueEnumTesterPRED_RESIST" class="field-value-enum-tester"
+data-name="PRED_RESIST" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">PRED_DISABLE</option><option value="0x1">PRED_ENABLED</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#PRED_RESIST" title="Permalink to this row"></a></td>
+</tr>
+<tr class="reserved-field"><td>[2:1]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="SEC_ALG"><td>[0]</td>
+<td><a href="#SEC_ALG.desc">SEC_ALG</a></td>
+<td><span>rw</span></td>
+<td>0x1</td>
+<td><select id="_FieldValueEnumTesterSEC_ALG" class="field-value-enum-tester"
+data-name="SEC_ALG" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">SEC_128</option><option value="0x1">SEC_256</option></select></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#SEC_ALG" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="KAT_SEL.desc">KAT_SEL<a class="headerlink" href="#KAT_SEL.desc" title="Permalink to this headline"></a></h3>
+<p>Select test component for known-answer test</p>
+<table><tr><th colspan="3">enum KAT_SEL_enum_t</th></tr>
+<tr><td>KAT_BOTH</td>
+<td>0x2</td>
+<td><p>KAT on both DRBG and DF</p>
+</td>
+</tr>
+<tr><td>KAT_DF</td>
+<td>0x1</td>
+<td><p>KAT on conditioning component (Derivation Function)</p>
+</td>
+</tr>
+<tr><td>KAT_DRBG</td>
+<td>0x0</td>
+<td><p>KAT on DRBG</p>
+</td>
+</tr>
+</table><h3 id="KAT_VEC.desc">KAT_VEC<a class="headerlink" href="#KAT_VEC.desc" title="Permalink to this headline"></a></h3>
+<p>Select test vectors for known-answer test</p>
+<table><tr><th colspan="3">enum KAT_VEC_enum_t</th></tr>
+<tr><td>KAT_ALL</td>
+<td>0x3</td>
+<td><p>Run all 3 KAT vectors</p>
+</td>
+</tr>
+<tr><td>KAT_VEC0</td>
+<td>0x0</td>
+<td><p>KAT vector 0</p>
+</td>
+</tr>
+<tr><td>KAT_VEC1</td>
+<td>0x1</td>
+<td><p>KAT vector 1</p>
+</td>
+</tr>
+<tr><td>KAT_VEC2</td>
+<td>0x2</td>
+<td><p>KAT vector 2</p>
+</td>
+</tr>
+</table><h3 id="ADDIN_PRESENT.desc">ADDIN_PRESENT<a class="headerlink" href="#ADDIN_PRESENT.desc" title="Permalink to this headline"></a></h3>
+<p>Indicate availability of the Additional Input</p>
+<table><tr><th colspan="3">enum ADDIN_PRESENT_enum_t</th></tr>
+<tr><td>ADDIN_NOT_REQ</td>
+<td>0x0</td>
+<td><p>No Additional Input required from host</p>
+</td>
+</tr>
+<tr><td>ADDIN_REQ</td>
+<td>0x1</td>
+<td><p>Additional input must be provided by host</p>
+</td>
+</tr>
+</table><h3 id="PRED_RESIST.desc">PRED_RESIST<a class="headerlink" href="#PRED_RESIST.desc" title="Permalink to this headline"></a></h3>
+<p>Enable/disable prediction resistance</p>
+<table><tr><th colspan="3">enum PRED_RESIST_enum_t</th></tr>
+<tr><td>PRED_DISABLE</td>
+<td>0x0</td>
+<td><p>Prediction resistance is not required</p>
+</td>
+</tr>
+<tr><td>PRED_ENABLED</td>
+<td>0x1</td>
+<td><p>Prediction resistance is required</p>
+</td>
+</tr>
+</table><h3 id="SEC_ALG.desc">SEC_ALG<a class="headerlink" href="#SEC_ALG.desc" title="Permalink to this headline"></a></h3>
+<p>Select security strength in DRBG</p>
+<table><tr><th colspan="3">enum SEC_ALG_enum_t</th></tr>
+<tr><td>SEC_128</td>
+<td>0x0</td>
+<td><p>AES-128</p>
+</td>
+</tr>
+<tr><td>SEC_256</td>
+<td>0x1</td>
+<td><p>AES-256</p>
+</td>
+</tr>
+</table>

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">AXI Slave Control Register</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x8</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr class="reserved-field"><td>[31:18]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="axi_data_par_en"><td>[17]</td>
+<td><a href="#axi_data_par_en.desc">axi_data_par_en</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>AXI Data Bus Even Parity Check Enable</td>
+<td>H<a class="headerlink" href="#axi_data_par_en" title="Permalink to this row"></a></td>
+</tr>
+<tr id="axi_data_par_even"><td>[16]</td>
+<td><a href="#axi_data_par_even.desc">axi_data_par_even</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>AXI Data Bus Even Parity</td>
+<td>H<a class="headerlink" href="#axi_data_par_even" title="Permalink to this row"></a></td>
+</tr>
+<tr id="ahb_wr_seq_allow"><td>[15]</td>
+<td><a href="#ahb_wr_seq_allow.desc">ahb_wr_seq_allow</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>AHB Allows Sequential Write</td>
+<td>H<a class="headerlink" href="#ahb_wr_seq_allow" title="Permalink to this row"></a></td>
+</tr>
+<tr id="axi_sl_rd_prot"><td>[14:12]</td>
+<td><a href="#axi_sl_rd_prot.desc">axi_sl_rd_prot</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>AXI Slave Read Protect Mode</td>
+<td>H<a class="headerlink" href="#axi_sl_rd_prot" title="Permalink to this row"></a></td>
+</tr>
+<tr class="reserved-field"><td>[11]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="axi_sl_wr_prot"><td>[10:8]</td>
+<td><a href="#axi_sl_wr_prot.desc">axi_sl_wr_prot</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>AXI Slave Write Protect Mode</td>
+<td>H<a class="headerlink" href="#axi_sl_wr_prot" title="Permalink to this row"></a></td>
+</tr>
+<tr class="reserved-field"><td>[7]</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr id="axi_sl_bypass_fifo"><td>[6]</td>
+<td><a href="#axi_sl_bypass_fifo.desc">axi_sl_bypass_fifo</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>AXI Slave Bypass QFIFO Enable</td>
+<td>H<a class="headerlink" href="#axi_sl_bypass_fifo" title="Permalink to this row"></a></td>
+</tr>
+<tr id="axi_sl_rd_qena"><td>[5]</td>
+<td><a href="#axi_sl_rd_qena.desc">axi_sl_rd_qena</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>AXI Slave Queue Read Operation Enable</td>
+<td>H<a class="headerlink" href="#axi_sl_rd_qena" title="Permalink to this row"></a></td>
+</tr>
+<tr id="axi_sl_bus_sz"><td>[4]</td>
+<td><a href="#axi_sl_bus_sz.desc">axi_sl_bus_sz</a></td>
+<td><span>rw</span></td>
+<td>0x1</td>
+<td></td>
+<td>AXI Slave Bus Size</td>
+<td>H<a class="headerlink" href="#axi_sl_bus_sz" title="Permalink to this row"></a></td>
+</tr>
+<tr id="out_axi_sl_word_swp"><td>[3]</td>
+<td><a href="#out_axi_sl_word_swp.desc">out_axi_sl_word_swp</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>Slave AXI Output Word Swap Enable</td>
+<td>H<a class="headerlink" href="#out_axi_sl_word_swp" title="Permalink to this row"></a></td>
+</tr>
+<tr id="out_axi_sl_byte_swp"><td>[2]</td>
+<td><a href="#out_axi_sl_byte_swp.desc">out_axi_sl_byte_swp</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>Slave AXI Output Byte Swap Enable</td>
+<td>H<a class="headerlink" href="#out_axi_sl_byte_swp" title="Permalink to this row"></a></td>
+</tr>
+<tr id="in_axi_sl_word_swp"><td>[1]</td>
+<td><a href="#in_axi_sl_word_swp.desc">in_axi_sl_word_swp</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>Slave AXI Input Word Swap Enable</td>
+<td>H<a class="headerlink" href="#in_axi_sl_word_swp" title="Permalink to this row"></a></td>
+</tr>
+<tr id="in_axi_sl_byte_swp"><td>[0]</td>
+<td><a href="#in_axi_sl_byte_swp.desc">in_axi_sl_byte_swp</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>Slave AXI Input Byte Swap Enable</td>
+<td>H<a class="headerlink" href="#in_axi_sl_byte_swp" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="axi_data_par_en.desc">axi_data_par_en - AXI Data Bus Even Parity Check Enable<a class="headerlink" href="#axi_data_par_en.desc" title="Permalink to this headline"></a></h3>
+<p>When the following bits are set, the AXI Data Bus Even Parity Check is enabled.<p></p>
+</p>
+<h3 id="axi_data_par_even.desc">axi_data_par_even - AXI Data Bus Even Parity<a class="headerlink" href="#axi_data_par_even.desc" title="Permalink to this headline"></a></h3>
+<p>When the following bits are set, the AXI Data Bus Even Parity is selected.<p></p>
+</p>
+<h3 id="ahb_wr_seq_allow.desc">ahb_wr_seq_allow - AHB Allows Sequential Write<a class="headerlink" href="#ahb_wr_seq_allow.desc" title="Permalink to this headline"></a></h3>
+<p>When this bit is set, the write address of the sequential write will not be written into FIFO. When the this bit is reset, the write address and data will be written into FIFO.<p></p>
+This mode is reserved for AHB bus.<p></p>
+</p>
+<h3 id="axi_sl_rd_prot.desc">axi_sl_rd_prot - AXI Slave Read Protect Mode<a class="headerlink" href="#axi_sl_rd_prot.desc" title="Permalink to this headline"></a></h3>
+<p>When the following bits are set, the AXI will check the AXI Read Protect mode of the incoming Read Address Field before performing the action:<p></p>
+AXI_SL_RD_PROT[0] = 1, only privileged access can be performed.<p></p>
+AXI_SL_RD_PROT[1] = 1, only secured access can be performed.<p></p>
+AXI_SL_RD_PROT[2] = 1, only data access can be performed.<p></p>
+</p>
+<h3 id="axi_sl_wr_prot.desc">axi_sl_wr_prot - AXI Slave Write Protect Mode<a class="headerlink" href="#axi_sl_wr_prot.desc" title="Permalink to this headline"></a></h3>
+<p>When the following bits are set, the AXI will check the AXI Write Protect mode of the incmming Read Address Field before performing the action:<p></p>
+AXI_SL_WR_PROT[0] = 1, only privileged access can be performed.<p></p>
+AXI_SL_WR_PROT[1] = 1, only secured access can be performed.<p></p>
+AXI_SL_WR_PROT[2] = 1, only data access can be performed.<p></p>
+</p>
+<h3 id="axi_sl_bypass_fifo.desc">axi_sl_bypass_fifo - AXI Slave Bypass QFIFO Enable<a class="headerlink" href="#axi_sl_bypass_fifo.desc" title="Permalink to this headline"></a></h3>
+<p>When this bit is set, the read or write command is bypassing the AXI slave input FIFO.<p></p>
+</p>
+<h3 id="axi_sl_rd_qena.desc">axi_sl_rd_qena - AXI Slave Queue Read Operation Enable<a class="headerlink" href="#axi_sl_rd_qena.desc" title="Permalink to this headline"></a></h3>
+<p>When this bit is set, the read command is allowed to be stored in the Input FIFO interleaved w/ write command.<p></p>
+</p>
+<h3 id="axi_sl_bus_sz.desc">axi_sl_bus_sz - AXI Slave Bus Size<a class="headerlink" href="#axi_sl_bus_sz.desc" title="Permalink to this headline"></a></h3>
+<p>This register provides the maximum bus size. The value is indicated as the following:<p></p>
+0 - 32 bit bus<p></p>
+1 - 62 bit bus<p></p>
+</p>
+<h3 id="out_axi_sl_word_swp.desc">out_axi_sl_word_swp - Slave AXI Output Word Swap Enable<a class="headerlink" href="#out_axi_sl_word_swp.desc" title="Permalink to this headline"></a></h3>
+<p>The upper and lower word of the 64 bit data bus are swapped.<p></p>
+</p>
+<h3 id="out_axi_sl_byte_swp.desc">out_axi_sl_byte_swp - Slave AXI Output Byte Swap Enable<a class="headerlink" href="#out_axi_sl_byte_swp.desc" title="Permalink to this headline"></a></h3>
+<p>The byte locations within the 32 bit word are swapped.<p></p>
+</p>
+<h3 id="in_axi_sl_word_swp.desc">in_axi_sl_word_swp - Slave AXI Input Word Swap Enable<a class="headerlink" href="#in_axi_sl_word_swp.desc" title="Permalink to this headline"></a></h3>
+<p>The upper and lower word of the 64 bit data bus are swapped.<p></p>
+</p>
+<h3 id="in_axi_sl_byte_swp.desc">in_axi_sl_byte_swp - Slave AXI Input Byte Swap Enable<a class="headerlink" href="#in_axi_sl_byte_swp.desc" title="Permalink to this headline"></a></h3>
+<p>The byte locations within the 32 bit word are swapped.<p></p>
+</p>
+

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+<h1 id="_Content.name">SEC_SIGNALPTR</h1>
+<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1f8</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
+<p>Secure Unit Signal Pointer</p>
+<p>This register can set a pointer to an internal register that shows the state of the Secure interfaces attached to the DMAC.</p>
+<h2>Contents</h2>
+<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
+<tr id="RAZWI_0"><td>[31:4]</td>
+<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+</tr>
+<tr id="SECSIGNALPTR"><td>[3:0]</td>
+<td><a href="#SECSIGNALPTR.desc">SECSIGNALPTR</a></td>
+<td><span>rw</span></td>
+<td>0x0</td>
+<td></td>
+<td>-</td>
+<td>H<a class="headerlink" href="#SECSIGNALPTR" title="Permalink to this row"></a></td>
+</tr>
+</table><p><label>Encoded Register Value:</label></p>
+<hr/><h2>Field Descriptions</h2>
+<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+<p>Read-As-Zero, Writes Ignored.</p>
+<h3 id="SECSIGNALPTR.desc">SECSIGNALPTR<a class="headerlink" href="#SECSIGNALPTR.desc" title="Permalink to this headline"></a></h3>
+<p>Secure DMA Unit signal pointer used to select which inputs to view using SIGNALVAL register. Pointer values, x, are:
+- 0 to 7: Trigger Input Requests [31+32<em>x : 32</em>x]
+- 8 to 9: Trigger output Acknowledges [31+32<em>(x-8) : 32</em>(x-8)]
+- 10 to 11: GPO output value [31+32<em>(x-10) : 32</em>(x-10)], only present when HAS_GPOSEL is set.
+- Others: Reserved</p>
+
