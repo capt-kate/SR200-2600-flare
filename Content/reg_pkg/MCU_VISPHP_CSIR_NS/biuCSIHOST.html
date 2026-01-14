@@ -1,1229 +1,2045 @@
-<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>CSIHOST</title></head>
-<body>
-<h1>CSIHOST
-        </h1>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="csihost.htm#CSIHOST_">CSIHOST_mem</a></p>
-</td>
-<td><p>32'h00000000</p>
-</td>
-<td><p>Dummy (16KB) register space for MIPI CSI2 Host Controller 
-Internal memory</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[31:0]</p>
-</td>
-<td><p>Memory</p>
-</td>
-<td><p> 
-</p>
-</td>
-<td><p>Memory</p>
-</td>
-</tr>
-</table><p> 
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYCTRL">CSIHOST_GENH_PHYCTRL</a></p>
-</td>
-<td><p>32'h00004000</p>
-</td>
-<td><p>General Control and Status registers for DPHY-RX I/Os and 
-wrapper logic</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[6:0]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYCTRL_hsfreqrange">hsfreqrange</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>High-speed Frequency Range Selection 
-See Operating Frequency Range selection and default values. This 
-signal should be set with the D-PHY in power-down and must not 
-change during operation. 
-This signal can be overridden through D-PHY test control 
-registers 
-Refer Table4-4 in DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[14:7]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYCTRL_cfgclkfreqrange">cfgclkfreqrange</a></p>
-</td>
-<td><p>0x20</p>
-</td>
-<td><p>System clock frequency configuration preset. Should be set 
-according to the following equation: 
-cfgclkfreqrange[5:0] = round[(Fcfg_clk(MHz)-17)*4] 
-Refer Table4-4 in DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[15:15]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYCTRL_cont_en">cont_en</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>This signal places the macro in IO continuity test mode. All 
-other 
-interface signals should be placed in their default values. 
-Refer Table4-6 in DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[16:16]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYCTRL_biston">biston</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Set 1 to start the DPHY-RX bist test. 
-Refer Table 4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[17:17]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYCTRL_cfg_clk_off">cfg_clk_off</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>PHY configuration clock (cfg_clk) gating control. Set 1 to stop 
-cfg_clk</p>
-</td>
-</tr>
-<tr><td><p>[20:18]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYCTRL_txclkescdiv">txclkescdiv</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape mode transmit clock which is used to generate escape 
-sequences in DPHY can’t be greater than 20MHz. 
-The txclkesc clock input coming from global clock module of 
-imageProc subsystem can have higher frequency. This clock is 
-divided and fed to DPHY-RX 
-0:div2 
-1:div3 
-2:div4 
-3:div6 
-4:div8 
-5:div12 
-others:div2</p>
-</td>
-</tr>
-<tr><td><p>[21:21]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYCTRL_txclkescen">txclkescen</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Txclkesc divider enable 
-Keep txclkescen = 0 when txclkescdiv is being written. Set 
-txclkescen to 1 after txclkescdiv is configured</p>
-</td>
-</tr>
-<tr><td><p>[22:22]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYCTRL_txclkesc_off">txclkesc_off</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Txclkesc clock going to the DPHY can be stopped by setting this 
-bit to 1</p>
-</td>
-</tr>
-</table><p> 
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYCTRL1">CSIHOST_GENH_PHYCTRL1</a></p>
-</td>
-<td><p>32'h00004004</p>
-</td>
-<td><p> 
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYCTRL1_shutdownz">shutdownz</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table9-3 in DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYCTRL1_rstz">rstz</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table9-3 in DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[2:2]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYCTRL1_rx_iso18_en">rx_iso18_en</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>1'b0 - non isolation operating mode 
-1'b1 - PHY will power down the 1.8V domain,</p>
-</td>
-</tr>
-<tr><td><p>[3:3]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYCTRL1_ateen">ateen</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Write 1 to enable DPHY controllability through BIU register. 
-Refer Table9-3 in DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[4:4]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYCTRL1_tpsel">tpsel</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Write 1 to enable DPHY test interface controllability through 
-BIU registers. Refer Table9-3 in DPHY-RX databook</p>
-</td>
-</tr>
-</table><p> 
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYTESTDIN">CSIHOST_GENH_PHYTESTDIN</a></p>
-</td>
-<td><p>32'h00004008</p>
-</td>
-<td><p> 
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[7:0]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYTESTDIN_value">value</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table9-3 in DPHY-RX databook</p>
-</td>
-</tr>
-</table><p> 
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYTESTEN">CSIHOST_GENH_PHYTESTEN</a></p>
-</td>
-<td><p>32'h0000400C</p>
-</td>
-<td><p> 
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYTESTEN_value">value</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table9-3 in DPHY-RX databook</p>
-</td>
-</tr>
-</table><p> 
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYTESTCLK">CSIHOST_GENH_PHYTESTCLK</a></p>
-</td>
-<td><p>32'h00004010</p>
-</td>
-<td><p> 
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYTESTCLK_value">value</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table9-3 in DPHY-RX databook</p>
-</td>
-</tr>
-</table><p> 
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYTESTCLR">CSIHOST_GENH_PHYTESTCLR</a></p>
-</td>
-<td><p>32'h00004014</p>
-</td>
-<td><p> 
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYTESTCLR_value">value</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table9-3 in DPHY-RX databook</p>
-</td>
-</tr>
-</table><p> 
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_CTRL">CSIHOST_GENH_CTRL</a></p>
-</td>
-<td><p>32'h00004018</p>
-</td>
-<td><p> 
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_CTRL_pclk_off">pclk_off</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Host Controller’s pclk gating. Set this bit to 1 to stop pclk</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_CTRL_ipi_clk_off">ipi_clk_off</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Host Controller’s ipi_clk gating. Set this bit to 1 to ipi_clk</p>
-</td>
-</tr>
-</table><p> 
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYSTS">CSIHOST_GENH_PHYSTS</a></p>
-</td>
-<td><p>32'h0000401C</p>
-</td>
-<td><p> 
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYSTS_bistdone">bistdone</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table9-3 in DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYSTS_bistok">bistok</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table9-3 in DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[8:2]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYSTS_cont_data">cont_data</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Each pin of this output bus is used to verify the continuity 
-from the 
-chips pin all the way to the PHYs analog ports (package, 
-bonding, die, among others). 
-cont_data output signals should be ignored when cont_en is 
-deasserted (PHY not set for IO Continuity Test mode). 
-■ cont_data[0]: rext 
-■ cont_data[1]: clkn 
-■ cont_data[2]: clkp 
-■ cont_data[3]: datan0 
-■ cont_data[4]: datap0 
-■ cont_data[5]: datan1 
-■ cont_data[6]: datap1 
-This signal can be overridden through D-PHY test control 
-registers. 
-Refer Table4-6 in DPHY-RX databook</p>
-</td>
-</tr>
-</table><p> 
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYTESTDOUT">CSIHOST_GENH_PHYTESTDOUT</a></p>
-</td>
-<td><p>32'h00004020</p>
-</td>
-<td><p> 
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[7:0]</p>
-</td>
-<td><p><a HREF="csihost.htm#GENH_PHYTESTDOUT_value">value</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table9-3 in DPHY-RX databook</p>
-</td>
-</tr>
-</table><p> 
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_CTRL">CSIHOST_DPHYRX_PPI_CTRL</a></p>
-</td>
-<td><p>32'h00004024</p>
-</td>
-<td><p>Control and status registers for DPHY-RX PPI I/Os</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_basedir_0">basedir_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Configures the Base Direction for Lane 
-■ basedir_0 = 1: Configures lane as RX upon startup of the PHY 
-■ basedir_0 = 0: Configures lane as TX 
-Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[1:1]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_txrequestesc_0">txrequestesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Request 
-This signal together with txlpdtesc_0, txulpsesc_0, and 
-txtriggeresc[3:0] is used to request the entry into any Escape 
-mode. Once in Escape mode, the lane stays in Escape mode until 
-txrequestesc_0 is de-asserted. 
-Note: It can only be asserted by the protocol layer while 
-txrequestdatahs is at low level. 
-Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[2:2]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_txlpdtesc_0">txlpdtesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Escape Mode Transmit Low-Power Data 
-This signal is asserted with txrequestesc to cause the lane 
-module to enter low- power data transmission mode. The lane 
-module remains in this mode until txrequestesc_0 is 
-de-asserted. 
-Note: txulpsesc_0 and all the bits of txtriggeresc_0 must be at 
-low level when txlpdtesc_0 is at high level. 
-Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[3:3]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_txulpsesc_0">txulpsesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[4:4]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_txulpsexit_0">txulpsexit_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[8:5]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_txtriggeresc_0">txtriggeresc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[16:9]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_txdataesc_0">txdataesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[17:17]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_txvalidesc_0">txvalidesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[18:18]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_enableclk">enableclk</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table4-7 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[20:19]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_forcetxstopmode_N">forcetxstopmode_N</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[21:21]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_turnrequest_0">turnrequest_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[22:22]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_turndisable_0">turndisable_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[24:23]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_forcerxmode_N">forcerxmode_N</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[26:25]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_enable_N">enable_N</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table9-3 of DPHY-RX databook</p>
-</td>
-</tr>
-</table><p> 
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0">CSIHOST_DPHYRX_PPI_STATUS0</a></p>
-</td>
-<td><p>32'h00004028</p>
-</td>
-<td><p> 
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_ulpsactivenotclk">ulpsactivenotclk</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table 9-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[2:1]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_rxactivehs_N">rxactivehs_N</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[4:3]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_rxsynchs_N">rxsynchs_N</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[5:5]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_txreadyesc_0">txreadyesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[7:6]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_rxclkesc_N">rxclkesc_N</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[9:8]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_rxlpdtesc_N">rxlpdtesc_N</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[13:10]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_rxtriggeresc_0">rxtriggeresc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[17:14]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_rxtriggeresc_1">rxtriggeresc_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[19:18]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_errsoths_N">errsoths_N</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table9-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[21:20]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_errsotsynchs_N">errsotsynchs_N</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table9-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[23:22]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_rxulpsesc_N">rxulpsesc_N</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table9-3 of DPHY-RX databook</p>
-</td>
-</tr>
-</table><p> 
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1">CSIHOST_DPHYRX_PPI_STATUS1</a></p>
-</td>
-<td><p>32'h0000402C</p>
-</td>
-<td><p> 
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[7:0]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_rxdataesc_0">rxdataesc_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[15:8]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_rxdataesc_1">rxdataesc_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[17:16]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_rxvalidesc_N">rxvalidesc_N</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[19:18]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_rxvalidhs_N">rxvalidhs_N</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[21:20]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_erresc_N">erresc_N</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table9-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[23:22]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_errsyncesc_N">errsyncesc_N</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[25:24]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_errcontrol_N">errcontrol_N</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[26:26]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_errcontentionlp0_0">errcontentionlp0_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[27:27]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_errcontentionlp1_0">errcontentionlp1_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[29:28]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_ulpsactivenot_N">ulpsactivenot_N</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>[0] for lane-0; [1] for lane-1 
-Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[30:30]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_direction_0">direction_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table4-3 of DPHY-RX databook</p>
-</td>
-</tr>
-</table><p> 
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(R-)</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS2">CSIHOST_DPHYRX_PPI_STATUS2</a></p>
-</td>
-<td><p>32'h00004030</p>
-</td>
-<td><p> 
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[7:0]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS2_rxdatahs_0">rxdatahs_0</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table9-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[15:8]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS2_rxdatahs_1">rxdatahs_1</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table9-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[16:16]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS2_rxskewcalhs">rxskewcalhs</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table9-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[17:17]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS2_stopstateclk">stopstateclk</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table9-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[18:18]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS2_rxulpsclknot">rxulpsclknot</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table9-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[19:19]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS2_rxclkactivehs">rxclkactivehs</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table9-3 of DPHY-RX databook</p>
-</td>
-</tr>
-<tr><td><p>[21:20]</p>
-</td>
-<td><p><a HREF="csihost.htm#DPHYRX_PPI_STATUS2_stopstatedata_N">stopstatedata_N</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Refer Table9-3 of DPHY-RX databook</p>
-</td>
-</tr>
-</table><p> 
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="csihost.htm#CSIHOST_IRQEN">CSIHOST_IRQEN</a></p>
-</td>
-<td><p>32'h00004034</p>
-</td>
-<td><p> 
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="csihost.htm#CSIHOST_IRQEN_HCIRQ">HCIRQ</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Interrupt Enable for CSI2 Host Controller ‘interrupt’</p>
-</td>
-</tr>
-</table><p> 
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(WOC-)</p>
-</td>
-<td><p><a HREF="csihost.htm#CSIHOST_IRQSTS">CSIHOST_IRQSTS</a></p>
-</td>
-<td><p>32'h00004038</p>
-</td>
-<td><p> 
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[0:0]</p>
-</td>
-<td><p><a HREF="csihost.htm#CSIHOST_IRQSTS_HCIRQ">HCIRQ</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>This bit reflects the state of CSI2 Host Controller ‘interrupt’ 
-flag. 
-It is set on the assertion (rising edge) of ‘interrupt’ and 
-stays high till SW clears the bit by writing 1 to it.</p>
-</td>
-</tr>
-</table><p> 
-</p>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="csihost.htm#CSIHOST_DEBUG_CTRL">CSIHOST_DEBUG_CTRL</a></p>
-</td>
-<td><p>32'h0000403C</p>
-</td>
-<td><p> 
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[4:0]</p>
-</td>
-<td><p><a HREF="csihost.htm#CSIHOST_DEBUG_CTRL_SEL">SEL</a></p>
-</td>
-<td><p>0x0</p>
-</td>
-<td><p>Debug bus mux selection</p>
-</td>
-</tr>
-</table><p> 
-</p>
-</body></html>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>CSIHOST</title>
+    </head>
+    <body>
+        <h1>CSIHOST
+
+        </h1>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(R-)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#CSIHOST_">CSIHOST_mem</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h00000000</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Dummy (16KB) register space for MIPI CSI2 Host Controller 
+
+Internal memory</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[31:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Memory</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Memory</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(P)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYCTRL">CSIHOST_GENH_PHYCTRL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h00004000</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>General Control and Status registers for DPHY-RX I/Os and 
+
+wrapper logic</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[6:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYCTRL_hsfreqrange">hsfreqrange</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>High-speed Frequency Range Selection 
+
+See Operating Frequency Range selection and default values. This 
+
+signal should be set with the D-PHY in power-down and must not 
+
+change during operation. 
+
+This signal can be overridden through D-PHY test control 
+
+registers 
+
+Refer Table4-4 in DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[14:7]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYCTRL_cfgclkfreqrange">cfgclkfreqrange</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x20</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>System clock frequency configuration preset. Should be set 
+
+according to the following equation: 
+
+cfgclkfreqrange[5:0] = round[(Fcfg_clk(MHz)-17)*4] 
+
+Refer Table4-4 in DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[15:15]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYCTRL_cont_en">cont_en</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>This signal places the macro in IO continuity test mode. All 
+
+other 
+
+interface signals should be placed in their default values. 
+
+Refer Table4-6 in DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[16:16]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYCTRL_biston">biston</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Set 1 to start the DPHY-RX bist test. 
+
+Refer Table 4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[17:17]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYCTRL_cfg_clk_off">cfg_clk_off</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>PHY configuration clock (cfg_clk) gating control. Set 1 to stop 
+
+cfg_clk</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[20:18]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYCTRL_txclkescdiv">txclkescdiv</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Escape mode transmit clock which is used to generate escape 
+
+sequences in DPHY can’t be greater than 20MHz. 
+
+The txclkesc clock input coming from global clock module of 
+
+imageProc subsystem can have higher frequency. This clock is 
+
+divided and fed to DPHY-RX 
+
+0:div2 
+
+1:div3 
+
+2:div4 
+
+3:div6 
+
+4:div8 
+
+5:div12 
+
+others:div2</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[21:21]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYCTRL_txclkescen">txclkescen</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Txclkesc divider enable 
+
+Keep txclkescen = 0 when txclkescdiv is being written. Set 
+
+txclkescen to 1 after txclkescdiv is configured</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[22:22]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYCTRL_txclkesc_off">txclkesc_off</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Txclkesc clock going to the DPHY can be stopped by setting this 
+
+bit to 1</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(P)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYCTRL1">CSIHOST_GENH_PHYCTRL1</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h00004004</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[0:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYCTRL1_shutdownz">shutdownz</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table9-3 in DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[1:1]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYCTRL1_rstz">rstz</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table9-3 in DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[2:2]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYCTRL1_rx_iso18_en">rx_iso18_en</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>1'b0 - non isolation operating mode 
+
+1'b1 - PHY will power down the 1.8V domain,</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[3:3]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYCTRL1_ateen">ateen</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Write 1 to enable DPHY controllability through BIU register. 
+
+Refer Table9-3 in DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[4:4]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYCTRL1_tpsel">tpsel</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Write 1 to enable DPHY test interface controllability through 
+
+BIU registers. Refer Table9-3 in DPHY-RX databook</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(P)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYTESTDIN">CSIHOST_GENH_PHYTESTDIN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h00004008</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[7:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYTESTDIN_value">value</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table9-3 in DPHY-RX databook</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(P)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYTESTEN">CSIHOST_GENH_PHYTESTEN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h0000400C</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[0:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYTESTEN_value">value</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table9-3 in DPHY-RX databook</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(P)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYTESTCLK">CSIHOST_GENH_PHYTESTCLK</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h00004010</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[0:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYTESTCLK_value">value</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table9-3 in DPHY-RX databook</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(P)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYTESTCLR">CSIHOST_GENH_PHYTESTCLR</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h00004014</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[0:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYTESTCLR_value">value</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table9-3 in DPHY-RX databook</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(P)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_CTRL">CSIHOST_GENH_CTRL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h00004018</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[0:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_CTRL_pclk_off">pclk_off</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Host Controller’s pclk gating. Set this bit to 1 to stop pclk</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[1:1]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_CTRL_ipi_clk_off">ipi_clk_off</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Host Controller’s ipi_clk gating. Set this bit to 1 to ipi_clk</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(R-)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYSTS">CSIHOST_GENH_PHYSTS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h0000401C</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[0:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYSTS_bistdone">bistdone</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table9-3 in DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[1:1]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYSTS_bistok">bistok</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table9-3 in DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[8:2]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYSTS_cont_data">cont_data</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Each pin of this output bus is used to verify the continuity 
+
+from the 
+
+chips pin all the way to the PHYs analog ports (package, 
+
+bonding, die, among others). 
+
+cont_data output signals should be ignored when cont_en is 
+
+deasserted (PHY not set for IO Continuity Test mode). 
+
+■ cont_data[0]: rext 
+
+■ cont_data[1]: clkn 
+
+■ cont_data[2]: clkp 
+
+■ cont_data[3]: datan0 
+
+■ cont_data[4]: datap0 
+
+■ cont_data[5]: datan1 
+
+■ cont_data[6]: datap1 
+
+This signal can be overridden through D-PHY test control 
+
+registers. 
+
+Refer Table4-6 in DPHY-RX databook</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(R-)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYTESTDOUT">CSIHOST_GENH_PHYTESTDOUT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h00004020</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[7:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#GENH_PHYTESTDOUT_value">value</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table9-3 in DPHY-RX databook</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(P)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_CTRL">CSIHOST_DPHYRX_PPI_CTRL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h00004024</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Control and status registers for DPHY-RX PPI I/Os</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[0:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_basedir_0">basedir_0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Configures the Base Direction for Lane 
+
+■ basedir_0 = 1: Configures lane as RX upon startup of the PHY 
+
+■ basedir_0 = 0: Configures lane as TX 
+
+Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[1:1]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_txrequestesc_0">txrequestesc_0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Escape Mode Transmit Request 
+
+This signal together with txlpdtesc_0, txulpsesc_0, and 
+
+txtriggeresc[3:0] is used to request the entry into any Escape 
+
+mode. Once in Escape mode, the lane stays in Escape mode until 
+
+txrequestesc_0 is de-asserted. 
+
+Note: It can only be asserted by the protocol layer while 
+
+txrequestdatahs is at low level. 
+
+Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[2:2]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_txlpdtesc_0">txlpdtesc_0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Escape Mode Transmit Low-Power Data 
+
+This signal is asserted with txrequestesc to cause the lane 
+
+module to enter low- power data transmission mode. The lane 
+
+module remains in this mode until txrequestesc_0 is 
+
+de-asserted. 
+
+Note: txulpsesc_0 and all the bits of txtriggeresc_0 must be at 
+
+low level when txlpdtesc_0 is at high level. 
+
+Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[3:3]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_txulpsesc_0">txulpsesc_0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[4:4]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_txulpsexit_0">txulpsexit_0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[8:5]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_txtriggeresc_0">txtriggeresc_0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[16:9]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_txdataesc_0">txdataesc_0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[17:17]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_txvalidesc_0">txvalidesc_0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[18:18]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_enableclk">enableclk</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table4-7 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[20:19]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_forcetxstopmode_N">forcetxstopmode_N</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[21:21]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_turnrequest_0">turnrequest_0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[22:22]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_turndisable_0">turndisable_0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[24:23]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_forcerxmode_N">forcerxmode_N</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[26:25]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_CTRL_enable_N">enable_N</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table9-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(R-)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0">CSIHOST_DPHYRX_PPI_STATUS0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h00004028</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[0:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_ulpsactivenotclk">ulpsactivenotclk</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table 9-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[2:1]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_rxactivehs_N">rxactivehs_N</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[4:3]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_rxsynchs_N">rxsynchs_N</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[5:5]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_txreadyesc_0">txreadyesc_0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[7:6]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_rxclkesc_N">rxclkesc_N</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[9:8]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_rxlpdtesc_N">rxlpdtesc_N</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[13:10]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_rxtriggeresc_0">rxtriggeresc_0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[17:14]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_rxtriggeresc_1">rxtriggeresc_1</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[19:18]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_errsoths_N">errsoths_N</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table9-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[21:20]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_errsotsynchs_N">errsotsynchs_N</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table9-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[23:22]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS0_rxulpsesc_N">rxulpsesc_N</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table9-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(R-)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1">CSIHOST_DPHYRX_PPI_STATUS1</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h0000402C</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[7:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_rxdataesc_0">rxdataesc_0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[15:8]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_rxdataesc_1">rxdataesc_1</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[17:16]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_rxvalidesc_N">rxvalidesc_N</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[19:18]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_rxvalidhs_N">rxvalidhs_N</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[21:20]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_erresc_N">erresc_N</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table9-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[23:22]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_errsyncesc_N">errsyncesc_N</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[25:24]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_errcontrol_N">errcontrol_N</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[26:26]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_errcontentionlp0_0">errcontentionlp0_0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[27:27]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_errcontentionlp1_0">errcontentionlp1_0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[29:28]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_ulpsactivenot_N">ulpsactivenot_N</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>[0] for lane-0; [1] for lane-1 
+
+Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[30:30]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS1_direction_0">direction_0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table4-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(R-)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS2">CSIHOST_DPHYRX_PPI_STATUS2</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h00004030</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[7:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS2_rxdatahs_0">rxdatahs_0</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table9-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[15:8]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS2_rxdatahs_1">rxdatahs_1</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table9-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[16:16]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS2_rxskewcalhs">rxskewcalhs</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table9-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[17:17]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS2_stopstateclk">stopstateclk</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table9-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[18:18]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS2_rxulpsclknot">rxulpsclknot</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table9-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[19:19]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS2_rxclkactivehs">rxclkactivehs</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table9-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[21:20]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#DPHYRX_PPI_STATUS2_stopstatedata_N">stopstatedata_N</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Refer Table9-3 of DPHY-RX databook</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(P)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#CSIHOST_IRQEN">CSIHOST_IRQEN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h00004034</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[0:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#CSIHOST_IRQEN_HCIRQ">HCIRQ</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Interrupt Enable for CSI2 Host Controller ‘interrupt’</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(WOC-)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#CSIHOST_IRQSTS">CSIHOST_IRQSTS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h00004038</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[0:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#CSIHOST_IRQSTS_HCIRQ">HCIRQ</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>This bit reflects the state of CSI2 Host Controller ‘interrupt’ 
+
+flag. 
+
+It is set on the assertion (rising edge) of ‘interrupt’ and 
+
+stays high till SW clears the bit by writing 1 to it.</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(P)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#CSIHOST_DEBUG_CTRL">CSIHOST_DEBUG_CTRL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h0000403C</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[4:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="csihost.htm#CSIHOST_DEBUG_CTRL_SEL">SEL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x0</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Debug bus mux selection</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+    </body>
+</html>

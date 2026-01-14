@@ -1,96 +1,141 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">DMA_BUILDCFG2</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0xfb8</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>DMA Build Configuration Register 2</p>
-<p>This register is used to provide information about the configuration parameters of the DMAC.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="RAZWI_1"><td>[31:18]</td>
-<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
-<td>r</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
-</tr>
-<tr id="NUM_PCH"><td>[17:12]</td>
-<td><a href="#NUM_PCH.desc">NUM_PCH</a></td>
-<td>r</td>
-<td>0x2</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#NUM_PCH" title="Permalink to this row"></a></td>
-</tr>
-<tr id="HAS_CHCTRL_MASK"><td>[11]</td>
-<td><a href="#HAS_CHCTRL_MASK.desc">HAS_CHCTRL_MASK</a></td>
-<td>r</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#HAS_CHCTRL_MASK" title="Permalink to this row"></a></td>
-</tr>
-<tr id="HAS_VCH"><td>[10]</td>
-<td><a href="#HAS_VCH.desc">HAS_VCH</a></td>
-<td>r</td>
-<td>0x1</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#HAS_VCH" title="Permalink to this row"></a></td>
-</tr>
-<tr id="HAS_RET"><td>[9]</td>
-<td><a href="#HAS_RET.desc">HAS_RET</a></td>
-<td>r</td>
-<td>0x1</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#HAS_RET" title="Permalink to this row"></a></td>
-</tr>
-<tr id="HAS_TZ"><td>[8]</td>
-<td><a href="#HAS_TZ.desc">HAS_TZ</a></td>
-<td>r</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#HAS_TZ" title="Permalink to this row"></a></td>
-</tr>
-<tr id="HAS_GPOSEL"><td>[7]</td>
-<td><a href="#HAS_GPOSEL.desc">HAS_GPOSEL</a></td>
-<td>r</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#HAS_GPOSEL" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RAZWI_0"><td>[6:0]</td>
-<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
-<td>r</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="NUM_PCH.desc">NUM_PCH<a class="headerlink" href="#NUM_PCH.desc" title="Permalink to this headline"></a></h3>
-<p>Number of Physical Channels. If HAS_VCH is '0' then this field is also '0'.</p>
-<h3 id="HAS_CHCTRL_MASK.desc">HAS_CHCTRL_MASK<a class="headerlink" href="#HAS_CHCTRL_MASK.desc" title="Permalink to this headline"></a></h3>
-<p>Secure and Non-secure Control as triggers, GPO and Stream Interface Masking.</p>
-<h3 id="HAS_VCH.desc">HAS_VCH<a class="headerlink" href="#HAS_VCH.desc" title="Permalink to this headline"></a></h3>
-<p>Has allocable DMA Channel Support.</p>
-<h3 id="HAS_RET.desc">HAS_RET<a class="headerlink" href="#HAS_RET.desc" title="Permalink to this headline"></a></h3>
-<p>Has Retention Support</p>
-<h3 id="HAS_TZ.desc">HAS_TZ<a class="headerlink" href="#HAS_TZ.desc" title="Permalink to this headline"></a></h3>
-<p>Has TrustZone Support</p>
-<h3 id="HAS_GPOSEL.desc">HAS_GPOSEL<a class="headerlink" href="#HAS_GPOSEL.desc" title="Permalink to this headline"></a></h3>
-<p>Has Shared and hence Selectable GPO Support.</p>
-<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">DMA_BUILDCFG2</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0xfb8</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>DMA Build Configuration Register 2</p>
+        <p>This register is used to provide information about the configuration parameters of the DMAC.</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr id="RAZWI_1" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31:18]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#RAZWI_1.desc">RAZWI_1</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="NUM_PCH" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[17:12]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#NUM_PCH.desc">NUM_PCH</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x2</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#NUM_PCH" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="HAS_CHCTRL_MASK" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[11]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#HAS_CHCTRL_MASK.desc">HAS_CHCTRL_MASK</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#HAS_CHCTRL_MASK" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="HAS_VCH" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[10]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#HAS_VCH.desc">HAS_VCH</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#HAS_VCH" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="HAS_RET" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[9]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#HAS_RET.desc">HAS_RET</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#HAS_RET" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="HAS_TZ" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[8]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#HAS_TZ.desc">HAS_TZ</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#HAS_TZ" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="HAS_GPOSEL" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[7]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#HAS_GPOSEL.desc">HAS_GPOSEL</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#HAS_GPOSEL" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="RAZWI_0" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[6:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#RAZWI_0.desc">RAZWI_0</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
+        <p>Read-As-Zero, Writes Ignored.</p>
+        <h3 id="NUM_PCH.desc">NUM_PCH<a class="headerlink" href="#NUM_PCH.desc" title="Permalink to this headline"></a></h3>
+        <p>Number of Physical Channels. If HAS_VCH is '0' then this field is also '0'.</p>
+        <h3 id="HAS_CHCTRL_MASK.desc">HAS_CHCTRL_MASK<a class="headerlink" href="#HAS_CHCTRL_MASK.desc" title="Permalink to this headline"></a></h3>
+        <p>Secure and Non-secure Control as triggers, GPO and Stream Interface Masking.</p>
+        <h3 id="HAS_VCH.desc">HAS_VCH<a class="headerlink" href="#HAS_VCH.desc" title="Permalink to this headline"></a></h3>
+        <p>Has allocable DMA Channel Support.</p>
+        <h3 id="HAS_RET.desc">HAS_RET<a class="headerlink" href="#HAS_RET.desc" title="Permalink to this headline"></a></h3>
+        <p>Has Retention Support</p>
+        <h3 id="HAS_TZ.desc">HAS_TZ<a class="headerlink" href="#HAS_TZ.desc" title="Permalink to this headline"></a></h3>
+        <p>Has TrustZone Support</p>
+        <h3 id="HAS_GPOSEL.desc">HAS_GPOSEL<a class="headerlink" href="#HAS_GPOSEL.desc" title="Permalink to this headline"></a></h3>
+        <p>Has Shared and hence Selectable GPO Support.</p>
+        <h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+        <p>Read-As-Zero, Writes Ignored.</p>
+    </body>
 </html>
