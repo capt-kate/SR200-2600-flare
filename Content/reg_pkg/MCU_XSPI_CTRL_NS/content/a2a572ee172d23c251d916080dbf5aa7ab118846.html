@@ -1,37 +1,73 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">TSTSTATUS</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x54</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>This read-only 32b register returns the status of the latest PHY test.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="Phy_test_status"><td>[31:0]</td>
-<td><a href="#Phy_test_status.desc">Phy_test_status</a></td>
-<td>r</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Phy_test_status" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="Phy_test_status.desc">Phy_test_status<a class="headerlink" href="#Phy_test_status.desc" title="Permalink to this headline"></a></h3>
-<h5>Depending on the test, the result might be:</h5><p>[31:24] == 8'h2 Synchronous BIST test result
-[23:18] (Reserved)
-[ 17] Set once the test has completed
-[ 16] Set following any error
-[15:14] (Reserved)
-[13: 9] Indicates either the current clock speed, if the test
-is ongoing, else the clock speed of any failure once
-the test has stopped.
-[ 8] Set to indicate a fault in the data strobe pin
-[ 7: 0] Set to indicate a fault found in the respective data pin
-[31:24] == 8'h3 Asynchronous BIST test result
-Bits [23:0] are defind as with the synchronous BIST results</p>
-<p>All other tests will return a 32'h0 result.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">TSTSTATUS</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x54</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>This read-only 32b register returns the status of the latest PHY test.</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr id="Phy_test_status" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Phy_test_status.desc">Phy_test_status</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Phy_test_status" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="Phy_test_status.desc">Phy_test_status<a class="headerlink" href="#Phy_test_status.desc" title="Permalink to this headline"></a></h3>
+        <h5>Depending on the test, the result might be:</h5>
+        <p>[31:24] == 8'h2 Synchronous BIST test result
+
+[23:18] (Reserved)
+
+[ 17] Set once the test has completed
+
+[ 16] Set following any error
+
+[15:14] (Reserved)
+
+[13: 9] Indicates either the current clock speed, if the test
+
+is ongoing, else the clock speed of any failure once
+
+the test has stopped.
+
+[ 8] Set to indicate a fault in the data strobe pin
+
+[ 7: 0] Set to indicate a fault found in the respective data pin
+
+[31:24] == 8'h3 Asynchronous BIST test result
+
+Bits [23:0] are defind as with the synchronous BIST results</p>
+        <p>All other tests will return a 32'h0 result.</p>
+    </body>
 </html>

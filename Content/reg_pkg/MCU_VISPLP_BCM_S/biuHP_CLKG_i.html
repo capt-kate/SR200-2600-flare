@@ -1,66 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>HP_CLKG</title></head>
-<body>
-<h1>HP_CLKG
-        </h1>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vispHPGlob.htm#HP_CLKG_CTRL">HP_CLKG_CTRL</a></p>
-</td>
-<td><p>32'h00000000</p>
-</td>
-<td><p> 
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[21:0]</p>
-</td>
-<td><p><a HREF="vispHPGlob.htm#HP_CLKG_CTRL_CFG">CFG</a></p>
-</td>
-<td><p>0x3FFFFF</p>
-</td>
-<td><p>0:csi2rx1_cfgClkg =CFG Clock Gate to CSIRX2 
-1:dphy_cfgClk_cg =CFG Clock Gate to DPHY 
-2:vidmute_cfgClkg =CFG Clock Gate to VideoMute 
-3:ispfull_cfgClkg =CFG Clock Gate to ISPFULL 
-4:dewarp_cfgClkg =CFG Clock Gate to DEWARP 
-5:vencod_cfgClkg =CFG Clock Gate to VENCOD 
-6:ispfull_sysClkg =SYS Clock Gate to ISPFULL 
-7:dewarp_sysClkg =SYS Clock Gate to DEWARP 
-8:vencod_sysClkg =SYS Clock Gate to VENCOD 
-9:csi2rx2_ipiClkg =CLK Clock Gate to CSIRX2 
-10:hostrx2_ipiClkg =CFG Clock Gate to CSIIPI 
-11:ipi2dvp_ipi0Clkg=CLK Clock Gate to RX1IPI0 
-12:ipi2dvp_ipi1Clkg=CLK Clock Gate to RX1IPI1 
-13:ipi2dvp_ipi2Clkg=CLK Clock Gate to RX1IPI2 
-14:ipi2dvp_ipi3Clkg=CLK Clock Gate to RX1IPI3 
-15:ipi2dvp_ipi2Clkg=CLK Clock Gate to RX2IPI0 
-16:ispfull_Clkg =CLK Clock Gate to ISPFULL 
-17:dewarp_Clkg =CLK Clock Gate to DEWARP 
-18:vencod_Clkg =CLK Clock Gate to VENCOD 
-19:ispfull_Clkg =BIU Clock Gate to ISPFULL 
-20:dewarp_Clkg =BIU Clock Gate to DEWARP 
-21:vencod_Clkg =BIU Clock Gate to VENCOD 
-VISP Clock control [16:0] :</p>
-</td>
-</tr>
-</table><p> 
-</p>
-</body></html>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>HP_CLKG</title>
+    </head>
+    <body>
+        <h1>HP_CLKG
+
+        </h1>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(P)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="vispHPGlob.htm#HP_CLKG_CTRL">HP_CLKG_CTRL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h00000000</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[21:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="vispHPGlob.htm#HP_CLKG_CTRL_CFG">CFG</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0x3FFFFF</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>0:csi2rx1_cfgClkg =CFG Clock Gate to CSIRX2 
+
+1:dphy_cfgClk_cg =CFG Clock Gate to DPHY 
+
+2:vidmute_cfgClkg =CFG Clock Gate to VideoMute 
+
+3:ispfull_cfgClkg =CFG Clock Gate to ISPFULL 
+
+4:dewarp_cfgClkg =CFG Clock Gate to DEWARP 
+
+5:vencod_cfgClkg =CFG Clock Gate to VENCOD 
+
+6:ispfull_sysClkg =SYS Clock Gate to ISPFULL 
+
+7:dewarp_sysClkg =SYS Clock Gate to DEWARP 
+
+8:vencod_sysClkg =SYS Clock Gate to VENCOD 
+
+9:csi2rx2_ipiClkg =CLK Clock Gate to CSIRX2 
+
+10:hostrx2_ipiClkg =CFG Clock Gate to CSIIPI 
+
+11:ipi2dvp_ipi0Clkg=CLK Clock Gate to RX1IPI0 
+
+12:ipi2dvp_ipi1Clkg=CLK Clock Gate to RX1IPI1 
+
+13:ipi2dvp_ipi2Clkg=CLK Clock Gate to RX1IPI2 
+
+14:ipi2dvp_ipi3Clkg=CLK Clock Gate to RX1IPI3 
+
+15:ipi2dvp_ipi2Clkg=CLK Clock Gate to RX2IPI0 
+
+16:ispfull_Clkg =CLK Clock Gate to ISPFULL 
+
+17:dewarp_Clkg =CLK Clock Gate to DEWARP 
+
+18:vencod_Clkg =CLK Clock Gate to VENCOD 
+
+19:ispfull_Clkg =BIU Clock Gate to ISPFULL 
+
+20:dewarp_Clkg =BIU Clock Gate to DEWARP 
+
+21:vencod_Clkg =BIU Clock Gate to VENCOD 
+
+VISP Clock control [16:0] :</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+    </body>
+</html>

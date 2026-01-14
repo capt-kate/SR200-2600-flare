@@ -1,65 +1,101 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">TIMEOUT</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0xc</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>The timeout register contains a watchdog timeout and further read configuration bits.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="Watchdog_error_indicator"><td>[31]</td>
-<td><a href="#Watchdog_error_indicator.desc">Watchdog_error_indicator</a></td>
-<td>r,rclr</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Watchdog_error_indicator" title="Permalink to this row"></a></td>
-</tr>
-<tr id="watchdog_timeout_value"><td>[30:20]</td>
-<td><a href="#watchdog_timeout_value.desc">watchdog_timeout_value</a></td>
-<td>r</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#watchdog_timeout_value" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Recycle__clock_cycles"><td>[19:16]</td>
-<td><a href="#Recycle__clock_cycles.desc">Recycle__clock_cycles</a></td>
-<td>r</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Recycle__clock_cycles" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RESERVED_BITS"><td>[15:8]</td>
-<td><a href="#RESERVED_BITS.desc">RESERVED_BITS</a></td>
-<td>r</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RESERVED_BITS" title="Permalink to this row"></a></td>
-</tr>
-<tr id="XIP_mode"><td>[7:0]</td>
-<td><a href="#XIP_mode.desc">XIP_mode</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#XIP_mode" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="Watchdog_error_indicator.desc">Watchdog_error_indicator<a class="headerlink" href="#Watchdog_error_indicator.desc" title="Permalink to this headline"></a></h3>
-<p>Watchdog error indicator. This bit will be set if the device ever fails to respond to an xSPI command by toggling the DS pins before the watchdog timer times out. This bit is sticky. It will get set if ever an error is detected, and only ever reset by writing a one to this bit. The bit is also mirrored in the configuration override register. In both registers, this error indicator may be cleared by writing a 1 to it.</p>
-<h3 id="watchdog_timeout_value.desc">watchdog_timeout_value<a class="headerlink" href="#watchdog_timeout_value.desc" title="Permalink to this headline"></a></h3>
-<p>A watchdog timeout value. This is designed so as to be able to recover from a non-existent or mis-behaving xSPI device that doesn’t return data strobes as expected, and it’s only used in those cases.The watchdog timer is started in xSPI (4D or 8D) modes upon issuing a command to the device. If device does not toggle the DS input by the time the watchdog timer gets down to zero, the read request will return an error and set the watchdog error bit above.</p>
-<h3 id="Recycle__clock_cycles.desc">Recycle__clock_cycles<a class="headerlink" href="#Recycle__clock_cycles.desc" title="Permalink to this headline"></a></h3>
-<p>Recycle clock cycles. This is the minimum number of slave CK clock cycle periods needed between commands where the CS# is deactivated.</p>
-<h3 id="RESERVED_BITS.desc">RESERVED_BITS<a class="headerlink" href="#RESERVED_BITS.desc" title="Permalink to this headline"></a></h3>
-<p>reserved</p>
-<h3 id="XIP_mode.desc">XIP_mode<a class="headerlink" href="#XIP_mode.desc" title="Permalink to this headline"></a></h3>
-<p>In order to support legacy XIP modes, where the read command is no longer issued, chips often require some number of “mode” bits that need to be issued following the read command else the memory will leave XIP mode. These mode bits can be set here.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">TIMEOUT</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0xc</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>The timeout register contains a watchdog timeout and further read configuration bits.</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr id="Watchdog_error_indicator" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Watchdog_error_indicator.desc">Watchdog_error_indicator</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r,rclr</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Watchdog_error_indicator" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="watchdog_timeout_value" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[30:20]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#watchdog_timeout_value.desc">watchdog_timeout_value</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#watchdog_timeout_value" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Recycle__clock_cycles" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[19:16]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Recycle__clock_cycles.desc">Recycle__clock_cycles</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Recycle__clock_cycles" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="RESERVED_BITS" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[15:8]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#RESERVED_BITS.desc">RESERVED_BITS</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#RESERVED_BITS" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="XIP_mode" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[7:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#XIP_mode.desc">XIP_mode</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#XIP_mode" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="Watchdog_error_indicator.desc">Watchdog_error_indicator<a class="headerlink" href="#Watchdog_error_indicator.desc" title="Permalink to this headline"></a></h3>
+        <p>Watchdog error indicator. This bit will be set if the device ever fails to respond to an xSPI command by toggling the DS pins before the watchdog timer times out. This bit is sticky. It will get set if ever an error is detected, and only ever reset by writing a one to this bit. The bit is also mirrored in the configuration override register. In both registers, this error indicator may be cleared by writing a 1 to it.</p>
+        <h3 id="watchdog_timeout_value.desc">watchdog_timeout_value<a class="headerlink" href="#watchdog_timeout_value.desc" title="Permalink to this headline"></a></h3>
+        <p>A watchdog timeout value. This is designed so as to be able to recover from a non-existent or mis-behaving xSPI device that doesn’t return data strobes as expected, and it’s only used in those cases.The watchdog timer is started in xSPI (4D or 8D) modes upon issuing a command to the device. If device does not toggle the DS input by the time the watchdog timer gets down to zero, the read request will return an error and set the watchdog error bit above.</p>
+        <h3 id="Recycle__clock_cycles.desc">Recycle__clock_cycles<a class="headerlink" href="#Recycle__clock_cycles.desc" title="Permalink to this headline"></a></h3>
+        <p>Recycle clock cycles. This is the minimum number of slave CK clock cycle periods needed between commands where the CS# is deactivated.</p>
+        <h3 id="RESERVED_BITS.desc">RESERVED_BITS<a class="headerlink" href="#RESERVED_BITS.desc" title="Permalink to this headline"></a></h3>
+        <p>reserved</p>
+        <h3 id="XIP_mode.desc">XIP_mode<a class="headerlink" href="#XIP_mode.desc" title="Permalink to this headline"></a></h3>
+        <p>In order to support legacy XIP modes, where the read command is no longer issued, chips often require some number of “mode” bits that need to be issued following the read command else the memory will leave XIP mode. These mode bits can be set here.</p>
+    </body>
 </html>

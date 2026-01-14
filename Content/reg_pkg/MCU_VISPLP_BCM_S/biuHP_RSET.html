@@ -1,64 +1,113 @@
-<?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>HP_RSET</title></head>
-<body>
-<h1>HP_RSET
-        </h1>
-<table width="100%"><tr><td><p>Access</p>
-</td>
-<td><p>Register</p>
-</td>
-<td><p>Address</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>(P)</p>
-</td>
-<td><p><a HREF="vispHPGlob.htm#HP_RSET_SW">HP_RSET_SW</a></p>
-</td>
-<td><p>32'h00000000</p>
-</td>
-<td><p> 
-</p>
-</td>
-</tr>
-<tr><td><p>Range</p>
-</td>
-<td><p>Field</p>
-</td>
-<td><p>Reset</p>
-</td>
-<td><p>Description</p>
-</td>
-</tr>
-<tr><td><p>[19:0]</p>
-</td>
-<td><p><a HREF="vispHPGlob.htm#HP_RSET_SW_CTRL">CTRL</a></p>
-</td>
-<td><p>0xFFFFF</p>
-</td>
-<td><p>0:csi2rx2_cfgRstn =CFG Reset Control to CSIRX2 
-1:vidmute_cfgRstn =CFG Reset Control to VideoMute 
-2:ispfull_cfgRstn =CFG Reset Control to ISPFULL 
-3:dewarp_cfgRstn =CFG Reset Control to DEWARP 
-4:vencod_cfgRstn =CFG Reset Control to VENCOD 
-5:ispfull_sysRstn =SYS Reset Control to ISPFULL 
-6:dewarp_sysRstn =SYS Reset Control to DEWARP 
-7:vencod_sysRstn =SYS Reset Control to VENCOD 
-8:csiipi_clkRstn =CFG Reset Control to CSIIPI 
-9:rx1ipi0_clkRstn =CLK Reset Control to RX1IPI0 
-10:rx1ipi1_clkRstn =CLK Reset Control to RX1IPI1 
-11:rx1ipi2_clkRstn =CLK Reset Control to RX1IPI2 
-12:rx1ipi3_clkRstn =CLK Reset Control to RX1IPI3 
-13:rx2ipix_clkRstn =CLK Reset Control to RX2IPIx 
-14:ispfull_clkRstn =CLK Reset Control to ISPFULL 
-15:dewarp_clkRstn =CLK Reset Control to DEWARP 
-16:vencod_clkRstn =CLK Reset Control to VENCOD 
-17:ispfull_clkRstn =BIU Reset Control to ISPFULL 
-18:dewarp_clkRstn =BIU Reset Control to DEWARP 
-19:vencod_clkRstn =BIU Reset Control to VENCOD 
-VISP Soft Reset control [14:0] :</p>
-</td>
-</tr>
-</table><p> 
-</p>
-</body></html>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>HP_RSET</title>
+    </head>
+    <body>
+        <h1>HP_RSET
+
+        </h1>
+        <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Access</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Register</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyE-Column1-Body1">
+                    <p>Address</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>(P)</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="vispHPGlob.htm#HP_RSET_SW">HP_RSET_SW</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>32'h00000000</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Range</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>Reset</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>[19:0]</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p><a HREF="vispHPGlob.htm#HP_RSET_SW_CTRL">CTRL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <p>0xFFFFF</p>
+                </td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>0:csi2rx2_cfgRstn =CFG Reset Control to CSIRX2 
+
+1:vidmute_cfgRstn =CFG Reset Control to VideoMute 
+
+2:ispfull_cfgRstn =CFG Reset Control to ISPFULL 
+
+3:dewarp_cfgRstn =CFG Reset Control to DEWARP 
+
+4:vencod_cfgRstn =CFG Reset Control to VENCOD 
+
+5:ispfull_sysRstn =SYS Reset Control to ISPFULL 
+
+6:dewarp_sysRstn =SYS Reset Control to DEWARP 
+
+7:vencod_sysRstn =SYS Reset Control to VENCOD 
+
+8:csiipi_clkRstn =CFG Reset Control to CSIIPI 
+
+9:rx1ipi0_clkRstn =CLK Reset Control to RX1IPI0 
+
+10:rx1ipi1_clkRstn =CLK Reset Control to RX1IPI1 
+
+11:rx1ipi2_clkRstn =CLK Reset Control to RX1IPI2 
+
+12:rx1ipi3_clkRstn =CLK Reset Control to RX1IPI3 
+
+13:rx2ipix_clkRstn =CLK Reset Control to RX2IPIx 
+
+14:ispfull_clkRstn =CLK Reset Control to ISPFULL 
+
+15:dewarp_clkRstn =CLK Reset Control to DEWARP 
+
+16:vencod_clkRstn =CLK Reset Control to VENCOD 
+
+17:ispfull_clkRstn =BIU Reset Control to ISPFULL 
+
+18:dewarp_clkRstn =BIU Reset Control to DEWARP 
+
+19:vencod_clkRstn =BIU Reset Control to VENCOD 
+
+VISP Soft Reset control [14:0] :</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+        </p>
+    </body>
+</html>

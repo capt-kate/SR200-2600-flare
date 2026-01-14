@@ -1,95 +1,140 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">CLOCKDIV</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x10</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Defines timing related configuration, to include the speed of the SPI clock.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="Disable_clock"><td>[31]</td>
-<td><a href="#Disable_clock.desc">Disable_clock</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Disable_clock" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RESERVED_FIELDS"><td>[30:24]</td>
-<td><a href="#RESERVED_FIELDS.desc">RESERVED_FIELDS</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RESERVED_FIELDS" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Rate_request"><td>[23:16]</td>
-<td><a href="#Rate_request.desc">Rate_request</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Rate_request" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Reserved"><td>[15:11]</td>
-<td><a href="#Reserved.desc">Reserved</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Reserved" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Data_strobe"><td>[10]</td>
-<td><a href="#Data_strobe.desc">Data_strobe</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Data_strobe" title="Permalink to this row"></a></td>
-</tr>
-<tr id="PH"><td>[9]</td>
-<td><a href="#PH.desc">PH</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#PH" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Pl"><td>[8]</td>
-<td><a href="#Pl.desc">Pl</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Pl" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Clock_divider_setting"><td>[7:0]</td>
-<td><a href="#Clock_divider_setting.desc">Clock_divider_setting</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Clock_divider_setting" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="Disable_clock.desc">Disable_clock<a class="headerlink" href="#Disable_clock.desc" title="Permalink to this headline"></a></h3>
-<p>Clock disable bit. If set, the clock will remain idle (zero) between device interactions. This is both the default value and the recommended setting. If clear, the IP will attempt to keep the clock running between commands, but may need to shut the clock down when starting or closing commands to avoid violating xSPI timing requirements.</p>
-<h3 id="RESERVED_FIELDS.desc">RESERVED_FIELDS<a class="headerlink" href="#RESERVED_FIELDS.desc" title="Permalink to this headline"></a></h3>
-<p>Reserved</p>
-<h3 id="Rate_request.desc">Rate_request<a class="headerlink" href="#Rate_request.desc" title="Permalink to this headline"></a></h3>
-<p>These bits are are a reflection of the rate request, indicating the current clock rate</p>
-<h3 id="Reserved.desc">Reserved<a class="headerlink" href="#Reserved.desc" title="Permalink to this headline"></a></h3>
-<p>Reserved</p>
-<h3 id="Data_strobe.desc">Data_strobe<a class="headerlink" href="#Data_strobe.desc" title="Permalink to this headline"></a></h3>
-<p>DS If set, this bit will turn off the normal mode of expecting a data strobe to be returned with any data in 4D or 8D modes.This bit has no effect in either 1S/1D or 2S/2D modes.</p>
-<h3 id="PH.desc">PH<a class="headerlink" href="#PH.desc" title="Permalink to this headline"></a></h3>
-<p>Ph Reserved for controlling CPHA. Set to zero.</p>
-<h3 id="Pl.desc">Pl<a class="headerlink" href="#Pl.desc" title="Permalink to this headline"></a></h3>
-<p>Pl Reserved for controlling CPOL. Set to zero.</p>
-<h3 id="Clock_divider_setting.desc">Clock_divider_setting<a class="headerlink" href="#Clock_divider_setting.desc" title="Permalink to this headline"></a></h3>
-<p>Clock divider setting. Set to zero to run the device clock at the same speed as the incoming DEV CLK. Higer numbers will apply an integer clock division algorithm to divide the DEV CLK by twice the clock divider setting.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">CLOCKDIV</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x10</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>Defines timing related configuration, to include the speed of the SPI clock.</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr id="Disable_clock" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Disable_clock.desc">Disable_clock</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Disable_clock" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="RESERVED_FIELDS" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[30:24]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#RESERVED_FIELDS.desc">RESERVED_FIELDS</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#RESERVED_FIELDS" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Rate_request" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[23:16]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Rate_request.desc">Rate_request</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Rate_request" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Reserved" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[15:11]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Reserved.desc">Reserved</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Reserved" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Data_strobe" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[10]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Data_strobe.desc">Data_strobe</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Data_strobe" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="PH" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[9]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#PH.desc">PH</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#PH" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Pl" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[8]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Pl.desc">Pl</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Pl" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Clock_divider_setting" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[7:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Clock_divider_setting.desc">Clock_divider_setting</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Clock_divider_setting" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="Disable_clock.desc">Disable_clock<a class="headerlink" href="#Disable_clock.desc" title="Permalink to this headline"></a></h3>
+        <p>Clock disable bit. If set, the clock will remain idle (zero) between device interactions. This is both the default value and the recommended setting. If clear, the IP will attempt to keep the clock running between commands, but may need to shut the clock down when starting or closing commands to avoid violating xSPI timing requirements.</p>
+        <h3 id="RESERVED_FIELDS.desc">RESERVED_FIELDS<a class="headerlink" href="#RESERVED_FIELDS.desc" title="Permalink to this headline"></a></h3>
+        <p>Reserved</p>
+        <h3 id="Rate_request.desc">Rate_request<a class="headerlink" href="#Rate_request.desc" title="Permalink to this headline"></a></h3>
+        <p>These bits are are a reflection of the rate request, indicating the current clock rate</p>
+        <h3 id="Reserved.desc">Reserved<a class="headerlink" href="#Reserved.desc" title="Permalink to this headline"></a></h3>
+        <p>Reserved</p>
+        <h3 id="Data_strobe.desc">Data_strobe<a class="headerlink" href="#Data_strobe.desc" title="Permalink to this headline"></a></h3>
+        <p>DS If set, this bit will turn off the normal mode of expecting a data strobe to be returned with any data in 4D or 8D modes.This bit has no effect in either 1S/1D or 2S/2D modes.</p>
+        <h3 id="PH.desc">PH<a class="headerlink" href="#PH.desc" title="Permalink to this headline"></a></h3>
+        <p>Ph Reserved for controlling CPHA. Set to zero.</p>
+        <h3 id="Pl.desc">Pl<a class="headerlink" href="#Pl.desc" title="Permalink to this headline"></a></h3>
+        <p>Pl Reserved for controlling CPOL. Set to zero.</p>
+        <h3 id="Clock_divider_setting.desc">Clock_divider_setting<a class="headerlink" href="#Clock_divider_setting.desc" title="Permalink to this headline"></a></h3>
+        <p>Clock divider setting. Set to zero to run the device clock at the same speed as the incoming DEV CLK. Higer numbers will apply an integer clock division algorithm to divide the DEV CLK by twice the clock divider setting.</p>
+    </body>
 </html>

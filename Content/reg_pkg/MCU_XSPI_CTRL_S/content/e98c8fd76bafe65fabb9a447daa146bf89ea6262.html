@@ -1,105 +1,153 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">OVERRIDE</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Configuration override register. Used for sending arbitrary commands to the device</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="Busy"><td>[31]</td>
-<td><a href="#Busy.desc">Busy</a></td>
-<td>r</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Busy" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Watchdog_error"><td>[30]</td>
-<td><a href="#Watchdog_error.desc">Watchdog_error</a></td>
-<td>r</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Watchdog_error" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Valid_return_data"><td>[29]</td>
-<td><a href="#Valid_return_data.desc">Valid_return_data</a></td>
-<td>r</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Valid_return_data" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Reserved"><td>[28:24]</td>
-<td><a href="#Reserved.desc">Reserved</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Reserved" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Channel_selection"><td>[23:22]</td>
-<td><a href="#Channel_selection.desc">Channel_selection</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Channel_selection" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Override_bit"><td>[21]</td>
-<td><a href="#Override_bit.desc">Override_bit</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Override_bit" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Chip_select"><td>[20]</td>
-<td><a href="#Chip_select.desc">Chip_select</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Chip_select" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Current_port_mode"><td>[19:16]</td>
-<td><a href="#Current_port_mode.desc">Current_port_mode</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Current_port_mode" title="Permalink to this row"></a></td>
-</tr>
-<tr id="xspi_mode"><td>[15:0]</td>
-<td><a href="#xspi_mode.desc">xspi_mode</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#xspi_mode" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="Busy.desc">Busy<a class="headerlink" href="#Busy.desc" title="Permalink to this headline"></a></h3>
-<p>Busy. True if an override operation is pending that has either not (yet) been accepted, or for which the result hasn’t (yet) been returned. This bit will also be true while transitioning to or from override mode</p>
-<h3 id="Watchdog_error.desc">Watchdog_error<a class="headerlink" href="#Watchdog_error.desc" title="Permalink to this headline"></a></h3>
-<p>Watchdog error: the xSPI device failed to toggle DS within the time frame specified in the watchdog timeout register</p>
-<h3 id="Valid_return_data.desc">Valid_return_data<a class="headerlink" href="#Valid_return_data.desc" title="Permalink to this headline"></a></h3>
-<p>Valid return data: Not all override commands return responses. For those commands that do return responses, this bit will be set once the response has been received. It is cleared upon any override request of the device with the chip select active</p>
-<h3 id="Reserved.desc">Reserved<a class="headerlink" href="#Reserved.desc" title="Permalink to this headline"></a></h3>
-<p>Reserved</p>
-<h3 id="Channel_selection.desc">Channel_selection<a class="headerlink" href="#Channel_selection.desc" title="Permalink to this headline"></a></h3>
-<p>Channel selection. Controls which bit of CS# will be acti vated by a given override command. Leave at zero to activate o_xspi_csn[0]</p>
-<h3 id="Override_bit.desc">Override_bit<a class="headerlink" href="#Override_bit.desc" title="Permalink to this headline"></a></h3>
-<p>Override bit. Once set, the controller is in command override mode. While in command override mode, requests on either the AXI slave port or from the DMA will result in SLVERR bus errors. While set, writes to this port will set the chip select, adjust the I/O protocol and possibly send or receive bits across the interface</p>
-<h3 id="Chip_select.desc">Chip_select<a class="headerlink" href="#Chip_select.desc" title="Permalink to this headline"></a></h3>
-<p>Chip select bit. Writes to this register will adjust the chip select bit selected by bits 23–22, while setting all other chip selects high (inactive). Further, writes to the register with the chip select active (low), will also write the given data to the xSPI I/O port. The bit is active low, as are the actual outputs, so there’s no translation taking place here. This bit will be ignored unless the override bit is also set</p>
-<h3 id="Current_port_mode.desc">Current_port_mode<a class="headerlink" href="#Current_port_mode.desc" title="Permalink to this headline"></a></h3>
-<p>Current port mode for potential port modes</p>
-<h3 id="xspi_mode.desc">xspi_mode<a class="headerlink" href="#xspi_mode.desc" title="Permalink to this headline"></a></h3>
-<p>These bits will constitute the message sent when writing to this port, or alternatively the message received by the host. In all but xSPI mode, the upper 8-bits will be ignored in any transmit command. In xSPI mode, the upper 8-bits will be the first octet transmitted and the second octet received by the controller.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">OVERRIDE</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x0</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>Configuration override register. Used for sending arbitrary commands to the device</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr id="Busy" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Busy.desc">Busy</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Busy" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Watchdog_error" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[30]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Watchdog_error.desc">Watchdog_error</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Watchdog_error" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Valid_return_data" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[29]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Valid_return_data.desc">Valid_return_data</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Valid_return_data" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Reserved" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[28:24]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Reserved.desc">Reserved</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Reserved" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Channel_selection" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[23:22]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Channel_selection.desc">Channel_selection</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Channel_selection" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Override_bit" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[21]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Override_bit.desc">Override_bit</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Override_bit" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Chip_select" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[20]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Chip_select.desc">Chip_select</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Chip_select" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Current_port_mode" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[19:16]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Current_port_mode.desc">Current_port_mode</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Current_port_mode" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="xspi_mode" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[15:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#xspi_mode.desc">xspi_mode</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#xspi_mode" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="Busy.desc">Busy<a class="headerlink" href="#Busy.desc" title="Permalink to this headline"></a></h3>
+        <p>Busy. True if an override operation is pending that has either not (yet) been accepted, or for which the result hasn’t (yet) been returned. This bit will also be true while transitioning to or from override mode</p>
+        <h3 id="Watchdog_error.desc">Watchdog_error<a class="headerlink" href="#Watchdog_error.desc" title="Permalink to this headline"></a></h3>
+        <p>Watchdog error: the xSPI device failed to toggle DS within the time frame specified in the watchdog timeout register</p>
+        <h3 id="Valid_return_data.desc">Valid_return_data<a class="headerlink" href="#Valid_return_data.desc" title="Permalink to this headline"></a></h3>
+        <p>Valid return data: Not all override commands return responses. For those commands that do return responses, this bit will be set once the response has been received. It is cleared upon any override request of the device with the chip select active</p>
+        <h3 id="Reserved.desc">Reserved<a class="headerlink" href="#Reserved.desc" title="Permalink to this headline"></a></h3>
+        <p>Reserved</p>
+        <h3 id="Channel_selection.desc">Channel_selection<a class="headerlink" href="#Channel_selection.desc" title="Permalink to this headline"></a></h3>
+        <p>Channel selection. Controls which bit of CS# will be acti vated by a given override command. Leave at zero to activate o_xspi_csn[0]</p>
+        <h3 id="Override_bit.desc">Override_bit<a class="headerlink" href="#Override_bit.desc" title="Permalink to this headline"></a></h3>
+        <p>Override bit. Once set, the controller is in command override mode. While in command override mode, requests on either the AXI slave port or from the DMA will result in SLVERR bus errors. While set, writes to this port will set the chip select, adjust the I/O protocol and possibly send or receive bits across the interface</p>
+        <h3 id="Chip_select.desc">Chip_select<a class="headerlink" href="#Chip_select.desc" title="Permalink to this headline"></a></h3>
+        <p>Chip select bit. Writes to this register will adjust the chip select bit selected by bits 23–22, while setting all other chip selects high (inactive). Further, writes to the register with the chip select active (low), will also write the given data to the xSPI I/O port. The bit is active low, as are the actual outputs, so there’s no translation taking place here. This bit will be ignored unless the override bit is also set</p>
+        <h3 id="Current_port_mode.desc">Current_port_mode<a class="headerlink" href="#Current_port_mode.desc" title="Permalink to this headline"></a></h3>
+        <p>Current port mode for potential port modes</p>
+        <h3 id="xspi_mode.desc">xspi_mode<a class="headerlink" href="#xspi_mode.desc" title="Permalink to this headline"></a></h3>
+        <p>These bits will constitute the message sent when writing to this port, or alternatively the message received by the host. In all but xSPI mode, the upper 8-bits will be ignored in any transmit command. In xSPI mode, the upper 8-bits will be the first octet transmitted and the second octet received by the controller.</p>
+    </body>
 </html>

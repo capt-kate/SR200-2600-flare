@@ -1,95 +1,140 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">READCMD</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x4</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Read command register. Configures the read command and data transfer mode to be used during automatic reads.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="RESERVED_BIT"><td>[31]</td>
-<td><a href="#RESERVED_BIT.desc">RESERVED_BIT</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RESERVED_BIT" title="Permalink to this row"></a></td>
-</tr>
-<tr id="SKIP_CLOCKS"><td>[30:28]</td>
-<td><a href="#SKIP_CLOCKS.desc">SKIP_CLOCKS</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#SKIP_CLOCKS" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DUMMY_CLOCKS"><td>[27:24]</td>
-<td><a href="#DUMMY_CLOCKS.desc">DUMMY_CLOCKS</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DUMMY_CLOCKS" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Single_bit_enumeration"><td>[23]</td>
-<td><a href="#Single_bit_enumeration.desc">Single_bit_enumeration</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Single_bit_enumeration" title="Permalink to this row"></a></td>
-</tr>
-<tr id="CM"><td>[22:20]</td>
-<td><a href="#CM.desc">CM</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#CM" title="Permalink to this row"></a></td>
-</tr>
-<tr id="CA"><td>[19]</td>
-<td><a href="#CA.desc">CA</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#CA" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DM"><td>[18:16]</td>
-<td><a href="#DM.desc">DM</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DM" title="Permalink to this row"></a></td>
-</tr>
-<tr id="CB"><td>[15:0]</td>
-<td><a href="#CB.desc">CB</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#CB" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="RESERVED_BIT.desc">RESERVED_BIT<a class="headerlink" href="#RESERVED_BIT.desc" title="Permalink to this headline"></a></h3>
-<p>Reserved.</p>
-<h3 id="SKIP_CLOCKS.desc">SKIP_CLOCKS<a class="headerlink" href="#SKIP_CLOCKS.desc" title="Permalink to this headline"></a></h3>
-<p>Skip clocks. This is the number of CK cycles which will be skipped, following the last dummy clock, before expecting the first bit of the return value.</p>
-<h3 id="DUMMY_CLOCKS.desc">DUMMY_CLOCKS<a class="headerlink" href="#DUMMY_CLOCKS.desc" title="Permalink to this headline"></a></h3>
-<p>Dummy clocks. This is the number of CK cycles which will be sent follow the address before switching I/O direction.</p>
-<h3 id="Single_bit_enumeration.desc">Single_bit_enumeration<a class="headerlink" href="#Single_bit_enumeration.desc" title="Permalink to this headline"></a></h3>
-<p>Contains a single bit enumeration indicating the type of read command that will be issued–whether a traditional 8’bit command, a 16’bit xSPI command, an eXecute–In–Place (XIP) command which would skip the command word, or a 48’bit profile–two command (xSPI only).</p>
-<h3 id="CM.desc">CM<a class="headerlink" href="#CM.desc" title="Permalink to this headline"></a></h3>
-<p>Contains an enumeration holding the protocol mode of the command</p>
-<h3 id="CA.desc">CA<a class="headerlink" href="#CA.desc" title="Permalink to this headline"></a></h3>
-<p>CA: True if the arguments use the same protocol mode as the command, false if they use the same protocol mode as the data. Hence, for example, if you wished to send a SPI command using QSPI arguments and QSPI data, something the xSPI and SFDP standards call 1S-4S-4S, you would set this flag false–the command doesn’t use the same I/O mode as the arguments. On the other hand, if you wanted to send a SPI command followed by SPI arguments, only to receive data in QSPI mode, what the standards call 1S-1S-4S, you might then set this flag to true since the command and arguments would use the same I/O mode.</p>
-<h3 id="DM.desc">DM<a class="headerlink" href="#DM.desc" title="Permalink to this headline"></a></h3>
-<p>DM: The protocol mode to be used for the data portion of the interaction. It uses the same bit field as the command protocol mode, outlined in Tbl. 5.6, but this time applies to the data bits. One rule is that the data mode must be of an equal or higher speed mode than the command protocol mode.</p>
-<h3 id="CB.desc">CB<a class="headerlink" href="#CB.desc" title="Permalink to this headline"></a></h3>
-<p>These bits contain the command byte(s) that will be sent to the device to begin a read command. They are what the xSPI specification calls RI, and so bits 15–8 must either equal bits 7–0 or be an inverted version of bits 7–0. Bits 15–8 will be sent on the rising edge of any xSPI command clock cycle, whereas bits 7–0 will be sent on the falling edge. In non–xSPI modes, bits 15–8 will be ignored. If Cb is set, then both bytes will be ignored.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">READCMD</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x4</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>Read command register. Configures the read command and data transfer mode to be used during automatic reads.</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr id="RESERVED_BIT" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#RESERVED_BIT.desc">RESERVED_BIT</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#RESERVED_BIT" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="SKIP_CLOCKS" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[30:28]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#SKIP_CLOCKS.desc">SKIP_CLOCKS</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#SKIP_CLOCKS" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="DUMMY_CLOCKS" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[27:24]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#DUMMY_CLOCKS.desc">DUMMY_CLOCKS</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#DUMMY_CLOCKS" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Single_bit_enumeration" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[23]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Single_bit_enumeration.desc">Single_bit_enumeration</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Single_bit_enumeration" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="CM" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[22:20]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#CM.desc">CM</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#CM" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="CA" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[19]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#CA.desc">CA</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#CA" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="DM" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[18:16]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#DM.desc">DM</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#DM" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="CB" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[15:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#CB.desc">CB</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#CB" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="RESERVED_BIT.desc">RESERVED_BIT<a class="headerlink" href="#RESERVED_BIT.desc" title="Permalink to this headline"></a></h3>
+        <p>Reserved.</p>
+        <h3 id="SKIP_CLOCKS.desc">SKIP_CLOCKS<a class="headerlink" href="#SKIP_CLOCKS.desc" title="Permalink to this headline"></a></h3>
+        <p>Skip clocks. This is the number of CK cycles which will be skipped, following the last dummy clock, before expecting the first bit of the return value.</p>
+        <h3 id="DUMMY_CLOCKS.desc">DUMMY_CLOCKS<a class="headerlink" href="#DUMMY_CLOCKS.desc" title="Permalink to this headline"></a></h3>
+        <p>Dummy clocks. This is the number of CK cycles which will be sent follow the address before switching I/O direction.</p>
+        <h3 id="Single_bit_enumeration.desc">Single_bit_enumeration<a class="headerlink" href="#Single_bit_enumeration.desc" title="Permalink to this headline"></a></h3>
+        <p>Contains a single bit enumeration indicating the type of read command that will be issued–whether a traditional 8’bit command, a 16’bit xSPI command, an eXecute–In–Place (XIP) command which would skip the command word, or a 48’bit profile–two command (xSPI only).</p>
+        <h3 id="CM.desc">CM<a class="headerlink" href="#CM.desc" title="Permalink to this headline"></a></h3>
+        <p>Contains an enumeration holding the protocol mode of the command</p>
+        <h3 id="CA.desc">CA<a class="headerlink" href="#CA.desc" title="Permalink to this headline"></a></h3>
+        <p>CA: True if the arguments use the same protocol mode as the command, false if they use the same protocol mode as the data. Hence, for example, if you wished to send a SPI command using QSPI arguments and QSPI data, something the xSPI and SFDP standards call 1S-4S-4S, you would set this flag false–the command doesn’t use the same I/O mode as the arguments. On the other hand, if you wanted to send a SPI command followed by SPI arguments, only to receive data in QSPI mode, what the standards call 1S-1S-4S, you might then set this flag to true since the command and arguments would use the same I/O mode.</p>
+        <h3 id="DM.desc">DM<a class="headerlink" href="#DM.desc" title="Permalink to this headline"></a></h3>
+        <p>DM: The protocol mode to be used for the data portion of the interaction. It uses the same bit field as the command protocol mode, outlined in Tbl. 5.6, but this time applies to the data bits. One rule is that the data mode must be of an equal or higher speed mode than the command protocol mode.</p>
+        <h3 id="CB.desc">CB<a class="headerlink" href="#CB.desc" title="Permalink to this headline"></a></h3>
+        <p>These bits contain the command byte(s) that will be sent to the device to begin a read command. They are what the xSPI specification calls RI, and so bits 15–8 must either equal bits 7–0 or be an inverted version of bits 7–0. Bits 15–8 will be sent on the rising edge of any xSPI command clock cycle, whereas bits 7–0 will be sent on the falling edge. In non–xSPI modes, bits 15–8 will be ignored. If Cb is set, then both bytes will be ignored.</p>
+    </body>
 </html>

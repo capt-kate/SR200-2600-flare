@@ -1,105 +1,153 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">WRITECMD</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x8</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Write command register. Configures the write command and data transfer mode to be used during automatic writes.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="Variable_latency"><td>[31]</td>
-<td><a href="#Variable_latency.desc">Variable_latency</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Variable_latency" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Extra_latency"><td>[30:29]</td>
-<td><a href="#Extra_latency.desc">Extra_latency</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Extra_latency" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Gate_strobe"><td>[28]</td>
-<td><a href="#Gate_strobe.desc">Gate_strobe</a></td>
-<td>r</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Gate_strobe" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Dummy_cycles"><td>[27:24]</td>
-<td><a href="#Dummy_cycles.desc">Dummy_cycles</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Dummy_cycles" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Write_enable"><td>[23]</td>
-<td><a href="#Write_enable.desc">Write_enable</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Write_enable" title="Permalink to this row"></a></td>
-</tr>
-<tr id="Command_protocol_mode"><td>[22:20]</td>
-<td><a href="#Command_protocol_mode.desc">Command_protocol_mode</a></td>
-<td>r</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#Command_protocol_mode" title="Permalink to this row"></a></td>
-</tr>
-<tr id="CA"><td>[19]</td>
-<td><a href="#CA.desc">CA</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#CA" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DM"><td>[18:16]</td>
-<td><a href="#DM.desc">DM</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DM" title="Permalink to this row"></a></td>
-</tr>
-<tr id="WRITE_COMMAND"><td>[15:0]</td>
-<td><a href="#WRITE_COMMAND.desc">WRITE_COMMAND</a></td>
-<td>rw</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#WRITE_COMMAND" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="Variable_latency.desc">Variable_latency<a class="headerlink" href="#Variable_latency.desc" title="Permalink to this headline"></a></h3>
-<p>Variable latency. Many xSPI (8D) modes require the design to sample the DS signal and adjust latency accordingly. Set to one to enable this behavior in xSPI mode(s).</p>
-<h3 id="Extra_latency.desc">Extra_latency<a class="headerlink" href="#Extra_latency.desc" title="Permalink to this headline"></a></h3>
-<p>Extra latency. Normally, xSPI latency is defined by either the dummy cycles or twice the number of dummy cycles. Some devices require an extra fixed amount. This extra fixed amount may be adjusted here. Defaults to zero.</p>
-<h3 id="Gate_strobe.desc">Gate_strobe<a class="headerlink" href="#Gate_strobe.desc" title="Permalink to this headline"></a></h3>
-<p>Gate strobe. If set, then the protocol handler will mask write bytes by raising DS. If clear, then the protocol handler will break sequences between rather than mask bytes. This bit is equivalent to the write command being in xSPI (8D) mode.</p>
-<h3 id="Dummy_cycles.desc">Dummy_cycles<a class="headerlink" href="#Dummy_cycles.desc" title="Permalink to this headline"></a></h3>
-<p>Dummy cycles. In general, these are the number of CK clock cycles between the end of the command modifier and the first write data clock cycle. In xSPI (8D) command mode, if this value is zero then the DS signal will be ignored when determining write latency. Otherwise, one set of dummy cycles will be counted during the command modifiers and if DS is high at the beginning of a write cycle then this number of dummy cycles will be doubled.</p>
-<h3 id="Write_enable.desc">Write_enable<a class="headerlink" href="#Write_enable.desc" title="Permalink to this headline"></a></h3>
-<p>Write enable. If this bit is set and the write protect flag is clear, then writes to the AXI slave port will initiate device transactions. Otherwise AXI slave port writes will halt the device interface and return SLVERR bus errors. This bit will be clear, disabling all writes, in XIP modes.</p>
-<h3 id="Command_protocol_mode.desc">Command_protocol_mode<a class="headerlink" href="#Command_protocol_mode.desc" title="Permalink to this headline"></a></h3>
-<p>The command protocol mode bits from the READCMD register will be reflected in this field.</p>
-<h3 id="CA.desc">CA<a class="headerlink" href="#CA.desc" title="Permalink to this headline"></a></h3>
-<p>Command argument bit. This bit mirrors the same bit in the READCMD register, only this time for writes. If set, then any write command modifiers will use the command mode, else they will use the data mode.</p>
-<h3 id="DM.desc">DM<a class="headerlink" href="#DM.desc" title="Permalink to this headline"></a></h3>
-<p>The protocol mode used for write data. See Tbl. 5.6 for the allowable value in this field. As with the READCMD register, the write data protocol mode must be greater than or equal to the command protocol mode.</p>
-<h3 id="WRITE_COMMAND.desc">WRITE_COMMAND<a class="headerlink" href="#WRITE_COMMAND.desc" title="Permalink to this headline"></a></h3>
-<p>These bits contain the command byte(s) that will be sent to the device to begin a write command. They are what the xSPI specification calls RI, and so bits 15–8 must either equal bits 7–0 or be an inverted version of bits 7–0. Bits 15–8 will be sent on the rising edge of any xSPI command clock cycle, whereas bits 7–0 will be sent on the subsequent falling edge. In non–xSPI (non–8D) modes, bits 15–8 will be ignored.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">WRITECMD</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x8</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>Write command register. Configures the write command and data transfer mode to be used during automatic writes.</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr id="Variable_latency" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Variable_latency.desc">Variable_latency</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Variable_latency" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Extra_latency" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[30:29]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Extra_latency.desc">Extra_latency</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Extra_latency" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Gate_strobe" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[28]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Gate_strobe.desc">Gate_strobe</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Gate_strobe" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Dummy_cycles" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[27:24]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Dummy_cycles.desc">Dummy_cycles</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Dummy_cycles" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Write_enable" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[23]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Write_enable.desc">Write_enable</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Write_enable" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="Command_protocol_mode" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[22:20]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#Command_protocol_mode.desc">Command_protocol_mode</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#Command_protocol_mode" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="CA" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[19]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#CA.desc">CA</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#CA" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="DM" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[18:16]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#DM.desc">DM</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#DM" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="WRITE_COMMAND" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[15:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#WRITE_COMMAND.desc">WRITE_COMMAND</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#WRITE_COMMAND" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="Variable_latency.desc">Variable_latency<a class="headerlink" href="#Variable_latency.desc" title="Permalink to this headline"></a></h3>
+        <p>Variable latency. Many xSPI (8D) modes require the design to sample the DS signal and adjust latency accordingly. Set to one to enable this behavior in xSPI mode(s).</p>
+        <h3 id="Extra_latency.desc">Extra_latency<a class="headerlink" href="#Extra_latency.desc" title="Permalink to this headline"></a></h3>
+        <p>Extra latency. Normally, xSPI latency is defined by either the dummy cycles or twice the number of dummy cycles. Some devices require an extra fixed amount. This extra fixed amount may be adjusted here. Defaults to zero.</p>
+        <h3 id="Gate_strobe.desc">Gate_strobe<a class="headerlink" href="#Gate_strobe.desc" title="Permalink to this headline"></a></h3>
+        <p>Gate strobe. If set, then the protocol handler will mask write bytes by raising DS. If clear, then the protocol handler will break sequences between rather than mask bytes. This bit is equivalent to the write command being in xSPI (8D) mode.</p>
+        <h3 id="Dummy_cycles.desc">Dummy_cycles<a class="headerlink" href="#Dummy_cycles.desc" title="Permalink to this headline"></a></h3>
+        <p>Dummy cycles. In general, these are the number of CK clock cycles between the end of the command modifier and the first write data clock cycle. In xSPI (8D) command mode, if this value is zero then the DS signal will be ignored when determining write latency. Otherwise, one set of dummy cycles will be counted during the command modifiers and if DS is high at the beginning of a write cycle then this number of dummy cycles will be doubled.</p>
+        <h3 id="Write_enable.desc">Write_enable<a class="headerlink" href="#Write_enable.desc" title="Permalink to this headline"></a></h3>
+        <p>Write enable. If this bit is set and the write protect flag is clear, then writes to the AXI slave port will initiate device transactions. Otherwise AXI slave port writes will halt the device interface and return SLVERR bus errors. This bit will be clear, disabling all writes, in XIP modes.</p>
+        <h3 id="Command_protocol_mode.desc">Command_protocol_mode<a class="headerlink" href="#Command_protocol_mode.desc" title="Permalink to this headline"></a></h3>
+        <p>The command protocol mode bits from the READCMD register will be reflected in this field.</p>
+        <h3 id="CA.desc">CA<a class="headerlink" href="#CA.desc" title="Permalink to this headline"></a></h3>
+        <p>Command argument bit. This bit mirrors the same bit in the READCMD register, only this time for writes. If set, then any write command modifiers will use the command mode, else they will use the data mode.</p>
+        <h3 id="DM.desc">DM<a class="headerlink" href="#DM.desc" title="Permalink to this headline"></a></h3>
+        <p>The protocol mode used for write data. See Tbl. 5.6 for the allowable value in this field. As with the READCMD register, the write data protocol mode must be greater than or equal to the command protocol mode.</p>
+        <h3 id="WRITE_COMMAND.desc">WRITE_COMMAND<a class="headerlink" href="#WRITE_COMMAND.desc" title="Permalink to this headline"></a></h3>
+        <p>These bits contain the command byte(s) that will be sent to the device to begin a write command. They are what the xSPI specification calls RI, and so bits 15–8 must either equal bits 7–0 or be an inverted version of bits 7–0. Bits 15–8 will be sent on the rising edge of any xSPI command clock cycle, whereas bits 7–0 will be sent on the subsequent falling edge. In non–xSPI (non–8D) modes, bits 15–8 will be ignored.</p>
+    </body>
 </html>
