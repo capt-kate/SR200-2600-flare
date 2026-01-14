@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>SCL1DWRAP</title></head>
 <body>
-<h1><a name=SCL1DWRAP>SCL1DWRAP</a>
+<h1>SCL1DWRAP
         </h1>
 <table width="100%"><tr><td><p>Access</p>
 </td>
@@ -4469,7 +4469,7 @@ sel_1D_adp=1 i.e., select 1D scaler.
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Controls flagging of frame end i.e., frnd="1.<p"></p>
+<td><p>Controls flagging of frame end i.e., frnd="1."
 Makes sure that frame output to downstream completes and input frame read is completed from upstream. 
 1: for downscale case with Vscale at first position . 
 0: for all other cases(default). 
@@ -4681,14 +4681,14 @@ Lsize= max(ihres,ohres)/10 + (max(ihres,ohres)%10?1:0)</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Valid only if fifo_mode="1or" pftch="1..<p"></p>
+<td><p>Valid only if fifo_mode="1or" pftch="1.."
 Max memory occupancy (in pixels) in fifo_mode. 
 Upstream (input) is stalled if memory occupancy >= fifo_depth. 
 Max value calculation: 
 wls = floor( (memsize+1) / lsize ) 
 pls = ( (memsize+1) - (lsize*wls) ) * 10 
 fcp = wls * min(ihres, ohres) + pls. 
-1) For pftch="1," fifo_depth="fcp.<p"></p>
+1) For pftch="1," fifo_depth="fcp."
 2) For fifo_mode, 
 a) Max fifo_depth = fcp - 100. 
 b) Min fifo_depth = min(ihres, ohres)</p>
@@ -4700,7 +4700,7 @@ b) Min fifo_depth = min(ihres, ohres)</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Valid only if fifo_mode="1.<p"></p>
+<td><p>Valid only if fifo_mode="1."
 Min FIFO/memory occupancy (in pixels) required to start downstream frame. 
 Range: [ min(ihres, ohres), fifo_depth ]</p>
 </td>
@@ -7029,7 +7029,7 @@ sel_1D_adp=1 i.e., select 1D scaler.
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Controls flagging of frame end i.e., frnd="1.<p"></p>
+<td><p>Controls flagging of frame end i.e., frnd="1."
 Makes sure that frame output to downstream completes and input frame read is completed from upstream. 
 1: for downscale case with Vscale at first position . 
 0: for all other cases(default). 
@@ -7241,14 +7241,14 @@ Lsize= max(ihres,ohres)/10 + (max(ihres,ohres)%10?1:0)</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Valid only if fifo_mode="1or" pftch="1..<p"></p>
+<td><p>Valid only if fifo_mode="1or" pftch="1.."
 Max memory occupancy (in pixels) in fifo_mode. 
 Upstream (input) is stalled if memory occupancy >= fifo_depth. 
 Max value calculation: 
 wls = floor( (memsize+1) / lsize ) 
 pls = ( (memsize+1) - (lsize*wls) ) * 10 
 fcp = wls * min(ihres, ohres) + pls. 
-1) For pftch="1," fifo_depth="fcp.<p"></p>
+1) For pftch="1," fifo_depth="fcp."
 2) For fifo_mode, 
 a) Max fifo_depth = fcp - 100. 
 b) Min fifo_depth = min(ihres, ohres)</p>
@@ -7260,7 +7260,7 @@ b) Min fifo_depth = min(ihres, ohres)</p>
 </td>
 <td><p>0x0</p>
 </td>
-<td><p>Valid only if fifo_mode="1.<p"></p>
+<td><p>Valid only if fifo_mode="1."
 Min FIFO/memory occupancy (in pixels) required to start downstream frame. 
 Range: [ min(ihres, ohres), fifo_depth ]</p>
 </td>
