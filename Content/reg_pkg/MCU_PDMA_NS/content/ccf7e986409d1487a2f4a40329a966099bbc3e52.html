@@ -1,146 +1,240 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">CH_SRCTRANSCFG</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x1928</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Channel Source Transfer Configuration Register</p>
-<p>This register provides transfer attribute settings in the read direction of the DMA command.</p>
-<p>The content of this register can be updated during command linking by setting bit[10] in the command link header.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="RAZWI_1"><td>[31:20]</td>
-<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
-</tr>
-<tr id="SRCMAXBURSTLEN"><td>[19:16]</td>
-<td><a href="#SRCMAXBURSTLEN.desc">SRCMAXBURSTLEN</a></td>
-<td>rw</td>
-<td>0xf</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#SRCMAXBURSTLEN" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RAZWI_0"><td>[15:12]</td>
-<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
-</tr>
-<tr id="SRCPRIVATTR"><td>[11]</td>
-<td><a href="#SRCPRIVATTR.desc">SRCPRIVATTR</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#SRCPRIVATTR" title="Permalink to this row"></a></td>
-</tr>
-<tr id="SRCNONSECATTR"><td>[10]</td>
-<td><a href="#SRCNONSECATTR.desc">SRCNONSECATTR</a></td>
-<td>rw</td>
-<td>0x1</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#SRCNONSECATTR" title="Permalink to this row"></a></td>
-</tr>
-<tr id="SRCSHAREATTR"><td>[9:8]</td>
-<td><a href="#SRCSHAREATTR.desc">SRCSHAREATTR</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#SRCSHAREATTR" title="Permalink to this row"></a></td>
-</tr>
-<tr id="SRCMEMATTRHI"><td>[7:4]</td>
-<td><a href="#SRCMEMATTRHI.desc">SRCMEMATTRHI</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#SRCMEMATTRHI" title="Permalink to this row"></a></td>
-</tr>
-<tr id="SRCMEMATTRLO"><td>[3:0]</td>
-<td><a href="#SRCMEMATTRLO.desc">SRCMEMATTRLO</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#SRCMEMATTRLO" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="SRCMAXBURSTLEN.desc">SRCMAXBURSTLEN<a class="headerlink" href="#SRCMAXBURSTLEN.desc" title="Permalink to this headline"></a></h3>
-<p>Source Max Burst Length. Hint for the DMAC on what is the maximum allowed burst size it can use for read transfers. The maximum number of beats sent by the DMA for a read burst is equal to SRCMAXBURSTLEN + 1. Default value is 16 beats, which allows the DMA to set all burst sizes. Note: Limited by DATA_BUFF_SIZE size so larger settings may not always result in larger bursts.</p>
-<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="SRCPRIVATTR.desc">SRCPRIVATTR<a class="headerlink" href="#SRCPRIVATTR.desc" title="Permalink to this headline"></a></h3>
-<p>Source Transfer Privilege Attribute.
-- 0: Unprivileged
-- 1: Privileged
-When a channel is unprivileged this bit is tied to 0.</p>
-<h3 id="SRCNONSECATTR.desc">SRCNONSECATTR<a class="headerlink" href="#SRCNONSECATTR.desc" title="Permalink to this headline"></a></h3>
-<p>Source Transfer Non-secure Attribute.
-- 0: Secure
-- 1: Non-secure
-When a channel is Non-secure this bit is tied to 1.</p>
-<h3 id="SRCSHAREATTR.desc">SRCSHAREATTR<a class="headerlink" href="#SRCSHAREATTR.desc" title="Permalink to this headline"></a></h3>
-<p>Source Transfer Shareability Attribute.
-- 00: Non-shareable
-- 01: Reserved
-- 10: Outer shareable
-- 11: Inner shareable</p>
-<h3 id="SRCMEMATTRHI.desc">SRCMEMATTRHI<a class="headerlink" href="#SRCMEMATTRHI.desc" title="Permalink to this headline"></a></h3>
-<p>Source Transfer Memory Attribute field [7:4].
-- 0000: Device memory
-- 0001: Normal memory, Outer Write allocate, Outer Write-through transient
-- 0010: Normal memory, Outer Read allocate, Outer Write-through transient
-- 0011: Normal memory, Outer Read/Write allocate, Outer Write-through transient
-- 0100: Normal memory, Outer non-cacheable
-- 0101: Normal memory, Outer Write allocate, Outer Write-back transient
-- 0110: Normal memory, Outer Read allocate, Outer Write-back transient
-- 0111: Normal memory, Outer Read/Write allocate, Outer Write-back transient
-- 1000: Normal memory, Outer Write-through non-transient
-- 1001: Normal memory, Outer Write allocate, Outer Write-through non-transient
-- 1010: Normal memory, Outer Read allocate, Outer Write-through non-transient
-- 1011: Normal memory, Outer Read/Write allocate, Outer Write-through non-transient
-- 1100: Normal memory, Outer Write-back non-transient
-- 1101: Normal memory, Outer Write allocate, Outer Write-back non-transient
-- 1110: Normal memory, Outer Read allocate, Outer Write-back non-transient
-- 1111: Normal memory, Outer Read/Write allocate, Outer Write-back non-transient</p>
-<h3 id="SRCMEMATTRLO.desc">SRCMEMATTRLO<a class="headerlink" href="#SRCMEMATTRLO.desc" title="Permalink to this headline"></a></h3>
-<p>Source Transfer Memory Attribute field [3:0].
-When SRCMEMATTRHI is Device type (0000) then this field means:
-- 0000: Device-nGnRnE
-- 0100: Device-nGnRE
-- 1000: Device-nGRE
-- 1100: Device-GRE
-- Others: Invalid resulting in UNPREDICTABLE behavior
-When SRCMEMATTRHI is Normal memory type (other than 0000) then this field means:
-- 0000: Reserved
-- 0001: Normal memory, Inner Write allocate, Inner Write-through transient
-- 0010: Normal memory, Inner Read allocate, Inner Write-through transient
-- 0011: Normal memory, Inner Read/Write allocate, Inner Write-through transient
-- 0100: Normal memory, Inner non-cacheable
-- 0101: Normal memory, Inner Write allocate, Inner Write-back transient
-- 0110: Normal memory, Inner Read allocate, Inner Write-back transient
-- 0111: Normal memory, Inner Read/Write allocate, Inner Write-back transient
-- 1000: Normal memory, Inner Write-through non-transient
-- 1001: Normal memory, Inner Write allocate, Inner Write-through non-transient
-- 1010: Normal memory, Inner Read allocate, Inner Write-through non-transient
-- 1011: Normal memory, Inner Read/Write allocate, Inner Write-through non-transient
-- 1100: Normal memory, Inner Write-back non-transient
-- 1101: Normal memory, Inner Write allocate, Inner Write-back non-transient
-- 1110: Normal memory, Inner Read allocate, Inner Write-back non-transient
-- 1111: Normal memory, Inner Read/Write allocate, Inner Write-back non-transient</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">CH_SRCTRANSCFG</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x1928</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>Channel Source Transfer Configuration Register</p>
+        <p>This register provides transfer attribute settings in the read direction of the DMA command.</p>
+        <p>The content of this register can be updated during command linking by setting bit[10] in the command link header.</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr id="RAZWI_1" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31:20]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#RAZWI_1.desc">RAZWI_1</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="SRCMAXBURSTLEN" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[19:16]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#SRCMAXBURSTLEN.desc">SRCMAXBURSTLEN</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0xf</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#SRCMAXBURSTLEN" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="RAZWI_0" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[15:12]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#RAZWI_0.desc">RAZWI_0</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="SRCPRIVATTR" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[11]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#SRCPRIVATTR.desc">SRCPRIVATTR</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#SRCPRIVATTR" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="SRCNONSECATTR" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[10]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#SRCNONSECATTR.desc">SRCNONSECATTR</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#SRCNONSECATTR" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="SRCSHAREATTR" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[9:8]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#SRCSHAREATTR.desc">SRCSHAREATTR</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#SRCSHAREATTR" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="SRCMEMATTRHI" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[7:4]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#SRCMEMATTRHI.desc">SRCMEMATTRHI</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#SRCMEMATTRHI" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="SRCMEMATTRLO" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[3:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#SRCMEMATTRLO.desc">SRCMEMATTRLO</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#SRCMEMATTRLO" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
+        <p>Read-As-Zero, Writes Ignored.</p>
+        <h3 id="SRCMAXBURSTLEN.desc">SRCMAXBURSTLEN<a class="headerlink" href="#SRCMAXBURSTLEN.desc" title="Permalink to this headline"></a></h3>
+        <p>Source Max Burst Length. Hint for the DMAC on what is the maximum allowed burst size it can use for read transfers. The maximum number of beats sent by the DMA for a read burst is equal to SRCMAXBURSTLEN + 1. Default value is 16 beats, which allows the DMA to set all burst sizes. Note: Limited by DATA_BUFF_SIZE size so larger settings may not always result in larger bursts.</p>
+        <h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+        <p>Read-As-Zero, Writes Ignored.</p>
+        <h3 id="SRCPRIVATTR.desc">SRCPRIVATTR<a class="headerlink" href="#SRCPRIVATTR.desc" title="Permalink to this headline"></a></h3>
+        <p>Source Transfer Privilege Attribute.
+
+- 0: Unprivileged
+
+- 1: Privileged
+
+When a channel is unprivileged this bit is tied to 0.</p>
+        <h3 id="SRCNONSECATTR.desc">SRCNONSECATTR<a class="headerlink" href="#SRCNONSECATTR.desc" title="Permalink to this headline"></a></h3>
+        <p>Source Transfer Non-secure Attribute.
+
+- 0: Secure
+
+- 1: Non-secure
+
+When a channel is Non-secure this bit is tied to 1.</p>
+        <h3 id="SRCSHAREATTR.desc">SRCSHAREATTR<a class="headerlink" href="#SRCSHAREATTR.desc" title="Permalink to this headline"></a></h3>
+        <p>Source Transfer Shareability Attribute.
+
+- 00: Non-shareable
+
+- 01: Reserved
+
+- 10: Outer shareable
+
+- 11: Inner shareable</p>
+        <h3 id="SRCMEMATTRHI.desc">SRCMEMATTRHI<a class="headerlink" href="#SRCMEMATTRHI.desc" title="Permalink to this headline"></a></h3>
+        <p>Source Transfer Memory Attribute field [7:4].
+
+- 0000: Device memory
+
+- 0001: Normal memory, Outer Write allocate, Outer Write-through transient
+
+- 0010: Normal memory, Outer Read allocate, Outer Write-through transient
+
+- 0011: Normal memory, Outer Read/Write allocate, Outer Write-through transient
+
+- 0100: Normal memory, Outer non-cacheable
+
+- 0101: Normal memory, Outer Write allocate, Outer Write-back transient
+
+- 0110: Normal memory, Outer Read allocate, Outer Write-back transient
+
+- 0111: Normal memory, Outer Read/Write allocate, Outer Write-back transient
+
+- 1000: Normal memory, Outer Write-through non-transient
+
+- 1001: Normal memory, Outer Write allocate, Outer Write-through non-transient
+
+- 1010: Normal memory, Outer Read allocate, Outer Write-through non-transient
+
+- 1011: Normal memory, Outer Read/Write allocate, Outer Write-through non-transient
+
+- 1100: Normal memory, Outer Write-back non-transient
+
+- 1101: Normal memory, Outer Write allocate, Outer Write-back non-transient
+
+- 1110: Normal memory, Outer Read allocate, Outer Write-back non-transient
+
+- 1111: Normal memory, Outer Read/Write allocate, Outer Write-back non-transient</p>
+        <h3 id="SRCMEMATTRLO.desc">SRCMEMATTRLO<a class="headerlink" href="#SRCMEMATTRLO.desc" title="Permalink to this headline"></a></h3>
+        <p>Source Transfer Memory Attribute field [3:0].
+
+When SRCMEMATTRHI is Device type (0000) then this field means:
+
+- 0000: Device-nGnRnE
+
+- 0100: Device-nGnRE
+
+- 1000: Device-nGRE
+
+- 1100: Device-GRE
+
+- Others: Invalid resulting in UNPREDICTABLE behavior
+
+When SRCMEMATTRHI is Normal memory type (other than 0000) then this field means:
+
+- 0000: Reserved
+
+- 0001: Normal memory, Inner Write allocate, Inner Write-through transient
+
+- 0010: Normal memory, Inner Read allocate, Inner Write-through transient
+
+- 0011: Normal memory, Inner Read/Write allocate, Inner Write-through transient
+
+- 0100: Normal memory, Inner non-cacheable
+
+- 0101: Normal memory, Inner Write allocate, Inner Write-back transient
+
+- 0110: Normal memory, Inner Read allocate, Inner Write-back transient
+
+- 0111: Normal memory, Inner Read/Write allocate, Inner Write-back transient
+
+- 1000: Normal memory, Inner Write-through non-transient
+
+- 1001: Normal memory, Inner Write allocate, Inner Write-through non-transient
+
+- 1010: Normal memory, Inner Read allocate, Inner Write-through non-transient
+
+- 1011: Normal memory, Inner Read/Write allocate, Inner Write-through non-transient
+
+- 1100: Normal memory, Inner Write-back non-transient
+
+- 1101: Normal memory, Inner Write allocate, Inner Write-back non-transient
+
+- 1110: Normal memory, Inner Read allocate, Inner Write-back non-transient
+
+- 1111: Normal memory, Inner Read/Write allocate, Inner Write-back non-transient</p>
+    </body>
 </html>

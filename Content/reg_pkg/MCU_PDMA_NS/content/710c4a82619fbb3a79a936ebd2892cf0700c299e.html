@@ -1,37 +1,64 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-
-<h1 id="_Content.name">CH_XSIZE</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x2320</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Channel X Dimension Size Register, Lower Bits [15:0]</p>
-<p>This register defines the number of data units copied during the DMA command up to 16 bits in the X dimension. The source and destination size of the command may be different for some transfer types. When read during the execution of the DMA command, the register shows the remaining number of units in both read and write directions.</p>
-<p>The content of this register can be updated during command linking by setting bit[8] in the command link header.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="DESXSIZE"><td>[31:16]</td>
-<td><a href="#DESXSIZE.desc">DESXSIZE</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DESXSIZE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="SRCXSIZE"><td>[15:0]</td>
-<td><a href="#SRCXSIZE.desc">SRCXSIZE</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#SRCXSIZE" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="DESXSIZE.desc">DESXSIZE<a class="headerlink" href="#DESXSIZE.desc" title="Permalink to this headline"></a></h3>
-<p>Destination Number of Transfers in the X Dimension lower bits [15:0]. This register alongs with DESXSIZEHI defines the destination data block size of the DMA operation for or any 1D operation, and defines the X dimension of the 2D destination block for a 2D operation. HAS_WRAP or HAS_STREAM configuration needs to be set to allow writes to this register, otherwise it is read-only and writing to SRCXSIZE will also update the value of this register.</p>
-<h3 id="SRCXSIZE.desc">SRCXSIZE<a class="headerlink" href="#SRCXSIZE.desc" title="Permalink to this headline"></a></h3>
-<p>Source Number of Transfers in the X Dimension lower bits [15:0]. This register along with SRCXSIZEHI defines the source data block size of the DMA operation for any 1D operation, and defines the X dimension of the 2D source block for 2D operation.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">CH_XSIZE</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x2320</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>Channel X Dimension Size Register, Lower Bits [15:0]</p>
+        <p>This register defines the number of data units copied during the DMA command up to 16 bits in the X dimension. The source and destination size of the command may be different for some transfer types. When read during the execution of the DMA command, the register shows the remaining number of units in both read and write directions.</p>
+        <p>The content of this register can be updated during command linking by setting bit[8] in the command link header.</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr id="DESXSIZE" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31:16]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#DESXSIZE.desc">DESXSIZE</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#DESXSIZE" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="SRCXSIZE" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[15:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#SRCXSIZE.desc">SRCXSIZE</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#SRCXSIZE" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="DESXSIZE.desc">DESXSIZE<a class="headerlink" href="#DESXSIZE.desc" title="Permalink to this headline"></a></h3>
+        <p>Destination Number of Transfers in the X Dimension lower bits [15:0]. This register alongs with DESXSIZEHI defines the destination data block size of the DMA operation for or any 1D operation, and defines the X dimension of the 2D destination block for a 2D operation. HAS_WRAP or HAS_STREAM configuration needs to be set to allow writes to this register, otherwise it is read-only and writing to SRCXSIZE will also update the value of this register.</p>
+        <h3 id="SRCXSIZE.desc">SRCXSIZE<a class="headerlink" href="#SRCXSIZE.desc" title="Permalink to this headline"></a></h3>
+        <p>Source Number of Transfers in the X Dimension lower bits [15:0]. This register along with SRCXSIZEHI defines the source data block size of the DMA operation for any 1D operation, and defines the X dimension of the 2D source block for 2D operation.</p>
+    </body>
 </html>
