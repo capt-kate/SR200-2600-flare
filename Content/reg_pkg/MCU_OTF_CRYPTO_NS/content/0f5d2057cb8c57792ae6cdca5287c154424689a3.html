@@ -1,50 +1,187 @@
-<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-<h1 id="_Content.name">OTF_CRYPTO</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x0</dd><dt>Size:</dt><dd class="address">0x138</dd></dl><h2>Description</h2>
-<p>TODO: add description for authentication</p>
-<p>OTF_CRYPTO supports on-the-fly decryption and authentication in the AXI read channel.</p>
-<ul>Supported cipher: AES-CTR 
-Supported key length: 128-bit, 192-bit, 256-bit 
-</ul><p>8 contiguous address regions within 4GB address space are supported.
-Each region can contains either encrypted data or clear data.
-Address space outside these regions can only contains clear data.
-Read data from each encrypted region can be decrypted on-the-fly with one of the two preloaded key-nonce pairs.
-Random read access is supported.</p>
-<p>Write data are passed through without modification.
-On-the-fly encryption in the AXI write channel is NOT supported.
-Encryption of each address region must be done externally in advance.</p>
-<p>IV (initial vector for AES-CTR) for an address range is derived from its<code>start_addr</code>,<code>addr_offset</code>, and<code>nonce</code>settings.</p>
-<ul><code>start_vaddr = start_addr + addr_offset</code> 
-<code>start_counter = start_vaddr >> 4</code> 
-<code>IV = nonce || u32be_to_bstr(start_counter)</code> 
-</ul><ul><li><code>start_addr</code>and<code>start_vaddr</code>are 32-bit unsigned integers.</li><li><code>addr_offset</code>is a 32-bit signed integer. (Its signedness actually does not matter in 32-bit 2's complement addition.)</li><li><code>start_counter</code>is a 32-bit unsigned integer. In systems with 4GB address space, its 4 most significant bits are always 0s.</li><li><code>nonce</code>is a 96-bit (12-byte) byte string.</li><li>u32be_to_bstr() converts a 32-bit unsigned integer to a 4-byte byte string in the big endian fashion (the first byte is the most significant byte).</li><li><code>IV</code>is 128-bit (16-byte) byte string.</li><li><code>||</code>is the byte string concatenation operator.</li></ul><p>Please always study the academic literature on AES-CTR to understand the best practice in key and nonce selection. Some suggestion:</p>
-<ul><li>Key and nonce are always paired. 
-</li><li>Key must be randomly generated and kept secret. 
-</li><li>Nonce is usually not secrect and does not need to be random. It can only be used once and must not be reused with the same key. 
-</li><li>Each region's vaddr range must be contiguous, which means addr+addr_offset must not overflow or wrap around, for any addr within [start_addr, end_addr). 
-</li><li>For regions with the same key and nonce, their vaddr ranges, which is [start_addr+addr_offset, end_addr+addr_offset), must not overlap. 
-</li></ul><p>Reference bash script for encrypting an address region (using the AES-256-CTR cipher as an example):</p>
-<ul><code>#!/usr/bin/env bash</code> 
-<code>(( start_addr="0x3c005040," addr_offset="0x018bcd30" )) # example settings</code> 
-<code>(( start_vaddr="(start_addr+addr_offset)&0xffffffff," start_counter="(start_vaddr">>4) ))</code> 
-<code>printf -v start_counter_hex '%08x' $start_counter</code> 
-<code>nonce_hex="$(xxd" -p -c12 nonce.dat)</code> 
-<code>iv_hex="$nonce_hex$start_counter_hex</code"> 
-<code>key_hex="$(xxd" -p -c32 key.dat)</code> 
-<code>openssl enc -aes-256-ctr -e -in clear_region.dat -out encrypted_region.dat -K $key_hex -iv $iv_hex</code> 
-</ul><p>Byte strings, such as 16-byte, 24-byte, 32-byte keys, 12-byte nonces, 16-byte IVs, 16-byte input data blocks, 16-byte output data blocks,
-are stored in memory, files, or registers in their natrual byte order: the first (left-most) byte is stored at the lowest byte address.</p>
-<h2>Contents</h2>
-<table><tr><th>Offset</th><th>Identifier</th><th>Name</th><th></th></tr>
-<tr id="REGS"><td class="address">0x000</td>
-<td><a href="?p=OTF_CRYPTO.REGS" data-id="1" onclick="onClickNodeLink(event); return(false)">REGS</a></td>
-<td>-</td>
-<td><a class="headerlink" href="#REGS" title="Permalink to this row"></a></td>
-</tr>
-</table>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/table-no-head.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">
+			OTF_CRYPTO
+		</h1>
+        <dl class="node-info">
+            <dt>
+				Absolute Address:
+			</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>
+				Base Offset:
+			</dt>
+            <dd class="address">
+				0x0
+			</dd>
+            <dt>
+				Size:
+			</dt>
+            <dd class="address">
+				0x138
+			</dd>
+        </dl>
+        <h2>
+			Description
+		</h2>
+        <p>
+			TODO: add description for authentication
+		</p>
+        <p>
+			OTF_CRYPTO supports on-the-fly decryption and authentication in the AXI read channel.
+		</p>
+        <ul>
+			Supported cipher: AES-CTR Supported key length: 128-bit, 192-bit, 256-bit
+		</ul>
+        <p>
+			8 contiguous address regions within 4GB address space are supported. Each region can contains either encrypted data or clear data. Address space outside these regions can only contains clear data. Read data from each encrypted region can be decrypted on-the-fly with one of the two preloaded key-nonce pairs. Random read access is supported.
+		</p>
+        <p>
+			Write data are passed through without modification. On-the-fly encryption in the AXI write channel is NOT supported. Encryption of each address region must be done externally in advance.
+		</p>
+        <p>
+			IV (initial vector for AES-CTR) for an address range is derived from its
+			<code>
+				start_addr
+			</code>
+			,
+			<code>
+				addr_offset
+			</code>
+			, and
+			<code>
+				nonce
+			</code>
+			settings.
+		</p>
+        <p><code>
+				start_vaddr = start_addr + addr_offset
+			</code><code>
+				start_counter = start_vaddr &gt;&gt; 4
+			</code><code>
+				IV = nonce || u32be_to_bstr(start_counter)
+			</code>
+        </p>
+        <ul>
+            <li><code>
+					start_addr
+				</code>
+				and
+				<code>
+					start_vaddr
+				</code>
+				are 32-bit unsigned integers.
+			</li>
+            <li><code>
+					addr_offset
+				</code>
+				is a 32-bit signed integer. (Its signedness actually does not matter in 32-bit 2's complement addition.)
+			</li>
+            <li><code>
+					start_counter
+				</code>
+				is a 32-bit unsigned integer. In systems with 4GB address space, its 4 most significant bits are always 0s.
+			</li>
+            <li><code>
+					nonce
+				</code>
+				is a 96-bit (12-byte) byte string.
+			</li>
+            <li>
+				u32be_to_bstr() converts a 32-bit unsigned integer to a 4-byte byte string in the big endian fashion (the first byte is the most significant byte).
+			</li>
+            <li><code>
+					IV
+				</code>
+				is 128-bit (16-byte) byte string.
+			</li>
+            <li><code>
+					||
+				</code>
+				is the byte string concatenation operator.
+			</li>
+        </ul>
+        <p>
+			Please always study the academic literature on AES-CTR to understand the best practice in key and nonce selection. Some suggestion:
+		</p>
+        <ul>
+            <li>
+				Key and nonce are always paired.
+			</li>
+            <li>
+				Key must be randomly generated and kept secret.
+			</li>
+            <li>
+				Nonce is usually not secrect and does not need to be random. It can only be used once and must not be reused with the same key.
+			</li>
+            <li>
+				Each region's vaddr range must be contiguous, which means addr+addr_offset must not overflow or wrap around, for any addr within [start_addr, end_addr).
+			</li>
+            <li>
+				For regions with the same key and nonce, their vaddr ranges, which is [start_addr+addr_offset, end_addr+addr_offset), must not overlap.
+			</li>
+        </ul>
+        <p>
+			Reference bash script for encrypting an address region (using the AES-256-CTR cipher as an example):
+		</p>
+        <p><code>
+				#!/usr/bin/env bash
+			</code><code>
+				(( start_addr="0x3c005040," addr_offset="0x018bcd30" )) # example settings
+			</code><code>
+				(( start_vaddr="(start_addr+addr_offset)&amp;0xffffffff," start_counter="(start_vaddr"&gt;&gt;4) ))
+			</code><code>
+				printf -v start_counter_hex '%08x' $start_counter
+			</code><code>
+				nonce_hex="$(xxd" -p -c12 nonce.dat)
+			</code><code>
+				iv_hex="$nonce_hex$start_counter_hex&lt;/code"&gt;
+				<code>
+					key_hex="$(xxd" -p -c32 key.dat)
+				</code><code>
+					openssl enc -aes-256-ctr -e -in clear_region.dat -out encrypted_region.dat -K $key_hex -iv $iv_hex
+				</code></code>
+        </p>
+        <p>
+			Byte strings, such as 16-byte, 24-byte, 32-byte keys, 12-byte nonces, 16-byte IVs, 16-byte input data blocks, 16-byte output data blocks, are stored in memory, files, or registers in their natrual byte order: the first (left-most) byte is stored at the lowest byte address.
+		</p>
+        <h2>
+			Contents
+		</h2>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" class="TableStyle-table-no-head" cellspacing="0">
+            <col class="TableStyle-table-no-head-Column-Column1" />
+            <col class="TableStyle-table-no-head-Column-Column1" />
+            <col class="TableStyle-table-no-head-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-table-no-head-Body-Body1">
+                    <th class="TableStyle-table-no-head-BodyE-Column1-Body1">
+						Offset
+					</th>
+                    <th class="TableStyle-table-no-head-BodyE-Column1-Body1">
+						Identifier
+					</th>
+                    <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+						Name
+					</th>
+                </tr>
+                <tr id="REGS" class="TableStyle-table-no-head-Body-Body2">
+                    <td class="TableStyle-table-no-head-BodyB-Column1-Body2">
+						0x000
+					</td>
+                    <td class="TableStyle-table-no-head-BodyB-Column1-Body2"><a href="?p=OTF_CRYPTO.REGS" data-id="1">
+							REGS
+						</a>
+                    </td>
+                    <td class="TableStyle-table-no-head-BodyA-Column1-Body2">
+						-
+					</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
 </html>
