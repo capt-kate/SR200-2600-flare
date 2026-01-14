@@ -82,95 +82,52 @@
         <p>Read-As-Zero, Writes Ignored.</p>
         <h3 id="LINKSHAREATTR.desc">LINKSHAREATTR<a class="headerlink" href="#LINKSHAREATTR.desc" title="Permalink to this headline"></a></h3>
         <p>Link Address Transfer Shareability Attribute.
-
 - 00: Non-shareable
-
 - 01: Reserved
-
 - 10: Outer shareable
-
 - 11: Inner shareable</p>
         <h3 id="LINKMEMATTRHI.desc">LINKMEMATTRHI<a class="headerlink" href="#LINKMEMATTRHI.desc" title="Permalink to this headline"></a></h3>
         <p>Link Address Read Transfer Memory Attribute field [7:4].
-
 - 0000: Device memory
-
 - 0001: Normal memory, Outer Write allocate, Outer Write-through transient
-
 - 0010: Normal memory, Outer Read allocate, Outer Write-through transient
-
 - 0011: Normal memory, Outer Read/Write allocate, Outer Write-through transient
-
 - 0100: Normal memory, Outer non-cacheable
-
 - 0101: Normal memory, Outer Write allocate, Outer Write-back transient
-
 - 0110: Normal memory, Outer Read allocate, Outer Write-back transient
-
 - 0111: Normal memory, Outer Read/Write allocate, Outer Write-back transient
-
 - 1000: Normal memory, Outer Write-through non-transient
-
 - 1001: Normal memory, Outer Write allocate, Outer Write-through non-transient
-
 - 1010: Normal memory, Outer Read allocate, Outer Write-through non-transient
-
 - 1011: Normal memory, Outer Read/Write allocate, Outer Write-through non-transient
-
 - 1100: Normal memory, Outer Write-back non-transient
-
 - 1101: Normal memory, Outer Write allocate, Outer Write-back non-transient
-
 - 1110: Normal memory, Outer Read allocate, Outer Write-back non-transient
-
 - 1111: Normal memory, Outer Read/Write allocate, Outer Write-back non-transient</p>
         <h3 id="LINKMEMATTRLO.desc">LINKMEMATTRLO<a class="headerlink" href="#LINKMEMATTRLO.desc" title="Permalink to this headline"></a></h3>
         <p>Link Address Read Transfer Memory Attribute field [3:0].
-
 When LINKMEMATTRHI is Device type (0000) then this field means:
-
 - 0000: Device-nGnRnE
-
 - 0100: Device-nGnRE
-
 - 1000: Device-nGRE
-
 - 1100: Device-GRE
-
 - Others: Invalid resulting in UNPREDICTABLE behavior
-
 When LINKMEMATTRHI is Normal memory type (other than 0000) then this field means:
-
 - 0000: Reserved
-
 - 0001: Normal memory, Inner Write allocate, Inner Write-through transient
-
 - 0010: Normal memory, Inner Read allocate, Inner Write-through transient
-
 - 0011: Normal memory, Inner Read/Write allocate, Inner Write-through transient
-
 - 0100: Normal memory, Inner non-cacheable
-
 - 0101: Normal memory, Inner Write allocate, Inner Write-back transient
-
 - 0110: Normal memory, Inner Read allocate, Inner Write-back transient
-
 - 0111: Normal memory, Inner Read/Write allocate, Inner Write-back transient
-
 - 1000: Normal memory, Inner Write-through non-transient
-
 - 1001: Normal memory, Inner Write allocate, Inner Write-through non-transient
-
 - 1010: Normal memory, Inner Read allocate, Inner Write-through non-transient
-
 - 1011: Normal memory, Inner Read/Write allocate, Inner Write-through non-transient
-
 - 1100: Normal memory, Inner Write-back non-transient
-
 - 1101: Normal memory, Inner Write allocate, Inner Write-back non-transient
-
 - 1110: Normal memory, Inner Read allocate, Inner Write-back non-transient
-
 - 1111: Normal memory, Inner Read/Write allocate, Inner Write-back non-transient</p>
     </body>
 </html>

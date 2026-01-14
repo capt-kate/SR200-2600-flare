@@ -16,7 +16,6 @@
         <h2>Description</h2>
         <p>Channel Control Register</p>
         <p>This register can be used to configure the type of the transfers and the resources needed by the currently executed DMA command. It also defines how the command shall behave when the command is complete.
-
 The content of this register can be updated during command linking by setting bit[3] in the command link header.</p>
         <h2>Contents</h2>
         <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
@@ -193,21 +192,15 @@ The content of this register can be updated during command linking by setting bi
         <p>Read-As-Zero, Writes Ignored.</p>
         <h3 id="USETRIGOUT.desc">USETRIGOUT<a class="headerlink" href="#USETRIGOUT.desc" title="Permalink to this headline"></a></h3>
         <p>Enable Trigger Output use for this command.
-
 - 0: disable
-
 - 1: enable</p>
         <h3 id="USEDESTRIGIN.desc">USEDESTRIGIN<a class="headerlink" href="#USEDESTRIGIN.desc" title="Permalink to this headline"></a></h3>
         <p>Enable Destination Trigger Input use for this command.
-
 - 0: disable
-
 - 1: enable</p>
         <h3 id="USESRCTRIGIN.desc">USESRCTRIGIN<a class="headerlink" href="#USESRCTRIGIN.desc" title="Permalink to this headline"></a></h3>
         <p>Enable Source Trigger Input use for this command.
-
 - 0: disable
-
 - 1: enable</p>
         <h3 id="DONEPAUSEEN.desc">DONEPAUSEEN<a class="headerlink" href="#DONEPAUSEEN.desc" title="Permalink to this headline"></a></h3>
         <p>Done pause enable. When set to '1' the assertion of the STAT_DONE flag results in an automatic pause request for the current DMA operation. When the paused state is reached the STAT_RESUMEWAIT flag is also set. When set to '0' the assertion of the STAT_DONE does not pause the progress of the command and the next operation of the channel is started immediately after the STAT_DONE flag is set.</p>
@@ -215,75 +208,47 @@ The content of this register can be updated during command linking by setting bi
         <p>Read-As-Zero, Writes Ignored.</p>
         <h3 id="DONETYPE.desc">DONETYPE<a class="headerlink" href="#DONETYPE.desc" title="Permalink to this headline"></a></h3>
         <p>Done type selection. This field defines when the STAT_DONE status flag is asserted during the command operation.
-
 - 00: STAT_DONE flag is not asserted for this command.
-
 - 01: End of a command, before jumping to the next linked command. (default)
-
 - 10: Reserved.
-
 - 11: End of a command, before jumping to the next linked command or before starting the next autorestart cycle.</p>
         <h3 id="REGRELOADTYPE.desc">REGRELOADTYPE<a class="headerlink" href="#REGRELOADTYPE.desc" title="Permalink to this headline"></a></h3>
         <p>Automatic register reload type. Defines how the DMA command reloads initial values at the end of a DMA command before autorestarting, ending or linking to a new DMA command:
-
 - 000: Reload Disabled.
-
 - 001: Reload source and destination size registers only.
-
 - 011: Reload source address only and all source and destination size registers.
-
 - 101: Reload destination address only and all source and destination size registers.
-
 - 111: Reload source and destination address and all source and destination size registers.
-
 - Others: Reserved.
-
 NOTE: When CLEARCMD is set, the reloaded registers will also be cleared.</p>
         <h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
         <p>Read-As-Zero, Writes Ignored.</p>
         <h3 id="XTYPE.desc">XTYPE<a class="headerlink" href="#XTYPE.desc" title="Permalink to this headline"></a></h3>
         <p>Operation type for X direction:
-
 - 000: disable - No data transfer will take place for this command. This mode can be used to create empty commands that wait for an event or set GPOs.
-
 - 001: continue - Copy data in a continuous manner from source to the destination. For 1D operations it is expected that SRCXSIZE is equal to DESXSIZE, other combinations result in UNPREDICTABLE behavior. For 2D operations, this mode can be used for simple 2D to 2D copy but it also allows the reshaping of the data like 1D to 2D or 2D to 1D conversions. If the DESXSIZE is smaller than SRCXSIZE then the read data from the current source line goes to the next destination line. If SRCXSIZE is smaller than DESXSIZE then the reads start on the next line and data is written to the remainder of the current destination line. Note: For 1D to 2D the SRCYSIZE for 2D to 1D conversion the DESYSIZE needs to be set to 1 when using this mode.
-
 - 010: wrap - Wrap source data within a destination line when the end of the source line is reached. Read starts again from the beginning of the source line and copied to the remainder of the destination line. If the DESXSIZE is smaller than SRCXSIZE then the behavior is UNPREDICTABLE. Not supported when no WRAP support in HW
-
 - 011: fill - Fill the remainder of the destination line with FILLVAL when the end of the source line is reached. If the DESXSIZE is smaller than SRCXSIZE then the behavior is UNPREDICTABLE. Not supported when no WRAP support in HW.
-
 - Others: Reserved.</p>
         <h3 id="CHLOCKREQ.desc">CHLOCKREQ<a class="headerlink" href="#CHLOCKREQ.desc" title="Permalink to this headline"></a></h3>
         <p>Channel Lock Request. When set to '1' the DMA locks this channel to physical channel.
-
 This field is ignored when the number of channels match the number of physical channels, or when the number of locked channels matches the number of physical channels.</p>
         <h3 id="CHPRIO.desc">CHPRIO<a class="headerlink" href="#CHPRIO.desc" title="Permalink to this headline"></a></h3>
         <p>Channel Priority.
-
 - 0: Lowest Priority
-
 - 15: High Priority</p>
         <h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
         <p>Read-As-Zero, Writes Ignored.</p>
         <h3 id="TRANSIZE.desc">TRANSIZE<a class="headerlink" href="#TRANSIZE.desc" title="Permalink to this headline"></a></h3>
         <p>Transfer Entity Size. Size in bytes = 2^TRANSIZE.
-
 - 000: Byte
-
 - 001: Halfworld
-
 - 010: Word
-
 - 011: Doubleword
-
 - 100: 128bits
-
 - 101: 256bits
-
 - 110: 512bits
-
 - 111: 1024bits
-
 Setting a value greater than the configured DATA_WIDTH yields a configuration error (CFGERR).</p>
     </body>
 </html>

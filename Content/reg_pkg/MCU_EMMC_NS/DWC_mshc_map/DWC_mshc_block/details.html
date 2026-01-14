@@ -49,7 +49,6 @@
                         <p>32-bit Block Count (SDMA System Address)</p>
                         <ul>
                             <li>SDMA System Address (Host Version 4 Enable = 0): This register contains the system memory address for an SDMA transfer in the 32-bit addressing mode. When the Host Controller stops an SDMA
-
 transfer, this register points to the system address of the next contiguous data position. It can be accessed only if no transaction is executing. Reading this register during data transfers may</li>
                         </ul>
                         <p>return an invalid value.</p>
@@ -169,9 +168,7 @@ transfer, this register points to the system address of the next contiguous data
                         <p class="BLANK">
                         </p>
                         <p>These bits specify the block size of data transfers. In case of memory, it is set to 512 bytes. It can be accessed only if no transaction is executing. Read operations during transfers may return
-
 an invalid value, and write operations are ignored.
-
 Following are the values for XFER_BLOCK_SIZE:</p>
                         <ul>
                             <li>0x1: 1 byte</li>
@@ -383,12 +380,10 @@ Following are the values for XFER_BLOCK_SIZE:</p>
                         <p class="BLANK">
                         </p>
                         <p>If Host Driver checks the response error, set this bit to 0 and wait for Command Complete Interrupt and then check
-
 the response register.</p>
                         <p class="BLANK">
                         </p>
                         <p>If the Host Controller checks the response error, set this bit to 1 and set the Response Error Check Enable bit to 1. The Command Complete Interrupt is disabled by this bit
-
 regardless of the Command Complete Signal Enable.</p>
                         <p class="BLANK">
                         </p>
@@ -417,7 +412,6 @@ regardless of the Command Complete Signal Enable.</p>
                         <p class="BLANK">
                         </p>
                         <p>The Host Controller supports response check function to avoid overhead of response error check by Host driver. Response types of only R1 and R5 can be checked by the Controller.
-
 If the Host Controller checks the response error, set this bit to 1 and set Response Interrupt Disable to 1. If an error is detected, the Response Error interrupt is generated in the Error Interrupt Status register.</p>
                         <p class="BLANK">
                         </p>
@@ -519,7 +513,6 @@ If the Host Controller checks the response error, set this bit to 1 and set Resp
                         <p class="BLANK">
                         </p>
                         <p>This bit defines the direction of DAT line data transfers. This bit is set to 1 by the Host Driver to transfer data
-
 from the SD/eMMC card to the Host Controller and it is set to 0 for all other commands.</p>
                         <p class="BLANK">
                         </p>
@@ -574,7 +567,6 @@ from the SD/eMMC card to the Host Controller and it is set to 0 for all other co
                         <p class="BLANK">
                         </p>
                         <p>This bit is used to enable the Block Count register, which is relevant for multiple block transfers.
-
 If this bit is set to 0, the Block Count register is disabled, which is useful in executing an infinite transfer.</p>
                         <p class="BLANK">
                         </p>
@@ -735,7 +727,6 @@ If this bit is set to 0, the Block Count register is disabled, which is useful i
                         <p class="BLANK">
                         </p>
                         <p>This bit is set to 1 to indicate that data is present and that the data is transferred using the DAT line.
-
 This bit is set to 0 in the following instances:</p>
                         <ul>
                             <li>Command using the CMD line</li>
@@ -926,7 +917,6 @@ This bit is set to 0 in the following instances:</p>
         <ul>
             <li>Name:Response Register 2/3</li>
             <li>Description:This register stores 71-40 bits of the Response Field for an SD/eMMC mode. This register is used to store the response from the cards. The response can be a maximum of 128 bits. These 128 bits are segregated into four 32-bit
-
 registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li>
             <li>Size:32 bits</li>
             <li>Offset:0x14</li>
@@ -1694,7 +1684,6 @@ registers: RESP01_R, RESP23_R, RESP45_R and RESP67_R.</li>
                         <p class="BLANK">
                         </p>
                         <p>This bit is applicable for SD/eMMC mode and is generated if either DAT line active or Read transfer active is set to 1.
-
 If this bit is set to 0, it indicates that the Host Controller can issue subsequent SD/eMMC commands.</p>
                         <p class="BLANK">
                         </p>
@@ -1918,7 +1907,6 @@ If this bit is set to 0, it indicates that the Host Controller can issue subsequ
                         <p class="BLANK">
                         </p>
                         <p>In SD/eMMC mode, this bit is used to determine the selection of preset value for High Speed mode.
-
 Before setting this bit, the Host Driver checks the High Speed Support in the Capabilities register.</p>
                         <p class="BLANK">
                         </p>
@@ -2033,7 +2021,6 @@ Before setting this bit, the Host Driver checks the High Speed Support in the Ca
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>SD Bus Voltage Select for VDD2.
-
 This bit is irrelevant for SD/eMMC card.</p>
                         <p class="BLANK">
                         </p>
@@ -2061,7 +2048,6 @@ This bit is irrelevant for SD/eMMC card.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>SD Bus Power for VDD2.
-
 This bit is irrelevant for SD/eMMC card.</p>
                         <p class="BLANK">
                         </p>
@@ -2086,7 +2072,6 @@ This bit is irrelevant for SD/eMMC card.</p>
                         <p class="BLANK">
                         </p>
                         <p>These bits enable the Host Driver to select the voltage level for an SD/eMMC card. Before setting this register, the Host Driver checks the Voltage Support bits in the Capabilities register.
-
 If an unsupported voltage is selected, the Host System does not supply the SD Bus voltage. The value set in this field is available on the DWC_mshc output signal (sd_vdd1_sel), which is used by the voltage switching circuitry.</p>
                         <p class="BLANK">
                         </p>
@@ -2310,7 +2295,6 @@ If an unsupported voltage is selected, the Host System does not supply the SD Bu
         <ul>
             <li>Name:Wakeup Control Register</li>
             <li>Description:This register is mandatory for the Host Controller, but the wakeup functionality depends on the Host Controller system hardware and software. The Host Driver maintains voltage on the SD Bus by
-
 setting the SD Bus Power to 1 in the Power Control Register, while a wakeup event through the Card Interrupt is desired.</li>
             <li>Size:8 bits</li>
             <li>Offset:0x2b</li>
@@ -2497,9 +2481,7 @@ setting the SD Bus Power to 1 in the Power Control Register, while a wakeup even
                         <p class="BLANK">
                         </p>
                         <p>These bits are used to select the frequency of the SDCLK signal. These bits depend on setting of Preset Value Enable in the Host Control 2 register. If Preset Value Enable = 0, these bits are set by
-
 the Host
-
 Driver. If Preset Value Enable = 1, these bits are automatically set to a value specified in one of the Preset Value register. The value is reflected on the lower 8-bit of the<em>card_clk_freq_sel</em>signal.</p>
                         <p class="BLANK">
                         </p>
@@ -2560,7 +2542,6 @@ Driver. If Preset Value Enable = 1, these bits are automatically set to a value 
                         <p class="BLANK">
                         </p>
                         <p>This bit is used to select the clock generator mode in SDCLK/RCLK Frequency Select. If Preset Value Enable = 0, this bit is set by the Host Driver. If Preset Value Enable = 1, this bit is
-
 automatically set to a value specified in one of the Preset Value registers. The value is reflected on the<em>card_clk_gen_sel</em>signal.</p>
                         <p class="BLANK">
                         </p>
@@ -2623,7 +2604,6 @@ automatically set to a value specified in one of the Preset Value registers. The
                         <p class="BLANK">
                         </p>
                         <p>This bit stops the SDCLK or RCLK when set to 0. The SDCLK/RCLK Frequency Select bit can be changed when this bit is set to 0.
-
 The value is reflected on the<em>clk2card_on</em>pin.</p>
                         <p class="BLANK">
                         </p>
@@ -2648,9 +2628,7 @@ The value is reflected on the<em>clk2card_on</em>pin.</p>
                         <p class="BLANK">
                         </p>
                         <p>This bit enables the Host Driver to check the clock stability twice after the Internal Clock Enable bit is set and after the PLL Enable bit is set.
-
 This bit reflects the synchronized value of the<em>intclk_stable</em>signal after the Internal Clock Enable bit is set to 1 and also reflects
-
 the synchronized value of the<em>card_clk_stable</em>signal after the PLL Enable bit is set to 1.</p>
                         <p class="BLANK">
                         </p>
@@ -2676,7 +2654,6 @@ the synchronized value of the<em>card_clk_stable</em>signal after the PLL Enable
                         <p class="BLANK">
                         </p>
                         <p>This bit is set to 0 when the Host Driver is not using the Host Controller or the Host Controller awaits a wakeup interrupt. The Host Controller
-
 must stop its internal clock to enter a very low power state. However, registers can still be read and written to. The value is reflected on the<em>intclk_en</em>signal.</p>
                         <p class="BLANK">
                         </p>
@@ -2699,7 +2676,6 @@ must stop its internal clock to enter a very low power state. However, registers
         <ul>
             <li>Name:Timeout Control Register</li>
             <li>Description:This register is used to set the Data Timeout Counter value for an SD/eMMC mode according to the timer clock defined by the Capabilities register, while
-
 initializing the Host Controller.</li>
             <li>Size:8 bits</li>
             <li>Offset:0x2e</li>
@@ -2755,9 +2731,7 @@ initializing the Host Controller.</li>
                         <p class="BLANK">
                         </p>
                         <p>This value determines the interval by which DAT line timeouts are detected. The Timeout clock frequency is generated by dividing the base clock TMCLK value by this value. When setting this
-
 register, prevent inadvertent timeout events by clearing the Data Timeout Error Status Enable (in the Error Interrupt Status Enable register).
-
 The values for these bits are:</p>
                         <ul>
                             <li>0xF : Reserved</li>
@@ -3267,7 +3241,6 @@ The values for these bits are:</p>
                         <p class="BLANK">
                         </p>
                         <p>This bit is set if the Host Controller detects the SDMA Buffer Boundary during transfer. In case of ADMA, by setting the Int field in the descriptor
-
 table, the Host controller generates this interrupt. This interrupt is not generated after a Transfer Complete.</p>
                         <p class="BLANK">
                         </p>
@@ -3363,7 +3336,6 @@ table, the Host controller generates this interrupt. This interrupt is not gener
         <ul>
             <li>Name:Error Interrupt Status Register</li>
             <li>Description:This register enables an interrupt when the Error Interrupt Status Enable is enabled and at least one of the statuses is set to 1. Writing to 1 clears the bit
-
 and writing to 0 retains the bit unchanged. Signals defined in this register can be enabled by the Error Interrupt Status Enable register, but not by the Error Interrupt Signal Enable register. More than one status can be cleared with a single register write. This register is applicable for an SD/eMMC mode.</li>
             <li>Size:16 bits</li>
             <li>Offset:0x32</li>
@@ -3618,11 +3590,8 @@ and writing to 0 retains the bit unchanged. Signals defined in this register can
                         <p class="BLANK">
                         </p>
                         <p>By setting the SD Bus Power bit in the Power Control register, the Host Controller is requested to supply power for the SD Bus. If the Host Controller supports the Current Limit function, it can
-
 be protected from an illegal card by stopping power supply to the card in which case this bit indicates a failure status. A reading of 1 for this bit means that the Host Controller is not supplying
-
 power to the SD card due to some failure. A reading of 0 for this bit means that the Host Controller is supplying power and no error has occurred. The Host Controller may require some sampling time to
-
 detect the current limit. DWC_mshc Host Controller does not support this function, this bit is always set to 0.</p>
                         <p class="BLANK">
                         </p>
@@ -5765,7 +5734,6 @@ detect the current limit. DWC_mshc Host Controller does not support this functio
                         <p class="BLANK">
                         </p>
                         <p>This bit enables automatic selection of SDCLK frequency and Driver strength Preset Value registers. When Preset Value Enable is set, SDCLK frequency generation (Frequency Select and Clock Generator
-
 Select) and the driver strength selection are performed by the controller. These values are selected from set of Preset Value registers based on selected speed mode.</p>
                         <p class="BLANK">
                         </p>
@@ -6031,7 +5999,6 @@ Select) and the driver strength selection are performed by the controller. These
                         <p class="BLANK">
                         </p>
                         <p>This bit controls voltage regulator for I/O cell in UHS-I/eMMC speed modes. Setting this bit from 0 to 1 starts changing the signal voltage from 3.3V to 1.8V. Host Controller clears this bit if switching to 1.8 signaling
-
 fails. The value is reflected on the uhs1_swvolt_en pin.</p>
                         <p class="BLANK">
                         </p>
@@ -6280,7 +6247,6 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
                         <p class="BLANK">
                         </p>
                         <p>If this bit is set to 1, 64-bit DMA Addressing for version 4 is enabled by setting Host Version 4 Enable
-
 (<em>HOST_VER4_ENABLE</em>= 1) and by setting 64-bit Addressing (<em>ADDRESSING</em>=1) in the Host Control 2 register. SDMA can be used and ADMA2 uses 128-bit Descriptor.</p>
                         <p class="BLANK">
                         </p>
@@ -7026,7 +6992,6 @@ fails. The value is reflected on the uhs1_swvolt_en pin.</p>
         <ul>
             <li>Name:Maximum Current Capabilities Register - 0 to 31</li>
             <li>Description:This register indicate the maximum current capability for each voltage, for VDD1. The value is meaningful if the Voltage Support is set in the Capabilities
-
 register. If this information is supplied by the Host System through another method, all the Maximum Current Capabilities registers are set to 0.</li>
             <li>Size:32 bits</li>
             <li>Offset:0x48</li>
@@ -7149,7 +7114,6 @@ register. If this information is supplied by the Host System through another met
         <ul>
             <li>Name:Maximum Current Capabilities Register - 32 to 63</li>
             <li>Description:This register indicates the maximum current capability for each voltage (for VDD2). The value is meaningful if Voltage Support is set in the Capabilities
-
 register. If this information is supplied by the Host System through another method, all the Maximum Current Capabilities registers are set to 0.</li>
             <li>Size:32 bits</li>
             <li>Offset:0x4c</li>
@@ -7441,7 +7405,6 @@ register. If this information is supplied by the Host System through another met
         <ul>
             <li>Name:Force Event Register for Error Interrupt Status</li>
             <li>Description:This register is not physically implemented but is an address at which the Error Interrupt Status register can be written. The effect of a write to this
-
 address is reflected in the Error Interrupt Status register if the corresponding bit of the Error Interrupt Status Enable register is set. This register is applicable for an SD/eMMC mode.</li>
             <li>Size:16 bits</li>
             <li>Offset:0x52</li>
@@ -8965,7 +8928,6 @@ address is reflected in the Error Interrupt Status register if the corresponding
                         <p class="BLANK">
                         </p>
                         <p>These bits indicate the Driver strength value supported by 1.8V signaling bus speed modes in the SD mode. In eMMC mode, these bits can be used for selecting
-
 the Drive strength value for HS400 mode.</p>
                         <p class="BLANK">
                         </p>
@@ -9075,7 +9037,6 @@ the Drive strength value for HS400 mode.</p>
                         <p class="BLANK">
                         </p>
                         <p>These bits indicate the lower 32-bit of the ADMA Integrated Descriptor address. The start address of Integrated Descriptor is set to these register bits. The ADMA3 fetches one Descriptor Address and
-
 increments these bits to indicate the next Descriptor address.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -9308,7 +9269,6 @@ increments these bits to indicate the next Descriptor address.</p>
                         <p class="BLANK">
                         </p>
                         <p>These status bits indicate the logical OR of Interrupt signal and Wakeup signal for each slot. A maximum of 8 slots can be defined. If one interrupt signal is associated with multiple slots, the Host
-
 Driver can identify the interrupt that is generated by reading these bits. By a power on reset or by setting Software Reset For All bit, the interrupt signals are de-asserted and this status reads 00h.</p>
                         <ul>
                             <li>Bit 00: Slot 1</li>

@@ -60,13 +60,9 @@
                     <td class="TableStyle-table-BodyB-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>Values written to this register are output on the I/O signals
-
 for Port A if the corresponding data direction bits for Port A
-
 are set to Output mode and the corresponding control bit for
-
 Port A is set to Software mode. The value read back is equal
-
 to the last value written to this register.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -128,11 +124,8 @@ to the last value written to this register.</p>
                     <td class="TableStyle-table-BodyB-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>Values written to this register independently control the
-
 direction of the corresponding data bit in Port A. The
-
 default direction can be configured as input or output after
-
 system reset through the GPIO_DFLT_DIR_A parameter.</p>
                         <p class="BLANK">
                         </p>
@@ -150,7 +143,6 @@ system reset through the GPIO_DFLT_DIR_A parameter.</p>
         <ul>
             <li>Name:Interrupt enable register</li>
             <li>Description:Interrupt enable register<p class="BLANK"></p>
-
 Note:This register is available only if Port A is configured to generate interrupts (GPIO_PORTA_INTR = Include (1)).</li>
             <li>Size:32 bits</li>
             <li>Offset:0x30</li>
@@ -203,13 +195,9 @@ Note:This register is available only if Port A is configured to generate interru
                     <td class="TableStyle-table-BodyB-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>Allows each bit of Port A to be configured for interrupts. By
-
 default the generation of interrupts is disabled. Whenever a 1 is written to a bit of this register, it configures the
-
 corresponding bit on Port A to become an interrupt; otherwise, Port A operates as a normal GPIO signal.
-
 Interrupts are disabled on the corresponding bits of Port A if the corresponding data direction register is set to Output or if
-
 Port A mode is set to Hardware.</p>
                         <p class="BLANK">
                         </p>
@@ -227,7 +215,6 @@ Port A mode is set to Hardware.</p>
         <ul>
             <li>Name:Interrupt mask register</li>
             <li>Description:Interrupt mask register<p class="BLANK"></p>
-
 Note:This register is available only if Port A is configured to generate interrupts (GPIO_PORTA_INTR = Include (1)).</li>
             <li>Size:32 bits</li>
             <li>Offset:0x34</li>
@@ -280,11 +267,8 @@ Note:This register is available only if Port A is configured to generate interru
                     <td class="TableStyle-table-BodyB-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>Controls whether an interrupt on Port A can create an
-
 interrupt for the interrupt controller by not masking it. By default, all interrupts bits are unmasked. Whenever a 1 is
-
 written to a bit in this register, it masks the interrupt generation capability for this signal; otherwise interrupts are
-
 allowed through. The unmasked status can be read as well as the resultant status after masking.</p>
                         <p class="BLANK">
                         </p>
@@ -302,7 +286,6 @@ allowed through. The unmasked status can be read as well as the resultant status
         <ul>
             <li>Name:Interrupt level</li>
             <li>Description:Interrupt level<p class="BLANK"></p>
-
 Note:This register is available only if Port A is configured to generate interrupts (GPIO_PORTA_INTR = Include (1)).</li>
             <li>Size:32 bits</li>
             <li>Offset:0x38</li>
@@ -355,9 +338,7 @@ Note:This register is available only if Port A is configured to generate interru
                     <td class="TableStyle-table-BodyB-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>Controls the type of interrupt that can occur on Port A.
-
 Whenever a 0 is written to a bit of this register, it configures the interrupt type to be level-sensitive; otherwise, it is
-
 edge-sensitive.</p>
                         <p class="BLANK">
                         </p>
@@ -375,7 +356,6 @@ edge-sensitive.</p>
         <ul>
             <li>Name:Interrupt polarity</li>
             <li>Description:Interrupt polarity<p class="BLANK"></p>
-
 Note:This register is available only if Port A is configured to generate interrupts (GPIO_PORTA_INTR = Include (1)).</li>
             <li>Size:32 bits</li>
             <li>Offset:0x3c</li>
@@ -428,9 +408,7 @@ Note:This register is available only if Port A is configured to generate interru
                     <td class="TableStyle-table-BodyB-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>Controls the polarity of edge or level sensitivity that can
-
 occur on input of Port A. Whenever a 0 is written to a bit of this register, it configures the interrupt type to falling-edge or
-
 active-low sensitive; otherwise, it is rising-edge or active-high sensitive.</p>
                         <p class="BLANK">
                         </p>
@@ -448,7 +426,6 @@ active-low sensitive; otherwise, it is rising-edge or active-high sensitive.</p>
         <ul>
             <li>Name:Interrupt status</li>
             <li>Description:Interrupt status<p class="BLANK"></p>
-
 Note:This register is available only if Port A is configured to generate interrupts (GPIO_PORTA_INTR = Include (1)).</li>
             <li>Size:32 bits</li>
             <li>Offset:0x40</li>
@@ -519,7 +496,6 @@ Note:This register is available only if Port A is configured to generate interru
         <ul>
             <li>Name:Raw interrupt status</li>
             <li>Description:Raw interrupt status<p class="BLANK"></p>
-
 Note:This register is available only if Port A is configured to generate interrupts (GPIO_PORTA_INTR = Include (1)).</li>
             <li>Size:32 bits</li>
             <li>Offset:0x44</li>
@@ -590,7 +566,6 @@ Note:This register is available only if Port A is configured to generate interru
         <ul>
             <li>Name:Debounce enable register</li>
             <li>Description:Debounce enable register<p class="BLANK"></p>
-
 Note:This register is available only if Port A is configured to generate interrupts (GPIO_PORTA_INTR = Include (1)) and when the debounce logic is included (GPIO_DEBOUNCE = Include (1)).</li>
             <li>Size:32 bits</li>
             <li>Offset:0x48</li>
@@ -643,11 +618,8 @@ Note:This register is available only if Port A is configured to generate interru
                     <td class="TableStyle-table-BodyB-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>Controls whether an external signal that is the source
-
 of an interrupt needs to be debounced to remove any spurious glitches. Writing a 1 to a bit in this register
-
 enables the debouncing circuitry. A signal must be valid for two periods of an external clock before it is
-
 internally processed.</p>
                         <p class="BLANK">
                         </p>
@@ -665,7 +637,6 @@ internally processed.</p>
         <ul>
             <li>Name:Port A clear interrupt register</li>
             <li>Description:Port A clear interrupt register<p class="BLANK"></p>
-
 Note:This register is available only if Port A is configured to generate interrupts (GPIO_PORTA_INTR = Include (1)) and when the debounce logic is included (GPIO_DEBOUNCE = Include (1)).</li>
             <li>Size:32 bits</li>
             <li>Offset:0x4c</li>
@@ -718,9 +689,7 @@ Note:This register is available only if Port A is configured to generate interru
                     <td class="TableStyle-table-BodyB-Column1-Body1">W</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>Controls the clearing of edge type interrupts from Port A.
-
 When a 1 is written into a corresponding bit of this register, the interrupt is cleared. All interrupts are cleared when
-
 Port A is not configured for interrupts.</p>
                         <p class="BLANK">
                         </p>
@@ -851,7 +820,6 @@ Port A is not configured for interrupts.</p>
                     <td class="TableStyle-table-BodyB-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>Writing a 1 to this register results in all level-sensitive interrupts being
-
 synchronized to pclk_intr.</p>
                         <p class="BLANK">
                         </p>
@@ -906,7 +874,6 @@ synchronized to pclk_intr.</p>
                     <td class="TableStyle-table-BodyB-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>This is a user-specified code that a system can read. It can
-
 be used for chip identification, and so on.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -917,7 +884,6 @@ be used for chip identification, and so on.</p>
         <ul>
             <li>Name:Interrupt Both Edge type</li>
             <li>Description:Interrupt Both Edge type<p class="BLANK"></p>
-
 Note:This register is available only if PORT A is configured to generate interrupts (GPIO_PORTA_INTR = Include(1)) and interrupt detection is configured to generate on both rising and falling edges of external input signal (GPIO_INT_BOTH_EDGE = Include(1)).</li>
             <li>Size:32 bits</li>
             <li>Offset:0x68</li>
@@ -973,17 +939,14 @@ Note:This register is available only if PORT A is configured to generate interru
                         <p class="BLANK">
                         </p>
                         <p>- Whenever a particular bit is programmed to 1, it enables the generation of interrupts on both the rising edge and the
-
 falling edge of an external input signal corresponding to that bit on port A.</p>
                         <p class="BLANK">
                         </p>
                         <p>- The values programmed in the registers gpio_intype_level and gpio_int_polarity for this particular bit are not
-
 considered when the corresponding bit of this register is set to 1.</p>
                         <p class="BLANK">
                         </p>
                         <p>- Whenever a particular bit is programmed to 0, the interrupt type depends on the value of the corresponding bits in the
-
 gpio_inttype_level and gpio_int_polarity registers.</p>
                         <p class="BLANK">
                         </p>
@@ -1038,7 +1001,6 @@ gpio_inttype_level and gpio_int_polarity registers.</p>
                     <td class="TableStyle-table-BodyB-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>ASCII value for each number in the version, followed by *. For example
-
 32_31_32_2A represents the version 2.12*.</p>
                         <p>Value After Reset:0x3231362a</p>
                     </td>
@@ -1049,7 +1011,6 @@ gpio_inttype_level and gpio_int_polarity registers.</p>
         <ul>
             <li>Name:GPIO Configuration Register 2</li>
             <li>Description:GPIO Configuration Register 2<p class="BLANK"></p>
-
 This register is a read-only register that is present when the configuration parameter GPIO_ADD_ENCODED_PARAMS is set to True. If this configuration is set to False, then this register reads back 0.</li>
             <li>Size:32 bits</li>
             <li>Offset:0x70</li>
@@ -1153,7 +1114,6 @@ This register is a read-only register that is present when the configuration par
         <ul>
             <li>Name:GPIO Configuration Register 1</li>
             <li>Description:GPIO Configuration Register 1<p class="BLANK"></p>
-
 This register is present when the configuration parameter GPIO_ADD_ENCODED_PARAMS is set to True. If this parameter is set to False, this register reads back zero (0).</li>
             <li>Size:32 bits</li>
             <li>Offset:0x74</li>
@@ -1251,7 +1211,6 @@ This register is present when the configuration parameter GPIO_ADD_ENCODED_PARAM
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>The value of this register is derived from the
-
 GPIO_INT_BOTH_EDGE configuration parameter</p>
                         <p class="BLANK">
                         </p>
@@ -1271,7 +1230,6 @@ GPIO_INT_BOTH_EDGE configuration parameter</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>The value of this register is derived from the
-
 GPIO_ID_WIDTH configuration parameter.</p>
                         <p>Value After Reset:0x1f</p>
                     </td>
@@ -1284,7 +1242,6 @@ GPIO_ID_WIDTH configuration parameter.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>The value of this register is derived from the
-
 GPIO_ID configuration parameter.</p>
                         <p class="BLANK">
                         </p>
@@ -1304,7 +1261,6 @@ GPIO_ID configuration parameter.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>The value of this register is derived from the
-
 GPIO_ADD_ENCODED_PARAMS configuration parameter.</p>
                         <p class="BLANK">
                         </p>
@@ -1324,7 +1280,6 @@ GPIO_ADD_ENCODED_PARAMS configuration parameter.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>The value of this register is derived from the
-
 GPIO_DEBOUNCE configuration parameter.</p>
                         <p class="BLANK">
                         </p>
@@ -1344,7 +1299,6 @@ GPIO_DEBOUNCE configuration parameter.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>The value of this register is derived from the
-
 GPIO_PORTA_INTR configuration parameter.</p>
                         <p class="BLANK">
                         </p>
@@ -1365,7 +1319,6 @@ GPIO_PORTA_INTR configuration parameter.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>The value of this register is derived from the
-
 GPIO_HW_PORTD configuration parameter.</p>
                         <p class="BLANK">
                         </p>
@@ -1389,7 +1342,6 @@ GPIO_HW_PORTD configuration parameter.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>The value of this register is derived from the
-
 GPIO_HW_PORTC configuration parameter.</p>
                         <p class="BLANK">
                         </p>
@@ -1413,7 +1365,6 @@ GPIO_HW_PORTC configuration parameter.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>The value of this register is derived from the
-
 GPIO_HW_PORTB configuration parameter.</p>
                         <p class="BLANK">
                         </p>
@@ -1437,7 +1388,6 @@ GPIO_HW_PORTB configuration parameter.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>The value of this register is derived from the
-
 GPIO_HW_PORTA configuration parameter.</p>
                         <p class="BLANK">
                         </p>
@@ -1461,7 +1411,6 @@ GPIO_HW_PORTA configuration parameter.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>The value of this register is derived from the
-
 GPIO_PORTD_SINGLE_CTL configuration parameter.</p>
                         <p class="BLANK">
                         </p>
@@ -1481,7 +1430,6 @@ GPIO_PORTD_SINGLE_CTL configuration parameter.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>The value of this register is derived from the
-
 GPIO_PORTC_SINGLE_CTL configuration parameter.</p>
                         <p class="BLANK">
                         </p>
@@ -1501,7 +1449,6 @@ GPIO_PORTC_SINGLE_CTL configuration parameter.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>The value of this register is derived from the
-
 GPIO_PORTB_SINGLE_CTL configuration parameter.</p>
                         <p class="BLANK">
                         </p>
@@ -1521,7 +1468,6 @@ GPIO_PORTB_SINGLE_CTL configuration parameter.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>The value of this register is derived from the
-
 GPIO_PORTA_SINGLE_CTL configuration parameter.</p>
                         <p class="BLANK">
                         </p>
@@ -1541,7 +1487,6 @@ GPIO_PORTA_SINGLE_CTL configuration parameter.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>The value of this register is derived from the
-
 GPIO_NUM_PORT configuration parameter.</p>
                         <p class="BLANK">
                         </p>
@@ -1563,7 +1508,6 @@ GPIO_NUM_PORT configuration parameter.</p>
                     <td class="TableStyle-table-BodyB-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>The value of this register is derived from the
-
 GPIO_APB_DATA_WIDTH configuration parameter.</p>
                         <p class="BLANK">
                         </p>

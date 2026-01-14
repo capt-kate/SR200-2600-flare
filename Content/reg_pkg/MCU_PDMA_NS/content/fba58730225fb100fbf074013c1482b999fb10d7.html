@@ -206,15 +206,10 @@
         <p>Read-As-Zero, Writes Ignored.</p>
         <h3 id="DESSWTRIGINTYPE.desc">DESSWTRIGINTYPE<a class="headerlink" href="#DESSWTRIGINTYPE.desc" title="Permalink to this headline"></a></h3>
         <p>Software Generated Destination Trigger Input Request Type. Selects the trigger request type for the destination trigger input when the SW triggers the DESSWTRIGINREQ bit.
-
 - 00: Single request
-
 - 01: Last single request
-
 - 10: Block request
-
 - 11: Last block request
-
 This field cannot be changed while the DESSWTRIGINREQ bit is set.</p>
         <h3 id="DESSWTRIGINREQ.desc">DESSWTRIGINREQ<a class="headerlink" href="#DESSWTRIGINREQ.desc" title="Permalink to this headline"></a></h3>
         <p>Software Generated Destination Trigger Input Request. Write to '1' to create a SW trigger request to the DMA with the specified type in the DESSWTRIGINTYPE register. Once set to '1', this remains high until the DMA accepted the trigger and returns this to '0'. It is also cleared automatically if the current command is completed without expecting another trigger event. When the channel is not enabled, write to this register is ignored.</p>
@@ -222,15 +217,10 @@ This field cannot be changed while the DESSWTRIGINREQ bit is set.</p>
         <p>Read-As-Zero, Writes Ignored.</p>
         <h3 id="SRCSWTRIGINTYPE.desc">SRCSWTRIGINTYPE<a class="headerlink" href="#SRCSWTRIGINTYPE.desc" title="Permalink to this headline"></a></h3>
         <p>Software Generated Source Trigger Input Request Type. Selects the trigger request type for the source trigger input when the SW triggers the SRCSWTRIGINREQ bit.
-
 - 00: Single request
-
 - 01: Last single request
-
 - 10: Block request
-
 - 11: Last block request
-
 This field cannot be changed while the SRCSWTRIGINREQ bit is set.</p>
         <h3 id="SRCSWTRIGINREQ.desc">SRCSWTRIGINREQ<a class="headerlink" href="#SRCSWTRIGINREQ.desc" title="Permalink to this headline"></a></h3>
         <p>Software Generated Source Trigger Input Request. Write to '1' to create a SW trigger request to the DMA with the specified type in the SRCSWTRIGINTYPE register. Once set to '1', this will remain high until the DMA accepted the trigger and returns this to '0'. It is also cleared automatically if the current command is completed without expecting another trigger event. When the channel is not enabled, write to this register is ignored.</p>

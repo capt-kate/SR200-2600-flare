@@ -4,7 +4,6 @@
     </head>
     <body>
         <h1>LCSMANAGER
-
         </h1>
         <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
             <tr class="TableStyle-table-no-head-Body-Body1">
@@ -34,13 +33,9 @@
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>LCS Manager OTP shadow register array, which will be 
-
 auto-loaded after POR by only once and is allowed by one-time 
-
 SW override of the values only toward advancing the LCS stages, 
-
 except for RMA stage. 
-
 Internal memory</p>
                 </td>
             </tr>
@@ -104,37 +99,21 @@ Internal memory</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>The $LCSMARRAY is allowed to be auto-loaded from OTP shadow 
-
 copy after POR only once, after that $LCSMARRAY will be locked 
-
 for any subsequent auto-load operation from OTP until next POR, 
-
 the auto-load lock status can be read from this register bit 
-
 LOCKSTS.allocked 
-
 the dword (32-bit) in $LCSMARRAY can only be overwritten once by 
-
 SW through APB interface, afterwards that dword will be locked 
-
 for APB write, the lock status can only be cleared by 
-
 POR/System reset. If LCS state falls into “corrupted” after 
-
 auto-load, it will be locked immediately (no any override is 
-
 allowed); for LCS shadow register, SW override can only be 
-
 successful to advance LCS Manager state: LCSMDSTS.state, for 
-
 OTP lock register, the bit value can only be modified from 0 to 
-
 1, from 1 to 0 is not allowed, unsuccessful SW override or any 
-
 SW override after dword get locked will be ignored by LCS 
-
 Manager. The dword will be locked (write prohibited) no matter 
-
 SW override is successful or unsuccessful.</p>
                 </td>
             </tr>
@@ -165,11 +144,8 @@ SW override is successful or unsuccessful.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>the bit Indicates the $LCSMARRAY OTP LCS/LOCK shadow register 
-
 array dword write prohibition status 
-
 1’b0: write is allowed; 
-
 1’b1: write is NOT allowed;</p>
                 </td>
             </tr>
@@ -186,9 +162,7 @@ array dword write prohibition status
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>This bit indicates LCS OTP auto-load operation lock status 
-
 1’b0: LCS OTP auto load is allowed; 
-
 1’b1: LCS OTP auto load is NOT allowed;</p>
                 </td>
             </tr>
@@ -252,11 +226,8 @@ array dword write prohibition status
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>When no higher bits are set, device is in ATE state (ATE can 
-
 define additional “scratch pad OTP” to guide the multi-insert 
-
 process). Synaptics Assets provisioning shall be completed in 
-
 this stage before releasing part to ODM</p>
                 </td>
             </tr>
@@ -273,9 +244,7 @@ this stage before releasing part to ODM</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Device in owned by ODM. ODM Asset provisioning shall be 
-
 completed in this stage before releasing part to OEM. Can be 
-
 used to lock Synaptics Assets.</p>
                 </td>
             </tr>
@@ -292,9 +261,7 @@ used to lock Synaptics Assets.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Device in owned by OEM. OEM Asset provisioning shall be 
-
 completed in this stage before releasing part to development or 
-
 into production. Can be used to lock ODM Assets</p>
                 </td>
             </tr>
@@ -311,7 +278,6 @@ into production. Can be used to lock ODM Assets</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Device in the Code Development state. Can be used to apply 
-
 relaxed debug access policies</p>
                 </td>
             </tr>
@@ -328,7 +294,6 @@ relaxed debug access policies</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Production/Field deployment state for devices that do not 
-
 require strict Security definition</p>
                 </td>
             </tr>
@@ -375,7 +340,6 @@ require strict Security definition</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>RMA state, secure assets shall be destroyed before transition to 
-
 this stage</p>
                 </td>
             </tr>
@@ -392,51 +356,28 @@ this stage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>LCS[7:0] + MagicWord: 0x0+0x0 
-
 Fab-out state, only OTP programming to ATE state is allowed, no 
-
 other debug/test accesses 
-
 LCS[7:0] + MagicWord: A + M 
-
 Device is under the ATE Test 
-
 LCS[7:0] + MagicWord: OA + M 
-
 Device is in ODM ownership 
-
 LCS[7:0] + MagicWord: EOA + M 
-
 Device is in OEM ownership 
-
 LCS[7:0] + MagicWord: DEOA + M 
-
 Device in the Development state. Can be used to apply relaxed 
-
 debug access policies 
-
 LCS[7:0] + MagicWord: PDEOA + M 
-
 Device in the Development state. Can be used to apply relaxed 
-
 debug access policies 
-
 LCS[7:0] + MagicWord: SPDEOA + M 
-
 Production/Field deployment state with Secure behavior 
-
 LCS[7:0] + MagicWord: RSPDEOA + M 
-
 RMA state, secure assets shall be destroyed before transition to 
-
 this stage 
-
 LCS[7:0] + MagicWord: any other value 
-
 Corruption is detected by LCS Decode or magic word doesn’t 
-
 match, no access shall be allowed, no LCS manager SW override 
-
 is allowed</p>
                 </td>
             </tr>
@@ -530,9 +471,7 @@ is allowed</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Show OTP lock bit status: 
-
 1’b1: locked 
-
 1’b0: not lockedd</p>
                 </td>
             </tr>
@@ -596,9 +535,7 @@ is allowed</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Show OTP lock bit status: 
-
 1’b1: locked 
-
 1’b0: not lockedd</p>
                 </td>
             </tr>
@@ -662,9 +599,7 @@ is allowed</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Show OTP lock bit status: 
-
 1’b1: locked 
-
 1’b0: not lockedd</p>
                 </td>
             </tr>
@@ -728,9 +663,7 @@ is allowed</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Show OTP lock bit status: 
-
 1’b1: locked 
-
 1’b0: not lockedd</p>
                 </td>
             </tr>

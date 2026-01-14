@@ -86,18 +86,14 @@
                         <p class="BLANK">
                         </p>
                         <p>In Master mode of operation, software can disable DWC_mipi_i3c while it is active.
-
 However, the controller may not get disabled immediately and is 'Disabled' after commands in the Command queue (if any) are executed leading to a STOP condition on the bus and Master FSM is in IDLE state (as indicated by PRESENT_STATE Register).</p>
                         <p class="BLANK">
                         </p>
                         <p class="BLANK">
                         </p>
                         <p>In Slave mode of operation, software can disable DWC_mipi_i3c while it is active. However, the disable happens after the ongoing transfer is
-
 completed on the I3C bus. Software can read back 1'b0 from this field once disabling of DWC_mipi_i3c is completed.
-
 After power on reset, the software can enable I3C slave controller by programming this bit to 1'b1. However, the I3C bus interface of the controller,
-
 responds to transfer on the bus only after it observes Bus Available condition for BUS_AVAILABLE_TIME*IDLE_CNT_MULTPLIER counts of pclk period. The successful completion of Enable/Disable of the controller depends on availability of SCL to the controller at the time of performing this operation, and hence may not happen instantly.</p>
                         <p class="BLANK">
                         </p>
@@ -126,12 +122,10 @@ responds to transfer on the bus only after it observes Bus Available condition f
                         <p class="BLANK">
                         </p>
                         <p>In the Master mode of operation, the controller goes to the halt state (as indicated in PRESENT_STATE Register) due to any type of error
-
 in the transfer (the type of error is indicated by ERR_STATUS field in the RESPONSE_QUEUE_PORT register).</p>
                         <p class="BLANK">
                         </p>
                         <p>After the controller goes to the halt state, the application has to write 1'b1 to this bit to resume the controller.
-
 This bit is auto-cleared once the controller resumes the transfers by initiating the next command.</p>
                         <p class="BLANK">
                         </p>
@@ -141,9 +135,7 @@ This bit is auto-cleared once the controller resumes the transfers by initiating
                             <li>MRL Register updated by the master through SETMRL CCC.</li>
                         </ul>
                         <p>After the controller goes to the halt state, the application has to take necessary action to handle the error condition and then write 1'b1
-
 to this bit to resume the controller.
-
 This bit is auto-cleared once the controller is ready to accept new transfers.</p>
                         <p class="BLANK">
                         </p>
@@ -168,7 +160,6 @@ This bit is auto-cleared once the controller is ready to accept new transfers.</
                         <p class="BLANK">
                         </p>
                         <p>In response to an ABORT request, the controller issues the STOP condition after the complete
-
 data byte is transferred or received.</p>
                         <p class="BLANK">
                         </p>
@@ -212,27 +203,16 @@ data byte is transferred or received.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>This field is used in Slave mode of operation.
-
 Note that when mode_i2c strap is driven to '0', the Slave controller operates in Adaptive Mode.
-
 Setting of this bit is NOT required to put the controller in Adaptive Mode.
-
 It is only used to enable some features of the Slave controller to adapt to "Adaptive I2C/I3C mode"
-
 of operation. This bit is cleared automatically if the controller determines the mode as I3C.
-
 Effect on Hot-Join:
-
 If this bit is programmed to 1'b1, the controller initiates a
-
 Hot-Join request only after it has switched to I3C mode of operation.
-
 If this bit is not set, the controller initiates a Hot-Join
-
 without determining the bus mode assuming itself to be
-
 on DWC_mipi_i3c bus. This bit should be set only if the Slave application
-
 does not know to which bus the device is connected to.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -260,15 +240,10 @@ does not know to which bus the device is connected to.</p>
                         <p class="BLANK">
                         </p>
                         <p>After power-on reset, the Slave controller is enabled only after it sees both SDA and SCL lines idle for a specified time.
-
 This idle time is calculated by multiplying IDLE_CNT_MULITPLIER with BUS_AVAILABLE_TIME field in the BUS_FREE_AVAIL_TIMING register.
-
 - 00 - BUS_AVAILABLE_TIME * 1
-
 - 01 - BUS_AVAILABLE_TIME * 2
-
 - 10 - BUS_AVAILABLE_TIME * 4
-
 - 11 - BUS_AVAILABLE_TIME * 8</p>
                         <p class="BLANK">
                         </p>
@@ -304,7 +279,6 @@ This idle time is calculated by multiplying IDLE_CNT_MULITPLIER with BUS_AVAILAB
                         <p class="BLANK">
                         </p>
                         <p>This bit acts as a global control to ACK/NACK the Hot-Join request from the devices. The DWC_mipi_i3c Master
-
 ACK/NACKs the Hot-Join request from other devices connected on the DWC_mipi_i3c bus, based on programming of this bit.</p>
                         <ul>
                             <li>0: ACK the Hot-join request.</li>
@@ -372,7 +346,6 @@ ACK/NACKs the Hot-Join request from other devices connected on the DWC_mipi_i3c 
                         <p class="BLANK">
                         </p>
                         <p>Note: If DWC_mipi_i3c broadcast address is not included for the private transfers, In-band Interrupts (IBI)
-
 driven from Slaves might not win address arbitration. Hence, the IBIs get delayed.</p>
                         <p class="BLANK">
                         </p>
@@ -390,9 +363,7 @@ driven from Slaves might not win address arbitration. Hence, the IBIs get delaye
         <ul>
             <li>Name:Device Address Register</li>
             <li>Description:<p class="BLANK"></p>
-
 In the Controller mode of operation this Register is used to program the Device Dynamic Addresses and its respective valid bit. The Software Reset will not clear this register.<p class="BLANK"></p>
-
 In the Target mode of operation this Register reflects the Static and Dynamic Addresses and their respective valid bits.<p class="BLANK"></p></li>
             <li>Size:32 bits</li>
             <li>Offset:0x4</li>
@@ -518,7 +489,6 @@ In the Target mode of operation this Register reflects the Static and Dynamic Ad
                         <p class="BLANK">
                         </p>
                         <p>In slave mode of operation this bit reflects the value of static_addr_en input port. The input port static_addr_en is expected to be driven to 1
-
 only if the device supports I2C or I3C Static Address.</p>
                         <p class="BLANK">
                         </p>
@@ -550,7 +520,6 @@ only if the device supports I2C or I3C Static Address.</p>
                         <p class="BLANK">
                         </p>
                         <p>In slave mode of operation this field reflects the value of static_addr input port. The controller uses this address to respond to
-
 SETDASA CCC Command to get the Dynamic Address if static address is valid (STATIC_ADDR_VALID field is set to 1).</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -769,16 +738,11 @@ SETDASA CCC Command to get the Dynamic Address if static address is valid (STATI
         <p><a name="H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_COMMAND_QUEUE_PORT"></a>COMMAND_QUEUE_PORT</p>
         <ul>
             <li>Name:Command Queue Port Register
-
 IC_MASTER_MODE-&amp;gt;0x1-&amp;gt;Master mode of operation
-
 IC_SLAVE_MODE-&amp;gt;0X1-&amp;gt;Slave mode of operation.</li>
             <li>Description:<p class="BLANK"></p>
-
 This register is mapped to the Command Queue of the Controller.
-
 In Controller Mode of operation, Command Queue port is used to schedule the transfers to devices on I3C bus. Please refer to section '2.6.6.1 Command Data Structure' for more information.<p class="BLANK"></p>
-
 In Target mode of operation, Command Queue Port is used to push commands that enables the Target to respond with Data for either Private read command received from the Controller.</li>
             <li>Size:32 bits</li>
             <li>Offset:0xc</li>
@@ -826,16 +790,11 @@ In Target mode of operation, Command Queue Port is used to push commands that en
         <p><a name="H4-reg-DWC_mipi_i3c_map_DWC_mipi_i3c_block_RESPONSE_QUEUE_PORT"></a>RESPONSE_QUEUE_PORT</p>
         <ul>
             <li>Name:Response Queue Port Register
-
 IC_MASTER_MODE-0x1-Master mode of operation
-
 IC_SLAVE_MODE-0x1- Slave mode of operation</li>
             <li>Description:This register is mapped to the Response Queue of the Controller.<p class="BLANK"></p>
-
 In Controller Mode of operation, response status of each command is written into the Response Queue by the Controller if ROC (Response On Completion) bit is set or if transfer error occurs. Refer to section 'Response Data Structure' in 'Controller Data Structures in Non-HCI Mode' for more information.<p class="BLANK"></p>
-
 In Target Mode of operation, response status of each read command and for write transfer is written into the Response Queue. refer to Section 'Data Structure in DWC_mipi_i3c*' for more information.
-
 It is expected that this register will be read whenever RESP_READY_STAT_INTR bit is set in INTR_STATUS register. Not doing so might result in stalling of execution of new commands. A new command is executed only if there is space available in Response Queue to push the corresponding response. Refer to section 'Response Data Structure' in 'Data Structure in DWC_mipi_i3c_* Target' for more information.<p class="BLANK"></p></li>
             <li>Size:32 bits</li>
             <li>Offset:0x10</li>
@@ -884,13 +843,9 @@ It is expected that this register will be read whenever RESP_READY_STAT_INTR bit
         <ul>
             <li>Name:Transfer Data Port Register</li>
             <li>Description:This register is mapped to the Transmit and Receive Buffer of the Controller.<p class="BLANK"></p>
-
 This register when written into, writes data to the TX Buffer.<p class="BLANK"></p>
-
 This register when read from, reads data from the RX Buffer.<p class="BLANK"></p>
-
 This register provides a bi-directional data port for transmitting or receiving the data from the DWC_mipi_i3c.
-
 Please refer to section 'Data Packing and Unpacking' in 'Controller Data Structures in Non-HCI Mode' for more information.<p class="BLANK"></p></li>
             <li>Size:32 bits</li>
             <li>Offset:0x14</li>
@@ -937,7 +892,6 @@ Please refer to section 'Data Packing and Unpacking' in 'Controller Data Structu
                         <p class="BLANK">
                         </p>
                         <p>The transmit data should always be packed as 4-byte aligned data words and written to the Transmit Data Port register.
-
 If the Command length is not aligned to 4-bytes, then the additional bytes are ignored.</p>
                         <p class="BLANK">
                         </p>
@@ -947,7 +901,6 @@ If the Command length is not aligned to 4-bytes, then the additional bytes are i
                         <p class="BLANK">
                         </p>
                         <p>The Receive data is always packed in 4-byte aligned data words and stored in the Rx-Data Buffer.
-
 If the command length is not aligned to the 4-bytes, then the additional data bytes have to be ignored.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Testable:untestable</p>
@@ -960,11 +913,8 @@ If the command length is not aligned to the 4-bytes, then the additional data by
         <ul>
             <li>Name:Controller Mode In-band interrupt Queue Port Register</li>
             <li>Description:This register will have Status and Data of the IBI request , the packing is described in section 'IBI Queue Data Structure' in In-Band Interrupt (IBI) Detection and Handling.
-
 The IBI Data is always packed in 4-byte aligned and put to the IBI Queue.
-
 If the incoming data is not aligned to the 4-bytes, then there are unused bytes in the end location of the IBI transfer.
-
 Please refer to section 'IBI Status and Data Structure' in 'Controller Data Structures in Non-HCI Mode' for IBI Status Descriptor format. This register is applicable only in Controller-Mode.</li>
             <li>Size:32 bits</li>
             <li>Offset:0x18</li>
@@ -1003,9 +953,7 @@ Please refer to section 'IBI Status and Data Structure' in 'Controller Data Stru
                     <td class="TableStyle-table-BodyB-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>This register is mapped to the IBI Status and Data Queue.
-
 The IBI Data is always packed in 4-byte aligned and put to the IBI Queue.
-
 If the incoming data is not aligned to the 4-bytes, then there are unused bytes in the end location of the IBI transfer.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -1066,12 +1014,10 @@ If the incoming data is not aligned to the 4-bytes, then there are unused bytes 
                         <p class="BLANK">
                         </p>
                         <p>Every In Band Interrupt received (with or without Payload) by I3C controller generates an IBI status. This field controls the number of IBI status
-
 entries (or greater) in the IBI queue that trigger the IBI_THLD_STS interrupt.</p>
                         <p class="BLANK">
                         </p>
                         <p>The valid range is 0 to IC_IBI_BUF_DEPTH-1. The software programs only valid values.
-
 A value of 0 sets the threshold for 1 entry, and a value of N sets the threshold for N+1 entries.</p>
                         <p class="BLANK">
                         </p>
@@ -1093,7 +1039,6 @@ A value of 0 sets the threshold for 1 entry, and a value of N sets the threshold
                         <p class="BLANK">
                         </p>
                         <p>This field represents the IBI data segment size in DWORD (4 bytes). The minimum supported segment size is 1 (4 bytes) and the maximum
-
 supported size is IC_IBI_DATA_BUF_DEPTH-1. The IBI_DATA_THLD field enables the slicing of the incoming IBI data and generate individual status and thereby promotes the cut-through operation in reading out the IBI data.</p>
                         <p>Value After Reset:0x1</p>
                     </td>
@@ -1112,7 +1057,6 @@ supported size is IC_IBI_DATA_BUF_DEPTH-1. The IBI_DATA_THLD field enables the s
                         <p class="BLANK">
                         </p>
                         <p>The valid range is 0 to IC_RESP_BUF_DEPTH-1. The software programs only valid values.
-
 A value of 0 sets the threshold for 1 entry, and a value of N sets the threshold for N+1 entries.</p>
                         <p>Value After Reset:0x1</p>
                     </td>
@@ -1125,14 +1069,11 @@ A value of 0 sets the threshold for 1 entry, and a value of N sets the threshold
                     <td class="TableStyle-table-BodyB-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>Command Buffer Empty Threshold Value.
-
 Controls the number of empty locations (or greater) in the Command Queue that trigger CMD_QUEUE_READY_STAT interrupt.</p>
                         <p class="BLANK">
                         </p>
                         <p>The valid range is 0 to IC_CMD_BUF_DEPTH-1. The software programs only valid values.
-
 Value of N ranging from 1 to IC_CMD_BUF_DEPTH-1 sets the threshold to N empty locations
-
 and a value of 0 sets the threshold to indicate that the queue is completely empty.</p>
                         <p>Value After Reset:0x1</p>
                     </td>
@@ -1331,7 +1272,6 @@ and a value of 0 sets the threshold to indicate that the queue is completely emp
                         <p class="BLANK">
                         </p>
                         <p>If the programmed value is greater than the buffer depth, then threshold is set to IC_RX_BUF_DEPTH.
-
 The supported values for RX_BUF_THLD are</p>
                         <ul>
                             <li>000: 1</li>
@@ -1379,7 +1319,6 @@ The supported values for RX_BUF_THLD are</p>
                         <p class="BLANK">
                         </p>
                         <p>If the programmed value is greater than the buffer depth, then threshold is set to IC_TX_BUF_DEPTH.
-
 The supported values for TX_BUF_THLD are</p>
                         <ul>
                             <li>000: 1</li>
@@ -1616,7 +1555,6 @@ The supported values for TX_BUF_THLD are</p>
                         <p class="BLANK">
                         </p>
                         <p>Write 1'b1 to this bit to exercise IBI Queue reset
-
 This bit is cleared automatically once the IBI Queue reset is completed.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -1633,7 +1571,6 @@ This bit is cleared automatically once the IBI Queue reset is completed.</p>
                         <p class="BLANK">
                         </p>
                         <p>Write 1'b1 to this bit to exercise Receive Buffer reset.
-
 This bit is cleared automatically once the Receive buffer reset is completed.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -1650,7 +1587,6 @@ This bit is cleared automatically once the Receive buffer reset is completed.</p
                         <p class="BLANK">
                         </p>
                         <p>Write 1'b1 to this bit to exercise Transmit Buffer reset.
-
 This bit is cleared automatically once the Transmit Buffer reset is completed.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -1667,7 +1603,6 @@ This bit is cleared automatically once the Transmit Buffer reset is completed.</
                         <p class="BLANK">
                         </p>
                         <p>Write 1'b1 to this bit to exercise Response Queue reset.
-
 This bit is cleared automatically once the Response Queue reset is complete.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -1684,7 +1619,6 @@ This bit is cleared automatically once the Response Queue reset is complete.</p>
                         <p class="BLANK">
                         </p>
                         <p>Write 1'b1 to this bit to exercise Command Queue reset.
-
 This bit is cleared automatically once the Command Queue reset is complete.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -1701,7 +1635,6 @@ This bit is cleared automatically once the Command Queue reset is complete.</p>
                         <p class="BLANK">
                         </p>
                         <p>Write 1'b1 to this bit to exercise software reset.
-
 This reset:</p>
                         <p class="BLANK">
                         </p>
@@ -1803,7 +1736,6 @@ This reset:</p>
                         <p class="BLANK">
                         </p>
                         <p>This bit indicates a SETMWL CCC is received by the slave. The updated MWL value can be read from SLV_MAX_LEN register.
-
 This status can be cleared by writing 1'b1 to this field after reading the updated MWL.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -1820,7 +1752,6 @@ This status can be cleared by writing 1'b1 to this field after reading the updat
                         <p class="BLANK">
                         </p>
                         <p>This bit indicates a SETMRL CCC is received by the slave. The updated MRL value can be read from SLV_MAX_LEN register.
-
 This status can be cleared by writing 1'b1 to this field after reading the updated MRL.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -1861,9 +1792,7 @@ This status can be cleared by writing 1'b1 to this field after reading the updat
                         <p class="BLANK">
                         </p>
                         <p>The Slave application can choose to Disable HJ Capability of the Target Controller (if selected) by setting this field to 0 before 'Enabling' the Controller. When done so, the Slave does not initiate Hot Join and takes part in Address Assignment without initiating Hot Join.
-
 If this field is NOT set to 0 by slave application, it can be set or cleared by the I3C Master through ENEC or DISEC CCCs.
-
 Once Disabled by software, CCCs do not have any effect on this field.</p>
                         <p>Value After Reset:0x1</p>
                         <p>Volatile:true</p>
@@ -2078,9 +2007,7 @@ Once Disabled by software, CCCs do not have any effect on this field.</p>
                         <p class="BLANK">
                         </p>
                         <p>This interrupt is generated if any error occurs during transfer. The error type is specified in
-
 the response packet associated with the command (in ERR_STATUS field of RESPONSE_QUEUE_PORT register).
-
 This bit can be cleared by writing 1'b1.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -2100,7 +2027,6 @@ This bit can be cleared by writing 1'b1.</p>
                         <p class="BLANK">
                         </p>
                         <p>This interrupt is generated if the device's Dynamic Address is assigned through SETDASA, SETAASA, SETNEWDA or ENTDAA CCC.
-
 This bit can be cleared by writing 1'b1.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -2128,7 +2054,6 @@ This bit can be cleared by writing 1'b1.</p>
                         <p class="BLANK">
                         </p>
                         <p>This interrupt is generated if any of the CCC registers are updated by I3C Master through CCC commands.
-
 This interrupt can be cleared by writing 1'b1.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -2163,9 +2088,7 @@ This interrupt can be cleared by writing 1'b1.</p>
                         <p class="BLANK">
                         </p>
                         <p>This interrupt is generated when number of entries in response queue is greater than or equal to threshold value
-
 specified by RESP_BUF_THLD field in QUEUE_THLD_CTRL register. This interrupt is cleared automatically when
-
 number of entries in response buffer is less than threshold value specified.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -2182,9 +2105,7 @@ number of entries in response buffer is less than threshold value specified.</p>
                         <p class="BLANK">
                         </p>
                         <p>This interrupt is generated when number of empty locations in command queue is greater than or equal to threshold
-
 value specified by CMD_EMPTY_BUF_THLD field in QUEUE_THLD_CTRL register. This interrupt is cleared automatically
-
 when number of empty locations in command buffer is less than threshold value specified.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -2201,11 +2122,8 @@ when number of empty locations in command buffer is less than threshold value sp
                         <p class="BLANK">
                         </p>
                         <p>This field is only used in master mode of operation
-
 This interrupt is generated when number of entries in IBI buffer is greater than or equal to threshold value
-
 specified by IBI_STATUS_THLD field in QUEUE_THLD_CTRL register. This interrupt is cleared automatically
-
 when number of entries in IBI buffer is less than threshold value specified.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -2222,9 +2140,7 @@ when number of entries in IBI buffer is less than threshold value specified.</p>
                         <p class="BLANK">
                         </p>
                         <p>This interrupt is generated when number of entries in receive buffer is greater than or equal to threshold
-
 value specified by RX_BUF_THLD field in DATA_BUFFER_THLD_CTRL register. This interrupt is cleared
-
 automatically when number of entries in receive buffer is less than threshold value specified.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -2241,9 +2157,7 @@ automatically when number of entries in receive buffer is less than threshold va
                         <p class="BLANK">
                         </p>
                         <p>This interrupt is generated when the number of empty locations in transmit buffer is greater than or equal to
-
 threshold value specified by TX_EMPTY_BUF_THLD field in DATA_BUFFER_THLD_CTRL register. This interrupt is cleared automatically when number of empty locations in transmit buffer is less than threshold value
-
 specified.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -2353,7 +2267,6 @@ specified.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>IBI Updated Status Enable
-
 This field is used in slave mode of operation.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -2366,7 +2279,6 @@ This field is used in slave mode of operation.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>Read Request Received Status Enable
-
 This field is used in slave mode of operation.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -2401,7 +2313,6 @@ This field is used in slave mode of operation.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>Dynamic Address Assigned Status Enable
-
 This field is used in slave mode of operation.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -2604,7 +2515,6 @@ This field is used in slave mode of operation.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>IBI Updated Signal Enable
-
 This field is used in slave mode of operation.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -2617,7 +2527,6 @@ This field is used in slave mode of operation.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>Read Request Received Signal Enable
-
 This field is used in slave mode of operation.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -2652,7 +2561,6 @@ This field is used in slave mode of operation.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>Dynamic Address Assigned Signal Enable
-
 This field is used in slave mode of operation.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -2673,7 +2581,6 @@ This field is used in slave mode of operation.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>CCC Table Updated Signal Enable
-
 This field is used in slave mode of operation.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -2686,7 +2593,6 @@ This field is used in slave mode of operation.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>Transfer Abort Signal Enable
-
 This field is used in master mode of operation.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -2721,7 +2627,6 @@ This field is used in master mode of operation.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>IBI Buffer Threshold Signal Enable
-
 This field is used in master mode of operation.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -2852,7 +2757,6 @@ This field is used in master mode of operation.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>IBI Updated Force Enable
-
 This field is used in slave mode of operation.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -2865,7 +2769,6 @@ This field is used in slave mode of operation.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>Read Request Received Force Enable
-
 This field is used in slave mode of operation.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -2900,7 +2803,6 @@ This field is used in slave mode of operation.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>Dynamic Address Assigned Force Enable
-
 This field is used in slave mode of operation.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -2921,7 +2823,6 @@ This field is used in slave mode of operation.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>CCC Table Updated Force Enable
-
 This field is used in slave mode of operation.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -2934,7 +2835,6 @@ This field is used in slave mode of operation.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>Transfer Abort Force Enable
-
 This field is used in master mode of operation.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -2969,7 +2869,6 @@ This field is used in master mode of operation.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>IBI Buffer Threshold Force Enable
-
 This field is used in master mode of operation.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -3219,7 +3118,6 @@ This field is used in master mode of operation.</p>
         <ul>
             <li>Name:Present State Register</li>
             <li>Description:This 32 bit read-only register is used to get the debug information related to the DWC_mipi_i3c Controller's Internal states.
-
 It is relevant in both controller and Target mode of operation.</li>
             <li>Size:32 bits</li>
             <li>Offset:0x54</li>
@@ -3338,7 +3236,6 @@ It is relevant in both controller and Target mode of operation.</li>
                         <p class="BLANK">
                         </p>
                         <p>Indicates the state of current transfer currently executing by the DWC_mipi_i3c controller.
-
 This is valid in Master mode only.</p>
                         <p class="BLANK">
                         </p>
@@ -3489,17 +3386,14 @@ This is valid in Master mode only.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>This Bit is used to check whether the Master is Current Master or not. The Current Master is the Master
-
 that owns the SCL line.</p>
                         <p class="BLANK">
                         </p>
                         <p>If this bit is set to 0, the Master is not Current Master and requires to request and the ownership
-
 before initiating any transfer on the line.</p>
                         <p class="BLANK">
                         </p>
                         <p>If this bit is set to 1, the Master is the Current Master and can initiate the transfers on the line.
-
 Note: Software reset will not have any effect on this field.</p>
                         <ul>
                             <li>0: Master is not Current Master</li>
@@ -3524,7 +3418,6 @@ Note: Software reset will not have any effect on this field.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>This bit is used to check the SDA line level to recover from errors and for debugging. This bit
-
 reflects the value of synchronized sda_in_a signal.</p>
                         <p>Value After Reset:0x1</p>
                         <p>Volatile:true</p>
@@ -3538,7 +3431,6 @@ reflects the value of synchronized sda_in_a signal.</p>
                     <td class="TableStyle-table-BodyB-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>This bit is used to check the SCL line level to recover from errors and for debugging. This bit
-
 reflects the value of synchronized scl_in_a signal.</p>
                         <p>Value After Reset:0x1</p>
                         <p>Volatile:true</p>
@@ -3628,7 +3520,6 @@ reflects the value of synchronized scl_in_a signal.</p>
                         <p class="BLANK">
                         </p>
                         <p>This bit is set when private write request from Master has frame error in HDR-DDR/HDR-TSP/TSL mode.
-
 This is cleared only after Master reads the device status through GETSTATUS_CCC.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -3645,13 +3536,9 @@ This is cleared only after Master reads the device status through GETSTATUS_CCC.
                         <p class="BLANK">
                         </p>
                         <p>This bit is set when private write request from Master is NACKED because of RX buffer not having RX_START_THLD
-
 number of empty locations or Response buffer is full. In SDR mode of operation this is cleared when the
-
 Master issues GET_STATUS CCC or upon space becoming available in the buffer and the successful completion of
-
 the next write transfer.
-
 In HDR mode of operation it is cleared only when Master issues GET_STATUS CCC.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -3674,7 +3561,6 @@ In HDR mode of operation it is cleared only when Master issues GET_STATUS CCC.</
                             <li>Response FIFO Full.</li>
                         </ul>
                         <p>Setting of this bit shall require few SCL clocks after the Target has NACKed the read transfer.
-
 This is cleared when the Master issues GET_STATUS CCC or upon successful completion of the subsequent read transfer.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -3691,7 +3577,6 @@ This is cleared when the Master issues GET_STATUS CCC or upon successful complet
                         <p class="BLANK">
                         </p>
                         <p>Overflow error condition detected during master write transfer.
-
 This is cleared only after master reads the Device Status through GETSTATUS CCC.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -3705,11 +3590,8 @@ This is cleared only after master reads the Device Status through GETSTATUS CCC.
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>Slave Busy
-
 This bit is set if any change is made by the current master in to MRL register or occurence of any error.
-
 It is cleared after slave application
-
 resumes the slave operation by writing 1'b1 in RESUME field of Device Control Register.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -3726,9 +3608,7 @@ resumes the slave operation by writing 1'b1 in RESUME field of Device Control Re
                         <p class="BLANK">
                         </p>
                         <p>Under Flow Error during private master read transfer. This bit is set if slave controller terminates a read transfer
-
 because of unavailability of data in the transmit buffer. This is cleared only after master reads the Device Status
-
 through GETSTATUS CCC.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -3742,7 +3622,6 @@ through GETSTATUS CCC.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>Activity Mode
-
 This field reflects the input port signal act_mode.</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -3912,16 +3791,12 @@ This field reflects the input port signal act_mode.</p>
                         <p class="BLANK">
                         </p>
                         <p>Once the complete characteristics information of a Slave device is written into Device Characteristics Table during ENTDAA,
-
 this index increments by 1. The first winning device information is stored in Device Characteristics Table index 0,
-
 the second winning device information in index 1, and so on.</p>
                         <p class="BLANK">
                         </p>
                         <p>If required, this index can be used to override the location, where
-
 characteristic information of Slave devices on the I3C bus are written during ENTDAA. Hence, this field is useful only if the
-
 device is Current Master. During DEFSLV CCC, the index always starts from 0.</p>
                         <p class="BLANK">
                         </p>
@@ -4067,7 +3942,6 @@ device is Current Master. During DEFSLV CCC, the index always starts from 0.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>Specifies the MIPI Manufacturer ID. (PID[47:33]).
-
 Reset value of this register field is considered from input port signal 'slv_pid[47:33]'.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -4080,9 +3954,7 @@ Reset value of this register field is considered from input port signal 'slv_pid
                     <td class="TableStyle-table-BodyB-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>Specifies the Provisional ID Type Selector (PID[32]).
-
 Reset value of this register field is considered from input port signal 'slv_pid[32]'.
-
 (1'b1: Random Value, 1'b0: Vendor Fixed Value)</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -4136,7 +4008,6 @@ Reset value of this register field is considered from input port signal 'slv_pid
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>Specifies the Part ID of DWC_mipi_i3c device (PID[31:16])
-
 Reset value of this register field is considered from input port signal 'slv_pid[31:12]'.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -4149,7 +4020,6 @@ Reset value of this register field is considered from input port signal 'slv_pid
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>This field is used to program the instance ID of the Slave.
-
 Reset value of this register field is considered from input port signal 'slv_pid[15:12]'.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -4162,7 +4032,6 @@ Reset value of this register field is considered from input port signal 'slv_pid
                     <td class="TableStyle-table-BodyB-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>Specifies the additional 12-bit ID of DWC_mipi_i3c device (PID[11:0]).
-
 Reset value of this register field is considered from input port signal 'slv_pid[11:0]'.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -4268,7 +4137,6 @@ Reset value of this register field is considered from input port signal 'slv_pid
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>I3C Device Characteristic Value.
-
 Reset value of this register field is considered from input port signal 'slv_dcr[7:0]'.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -4281,11 +4149,8 @@ Reset value of this register field is considered from input port signal 'slv_dcr
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>Device Role field in Bus Characteristic Register (BCR[7:6]).
-
 This field is set to 1 by default if configuration parameter IC_DEVICE_ROLE is set to 3(Secondary Master).
-
 The application is not expected to change the role once configured. But if the application chooses to operate the secondary master configuration (IC_DEVICE_ROLE==3) as "Slave Only" through programming, then the Device Role can be overwritten as Slave (BCR[7:6] = 2'b00).
-
 The field is Reset to its default value upon HW/SW Reset. SW must program the values again after issuing reset.</p>
                         <p>Value After Reset:0x1</p>
                     </td>
@@ -4298,11 +4163,8 @@ The field is Reset to its default value upon HW/SW Reset. SW must program the va
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>SDR Only or SDR and HDR Capable field in Bus Characteristic Register (BCR[5]).
-
 This bit is set if any of the configuration parameter IC_SPEED_HDR_TS or IC_SPEED_HDR_DDR is set to 1.
-
 It is to be noted that the programming this field to 0 does not Disable the HDR Feature itself. This bit can be modified by the application if it does not want to advertise Slaves HDR capability to Master.
-
 The field is Reset to its default value upon HW/SW Reset. SW must program the values again after issuing reset.</p>
                         <p>Value After Reset:0x1</p>
                     </td>
@@ -4315,7 +4177,6 @@ The field is Reset to its default value upon HW/SW Reset. SW must program the va
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>Bridge Identifier field in Bus Characteristic Register (BCR[4]).
-
 This bit is set if configuration parameter IC_SLV_BRIDGE is set to 1.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -4328,7 +4189,6 @@ This bit is set if configuration parameter IC_SLV_BRIDGE is set to 1.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>Offline Capable field in Bus Characteristic Register (BCR[3]).
-
 This bit is set if configuration parameter IC_SLV_OFFLINE_CAP is set to 1.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -4341,7 +4201,6 @@ This bit is set if configuration parameter IC_SLV_OFFLINE_CAP is set to 1.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>IBI Payload field in Bus Characteristic Register (BCR[2]).
-
 This bit is set if configuration parameter IC_SLV_IBI_DATA is set to 1.</p>
                         <p>Value After Reset:0x1</p>
                     </td>
@@ -4354,7 +4213,6 @@ This bit is set if configuration parameter IC_SLV_IBI_DATA is set to 1.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>IBI Request Capable field in Bus Characteristic Register (BCR[1]).
-
 This bit is set if configuration parameter IC_SLV_IBI is set to 1.</p>
                         <p>Value After Reset:0x1</p>
                     </td>
@@ -4367,15 +4225,10 @@ This bit is set if configuration parameter IC_SLV_IBI is set to 1.</p>
                     <td class="TableStyle-table-BodyB-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>Max Data Speed Limitation field in Bus Characteristic Register (BCR[0]).
-
 Specifies whether or not DWC_mipi_i3c has maximum data speed limitation.
-
 If this bit is set to 0, controller NACK's the GETMXDS CCC sent by Master.
-
 If this bit is set to 1, controller returns the data in MAX_DATA_SPEED and
-
 MAX_READ_TURNAROUND register in response the GETMXDS CCC sent by Master.
-
 The field is Reset to its default value upon HW/SW Reset. SW must program the values again after issuing reset.</p>
                         <p>Value After Reset:0x1</p>
                     </td>
@@ -4806,14 +4659,11 @@ The field is Reset to its default value upon HW/SW Reset. SW must program the va
                         <p class="BLANK">
                         </p>
                         <p>When set, the slave controller attempts to issue the SIR on the I3C bus based on SIR_CTRL field.
-
 If SIR_CTRL is set to 2'b00, DWC_mipi_i3c Target controller clears this bit automatically and update the IBI_STS field upon either current controller accepts through generating (ACK)
-
 OR If Target controller is unable to issue the SIR.</p>
                         <p class="BLANK">
                         </p>
                         <p>If SIR_CTRL is set to 2'b00, DWC_mipi_i3c Target controller reattempts the SIR either upon detecting the next START condition from the controller
-
 OR after the Bus Available Time If NACK response is received for the SIR.</p>
                         <p class="BLANK">
                         </p>
@@ -4877,7 +4727,6 @@ OR after the Bus Available Time If NACK response is received for the SIR.</p>
                         <p class="BLANK">
                         </p>
                         <p>This register SLV_SIR_DATA containing four bytes of SIR Data will be in effect only when SIR_CTRL field in SLV_INTR_REQ is programmed to 00 provided the data length is upto 4
-
 This field holds the fourth byte of SIR DATA that will be passed after the MDB when SIR is initiated by the application on writing into SIR bit in SLV_INTR_REQ Register</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -4893,7 +4742,6 @@ This field holds the fourth byte of SIR DATA that will be passed after the MDB w
                         <p class="BLANK">
                         </p>
                         <p>This register SLV_SIR_DATA containing four bytes of SIR Data will be in effect only when SIR_CTRL field in SLV_INTR_REQ is programmed to 00 00 provided the data length is upto 3.
-
 This field holds the third byte of SIR DATA that will be passed after the MDB when SIR is initiated by the application on writing into SIR bit in SLV_INTR_REQ Register.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -4909,7 +4757,6 @@ This field holds the third byte of SIR DATA that will be passed after the MDB wh
                         <p class="BLANK">
                         </p>
                         <p>This register SLV_SIR_DATA containing four bytes of SIR Data will be in effect only when SIR_CTRL field in SLV_INTR_REQ is programmed to 0000 provided the data length is upto 2
-
 This field holds the second byte of SIR DATA that will be passed after the MDB when SIR is initiated by the application on writing into SIR bit in SLV_INTR_REQ Register.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -4925,7 +4772,6 @@ This field holds the second byte of SIR DATA that will be passed after the MDB w
                         <p class="BLANK">
                         </p>
                         <p>This register SLV_SIR_DATA containing four bytes of SIR Data will be in effect only when SIR_CTRL field in SLV_INTR_REQ is programmed to 00 00 provided the data length is upto 1
-
 This field holds the first byte of SIR DATA that will be passed after the MDB when SIR is initiated by the application on writing into SIR bit in SLV_INTR_REQ Register</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -5016,13 +4862,9 @@ This field holds the first byte of SIR DATA that will be passed after the MDB wh
                         <p class="BLANK">
                         </p>
                         <p>This field is common for SIR and MR
-
 2'b00: Reserved
-
 2'b01: IBI accepted by the Master (ACK response received)
-
 2'b10: Master Early Terminate (only for SIR with Data).
-
 2'b11: IBI Not Attempted</p>
                         <p>Value After Reset:0x0</p>
                         <p>Volatile:true</p>
@@ -5637,7 +5479,6 @@ This field holds the first byte of SIR DATA that will be passed after the MDB wh
                         <p class="BLANK">
                         </p>
                         <p>Extended I3C Read Termination Bit low count for I3C Read transfers.
-
 Effective Termination-Bit Low Period is derived based on the SDR speed as shown below</p>
                         <ul>
                             <li>SDR0 speed: I3C_PP_LCNT + I3C_EXT_TERMN_LCNT</li>
@@ -5655,9 +5496,7 @@ Effective Termination-Bit Low Period is derived based on the SDR speed as shown 
         <ul>
             <li>Name:Controller Mode SDA Hold and Mode Switch Delay Timing Register</li>
             <li>Description:The Bits [2:0] of this register are used to shift the sda_out with respect to sda_oe while switching transfer from Open Drain timing to Push Pull timing.
-
 The bits [10:8] of this register are used to shift the sda_oe with respect to sda_out while switching transfer from Push pull timing to Open Drain timing.
-
 The bits [18:16] of this register are used to control the hold time of SDA during transmit mode in SDR &amp; DDR transfers. This register is applicable only in Controller Mode.</li>
             <li>Size:32 bits</li>
             <li>Offset:0xd0</li>
@@ -5719,11 +5558,8 @@ The bits [18:16] of this register are used to control the hold time of SDA durin
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>This field controls the hold time (in term of the core clock period) of the transmit data (SDA) with
-
 respect to the SCL edge in FM, FM+, SDR and DDR speed mode of operations.
-
 This field is not applicable for the ternary speed modes.
-
 The valid values are 1 to 7. Others are Reserved.</p>
                         <p>Value After Reset:0x1</p>
                     </td>
@@ -5744,9 +5580,7 @@ The valid values are 1 to 7. Others are Reserved.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>This field is used to delay the sda_out with respect to sda_oe (in terms of the core clock period)
-
 while switching the transfer from PP1 (Push-Pull Mode SDA="1)" to OD1 (Open-Drain SDA="1)."
-
 The valid value can range from 0 to 4. Others are Reserved.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -5767,9 +5601,7 @@ The valid value can range from 0 to 4. Others are Reserved.</p>
                     <td class="TableStyle-table-BodyB-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyA-Column1-Body1">
                         <p>This field is used to delay the sda_oe with respect to sda_out while switching the
-
 transfer from OD1 (Open-Drain Mode SDA="1)" to PP1 (Push-Pull Mode SDA="1)."
-
 The valid value can range from 0 to 4. Others are reserved.</p>
                         <p>Value After Reset:0x0</p>
                     </td>
@@ -5780,7 +5612,6 @@ The valid value can range from 0 to 4. Others are reserved.</p>
         <ul>
             <li>Name:Target Mode Bus Free Avail Timing Register</li>
             <li>Description:Bus Free and Available Timing Register<p class="BLANK"></p>
-
 This register sets the Bus free time for initiating the transfer in master mode or generating IBI in non-current Controller mode. This register is applicable only in Target Mode.</li>
             <li>Size:32 bits</li>
             <li>Offset:0xd4</li>
@@ -5828,7 +5659,6 @@ This register sets the Bus free time for initiating the transfer in master mode 
                         <p class="BLANK">
                         </p>
                         <p>.
-
 This field is used by the Slave/Non-current Master to initiate an IBI after STOP condition.</p>
                         <p>Value After Reset:0x20</p>
                     </td>
@@ -5847,7 +5677,6 @@ This field is used by the Slave/Non-current Master to initiate an IBI after STOP
                         <p class="BLANK">
                         </p>
                         <p>In Pure Bus System, this field represents tCAS parameter. In Mixed Bus system, this field is expected to be programmed
-
 to tLOW of I2C Timing.</p>
                         <p>Value After Reset:0x20</p>
                     </td>
@@ -5961,9 +5790,7 @@ to tLOW of I2C Timing.</p>
                         <p class="BLANK">
                         </p>
                         <p>For example, release number "1.00a" is represented in ASCII as 0x313030. Lower 8 bits read from this register can be
-
 ignored by the application. An application reading this register along with the I3C_VER_TYPE register, gathers
-
 details of the current release.</p>
                         <p>Value After Reset:0x3130332a</p>
                     </td>
@@ -6017,14 +5844,11 @@ details of the current release.</p>
                         <p class="BLANK">
                         </p>
                         <p>For example, release type "ga" is represented in ASCII as 0x6761 and "ea" is represented as 0x6561. Lower 16 bits
-
 read from this register can be ignored by the application if release type is "ga". If release type is "ea" the lower
-
 16 bits represents the "ea" release version.</p>
                         <p class="BLANK">
                         </p>
                         <p>An application reading this register along with the I3C_VER_ID
-
 register, gathers details of the current release.</p>
                         <p>Value After Reset:0x6c633030</p>
                     </td>
@@ -6308,9 +6132,7 @@ register, gathers details of the current release.</p>
         <ul>
             <li>Name:DEV_CHAR_TABLE1_LOC1</li>
             <li>Description:Device Characteristic Table Location-1 of Device1
-
 This register is used in master mode of operation.
-
 1</li>
             <li>Size:32 bits</li>
             <li>Offset:0x200</li>
@@ -6360,7 +6182,6 @@ This register is used in master mode of operation.
         <ul>
             <li>Name:SEC_DEV_CHAR_TABLE1/DEV_CHAR_TABLE1_LOC1</li>
             <li>Description:Secondary Master Device Characteristic Table Location of Device1
-
 1</li>
             <li>Size:32 bits</li>
             <li>Offset:0x200</li>
@@ -6458,9 +6279,7 @@ This register is used in master mode of operation.
         <ul>
             <li>Name:DEV_CHAR_TABLE1_LOC2</li>
             <li>Description:Device Characteristic Table Location-2 of Device1
-
 This register is used in master mode of operation.
-
 1</li>
             <li>Size:32 bits</li>
             <li>Offset:0x204</li>
@@ -6521,9 +6340,7 @@ This register is used in master mode of operation.
         <ul>
             <li>Name:DEV_CHAR_TABLE1_LOC3</li>
             <li>Description:Device Characteristic Table Location-3 of Device1
-
 This register is used in master mode of operation.
-
 1</li>
             <li>Size:32 bits</li>
             <li>Offset:0x208</li>
@@ -6600,9 +6417,7 @@ This register is used in master mode of operation.
         <ul>
             <li>Name:DEV_CHAR_TABLE1_LOC4</li>
             <li>Description:Device Characteristic Table Location-4 of Device1
-
 This register is used in master mode of operation.
-
 1</li>
             <li>Size:32 bits</li>
             <li>Offset:0x20c</li>
@@ -6663,7 +6478,6 @@ This register is used in master mode of operation.
         <ul>
             <li>Name:Device Address Table Location of Device1</li>
             <li>Description:Device Address Table Location of Device1
-
 1</li>
             <li>Size:32 bits</li>
             <li>Offset:0x240</li>
@@ -6760,9 +6574,7 @@ This register is used in master mode of operation.
                         <p class="BLANK">
                         </p>
                         <p>If the Device NACK's for the device address, the controller automatically retries the same device until
-
 this count expires. If the Slave does not ACK for the mentioned number of retries, then Controller
-
 generates an error response and move to the Halt state.</p>
                         <p class="BLANK">
                         </p>
@@ -6791,11 +6603,8 @@ generates an error response and move to the Halt state.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>Device Dynamic Address with parity.
-
 This field consists of Dynamic address and Parity Bit.
-
 The LSB bits [22:16] should consist of Dynamic Address field indicates the address to be assigned for the winning I3C device when using ENTDAA command.
-
 The MSB[23] bit is the odd parity of the 7-bit Dynamic address used for ENTDAA address assignment (~XOR(DEV_DYNAMIC_ADDR[22:16])</p>
                         <p>Value After Reset:0x0</p>
                         <p>Testable:untestable</p>
@@ -6817,7 +6626,6 @@ The MSB[23] bit is the odd parity of the 7-bit Dynamic address used for ENTDAA a
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>In-Band Master Request Reject field is used to control, per device, whether to accept Master request
-
 from Devices.</p>
                         <ul>
                             <li>0x0 - Accept: ACK the Master Request</li>
@@ -6842,7 +6650,6 @@ from Devices.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>In-Band Slave Interrupt Request Reject field is used to control, per device, whether to accept Slave Interrupt
-
 request from Devices.</p>
                         <ul>
                             <li>0x0 - Accept: ACK the SIR</li>
@@ -6890,9 +6697,7 @@ request from Devices.</p>
                     <td class="TableStyle-table-BodyE-Column1-Body1">R/W</td>
                     <td class="TableStyle-table-BodyD-Column1-Body1">
                         <p>Packet Error Check enabled for accepted IBI from the device. PEC byte is appended at the end of IBI data from the device.
-
 This bit controls whether PEC check should be performed for IBI data from device.
-
 This bit also controls whether PEC byte has to be send for auto disable CCC when controller NACKs the IBI.</p>
                         <ul>
                             <li>0x0 - Packet Error Check disabled for IBI</li>

@@ -101,7 +101,6 @@ data byte is transferred or received.</p>
 <p class="BLANK"></p>
 <p>This bit is used to enable or disable the DMA Handshaking interface, and is applicable to both Master and Slave modes of operation.</p>
 <p class="BLANK"></p>
- 
 <ul><li>1: Enables the DMA handshake control to interact with external DMA.<p class="BLANK"></p>
 </li><li>0: The DMA handshake control has no significance.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
@@ -615,7 +614,6 @@ and a value of 0 sets the threshold to indicate that the queue is completely emp
 <p class="BLANK"></p>
 <p>In master mode of operation when the controller is set up to initiate a read transfer, it waits until either one of the conditions are met before it initiates the read transfer on the I3C Interface.</p>
 <p class="BLANK"></p>
- 
 <ul><li>Data length (as specified in the command) number of locations are empty in the Receive FIFO.<p class="BLANK"></p>
 </li><li>Threshold number of locations (or more) are empty in the Receive FIFO.<p class="BLANK"></p>
 </li></ul><p class="BLANK"></p>
@@ -643,7 +641,6 @@ and a value of 0 sets the threshold to indicate that the queue is completely emp
 <p class="BLANK"></p>
 <p>In master mode of operation when the controller is set up to initiate a write transfer, it waits until either one of the following conditions are met before it initiates the write transfer on the I3C Interface.</p>
 <p class="BLANK"></p>
- 
 <ul><li>Data length (as specified in the command) number of locations are filled in the Transmit FIFO<p class="BLANK"></p>
 </li><li>Threshold number of entries (or more) are available in the Transmit FIFO<p class="BLANK"></p>
 </li></ul><p class="BLANK"></p>
@@ -937,7 +934,6 @@ This status can be cleared by writing 1'b1 to this field after reading the updat
 <td>R</td>
 <td><p>Activity State Status.</p>
 <p class="BLANK"></p>
- 
 <ul><li>ENTAS0 - 00<p class="BLANK"></p>
 </li><li>ENTAS1 - 01<p class="BLANK"></p>
 </li><li>ENTAS2 - 10<p class="BLANK"></p>
@@ -2750,7 +2746,6 @@ This field holds the first byte of SIR DATA that will be passed after the MDB wh
 <p class="BLANK"></p>
 <p>This field will not be cleared during software reset.</p>
 <p class="BLANK"></p>
- 
 <ul><li>0: Master</li><li>1: Slave</li><li>2: Reserved</li><li>3: Reserved</li></ul><p>This field is automatically updated by the controller once the role change happens in secondary master mode.Software Reset will not have any effect on this field. Once programmed the value will be retained until power on reset or through role change.</p>
 <p class="BLANK"></p>
 <p>Values:</p>
@@ -3514,7 +3509,6 @@ This register is used in master mode of operation.
 <td>R/W</td>
 <td><p>Type of device</p>
 <p class="BLANK"></p>
- 
 <ul><li>0: I3C</li><li>1: I2C</li></ul><p class="BLANK"></p>
 <p>Values:</p>
 <ul><li>0x0 (I3C_DEVICE): This DEV_ADDR_TABLE location contains data related to an I3C Device transfer.</li><li>0x1 (I2C_DEVICE): This DEV_ADDR_TABLE location contains data related to an I2C Device transfer.</li></ul> 
@@ -3631,4 +3625,3 @@ This bit also controls whether PEC byte has to be send for auto disable CCC when
 </td>
 </tr>
 </tbody></table></body></html>
-

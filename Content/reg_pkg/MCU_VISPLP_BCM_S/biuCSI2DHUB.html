@@ -1,2513 +1,1257 @@
 <?xml version="1.0" encoding="utf-8"?><html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><head><title>CSI2DHUB</title></head>
-
 <body>
-
 <h1>CSI2DHUB
-
         </h1>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P-)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_Wr">CSI2DHUB_WrClient_Y_Wr</a></p>
-
 </td>
-
 <td><p>32'h00000000</p>
-
 </td>
-
 <td><p>Register for write Client RAW8/Yluma</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[0:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_Wr_start">start</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Start bit for the respective clients. 
-
 0 : No effect on hardware. 
-
 1 : start the client. 
-
 The write 1 to this register is used to kick the hardware.</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[1:1]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_Wr_clear">clear</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>0 : Don't clear, normal state. 
-
 1 : Clear the asynchronous FIFO between the respective client and dHub.</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_pix">CSI2DHUB_WrClient_Y_pix</a></p>
-
 </td>
-
 <td><p>32'h00000004</p>
-
 </td>
-
 <td><p> 
-
 </p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[31:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_pix_tot">tot</a></p>
-
 </td>
-
 <td><p>0x64</p>
-
 </td>
-
 <td><p>Specifies the total number of pixels expected from input to write client. This is used to generate flush in Write client to write the partially formed 128-bit data (if any) to DDR. 
-
 Should be programmed with (ovres*ohres).</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_NonStdRes">CSI2DHUB_WrClient_Y_NonStdRes</a></p>
-
 </td>
-
 <td><p>32'h00000008</p>
-
 </td>
-
 <td><p> 
-
 </p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[0:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_NonStdRes_enable">enable</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Enable for Read Client when resolution is not integer multiple of 16</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[13:1]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_NonStdRes_pixlineTot">pixlineTot</a></p>
-
 </td>
-
 <td><p>0x64</p>
-
 </td>
-
 <td><p>Total number of pixels in a line (for Write Client)</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_pack">CSI2DHUB_WrClient_Y_pack</a></p>
-
 </td>
-
 <td><p>32'h0000000C</p>
-
 </td>
-
 <td><p> 
-
 </p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[3:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_pack_Sel">Sel</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>PackSel for Write Client 
-
 [0000] : 8 bit packing 
-
 [0001] : 10 bit packing 
-
 [0010] : 12 bit packing 
-
 [0011] : 15 bit packing 
-
 [0100] : 16 bit packing 
-
 [0101] : 20 bit packing 
-
 [0110] : 24 bit packing 
-
 [0111] : 30 bit packing 
-
 [1000] : 32 bit packing</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P-)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_Wr">CSI2DHUB_WrClient_C_Wr</a></p>
-
 </td>
-
 <td><p>32'h00000010</p>
-
 </td>
-
 <td><p>Register for write Client Chroma</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[0:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_Wr_start">start</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Start bit for the respective clients. 
-
 0 : No effect on hardware. 
-
 1 : start the client. 
-
 The write 1 to this register is used to kick the hardware.</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[1:1]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_Wr_clear">clear</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>0 : Don't clear, normal state. 
-
 1 : Clear the asynchronous FIFO between the respective client and dHub.</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_pix">CSI2DHUB_WrClient_C_pix</a></p>
-
 </td>
-
 <td><p>32'h00000014</p>
-
 </td>
-
 <td><p> 
-
 </p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[31:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_pix_tot">tot</a></p>
-
 </td>
-
 <td><p>0x64</p>
-
 </td>
-
 <td><p>Specifies the total number of pixels expected from input to write client. This is used to generate flush in Write client to write the partially formed 128-bit data (if any) to DDR. 
-
 Should be programmed with (ovres*ohres).</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_NonStdRes">CSI2DHUB_WrClient_C_NonStdRes</a></p>
-
 </td>
-
 <td><p>32'h00000018</p>
-
 </td>
-
 <td><p> 
-
 </p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[0:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_NonStdRes_enable">enable</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Enable for Read Client when resolution is not integer multiple of 16</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[13:1]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_NonStdRes_pixlineTot">pixlineTot</a></p>
-
 </td>
-
 <td><p>0x64</p>
-
 </td>
-
 <td><p>Total number of pixels in a line (for Write Client)</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_pack">CSI2DHUB_WrClient_C_pack</a></p>
-
 </td>
-
 <td><p>32'h0000001C</p>
-
 </td>
-
 <td><p> 
-
 </p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[3:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_pack_Sel">Sel</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>PackSel for Write Client 
-
 [0000] : 8 bit packing 
-
 [0001] : 10 bit packing 
-
 [0010] : 12 bit packing 
-
 [0011] : 15 bit packing 
-
 [0100] : 16 bit packing 
-
 [0101] : 20 bit packing 
-
 [0110] : 24 bit packing 
-
 [0111] : 30 bit packing 
-
 [1000] : 32 bit packing</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P-)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_Wr">CSI2DHUB_WrClient_M_Wr</a></p>
-
 </td>
-
 <td><p>32'h00000020</p>
-
 </td>
-
 <td><p>Register for write Client Embedded Data</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[0:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_Wr_start">start</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Start bit for the respective clients. 
-
 0 : No effect on hardware. 
-
 1 : start the client. 
-
 The write 1 to this register is used to kick the hardware.</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[1:1]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_Wr_clear">clear</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>0 : Don't clear, normal state. 
-
 1 : Clear the asynchronous FIFO between the respective client and dHub.</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_pix">CSI2DHUB_WrClient_M_pix</a></p>
-
 </td>
-
 <td><p>32'h00000024</p>
-
 </td>
-
 <td><p> 
-
 </p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[31:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_pix_tot">tot</a></p>
-
 </td>
-
 <td><p>0x64</p>
-
 </td>
-
 <td><p>Specifies the total number of pixels expected from input to write client. This is used to generate flush in Write client to write the partially formed 128-bit data (if any) to DDR. 
-
 Should be programmed with (ovres*ohres).</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_NonStdRes">CSI2DHUB_WrClient_M_NonStdRes</a></p>
-
 </td>
-
 <td><p>32'h00000028</p>
-
 </td>
-
 <td><p> 
-
 </p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[0:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_NonStdRes_enable">enable</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Enable for Read Client when resolution is not integer multiple of 16</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[13:1]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_NonStdRes_pixlineTot">pixlineTot</a></p>
-
 </td>
-
 <td><p>0x64</p>
-
 </td>
-
 <td><p>Total number of pixels in a line (for Write Client)</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_pack">CSI2DHUB_WrClient_M_pack</a></p>
-
 </td>
-
 <td><p>32'h0000002C</p>
-
 </td>
-
 <td><p> 
-
 </p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[3:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#WriteClient_pack_Sel">Sel</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>PackSel for Write Client 
-
 [0000] : 8 bit packing 
-
 [0001] : 10 bit packing 
-
 [0010] : 12 bit packing 
-
 [0011] : 15 bit packing 
-
 [0100] : 16 bit packing 
-
 [0101] : 20 bit packing 
-
 [0110] : 24 bit packing 
-
 [0111] : 30 bit packing 
-
 [1000] : 32 bit packing</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_TG_CTRL">CSI2DHUB_TG_CTRL</a></p>
-
 </td>
-
 <td><p>32'h00000030</p>
-
 </td>
-
 <td><p> 
-
 </p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[0:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_TG_CTRL_tg_start">tg_start</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>TG start</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[1:1]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_TG_CTRL_tg_clear">tg_clear</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>TG clear</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[2:2]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_TG_CTRL_clken_ctrl0">clken_ctrl0</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Pipe TG Control flow based on write client1 ready. 
-
 0: enabled 
-
 1: disabled</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[3:3]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_TG_CTRL_clken_ctrl1">clken_ctrl1</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Pipe TG Control flow based on write client2 ready. 
-
 0: enabled 
-
 1: disabled</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[4:4]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_TG_CTRL_clken_ctrl6">clken_ctrl6</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Pipe TG Control flow based on write client3 ready. 
-
 0: enabled 
-
 1: disabled</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[5:5]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_TG_CTRL_clken_ctrl2">clken_ctrl2</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Front end (path before IPI fifo) Control flow based on IPI fifo status. 
-
 0: disabled 
-
 1: enabled</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[6:6]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_TG_CTRL_clken_ctrl3">clken_ctrl3</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Front end (path before IPI fifo) Control flow based on write client1 ready. 
-
 0: enabled 
-
 1: disabled</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[7:7]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_TG_CTRL_clken_ctrl4">clken_ctrl4</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Front end (path before IPI fifo) Control flow based on write client2 ready. 
-
 0: enabled 
-
 1: disabled</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[8:8]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_TG_CTRL_clken_ctrl7">clken_ctrl7</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Front end (path before IPI fifo) Control flow based on write client3 ready. 
-
 0: enabled 
-
 1: disabled</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[9:9]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_TG_CTRL_clken_ctrl5">clken_ctrl5</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Front end (path before IPI fifo) Control flow based on write client 1 and client2 ready. 
-
 0: disabled 
-
 1: enabled</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[10:10]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_TG_CTRL_fifo_ctrlEn">fifo_ctrlEn</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Pipe TG Control flow based on IPI input FIFO status. 
-
 0: enabled 
-
 1: disabled</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[11:11]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_TG_CTRL_zero_line_delay_en">zero_line_delay_en</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Enable zero line delay programming mode. 
-
 1: enabled 
-
 0: disabled</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CLKEN_CTRL">CSI2DHUB_CLKEN_CTRL</a></p>
-
 </td>
-
 <td><p>32'h00000034</p>
-
 </td>
-
 <td><p> 
-
 </p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[0:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CLKEN_CTRL_WrClient_C_clken">WrClient_C_clken</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Clock gating bit for chroma write client.</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[1:1]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CLKEN_CTRL_WrClient_M_clken">WrClient_M_clken</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Clock gating bit for Embedded data write client.</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[2:2]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CLKEN_CTRL_WrClient_Y_clken">WrClient_Y_clken</a></p>
-
 </td>
-
 <td><p>0x1</p>
-
 </td>
-
 <td><p>Clock gating bit for Luma/RAW data write client OCPF.</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[3:3]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CLKEN_CTRL_fifo_read_on_TG_ACTIVE_en">fifo_read_on_TG_ACTIVE_en</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Enable ipi fifo read also based on TG active signal apart from hde, vde and ipi fifo status.</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL1">CSI2DHUB_CTRL1</a></p>
-
 </td>
-
 <td><p>32'h00000038</p>
-
 </td>
-
 <td><p> 
-
 </p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[2:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL1_IPIswap_Y_ctrl">IPIswap_Y_ctrl</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>In IPI48bit interface, Three 16bit IPI component RAW/Y data position swapping control. 
-
 case(IPIswap_Y_ctrl[2:0]) 
-
 3'b000 : ipidata_raw48b[47:0] = {ipi_pixdata[47:32],ipi_pixdata[31:16],ipi_pixdata[15: 0]}; 
-
 3'b001 : ipidata_raw48b[47:0] = {ipi_pixdata[15: 0],ipi_pixdata[31:16],ipi_pixdata[47:32]}; 
-
 3'b010 : ipidata_raw48b[47:0] = {ipi_pixdata[31:16],ipi_pixdata[47:32],ipi_pixdata[15: 0]}; 
-
 3'b011 : ipidata_raw48b[47:0] = {ipi_pixdata[31:16],ipi_pixdata[15: 0],ipi_pixdata[47:32]}; 
-
 3'b100 : ipidata_raw48b[47:0] = {ipi_pixdata[47:32],ipi_pixdata[15: 0],ipi_pixdata[31:16]}; 
-
 3'b101 : ipidata_raw48b[47:0] = {ipi_pixdata[15: 0],ipi_pixdata[47:32],ipi_pixdata[31:16]}; 
-
 NOTE: IPIswap_Y_ctrl can be 0 if “endianness_Y” control programming is used.</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[3:3]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL1_endianness_Y">endianness_Y</a></p>
-
 </td>
-
 <td><p>0x1</p>
-
 </td>
-
 <td><p>Works on the IPI data given out by the swap (IPIswap_Y_ctrl) logic. 
-
 1: Change the Data write order for RAW/Y data. Nth data first (LSB) and N+1th data next (MSB). 
-
 Example: wrClient_pixdata[47:0]= {ipidata_raw48b[15:0],ipidata_raw48b[31:16],ipidata_raw48b[47:32]} 
-
 0: Do not Change the Data write order for RAW/Y data. order remain same as received from CSI2RX. N+1th data first (LSB) and Nth data next (MSB). 
-
 Example wrClient_pixdata[47:0]= {ipidata_raw48b[47:32],ipidata_raw48b[31:16],ipidata_raw48b[15:0]} 
-
 NOTE: IPIswap_Y_ctrl must be 0 while programming “endianness_Y” control</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[6:4]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL1_IPIswap_M_ctrl">IPIswap_M_ctrl</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>In IPI48bit interface, Three 16bit IPI Embedded data position swapping control. 
-
 case(IPIswap_M_ctrl[2:0]) 
-
 3'b000 : ipidata_raw48b[47:0] = {ipi_pixdata[47:32],ipi_pixdata[31:16],ipi_pixdata[15: 0]}; 
-
 3'b001 : ipidata_raw48b[47:0] = {ipi_pixdata[15: 0],ipi_pixdata[31:16],ipi_pixdata[47:32]}; 
-
 3'b010 : ipidata_raw48b[47:0] = {ipi_pixdata[31:16],ipi_pixdata[47:32],ipi_pixdata[15: 0]}; 
-
 3'b011 : ipidata_raw48b[47:0] = {ipi_pixdata[31:16],ipi_pixdata[15: 0],ipi_pixdata[47:32]}; 
-
 3'b100 : ipidata_raw48b[47:0] = {ipi_pixdata[47:32],ipi_pixdata[15: 0],ipi_pixdata[31:16]}; 
-
 3'b101 : ipidata_raw48b[47:0] = {ipi_pixdata[15: 0],ipi_pixdata[47:32],ipi_pixdata[31:16]}; 
-
 NOTE: IPIswap_M_ctrl can be 0 if “endianness_M” control programming is used.</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[7:7]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL1_endianness_M">endianness_M</a></p>
-
 </td>
-
 <td><p>0x1</p>
-
 </td>
-
 <td><p>Works on the IPI Embedded data given out by the swap (IPIswap_M_ctrl) logic. 
-
 1: Change the Data write order for Embedded data. Nth data first (LSB) and N+1th data next (MSB). 
-
 Example: wrClient_pixdata[47:0]= {ipidata_raw48b[15:0],ipidata_raw48b[31:16],ipidata_raw48b[47:32]} 
-
 0: Do not Change the Data write order for Embedded data. order remain same as received from CSI2RX. N+1th data first (LSB) and Nth data next (MSB). 
-
 Example wrClient_pixdata[47:0]= {ipidata_raw48b[47:32],ipidata_raw48b[31:16],ipidata_raw48b[15:0]} 
-
 NOTE: IPIswap_M_ctrl must be 0 while programming “endianness_M” control</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[8:8]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL1_enb_YC_haltback">enb_YC_haltback</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Enable output haltback from IPI data write clients (RAW8/Y)&C. 
-
 1: enabled 
-
 0: disabled</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[9:9]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL1_enb_M_haltback">enb_M_haltback</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Enable output haltback from IPI Embedded data write clients (Embedded). 
-
 1: enabled 
-
 0: disabled</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[10:10]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL1_ClientRdy_ctrl_Y">ClientRdy_ctrl_Y</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>CSI2RX &lt; + > IPI Y data WriteClient (RAW8/Y), Control flow based on write client ready. 
-
 0: enabled 
-
 1: disabled 
-
 Note: The Ready signal from WriteClient Y will be overridden with ClientRdy_ctrl_Y to keep the WriteClient always ready. The Halt signal from WriteClient Y will not be asserted.</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[11:11]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL1_ClientRdy_ctrl_C">ClientRdy_ctrl_C</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>CSI2RX &lt; + > IPI C WriteClient (C data), Control flow based on write client ready. 
-
 0: enabled 
-
 1: disabled 
-
 Note: The Ready signal from WriteClient C will be overridden with ClientRdy_ctrl_C to keep the WriteClient always ready. The Halt signal from WriteClient C will not be asserted.</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[12:12]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL1_ClientRdy_ctrl_M">ClientRdy_ctrl_M</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>CSI2RX &lt; + > IPI EmbMeta WriteClient (Embedded Metadata ), Control flow based on write client ready. 
-
 0: enabled 
-
 1: disabled 
-
 Note: The Ready signal from WriteClient Embeddata will be overridden with ClientRdy_ctrl_M to keep the WriteClient always ready. The Halt signal from WriteClient Embeddata will not be asserted.</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[13:13]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL1_fifo_flush">fifo_flush</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>ipi input fifo flush.</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[14:14]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL1_contemp_UV420">contemp_UV420</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>IPI data YUV420 format in Contemporary mode (Non-Legacy) 
-
 UV-data= {ipi_pixdata[19:12],ipi_pixdata[9:2]}</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[15:15]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL1_ipi_uv_swap_ctrl">ipi_uv_swap_ctrl</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>1: {ipidata_uv[7:0],ipidata_uv[15:8]}={V,U} 
-
 0: {ipidata_uv[15:8],ipidata_uv[7:0]}={U,V} 
-
 NOTE: endianness is not used for UV data. 
-
 ipi_uv_swap_ctrl can be used as endianness change while writing UV to Dhub.</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[16:16]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL1_enable_565_write">enable_565_write</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>888 format will be packed as 565 before dhub write.</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL2">CSI2DHUB_CTRL2</a></p>
-
 </td>
-
 <td><p>32'h0000003C</p>
-
 </td>
-
 <td><p> 
-
 </p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[3:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL2_wrClient_C_input_ctrl">wrClient_C_input_ctrl</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>DHUB write input selection for CSIRX2-IPI to write client C 
-
 4'h0 : Monochrome formats, UV="0"
-
 4'h1 : YUV422-UV16b format :: Write 16bit UV on alternate Pixel 
-
 4'h2 : YUV422-C8b format :: Write U in ODD pix, V in EVEN pix 
-
 4'h3 : YUV420-UV16b :: Write 16bit UV on even pixel of even Line, Else =0 
-
 4'h4 : YUV420-C8b Legacy format 
-
 4'h8 : YUV422-UV16b format :: Write 16bit UV on alternate Pixel 
-
 4'h9 : YUV422-C8b format :: Write U in ODD pix, V in EVEN pix 
-
 4'hA : YUV420-UV16b :: Write 16bit UV on even pixel of even Line, Else =0 
-
 4'hB : YUV420-C8b Legacy format</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[7:4]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL2_wrClient_Y_input_ctrl">wrClient_Y_input_ctrl</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Input control for CSIRX1-IPI0 and CSIRX1-IPI1 write clients 
-
 4'h0 : host IPI to DHUB ( 24-bit) RAW8 
-
 4'h1 : host IPI to DHUB ( 16/24-bit) 
-
 4'h2 : host IPI &lt; FIFO > DHUB ( 24-bit) RAW8 
-
 4'h3 : host IPI &lt; FIFO > DHUB ( 16/24-bit) 
-
 default : host IPI to DHUB ( 24-bit) RAW8 
-
 ------------------------------------------ 
-
 Input control for CSIRX2-IPI Y write clients 
-
 4'h0 : RAW8 = 24b/16b (16b for RGB565) 
-
 4'h1 : RAW10 = 30b 
-
 4'h2 : RAW12 = 36b 
-
 4'h3 : RAW16 = 48b 
-
 4'h4 : YUV422-Y8b = 8b 
-
 4'h5 : YUV420-Y8b = 16b 
-
 4'h8 : RAW8 = 24b/16b (16b for RGB565) 
-
 4'h9 : RAW10 = 30b 
-
 4'hA : RAW12 = 36b 
-
 4'hB : RAW16 = 48b 
-
 4'hC : YUV422-Y8b = 8b 
-
 4'hD : YUV420-Y8b = 16b 
-
 default :RAW8 = 24b</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[9:8]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL2_wrClient_M_input_ctrl">wrClient_M_input_ctrl</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Input control for Embedded data Write client 
-
 0: Swapped and Endian corrected Embedded data 
-
 1: Endian corrected Embedded data</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[10:10]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL2_WrClient_clear_C">WrClient_clear_C</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Chroma write client clear</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[11:11]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL2_WrClient_start_C">WrClient_start_C</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Chroma write client start</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[12:12]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL2_WrClient_clear_Y">WrClient_clear_Y</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Luma write client clear</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[13:13]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL2_WrClient_start_Y">WrClient_start_Y</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Luma write client start</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[14:14]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL2_WrClient_clear_M">WrClient_clear_M</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Embedded data write client clear</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[15:15]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL2_WrClient_start_M">WrClient_start_M</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Embedded data write client start</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL3">CSI2DHUB_CTRL3</a></p>
-
 </td>
-
 <td><p>32'h00000040</p>
-
 </td>
-
 <td><p> 
-
 </p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[31:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL3_ipipix_tot">ipipix_tot</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Total pixel count at IPI input fifo</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL4">CSI2DHUB_CTRL4</a></p>
-
 </td>
-
 <td><p>32'h00000044</p>
-
 </td>
-
 <td><p> 
-
 </p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[13:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL4_image_width">image_width</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Image width of sequencer for sync to start end signal conversion.</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[27:14]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL4_image_height">image_height</a></p>
-
 </td>
-
 <td><p>0x0</p>
-
 </td>
-
 <td><p>Image height of sequencer for sync to start end signal conversion.</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 <table width="100%"><tr><td><p>Access</p>
-
 </td>
-
 <td><p>Register</p>
-
 </td>
-
 <td><p>Address</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>(P)</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL5">CSI2DHUB_CTRL5</a></p>
-
 </td>
-
 <td><p>32'h00000048</p>
-
 </td>
-
 <td><p> 
-
 </p>
-
 </td>
-
 </tr>
-
 <tr><td><p>Range</p>
-
 </td>
-
 <td><p>Field</p>
-
 </td>
-
 <td><p>Reset</p>
-
 </td>
-
 <td><p>Description</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[7:0]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL5_hblank">hblank</a></p>
-
 </td>
-
 <td><p>0x10</p>
-
 </td>
-
 <td><p>Hblank added in sequencer while doing sync to start end signal conversion.</p>
-
 </td>
-
 </tr>
-
 <tr><td><p>[8:8]</p>
-
 </td>
-
 <td><p><a HREF="vispDhIntf.htm#CSI2DHUB_CTRL5_iif_mode">iif_mode</a></p>
-
 </td>
-
 <td><p>0x10</p>
-
 </td>
-
 <td><p>Iif input mode for sync2se block.</p>
-
 </td>
-
 </tr>
-
 </table><p> 
-
 </p>
-
 </body></html>

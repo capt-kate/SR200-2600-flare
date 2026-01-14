@@ -59,27 +59,16 @@
         <p>Read-As-Zero, Writes Ignored.</p>
         <h3 id="SECSTATUSPTR.desc">SECSTATUSPTR<a class="headerlink" href="#SECSTATUSPTR.desc" title="Permalink to this headline"></a></h3>
         <p>Secure DMA Unit status pointer used to select which status value to view using STATUSVALUE register. Pointer values are:
-
 - 0: Channel Enabled Status for channel numbers [31 : 0]
-
 - 1: Channel Enabled Status for channel numbers [63 : 32]
-
 - 2: Channel Stopped Status for channel numbers [31 : 0]
-
 - 3: Channel Stopped Status for channel numbers [63 : 32]
-
 - 4: Channel Paused Status for channel numbers [31 : 0]
-
 - 5: Channel Paused Status for channel numbers [63 : 32]
-
 - 6: Channel Allocation Status for channel numbers [31 : 0]. Only implemented if HAS_VCH feature is supported. It shows if a virtual channel is granted allocation to a physical channel.
-
 - 7: Channel Allocation Status for channel numbers [63 : 32]. Only implemented if HAS_VCH feature is supported.
-
 - 8: Channel Allocation Stalled Status for channel numbers [31 : 0]. Only implemented if HAS_VCH feature is supported. It shows if a virtual channel is ready to execute the DMA job (it is requesting physical channel allocation), but it is not yet allocated.
-
 - 9: Channel Allocation Stalled Status for channel numbers [63 : 32]. Only implemented if HAS_VCH feature is supported.
-
 - Others: Reserved</p>
     </body>
 </html>

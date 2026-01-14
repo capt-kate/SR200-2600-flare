@@ -411,7 +411,6 @@
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">The
-
 register map for AHB bus</p>
                 </td>
             </tr>
@@ -420,7 +419,6 @@ register map for AHB bus</p>
         </p>
         <h1>1.TDM_PCM</h1>
         <p class="Standard">(The following table is just used by reggen
-
 script,it will be removed in official register spec)</p>
         <p class="Standard">
         </p>
@@ -539,7 +537,6 @@ script,it will be removed in official register spec)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Enables
-
 to generate WS signal for receiver in master mode.</p>
                     <p class="Standard">Active high.</p>
                 </td>
@@ -562,18 +559,13 @@ to generate WS signal for receiver in master mode.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">This
-
 field can determine if a high level pulse or low level pulse is generated
-
 firstly for receiver. This field provided a flexibility for the first frame.</p>
                     <p class="Default">1'b0:
-
 a high level pulse come out firstly</p>
                     <p class="Default">1'b1:
-
 a low level pulse come out firstly</p>
                     <p class="Standard">This field is
-
 effective only after 'rx_lrck_en' is activated.</p>
                 </td>
             </tr>
@@ -595,20 +587,15 @@ effective only after 'rx_lrck_en' is activated.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Sets
-
 the high phase width of WS signal for receiver in terms of bit clock cycles.</p>
                     <p class="Default">'d0:
-
 1 clock</p>
                     <p class="Default">'d1:
-
 2 clocks</p>
                     <p class="Default">etc.</p>
                     <p class="Default">This
-
 field is effective only in master mode.</p>
                     <p class="Standard">This field is
-
 effective only after 'rx_lrck_en' is activated.</p>
                 </td>
             </tr>
@@ -630,20 +617,15 @@ effective only after 'rx_lrck_en' is activated.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Sets
-
 the frame length of WS signal for receiver in terms of bit clock cycles.</p>
                     <p class="Default">'d0:
-
 1 clock</p>
                     <p class="Default">'d1:
-
 2 clocks</p>
                     <p class="Default">etc.</p>
                     <p class="Default">This
-
 field is effective only in master mode.</p>
                     <p class="Default">This
-
 field is effective only after 'rx_lrck_en' is activated.</p>
                 </td>
             </tr>
@@ -722,7 +704,6 @@ field is effective only after 'rx_lrck_en' is activated.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Enables
-
 to generate WS signal for transmitter in master mode.</p>
                     <p class="Standard">Active high.</p>
                 </td>
@@ -745,20 +726,14 @@ to generate WS signal for transmitter in master mode.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">This
-
 field can determine if a high level pulse or low level pulse is generated
-
 firstly for transmitter. This field provided a flexibility for the first
-
 frame.</p>
                     <p class="Default">1'b0:
-
 a high level pulse come out firstly</p>
                     <p class="Default">1'b1:
-
 a low level pulse come out firstly</p>
                     <p class="Standard">This field is
-
 effective only after 'tx_lrck_en' is activated.</p>
                 </td>
             </tr>
@@ -780,22 +755,16 @@ effective only after 'tx_lrck_en' is activated.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Sets
-
 the high phase width of WS signal for transmitter in terms of bit clock
-
 cycles.</p>
                     <p class="Default">'d0:
-
 1 clock</p>
                     <p class="Default">'d1:
-
 2 clocks</p>
                     <p class="Default">etc.</p>
                     <p class="Default">This field
-
 is effective only in master mode.</p>
                     <p class="Standard">This field is
-
 effective only after 'tx_lrck_en' is activated.</p>
                 </td>
             </tr>
@@ -817,20 +786,15 @@ effective only after 'tx_lrck_en' is activated.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Sets
-
 the frame length of WS signal for transmitter in terms of bit clock cycles.</p>
                     <p class="Default">'d0:
-
 1 clock</p>
                     <p class="Default">'d1:
-
 2 clocks</p>
                     <p class="Default">etc.</p>
                     <p class="Default">This field
-
 is effective only in master mode.</p>
                     <p class="Default">This
-
 field is effective only after 'tx_lrck_en' is activated.</p>
                 </td>
             </tr>
@@ -909,13 +873,10 @@ field is effective only after 'tx_lrck_en' is activated.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">1'b0:
-
 use tx_lrck to tx/rx data</p>
                     <p class="Default">1'b1:
-
 use rx_lrck to tx/rx data</p>
                     <p class="Standard">This bit is valid only
-
 when lrck_share_en="1"'b1.</p>
                 </td>
             </tr>
@@ -938,13 +899,10 @@ when lrck_share_en="1"'b1.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">If
-
 set, I2S/PCM will share lrck</p>
                     <p class="Default">1'b0:
-
 share lrck disable</p>
                     <p class="Standard">1'b1: share lrck
-
 enable</p>
                 </td>
             </tr>
@@ -966,13 +924,10 @@ enable</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">1'b0:
-
 use tx_clk to tx/rx data</p>
                     <p class="Default">1'b1:
-
 use rx_clk to tx/rx data</p>
                     <p class="Standard">This bit is valid only
-
 when clk_share_en="1"'b1.</p>
                 </td>
             </tr>
@@ -994,13 +949,10 @@ when clk_share_en="1"'b1.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">If
-
 set, I2S/PCM will share clock</p>
                     <p class="Default">1'b0:
-
 share clock disable</p>
                     <p class="Default">1'b1:
-
 share clock enable</p>
                 </td>
             </tr>
@@ -1081,15 +1033,12 @@ share clock enable</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Sets the sample data
-
 width of transmitter for all the RX channels.</p>
                     <p class="Standard">'d0: 1 bit data</p>
                     <p class="Standard">'d1: 2 bit data</p>
                     <p class="Standard">etc.</p>
                     <p class="Standard">This field is
-
 effective only after 'rxN_en' is activated. (N=1, 2, �, depending on which
-
 channel it is.)</p>
                 </td>
             </tr>
@@ -1111,11 +1060,9 @@ channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">The polarity of WS
-
 signal for receiver can be reversed or not based on different mode.</p>
                     <p class="Standard">1'b0: keep WS polarity</p>
                     <p class="Standard">1'b1: reverse WS
-
 polarity</p>
                 </td>
             </tr>
@@ -1137,18 +1084,13 @@ polarity</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Sets which channel is received
-
 firstly for the first frame.</p>
                     <p class="Standard">1'b0: 'left then
-
 right' order</p>
                     <p class="Standard">1'b1: 'right then
-
 left' order</p>
                     <p class="Standard">This field is
-
 effective only after 'rxN_en' is activated. (N=1, 2, �, depending on which
-
 channel it is.)</p>
                 </td>
             </tr>
@@ -1170,18 +1112,13 @@ channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Sets
-
 if little-endian or big-endian is active.</p>
                     <p class="Default">1'b0:
-
 MSB first on RX</p>
                     <p class="Default">1'b1:
-
 LSB first on RX</p>
                     <p class="Default">This
-
 field is effective only after 'rxN_en' is activated. (N=1, 2, �, depending on
-
 which channel it is.)</p>
                 </td>
             </tr>
@@ -1203,19 +1140,14 @@ which channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Sets 1-bit delay for
-
 RX channels.</p>
                     <p class="Standard">1'b0: no delay</p>
                     <p class="Standard">1'b1: delays one clock
-
 cycle</p>
                     <p class="Standard">This field is only for
-
 standard I2S (Philips) mode.</p>
                     <p class="Standard">This field is
-
 effective only after 'rxN_en' is activated. (N=1, 2, �, depending on which
-
 channel it is.)</p>
                 </td>
             </tr>
@@ -1237,14 +1169,11 @@ channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Sets if running in
-
 master or slave mode for all the RX channels.</p>
                     <p class="Standard">1'b0: running as slave</p>
                     <p class="Standard">1'b1: running as
-
 master</p>
                     <p class="Standard">This field is applied
-
 to selection of BCLK and WS signal in clock generation block.</p>
                 </td>
             </tr>
@@ -1266,22 +1195,15 @@ to selection of BCLK and WS signal in clock generation block.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">I2S
-
 mode and PCM mode have different mechanism with WS signal. The I2S mode is
-
 based on the edge detect of WS signal, while the PCM mode is based on a slot
-
 number.</p>
                     <p class="Default">1'b0:
-
 I2S mode</p>
                     <p class="Default">1'b1:
-
 PCM mode</p>
                     <p class="Default">This
-
 field is effective only after 'rxN_en' is activated. (N=1, 2, ..., depending
-
 on which channel it is.)</p>
                 </td>
             </tr>
@@ -1360,40 +1282,27 @@ on which channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">'d0:
-
 select serial line #1 for RX channel</p>
                     <p class="Default">'d1:
-
 select serial line #2 for RX channel</p>
                     <p class="Default">'d2:
-
 select serial line #3 for RX channel</p>
                     <p class="Default">etc.</p>
                     <p class="Standard">Every RX channel has
-
 its own rx_sd_sel signal.</p>
                     <p class="Standard">For
-
 example:</p>
                     <p class="Standard">M
-
 wires receive N channels.</p>
                     <p class="Standard">If
-
 M="3," N="6," register rx_sd_sel will be treated as [11:10], [9:8], [7:6], [5:4],
-
 [3:2] and [1:0], each� bit indicates that whitch line transports current
-
 channel.</p>
                     <p class="Standard">rx_sd_sel={[2�b00],[2�b00],[2�b00],[2�b00],[2�b00],[2�b00]}
-
 all of these 6 channels will be received by line #1.</p>
                     <p class="Standard">rx_sd_sel={[2�b10],[2�b10],[2�b01],[2�b01],[2�b00],[2�b00]},
-
 channel #1 and channel #2 will be received by line #1, channel #3 and channel
-
 #4 will be received by line #2, channel #5 and channel #6 will be received by
-
 line #3.</p>
                 </td>
             </tr>
@@ -1473,27 +1382,19 @@ line #3.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">When
-
 running in I2S mode, sets the delay cycles relative to the edge (positive or
-
 negative) of WS signal for RX channel.</p>
                     <p class="Default">When
-
 running in PCM mode, sets the delay cycles relative to the positive edge of
-
 WS signal for RX channel.</p>
                     <p class="Default">'d0:
-
 start from the 1st cycle of rx_bclk</p>
                     <p class="Default">'d1:
-
 start from the 2nd cycle of rx_bclk</p>
                     <p class="Default">etc.</p>
                     <p class="Default">Every
-
 RX channel has its own rx_slot signal.</p>
                     <p class="Default">Synchronous
-
 with reg_clk domain.</p>
                 </td>
             </tr>
@@ -1572,10 +1473,8 @@ with reg_clk domain.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Extensiong
-
 of rx_slot when the width of rx_slot greater than 32.</p>
                     <p class="Default">Unused
-
 when the width of rx_slot less than 32.</p>
                 </td>
             </tr>
@@ -1655,10 +1554,8 @@ when the width of rx_slot less than 32.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Mute
-
 the I2S or PCM Receiver (all zeros will be send).</p>
                     <p class="Default">Synchronous
-
 with reg_clk domain.</p>
                 </td>
             </tr>
@@ -1680,17 +1577,12 @@ with reg_clk domain.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Enables
-
 to receive data for RX channel. Active high. All the programmable signals
-
 must be stable before this signal is active. And rx_en must be inactive
-
 before reprogramming.</p>
                     <p class="Default">Every
-
 RX channel has its own rx_en signal.</p>
                     <p class="Default">Synchronous
-
 with reg_clk domain.</p>
                 </td>
             </tr>
@@ -1769,13 +1661,11 @@ with reg_clk domain.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Sets the sample data
-
 width of transmitter for TX channel1.</p>
                     <p class="Standard">'d0: 1 bit data</p>
                     <p class="Standard">'d1: 2 bit data</p>
                     <p class="Standard">etc�</p>
                     <p class="Standard">This field is
-
 effective only after 'tx1_en' is activated.</p>
                 </td>
             </tr>
@@ -1797,13 +1687,10 @@ effective only after 'tx1_en' is activated.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Enables to transmit
-
 and receive data on the same line under TDM mode.</p>
                     <p class="Standard">1'b0: the RX data and
-
 TX data is on the different line</p>
                     <p class="Standard">1'b1: the RX data and
-
 TX data is on the same line</p>
                 </td>
             </tr>
@@ -1825,13 +1712,10 @@ TX data is on the same line</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">The data output signal
-
 will be tri-stated only under TDM mode.</p>
                     <p class="Standard">1'b0: the out data is
-
 not tristaed when not driven</p>
                     <p class="Standard">1'b1: the out data is
-
 tristated when not driven</p>
                 </td>
             </tr>
@@ -1853,11 +1737,9 @@ tristated when not driven</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">The polarity of WS
-
 signal for transmitter can be reversed or not based on different mode.</p>
                     <p class="Standard">1'b0: keep WS polarity</p>
                     <p class="Standard">1'b1: reverse WS
-
 polarity</p>
                 </td>
             </tr>
@@ -1879,18 +1761,13 @@ polarity</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Sets which channel is
-
 transmitted firstly for the first frame.</p>
                     <p class="Standard">1'b0: 'left then
-
 right' order</p>
                     <p class="Standard">1'b1: 'right then
-
 left' order</p>
                     <p class="Standard">This field is
-
 effective only after 'txN_en' is activated. (N=1, 2, ..., depending on which
-
 channel it is.)</p>
                 </td>
             </tr>
@@ -1912,18 +1789,13 @@ channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Sets
-
 if little-endian or big-endian is active.</p>
                     <p class="Default">1'b0:
-
 MSB first on TX</p>
                     <p class="Default">1'b1:
-
 LSB first on TX</p>
                     <p class="Default">This
-
 field is effective only after 'txN_en' is activated. (N=1, 2, ..., depending
-
 on which channel it is.)</p>
                 </td>
             </tr>
@@ -1945,19 +1817,14 @@ on which channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Sets 1-bit delay for
-
 TX channels.</p>
                     <p class="Standard">1'b0: no delay</p>
                     <p class="Standard">1'b1: delays one clock
-
 cycle</p>
                     <p class="Standard">This field is only for
-
 standard I2S (Philips) mode.</p>
                     <p class="Standard">This field is
-
 effective only after 'txN_en' is activated. (N=1, 2, ..., depending on which
-
 channel it is.)</p>
                 </td>
             </tr>
@@ -1979,14 +1846,11 @@ channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Sets if running in
-
 master or slave mode for all the TX channels.</p>
                     <p class="Standard">1'b0: running as slave</p>
                     <p class="Standard">1'b1: running as
-
 master</p>
                     <p class="Standard">This field is applied
-
 to selection of BCLK and WS signal in clock generation block.</p>
                 </td>
             </tr>
@@ -2008,22 +1872,15 @@ to selection of BCLK and WS signal in clock generation block.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">I2S
-
 mode and PCM mode have different mechanism with WS signal. The I2S mode is
-
 based on the edge detect of WS signal, while the PCM mode is based on a slot
-
 number.</p>
                     <p class="Default">1'b0:
-
 I2S mode</p>
                     <p class="Default">1'b1:
-
 PCM mode</p>
                     <p class="Default">This
-
 field is effective only after 'txN_en' is activated. (N=1, 2, ..., depending
-
 on which channel it is.)</p>
                 </td>
             </tr>
@@ -2102,24 +1959,17 @@ on which channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">When
-
 running in I2S mode, sets the delay cycles relative to the edge (positive or
-
 negative) of WS signal for TX channel.</p>
                     <p class="Default">When
-
 running in PCM mode, sets the delay cycles relative to the positive edge of
-
 WS signal for TX channel.</p>
                     <p class="Default">'d0:
-
 start from the 1st cycle of tx_bclk</p>
                     <p class="Default">'d1:
-
 start from the 2nd cycle of tx_bclk</p>
                     <p class="Default">etc.</p>
                     <p class="Default">Every
-
 TX channel has its own tx_slot signal.</p>
                 </td>
             </tr>
@@ -2198,10 +2048,8 @@ TX channel has its own tx_slot signal.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Extensiong
-
 of tx_slot when the width of tx_slot greater than 32.</p>
                     <p class="Default">Unused
-
 when the width of tx_slot less than 32.</p>
                 </td>
             </tr>
@@ -2280,38 +2128,26 @@ when the width of tx_slot less than 32.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">'d0:
-
 select serial line #1 for TX channel</p>
                     <p class="Default">'d1:
-
 select serial line #2 for TX channel</p>
                     <p class="Default">'d2:
-
 select serial line #3 for TX channel</p>
                     <p class="Default">etc.</p>
                     <p class="Default">Every
-
 TX channel has its own tx_sd_sel signal.</p>
                     <p class="Default">For
-
 example:</p>
                     <p class="Default">M
-
 wires transporting N channels, copy N channel�s data M times through
-
 tx_sd_sel to select.</p>
                     <p class="Default">If
-
 M="3," N="6," register tx_sd_sel will be treated as [17:12], [11:6] and [5:0],
-
 each 6 bit indicates that whitch channels will be transports by current wire.</p>
                     <p class="Default">tx_sd_sel={[6�b000000],[
-
 6�b000000],[ 6�b111111]}, line #1 will transport all of these 6 channels.</p>
                     <p class="Default">tx_sd_sel={[6�b110000],[
-
 6�b001100],[ 6�b000011]}, line #1 will transport #2 and #1 channel, line #2
-
 will transport #3 and #4 channel, line #3 will transport #6 and #5 channel.</p>
                 </td>
             </tr>
@@ -2390,15 +2226,11 @@ will transport #3 and #4 channel, line #3 will transport #6 and #5 channel.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">When
-
 INCLUDE_I2S_TX_FIFO, sets the multi channel�s TX(TX FIFO�s pop signal)
-
 independent.</p>
                     <p class="Default">0:
-
 all of the TX channel�s FIFO should be pop when all channel�s data ready.</p>
                     <p class="Default">1:all
-
 of the TX channel�s independent, may cause phase shift.</p>
                 </td>
             </tr>
@@ -2420,7 +2252,6 @@ of the TX channel�s independent, may cause phase shift.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Sets
-
 to mute all the TX channels (all zeros will be send).</p>
                 </td>
             </tr>
@@ -2442,15 +2273,11 @@ to mute all the TX channels (all zeros will be send).</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Enables
-
 to transmit data for TX channel*.</p>
                     <p class="Default">Active
-
 high.</p>
                     <p class="Default">[Notice]
-
 All of TX configuration fields related with TX channel* must be steady before
-
 tx_en* is active. And tx_en* must be inactive before reconfiguration</p>
                 </td>
             </tr>
@@ -2527,7 +2354,6 @@ tx_en* is active. And tx_en* must be inactive before reconfiguration</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Enables
-
 to generate WS signal for receiver in master mode.</p>
                     <p class="Standard">Active high.</p>
                 </td>
@@ -2550,18 +2376,13 @@ to generate WS signal for receiver in master mode.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">This
-
 field can determine if a high level pulse or low level pulse is generated
-
 firstly for receiver. This field provided a flexibility for the first frame.</p>
                     <p class="Default">1'b0:
-
 a high level pulse come out firstly</p>
                     <p class="Default">1'b1:
-
 a low level pulse come out firstly</p>
                     <p class="Standard">This field is
-
 effective only after 'rx_lrck_en' is activated.</p>
                 </td>
             </tr>
@@ -2583,20 +2404,15 @@ effective only after 'rx_lrck_en' is activated.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Sets
-
 the high phase width of WS signal for receiver in terms of bit clock cycles.</p>
                     <p class="Default">'d0:
-
 1 clock</p>
                     <p class="Default">'d1:
-
 2 clocks</p>
                     <p class="Default">etc.</p>
                     <p class="Default">This
-
 field is effective only in master mode.</p>
                     <p class="Standard">This field is
-
 effective only after 'rx_lrck_en' is activated.</p>
                 </td>
             </tr>
@@ -2618,20 +2434,15 @@ effective only after 'rx_lrck_en' is activated.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Sets
-
 the frame length of WS signal for receiver in terms of bit clock cycles.</p>
                     <p class="Default">'d0:
-
 1 clock</p>
                     <p class="Default">'d1:
-
 2 clocks</p>
                     <p class="Default">etc.</p>
                     <p class="Default">This
-
 field is effective only in master mode.</p>
                     <p class="Default">This
-
 field is effective only after 'rx_lrck_en' is activated.</p>
                 </td>
             </tr>
@@ -2710,7 +2521,6 @@ field is effective only after 'rx_lrck_en' is activated.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Enables
-
 to generate WS signal for transmitter in master mode.</p>
                     <p class="Standard">Active high.</p>
                 </td>
@@ -2733,20 +2543,14 @@ to generate WS signal for transmitter in master mode.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">This
-
 field can determine if a high level pulse or low level pulse is generated
-
 firstly for transmitter. This field provided a flexibility for the first
-
 frame.</p>
                     <p class="Default">1'b0:
-
 a high level pulse come out firstly</p>
                     <p class="Default">1'b1:
-
 a low level pulse come out firstly</p>
                     <p class="Standard">This field is
-
 effective only after 'tx_lrck_en' is activated.</p>
                 </td>
             </tr>
@@ -2768,22 +2572,16 @@ effective only after 'tx_lrck_en' is activated.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Sets
-
 the high phase width of WS signal for transmitter in terms of bit clock
-
 cycles.</p>
                     <p class="Default">'d0:
-
 1 clock</p>
                     <p class="Default">'d1:
-
 2 clocks</p>
                     <p class="Default">etc.</p>
                     <p class="Default">This
-
 field is effective only in master mode.</p>
                     <p class="Standard">This field is
-
 effective only after 'tx_lrck_en' is activated.</p>
                 </td>
             </tr>
@@ -2805,20 +2603,15 @@ effective only after 'tx_lrck_en' is activated.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Sets
-
 the frame length of WS signal for transmitter in terms of bit clock cycles.</p>
                     <p class="Default">'d0:
-
 1 clock</p>
                     <p class="Default">'d1:
-
 2 clocks</p>
                     <p class="Default">etc.</p>
                     <p class="Default">This
-
 field is effective only in master mode.</p>
                     <p class="Default">This
-
 field is effective only after 'tx_lrck_en' is activated.</p>
                 </td>
             </tr>
@@ -2897,13 +2690,10 @@ field is effective only after 'tx_lrck_en' is activated.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">1'b0:
-
 use tx_lrck to tx/rx data</p>
                     <p class="Default">1'b1:
-
 use rx_lrck to tx/rx data</p>
                     <p class="Standard">This bit is valid only
-
 when lrck_share_en="1"'b1.</p>
                 </td>
             </tr>
@@ -2925,13 +2715,10 @@ when lrck_share_en="1"'b1.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">If
-
 set, I2S/PCM will share lrck</p>
                     <p class="Default">1'b0:
-
 share lrck disable</p>
                     <p class="Standard">1'b1: share lrck
-
 enable</p>
                 </td>
             </tr>
@@ -2953,13 +2740,10 @@ enable</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">1'b0:
-
 use tx_clk to tx/rx data</p>
                     <p class="Default">1'b1:
-
 use rx_clk to tx/rx data</p>
                     <p class="Standard">This bit is valid only
-
 when clk_share_en="1"'b1.</p>
                 </td>
             </tr>
@@ -2981,13 +2765,10 @@ when clk_share_en="1"'b1.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">If
-
 set, I2S/PCM will share clock</p>
                     <p class="Default">1'b0:
-
 share clock disable</p>
                     <p class="Default">1'b1:
-
 share clock enable</p>
                 </td>
             </tr>
@@ -3068,15 +2849,12 @@ share clock enable</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Sets the sample data
-
 width of transmitter for all the RX channels.</p>
                     <p class="Standard">'d0: 1 bit data</p>
                     <p class="Standard">'d1: 2 bit data</p>
                     <p class="Standard">etc.</p>
                     <p class="Standard">This field is
-
 effective only after 'rxN_en' is activated. (N=1, 2, �, depending on which
-
 channel it is.)</p>
                 </td>
             </tr>
@@ -3098,11 +2876,9 @@ channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">The polarity of WS
-
 signal for receiver can be reversed or not based on different mode.</p>
                     <p class="Standard">1'b0: keep WS polarity</p>
                     <p class="Standard">1'b1: reverse WS
-
 polarity</p>
                 </td>
             </tr>
@@ -3124,18 +2900,13 @@ polarity</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Sets which channel is
-
 received firstly for the first frame.</p>
                     <p class="Standard">1'b0: 'left then
-
 right' order</p>
                     <p class="Standard">1'b1: 'right then
-
 left' order</p>
                     <p class="Standard">This field is
-
 effective only after 'rxN_en' is activated. (N=1, 2, �, depending on which
-
 channel it is.)</p>
                 </td>
             </tr>
@@ -3157,18 +2928,13 @@ channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Sets
-
 if little-endian or big-endian is active.</p>
                     <p class="Default">1'b0:
-
 MSB first on RX</p>
                     <p class="Default">1'b1:
-
 LSB first on RX</p>
                     <p class="Default">This
-
 field is effective only after 'rxN_en' is activated. (N=1, 2, �, depending on
-
 which channel it is.)</p>
                 </td>
             </tr>
@@ -3190,19 +2956,14 @@ which channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Sets 1-bit delay for
-
 RX channels.</p>
                     <p class="Standard">1'b0: no delay</p>
                     <p class="Standard">1'b1: delays one clock
-
 cycle</p>
                     <p class="Standard">This field is only for
-
 standard I2S (Philips) mode.</p>
                     <p class="Standard">This field is
-
 effective only after 'rxN_en' is activated. (N=1, 2, �, depending on which
-
 channel it is.)</p>
                 </td>
             </tr>
@@ -3224,14 +2985,11 @@ channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Sets if running in
-
 master or slave mode for all the RX channels.</p>
                     <p class="Standard">1'b0: running as slave</p>
                     <p class="Standard">1'b1: running as
-
 master</p>
                     <p class="Standard">This field is applied
-
 to selection of BCLK and WS signal in clock generation block.</p>
                 </td>
             </tr>
@@ -3253,20 +3011,14 @@ to selection of BCLK and WS signal in clock generation block.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">I2S
-
 mode and PCM mode have different mechanism with WS signal. The I2S mode is
-
 based on the edge detect of WS signal, while the PCM mode is based on a slot number.</p>
                     <p class="Default">1'b0:
-
 I2S mode</p>
                     <p class="Default">1'b1:
-
 PCM mode</p>
                     <p class="Default">This
-
 field is effective only after 'rxN_en' is activated. (N=1, 2, ..., depending
-
 on which channel it is.)</p>
                 </td>
             </tr>
@@ -3345,40 +3097,27 @@ on which channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">'d0:
-
 select serial line #1 for RX channel</p>
                     <p class="Default">'d1:
-
 select serial line #2 for RX channel</p>
                     <p class="Default">'d2:
-
 select serial line #3 for RX channel</p>
                     <p class="Default">etc.</p>
                     <p class="Standard">Every RX channel has
-
 its own rx_sd_sel signal.</p>
                     <p class="Standard">For
-
 example:</p>
                     <p class="Standard">M
-
 wires receive N channels.</p>
                     <p class="Standard">If
-
 M="3," N="6," register rx_sd_sel will be treated as [11:10], [9:8], [7:6], [5:4],
-
 [3:2] and [1:0], each� bit indicates that whitch line transports current
-
 channel.</p>
                     <p class="Standard">rx_sd_sel={[2�b00],[2�b00],[2�b00],[2�b00],[2�b00],[2�b00]}
-
 all of these 6 channels will be received by line #1.</p>
                     <p class="Standard">rx_sd_sel={[2�b10],[2�b10],[2�b01],[2�b01],[2�b00],[2�b00]},
-
 channel #1 and channel #2 will be received by line #1, channel #3 and channel
-
 #4 will be received by line #2, channel #5 and channel #6 will be received by
-
 line #3.</p>
                 </td>
             </tr>
@@ -3457,27 +3196,19 @@ line #3.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">When
-
 running in I2S mode, sets the delay cycles relative to the edge (positive or
-
 negative) of WS signal for RX channel.</p>
                     <p class="Default">When running
-
 in PCM mode, sets the delay cycles relative to the positive edge of WS signal
-
 for RX channel.</p>
                     <p class="Default">'d0:
-
 start from the 1st cycle of rx_bclk</p>
                     <p class="Default">'d1:
-
 start from the 2nd cycle of rx_bclk</p>
                     <p class="Default">etc.</p>
                     <p class="Default">Every
-
 RX channel has its own rx_slot signal.</p>
                     <p class="Default">Synchronous
-
 with reg_clk domain.</p>
                 </td>
             </tr>
@@ -3556,10 +3287,8 @@ with reg_clk domain.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Extensiong
-
 of rx_slot when the width of rx_slot greater than 32.</p>
                     <p class="Default">Unused
-
 when the width of rx_slot less than 32.</p>
                 </td>
             </tr>
@@ -3638,10 +3367,8 @@ when the width of rx_slot less than 32.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Mute
-
 the I2S or PCM Receiver (all zeros will be send).</p>
                     <p class="Default">Synchronous
-
 with reg_clk domain.</p>
                 </td>
             </tr>
@@ -3663,17 +3390,12 @@ with reg_clk domain.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Enables
-
 to receive data for RX channel. Active high. All the programmable signals
-
 must be stable before this signal is active. And rx_en must be inactive
-
 before reprogramming.</p>
                     <p class="Default">Every
-
 RX channel has its own rx_en signal.</p>
                     <p class="Default">Synchronous
-
 with reg_clk domain.</p>
                 </td>
             </tr>
@@ -3752,13 +3474,11 @@ with reg_clk domain.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Sets the sample data
-
 width of transmitter for TX channel1.</p>
                     <p class="Standard">'d0: 1 bit data</p>
                     <p class="Standard">'d1: 2 bit data</p>
                     <p class="Standard">etc�</p>
                     <p class="Standard">This field is
-
 effective only after 'tx1_en' is activated.</p>
                 </td>
             </tr>
@@ -3780,13 +3500,10 @@ effective only after 'tx1_en' is activated.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Enables to transmit
-
 and receive data on the same line under TDM mode.</p>
                     <p class="Standard">1'b0: the RX data and
-
 TX data is on the different line</p>
                     <p class="Standard">1'b1: the RX data and
-
 TX data is on the same line</p>
                 </td>
             </tr>
@@ -3808,13 +3525,10 @@ TX data is on the same line</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">The data output signal
-
 will be tri-stated only under TDM mode.</p>
                     <p class="Standard">1'b0: the out data is
-
 not tristaed when not driven</p>
                     <p class="Standard">1'b1: the out data is
-
 tristated when not driven</p>
                 </td>
             </tr>
@@ -3836,11 +3550,9 @@ tristated when not driven</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">The polarity of WS
-
 signal for transmitter can be reversed or not based on different mode.</p>
                     <p class="Standard">1'b0: keep WS polarity</p>
                     <p class="Standard">1'b1: reverse WS
-
 polarity</p>
                 </td>
             </tr>
@@ -3862,18 +3574,13 @@ polarity</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Sets which channel is
-
 transmitted firstly for the first frame.</p>
                     <p class="Standard">1'b0: 'left then
-
 right' order</p>
                     <p class="Standard">1'b1: 'right then
-
 left' order</p>
                     <p class="Standard">This field is
-
 effective only after 'txN_en' is activated. (N=1, 2, ..., depending on which
-
 channel it is.)</p>
                 </td>
             </tr>
@@ -3895,18 +3602,13 @@ channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Sets
-
 if little-endian or big-endian is active.</p>
                     <p class="Default">1'b0:
-
 MSB first on TX</p>
                     <p class="Default">1'b1:
-
 LSB first on TX</p>
                     <p class="Default">This
-
 field is effective only after 'txN_en' is activated. (N=1, 2, ..., depending
-
 on which channel it is.)</p>
                 </td>
             </tr>
@@ -3928,19 +3630,14 @@ on which channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Sets 1-bit delay for
-
 TX channels.</p>
                     <p class="Standard">1'b0: no delay</p>
                     <p class="Standard">1'b1: delays one clock
-
 cycle</p>
                     <p class="Standard">This field is only for
-
 standard I2S (Philips) mode.</p>
                     <p class="Standard">This field is
-
 effective only after 'txN_en' is activated. (N=1, 2, ..., depending on which
-
 channel it is.)</p>
                 </td>
             </tr>
@@ -3962,14 +3659,11 @@ channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Standard">Sets if running in
-
 master or slave mode for all the TX channels.</p>
                     <p class="Standard">1'b0: running as slave</p>
                     <p class="Standard">1'b1: running as
-
 master</p>
                     <p class="Standard">This field is applied
-
 to selection of BCLK and WS signal in clock generation block.</p>
                 </td>
             </tr>
@@ -3991,22 +3685,15 @@ to selection of BCLK and WS signal in clock generation block.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">I2S
-
 mode and PCM mode have different mechanism with WS signal. The I2S mode is
-
 based on the edge detect of WS signal, while the PCM mode is based on a slot
-
 number.</p>
                     <p class="Default">1'b0:
-
 I2S mode</p>
                     <p class="Default">1'b1:
-
 PCM mode</p>
                     <p class="Default">This
-
 field is effective only after 'txN_en' is activated. (N=1, 2, ..., depending
-
 on which channel it is.)</p>
                 </td>
             </tr>
@@ -4085,24 +3772,17 @@ on which channel it is.)</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">When
-
 running in I2S mode, sets the delay cycles relative to the edge (positive or
-
 negative) of WS signal for TX channel.</p>
                     <p class="Default">When
-
 running in PCM mode, sets the delay cycles relative to the positive edge of
-
 WS signal for TX channel.</p>
                     <p class="Default">'d0:
-
 start from the 1st cycle of tx_bclk</p>
                     <p class="Default">'d1:
-
 start from the 2nd cycle of tx_bclk</p>
                     <p class="Default">etc.</p>
                     <p class="Default">Every
-
 TX channel has its own tx_slot signal.</p>
                 </td>
             </tr>
@@ -4181,10 +3861,8 @@ TX channel has its own tx_slot signal.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Extensiong
-
 of tx_slot when the width of tx_slot greater than 32.</p>
                     <p class="Default">Unused
-
 when the width of tx_slot less than 32.</p>
                 </td>
             </tr>
@@ -4263,38 +3941,26 @@ when the width of tx_slot less than 32.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">'d0:
-
 select serial line #1 for TX channel</p>
                     <p class="Default">'d1:
-
 select serial line #2 for TX channel</p>
                     <p class="Default">'d2: select
-
 serial line #3 for TX channel</p>
                     <p class="Default">etc.</p>
                     <p class="Default">Every
-
 TX channel has its own tx_sd_sel signal.</p>
                     <p class="Default">For
-
 example:</p>
                     <p class="Default">M
-
 wires transporting N channels, copy N channel�s data M times through
-
 tx_sd_sel to select.</p>
                     <p class="Default">If
-
 M="3," N="6," register tx_sd_sel will be treated as [17:12], [11:6] and [5:0],
-
 each 6 bit indicates that whitch channels will be transports by current wire.</p>
                     <p class="Default">tx_sd_sel={[6�b000000],[
-
 6�b000000],[ 6�b111111]}, line #1 will transport all of these 6 channels.</p>
                     <p class="Default">tx_sd_sel={[6�b110000],[
-
 6�b001100],[ 6�b000011]}, line #1 will transport #2 and #1 channel, line #2
-
 will transport #3 and #4 channel, line #3 will transport #6 and #5 channel.</p>
                 </td>
             </tr>
@@ -4373,15 +4039,11 @@ will transport #3 and #4 channel, line #3 will transport #6 and #5 channel.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">When
-
 INCLUDE_I2S_TX_FIFO, sets the multi channel�s TX(TX FIFO�s pop signal)
-
 independent.</p>
                     <p class="Default">0:
-
 all of the TX channel�s FIFO should be pop when all channel�s data ready.</p>
                     <p class="Default">1:all
-
 of the TX channel�s independent, may cause phase shift.</p>
                 </td>
             </tr>
@@ -4403,7 +4065,6 @@ of the TX channel�s independent, may cause phase shift.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Sets
-
 to mute all the TX channels (all zeros will be send).</p>
                 </td>
             </tr>
@@ -4425,15 +4086,11 @@ to mute all the TX channels (all zeros will be send).</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p class="Default">Enables
-
 to transmit data for TX channel*.</p>
                     <p class="Default">Active
-
 high.</p>
                     <p class="Default">[Notice]
-
 All of TX configuration fields related with TX channel* must be steady before
-
 tx_en* is active. And tx_en* must be inactive before reconfiguration</p>
                 </td>
             </tr>

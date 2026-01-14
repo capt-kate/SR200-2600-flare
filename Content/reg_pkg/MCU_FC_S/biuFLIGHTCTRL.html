@@ -68,7 +68,6 @@ Each bit is corresponding to one of fault sources.</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>0: fault is level signal; 1: fault is pulse signal (powClk 
-
 domain)</p>
                 </td>
             </tr>
@@ -105,9 +104,7 @@ domain)</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>fault log masking control, each bit is corresponding to one of 
-
 fault sources, once set (1’b1) it is used to mask out (disable) 
-
 the responding fault source get logged into $FLOGARRAY.</p>
                 </td>
             </tr>
@@ -138,7 +135,6 @@ the responding fault source get logged into $FLOGARRAY.</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>Each bit used to mask out (disable) the corresponding fault 
-
 source get logged in $FLOGARRAY</p>
                 </td>
             </tr>
@@ -175,13 +171,9 @@ source get logged in $FLOGARRAY</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>used to describe HW fault input signal, which is either level 
-
 or pulse, if it is pulse, it has to be in powClk domain (inside 
-
 flightControl, there is no syncPulse instantiation); if it is 
-
 level, flightControl will do clock domain crossing internally. 
-
 Each bit is corresponding to one of fault sources.</p>
                 </td>
             </tr>
@@ -212,7 +204,6 @@ Each bit is corresponding to one of fault sources.</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>0: fault is level signal; 1: fault is pulse signal (powClk 
-
 domain)</p>
                 </td>
             </tr>
@@ -249,9 +240,7 @@ domain)</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>fault log masking control, each bit is corresponding to one of 
-
 fault sources, once set (1’b1) it is used to mask out (disable) 
-
 the responding fault source get logged into $FLOGARRAY.</p>
                 </td>
             </tr>
@@ -282,7 +271,6 @@ the responding fault source get logged into $FLOGARRAY.</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>Each bit used to mask out (disable) the corresponding fault 
-
 source get logged in $FLOGARRAY</p>
                 </td>
             </tr>
@@ -319,11 +307,8 @@ source get logged in $FLOGARRAY</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(INTR_NUM/32), for example, if 
-
 INTR_NUM is 40, array size is 2 
-
 interrupt status clear, each bit controls one interrupt 
-
 status, write 1 clear.</p>
                 </td>
             </tr>
@@ -354,7 +339,6 @@ status, write 1 clear.</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>Write 1 to each bit will clear corresponding interrupt status 
-
 bit STATUS.flag</p>
                 </td>
             </tr>
@@ -391,9 +375,7 @@ bit STATUS.flag</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>interrupt status time out clear, each bit controls if 
-
 corresponding interrupt status will be cleared when TOC (time 
-
 out counter) counting down to 0</p>
                 </td>
             </tr>
@@ -459,7 +441,6 @@ out counter) counting down to 0</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>used to mask out (disable) the interrupt request bit output 
-
 from flight control block</p>
                 </td>
             </tr>
@@ -490,7 +471,6 @@ from flight control block</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>Each bit used to mask out (disable) corresponding interrupt 
-
 request bit output from flight control block</p>
                 </td>
             </tr>
@@ -527,7 +507,6 @@ request bit output from flight control block</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>used to select the interrupt request output: level (0 )or edge 
-
 (1)</p>
                 </td>
             </tr>
@@ -558,7 +537,6 @@ request bit output from flight control block</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>0: interrupt output is level signal; 
-
 1: interrupt output is edge signal;</p>
                 </td>
             </tr>
@@ -691,7 +669,6 @@ request bit output from flight control block</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>Once set (1’b1), $FLOGARRAY contents and write pointer will be 
-
 erased (0).</p>
                 </td>
             </tr>
@@ -728,17 +705,11 @@ erased (0).</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>interrupt status timeout value, each interrupt has option 
-
 (enabled by INTRTOEN0 and INTRTOEN1) to use HW timeout to clear 
-
 its status, when all associated faults are de-asserted, the HW 
-
 timeout counter initiates a count-down until it reaches 0 
-
 unless any associated faults are asserted during this process, 
-
 in such cases, the HW time out counter will be reloaded with 
-
 the specified timeout value.</p>
                 </td>
             </tr>
@@ -804,15 +775,10 @@ the specified timeout value.</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>trigger pulse width, any associated fault (0 to 1 rising edge) 
-
 will cause relevant trigger assertion, in the meantime, 
-
 trigger’s count-down counter will be loaded with the value 
-
 of this register, and it will count down if no further fault 
-
 rising edge is detected until it reaches 0, trigger will be 
-
 de-asserted once the counter reaches 0.</p>
                 </td>
             </tr>
@@ -881,15 +847,10 @@ de-asserted once the counter reaches 0.</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>reset_n negative pulse width, any associated fault (0 to 1 
-
 rising edge) will cause relevant reset_n assertion, in the 
-
 meantime, reset_n’s count-down counter will be loaded with the 
-
 value of this register, and it will count down if no further 
-
 fault rising edge is detected until it reaches 0, reset_n will 
-
 be de-asserted once the counter reaches 0.</p>
                 </td>
             </tr>
@@ -958,13 +919,9 @@ be de-asserted once the counter reaches 0.</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>used to associate multiple faults to specified interrupt, the 
-
 Array size need to matched with interrupt number parameter 
-
 INTR_NUM 
-
 Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -995,7 +952,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -1064,7 +1020,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -1101,7 +1056,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -1132,7 +1086,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -1201,7 +1154,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -1238,7 +1190,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -1269,7 +1220,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -1338,7 +1288,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -1375,7 +1324,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -1406,7 +1354,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -1475,7 +1422,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -1512,7 +1458,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -1543,7 +1488,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -1612,7 +1556,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -1649,7 +1592,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -1680,7 +1622,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -1749,7 +1690,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -1786,7 +1726,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -1817,7 +1756,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -1886,7 +1824,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -1923,7 +1860,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -1954,7 +1890,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -2023,7 +1958,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -2060,7 +1994,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -2091,7 +2024,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -2160,7 +2092,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -2197,7 +2128,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -2228,7 +2158,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -2297,7 +2226,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -2334,7 +2262,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -2365,7 +2292,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -2434,7 +2360,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -2471,7 +2396,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -2502,7 +2426,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -2571,7 +2494,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -2608,7 +2530,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -2639,7 +2560,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -2708,7 +2628,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -2745,7 +2664,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -2776,7 +2694,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -2845,7 +2762,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -2882,7 +2798,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -2913,7 +2828,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -2982,7 +2896,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -3019,7 +2932,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -3050,7 +2962,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -3119,7 +3030,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -3156,13 +3066,9 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>used to associate multiple faults to specified trigger, the 
-
 Array size need to matched with the configured trigger number 
-
 TRIG_NUM 
-
 Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -3193,7 +3099,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -3262,7 +3167,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -3299,7 +3203,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -3330,7 +3233,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -3399,7 +3301,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -3436,7 +3337,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -3467,7 +3367,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -3536,7 +3435,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -3573,7 +3471,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -3604,7 +3501,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -3673,7 +3569,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -3710,7 +3605,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -3741,7 +3635,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -3810,7 +3703,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -3847,7 +3739,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -3878,7 +3769,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -3947,7 +3837,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -3984,7 +3873,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -4015,7 +3903,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -4084,7 +3971,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -4121,7 +4007,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -4152,7 +4037,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -4221,7 +4105,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -4258,13 +4141,9 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>used to associate multiple faults to specified reset, the 
-
 Array size need to matched with the configured reset number 
-
 RST_NUM 
-
 Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -4295,7 +4174,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -4364,7 +4242,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -4401,7 +4278,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -4432,7 +4308,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -4501,7 +4376,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -4538,7 +4412,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -4569,7 +4442,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -4638,7 +4510,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -4675,7 +4546,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -4706,7 +4576,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -4775,7 +4644,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -4812,7 +4680,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -4843,7 +4710,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -4912,7 +4778,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -4949,7 +4814,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -4980,7 +4844,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -5049,7 +4912,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -5086,7 +4948,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -5117,7 +4978,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -5186,7 +5046,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -5223,7 +5082,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Array size should equal to ceil(FAULT_NUM/32), for example, if 
-
 FAULT_NUM is 40, array size is 2</p>
                 </td>
             </tr>
@@ -5254,7 +5112,6 @@ FAULT_NUM is 40, array size is 2</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -5323,7 +5180,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyG-Column4-Body">
                     <p>every bit of FAULT.entry[31:0] is corresponding to one fault 
-
 input</p>
                 </td>
             </tr>
@@ -5360,7 +5216,6 @@ input</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>Fault log array used to record the ID of fault triggered in SoC 
-
 Internal memory</p>
                 </td>
             </tr>
@@ -5428,11 +5283,8 @@ Internal memory</p>
                 </td>
                 <td class="TableStyle-register_table-BodyD-Column4-head2">
                     <p>SW can write any log value into this register, but only the 
-
 value range FAULT_NUM+1 ~ 2^FLID_WIDTH-1 is allowed to be 
-
 stored into $FLOGARRAY, they’re interleaving along with HW 
-
 fault ID.</p>
                 </td>
             </tr>

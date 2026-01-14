@@ -46,27 +46,16 @@
         <h3 id="Phy_test_status.desc">Phy_test_status<a class="headerlink" href="#Phy_test_status.desc" title="Permalink to this headline"></a></h3>
         <h5>Depending on the test, the result might be:</h5>
         <p>[31:24] == 8'h2 Synchronous BIST test result
-
 [23:18] (Reserved)
-
 [ 17] Set once the test has completed
-
 [ 16] Set following any error
-
 [15:14] (Reserved)
-
 [13: 9] Indicates either the current clock speed, if the test
-
 is ongoing, else the clock speed of any failure once
-
 the test has stopped.
-
 [ 8] Set to indicate a fault in the data strobe pin
-
 [ 7: 0] Set to indicate a fault found in the respective data pin
-
 [31:24] == 8'h3 Asynchronous BIST test result
-
 Bits [23:0] are defind as with the synchronous BIST results</p>
         <p>All other tests will return a 32'h0 result.</p>
     </body>

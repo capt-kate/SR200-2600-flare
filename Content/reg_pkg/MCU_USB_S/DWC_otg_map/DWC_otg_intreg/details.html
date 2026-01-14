@@ -2535,7 +2535,6 @@ This read-only register contains the free space information for the Non-periodic
 <p class="BLANK"></p>
 <p>Entry in the Non-periodic Tx Request Queue that is currently being processed by the MAC.</p>
 <p class="BLANK"></p>
- 
 <ul><li>Bits [30:27]: Channel/endpoint number</li><li>Bits [26:25]:</li><li>2'b00: IN/OUT token<ul><li>2'b01: Zero-length transmit packet (device IN/host OUT)</li><li>2'b10: PING/CSPLIT token</li><li>2'b11: Channel halt command</li></ul></li><li>Bit [24]: Terminate (last Entry for selected channel/endpoint)</li></ul><p>Reset:7'h0</p>
 <p class="BLANK"></p>
 <p>Values:</p>
@@ -3610,7 +3609,6 @@ If GLPMCFG.LPMCap is 1'b0, the software must not set any of the remaining fields
 <p class="BLANK"></p>
 <p>The EP info controller manages the stored values in the last few locations of the SPRAM as listed below.</p>
 <p class="BLANK"></p>
- 
 <ul><li>Host Buffer DMA mode: One location per channel is used in SPRAM to store the HCDMAn value.</li><li>Host Scatter/Gather DMA mode: Four locations per channel are used in SPRAM to store the Base Descriptor address, Current Descriptor address, Current Buffer Pointer, and the Status Quadlet.</li><li>Device Buffer DMA mode: One location per endpoint direction is used in SPRAM to store the DIEPDMA and DOEPDMA value.</li><li>Device Scatter/Gather DMA mode: Four locations per endpoint direction are used in SPRAM to store the Base Descriptor address, Current Descriptor address, Current Buffer Pointer and the Status Quadlet.</li></ul> 
 <p>Value After Reset:0x10d8</p>
 </td>
@@ -19995,4 +19993,3 @@ if utmi_l1_suspend_n cannot be asserted by the core.</p>
 </td>
 </tr>
 </tbody></table></body></html>
-

@@ -4,7 +4,6 @@
     </head>
     <body>
         <h1>CSIHOST
-
         </h1>
         <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
             <tr class="TableStyle-table-no-head-Body-Body1">
@@ -34,7 +33,6 @@
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Dummy (16KB) register space for MIPI CSI2 Host Controller 
-
 Internal memory</p>
                 </td>
             </tr>
@@ -98,7 +96,6 @@ Internal memory</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>General Control and Status registers for DPHY-RX I/Os and 
-
 wrapper logic</p>
                 </td>
             </tr>
@@ -129,17 +126,11 @@ wrapper logic</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>High-speed Frequency Range Selection 
-
 See Operating Frequency Range selection and default values. This 
-
 signal should be set with the D-PHY in power-down and must not 
-
 change during operation. 
-
 This signal can be overridden through D-PHY test control 
-
 registers 
-
 Refer Table4-4 in DPHY-RX databook</p>
                 </td>
             </tr>
@@ -156,11 +147,8 @@ Refer Table4-4 in DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>System clock frequency configuration preset. Should be set 
-
 according to the following equation: 
-
 cfgclkfreqrange[5:0] = round[(Fcfg_clk(MHz)-17)*4] 
-
 Refer Table4-4 in DPHY-RX databook</p>
                 </td>
             </tr>
@@ -177,11 +165,8 @@ Refer Table4-4 in DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>This signal places the macro in IO continuity test mode. All 
-
 other 
-
 interface signals should be placed in their default values. 
-
 Refer Table4-6 in DPHY-RX databook</p>
                 </td>
             </tr>
@@ -198,7 +183,6 @@ Refer Table4-6 in DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Set 1 to start the DPHY-RX bist test. 
-
 Refer Table 4-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -215,7 +199,6 @@ Refer Table 4-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>PHY configuration clock (cfg_clk) gating control. Set 1 to stop 
-
 cfg_clk</p>
                 </td>
             </tr>
@@ -232,27 +215,16 @@ cfg_clk</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Escape mode transmit clock which is used to generate escape 
-
 sequences in DPHY can’t be greater than 20MHz. 
-
 The txclkesc clock input coming from global clock module of 
-
 imageProc subsystem can have higher frequency. This clock is 
-
 divided and fed to DPHY-RX 
-
 0:div2 
-
 1:div3 
-
 2:div4 
-
 3:div6 
-
 4:div8 
-
 5:div12 
-
 others:div2</p>
                 </td>
             </tr>
@@ -269,9 +241,7 @@ others:div2</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Txclkesc divider enable 
-
 Keep txclkescen = 0 when txclkescdiv is being written. Set 
-
 txclkescen to 1 after txclkescdiv is configured</p>
                 </td>
             </tr>
@@ -288,7 +258,6 @@ txclkescen to 1 after txclkescdiv is configured</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Txclkesc clock going to the DPHY can be stopped by setting this 
-
 bit to 1</p>
                 </td>
             </tr>
@@ -383,7 +352,6 @@ bit to 1</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>1'b0 - non isolation operating mode 
-
 1'b1 - PHY will power down the 1.8V domain,</p>
                 </td>
             </tr>
@@ -400,7 +368,6 @@ bit to 1</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Write 1 to enable DPHY controllability through BIU register. 
-
 Refer Table9-3 in DPHY-RX databook</p>
                 </td>
             </tr>
@@ -417,7 +384,6 @@ Refer Table9-3 in DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Write 1 to enable DPHY test interface controllability through 
-
 BIU registers. Refer Table9-3 in DPHY-RX databook</p>
                 </td>
             </tr>
@@ -842,35 +808,20 @@ BIU registers. Refer Table9-3 in DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Each pin of this output bus is used to verify the continuity 
-
 from the 
-
 chips pin all the way to the PHYs analog ports (package, 
-
 bonding, die, among others). 
-
 cont_data output signals should be ignored when cont_en is 
-
 deasserted (PHY not set for IO Continuity Test mode). 
-
 ■ cont_data[0]: rext 
-
 ■ cont_data[1]: clkn 
-
 ■ cont_data[2]: clkp 
-
 ■ cont_data[3]: datan0 
-
 ■ cont_data[4]: datap0 
-
 ■ cont_data[5]: datan1 
-
 ■ cont_data[6]: datap1 
-
 This signal can be overridden through D-PHY test control 
-
 registers. 
-
 Refer Table4-6 in DPHY-RX databook</p>
                 </td>
             </tr>
@@ -997,11 +948,8 @@ Refer Table4-6 in DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Configures the Base Direction for Lane 
-
 ■ basedir_0 = 1: Configures lane as RX upon startup of the PHY 
-
 ■ basedir_0 = 0: Configures lane as TX 
-
 Refer Table4-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1018,19 +966,12 @@ Refer Table4-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Escape Mode Transmit Request 
-
 This signal together with txlpdtesc_0, txulpsesc_0, and 
-
 txtriggeresc[3:0] is used to request the entry into any Escape 
-
 mode. Once in Escape mode, the lane stays in Escape mode until 
-
 txrequestesc_0 is de-asserted. 
-
 Note: It can only be asserted by the protocol layer while 
-
 txrequestdatahs is at low level. 
-
 Refer Table4-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1047,19 +988,12 @@ Refer Table4-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Escape Mode Transmit Low-Power Data 
-
 This signal is asserted with txrequestesc to cause the lane 
-
 module to enter low- power data transmission mode. The lane 
-
 module remains in this mode until txrequestesc_0 is 
-
 de-asserted. 
-
 Note: txulpsesc_0 and all the bits of txtriggeresc_0 must be at 
-
 low level when txlpdtesc_0 is at high level. 
-
 Refer Table4-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1166,7 +1100,6 @@ Refer Table4-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table4-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1213,7 +1146,6 @@ Refer Table4-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table4-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1230,7 +1162,6 @@ Refer Table4-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table9-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1310,7 +1241,6 @@ Refer Table9-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table4-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1327,7 +1257,6 @@ Refer Table4-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table4-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1359,7 +1288,6 @@ Refer Table4-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table4-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1376,7 +1304,6 @@ Refer Table4-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table4-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1423,7 +1350,6 @@ Refer Table4-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table9-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1440,7 +1366,6 @@ Refer Table9-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table9-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1457,7 +1382,6 @@ Refer Table9-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table9-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1522,7 +1446,6 @@ Refer Table9-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table4-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1539,7 +1462,6 @@ Refer Table4-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table4-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1556,7 +1478,6 @@ Refer Table4-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table4-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1573,7 +1494,6 @@ Refer Table4-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table4-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1590,7 +1510,6 @@ Refer Table4-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table9-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1607,7 +1526,6 @@ Refer Table9-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table4-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1624,7 +1542,6 @@ Refer Table4-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table4-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1671,7 +1588,6 @@ Refer Table4-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[0] for lane-0; [1] for lane-1 
-
 Refer Table4-3 of DPHY-RX databook</p>
                 </td>
             </tr>
@@ -1967,11 +1883,8 @@ Refer Table4-3 of DPHY-RX databook</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>This bit reflects the state of CSI2 Host Controller ‘interrupt’ 
-
 flag. 
-
 It is set on the assertion (rising edge) of ‘interrupt’ and 
-
 stays high till SW clears the bit by writing 1 to it.</p>
                 </td>
             </tr>

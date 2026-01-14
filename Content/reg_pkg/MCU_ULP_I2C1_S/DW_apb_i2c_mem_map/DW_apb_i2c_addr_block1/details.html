@@ -551,7 +551,6 @@ received after the address phase for receive transfer in Controller receiver or 
 <td><p>This bit controls whether a RESTART is issued before the byte is sent or received.
 This bit is available only if IC_EMPTYFIFO_HOLD_MASTER_EN is configured to 1.</p>
 <p class="BLANK"></p>
- 
 <ul><li>1: If IC_RESTART_EN is 1, a RESTART is issued before the data is sent/received (according to the value of CMD), regardless of whether or not the transfer direction is changing from the previous command; if IC_RESTART_EN is 0, a STOP followed by a START is issued instead.</li><li>0: If IC_RESTART_EN is 1, a RESTART is issued only if the transfer direction is changing from the previous command; if IC_RESTART_EN is 0, a STOP followed by a START is issued instead.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
 <ul><li>0x1 (ENABLE): Issue RESTART before this command</li><li>0x0 (DISABLE): Do not Issue RESTART before this command</li></ul> 
@@ -3768,4 +3767,3 @@ by a 16-bit unsigned number.</p>
 </td>
 </tr>
 </tbody></table></body></html>
-

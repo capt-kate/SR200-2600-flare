@@ -108,25 +108,16 @@
         <p>Read-As-Zero, Writes Ignored.</p>
         <h3 id="DESTRIGINMODE.desc">DESTRIGINMODE<a class="headerlink" href="#DESTRIGINMODE.desc" title="Permalink to this headline"></a></h3>
         <p>Destination Trigger Input Mode:
-
 - 00: Command
-
 - 01: Reserved
-
 - 10: DMA driven Flow control. Only allowed when HAS_TRIGIN is enabled.
-
 - 11: Peripheral driven Flow control. Only allowed when HAS_TRIGIN is enabled.
-
 Note: This field is ignored for Internal triggers as they only support Command triggers</p>
         <h3 id="DESTRIGINTYPE.desc">DESTRIGINTYPE<a class="headerlink" href="#DESTRIGINTYPE.desc" title="Permalink to this headline"></a></h3>
         <p>Destination Trigger Input Type:
-
 - 00: Software only Trigger Request. DESTRIGINSEL is ignored.
-
 - 01: Reserved
-
 - 10: Hardware Trigger Request. Only allowed when HAS_TRIGIN is enabled. DESTRIGINSEL selects between external trigger inputs if HAS_TRIGSEL is enabled.
-
 - 11: Internal Trigger Request. Only allowed when HAS_TRIGSEL is enabled and the DMAC has multiple channels, otherwise treated as HW Trigger Request. DESTRIGINSEL selects between DMA channels.</p>
         <h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
         <p>Read-As-Zero, Writes Ignored.</p>

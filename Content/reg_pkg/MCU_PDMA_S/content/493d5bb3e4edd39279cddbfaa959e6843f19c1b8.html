@@ -178,35 +178,23 @@
         <h2>Field Descriptions</h2>
         <h3 id="DISMINPWR.desc">DISMINPWR<a class="headerlink" href="#DISMINPWR.desc" title="Permalink to this headline"></a></h3>
         <p>Minimum Power state of the DMAC when at least one Secure channel is present.
-
 - 00: OFF
-
 - 01: Retention
-
 - 10: ON
-
 - Others: Reserved
-
 "01" is Reserved if HAS_RET = 0.</p>
         <h3 id="IDLERETEN.desc">IDLERETEN<a class="headerlink" href="#IDLERETEN.desc" title="Permalink to this headline"></a></h3>
         <p>Idle Channel Retention Enable. Allows retention for Secure channels that are enabled and waiting for an event in IDLE state.
-
 - 0: disabled
-
 - 1: enabled</p>
         <h3 id="DBGHALTEN.desc">DBGHALTEN<a class="headerlink" href="#DBGHALTEN.desc" title="Permalink to this headline"></a></h3>
         <p>Debug Halt Enabled.
-
 - 0: the DMA ignores the halt request from an external debugger. Clearing this bit while halt is ongoing results in continuing the operation.
-
 - 1: the debugger request to halt the DMA is allowed.
-
 This field is common for Non-secure and Secure side of the DMA, but access to this register is limited by the DBGHALTNSRO register field.</p>
         <h3 id="DBGHALTNSRO.desc">DBGHALTNSRO<a class="headerlink" href="#DBGHALTNSRO.desc" title="Permalink to this headline"></a></h3>
         <p>Debug Halt Enable Non-secure Read Only. This register allows the Secure software to limit the Non-secure software adjusting the common DBGHALTEN register bit.
-
 - 0: NSEC_CTRL.DBGHALTEN has read-write access.
-
 - 1: NSEC_CTRL.DBGHALTEN register becomes read-only.</p>
         <h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
         <p>Read-As-Zero, Writes Ignored.</p>

@@ -4,7 +4,6 @@
     </head>
     <body>
         <h1>WriteClient
-
         </h1>
         <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
             <tr class="TableStyle-table-no-head-Body-Body1">
@@ -64,11 +63,8 @@
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Start bit for the respective clients. 
-
 0 : No effect on hardware. 
-
 1 : start the client. 
-
 The write 1 to this register is used to kick the hardware.</p>
                 </td>
             </tr>
@@ -85,7 +81,6 @@ The write 1 to this register is used to kick the hardware.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>0 : Don't clear, normal state. 
-
 1 : Clear the asynchronous FIFO between the respective client and dHub.</p>
                 </td>
             </tr>
@@ -150,7 +145,6 @@ The write 1 to this register is used to kick the hardware.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Specifies the total number of pixels expected from input to write client. This is used to generate flush in Write client to write the partially formed 128-bit data (if any) to DDR. 
-
 Should be programmed with (ovres*ohres).</p>
                 </td>
             </tr>
@@ -293,23 +287,14 @@ Should be programmed with (ovres*ohres).</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>PackSel for Write Client 
-
 [0000] : 8 bit packing 
-
 [0001] : 10 bit packing 
-
 [0010] : 12 bit packing 
-
 [0011] : 15 bit packing 
-
 [0100] : 16 bit packing 
-
 [0101] : 20 bit packing 
-
 [0110] : 24 bit packing 
-
 [0111] : 30 bit packing 
-
 [1000] : 32 bit packing</p>
                 </td>
             </tr>

@@ -4,7 +4,6 @@
     </head>
     <body>
         <h1>INTR_FIFO
-
         </h1>
         <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
             <tr class="TableStyle-table-no-head-Body-Body1">
@@ -64,9 +63,7 @@
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Selects one of the 128 bits of inputs to GPIO0 of the GPIO 
-
 controller. 
-
 0x0</p>
                 </td>
             </tr>
@@ -131,9 +128,7 @@ controller.
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Selects one of the 128 bits of inputs to GPIO1 of the GPIO 
-
 controller. 
-
 0x0</p>
                 </td>
             </tr>
@@ -198,9 +193,7 @@ controller.
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Selects one of the 128 bits of inputs to GPIO2 of the GPIO 
-
 controller. 
-
 0x0</p>
                 </td>
             </tr>
@@ -265,9 +258,7 @@ controller.
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Selects one of the 128 bits of inputs to GPIO3 of the GPIO 
-
 controller. 
-
 0x0</p>
                 </td>
             </tr>
@@ -332,9 +323,7 @@ controller.
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Selects one of the 128 bits of inputs to GPIO4 of the GPIO 
-
 controller. 
-
 0x0</p>
                 </td>
             </tr>
@@ -399,9 +388,7 @@ controller.
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Selects one of the 128 bits of inputs to GPIO5 of the GPIO 
-
 controller. 
-
 0x0</p>
                 </td>
             </tr>
@@ -466,9 +453,7 @@ controller.
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Selects one of the 128 bits of inputs to GPIO6 of the GPIO 
-
 controller. 
-
 0x0</p>
                 </td>
             </tr>
@@ -533,9 +518,7 @@ controller.
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Selects one of the 128 bits of inputs to GPIO7 of the GPIO 
-
 controller. 
-
 0x0</p>
                 </td>
             </tr>
@@ -630,15 +613,10 @@ controller.
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>The timestamp logic runs on clk_cntr and this setting controls 
-
 the rate at which the timestamp counter increases its count. 
-
 When set to 0, it increases by 1 every 1 clock cycle. 
-
 When set to 1, it increases by 1 every 2 clock cycles. 
-
 When set to N-1, it increases by 1 every N clock cycles. 
-
 When set to N, it increases by 1 every N+1 clock cycles.</p>
                 </td>
             </tr>
@@ -703,9 +681,7 @@ When set to N, it increases by 1 every N+1 clock cycles.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>The lower DWORD (32-bits) of the timestamp counter. 
-
 A read to this register latches the value of the upper DWORD 
-
 into TIMESTAMP_VAL_HI.</p>
                 </td>
             </tr>
@@ -770,7 +746,6 @@ into TIMESTAMP_VAL_HI.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>The upper DWORD (32-bits) of the timestamp counter. 
-
 Timestamp is 50-bits wide so bits [31:18] will always read 0’s.</p>
                 </td>
             </tr>
@@ -835,11 +810,8 @@ Timestamp is 50-bits wide so bits [31:18] will always read 0’s.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>The interrupt status of each of the FIFOs where bit n indicates 
-
 the status of the interrupt from FIFOn 
-
 Software can read this register to find out which of the 8 FIFOs 
-
 have a pending interrupt.</p>
                 </td>
             </tr>
@@ -967,9 +939,7 @@ have a pending interrupt.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Reads the upper DWORD (32-bits) of the timestamp FIFO. 
-
 Also pops the FIFO entry. 
-
 Timestamp is 50-bits wide so bits [31:18] will always read 0’s</p>
                 </td>
             </tr>
@@ -1064,15 +1034,10 @@ Timestamp is 50-bits wide so bits [31:18] will always read 0’s</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Timestamp FIFO has overflowed. An interrupt occurred but the 
-
 FIFO is full, so the timestamp associated with this interrupt 
-
 is discarded. 
-
 This bit is sticky and is the only bit that can be written to by 
-
 software. Writing a 1 will clear this bit. Writing a 0 will have 
-
 no effect.</p>
                 </td>
             </tr>
@@ -1089,11 +1054,8 @@ no effect.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Timestamp FIFO entry level number has reached the threshold 
-
 programmed in FIFO_THR. 
-
 This is when it reaches the number that is equal to or greater 
-
 than FIFO_THR.level</p>
                 </td>
             </tr>
@@ -1110,7 +1072,6 @@ than FIFO_THR.level</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>The occupancy of the timestamp FIFO. Shows the number of valid 
-
 entries in the FIFO.</p>
                 </td>
             </tr>
@@ -1175,9 +1136,7 @@ entries in the FIFO.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Setting for the threshold number used to detect a specific FIFO 
-
 occupancy level. 
-
 0x0</p>
                 </td>
             </tr>
@@ -1413,9 +1372,7 @@ occupancy level.
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Reads the upper DWORD (32-bits) of the timestamp FIFO. 
-
 Also pops the FIFO entry. 
-
 Timestamp is 50-bits wide so bits [31:18] will always read 0’s</p>
                 </td>
             </tr>
@@ -1510,15 +1467,10 @@ Timestamp is 50-bits wide so bits [31:18] will always read 0’s</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Timestamp FIFO has overflowed. An interrupt occurred but the 
-
 FIFO is full, so the timestamp associated with this interrupt 
-
 is discarded. 
-
 This bit is sticky and is the only bit that can be written to by 
-
 software. Writing a 1 will clear this bit. Writing a 0 will have 
-
 no effect.</p>
                 </td>
             </tr>
@@ -1535,11 +1487,8 @@ no effect.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Timestamp FIFO entry level number has reached the threshold 
-
 programmed in FIFO_THR. 
-
 This is when it reaches the number that is equal to or greater 
-
 than FIFO_THR.level</p>
                 </td>
             </tr>
@@ -1556,7 +1505,6 @@ than FIFO_THR.level</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>The occupancy of the timestamp FIFO. Shows the number of valid 
-
 entries in the FIFO.</p>
                 </td>
             </tr>
@@ -1621,9 +1569,7 @@ entries in the FIFO.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Setting for the threshold number used to detect a specific FIFO 
-
 occupancy level. 
-
 0x0</p>
                 </td>
             </tr>
@@ -1859,9 +1805,7 @@ occupancy level.
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Reads the upper DWORD (32-bits) of the timestamp FIFO. 
-
 Also pops the FIFO entry. 
-
 Timestamp is 50-bits wide so bits [31:18] will always read 0’s</p>
                 </td>
             </tr>
@@ -1956,15 +1900,10 @@ Timestamp is 50-bits wide so bits [31:18] will always read 0’s</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Timestamp FIFO has overflowed. An interrupt occurred but the 
-
 FIFO is full, so the timestamp associated with this interrupt 
-
 is discarded. 
-
 This bit is sticky and is the only bit that can be written to by 
-
 software. Writing a 1 will clear this bit. Writing a 0 will have 
-
 no effect.</p>
                 </td>
             </tr>
@@ -1981,11 +1920,8 @@ no effect.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Timestamp FIFO entry level number has reached the threshold 
-
 programmed in FIFO_THR. 
-
 This is when it reaches the number that is equal to or greater 
-
 than FIFO_THR.level</p>
                 </td>
             </tr>
@@ -2002,7 +1938,6 @@ than FIFO_THR.level</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>The occupancy of the timestamp FIFO. Shows the number of valid 
-
 entries in the FIFO.</p>
                 </td>
             </tr>
@@ -2067,9 +2002,7 @@ entries in the FIFO.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Setting for the threshold number used to detect a specific FIFO 
-
 occupancy level. 
-
 0x0</p>
                 </td>
             </tr>
@@ -2305,9 +2238,7 @@ occupancy level.
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Reads the upper DWORD (32-bits) of the timestamp FIFO. 
-
 Also pops the FIFO entry. 
-
 Timestamp is 50-bits wide so bits [31:18] will always read 0’s</p>
                 </td>
             </tr>
@@ -2402,15 +2333,10 @@ Timestamp is 50-bits wide so bits [31:18] will always read 0’s</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Timestamp FIFO has overflowed. An interrupt occurred but the 
-
 FIFO is full, so the timestamp associated with this interrupt 
-
 is discarded. 
-
 This bit is sticky and is the only bit that can be written to by 
-
 software. Writing a 1 will clear this bit. Writing a 0 will have 
-
 no effect.</p>
                 </td>
             </tr>
@@ -2427,11 +2353,8 @@ no effect.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Timestamp FIFO entry level number has reached the threshold 
-
 programmed in FIFO_THR. 
-
 This is when it reaches the number that is equal to or greater 
-
 than FIFO_THR.level</p>
                 </td>
             </tr>
@@ -2448,7 +2371,6 @@ than FIFO_THR.level</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>The occupancy of the timestamp FIFO. Shows the number of valid 
-
 entries in the FIFO.</p>
                 </td>
             </tr>
@@ -2513,9 +2435,7 @@ entries in the FIFO.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Setting for the threshold number used to detect a specific FIFO 
-
 occupancy level. 
-
 0x0</p>
                 </td>
             </tr>
@@ -2751,9 +2671,7 @@ occupancy level.
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Reads the upper DWORD (32-bits) of the timestamp FIFO. 
-
 Also pops the FIFO entry. 
-
 Timestamp is 50-bits wide so bits [31:18] will always read 0’s</p>
                 </td>
             </tr>
@@ -2848,15 +2766,10 @@ Timestamp is 50-bits wide so bits [31:18] will always read 0’s</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Timestamp FIFO has overflowed. An interrupt occurred but the 
-
 FIFO is full, so the timestamp associated with this interrupt 
-
 is discarded. 
-
 This bit is sticky and is the only bit that can be written to by 
-
 software. Writing a 1 will clear this bit. Writing a 0 will have 
-
 no effect.</p>
                 </td>
             </tr>
@@ -2873,11 +2786,8 @@ no effect.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Timestamp FIFO entry level number has reached the threshold 
-
 programmed in FIFO_THR. 
-
 This is when it reaches the number that is equal to or greater 
-
 than FIFO_THR.level</p>
                 </td>
             </tr>
@@ -2894,7 +2804,6 @@ than FIFO_THR.level</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>The occupancy of the timestamp FIFO. Shows the number of valid 
-
 entries in the FIFO.</p>
                 </td>
             </tr>
@@ -2959,9 +2868,7 @@ entries in the FIFO.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Setting for the threshold number used to detect a specific FIFO 
-
 occupancy level. 
-
 0x0</p>
                 </td>
             </tr>
@@ -3197,9 +3104,7 @@ occupancy level.
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Reads the upper DWORD (32-bits) of the timestamp FIFO. 
-
 Also pops the FIFO entry. 
-
 Timestamp is 50-bits wide so bits [31:18] will always read 0’s</p>
                 </td>
             </tr>
@@ -3294,15 +3199,10 @@ Timestamp is 50-bits wide so bits [31:18] will always read 0’s</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Timestamp FIFO has overflowed. An interrupt occurred but the 
-
 FIFO is full, so the timestamp associated with this interrupt 
-
 is discarded. 
-
 This bit is sticky and is the only bit that can be written to by 
-
 software. Writing a 1 will clear this bit. Writing a 0 will have 
-
 no effect.</p>
                 </td>
             </tr>
@@ -3319,11 +3219,8 @@ no effect.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Timestamp FIFO entry level number has reached the threshold 
-
 programmed in FIFO_THR. 
-
 This is when it reaches the number that is equal to or greater 
-
 than FIFO_THR.level</p>
                 </td>
             </tr>
@@ -3340,7 +3237,6 @@ than FIFO_THR.level</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>The occupancy of the timestamp FIFO. Shows the number of valid 
-
 entries in the FIFO.</p>
                 </td>
             </tr>
@@ -3405,9 +3301,7 @@ entries in the FIFO.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Setting for the threshold number used to detect a specific FIFO 
-
 occupancy level. 
-
 0x0</p>
                 </td>
             </tr>
@@ -3643,9 +3537,7 @@ occupancy level.
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Reads the upper DWORD (32-bits) of the timestamp FIFO. 
-
 Also pops the FIFO entry. 
-
 Timestamp is 50-bits wide so bits [31:18] will always read 0’s</p>
                 </td>
             </tr>
@@ -3740,15 +3632,10 @@ Timestamp is 50-bits wide so bits [31:18] will always read 0’s</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Timestamp FIFO has overflowed. An interrupt occurred but the 
-
 FIFO is full, so the timestamp associated with this interrupt 
-
 is discarded. 
-
 This bit is sticky and is the only bit that can be written to by 
-
 software. Writing a 1 will clear this bit. Writing a 0 will have 
-
 no effect.</p>
                 </td>
             </tr>
@@ -3765,11 +3652,8 @@ no effect.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Timestamp FIFO entry level number has reached the threshold 
-
 programmed in FIFO_THR. 
-
 This is when it reaches the number that is equal to or greater 
-
 than FIFO_THR.level</p>
                 </td>
             </tr>
@@ -3786,7 +3670,6 @@ than FIFO_THR.level</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>The occupancy of the timestamp FIFO. Shows the number of valid 
-
 entries in the FIFO.</p>
                 </td>
             </tr>
@@ -3851,9 +3734,7 @@ entries in the FIFO.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Setting for the threshold number used to detect a specific FIFO 
-
 occupancy level. 
-
 0x0</p>
                 </td>
             </tr>
@@ -4089,9 +3970,7 @@ occupancy level.
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Reads the upper DWORD (32-bits) of the timestamp FIFO. 
-
 Also pops the FIFO entry. 
-
 Timestamp is 50-bits wide so bits [31:18] will always read 0’s</p>
                 </td>
             </tr>
@@ -4186,15 +4065,10 @@ Timestamp is 50-bits wide so bits [31:18] will always read 0’s</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Timestamp FIFO has overflowed. An interrupt occurred but the 
-
 FIFO is full, so the timestamp associated with this interrupt 
-
 is discarded. 
-
 This bit is sticky and is the only bit that can be written to by 
-
 software. Writing a 1 will clear this bit. Writing a 0 will have 
-
 no effect.</p>
                 </td>
             </tr>
@@ -4211,11 +4085,8 @@ no effect.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Timestamp FIFO entry level number has reached the threshold 
-
 programmed in FIFO_THR. 
-
 This is when it reaches the number that is equal to or greater 
-
 than FIFO_THR.level</p>
                 </td>
             </tr>
@@ -4232,7 +4103,6 @@ than FIFO_THR.level</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>The occupancy of the timestamp FIFO. Shows the number of valid 
-
 entries in the FIFO.</p>
                 </td>
             </tr>
@@ -4297,9 +4167,7 @@ entries in the FIFO.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Setting for the threshold number used to detect a specific FIFO 
-
 occupancy level. 
-
 0x0</p>
                 </td>
             </tr>

@@ -1223,7 +1223,6 @@ Any attempt to write data when the FIFO is full results in the write data being 
 <p class="BLANK"></p>
 <p>Note:</p>
 <p class="BLANK"></p>
- 
 <ul><li>When UART_9BIT_DATA_EN="0," this field width is 8.</li><li>When UART_9BIT_DATA_EN="1," this field width is 9. The 9th bit is applicable only when LCR_EXT[3]=1.</li></ul><p>Value After Reset:0x0</p>
 </td>
 </tr>
@@ -2597,7 +2596,6 @@ Once the TX FIFO becomes empty, 're' signal gets enabled and 'de' signal will be
 <td>R/W</td>
 <td><p>RS485 Transfer Enable.</p>
 <p class="BLANK"></p>
- 
 <ul><li>0 : In this mode, the transfers are still in the RS232 mode. All other fields in this register are reserved and register
 DE_EN/RE_EN/TAT are also reserved.</li><li>1 : In this mode, the transfers will happen in RS485 mode. All other fields of this register are applicable.</li></ul><p class="BLANK"></p>
 <p>Values:</p>
@@ -3138,4 +3136,3 @@ For example 32_30_31_2A represents the version 2.01*</p>
 </td>
 </tr>
 </tbody></table></body></html>
-

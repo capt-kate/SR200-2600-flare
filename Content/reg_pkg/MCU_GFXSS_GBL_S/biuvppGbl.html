@@ -4,7 +4,6 @@
     </head>
     <body>
         <h1>vppGbl
-
         </h1>
         <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
             <tr class="TableStyle-table-no-head-Body-Body1">
@@ -34,7 +33,6 @@
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>All the registers for VPLL1 wrapper. 
-
 Clock controls for VPLL CLK output</p>
                 </td>
             </tr>
@@ -65,7 +63,6 @@ Clock controls for VPLL CLK output</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>0: use source clock 
-
 1: use divided clock (decided by clkD3Switch and clkSel)</p>
                 </td>
             </tr>
@@ -82,7 +79,6 @@ Clock controls for VPLL CLK output</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>0 : divide factor is decided by clkSwitch and clkSel 
-
 1: use divide by 3 clock when clkSwitch = 1</p>
                 </td>
             </tr>
@@ -114,9 +110,7 @@ Clock controls for VPLL CLK output</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Clock enable for VPLL CLK output. 
-
 Not used. 
-
 Clock controls for VPLL CLKO1</p>
                 </td>
             </tr>
@@ -133,9 +127,7 @@ Clock controls for VPLL CLKO1</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Not used. 
-
 0: use source clock 
-
 1: use divided clock (decided by clkD3Switch and clkSel)</p>
                 </td>
             </tr>
@@ -152,9 +144,7 @@ Clock controls for VPLL CLKO1</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Not used. 
-
 0 : divide factor is decided by clkSwitch and clkSel 
-
 1: use divide by 3 clock when clkSwitch = 1</p>
                 </td>
             </tr>
@@ -171,7 +161,6 @@ Clock controls for VPLL CLKO1</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Not used. 
-
 Use the following divide factor if clkD3Switch="0.</p>
                 </td>
             </tr>
@@ -188,7 +177,6 @@ Use the following divide factor if clkD3Switch="0.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Not used. 
-
 Clock enable for VPLL CLKO1.</p>
                 </td>
             </tr>
@@ -223,7 +211,6 @@ Clock enable for VPLL CLKO1.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>All the registers for VPLL. 
-
 PLL Control Register 0</p>
                 </td>
             </tr>
@@ -254,17 +241,11 @@ PLL Control Register 0</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>PLL Enable: 
-
 0 - &gt; Entire PLL (except scan mode) is powered down (outputs 
-
 (except SCANOUT) all held at 1'b0) 
-
 1 - &gt; Entire PLL is enabled (unless scan mode is turned on 
-
 SCANMODE=1) 
-
 Enabling scan mode (SCANMODE=1) has the same effect as setting 
-
 PLLEN=0</p>
                 </td>
             </tr>
@@ -281,11 +262,8 @@ PLLEN=0</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>0 - &gt; Post divided VCO is output on FOUTPOSTDIV 
-
 1 - &gt; FREF is bypassed to FOUTPOSTDIV and FOUTVCO 
-
 When PLLEN="1"'b1 and bypass mode is active then PLL input pins 
-
 must be programmed to correct value</p>
                 </td>
             </tr>
@@ -302,9 +280,7 @@ must be programmed to correct value</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Enable of FOUTVCO clock signal 
-
 0 - &gt; FOUTVCO clock is powered down (outputs held at 1'b0) 
-
 1 - &gt; FOUTVCO clock is enabled</p>
                 </td>
             </tr>
@@ -321,9 +297,7 @@ must be programmed to correct value</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Post divide power down 
-
 0 - &gt; FOUTPOSTDIV clock is powered down (outputs held at 1'b0) 
-
 1 - &gt; FOUTPOSTDIV clock is enabled</p>
                 </td>
             </tr>
@@ -340,13 +314,9 @@ must be programmed to correct value</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Enable fractional noise canceling DAC in FRAC mode (this has 
-
 no function in integer mode) 
-
 0 - &gt; Fractional noise canceling DAC is not active (test mode 
-
 only) 
-
 1 - &gt; Fractional noise canceling DAC is active (default mode)</p>
                 </td>
             </tr>
@@ -363,11 +333,8 @@ only)
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>PLL deskew mode select 
-
 1'b0 - &gt; Internal (full-rate VCO) feedback mode to select output 
-
 of VCO for feedback clock 
-
 1'b1 - &gt; External feedback mode to select CKFB for feedback clock</p>
                 </td>
             </tr>
@@ -384,9 +351,7 @@ of VCO for feedback clock
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Enable Delta-Sigma Modulator 
-
 0 - &gt; DSM is powered down (integer mode) 
-
 1 - &gt; DSM is active (fractional mode)</p>
                 </td>
             </tr>
@@ -451,9 +416,7 @@ of VCO for feedback clock
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Feedback Divider 
-
 PLL Feedback divider value (16-4096 in integer mode, 20 to 4095 
-
 in fractional mode).</p>
                 </td>
             </tr>
@@ -518,7 +481,6 @@ in fractional mode).</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Post Divider value (1 to 32) 
-
 Actual divide value is POSTDIV+1</p>
                 </td>
             </tr>
@@ -583,7 +545,6 @@ Actual divide value is POSTDIV+1</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Reference divide value (1 to 63), Divide value is REFDIV 
-
 When programmed to REFDIV="6"'d0 it will divide by 1</p>
                 </td>
             </tr>
@@ -711,37 +672,21 @@ When programmed to REFDIV="6"'d0 it will divide by 1</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>[1:0] -- &gt; Programmable lock_int counter: 
-
 if(UTILITY[1:0]==2'b00) lock_int_count="64;"
-
 if(UTILITY[1:0]==2'b01) lock_int_count="16;"
-
 if(UTILITY[1:0]==2'b10) lock_int_count="32;"
-
 if(UTILITY[1:0]==2'b11) lock_int_count="128;"
-
 [3:2] -- &gt; Programmable LOCKF counter: 
-
 if(UTILITY[3:2]==2'b00) LOCKF_count="lock_int_count+32;"
-
 if(UTILITY[3:2]==2'b01) LOCKF_count="lock_int_count+8;"
-
 if(UTILITY[3:2]==2'b10) LOCKF_count="lock_int_count+16;"
-
 if(UTILITY[3:2]==2'b11) LOCKF_count="lock_int_count+64;"
-
 [5:4] -- &gt; Programmable LOCKP counter: 
-
 if(UTILITY[5:4]==2'b00) LOCKP_count="LOCKF_count+512;"
-
 if(UTILITY[5:4]==2'b01) LOCKP_count="LOCKF_count+256;"
-
 if(UTILITY[5:4]==2'b10) LOCKP_count="LOCKF_count+1024;"
-
 if(UTILITY[5:4]==2'b11) LOCKP_count="LOCKF_count+2048;"
-
 [15:6] -- &gt; Unassigned 
-
 In FRAC mode lock_int_count is equal to programmed value + 128</p>
                 </td>
             </tr>
@@ -806,9 +751,7 @@ In FRAC mode lock_int_count is equal to programmed value + 128</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Output. Frequency Lock signal 
-
 Indicates frequency settling within threshold provided in 
-
 specification</p>
                 </td>
             </tr>
@@ -826,9 +769,7 @@ specification</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Output. Phase Lock signal 
-
 Indicates full phase settling within threshold provided in 
-
 specification</p>
                 </td>
             </tr>
@@ -893,11 +834,8 @@ specification</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Gates the output of VPLL1 after divider and before it is passed to any logic. 
-
 0: Disable channel output 
-
 1: Enable channel output 
-
 SW should program this bit as 1 after programming the respective VPLL channel to make sure that clean clock is passed to the logic.</p>
                 </td>
             </tr>
@@ -915,7 +853,6 @@ SW should program this bit as 1 after programming the respective VPLL channel to
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Reserved. 
-
 For write, do read and write back the same value. For read, ignore read values.</p>
                 </td>
             </tr>
@@ -980,7 +917,6 @@ For write, do read and write back the same value. For read, ignore read values.<
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>1: VPLL1 power down 
-
 0: Normal operation</p>
                 </td>
             </tr>
@@ -1045,9 +981,7 @@ For write, do read and write back the same value. For read, ignore read values.<
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>If G64BDHUB_CG_en is 1, then this bit is invalid 
-
 1: HW will gate the clock dynamically 
-
 0: free running clock</p>
                 </td>
             </tr>
@@ -1064,7 +998,6 @@ For write, do read and write back the same value. For read, ignore read values.<
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>0: clock gating is based on G64BDHUB_dyCG_en 
-
 1: static clock gating</p>
                 </td>
             </tr>
@@ -1111,7 +1044,6 @@ For write, do read and write back the same value. For read, ignore read values.<
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>0: DSI HOST Debug Bus 
-
 1-15: Reserved</p>
                 </td>
             </tr>
@@ -1435,9 +1367,7 @@ For write, do read and write back the same value. For read, ignore read values.<
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>BCM invalid request Interrupt Event 
-
 0: Disable the interrupt 
-
 1: Enable the interrupt</p>
                 </td>
             </tr>
@@ -1902,9 +1832,7 @@ For write, do read and write back the same value. For read, ignore read values.<
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Reset for DSI Host controller. 
-
 1: de-assert reset 
-
 0: Assert reset</p>
                 </td>
             </tr>
@@ -1969,15 +1897,10 @@ For write, do read and write back the same value. For read, ignore read values.<
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Use the following divide factor if clkD3Switch="0."
-
 1: Div2 
-
 2: Div4 
-
 3: Div6 
-
 4: Div8 
-
 5: Div12</p>
                 </td>
             </tr>
@@ -1994,9 +1917,7 @@ For write, do read and write back the same value. For read, ignore read values.<
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Not used. 
-
 0: use source clock 
-
 1: use divided clock (decided by clkD3Switch and clkSel)</p>
                 </td>
             </tr>
@@ -2013,9 +1934,7 @@ For write, do read and write back the same value. For read, ignore read values.<
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Not used. 
-
 0 : divide factor is decided by clkSwitch and clkSel 
-
 1: use divide by 3 clock when clkSwitch = 1</p>
                 </td>
             </tr>
@@ -2393,9 +2312,7 @@ For write, do read and write back the same value. For read, ignore read values.<
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Used to turn ON vppSysClk during VBI programming 
-
 1: Turns ON vppSysClk during VBI Programming (window begin) 
-
 0: Turns OFF vppSysClk during VBI Programming (window end)</p>
                 </td>
             </tr>
@@ -2430,7 +2347,6 @@ For write, do read and write back the same value. For read, ignore read values.<
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Power down control registers for Video Decoder SRAM. 
-
 Control register</p>
                 </td>
             </tr>
@@ -2461,7 +2377,6 @@ Control register</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -2478,9 +2393,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -2497,7 +2410,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -2532,7 +2444,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Power down control registers for GDHUB SRAM BANK0. 
-
 Control register</p>
                 </td>
             </tr>
@@ -2563,7 +2474,6 @@ Control register</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -2580,9 +2490,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -2599,7 +2507,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -2634,7 +2541,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Power down control registers for GDHUB SRAM BANK1. 
-
 Control register</p>
                 </td>
             </tr>
@@ -2665,7 +2571,6 @@ Control register</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -2682,9 +2587,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -2701,7 +2604,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -2765,7 +2667,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -2782,9 +2683,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -2801,7 +2700,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -2865,7 +2763,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -2882,9 +2779,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -2901,7 +2796,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -2965,7 +2859,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -2982,9 +2875,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -3001,7 +2892,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -3065,7 +2955,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -3082,9 +2971,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -3101,7 +2988,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -3165,7 +3051,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -3182,9 +3067,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -3201,7 +3084,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -3265,7 +3147,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -3282,9 +3163,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -3301,7 +3180,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -3365,7 +3243,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -3382,9 +3259,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -3401,7 +3276,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -3465,7 +3339,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -3482,9 +3355,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -3501,7 +3372,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -3565,7 +3435,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -3582,9 +3451,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -3601,7 +3468,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -3665,7 +3531,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -3682,9 +3547,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -3701,7 +3564,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -3765,7 +3627,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -3782,9 +3643,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -3801,7 +3660,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -3865,7 +3723,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -3882,9 +3739,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -3901,7 +3756,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -3965,7 +3819,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -3982,9 +3835,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -4001,7 +3852,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -4065,7 +3915,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -4082,9 +3931,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -4101,7 +3948,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -4165,7 +4011,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -4182,9 +4027,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -4201,7 +4044,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -4265,7 +4107,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -4282,9 +4123,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -4301,7 +4140,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -4365,7 +4203,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -4382,9 +4219,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -4401,7 +4236,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -4465,7 +4299,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -4482,9 +4315,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -4501,7 +4332,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -4565,7 +4395,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -4582,9 +4411,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -4601,7 +4428,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -4665,7 +4491,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -4682,9 +4507,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -4701,7 +4524,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -4765,7 +4587,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -4782,9 +4603,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -4801,7 +4620,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -4865,7 +4683,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -4882,9 +4699,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -4901,7 +4716,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -4965,7 +4779,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -4982,9 +4795,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -5001,7 +4812,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -5065,7 +4875,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -5082,9 +4891,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -5101,7 +4908,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -5165,7 +4971,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -5182,9 +4987,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -5201,7 +5004,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>
@@ -5265,7 +5067,6 @@ reduction with data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Shut down mode achieves highest leakage reduction without 
-
 data retention</p>
                 </td>
             </tr>
@@ -5282,9 +5083,7 @@ data retention</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Deep sleep mode powers down the most of peripheral circuit for 
-
 leakage reduction and retains memory 
-
 array content with lower voltage</p>
                 </td>
             </tr>
@@ -5301,7 +5100,6 @@ array content with lower voltage</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Sleep mode powers down most peripheral circuit for leakage 
-
 reduction with data retention</p>
                 </td>
             </tr>

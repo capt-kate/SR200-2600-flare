@@ -4,7 +4,6 @@
     </head>
     <body>
         <h1>ReadClient
-
         </h1>
         <table width="100%" class="TableStyle-table-no-head" style="mc-table-style: url('../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
             <tr class="TableStyle-table-no-head-Body-Body1">
@@ -64,11 +63,8 @@
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Start bit for the respective clients. 
-
 0 : No effect on hardware. 
-
 1 : start the client. 
-
 The write 1 to this register is used to kick the hardware.</p>
                 </td>
             </tr>
@@ -85,7 +81,6 @@ The write 1 to this register is used to kick the hardware.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>0 : Don't clear, normal state. 
-
 1 : Clear the asynchronous FIFO between the respective client and dHub.</p>
                 </td>
             </tr>
@@ -150,11 +145,8 @@ The write 1 to this register is used to kick the hardware.</p>
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>Specifies the total number of 128-bit words that have to be fetched from DDR for read Client. Should be programmed as: 
-
 ceil( ohres*ovres*16 / 128 ) 
-
 Note : In case of resolution which is not integer multiple of 128, word total should be programmed as follows : 
-
 For eg if ohres = 116, then (ohres*24/128) = 21.75. Then word total should be (22*ovres)</p>
                 </td>
             </tr>
@@ -312,41 +304,23 @@ For eg if ohres = 116, then (ohres*24/128) = 21.75. Then word total should be (2
                 </td>
                 <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
                     <p>PackSel values for following Read Client's 
-
 [A] DEINT Read Client0 
-
 [0000] : 20 bit unpacking 
-
 [0001] : 8 bit unpacking 
-
 [0010] : 10 bit unpacking 
-
 [0011] : 10 bit unpacking [for V4H6 format] 
-
 [remaining] : unused/invalid 
-
 [B] DEINT Read Client1 
-
 [0000] : 20 bit unpacking 
-
 [0001] : 8 bit unpacking 
-
 [0010] : 10 bit unpacking 
-
 [0011] : 10 bit unpacking [for V4H6 format] 
-
 [remaining] : unused/invalid 
-
 [C] PIP/GFX0 Read Client 1 (for Croma channel) 
-
 [0000] : 8 bit unpacking 
-
 [0001] : 10 bit unpacking 
-
 [0010] : 10 bit unpacking [for V4H6 format] 
-
 [remaining] : unused/invalid 
-
 Note : based on above (A, B or C) program packSel accordingly</p>
                 </td>
             </tr>

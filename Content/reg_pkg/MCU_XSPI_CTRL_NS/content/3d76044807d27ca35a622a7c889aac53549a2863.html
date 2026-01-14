@@ -45,50 +45,28 @@
         <h2>Field Descriptions</h2>
         <h3 id="PHY_test.desc">PHY_test<a class="headerlink" href="#PHY_test.desc" title="Permalink to this headline"></a></h3>
         <p>The top 8bits of this register control the current PHY test setting,
-
 whereas the bottom 24 bits control any test arguments. Four test modes
-
 are currently defined:</p>
         <p>8'h0: Normal operation
-
 bits[23:0] are ignored
-
 8'h1: DLL Lab test. In this mode, various delayed values can be
-
 placed on the data IO lines for lab testing.
-
 bits[23:0] are ignored
-
 8'h2: Synchronous IO self test
-
 [23] Run the test continuously
-
 [22:21] Reserved for clock polarity and phase testing
-
 [20:16] Control the clock setting for the test. 5'h0 runs a
-
 sweep across (but not including) all integer clock
-
 divisions.
-
 [7:0] A bitmask used to disable tests for the given pin(s).
-
 Set this value to zero to test all IO pins.
-
 8'h3: Asynchronous IO self test
-
 [23] Run the test continuously
-
 [22:21] Reserved for clock polarity and phase testing
-
 [20:16] Control the clock setting for the test. 5'h0 runs a
-
 sweep across (but not including) all integer clock
-
 divisions.
-
 [7:0] A bitmask used to disable tests for the given pin(s).
-
 Set this value to zero to test all IO pins.</p>
     </body>
 </html>
