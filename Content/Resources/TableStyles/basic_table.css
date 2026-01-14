@@ -1,6 +1,6 @@
-/* MadCap Table Style: */
+/*<meta Version="9" conditions="Status.Table-Basic" />*/
 
-/*<meta Version="9" />*/
+/* MadCap Table Style: */
 
 mcTableStyle
 {
@@ -80,9 +80,8 @@ mcTableFootStyle
 	id: 3;
 }
 
-
 /* Cell Styles: */
- 
+
 .TableStyle-table
 {
 	border-collapse: collapse;
@@ -566,5 +565,4 @@ mcTableFootStyle
 {
 	
 }
-
 
