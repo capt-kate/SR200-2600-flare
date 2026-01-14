@@ -1,308 +1,504 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-<h1 id="_Content.name">BUILD_CFG1</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0xf4</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Contains additional build-time DWC TRNG NIST parameter settings.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr class="reserved-field"><td>[31]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="ENT_SRC_REP_MIN_ENTROPY"><td>[30:24]</td>
-<td><a href="#ENT_SRC_REP_MIN_ENTROPY.desc">ENT_SRC_REP_MIN_ENTROPY</a></td>
-<td>r</td>
-<td>0x50</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#ENT_SRC_REP_MIN_ENTROPY" title="Permalink to this row"></a></td>
-</tr>
-<tr id="ENT_SRC_REP_TEST"><td>[23]</td>
-<td><a href="#ENT_SRC_REP_TEST.desc">ENT_SRC_REP_TEST</a></td>
-<td>r</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterENT_SRC_REP_TEST" class="field-value-enum-tester"
-data-name="ENT_SRC_REP_TEST" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">ENT_SRC_REP_TEST_NOT_PRESENT</option><option value="0x1">ENT_SRC_REP_TEST_PRESENT</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#ENT_SRC_REP_TEST" title="Permalink to this row"></a></td>
-</tr>
-<tr id="ENT_SRC_REP_SMPL_SIZE"><td>[22:20]</td>
-<td><a href="#ENT_SRC_REP_SMPL_SIZE.desc">ENT_SRC_REP_SMPL_SIZE</a></td>
-<td>r</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterENT_SRC_REP_SMPL_SIZE" class="field-value-enum-tester"
-data-name="ENT_SRC_REP_SMPL_SIZE" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">ENT_SRC_REP_SMPL_SIZE_1</option><option value="0x7">ENT_SRC_REP_SMPL_SIZE_128</option><option value="0x4">ENT_SRC_REP_SMPL_SIZE_16</option><option value="0x1">ENT_SRC_REP_SMPL_SIZE_2</option><option value="0x5">ENT_SRC_REP_SMPL_SIZE_32</option><option value="0x2">ENT_SRC_REP_SMPL_SIZE_4</option><option value="0x6">ENT_SRC_REP_SMPL_SIZE_64</option><option value="0x3">ENT_SRC_REP_SMPL_SIZE_8</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#ENT_SRC_REP_SMPL_SIZE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RAW_HT_REP_TEST"><td>[19]</td>
-<td><a href="#RAW_HT_REP_TEST.desc">RAW_HT_REP_TEST</a></td>
-<td>r</td>
-<td>0x1</td>
-<td><select id="_FieldValueEnumTesterRAW_HT_REP_TEST" class="field-value-enum-tester"
-data-name="RAW_HT_REP_TEST" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">RAW_HT_REP_TEST_NOT_PRESENT</option><option value="0x1">RAW_HT_REP_TEST_PRESENT</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAW_HT_REP_TEST" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RAW_HT_ADAP_TEST"><td>[18:16]</td>
-<td><a href="#RAW_HT_ADAP_TEST.desc">RAW_HT_ADAP_TEST</a></td>
-<td>r</td>
-<td>0x1</td>
-<td><select id="_FieldValueEnumTesterRAW_HT_ADAP_TEST" class="field-value-enum-tester"
-data-name="RAW_HT_ADAP_TEST" onchange="onDecodedFieldEnumChange(this)"><option value="0x5">RAW_HT_ADAP_TEST_16K_SAMPLES</option><option value="0x1">RAW_HT_ADAP_TEST_1K_SAMPLES</option><option value="0x2">RAW_HT_ADAP_TEST_2K_SAMPLES</option><option value="0x6">RAW_HT_ADAP_TEST_32K_SAMPLES</option><option value="0x3">RAW_HT_ADAP_TEST_4K_SAMPLES</option><option value="0x7">RAW_HT_ADAP_TEST_64K_SAMPLES</option><option value="0x4">RAW_HT_ADAP_TEST_8K_SAMPLES</option><option value="0x0">RAW_HT_ADAP_TEST_NOT_PRESENT</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAW_HT_ADAP_TEST" title="Permalink to this row"></a></td>
-</tr>
-<tr id="POKER_TEST"><td>[15]</td>
-<td><a href="#POKER_TEST.desc">POKER_TEST</a></td>
-<td>r</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterPOKER_TEST" class="field-value-enum-tester"
-data-name="POKER_TEST" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">POKER_TEST_NOT_PRESENT</option><option value="0x1">POKER_TEST_PRESENT</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#POKER_TEST" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RUN_TEST"><td>[14]</td>
-<td><a href="#RUN_TEST.desc">RUN_TEST</a></td>
-<td>r</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterRUN_TEST" class="field-value-enum-tester"
-data-name="RUN_TEST" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">RUN_TEST_NOT_PRESENT</option><option value="0x1">RUN_TEST_PRESENT</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RUN_TEST" title="Permalink to this row"></a></td>
-</tr>
-<tr id="MONOBIT_TEST"><td>[13]</td>
-<td><a href="#MONOBIT_TEST.desc">MONOBIT_TEST</a></td>
-<td>r</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterMONOBIT_TEST" class="field-value-enum-tester"
-data-name="MONOBIT_TEST" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">MONOBIT_TEST_NOT_PRESENT</option><option value="0x1">MONOBIT_TEST_PRESENT</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#MONOBIT_TEST" title="Permalink to this row"></a></td>
-</tr>
-<tr id="AUTO_CORRELATION_TEST"><td>[12]</td>
-<td><a href="#AUTO_CORRELATION_TEST.desc">AUTO_CORRELATION_TEST</a></td>
-<td>r</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterAUTO_CORRELATION_TEST" class="field-value-enum-tester"
-data-name="AUTO_CORRELATION_TEST" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">AUTO_CORRELATION_TEST_NOT_PRESENT</option><option value="0x1">AUTO_CORRELATION_TEST_PRESENT</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#AUTO_CORRELATION_TEST" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-field"><td>[11:9]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="STICKY_STARTUP"><td>[8]</td>
-<td><a href="#STICKY_STARTUP.desc">STICKY_STARTUP</a></td>
-<td>r</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterSTICKY_STARTUP" class="field-value-enum-tester"
-data-name="STICKY_STARTUP" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">STICKY_STARTUP_TEST_NOT_PRESENT</option><option value="0x1">STICKY_STARTUP_TEST_PRESENT</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#STICKY_STARTUP" title="Permalink to this row"></a></td>
-</tr>
-<tr id="NUM_RAW_NOISE_BLKS"><td>[7:0]</td>
-<td><a href="#NUM_RAW_NOISE_BLKS.desc">NUM_RAW_NOISE_BLKS</a></td>
-<td>r</td>
-<td>0x4</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#NUM_RAW_NOISE_BLKS" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="ENT_SRC_REP_MIN_ENTROPY.desc">ENT_SRC_REP_MIN_ENTROPY<a class="headerlink" href="#ENT_SRC_REP_MIN_ENTROPY.desc" title="Permalink to this headline"></a></h3>
-<p>Entropy source repetition minimum entropy per bit</p>
-<h3 id="ENT_SRC_REP_TEST.desc">ENT_SRC_REP_TEST<a class="headerlink" href="#ENT_SRC_REP_TEST.desc" title="Permalink to this headline"></a></h3>
-<p>Entropy source repetition test present</p>
-<table><tr><th colspan="3">enum ENT_SRC_REP_TEST_enum_t</th></tr>
-<tr><td>ENT_SRC_REP_TEST_NOT_PRESENT</td>
-<td>0x0</td>
-<td><p>not present</p>
-</td>
-</tr>
-<tr><td>ENT_SRC_REP_TEST_PRESENT</td>
-<td>0x1</td>
-<td><p>present</p>
-</td>
-</tr>
-</table><h3 id="ENT_SRC_REP_SMPL_SIZE.desc">ENT_SRC_REP_SMPL_SIZE<a class="headerlink" href="#ENT_SRC_REP_SMPL_SIZE.desc" title="Permalink to this headline"></a></h3>
-<p>Entropy source: sample size</p>
-<table><tr><th colspan="3">enum ENT_SRC_REP_SMPL_SIZE_enum_t</th></tr>
-<tr><td>ENT_SRC_REP_SMPL_SIZE_1</td>
-<td>0x0</td>
-<td><p>Sample size 1</p>
-</td>
-</tr>
-<tr><td>ENT_SRC_REP_SMPL_SIZE_128</td>
-<td>0x7</td>
-<td><p>Sample size 128</p>
-</td>
-</tr>
-<tr><td>ENT_SRC_REP_SMPL_SIZE_16</td>
-<td>0x4</td>
-<td><p>Sample size 16</p>
-</td>
-</tr>
-<tr><td>ENT_SRC_REP_SMPL_SIZE_2</td>
-<td>0x1</td>
-<td><p>Sample size 2</p>
-</td>
-</tr>
-<tr><td>ENT_SRC_REP_SMPL_SIZE_32</td>
-<td>0x5</td>
-<td><p>Sample size 32</p>
-</td>
-</tr>
-<tr><td>ENT_SRC_REP_SMPL_SIZE_4</td>
-<td>0x2</td>
-<td><p>Sample size 4</p>
-</td>
-</tr>
-<tr><td>ENT_SRC_REP_SMPL_SIZE_64</td>
-<td>0x6</td>
-<td><p>Sample size 64</p>
-</td>
-</tr>
-<tr><td>ENT_SRC_REP_SMPL_SIZE_8</td>
-<td>0x3</td>
-<td><p>Sample size 8</p>
-</td>
-</tr>
-</table><h3 id="RAW_HT_REP_TEST.desc">RAW_HT_REP_TEST<a class="headerlink" href="#RAW_HT_REP_TEST.desc" title="Permalink to this headline"></a></h3>
-<p>Raw health repetition test present</p>
-<table><tr><th colspan="3">enum RAW_HT_REP_TEST_enum_t</th></tr>
-<tr><td>RAW_HT_REP_TEST_NOT_PRESENT</td>
-<td>0x0</td>
-<td><p>not present</p>
-</td>
-</tr>
-<tr><td>RAW_HT_REP_TEST_PRESENT</td>
-<td>0x1</td>
-<td><p>present</p>
-</td>
-</tr>
-</table><h3 id="RAW_HT_ADAP_TEST.desc">RAW_HT_ADAP_TEST<a class="headerlink" href="#RAW_HT_ADAP_TEST.desc" title="Permalink to this headline"></a></h3>
-<p>Raw health adaptive proportion test</p>
-<table><tr><th colspan="3">enum RAW_HT_ADAP_TEST_enum_t</th></tr>
-<tr><td>RAW_HT_ADAP_TEST_16K_SAMPLES</td>
-<td>0x5</td>
-<td><p>16k samples per window</p>
-</td>
-</tr>
-<tr><td>RAW_HT_ADAP_TEST_1K_SAMPLES</td>
-<td>0x1</td>
-<td><p>1k samples per window</p>
-</td>
-</tr>
-<tr><td>RAW_HT_ADAP_TEST_2K_SAMPLES</td>
-<td>0x2</td>
-<td><p>2k samples per window</p>
-</td>
-</tr>
-<tr><td>RAW_HT_ADAP_TEST_32K_SAMPLES</td>
-<td>0x6</td>
-<td><p>32k samples per window</p>
-</td>
-</tr>
-<tr><td>RAW_HT_ADAP_TEST_4K_SAMPLES</td>
-<td>0x3</td>
-<td><p>4k samples per window</p>
-</td>
-</tr>
-<tr><td>RAW_HT_ADAP_TEST_64K_SAMPLES</td>
-<td>0x7</td>
-<td><p>64k samples per window</p>
-</td>
-</tr>
-<tr><td>RAW_HT_ADAP_TEST_8K_SAMPLES</td>
-<td>0x4</td>
-<td><p>8k samples per window</p>
-</td>
-</tr>
-<tr><td>RAW_HT_ADAP_TEST_NOT_PRESENT</td>
-<td>0x0</td>
-<td><p>not present</p>
-</td>
-</tr>
-</table><h3 id="POKER_TEST.desc">POKER_TEST<a class="headerlink" href="#POKER_TEST.desc" title="Permalink to this headline"></a></h3>
-<p>Poker test present</p>
-<table><tr><th colspan="3">enum POKER_TEST_enum_t</th></tr>
-<tr><td>POKER_TEST_NOT_PRESENT</td>
-<td>0x0</td>
-<td><p>not present</p>
-</td>
-</tr>
-<tr><td>POKER_TEST_PRESENT</td>
-<td>0x1</td>
-<td><p>present</p>
-</td>
-</tr>
-</table><h3 id="RUN_TEST.desc">RUN_TEST<a class="headerlink" href="#RUN_TEST.desc" title="Permalink to this headline"></a></h3>
-<p>Run test present</p>
-<table><tr><th colspan="3">enum RUN_TEST_enum_t</th></tr>
-<tr><td>RUN_TEST_NOT_PRESENT</td>
-<td>0x0</td>
-<td><p>not present</p>
-</td>
-</tr>
-<tr><td>RUN_TEST_PRESENT</td>
-<td>0x1</td>
-<td><p>present</p>
-</td>
-</tr>
-</table><h3 id="MONOBIT_TEST.desc">MONOBIT_TEST<a class="headerlink" href="#MONOBIT_TEST.desc" title="Permalink to this headline"></a></h3>
-<p>Monobit test present</p>
-<table><tr><th colspan="3">enum MONOBIT_TEST_enum_t</th></tr>
-<tr><td>MONOBIT_TEST_NOT_PRESENT</td>
-<td>0x0</td>
-<td><p>not present</p>
-</td>
-</tr>
-<tr><td>MONOBIT_TEST_PRESENT</td>
-<td>0x1</td>
-<td><p>present</p>
-</td>
-</tr>
-</table><h3 id="AUTO_CORRELATION_TEST.desc">AUTO_CORRELATION_TEST<a class="headerlink" href="#AUTO_CORRELATION_TEST.desc" title="Permalink to this headline"></a></h3>
-<p>Auto-correlation test present</p>
-<table><tr><th colspan="3">enum AUTO_CORRELATION_TEST_enum_t</th></tr>
-<tr><td>AUTO_CORRELATION_TEST_NOT_PRESENT</td>
-<td>0x0</td>
-<td><p>not present</p>
-</td>
-</tr>
-<tr><td>AUTO_CORRELATION_TEST_PRESENT</td>
-<td>0x1</td>
-<td><p>present</p>
-</td>
-</tr>
-</table><h3 id="STICKY_STARTUP.desc">STICKY_STARTUP<a class="headerlink" href="#STICKY_STARTUP.desc" title="Permalink to this headline"></a></h3>
-<p>Sticky-startup test present</p>
-<table><tr><th colspan="3">enum STICKY_STARTUP_enum_t</th></tr>
-<tr><td>STICKY_STARTUP_TEST_NOT_PRESENT</td>
-<td>0x0</td>
-<td><p>not present</p>
-</td>
-</tr>
-<tr><td>STICKY_STARTUP_TEST_PRESENT</td>
-<td>0x1</td>
-<td><p>present</p>
-</td>
-</tr>
-</table><h3 id="NUM_RAW_NOISE_BLKS.desc">NUM_RAW_NOISE_BLKS<a class="headerlink" href="#NUM_RAW_NOISE_BLKS.desc" title="Permalink to this headline"></a></h3>
-<p>Number of raw noise blocks used for start-up test</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">BUILD_CFG1</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0xf4</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>Contains additional build-time DWC TRNG NIST parameter settings.</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="ENT_SRC_REP_MIN_ENTROPY" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[30:24]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#ENT_SRC_REP_MIN_ENTROPY.desc">ENT_SRC_REP_MIN_ENTROPY</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x50</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#ENT_SRC_REP_MIN_ENTROPY" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="ENT_SRC_REP_TEST" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[23]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#ENT_SRC_REP_TEST.desc">ENT_SRC_REP_TEST</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterENT_SRC_REP_TEST" class="field-value-enum-tester" data-name="ENT_SRC_REP_TEST" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">ENT_SRC_REP_TEST_NOT_PRESENT</option>
+                        <option value="0x1">ENT_SRC_REP_TEST_PRESENT</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#ENT_SRC_REP_TEST" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="ENT_SRC_REP_SMPL_SIZE" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[22:20]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#ENT_SRC_REP_SMPL_SIZE.desc">ENT_SRC_REP_SMPL_SIZE</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterENT_SRC_REP_SMPL_SIZE" class="field-value-enum-tester" data-name="ENT_SRC_REP_SMPL_SIZE" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">ENT_SRC_REP_SMPL_SIZE_1</option>
+                        <option value="0x7">ENT_SRC_REP_SMPL_SIZE_128</option>
+                        <option value="0x4">ENT_SRC_REP_SMPL_SIZE_16</option>
+                        <option value="0x1">ENT_SRC_REP_SMPL_SIZE_2</option>
+                        <option value="0x5">ENT_SRC_REP_SMPL_SIZE_32</option>
+                        <option value="0x2">ENT_SRC_REP_SMPL_SIZE_4</option>
+                        <option value="0x6">ENT_SRC_REP_SMPL_SIZE_64</option>
+                        <option value="0x3">ENT_SRC_REP_SMPL_SIZE_8</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#ENT_SRC_REP_SMPL_SIZE" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="RAW_HT_REP_TEST" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[19]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#RAW_HT_REP_TEST.desc">RAW_HT_REP_TEST</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterRAW_HT_REP_TEST" class="field-value-enum-tester" data-name="RAW_HT_REP_TEST" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">RAW_HT_REP_TEST_NOT_PRESENT</option>
+                        <option value="0x1">RAW_HT_REP_TEST_PRESENT</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#RAW_HT_REP_TEST" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="RAW_HT_ADAP_TEST" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[18:16]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#RAW_HT_ADAP_TEST.desc">RAW_HT_ADAP_TEST</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterRAW_HT_ADAP_TEST" class="field-value-enum-tester" data-name="RAW_HT_ADAP_TEST" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x5">RAW_HT_ADAP_TEST_16K_SAMPLES</option>
+                        <option value="0x1">RAW_HT_ADAP_TEST_1K_SAMPLES</option>
+                        <option value="0x2">RAW_HT_ADAP_TEST_2K_SAMPLES</option>
+                        <option value="0x6">RAW_HT_ADAP_TEST_32K_SAMPLES</option>
+                        <option value="0x3">RAW_HT_ADAP_TEST_4K_SAMPLES</option>
+                        <option value="0x7">RAW_HT_ADAP_TEST_64K_SAMPLES</option>
+                        <option value="0x4">RAW_HT_ADAP_TEST_8K_SAMPLES</option>
+                        <option value="0x0">RAW_HT_ADAP_TEST_NOT_PRESENT</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#RAW_HT_ADAP_TEST" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="POKER_TEST" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[15]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#POKER_TEST.desc">POKER_TEST</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterPOKER_TEST" class="field-value-enum-tester" data-name="POKER_TEST" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">POKER_TEST_NOT_PRESENT</option>
+                        <option value="0x1">POKER_TEST_PRESENT</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#POKER_TEST" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="RUN_TEST" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[14]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#RUN_TEST.desc">RUN_TEST</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterRUN_TEST" class="field-value-enum-tester" data-name="RUN_TEST" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">RUN_TEST_NOT_PRESENT</option>
+                        <option value="0x1">RUN_TEST_PRESENT</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#RUN_TEST" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="MONOBIT_TEST" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[13]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#MONOBIT_TEST.desc">MONOBIT_TEST</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterMONOBIT_TEST" class="field-value-enum-tester" data-name="MONOBIT_TEST" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">MONOBIT_TEST_NOT_PRESENT</option>
+                        <option value="0x1">MONOBIT_TEST_PRESENT</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#MONOBIT_TEST" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="AUTO_CORRELATION_TEST" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[12]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#AUTO_CORRELATION_TEST.desc">AUTO_CORRELATION_TEST</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterAUTO_CORRELATION_TEST" class="field-value-enum-tester" data-name="AUTO_CORRELATION_TEST" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">AUTO_CORRELATION_TEST_NOT_PRESENT</option>
+                        <option value="0x1">AUTO_CORRELATION_TEST_PRESENT</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#AUTO_CORRELATION_TEST" title="Permalink to this row"></a></td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[11:9]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="STICKY_STARTUP" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[8]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#STICKY_STARTUP.desc">STICKY_STARTUP</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterSTICKY_STARTUP" class="field-value-enum-tester" data-name="STICKY_STARTUP" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">STICKY_STARTUP_TEST_NOT_PRESENT</option>
+                        <option value="0x1">STICKY_STARTUP_TEST_PRESENT</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#STICKY_STARTUP" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="NUM_RAW_NOISE_BLKS" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[7:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#NUM_RAW_NOISE_BLKS.desc">NUM_RAW_NOISE_BLKS</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x4</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#NUM_RAW_NOISE_BLKS" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="ENT_SRC_REP_MIN_ENTROPY.desc">ENT_SRC_REP_MIN_ENTROPY<a class="headerlink" href="#ENT_SRC_REP_MIN_ENTROPY.desc" title="Permalink to this headline"></a></h3>
+        <p>Entropy source repetition minimum entropy per bit</p>
+        <h3 id="ENT_SRC_REP_TEST.desc">ENT_SRC_REP_TEST<a class="headerlink" href="#ENT_SRC_REP_TEST.desc" title="Permalink to this headline"></a></h3>
+        <p>Entropy source repetition test present</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum ENT_SRC_REP_TEST_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ENT_SRC_REP_TEST_NOT_PRESENT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>not present</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ENT_SRC_REP_TEST_PRESENT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>present</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="ENT_SRC_REP_SMPL_SIZE.desc">ENT_SRC_REP_SMPL_SIZE<a class="headerlink" href="#ENT_SRC_REP_SMPL_SIZE.desc" title="Permalink to this headline"></a></h3>
+        <p>Entropy source: sample size</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum ENT_SRC_REP_SMPL_SIZE_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ENT_SRC_REP_SMPL_SIZE_1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Sample size 1</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ENT_SRC_REP_SMPL_SIZE_128</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x7</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Sample size 128</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ENT_SRC_REP_SMPL_SIZE_16</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x4</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Sample size 16</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ENT_SRC_REP_SMPL_SIZE_2</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Sample size 2</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ENT_SRC_REP_SMPL_SIZE_32</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x5</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Sample size 32</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ENT_SRC_REP_SMPL_SIZE_4</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x2</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Sample size 4</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ENT_SRC_REP_SMPL_SIZE_64</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x6</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Sample size 64</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ENT_SRC_REP_SMPL_SIZE_8</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x3</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Sample size 8</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="RAW_HT_REP_TEST.desc">RAW_HT_REP_TEST<a class="headerlink" href="#RAW_HT_REP_TEST.desc" title="Permalink to this headline"></a></h3>
+        <p>Raw health repetition test present</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum RAW_HT_REP_TEST_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RAW_HT_REP_TEST_NOT_PRESENT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>not present</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RAW_HT_REP_TEST_PRESENT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>present</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="RAW_HT_ADAP_TEST.desc">RAW_HT_ADAP_TEST<a class="headerlink" href="#RAW_HT_ADAP_TEST.desc" title="Permalink to this headline"></a></h3>
+        <p>Raw health adaptive proportion test</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum RAW_HT_ADAP_TEST_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RAW_HT_ADAP_TEST_16K_SAMPLES</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x5</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>16k samples per window</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RAW_HT_ADAP_TEST_1K_SAMPLES</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>1k samples per window</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RAW_HT_ADAP_TEST_2K_SAMPLES</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x2</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>2k samples per window</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RAW_HT_ADAP_TEST_32K_SAMPLES</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x6</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>32k samples per window</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RAW_HT_ADAP_TEST_4K_SAMPLES</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x3</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>4k samples per window</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RAW_HT_ADAP_TEST_64K_SAMPLES</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x7</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>64k samples per window</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RAW_HT_ADAP_TEST_8K_SAMPLES</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x4</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>8k samples per window</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RAW_HT_ADAP_TEST_NOT_PRESENT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>not present</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="POKER_TEST.desc">POKER_TEST<a class="headerlink" href="#POKER_TEST.desc" title="Permalink to this headline"></a></h3>
+        <p>Poker test present</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum POKER_TEST_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">POKER_TEST_NOT_PRESENT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>not present</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">POKER_TEST_PRESENT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>present</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="RUN_TEST.desc">RUN_TEST<a class="headerlink" href="#RUN_TEST.desc" title="Permalink to this headline"></a></h3>
+        <p>Run test present</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum RUN_TEST_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RUN_TEST_NOT_PRESENT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>not present</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RUN_TEST_PRESENT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>present</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="MONOBIT_TEST.desc">MONOBIT_TEST<a class="headerlink" href="#MONOBIT_TEST.desc" title="Permalink to this headline"></a></h3>
+        <p>Monobit test present</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum MONOBIT_TEST_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">MONOBIT_TEST_NOT_PRESENT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>not present</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">MONOBIT_TEST_PRESENT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>present</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="AUTO_CORRELATION_TEST.desc">AUTO_CORRELATION_TEST<a class="headerlink" href="#AUTO_CORRELATION_TEST.desc" title="Permalink to this headline"></a></h3>
+        <p>Auto-correlation test present</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum AUTO_CORRELATION_TEST_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">AUTO_CORRELATION_TEST_NOT_PRESENT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>not present</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">AUTO_CORRELATION_TEST_PRESENT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>present</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="STICKY_STARTUP.desc">STICKY_STARTUP<a class="headerlink" href="#STICKY_STARTUP.desc" title="Permalink to this headline"></a></h3>
+        <p>Sticky-startup test present</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum STICKY_STARTUP_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">STICKY_STARTUP_TEST_NOT_PRESENT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>not present</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">STICKY_STARTUP_TEST_PRESENT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>present</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="NUM_RAW_NOISE_BLKS.desc">NUM_RAW_NOISE_BLKS<a class="headerlink" href="#NUM_RAW_NOISE_BLKS.desc" title="Permalink to this headline"></a></h3>
+        <p>Number of raw noise blocks used for start-up test</p>
+    </body>
 </html>

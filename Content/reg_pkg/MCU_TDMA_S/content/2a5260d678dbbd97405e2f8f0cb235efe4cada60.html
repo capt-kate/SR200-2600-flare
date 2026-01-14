@@ -1,41 +1,75 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-<h1 id="_Content.name">NSEC_STATUSPTR</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x2f0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Non-Secure Unit Status Pointer Register</p>
-<p>This register can set a pointer to an internal status register that can show the global state of the Non-secure channels.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="RAZWI_0"><td>[31:4]</td>
-<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
-</tr>
-<tr id="NSECSTATUSPTR"><td>[3:0]</td>
-<td><a href="#NSECSTATUSPTR.desc">NSECSTATUSPTR</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#NSECSTATUSPTR" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="NSECSTATUSPTR.desc">NSECSTATUSPTR<a class="headerlink" href="#NSECSTATUSPTR.desc" title="Permalink to this headline"></a></h3>
-<p>Non-Secure DMA Unit status pointer used to select which status value to view using STATUSVALUE register. Pointer values are:
-- 0: Channel Enabled Status for channel numbers [31 : 0].
-- 1: Reserved
-- 2: Channel Stopped Status for channel numbers [31 : 0].
-- 3: Reserved
-- 4: Channel Paused Status for channel numbers [31 : 0].
-- Others: Reserved.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">NSEC_STATUSPTR</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x2f0</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>Non-Secure Unit Status Pointer Register</p>
+        <p>This register can set a pointer to an internal status register that can show the global state of the Non-secure channels.</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr id="RAZWI_0" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31:4]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#RAZWI_0.desc">RAZWI_0</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="NSECSTATUSPTR" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[3:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#NSECSTATUSPTR.desc">NSECSTATUSPTR</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#NSECSTATUSPTR" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+        <p>Read-As-Zero, Writes Ignored.</p>
+        <h3 id="NSECSTATUSPTR.desc">NSECSTATUSPTR<a class="headerlink" href="#NSECSTATUSPTR.desc" title="Permalink to this headline"></a></h3>
+        <p>Non-Secure DMA Unit status pointer used to select which status value to view using STATUSVALUE register. Pointer values are:
+
+- 0: Channel Enabled Status for channel numbers [31 : 0].
+
+- 1: Reserved
+
+- 2: Channel Stopped Status for channel numbers [31 : 0].
+
+- 3: Reserved
+
+- 4: Channel Paused Status for channel numbers [31 : 0].
+
+- Others: Reserved.</p>
+    </body>
 </html>

@@ -1,194 +1,297 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-<h1 id="_Content.name">CH_CTRL</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x100c</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>Channel Control Register</p>
-<p>This register can be used to configure the type of the transfers and the resources needed by the currently executed DMA command. It also defines how the command shall behave when the command is complete.
-The content of this register can be updated during command linking by setting bit[3] in the command link header.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="RAZWI_3"><td>[31:28]</td>
-<td><a href="#RAZWI_3.desc">RAZWI_3</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_3" title="Permalink to this row"></a></td>
-</tr>
-<tr id="USETRIGOUT"><td>[27]</td>
-<td><a href="#USETRIGOUT.desc">USETRIGOUT</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#USETRIGOUT" title="Permalink to this row"></a></td>
-</tr>
-<tr id="USEDESTRIGIN"><td>[26]</td>
-<td><a href="#USEDESTRIGIN.desc">USEDESTRIGIN</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#USEDESTRIGIN" title="Permalink to this row"></a></td>
-</tr>
-<tr id="USESRCTRIGIN"><td>[25]</td>
-<td><a href="#USESRCTRIGIN.desc">USESRCTRIGIN</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#USESRCTRIGIN" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DONEPAUSEEN"><td>[24]</td>
-<td><a href="#DONEPAUSEEN.desc">DONEPAUSEEN</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DONEPAUSEEN" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DONETYPE"><td>[23:21]</td>
-<td><a href="#DONETYPE.desc">DONETYPE</a></td>
-<td>rw</td>
-<td>0x1</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DONETYPE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="REGRELOADTYPE"><td>[20:18]</td>
-<td><a href="#REGRELOADTYPE.desc">REGRELOADTYPE</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#REGRELOADTYPE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RAZWI_2"><td>[17:15]</td>
-<td><a href="#RAZWI_2.desc">RAZWI_2</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_2" title="Permalink to this row"></a></td>
-</tr>
-<tr id="YTYPE"><td>[14:12]</td>
-<td><a href="#YTYPE.desc">YTYPE</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#YTYPE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="XTYPE"><td>[11:9]</td>
-<td><a href="#XTYPE.desc">XTYPE</a></td>
-<td>rw</td>
-<td>0x1</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#XTYPE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RAZWI_1"><td>[8]</td>
-<td><a href="#RAZWI_1.desc">RAZWI_1</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
-</tr>
-<tr id="CHPRIO"><td>[7:4]</td>
-<td><a href="#CHPRIO.desc">CHPRIO</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#CHPRIO" title="Permalink to this row"></a></td>
-</tr>
-<tr id="RAZWI_0"><td>[3]</td>
-<td><a href="#RAZWI_0.desc">RAZWI_0</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
-</tr>
-<tr id="TRANSIZE"><td>[2:0]</td>
-<td><a href="#TRANSIZE.desc">TRANSIZE</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#TRANSIZE" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="RAZWI_3.desc">RAZWI_3<a class="headerlink" href="#RAZWI_3.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="USETRIGOUT.desc">USETRIGOUT<a class="headerlink" href="#USETRIGOUT.desc" title="Permalink to this headline"></a></h3>
-<p>Enable Trigger Output use for this command.
-- 0: disable
-- 1: enable</p>
-<h3 id="USEDESTRIGIN.desc">USEDESTRIGIN<a class="headerlink" href="#USEDESTRIGIN.desc" title="Permalink to this headline"></a></h3>
-<p>Enable Destination Trigger Input use for this command.
-- 0: disable
-- 1: enable</p>
-<h3 id="USESRCTRIGIN.desc">USESRCTRIGIN<a class="headerlink" href="#USESRCTRIGIN.desc" title="Permalink to this headline"></a></h3>
-<p>Enable Source Trigger Input use for this command.
-- 0: disable
-- 1: enable</p>
-<h3 id="DONEPAUSEEN.desc">DONEPAUSEEN<a class="headerlink" href="#DONEPAUSEEN.desc" title="Permalink to this headline"></a></h3>
-<p>Done pause enable. When set to HIGH the assertion of the STAT_DONE flag results in an automatic pause request for the current DMA operation. When the paused state is reached the STAT_RESUMEWAIT flag is also set. When set to LOW the assertion of the STAT_DONE does not pause the progress of the command and the next operation of the channel will be started immediately after the STAT_DONE flag is set.</p>
-<h3 id="DONETYPE.desc">DONETYPE<a class="headerlink" href="#DONETYPE.desc" title="Permalink to this headline"></a></h3>
-<p>Done type selection. This field defines when the STAT_DONE status flag is asserted during the command operation.
-- 000: STAT_DONE flag is not asserted for this command.
-- 001: End of a command, before jumping to the next linked command. (default)
-- 011: End of an autorestart cycle, before starting the next cycle.
-- Others : Reserved.</p>
-<h3 id="REGRELOADTYPE.desc">REGRELOADTYPE<a class="headerlink" href="#REGRELOADTYPE.desc" title="Permalink to this headline"></a></h3>
-<p>Automatic register reload type. Defines how the DMA command reloads initial values at the end of a DMA command before autorestarting, ending or linking to a new DMA command:
-- 000: Reload Disabled.
-- 001: Reload source and destination size registers only.
-- 011: Reload source address only and all source and destination size registers.
-- 101: Reload destination address only and all source and destination size registers.
-- 111: Reload source and destination address and all source and destination size registers.
-- Others: Reserved.
-NOTE: When CLEARCMD is set, the reloaded registers will also be cleared.</p>
-<h3 id="RAZWI_2.desc">RAZWI_2<a class="headerlink" href="#RAZWI_2.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="YTYPE.desc">YTYPE<a class="headerlink" href="#YTYPE.desc" title="Permalink to this headline"></a></h3>
-<p>Operation type for Y direction:
-- 000: "disable" - Only do 1D transfers. When HAS_2D is 0, meaning 2D capability is not supported in HW, the YTYPE is always "000".
-- 001: "continue" - Copy 2D data in a continuous manner from source area to the destination area by using the YSIZE registers. The copy stops when the source runs out of data or the destination runs out of space. Not supported when HAS_2D is 0 in HW.
-- 010: "wrap" - Wrap the 2D source area within the destination 2D area by starting to copy data from the beginning of the first source line to the remaining space in the destination area. If the destination area is smaller than the source area then the behavior is UNPREDICTABLE. Not supported when HAS_WRAP or HAS_2D is 0 in HW.
-- 011: Fill the remainder of the destination area with FILLVAL when the source area runs out of data. If the destination area is smaller than the source area then the behavior is UNPREDICTABLE. Not supported when HAS_WRAP or HAS_2D is 0 in HW
-- Others: Reserved</p>
-<h3 id="XTYPE.desc">XTYPE<a class="headerlink" href="#XTYPE.desc" title="Permalink to this headline"></a></h3>
-<p>Operation type for X direction:
-- 000: "disable" - No data transfer will take place for this command. This mode can be used to create empty commands that wait for an event or set GPOs.
-- 001: "continue" - Copy data in a continuous manner from source to the destination. For 1D operations it is expected that SRCXSIZE is equal to DESXSIZE, other combinations result in UNPREDICTABLE behavior. For 2D operations, this mode can be used for simple 2D to 2D copy but it also allows the reshaping of the data like 1D to 2D or 2D to 1D conversions. If the DESXSIZE is smaller than SRCXSIZE then the read data from the current source line goes to the next destination line. If SRCXSIZE is smaller than DESXSIZE then the reads start on the next line and data is written to the remainder of the current destination line. Note: For 1D to 2D the SRCYSIZE for 2D to 1D conversion the DESYSIZE needs to be set to 1 when using this mode.
-- 010: "wrap" - Wrap source data within a destination line when the end of the source line is reached. Read starts again from the beginning of the source line and copied to the remainder of the destination line. If the DESXSIZE is smaller than SRCXSIZE then the behavior is UNPREDICTABLE. Not supported when HAS_WRAP is 0 in HW
-- 011: "fill" - Fill the remainder of the destination line with FILLVAL when the end of the source line is reached. If the DESXSIZE is smaller than SRCXSIZE then the behavior is UNPREDICTABLE. Not supported when HAS_WRAP is 0 in HW.
-- Others: Reserved.</p>
-<h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="CHPRIO.desc">CHPRIO<a class="headerlink" href="#CHPRIO.desc" title="Permalink to this headline"></a></h3>
-<p>Channel Priority.
-- 0: Lowest Priority
-- 15: Highest Priority</p>
-<h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
-<p>Read-As-Zero, Writes Ignored.</p>
-<h3 id="TRANSIZE.desc">TRANSIZE<a class="headerlink" href="#TRANSIZE.desc" title="Permalink to this headline"></a></h3>
-<p>Transfer Entity Size. Size in bytes = 2^TRANSIZE.
-- 000: Byte
-- 001: Halfworld
-- 010: Word
-- 011: Doubleword
-- 100: 128bits
-- 101: 256bits
-- 110: 512bits
-- 111: 1024bits
-Note that DATA_WIDTH limits this field. Address will be aligned to TRANSIZE by the DMAC by ignoring the lower bits.</p>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">CH_CTRL</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x100c</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>Channel Control Register</p>
+        <p>This register can be used to configure the type of the transfers and the resources needed by the currently executed DMA command. It also defines how the command shall behave when the command is complete.
+
+The content of this register can be updated during command linking by setting bit[3] in the command link header.</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr id="RAZWI_3" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31:28]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#RAZWI_3.desc">RAZWI_3</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#RAZWI_3" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="USETRIGOUT" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[27]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#USETRIGOUT.desc">USETRIGOUT</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#USETRIGOUT" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="USEDESTRIGIN" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[26]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#USEDESTRIGIN.desc">USEDESTRIGIN</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#USEDESTRIGIN" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="USESRCTRIGIN" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[25]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#USESRCTRIGIN.desc">USESRCTRIGIN</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#USESRCTRIGIN" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="DONEPAUSEEN" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[24]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#DONEPAUSEEN.desc">DONEPAUSEEN</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#DONEPAUSEEN" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="DONETYPE" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[23:21]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#DONETYPE.desc">DONETYPE</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#DONETYPE" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="REGRELOADTYPE" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[20:18]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#REGRELOADTYPE.desc">REGRELOADTYPE</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#REGRELOADTYPE" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="RAZWI_2" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[17:15]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#RAZWI_2.desc">RAZWI_2</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#RAZWI_2" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="YTYPE" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[14:12]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#YTYPE.desc">YTYPE</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#YTYPE" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="XTYPE" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[11:9]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#XTYPE.desc">XTYPE</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#XTYPE" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="RAZWI_1" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[8]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#RAZWI_1.desc">RAZWI_1</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#RAZWI_1" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="CHPRIO" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[7:4]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#CHPRIO.desc">CHPRIO</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#CHPRIO" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="RAZWI_0" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[3]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#RAZWI_0.desc">RAZWI_0</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#RAZWI_0" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="TRANSIZE" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[2:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#TRANSIZE.desc">TRANSIZE</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#TRANSIZE" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="RAZWI_3.desc">RAZWI_3<a class="headerlink" href="#RAZWI_3.desc" title="Permalink to this headline"></a></h3>
+        <p>Read-As-Zero, Writes Ignored.</p>
+        <h3 id="USETRIGOUT.desc">USETRIGOUT<a class="headerlink" href="#USETRIGOUT.desc" title="Permalink to this headline"></a></h3>
+        <p>Enable Trigger Output use for this command.
+
+- 0: disable
+
+- 1: enable</p>
+        <h3 id="USEDESTRIGIN.desc">USEDESTRIGIN<a class="headerlink" href="#USEDESTRIGIN.desc" title="Permalink to this headline"></a></h3>
+        <p>Enable Destination Trigger Input use for this command.
+
+- 0: disable
+
+- 1: enable</p>
+        <h3 id="USESRCTRIGIN.desc">USESRCTRIGIN<a class="headerlink" href="#USESRCTRIGIN.desc" title="Permalink to this headline"></a></h3>
+        <p>Enable Source Trigger Input use for this command.
+
+- 0: disable
+
+- 1: enable</p>
+        <h3 id="DONEPAUSEEN.desc">DONEPAUSEEN<a class="headerlink" href="#DONEPAUSEEN.desc" title="Permalink to this headline"></a></h3>
+        <p>Done pause enable. When set to HIGH the assertion of the STAT_DONE flag results in an automatic pause request for the current DMA operation. When the paused state is reached the STAT_RESUMEWAIT flag is also set. When set to LOW the assertion of the STAT_DONE does not pause the progress of the command and the next operation of the channel will be started immediately after the STAT_DONE flag is set.</p>
+        <h3 id="DONETYPE.desc">DONETYPE<a class="headerlink" href="#DONETYPE.desc" title="Permalink to this headline"></a></h3>
+        <p>Done type selection. This field defines when the STAT_DONE status flag is asserted during the command operation.
+
+- 000: STAT_DONE flag is not asserted for this command.
+
+- 001: End of a command, before jumping to the next linked command. (default)
+
+- 011: End of an autorestart cycle, before starting the next cycle.
+
+- Others : Reserved.</p>
+        <h3 id="REGRELOADTYPE.desc">REGRELOADTYPE<a class="headerlink" href="#REGRELOADTYPE.desc" title="Permalink to this headline"></a></h3>
+        <p>Automatic register reload type. Defines how the DMA command reloads initial values at the end of a DMA command before autorestarting, ending or linking to a new DMA command:
+
+- 000: Reload Disabled.
+
+- 001: Reload source and destination size registers only.
+
+- 011: Reload source address only and all source and destination size registers.
+
+- 101: Reload destination address only and all source and destination size registers.
+
+- 111: Reload source and destination address and all source and destination size registers.
+
+- Others: Reserved.
+
+NOTE: When CLEARCMD is set, the reloaded registers will also be cleared.</p>
+        <h3 id="RAZWI_2.desc">RAZWI_2<a class="headerlink" href="#RAZWI_2.desc" title="Permalink to this headline"></a></h3>
+        <p>Read-As-Zero, Writes Ignored.</p>
+        <h3 id="YTYPE.desc">YTYPE<a class="headerlink" href="#YTYPE.desc" title="Permalink to this headline"></a></h3>
+        <p>Operation type for Y direction:
+
+- 000: "disable" - Only do 1D transfers. When HAS_2D is 0, meaning 2D capability is not supported in HW, the YTYPE is always "000".
+
+- 001: "continue" - Copy 2D data in a continuous manner from source area to the destination area by using the YSIZE registers. The copy stops when the source runs out of data or the destination runs out of space. Not supported when HAS_2D is 0 in HW.
+
+- 010: "wrap" - Wrap the 2D source area within the destination 2D area by starting to copy data from the beginning of the first source line to the remaining space in the destination area. If the destination area is smaller than the source area then the behavior is UNPREDICTABLE. Not supported when HAS_WRAP or HAS_2D is 0 in HW.
+
+- 011: Fill the remainder of the destination area with FILLVAL when the source area runs out of data. If the destination area is smaller than the source area then the behavior is UNPREDICTABLE. Not supported when HAS_WRAP or HAS_2D is 0 in HW
+
+- Others: Reserved</p>
+        <h3 id="XTYPE.desc">XTYPE<a class="headerlink" href="#XTYPE.desc" title="Permalink to this headline"></a></h3>
+        <p>Operation type for X direction:
+
+- 000: "disable" - No data transfer will take place for this command. This mode can be used to create empty commands that wait for an event or set GPOs.
+
+- 001: "continue" - Copy data in a continuous manner from source to the destination. For 1D operations it is expected that SRCXSIZE is equal to DESXSIZE, other combinations result in UNPREDICTABLE behavior. For 2D operations, this mode can be used for simple 2D to 2D copy but it also allows the reshaping of the data like 1D to 2D or 2D to 1D conversions. If the DESXSIZE is smaller than SRCXSIZE then the read data from the current source line goes to the next destination line. If SRCXSIZE is smaller than DESXSIZE then the reads start on the next line and data is written to the remainder of the current destination line. Note: For 1D to 2D the SRCYSIZE for 2D to 1D conversion the DESYSIZE needs to be set to 1 when using this mode.
+
+- 010: "wrap" - Wrap source data within a destination line when the end of the source line is reached. Read starts again from the beginning of the source line and copied to the remainder of the destination line. If the DESXSIZE is smaller than SRCXSIZE then the behavior is UNPREDICTABLE. Not supported when HAS_WRAP is 0 in HW
+
+- 011: "fill" - Fill the remainder of the destination line with FILLVAL when the end of the source line is reached. If the DESXSIZE is smaller than SRCXSIZE then the behavior is UNPREDICTABLE. Not supported when HAS_WRAP is 0 in HW.
+
+- Others: Reserved.</p>
+        <h3 id="RAZWI_1.desc">RAZWI_1<a class="headerlink" href="#RAZWI_1.desc" title="Permalink to this headline"></a></h3>
+        <p>Read-As-Zero, Writes Ignored.</p>
+        <h3 id="CHPRIO.desc">CHPRIO<a class="headerlink" href="#CHPRIO.desc" title="Permalink to this headline"></a></h3>
+        <p>Channel Priority.
+
+- 0: Lowest Priority
+
+- 15: Highest Priority</p>
+        <h3 id="RAZWI_0.desc">RAZWI_0<a class="headerlink" href="#RAZWI_0.desc" title="Permalink to this headline"></a></h3>
+        <p>Read-As-Zero, Writes Ignored.</p>
+        <h3 id="TRANSIZE.desc">TRANSIZE<a class="headerlink" href="#TRANSIZE.desc" title="Permalink to this headline"></a></h3>
+        <p>Transfer Entity Size. Size in bytes = 2^TRANSIZE.
+
+- 000: Byte
+
+- 001: Halfworld
+
+- 010: Word
+
+- 011: Doubleword
+
+- 100: 128bits
+
+- 101: 256bits
+
+- 110: 512bits
+
+- 111: 1024bits
+
+Note that DATA_WIDTH limits this field. Address will be aligned to TRANSIZE by the DMAC by ignoring the lower bits.</p>
+    </body>
 </html>

@@ -1,155 +1,263 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-<h1 id="_Content.name">IE</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x10</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>The IE register is used to enable or disable interrupts within the DWC TRNG NIST.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="GLBL"><td>[31]</td>
-<td><a href="#GLBL.desc">GLBL</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterGLBL" class="field-value-enum-tester"
-data-name="GLBL" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">GLBL_DIS</option><option value="0x1">GLBL_EN</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#GLBL" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-field"><td>[30:5]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="DONE"><td>[4]</td>
-<td><a href="#DONE.desc">DONE</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterDONE" class="field-value-enum-tester"
-data-name="DONE" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">DONE_DIS</option><option value="0x1">DONE_EN</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DONE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="ALARMS"><td>[3]</td>
-<td><a href="#ALARMS.desc">ALARMS</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterALARMS" class="field-value-enum-tester"
-data-name="ALARMS" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">ALARMS_DIS</option><option value="0x1">ALARMS_EN</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#ALARMS" title="Permalink to this row"></a></td>
-</tr>
-<tr id="NOISE_RDY"><td>[2]</td>
-<td><a href="#NOISE_RDY.desc">NOISE_RDY</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterNOISE_RDY" class="field-value-enum-tester"
-data-name="NOISE_RDY" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">NOISE_RDY_DIS</option><option value="0x1">NOISE_RDY_EN</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#NOISE_RDY" title="Permalink to this row"></a></td>
-</tr>
-<tr id="KAT_COMPLETED"><td>[1]</td>
-<td><a href="#KAT_COMPLETED.desc">KAT_COMPLETED</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterKAT_COMPLETED" class="field-value-enum-tester"
-data-name="KAT_COMPLETED" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">KAT_COMPLETED_DIS</option><option value="0x1">KAT_COMPLETED_EN</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#KAT_COMPLETED" title="Permalink to this row"></a></td>
-</tr>
-<tr id="ZEROIZED"><td>[0]</td>
-<td><a href="#ZEROIZED.desc">ZEROIZED</a></td>
-<td>rw</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterZEROIZED" class="field-value-enum-tester"
-data-name="ZEROIZED" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">ZEROIZED_DIS</option><option value="0x1">ZEROIZED_EN</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#ZEROIZED" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="GLBL.desc">GLBL<a class="headerlink" href="#GLBL.desc" title="Permalink to this headline"></a></h3>
-<p>Global interrupt enable signal for the DWC TRNG NIST</p>
-<table><tr><th colspan="3">enum GLBL_enum_t</th></tr>
-<tr><td>GLBL_DIS</td>
-<td>0x0</td>
-<td><p>Disable GLBL interrupt contribution</p>
-</td>
-</tr>
-<tr><td>GLBL_EN</td>
-<td>0x1</td>
-<td><p>Enable GLBL interrupt contribution</p>
-</td>
-</tr>
-</table><h3 id="DONE.desc">DONE<a class="headerlink" href="#DONE.desc" title="Permalink to this headline"></a></h3>
-<p>Include or exclude DONE interrupt contribution</p>
-<table><tr><th colspan="3">enum DONE_enum_t</th></tr>
-<tr><td>DONE_DIS</td>
-<td>0x0</td>
-<td><p>Disable DONE interrupt contribution</p>
-</td>
-</tr>
-<tr><td>DONE_EN</td>
-<td>0x1</td>
-<td><p>Enable DONE interrupt contribution</p>
-</td>
-</tr>
-</table><h3 id="ALARMS.desc">ALARMS<a class="headerlink" href="#ALARMS.desc" title="Permalink to this headline"></a></h3>
-<p>Include or exclude ALARMS interrupt contribution</p>
-<table><tr><th colspan="3">enum ALARMS_enum_t</th></tr>
-<tr><td>ALARMS_DIS</td>
-<td>0x0</td>
-<td><p>Disable ALARMS interrupt contribution</p>
-</td>
-</tr>
-<tr><td>ALARMS_EN</td>
-<td>0x1</td>
-<td><p>Enable ALARMS interrupt contribution</p>
-</td>
-</tr>
-</table><h3 id="NOISE_RDY.desc">NOISE_RDY<a class="headerlink" href="#NOISE_RDY.desc" title="Permalink to this headline"></a></h3>
-<p>Include or exclude NOISE_RDY interrupt contribution</p>
-<table><tr><th colspan="3">enum NOISE_RDY_enum_t</th></tr>
-<tr><td>NOISE_RDY_DIS</td>
-<td>0x0</td>
-<td><p>Disable NOISE_RDY interrupt contribution</p>
-</td>
-</tr>
-<tr><td>NOISE_RDY_EN</td>
-<td>0x1</td>
-<td><p>Enable NOISE_RDY interrupt contribution</p>
-</td>
-</tr>
-</table><h3 id="KAT_COMPLETED.desc">KAT_COMPLETED<a class="headerlink" href="#KAT_COMPLETED.desc" title="Permalink to this headline"></a></h3>
-<p>Include or exclude KAT_COMPLETED interrupt contribution</p>
-<table><tr><th colspan="3">enum KAT_COMPLETED_enum_t</th></tr>
-<tr><td>KAT_COMPLETED_DIS</td>
-<td>0x0</td>
-<td><p>Disable KAT_COMPLETED interrupt contribution</p>
-</td>
-</tr>
-<tr><td>KAT_COMPLETED_EN</td>
-<td>0x1</td>
-<td><p>Enable KAT_COMPLETED interrupt contribution</p>
-</td>
-</tr>
-</table><h3 id="ZEROIZED.desc">ZEROIZED<a class="headerlink" href="#ZEROIZED.desc" title="Permalink to this headline"></a></h3>
-<p>Include or exclude ZEROIZED interrupt contribution.</p>
-<table><tr><th colspan="3">enum ZEROIZED_enum_t</th></tr>
-<tr><td>ZEROIZED_DIS</td>
-<td>0x0</td>
-<td><p>Disable ZEROIZED interrupt contribution</p>
-</td>
-</tr>
-<tr><td>ZEROIZED_EN</td>
-<td>0x1</td>
-<td><p>Enable ZEROIZED interrupt contribution</p>
-</td>
-</tr>
-</table>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">IE</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x10</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>The IE register is used to enable or disable interrupts within the DWC TRNG NIST.</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr id="GLBL" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#GLBL.desc">GLBL</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterGLBL" class="field-value-enum-tester" data-name="GLBL" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">GLBL_DIS</option>
+                        <option value="0x1">GLBL_EN</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#GLBL" title="Permalink to this row"></a></td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[30:5]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="DONE" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[4]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#DONE.desc">DONE</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterDONE" class="field-value-enum-tester" data-name="DONE" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">DONE_DIS</option>
+                        <option value="0x1">DONE_EN</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#DONE" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="ALARMS" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[3]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#ALARMS.desc">ALARMS</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterALARMS" class="field-value-enum-tester" data-name="ALARMS" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">ALARMS_DIS</option>
+                        <option value="0x1">ALARMS_EN</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#ALARMS" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="NOISE_RDY" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[2]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#NOISE_RDY.desc">NOISE_RDY</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterNOISE_RDY" class="field-value-enum-tester" data-name="NOISE_RDY" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">NOISE_RDY_DIS</option>
+                        <option value="0x1">NOISE_RDY_EN</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#NOISE_RDY" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="KAT_COMPLETED" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[1]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#KAT_COMPLETED.desc">KAT_COMPLETED</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterKAT_COMPLETED" class="field-value-enum-tester" data-name="KAT_COMPLETED" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">KAT_COMPLETED_DIS</option>
+                        <option value="0x1">KAT_COMPLETED_EN</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#KAT_COMPLETED" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="ZEROIZED" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#ZEROIZED.desc">ZEROIZED</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">rw</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterZEROIZED" class="field-value-enum-tester" data-name="ZEROIZED" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">ZEROIZED_DIS</option>
+                        <option value="0x1">ZEROIZED_EN</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#ZEROIZED" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="GLBL.desc">GLBL<a class="headerlink" href="#GLBL.desc" title="Permalink to this headline"></a></h3>
+        <p>Global interrupt enable signal for the DWC TRNG NIST</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum GLBL_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">GLBL_DIS</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Disable GLBL interrupt contribution</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">GLBL_EN</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Enable GLBL interrupt contribution</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="DONE.desc">DONE<a class="headerlink" href="#DONE.desc" title="Permalink to this headline"></a></h3>
+        <p>Include or exclude DONE interrupt contribution</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum DONE_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">DONE_DIS</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Disable DONE interrupt contribution</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">DONE_EN</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Enable DONE interrupt contribution</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="ALARMS.desc">ALARMS<a class="headerlink" href="#ALARMS.desc" title="Permalink to this headline"></a></h3>
+        <p>Include or exclude ALARMS interrupt contribution</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum ALARMS_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ALARMS_DIS</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Disable ALARMS interrupt contribution</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ALARMS_EN</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Enable ALARMS interrupt contribution</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="NOISE_RDY.desc">NOISE_RDY<a class="headerlink" href="#NOISE_RDY.desc" title="Permalink to this headline"></a></h3>
+        <p>Include or exclude NOISE_RDY interrupt contribution</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum NOISE_RDY_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">NOISE_RDY_DIS</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Disable NOISE_RDY interrupt contribution</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">NOISE_RDY_EN</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Enable NOISE_RDY interrupt contribution</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="KAT_COMPLETED.desc">KAT_COMPLETED<a class="headerlink" href="#KAT_COMPLETED.desc" title="Permalink to this headline"></a></h3>
+        <p>Include or exclude KAT_COMPLETED interrupt contribution</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum KAT_COMPLETED_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">KAT_COMPLETED_DIS</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Disable KAT_COMPLETED interrupt contribution</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">KAT_COMPLETED_EN</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Enable KAT_COMPLETED interrupt contribution</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="ZEROIZED.desc">ZEROIZED<a class="headerlink" href="#ZEROIZED.desc" title="Permalink to this headline"></a></h3>
+        <p>Include or exclude ZEROIZED interrupt contribution.</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum ZEROIZED_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ZEROIZED_DIS</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Disable ZEROIZED interrupt contribution</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ZEROIZED_EN</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Enable ZEROIZED interrupt contribution</p>
+                </td>
+            </tr>
+        </table>
+    </body>
 </html>

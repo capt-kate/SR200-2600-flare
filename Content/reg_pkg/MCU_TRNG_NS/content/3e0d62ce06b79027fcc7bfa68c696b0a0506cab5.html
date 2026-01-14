@@ -1,235 +1,398 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-<h1 id="_Content.name">STAT</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0xc</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>The STAT register allows the user to monitor the internal status of the DWC TRNG NIST.</p>
-<p>NOTE: After the MODE.NONCE bit is set, the host needs to poll the NONCE_MODE in the STAT register until it is 1. Then, the host can load the nonce value into the core.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr id="BUSY"><td>[31]</td>
-<td><a href="#BUSY.desc">BUSY</a></td>
-<td>r</td>
-<td>-</td>
-<td><select id="_FieldValueEnumTesterBUSY" class="field-value-enum-tester"
-data-name="BUSY" onchange="onDecodedFieldEnumChange(this)"><option value="0x1">BUSY_EXEC</option><option value="0x0">BUSY_NOT</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#BUSY" title="Permalink to this row"></a></td>
-</tr>
-<tr class="reserved-field"><td>[30:11]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="STARTUP_TEST_IN_PROG"><td>[10]</td>
-<td><a href="#STARTUP_TEST_IN_PROG.desc">STARTUP_TEST_IN_PROG</a></td>
-<td>r</td>
-<td>0x1</td>
-<td><select id="_FieldValueEnumTesterSTARTUP_TEST_IN_PROG" class="field-value-enum-tester"
-data-name="STARTUP_TEST_IN_PROG" onchange="onDecodedFieldEnumChange(this)"><option value="0x1">STARTUP_TEST_IS_STUCK</option><option value="0x0">STARTUP_TEST_NOT_STUCK</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#STARTUP_TEST_IN_PROG" title="Permalink to this row"></a></td>
-</tr>
-<tr id="STARTUP_TEST_STUCK"><td>[9]</td>
-<td><a href="#STARTUP_TEST_STUCK.desc">STARTUP_TEST_STUCK</a></td>
-<td>r</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterSTARTUP_TEST_STUCK" class="field-value-enum-tester"
-data-name="STARTUP_TEST_STUCK" onchange="onDecodedFieldEnumChange(this)"><option value="0x1">STARTUP_TEST_IS_STUCK</option><option value="0x0">STARTUP_TEST_NOT_STUCK</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#STARTUP_TEST_STUCK" title="Permalink to this row"></a></td>
-</tr>
-<tr id="DRBG_STATE"><td>[8:7]</td>
-<td><a href="#DRBG_STATE.desc">DRBG_STATE</a></td>
-<td>r</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterDRBG_STATE" class="field-value-enum-tester"
-data-name="DRBG_STATE" onchange="onDecodedFieldEnumChange(this)"><option value="0x2">DRBG_HOST</option><option value="0x0">DRBG_NOT_INIT</option><option value="0x1">DRBG_NS</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#DRBG_STATE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="MISSION_MODE"><td>[6]</td>
-<td><a href="#MISSION_MODE.desc">MISSION_MODE</a></td>
-<td>r</td>
-<td>0x1</td>
-<td><select id="_FieldValueEnumTesterMISSION_MODE" class="field-value-enum-tester"
-data-name="MISSION_MODE" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">SEC_MODE_MISSION</option><option value="0x1">SEC_MODE_TEST</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#MISSION_MODE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="NONCE_MODE"><td>[5]</td>
-<td><a href="#NONCE_MODE.desc">NONCE_MODE</a></td>
-<td>r</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterNONCE_MODE" class="field-value-enum-tester"
-data-name="NONCE_MODE" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">NONCE_DISABLE</option><option value="0x1">NONCE_ENABLE</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#NONCE_MODE" title="Permalink to this row"></a></td>
-</tr>
-<tr id="SEC_ALG"><td>[4]</td>
-<td><a href="#SEC_ALG.desc">SEC_ALG</a></td>
-<td>r</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterSEC_ALG" class="field-value-enum-tester"
-data-name="SEC_ALG" onchange="onDecodedFieldEnumChange(this)"><option value="0x0">SEC_ALG_0</option><option value="0x1">SEC_ALG_1</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#SEC_ALG" title="Permalink to this row"></a></td>
-</tr>
-<tr id="LAST_CMD"><td>[3:0]</td>
-<td><a href="#LAST_CMD.desc">LAST_CMD</a></td>
-<td>r</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterLAST_CMD" class="field-value-enum-tester"
-data-name="LAST_CMD" onchange="onDecodedFieldEnumChange(this)"><option value="0x7">ADVANCE_STATE</option><option value="0x3">CREATE_STATE</option><option value="0x1">GEN_NOISE</option><option value="0x2">GEN_NONCE</option><option value="0x6">GEN_RANDOM</option><option value="0x0">NOP</option><option value="0x5">REFRESH_ADDIN</option><option value="0x4">RENEW_STATE</option><option value="0x8">RUN_KAT</option><option value="0xf">ZEROIZE</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#LAST_CMD" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="BUSY.desc">BUSY<a class="headerlink" href="#BUSY.desc" title="Permalink to this headline"></a></h3>
-<p>Indicates the state of the core.</p>
-<table><tr><th colspan="3">enum BUSY_enum_t</th></tr>
-<tr><td>BUSY_EXEC</td>
-<td>0x1</td>
-<td><p>Currently executing a command</p>
-</td>
-</tr>
-<tr><td>BUSY_NOT</td>
-<td>0x0</td>
-<td><p>Idle</p>
-</td>
-</tr>
-</table><h3 id="STARTUP_TEST_IN_PROG.desc">STARTUP_TEST_IN_PROG<a class="headerlink" href="#STARTUP_TEST_IN_PROG.desc" title="Permalink to this headline"></a></h3>
-<p>Indicates whether the startup test is in progress.</p>
-<table><tr><th colspan="3">enum STARTUP_TEST_IN_PROG_enum_t</th></tr>
-<tr><td>STARTUP_TEST_IS_STUCK</td>
-<td>0x1</td>
-<td><p>Startup test is in progress.</p>
-</td>
-</tr>
-<tr><td>STARTUP_TEST_NOT_STUCK</td>
-<td>0x0</td>
-<td><p>Startup test is finished.</p>
-</td>
-</tr>
-</table><h3 id="STARTUP_TEST_STUCK.desc">STARTUP_TEST_STUCK<a class="headerlink" href="#STARTUP_TEST_STUCK.desc" title="Permalink to this headline"></a></h3>
-<p>Indicates whether the startup test is stuck (Only valid when sticky startup test feature is enabled.</p>
-<table><tr><th colspan="3">enum STARTUP_TEST_STUCK_enum_t</th></tr>
-<tr><td>STARTUP_TEST_IS_STUCK</td>
-<td>0x1</td>
-<td><p>Startup test is highly likely stuck</p>
-</td>
-</tr>
-<tr><td>STARTUP_TEST_NOT_STUCK</td>
-<td>0x0</td>
-<td><p>Startup test is not stuck (yet)</p>
-</td>
-</tr>
-</table><h3 id="DRBG_STATE.desc">DRBG_STATE<a class="headerlink" href="#DRBG_STATE.desc" title="Permalink to this headline"></a></h3>
-<p>Reflects how a DRBG state is instantiated.</p>
-<table><tr><th colspan="3">enum DRBG_STATE_enum_t</th></tr>
-<tr><td>DRBG_HOST</td>
-<td>0x2</td>
-<td><p>State is instantiated using the host-provided nonce</p>
-</td>
-</tr>
-<tr><td>DRBG_NOT_INIT</td>
-<td>0x0</td>
-<td><p>State is not instantiated</p>
-</td>
-</tr>
-<tr><td>DRBG_NS</td>
-<td>0x1</td>
-<td><p>State is instantiated using the built-in noise source</p>
-</td>
-</tr>
-</table><h3 id="MISSION_MODE.desc">MISSION_MODE<a class="headerlink" href="#MISSION_MODE.desc" title="Permalink to this headline"></a></h3>
-<p>Reflects state of SMODE.MISSION_MODE.</p>
-<table><tr><th colspan="3">enum MISSION_MODE_enum_t</th></tr>
-<tr><td>SEC_MODE_MISSION</td>
-<td>0x0</td>
-<td><p>Core is in TEST mode</p>
-</td>
-</tr>
-<tr><td>SEC_MODE_TEST</td>
-<td>0x1</td>
-<td><p>Core is in MISSION mode</p>
-</td>
-</tr>
-</table><h3 id="NONCE_MODE.desc">NONCE_MODE<a class="headerlink" href="#NONCE_MODE.desc" title="Permalink to this headline"></a></h3>
-<p>Reflects state of SMODE.NONCE.</p>
-<table><tr><th colspan="3">enum NONCE_MODE_enum_t</th></tr>
-<tr><td>NONCE_DISABLE</td>
-<td>0x0</td>
-<td><p>Nonce mode disabled</p>
-</td>
-</tr>
-<tr><td>NONCE_ENABLE</td>
-<td>0x1</td>
-<td><p>Nonce mode enabled (allows CTRL.CMD value of 2)</p>
-</td>
-</tr>
-</table><h3 id="SEC_ALG.desc">SEC_ALG<a class="headerlink" href="#SEC_ALG.desc" title="Permalink to this headline"></a></h3>
-<p>Reflects state of MODE.SEC_ALG.</p>
-<table><tr><th colspan="3">enum SEC_ALG_enum_t</th></tr>
-<tr><td>SEC_ALG_0</td>
-<td>0x0</td>
-<td><p>Maximum security strength set to 128</p>
-</td>
-</tr>
-<tr><td>SEC_ALG_1</td>
-<td>0x1</td>
-<td><p>Maximum security strength set to 256</p>
-</td>
-</tr>
-</table><h3 id="LAST_CMD.desc">LAST_CMD<a class="headerlink" href="#LAST_CMD.desc" title="Permalink to this headline"></a></h3>
-<p>Last command.</p>
-<table><tr><th colspan="3">enum LAST_CMD_enum_t</th></tr>
-<tr><td>ADVANCE_STATE</td>
-<td>0x7</td>
-<td></td>
-</tr>
-<tr><td>CREATE_STATE</td>
-<td>0x3</td>
-<td></td>
-</tr>
-<tr><td>GEN_NOISE</td>
-<td>0x1</td>
-<td></td>
-</tr>
-<tr><td>GEN_NONCE</td>
-<td>0x2</td>
-<td></td>
-</tr>
-<tr><td>GEN_RANDOM</td>
-<td>0x6</td>
-<td></td>
-</tr>
-<tr><td>NOP</td>
-<td>0x0</td>
-<td></td>
-</tr>
-<tr><td>REFRESH_ADDIN</td>
-<td>0x5</td>
-<td></td>
-</tr>
-<tr><td>RENEW_STATE</td>
-<td>0x4</td>
-<td></td>
-</tr>
-<tr><td>RUN_KAT</td>
-<td>0x8</td>
-<td></td>
-</tr>
-<tr><td>ZEROIZE</td>
-<td>0xf</td>
-<td></td>
-</tr>
-</table>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">STAT</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0xc</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>The STAT register allows the user to monitor the internal status of the DWC TRNG NIST.</p>
+        <p>NOTE: After the MODE.NONCE bit is set, the host needs to poll the NONCE_MODE in the STAT register until it is 1. Then, the host can load the nonce value into the core.</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr id="BUSY" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#BUSY.desc">BUSY</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterBUSY" class="field-value-enum-tester" data-name="BUSY" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x1">BUSY_EXEC</option>
+                        <option value="0x0">BUSY_NOT</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#BUSY" title="Permalink to this row"></a></td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[30:11]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="STARTUP_TEST_IN_PROG" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[10]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#STARTUP_TEST_IN_PROG.desc">STARTUP_TEST_IN_PROG</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterSTARTUP_TEST_IN_PROG" class="field-value-enum-tester" data-name="STARTUP_TEST_IN_PROG" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x1">STARTUP_TEST_IS_STUCK</option>
+                        <option value="0x0">STARTUP_TEST_NOT_STUCK</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#STARTUP_TEST_IN_PROG" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="STARTUP_TEST_STUCK" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[9]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#STARTUP_TEST_STUCK.desc">STARTUP_TEST_STUCK</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterSTARTUP_TEST_STUCK" class="field-value-enum-tester" data-name="STARTUP_TEST_STUCK" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x1">STARTUP_TEST_IS_STUCK</option>
+                        <option value="0x0">STARTUP_TEST_NOT_STUCK</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#STARTUP_TEST_STUCK" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="DRBG_STATE" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[8:7]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#DRBG_STATE.desc">DRBG_STATE</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterDRBG_STATE" class="field-value-enum-tester" data-name="DRBG_STATE" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x2">DRBG_HOST</option>
+                        <option value="0x0">DRBG_NOT_INIT</option>
+                        <option value="0x1">DRBG_NS</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#DRBG_STATE" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="MISSION_MODE" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[6]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#MISSION_MODE.desc">MISSION_MODE</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterMISSION_MODE" class="field-value-enum-tester" data-name="MISSION_MODE" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">SEC_MODE_MISSION</option>
+                        <option value="0x1">SEC_MODE_TEST</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#MISSION_MODE" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="NONCE_MODE" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[5]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#NONCE_MODE.desc">NONCE_MODE</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterNONCE_MODE" class="field-value-enum-tester" data-name="NONCE_MODE" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">NONCE_DISABLE</option>
+                        <option value="0x1">NONCE_ENABLE</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#NONCE_MODE" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="SEC_ALG" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[4]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#SEC_ALG.desc">SEC_ALG</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterSEC_ALG" class="field-value-enum-tester" data-name="SEC_ALG" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x0">SEC_ALG_0</option>
+                        <option value="0x1">SEC_ALG_1</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#SEC_ALG" title="Permalink to this row"></a></td>
+            </tr>
+            <tr id="LAST_CMD" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[3:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#LAST_CMD.desc">LAST_CMD</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">r</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterLAST_CMD" class="field-value-enum-tester" data-name="LAST_CMD" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x7">ADVANCE_STATE</option>
+                        <option value="0x3">CREATE_STATE</option>
+                        <option value="0x1">GEN_NOISE</option>
+                        <option value="0x2">GEN_NONCE</option>
+                        <option value="0x6">GEN_RANDOM</option>
+                        <option value="0x0">NOP</option>
+                        <option value="0x5">REFRESH_ADDIN</option>
+                        <option value="0x4">RENEW_STATE</option>
+                        <option value="0x8">RUN_KAT</option>
+                        <option value="0xf">ZEROIZE</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#LAST_CMD" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="BUSY.desc">BUSY<a class="headerlink" href="#BUSY.desc" title="Permalink to this headline"></a></h3>
+        <p>Indicates the state of the core.</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum BUSY_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">BUSY_EXEC</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Currently executing a command</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">BUSY_NOT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Idle</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="STARTUP_TEST_IN_PROG.desc">STARTUP_TEST_IN_PROG<a class="headerlink" href="#STARTUP_TEST_IN_PROG.desc" title="Permalink to this headline"></a></h3>
+        <p>Indicates whether the startup test is in progress.</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum STARTUP_TEST_IN_PROG_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">STARTUP_TEST_IS_STUCK</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Startup test is in progress.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">STARTUP_TEST_NOT_STUCK</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Startup test is finished.</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="STARTUP_TEST_STUCK.desc">STARTUP_TEST_STUCK<a class="headerlink" href="#STARTUP_TEST_STUCK.desc" title="Permalink to this headline"></a></h3>
+        <p>Indicates whether the startup test is stuck (Only valid when sticky startup test feature is enabled.</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum STARTUP_TEST_STUCK_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">STARTUP_TEST_IS_STUCK</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Startup test is highly likely stuck</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">STARTUP_TEST_NOT_STUCK</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Startup test is not stuck (yet)</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="DRBG_STATE.desc">DRBG_STATE<a class="headerlink" href="#DRBG_STATE.desc" title="Permalink to this headline"></a></h3>
+        <p>Reflects how a DRBG state is instantiated.</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum DRBG_STATE_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">DRBG_HOST</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x2</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>State is instantiated using the host-provided nonce</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">DRBG_NOT_INIT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>State is not instantiated</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">DRBG_NS</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>State is instantiated using the built-in noise source</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="MISSION_MODE.desc">MISSION_MODE<a class="headerlink" href="#MISSION_MODE.desc" title="Permalink to this headline"></a></h3>
+        <p>Reflects state of SMODE.MISSION_MODE.</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum MISSION_MODE_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">SEC_MODE_MISSION</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Core is in TEST mode</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">SEC_MODE_TEST</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Core is in MISSION mode</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="NONCE_MODE.desc">NONCE_MODE<a class="headerlink" href="#NONCE_MODE.desc" title="Permalink to this headline"></a></h3>
+        <p>Reflects state of SMODE.NONCE.</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum NONCE_MODE_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">NONCE_DISABLE</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Nonce mode disabled</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">NONCE_ENABLE</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Nonce mode enabled (allows CTRL.CMD value of 2)</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="SEC_ALG.desc">SEC_ALG<a class="headerlink" href="#SEC_ALG.desc" title="Permalink to this headline"></a></h3>
+        <p>Reflects state of MODE.SEC_ALG.</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum SEC_ALG_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">SEC_ALG_0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Maximum security strength set to 128</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">SEC_ALG_1</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Maximum security strength set to 256</p>
+                </td>
+            </tr>
+        </table>
+        <h3 id="LAST_CMD.desc">LAST_CMD<a class="headerlink" href="#LAST_CMD.desc" title="Permalink to this headline"></a></h3>
+        <p>Last command.</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum LAST_CMD_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ADVANCE_STATE</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x7</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">CREATE_STATE</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x3</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">GEN_NOISE</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">GEN_NONCE</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x2</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">GEN_RANDOM</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x6</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">NOP</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">REFRESH_ADDIN</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x5</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RENEW_STATE</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x4</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RUN_KAT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x8</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ZEROIZE</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0xf</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+        </table>
+    </body>
 </html>

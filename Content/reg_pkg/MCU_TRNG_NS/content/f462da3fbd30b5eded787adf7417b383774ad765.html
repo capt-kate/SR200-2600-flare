@@ -1,88 +1,153 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title></title>
-    </head>
-<body>
-<h1 id="_Content.name">CTRL</h1>
-<dl class="node-info"><dt>Absolute Address:</dt><dd id="_AbsAddr" class="address"></dd><dt>Base Offset:</dt><dd class="address">0x0</dd><dt>Size:</dt><dd class="address">0x4</dd></dl><h2>Description</h2>
-<p>The CTRL register is used to cause the DWC TRNG NIST to execute one of a number of actions.
-The are 9 active command operations available within the DWC TRNG NIST (in addition to 0 -- NOP). CMD can only be written when the core is idle (see STAT.BUSY) unless the command is a ZEROIZE. Commands other than ZEROIZE during a non-idle condition is ignored.
-NOTE: This register is effectively a write-only register. Due to its volatile nature, there is no way to predict its read-back value.</p>
-<h2>Contents</h2>
-<table><tr><th>Bits</th><th>Identifier</th><th>Access</th><th>Reset</th><th>Decoded</th><th>Name</th><th></th></tr>
-<tr class="reserved-field"><td>[31:4]</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-<td>-</td>
-<td></td>
-</tr>
-<tr id="CMD"><td>[3:0]</td>
-<td><a href="#CMD.desc">CMD</a></td>
-<td>w</td>
-<td>0x0</td>
-<td><select id="_FieldValueEnumTesterCMD" class="field-value-enum-tester"
-data-name="CMD" onchange="onDecodedFieldEnumChange(this)"><option value="0x7">ADVANCE_STATE</option><option value="0x3">CREATE_STATE</option><option value="0x1">GEN_NOISE</option><option value="0x2">GEN_NONCE</option><option value="0x6">GEN_RANDOM</option><option value="0x0">NOP</option><option value="0x5">REFRESH_ADDIN</option><option value="0x4">RENEW_STATE</option><option value="0x8">RUN_KAT</option><option value="0xf">ZEROIZE</option></select></td>
-<td>-</td>
-<td>H<a class="headerlink" href="#CMD" title="Permalink to this row"></a></td>
-</tr>
-</table><p><label>Encoded Register Value:</label></p>
-<h2>Field Descriptions</h2>
-<h3 id="CMD.desc">CMD<a class="headerlink" href="#CMD.desc" title="Permalink to this headline"></a></h3>
-<p>Execute a command.
-Enumerated values not listed are 'reserved'.</p>
-<table><tr><th colspan="3">enum CMD_enum_t</th></tr>
-<tr><td>ADVANCE_STATE</td>
-<td>0x7</td>
-<td><p>Advance DRBG state</p>
-</td>
-</tr>
-<tr><td>CREATE_STATE</td>
-<td>0x3</td>
-<td><p>Move DRBG to create state</p>
-</td>
-</tr>
-<tr><td>GEN_NOISE</td>
-<td>0x1</td>
-<td><p>Generate full-entropy seed from noise</p>
-</td>
-</tr>
-<tr><td>GEN_NONCE</td>
-<td>0x2</td>
-<td><p>Generate seed from host-written nonce</p>
-</td>
-</tr>
-<tr><td>GEN_RANDOM</td>
-<td>0x6</td>
-<td><p>Generate a random number</p>
-</td>
-</tr>
-<tr><td>NOP</td>
-<td>0x0</td>
-<td><p>Execute a NOP</p>
-</td>
-</tr>
-<tr><td>REFRESH_ADDIN</td>
-<td>0x5</td>
-<td><p>Move DRBG to refresh addin</p>
-</td>
-</tr>
-<tr><td>RENEW_STATE</td>
-<td>0x4</td>
-<td><p>Move DRBG to renew state</p>
-</td>
-</tr>
-<tr><td>RUN_KAT</td>
-<td>0x8</td>
-<td><p>Run KAT on DRBG or entropy source</p>
-</td>
-</tr>
-<tr><td>ZEROIZE</td>
-<td>0xf</td>
-<td><p>Zeroize</p>
-</td>
-</tr>
-</table>
-</body>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 id="_Content.name">CTRL</h1>
+        <dl class="node-info">
+            <dt>Absolute Address:</dt>
+            <dd id="_AbsAddr" class="address">
+            </dd>
+            <dt>Base Offset:</dt>
+            <dd class="address">0x0</dd>
+            <dt>Size:</dt>
+            <dd class="address">0x4</dd>
+        </dl>
+        <h2>Description</h2>
+        <p>The CTRL register is used to cause the DWC TRNG NIST to execute one of a number of actions.
+
+The are 9 active command operations available within the DWC TRNG NIST (in addition to 0 -- NOP). CMD can only be written when the core is idle (see STAT.BUSY) unless the command is a ZEROIZE. Commands other than ZEROIZE during a non-idle condition is ignored.
+
+NOTE: This register is effectively a write-only register. Due to its volatile nature, there is no way to predict its read-back value.</p>
+        <h2>Contents</h2>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Bits</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Identifier</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Access</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Reset</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Decoded</th>
+                <th class="TableStyle-table-no-head-BodyE-Column1-Body1">Name</th>
+                <th class="TableStyle-table-no-head-BodyD-Column1-Body1">
+                </th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[31:4]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                </td>
+            </tr>
+            <tr id="CMD" class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">[3:0]</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2"><a href="#CMD.desc">CMD</a>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">w</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">
+                    <select id="_FieldValueEnumTesterCMD" class="field-value-enum-tester" data-name="CMD" onchange="onDecodedFieldEnumChange(this)">
+                        <option value="0x7">ADVANCE_STATE</option>
+                        <option value="0x3">CREATE_STATE</option>
+                        <option value="0x1">GEN_NOISE</option>
+                        <option value="0x2">GEN_NONCE</option>
+                        <option value="0x6">GEN_RANDOM</option>
+                        <option value="0x0">NOP</option>
+                        <option value="0x5">REFRESH_ADDIN</option>
+                        <option value="0x4">RENEW_STATE</option>
+                        <option value="0x8">RUN_KAT</option>
+                        <option value="0xf">ZEROIZE</option>
+                    </select>
+                </td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">-</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">H<a class="headerlink" href="#CMD" title="Permalink to this row"></a></td>
+            </tr>
+        </table>
+        <p>
+            <label>Encoded Register Value:</label>
+        </p>
+        <h2>Field Descriptions</h2>
+        <h3 id="CMD.desc">CMD<a class="headerlink" href="#CMD.desc" title="Permalink to this headline"></a></h3>
+        <p>Execute a command.
+
+Enumerated values not listed are 'reserved'.</p>
+        <table class="TableStyle-table-no-head" style="mc-table-style: url('../../../Resources/TableStyles/table-no-head.css');" cellspacing="0">
+            <tr class="TableStyle-table-no-head-Body-Body1">
+                <th colspan="3" class="TableStyle-table-no-head-BodyD-Column1-Body1">enum CMD_enum_t</th>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ADVANCE_STATE</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x7</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Advance DRBG state</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">CREATE_STATE</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x3</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Move DRBG to create state</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">GEN_NOISE</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x1</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Generate full-entropy seed from noise</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">GEN_NONCE</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x2</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Generate seed from host-written nonce</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">GEN_RANDOM</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x6</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Generate a random number</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">NOP</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x0</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Execute a NOP</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">REFRESH_ADDIN</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x5</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Move DRBG to refresh addin</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RENEW_STATE</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x4</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Move DRBG to renew state</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">RUN_KAT</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0x8</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Run KAT on DRBG or entropy source</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-table-no-head-Body-Body2">
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">ZEROIZE</td>
+                <td class="TableStyle-table-no-head-BodyH-Column1-Body2">0xf</td>
+                <td class="TableStyle-table-no-head-BodyG-Column1-Body2">
+                    <p>Zeroize</p>
+                </td>
+            </tr>
+        </table>
+    </body>
 </html>
