@@ -11,9 +11,9 @@
   Skin="/Project/Skins/Side-Navigation.flskn"
   FaviconSkin="/Project/Skins/FavIcon.flskn"
   ContentInclusionType="Toc"
-  DefaultUrl="/Content/sm_reg_pkg/reg_pkg/memmap.html"
+  DefaultUrl="/Content/reg_pkg/memmap.html"
   DisableAutoSync="true"
-  MasterStylesheet="/Content/Resources/Stylesheets/MainStyles.css"
+  MasterStylesheet="/Content/Resources/Stylesheets/SynapticsStyles.css"
   OutputFile="index"
   SearchBarSkin="/Project/Skins/Search-Bar.flskn"
   TopicToolbarSkin="/Project/Skins/Toolbar.flskn"
@@ -21,7 +21,8 @@
   EquationsOutputType="PNG"
   MasterPage="/Content/Resources/TemplatePages/Topics.flmsp"
   PartialWordSearch="true"
-  ConditionTagExpression="exclude[Status.Obsolete]">
+  ConditionTagExpression="exclude[Status.Obsolete]"
+  MasterStylesheetOverride="true">
   <PrintedOutput
     CollapseMargins="true"
     GenerateTOCProxy="true"
